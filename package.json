@@ -36,7 +36,19 @@
     "typography-theme-wordpress-2016": "^0.16.19"
   },
   "devDependencies": {
-    "prettier": "^1.19.1"
+    "@types/node": "^13.1.4",
+    "@types/react": "^16.9.17",
+    "@types/react-dom": "^16.9.4",
+    "@types/react-helmet": "^5.0.15",
+    "@types/styled-components": "^4.4.1",
+    "babel-plugin-styled-components": "^1.10.6",
+    "gatsby-plugin-google-fonts": "^1.0.1",
+    "gatsby-plugin-styled-components": "^3.1.16",
+    "gatsby-plugin-typescript": "^2.1.23",
+    "gh-pages": "^2.1.1",
+    "prettier": "^1.19.1",
+    "styled-components": "^4.4.1",
+    "typescript": "^3.7.4"
   },
   "homepage": "https://github.com/gatsbyjs/gatsby-starter-blog#readme",
   "keywords": [
@@ -55,6 +67,7 @@
     "start": "npm run develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1",
+    "deploy": "gatsby build && gh-pages -d public -b master"
   }
 }

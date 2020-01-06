@@ -1,5 +1,5 @@
 ---
-title: New Beginnings
+title: Como migrar para o Windows 8.1 a partir de uma nova instalação do Windows 8
 date: "2015-05-28T22:40:32.169Z"
 description: This is a custom description for SEO and Open Graph purposes, rather than the default generated excerpt. Simply add a description field to the frontmatter.
 ---
