@@ -51,8 +51,7 @@ function Bio() {
         alt={author}
       />
       <Description>
-        Written by {author} who lives and works in San
-        Francisco building useful things.
+        Escrito por {author}, team/tech lead and senior software engineer @ sanar | co-founder React Salvador community.
       </Description>
     </Container>
   );

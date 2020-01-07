@@ -47,6 +47,7 @@ const Content = styled.section`
   a {
     color: #d73738;
     text-decoration: none;
+    border-bottom: 1px solid transparent;
 
     :hover {
       border-bottom: 1px solid #d73738;
@@ -56,6 +57,14 @@ const Content = styled.section`
   blockquote {
     border-left: 5px solid #d73738;
     padding-left: 20px;
+  }
+
+  code {
+    background: #222;
+    display: block;
+    padding: 10px 20px;
+    font-size: 16px;
+    overflow: auto;
   }
 `;
 
