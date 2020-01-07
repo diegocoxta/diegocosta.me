@@ -66,6 +66,10 @@ const Content = styled.section`
     font-size: 16px;
     overflow: auto;
   }
+
+  img {
+    box-shadow: none !important;
+  }
 `;
 
 function Single(props: SingleProps) {

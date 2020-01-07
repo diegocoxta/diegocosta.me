@@ -39,7 +39,8 @@ const NavigationLink = styled.a.attrs({
   text-decoration: none;
   color: #d73738;
   display: block;
-  padding: 5px;
+  padding: 0;
+  border-bottom: 1px solid transparent;
 
   :hover {
     border-bottom: 1px solid #d73738;
