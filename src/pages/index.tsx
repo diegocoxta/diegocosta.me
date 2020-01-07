@@ -2,7 +2,6 @@ import React from 'react';
 import { graphql, PageRendererProps } from 'gatsby';
 import styled from 'styled-components';
 
-import Bio from '../components/Bio';
 import Layout from '../components/Layout';
 import SEO from '../components/SEO';
 import PostHeader from '../components/PostHeader';
@@ -54,7 +53,6 @@ function BlogIndex(props: BlogIndexProps) {
     <Layout location={props.location} title={siteTitle}>
       <>
         <SEO title={'Todos os posts'} />
-        <Bio />
         {posts.map(({ node }) => {
           const title = node.frontmatter.title || node.fields.slug;
           const date = new Date(node.frontmatter.date).toLocaleDateString();
