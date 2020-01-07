@@ -26,13 +26,11 @@ const Container = styled.section`
 
 function Layout(props: LayoutProps) {
   const { location, children } = props;
-
-  const isHomePage = location.pathname === '/';
   
   return (
     <Container>
       <GlobalStyle />
-      <Header small={!isHomePage} />
+      <Header />
       <main>{children}</main>
       <Footer />
     </Container>

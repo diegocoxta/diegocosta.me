@@ -1,11 +1,11 @@
 import React from 'react';
-import { Link, graphql, PageRendererProps } from 'gatsby';
+import { graphql, PageRendererProps } from 'gatsby';
 import styled from 'styled-components';
-import { kebabCase } from 'lodash';
 
 import Bio from '../components/Bio';
 import Layout from '../components/Layout';
 import SEO from '../components/SEO';
+import PostHeader from '../components/PostHeader';
 
 interface BlogIndexProps extends PageRendererProps {
   data: {
@@ -22,7 +22,6 @@ interface BlogIndexProps extends PageRendererProps {
             slug: string;
             readingTime: {
               minutes: number;
-              words: number;
             };
           };
           frontmatter: {
@@ -37,25 +36,14 @@ interface BlogIndexProps extends PageRendererProps {
   };
 }
 
-const Title = styled.h3`
-  font-family: 'Raleway', sans-serif;
-  margin-bottom: 0;
-  font-weight: 700;
-  font-size: 26px;
-`;
-
-const CustomLink = styled(Link)`
-  color: #fff;
-  box-shadow: none;
+const Article = styled.article`
+  margin: 0 0 60px 0;
 `;
 
 const Excerpt = styled.p`
   font-weight: 400;
 `;
 
-const TagLink = styled(Link)`
-  color: red;
-`;
 
 function BlogIndex(props: BlogIndexProps) {
   const { data } = props;
@@ -71,30 +59,22 @@ function BlogIndex(props: BlogIndexProps) {
           const title = node.frontmatter.title || node.fields.slug;
           const date = new Date(node.frontmatter.date).toLocaleDateString();
           const tags = node.frontmatter.tags;
-          const readingTime = node.fields.readingTime;
-
-
-          console.log({ readingTime })
+          const readingTime = node.fields.readingTime.minutes;
+          const url = node.fields.slug;
 
           return (
-            <article key={node.fields.slug}>
-              <header>
-                <Title>
-                  <CustomLink to={node.fields.slug}>
-                    {title}
-                  </CustomLink>
-                </Title>
-                <small>{date}</small>
-                <p>{readingTime.minutes} minutos</p>
-                <p>{readingTime.words} palavras</p>
-                <ul>
-                {tags && tags.map(tag => <li><TagLink to={`/tags/${kebabCase(tag)}`}>{tag}</TagLink></li>)}
-                </ul>
-              </header>
+            <Article key={node.fields.slug}>
+              <PostHeader 
+                title={title}
+                date={date}
+                url={url}
+                tags={tags}
+                readingTime={readingTime}
+              />
               <section>
                 <Excerpt>{node.frontmatter.description || node.excerpt}</Excerpt>
               </section>
-            </article>
+            </Article>
           );
         })}
       </>
@@ -123,7 +103,6 @@ export const pageQuery = graphql`
             slug
             readingTime {
               minutes
-              words
             }
           }
           frontmatter {

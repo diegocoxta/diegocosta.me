@@ -1,13 +1,13 @@
 const path = require('path')
 const _ = require('lodash')
 
-const { createFilePath } = require(`gatsby-source-filesystem`)
+const { createFilePath } = require('gatsby-source-filesystem')
 
 exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions
 
-  const blogPost = path.resolve(`./src/templates/blog-post.js`)
-  const tagTemplate = path.resolve("src/templates/tags.js")
+  const blogPost = path.resolve('./src/templates/single.tsx')
+  const tagTemplate = path.resolve('src/templates/tags.tsx')
   
   const result = await graphql(
     `

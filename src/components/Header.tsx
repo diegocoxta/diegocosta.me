@@ -2,21 +2,17 @@ import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'gatsby';
 
-interface HeaderProps {
-  small?: boolean;
-}
-
 const Container = styled.header`
   margin-bottom: 20px;
 `;
 
-const Name = styled.span<HeaderProps>`
-  font-size: ${props => props.small ? '6vw' : '15vw'};
+const Name = styled.span`
+  font-size: 15vw;
   color: #fff;
   font-weight: 700;
 
   @media (min-width: 760px) {
-    font-size: ${props => props.small ? '24px' : '80px'};
+    font-size: 80px;
   }
 `;
 
@@ -29,11 +25,11 @@ const StyledLink = styled(Link)`
   box-shadow: none;
 `;
 
-function Header(props: HeaderProps) {
+function Header() {
   return (
     <Container>
       <StyledLink to={`/`}>
-        <Name small={props.small}>diego<LastName>c.</LastName></Name>
+        <Name>diego<LastName>c.</LastName></Name>
       </StyledLink>
     </Container>
   );
