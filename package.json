@@ -1,12 +1,9 @@
 {
-  "name": "gatsby-starter-blog",
+  "name": "blog-diego-costa",
   "private": true,
-  "description": "A starter for a blog powered by Gatsby and Markdown",
+  "description": "Diego Costa, desenvolvedor web e mobile - Salvador, BA",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
-  "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
-  },
+  "author": "Diego Costa <diego@diegocosta.com.br>",
   "dependencies": {
     "gatsby": "^2.18.12",
     "gatsby-image": "^2.2.34",
@@ -48,16 +45,11 @@
     "styled-components": "^4.4.1",
     "typescript": "^3.7.4"
   },
-  "homepage": "https://github.com/gatsbyjs/gatsby-starter-blog#readme",
   "keywords": [
     "gatsby"
   ],
   "license": "MIT",
   "main": "n/a",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/gatsbyjs/gatsby-starter-blog.git"
-  },
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",

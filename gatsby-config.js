@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
     title: 'Blog do Diego Costa',
     author: 'Diego Costa',
-    description: 'A starter blog demonstrating what Gatsby can do.',
+    description: 'Diego Costa, desenvolvedor web e mobile - Salvador, BA',
     siteUrl: 'https://blog.diegocosta.com.br',
     social: {
       twitter: 'diegocoxta',
@@ -76,13 +76,13 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-manifest',
       options: {
-        name: 'Gatsby Starter Blog',
-        short_name: 'GatsbyJS',
+        name: 'Blog do Diego Costa',
+        short_name: 'Diego Costa',
         start_url: '/',
-        background_color: '#ffffff',
-        theme_color: '#663399',
+        background_color: '#0e0f11',
+        theme_color: '#d73738',
         display: 'minimal-ui',
-        icon: 'content/assets/gatsby-icon.png',
+        icon: 'content/assets/icon.png',
       },
     },
     'gatsby-plugin-react-helmet'
