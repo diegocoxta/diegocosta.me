@@ -40,6 +40,10 @@ const NavigationLink = styled.a.attrs({
   color: #d73738;
   display: block;
   padding: 5px;
+
+  :hover {
+    border-bottom: 1px solid #d73738;
+  }
 `;
 
 function Footer () {
@@ -68,5 +72,5 @@ function Footer () {
     </Copyright>
   );
 }
-  
+
 export default Footer;
