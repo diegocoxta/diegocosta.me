@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link, graphql, PageRendererProps } from 'gatsby';
 import styled from 'styled-components';
+import { kebabCase } from 'lodash';
 
 import Bio from '../components/Bio';
 import Layout from '../components/Layout';
@@ -19,11 +20,16 @@ interface BlogIndexProps extends PageRendererProps {
           excerpt: string;
           fields: {
             slug: string;
+            readingTime: {
+              minutes: number;
+              words: number;
+            };
           };
           frontmatter: {
             date: string;
             title: string;
             description: string;
+            tags: string[];
           };
         };
       }];
@@ -35,15 +41,20 @@ const Title = styled.h3`
   font-family: 'Raleway', sans-serif;
   margin-bottom: 0;
   font-weight: 700;
+  font-size: 26px;
 `;
 
 const CustomLink = styled(Link)`
-  color: #d73738;
+  color: #fff;
   box-shadow: none;
 `;
 
 const Excerpt = styled.p`
   font-weight: 400;
+`;
+
+const TagLink = styled(Link)`
+  color: red;
 `;
 
 function BlogIndex(props: BlogIndexProps) {
@@ -59,6 +70,11 @@ function BlogIndex(props: BlogIndexProps) {
         {posts.map(({ node }) => {
           const title = node.frontmatter.title || node.fields.slug;
           const date = new Date(node.frontmatter.date).toLocaleDateString();
+          const tags = node.frontmatter.tags;
+          const readingTime = node.fields.readingTime;
+
+
+          console.log({ readingTime })
 
           return (
             <article key={node.fields.slug}>
@@ -69,6 +85,11 @@ function BlogIndex(props: BlogIndexProps) {
                   </CustomLink>
                 </Title>
                 <small>{date}</small>
+                <p>{readingTime.minutes} minutos</p>
+                <p>{readingTime.words} palavras</p>
+                <ul>
+                {tags && tags.map(tag => <li><TagLink to={`/tags/${kebabCase(tag)}`}>{tag}</TagLink></li>)}
+                </ul>
               </header>
               <section>
                 <Excerpt>{node.frontmatter.description || node.excerpt}</Excerpt>
@@ -91,16 +112,25 @@ export const pageQuery = graphql`
       }
     }
     allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
+      group(field: frontmatter___tags) {
+        tag: fieldValue
+        totalCount
+      }
       edges {
         node {
           excerpt
           fields {
             slug
+            readingTime {
+              minutes
+              words
+            }
           }
           frontmatter {
             date(formatString: "MMMM DD, YYYY")
             title
             description
+            tags
           }
         }
       }
