@@ -1,70 +1,93 @@
 import React from 'react';
-import { Link, graphql } from 'gatsby';
+import { graphql, PageRendererProps } from 'gatsby';
+import styled from 'styled-components';
 
 import Bio from '../components/Bio';
 import Layout from '../components/Layout';
 import SEO from '../components/SEO';
 import PostHeader from '../components/PostHeader';
 
-class BlogPostTemplate extends React.Component {
-  render() {
-    const post = this.props.data.markdownRemark
-    const siteTitle = this.props.data.site.siteMetadata.title
-    const { previous, next } = this.props.pageContext
+interface SingleProps extends PageRendererProps {
+  data: {
+    site: {
+      siteMetadata: {
+        title: string;
+      };
+    };
+    markdownRemark: {
+      id: string;
+      excerpt: string;
+      html: string;
+      fields: {
+        readingTime: {
+          minutes: number;
+        };
+      };
+      frontmatter: {
+        title: string;
+        date: string;
+        description: string;
+        tags: string[];
+      };
+    };
+  };
+}
 
-    console.log({ props: this.props });
+const Article = styled.article``;
 
-    return (
-      <Layout location={this.props.location} title={siteTitle}>
+const Footer = styled.footer`
+  border-top: 1px solid #fff;
+  padding-top: 20px;
+  margin: 40px 0;
+`;
+
+const Content = styled.section`
+  line-height: 1.5;
+
+  a {
+    color: #d73738;
+    text-decoration: none;
+
+    :hover {
+      border-bottom: 1px solid #d73738;
+    }
+  }
+
+  blockquote {
+    border-left: 5px solid #d73738;
+    padding-left: 20px;
+  }
+`;
+
+function Single(props: SingleProps) {
+  const post = props.data.markdownRemark;
+  const siteTitle = props.data.site.siteMetadata.title;
+
+  return (
+    <Layout location={props.location} title={siteTitle} smallLogo={true}>
+      <>
         <SEO
           title={post.frontmatter.title}
           description={post.frontmatter.description || post.excerpt}
         />
-        <article>
+        <Article>
           <PostHeader
             title={post.frontmatter.title}
             date={post.frontmatter.date}
             tags={post.frontmatter.tags}
             readingTime={post.fields.readingTime.minutes}
           />
-          <section dangerouslySetInnerHTML={{ __html: post.html }} />
-          <footer>
+          <Content dangerouslySetInnerHTML={{ __html: post.html }} />
+          <Footer>
             <Bio />
-          </footer>
-        </article>
-
-        <nav>
-          <ul
-            style={{
-              display: `flex`,
-              flexWrap: `wrap`,
-              justifyContent: `space-between`,
-              listStyle: `none`,
-              padding: 0,
-            }}
-          >
-            <li>
-              {previous && (
-                <Link to={previous.fields.slug} rel="prev">
-                  ← {previous.frontmatter.title}
-                </Link>
-              )}
-            </li>
-            <li>
-              {next && (
-                <Link to={next.fields.slug} rel="next">
-                  {next.frontmatter.title} →
-                </Link>
-              )}
-            </li>
-          </ul>
-        </nav>
-      </Layout>
-    )
-  }
+          </Footer>
+        </Article>
+      </>
+    </Layout>
+  );
 }
 
-export default BlogPostTemplate;
+export default Single;
 
 export const pageQuery = graphql`
   query BlogPostBySlug($slug: String!) {
@@ -84,7 +107,7 @@ export const pageQuery = graphql`
       }
       frontmatter {
         title
-        date(formatString: "MMMM DD, YYYY")
+        date(formatString: "DD/MM/YYYY")
         description
         tags
       }

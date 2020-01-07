@@ -55,7 +55,7 @@ function BlogIndex(props: BlogIndexProps) {
         <SEO title={'Todos os posts'} />
         {posts.map(({ node }) => {
           const title = node.frontmatter.title || node.fields.slug;
-          const date = new Date(node.frontmatter.date).toLocaleDateString();
+          const date = node.frontmatter.date;
           const tags = node.frontmatter.tags;
           const readingTime = node.fields.readingTime.minutes;
           const url = node.fields.slug;
@@ -104,7 +104,7 @@ export const pageQuery = graphql`
             }
           }
           frontmatter {
-            date(formatString: "MMMM DD, YYYY")
+            date(formatString: "DD/MM/YYYY")
             title
             description
             tags

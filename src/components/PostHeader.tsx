@@ -26,9 +26,10 @@ const Title = styled.h3`
 const CustomLink = styled(Link)`
   color: #fff;
   box-shadow: none;
+  text-decoration: none;
 
   :hover {
-    color: rgba(255,255,255,0.8);
+    border-bottom: 1px solid #fff;
   }
 `;
 
@@ -40,13 +41,14 @@ const TagLink = styled(Link)`
   font-weight: 700;
 
   :hover {
-    color: rgba(215, 55, 56, 0.8);
+    border-bottom: 1px solid #d73738;
   }
 `;
 
 const TagList = styled.ul`
   display: flex;
   margin-bottom: 0;
+  padding: 0;
 `;
 
 const TagItem = styled.li`
@@ -58,7 +60,7 @@ const TagItem = styled.li`
 const Details = styled.p`
   color: #9a9a9a;
   font-size: 18px;
-  margin-bottom: 5px;
+  margin: 5px 0;
 `;
 
 function PostHeader(props: PostHeaderProps) {
@@ -74,15 +76,17 @@ function PostHeader(props: PostHeaderProps) {
         ) : props.title}
       </Title>
       <Details>
-        {props.date} · {readingTime}
+        {props.date} · {readingTime} de leitura
       </Details>
-      <TagList>
-        {props.tags && props.tags.map(tag => (
-          <TagItem>
-            <TagLink to={`/tags/${kebabCase(tag)}`}>{tag}</TagLink>
-          </TagItem>
-        ))}
-      </TagList>
+      {props.tags && (
+        <TagList>
+          {props.tags.map(tag => (
+            <TagItem>
+              <TagLink to={`/tags/${kebabCase(tag)}`}>{tag}</TagLink>
+            </TagItem>
+          ))}
+        </TagList>
+      )}
     </Container>
   ); 
 }
