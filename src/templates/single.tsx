@@ -65,10 +65,11 @@ const Content = styled.section`
     padding: 0 20px;
     font-size: 16px;
     overflow: auto;
+    font-family: monospace,monospace;
   }
 
   code {
-    background-color: #333;
+    background-color: #222;
     border-radius: 4px;
     padding: 2px 4px;
     font-family: monospace,monospace;
