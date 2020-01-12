@@ -55,6 +55,9 @@ function Footer() {
       <Navigation>
         <NavigationList>
           <NavigationItem>
+            <NavigationLink href="https://diegocosta.com.br">sobre mim</NavigationLink>
+          </NavigationItem>
+          <NavigationItem>
             <NavigationLink href="https://github.com/diegocosta">github</NavigationLink>
           </NavigationItem>
           <NavigationItem>
