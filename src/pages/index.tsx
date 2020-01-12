@@ -53,7 +53,7 @@ function BlogIndex(props: BlogIndexProps) {
   return (
     <Layout location={props.location} title={siteTitle}>
       <>
-        <SEO title={'Todos os posts'} />
+        <SEO />
         {posts.map(({ node }) => {
           const title = node.frontmatter.title || node.fields.slug;
           const date = node.frontmatter.date;

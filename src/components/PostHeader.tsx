@@ -39,6 +39,7 @@ const TagLink = styled(Link)`
   font-size: 14px;
   color: #d73738;
   font-weight: 700;
+  text-transform: lowercase;
 
   :hover {
     border-bottom: 1px solid #d73738;
@@ -76,7 +77,7 @@ function PostHeader(props: PostHeaderProps) {
         <TagList>
           {props.tags.map(tag => (
             <TagItem>
-              <TagLink to={`/tags/${kebabCase(tag)}`}>#{tag}</TagLink>
+              <TagLink to={`/tags/${kebabCase(tag)}`}>#{tag.replace(/ /g, '-')}</TagLink>
             </TagItem>
           ))}
         </TagList>

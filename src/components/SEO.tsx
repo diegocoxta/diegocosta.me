@@ -5,7 +5,7 @@ import { useStaticQuery, graphql } from 'gatsby';
 interface SEOProps {
   description: string;
   lang: string;
-  title: string;
+  title?: string;
 }
 
 function SEO({ description, lang, title }: SEOProps) {
@@ -32,7 +32,7 @@ function SEO({ description, lang, title }: SEOProps) {
     },
     {
       property: `og:title`,
-      content: title,
+      content: title || site.siteMetadata.title,
     },
     {
       property: `og:description`,
@@ -61,7 +61,7 @@ function SEO({ description, lang, title }: SEOProps) {
   ];
 
   return (
-    <Helmet htmlAttributes={{ lang }} title={title} titleTemplate={`%s | ${site.siteMetadata.title}`} meta={metatags} />
+    <Helmet htmlAttributes={{ lang }} title={`${title ? `${title} |` : ''} ${site.siteMetadata.title}`} meta={metatags} />
   );
 }
 

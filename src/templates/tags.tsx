@@ -59,7 +59,7 @@ function Tags(props: TagsProps) {
   return (
     <Layout location={props.location} title={tag}>
       <>
-        <SEO title={tag} />
+        <SEO title={`Publicações sobre ${tag}`} />
         <PageTitle>{tagHeader}</PageTitle>
         {edges.map(({ node }) => {
           return (
