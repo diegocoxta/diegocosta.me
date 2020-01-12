@@ -61,12 +61,7 @@ function SEO({ description, lang, title }: SEOProps) {
   ];
 
   return (
-    <Helmet
-      htmlAttributes={{ lang }}
-      title={title}
-      titleTemplate={`%s | ${site.siteMetadata.title}`}
-      meta={metatags}
-    />
+    <Helmet htmlAttributes={{ lang }} title={title} titleTemplate={`%s | ${site.siteMetadata.title}`} meta={metatags} />
   );
 }
 

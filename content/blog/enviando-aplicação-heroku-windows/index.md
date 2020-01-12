@@ -1,6 +1,6 @@
 ---
 title: Enviando sua aplicação para o Heroku no Windows
-date: "2015-11-26T22:12:03.284Z"
+date: '2015-11-26T22:12:03.284Z'
 description: Quem nunca precisou colocar aquela aplicação em produção para testar ou até mesmo compartilhar com colegas e ficou impedido por não ter um servidor bom para uso gratuito?
 tags: ['heroku', 'windows', 'deploy']
 ---
@@ -22,6 +22,7 @@ Para começar é bastante simples, primeiro você precisa acessar o **[site da f
 Atenção, caso você não utilize GIT e SSH é obrigatório escolher a opção Custom Installation e marcar o box para Git and SSH.
 
 ![Next, Next, Install](02.png)
+
 <center>Next, Next, Install</center>
 
 Após realizada a instalação, precisamos autenticar o cliente, abra seu terminal e escreva o seguinte comando:
@@ -121,10 +122,11 @@ Dentro do box Variáveis de usuário clique em Novo e informe os seguintes dados
 
 **Valor da Variável**: C:\Users\SEU-USUÁRIO
 
-Sendo que _SEU-USUÁRIO_ é o nome do seu diretório em _C:\Users\_
+Sendo que _SEU-USUÁRIO_ é o nome do seu diretório em \_C:\Users\_
 
 Por fim, clique em OK, OK e OK.
 
 ![Criando uma variável de ambiente no Windows
 ](03.png)
+
 <center>Criando uma variável de ambiente no Windows</center>

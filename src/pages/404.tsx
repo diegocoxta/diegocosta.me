@@ -11,7 +11,7 @@ interface NotFoundPageProps extends PageRendererProps {
         title: string;
       };
     };
-  }
+  };
 }
 
 function NotFoundPage(props: NotFoundPageProps) {

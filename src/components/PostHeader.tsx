@@ -66,15 +66,9 @@ const Details = styled.p`
 function PostHeader(props: PostHeaderProps) {
   const readingTime = props.readingTime < 1 ? 'Menos de 1 minuto' : `${props.readingTime.toFixed()} minutos`;
 
-  return(
+  return (
     <Container>
-      <Title>
-        {props.url ? (
-          <CustomLink to={props.url}>
-            {props.title}
-          </CustomLink>
-        ) : props.title}
-      </Title>
+      <Title>{props.url ? <CustomLink to={props.url}>{props.title}</CustomLink> : props.title}</Title>
       <Details>
         {props.date} · {readingTime} de leitura
       </Details>
@@ -88,7 +82,7 @@ function PostHeader(props: PostHeaderProps) {
         </TagList>
       )}
     </Container>
-  ); 
+  );
 }
 
 export default PostHeader;

@@ -8,8 +8,8 @@ import Footer from './Footer';
 interface LayoutProps extends PageRendererProps {
   title: String;
   children: React.ReactElement;
-  smallLogo: boolean;
-};
+  smallLogo?: boolean;
+}
 
 const GlobalStyle = createGlobalStyle`
   body {
@@ -39,7 +39,7 @@ const Container = styled.section`
 
 function Layout(props: LayoutProps) {
   const { children, smallLogo } = props;
-  
+
   return (
     <Container>
       <GlobalStyle />
@@ -49,6 +49,9 @@ function Layout(props: LayoutProps) {
     </Container>
   );
 }
-  
-  export default Layout;
-  
+
+Layout.defaultProps = {
+  smallLogo: false,
+};
+
+export default Layout;

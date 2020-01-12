@@ -14,23 +14,25 @@ interface BlogIndexProps extends PageRendererProps {
       };
     };
     allMarkdownRemark: {
-      edges: [{
-        node: {
-          excerpt: string;
-          fields: {
-            slug: string;
-            readingTime: {
-              minutes: number;
+      edges: [
+        {
+          node: {
+            excerpt: string;
+            fields: {
+              slug: string;
+              readingTime: {
+                minutes: number;
+              };
+            };
+            frontmatter: {
+              date: string;
+              title: string;
+              description: string;
+              tags: string[];
             };
           };
-          frontmatter: {
-            date: string;
-            title: string;
-            description: string;
-            tags: string[];
-          };
-        };
-      }];
+        }
+      ];
     };
   };
 }
@@ -42,7 +44,6 @@ const Article = styled.article`
 const Excerpt = styled.p`
   font-weight: 400;
 `;
-
 
 function BlogIndex(props: BlogIndexProps) {
   const { data } = props;
@@ -62,13 +63,7 @@ function BlogIndex(props: BlogIndexProps) {
 
           return (
             <Article key={node.fields.slug}>
-              <PostHeader 
-                title={title}
-                date={date}
-                url={url}
-                tags={tags}
-                readingTime={readingTime}
-              />
+              <PostHeader title={title} date={date} url={url} tags={tags} readingTime={readingTime} />
               <section>
                 <Excerpt>{node.frontmatter.description || node.excerpt}</Excerpt>
               </section>

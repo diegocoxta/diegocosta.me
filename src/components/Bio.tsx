@@ -46,10 +46,7 @@ function Bio() {
 
   return (
     <Container>
-      <Avatar
-        fixed={data.avatar.childImageSharp.fixed}
-        alt={author}
-      />
+      <Avatar fixed={data.avatar.childImageSharp.fixed} alt={author} />
       <Description>
         Escrito por {author}, team/tech lead and senior software engineer @ sanar | co-founder React Salvador community.
       </Description>

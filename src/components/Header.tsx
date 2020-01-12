@@ -11,12 +11,12 @@ const Container = styled.header`
 `;
 
 const Name = styled.span<HeaderProps>`
-  font-size: ${props => props.small ? '6vw' : '15vw'};
+  font-size: ${props => (props.small ? '6vw' : '15vw')};
   color: #fff;
   font-weight: 700;
 
   @media (min-width: 760px) {
-    font-size: ${props => props.small ? '24px' : '80px'};
+    font-size: ${props => (props.small ? '24px' : '80px')};
   }
 `;
 
@@ -33,7 +33,9 @@ function Header(props: HeaderProps) {
   return (
     <Container>
       <StyledLink to={`/`}>
-        <Name small={props.small}>diego<LastName>c.</LastName></Name>
+        <Name small={props.small}>
+          diego<LastName>c.</LastName>
+        </Name>
       </StyledLink>
     </Container>
   );

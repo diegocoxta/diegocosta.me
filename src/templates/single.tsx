@@ -79,10 +79,7 @@ function Single(props: SingleProps) {
   return (
     <Layout location={props.location} title={siteTitle} smallLogo={true}>
       <>
-        <SEO
-          title={post.frontmatter.title}
-          description={post.frontmatter.description || post.excerpt}
-        />
+        <SEO title={post.frontmatter.title} description={post.frontmatter.description || post.excerpt} />
         <Article>
           <PostHeader
             title={post.frontmatter.title}

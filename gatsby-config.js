@@ -13,17 +13,15 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-google-fonts',
       options: {
-        fonts: [
-          'raleway\:400,700',
-        ],
-        display: 'swap'
-      }
+        fonts: ['raleway:400,700'],
+        display: 'swap',
+      },
     },
     {
       resolve: 'gatsby-plugin-typescript',
       options: {
         isTSX: true, // defaults to false,
-        allExtensions:true
+        allExtensions: true,
       },
     },
     {
@@ -60,7 +58,7 @@ module.exports = {
           'gatsby-remark-prismjs',
           'gatsby-remark-copy-linked-files',
           'gatsby-remark-smartypants',
-          'gatsby-remark-reading-time'
+          'gatsby-remark-reading-time',
         ],
       },
     },
@@ -85,6 +83,6 @@ module.exports = {
         icon: 'content/assets/icon.png',
       },
     },
-    'gatsby-plugin-react-helmet'
+    'gatsby-plugin-react-helmet',
   ],
-}
+};

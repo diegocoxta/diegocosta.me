@@ -10,7 +10,7 @@ interface TagsProps extends PageRendererProps {
   pageContext: {
     tag: string;
   };
-  data : {
+  data: {
     allMarkdownRemark: {
       totalCount: number;
       edges: [
@@ -51,7 +51,6 @@ const Excerpt = styled.p`
   font-weight: 400;
 `;
 
-
 function Tags(props: TagsProps) {
   const { tag } = props.pageContext;
   const { edges, totalCount } = props.data.allMarkdownRemark;
@@ -75,12 +74,12 @@ function Tags(props: TagsProps) {
               <section>
                 <Excerpt>{node.frontmatter.description || node.excerpt}</Excerpt>
               </section>
-            </Article>            
+            </Article>
           );
         })}
       </>
     </Layout>
-  )
+  );
 }
 
 export default Tags;

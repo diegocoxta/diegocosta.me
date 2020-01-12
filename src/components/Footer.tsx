@@ -34,7 +34,7 @@ const NavigationItem = styled.li`
 `;
 
 const NavigationLink = styled.a.attrs({
-  target: '_blank'
+  target: '_blank',
 })`
   text-decoration: none;
   color: #d73738;
@@ -47,7 +47,7 @@ const NavigationLink = styled.a.attrs({
   }
 `;
 
-function Footer () {
+function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
