@@ -76,7 +76,7 @@ function PostHeader(props: PostHeaderProps) {
         <TagList>
           {props.tags.map(tag => (
             <TagItem>
-              <TagLink to={`/tags/${kebabCase(tag)}`}>{tag}</TagLink>
+              <TagLink to={`/tags/${kebabCase(tag)}`}>#{tag}</TagLink>
             </TagItem>
           ))}
         </TagList>
