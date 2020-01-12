@@ -59,12 +59,19 @@ const Content = styled.section`
     padding-left: 20px;
   }
 
-  code {
+  .gatsby-highlight {
     background: #222;
     display: block;
-    padding: 10px 20px;
+    padding: 0 20px;
     font-size: 16px;
     overflow: auto;
+  }
+
+  code {
+    background-color: #333;
+    border-radius: 4px;
+    padding: 2px 4px;
+    font-family: monospace,monospace;
   }
 
   img {
