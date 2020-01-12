@@ -55,7 +55,12 @@ module.exports = {
             },
           },
           'gatsby-remark-embed-gist',
-          'gatsby-remark-prismjs',
+          {
+            resolve: 'gatsby-remark-prismjs',
+            options: {
+              showLineNumbers: true,
+            },
+          },
           'gatsby-remark-copy-linked-files',
           'gatsby-remark-smartypants',
           'gatsby-remark-reading-time',

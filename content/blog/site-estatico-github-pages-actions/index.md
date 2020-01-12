@@ -7,7 +7,7 @@ tags: ['Static Web Sites', 'Github', 'Deploy', 'Gatsby']
 
 Uma das minhas metas de 2020 é conseguir manter um blog e tomada essa decisão comecei a projetar como ele seria publicado. Avaliei [static generators](/tags/static-web-sites), WordPress, Medium e outras plataformas _plug-and-play_ mas nenhuma me dava a liberdade para customizar como um bom desenvolvedor gosta, não restou dúvidas, usar um gerador estático como o [Gatsby](https://www.gatsbyjs.org/) era a escolha mais inteligente para um desenvolvedor React.
 
-Passado a fase de estudos, concepção, horas de diversão montando um tema que atendesse minhas necessidades começou a jornada que imaginava ser um problema ao optar por construir um blog fora de grandes plataformas: Como e onde publicar? Estudei alguns provedores como por exemplo o S3 da Amazon mas enquanto fazia o último _commit_ de meus ajustes no tema a resposta chegou em forma de pergunta: Por que não uso o próprio [github](https://github.com/diegocosta) como servidor de arquivos?
+Passada a fase de estudos, concepção, horas de diversão montando um tema que atendesse minhas necessidades, começou a jornada que imaginava ser um problema ao optar por construir um blog fora de grandes plataformas: Como e onde publicar? Estudei alguns provedores como por exemplo o S3 da Amazon mas enquanto fazia o último _commit_ de meus ajustes no tema a resposta chegou em forma de pergunta: Por que não uso o próprio [github](https://github.com/diegocosta) como servidor de arquivos?
 
 ## Configurações Iniciais
 
@@ -19,10 +19,19 @@ Ao usar um gerador estático você muito provavelmente precisa executar um scrip
 
 Primeiramente definimos um nome para o workflow, o meu chamei de `Deploy on Github Pages`:
 
-`gist:diegocosta/3ec72b9772ca5f291d3a9d3821c92c97#example-name.yml`
+```yml
+name: Deploy on Github Pages
+```
 
 O próximo passo é definir qual evento será responsável por disparar os processos, como eu estou publicando meus arquivos de desenvolvimento na branch _develop_ eu quero que a trigger seja disparada quando eu realizar um novo push nela.
-`gist:diegocosta/3ec72b9772ca5f291d3a9d3821c92c97#example-on.yml`
+```yml
+name: Deploy on Github Pages
+
+on:
+  push:
+    branches:
+    - develop
+```
 
 Agora chega a parte onde a mágica acontece, vamos definir o trabalho a ser executado, para isso eu usei duas [actions](https://help.github.com/en/actions/automating-your-workflow-with-github-actions/about-actions) da comunidade para atingir meus objetivos:
 
@@ -32,7 +41,32 @@ Enquanto o [peaceiris/actions-gh-pages](https://github.com/peaceiris/actions-gh-
 
 O arquivo `.yml` final ficou assim:
 
-`gist:diegocosta/3ec72b9772ca5f291d3a9d3821c92c97#gh-pages.yml`
+```yml
+name: Deploy on Github Pages
+
+on:
+  push:
+    branches:
+    - develop
+
+jobs:
+  build:
+    name: Deploy
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - uses: borales/actions-yarn@v2.0.0
+        with:
+          cmd: install
+      - uses: borales/actions-yarn@v2.0.0
+        with:
+          cmd: build
+      - uses: peaceiris/actions-gh-pages@v2
+        env:
+          ACTIONS_DEPLOY_KEY: ${{ secrets.ACTIONS_DEPLOY_KEY }}
+          PUBLISH_BRANCH: master
+          PUBLISH_DIR: ./public
+```
 
 ## Como configurar chaves de deploy
 Se assim como eu, você precisou configurar pela primeira vez chaves de deploy no Github, vem que eu te ajudo.

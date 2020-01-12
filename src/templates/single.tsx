@@ -60,19 +60,15 @@ const Content = styled.section`
   }
 
   .gatsby-highlight {
-    background: #222;
-    display: block;
-    padding: 0 20px;
-    font-size: 16px;
-    overflow: auto;
-    font-family: monospace,monospace;
+    padding: 10px 0;
   }
 
-  code {
-    background-color: #222;
-    border-radius: 4px;
-    padding: 2px 4px;
-    font-family: monospace,monospace;
+  pre[class*="language-"], code[class*="language-"], .gatsby-highlight {
+    background-color: transparent;
+  }
+
+  .line-numbers-rows, .line-numbers-rows span::before {
+    border: 0.5px solid transparent;
   }
 
   img {
