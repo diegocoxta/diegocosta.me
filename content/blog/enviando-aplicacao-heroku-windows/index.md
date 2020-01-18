@@ -27,7 +27,7 @@ Atenção, caso você não utilize GIT e SSH é obrigatório escolher a opção 
 
 Após realizada a instalação, precisamos autenticar o cliente, abra seu terminal e escreva o seguinte comando:
 
-```sh
+```shell
 heroku login
 ```
 
@@ -35,13 +35,13 @@ Ao digitar isso vai ser solicitado que você entre com suas [credenciais (e-mail
 
 Se você já é um usuário GIT pule pro próximo comando, mas se você acabou de instalar o GIT, através da opção _Git and SSH_ do Tooltbelt, temos que criar sua chave SSH para identificar seu computador, digite o comando abaixo:
 
-```sh
+```shell
 ssh-keygen -t rsa
 ```
 
 A confirmação que tudo ocorreu perfeitamente é um retorno parecido com a mensagem abaixo, caso não esteja recebendo vá até o final do artigo para conferir uma possível solução.
 
-```sh
+```shell
 Your identification has been saved in /Users/Diego/.ssh/id_rsa.
 Your public key has been saved in /Users/Diego/.ssh/id_rsa.pub.
 The key fingerprint is:
@@ -50,13 +50,13 @@ a6:88:0a:0b:...
 
 Agora em poder da chave, o próximo passo será enviar para o Heroku , basta digitar:
 
-```sh
+```shell
 heroku keys:add
 ```
 
 E para verificar se tudo está correto, digite:
 
-```sh
+```shell
 ssh -v git@heroku.com
 ```
 
@@ -72,13 +72,13 @@ Atenção! De acordo com a tecnológia adotada (Ruby, Python, Scala, NodeJS, …
 
 Bom, dentro do diretório execute os seguintes comandos:
 
-```sh
+```shell
 git init && heroku create nome-da-minha-app
 ```
 
 Ao executar estes comandos você está adicionando o controle de versão em seu projeto e de quebra, criando a aplicação dentro do Heroku. Lembrando que onde tem “nome-da-minha-app” você deve colocar o nome que deseja para endereço no herokuapp.com. O retorno será o seguinte:
 
-```sh
+```shell
 Creating nome-da-minha-app... done, stack is cedar-14
 http://nome-da-minha-app.herokuapp.com/ | https://git.heroku.com/nome-da-minha-app.git
 Git remote heroku added
@@ -86,19 +86,19 @@ Git remote heroku added
 
 O próximo passo é realizar o primeiro commit e preparar os arquivos para deploy através do comando abaixo:
 
-```sh
+```shell
 git commit -am "meu primeiro commit"
 ```
 
 Agora enviamos tudo para o Heroku:
 
-```sh
+```shell
 git push heroku master
 ```
 
 Esse processo pode demorar alguns minutos a depender da complexidade de sua aplicação e sua conexão com a internet. Ao fim do processo, para verificar sua aplicação online, execute o seguinte comando:
 
-```sh
+```shell
 heroku open
 ```
 
@@ -106,7 +106,7 @@ Atenção! Trabalhar com banco de dados requer passos extras e varia de acordo c
 
 ## [HEEEELP] Criando chaves SSH no Windows
 
-```sh
+```shell
 No such file or directory.
 No such host or network path.
 Saving the key failed: //.ssh/id_rsa.

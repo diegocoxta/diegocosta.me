@@ -72,11 +72,11 @@ jobs:
 Se assim como eu, você precisou configurar pela primeira vez chaves de deploy no Github, vem que eu te ajudo.
 
 Primeiro você precisa gerar uma nova chave SSH usando o comando abaixo em seu terminal:
-```sh
+```shell
 ssh-keygen -t rsa -b 4096 -C "$(git config user.email)" -f gh-pages -N ""
 ```
 Se tudo deu certo, você vai receber o retorno abaixo:
-```sh
+```shell
 Generating public/private rsa key pair.
 Your identification has been saved in gh-pages.
 Your public key has been saved in gh-pages.pub.
@@ -84,11 +84,11 @@ The key fingerprint is:
 SHA256:TizUu... diego@...
 ```
 O próximo passo é configurar a chave publica, para isso vá nas configurações do seu repositório, clique em **Deploy Keys** e adicione o conteúdo do arquivo `gh-pages.pub` no campo _Key_, em _title_ deve informar o nome da chave que você definiu no `.yml` (em nosso caso é `ACTIONS_DEPLOY_KEY`) e deve marcar _Allow write access_ para conseguirmos fazer um _push_ com essa _key_.
-```sh
+```shell
 cat gh-pages.pub  # o cat serve também pra ver o conteúdo de um arquivo.
 ```
 Por fim devemos informar também a chave privada, ainda nas configurações escolha **Secrets** e adicione uma nova com o conteúdo do arquivo `gh-pages`:
-```sh
+```shell
 cat gh-pages
 ```
 

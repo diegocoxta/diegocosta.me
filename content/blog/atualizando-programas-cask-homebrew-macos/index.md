@@ -10,7 +10,7 @@ Contextualizando, no Homebrew o comando para atualizar todos os programas é `br
 
 Aqui entra a dica! Para não ter que rodar o `upgrade` para cada item manualmente, execute esse comando em seu terminal:
 
-```sh
+```shell
 for cask in $(brew cask list); do brew cask upgrade $cask; done;
 ```
 

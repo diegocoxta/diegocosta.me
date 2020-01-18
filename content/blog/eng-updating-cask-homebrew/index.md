@@ -10,7 +10,7 @@ For context propose, in Homebrew the command to update all software is `brew cas
 
 Here's the tip! To avoid having to run `upgrade` to each item manually, run this command in your terminal:
 
-```sh
+```shell
 for cask in $(brew cask list); do brew cask upgrade $cask; done;
 ```
 
