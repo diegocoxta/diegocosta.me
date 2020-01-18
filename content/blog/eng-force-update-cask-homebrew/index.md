@@ -1,5 +1,5 @@
 ---
-title: Force Update of all your Homebrew casks in macOS
+title: Force update of all your Homebrew casks in macOS
 date: '2020-01-18T23:12:03.284Z'
 description: A simple way to force an upgrade to your applications installed via Homebrew.
 tags: ['Terminal', 'MacOS', 'Homebrew', 'Caskroom', 'English']
