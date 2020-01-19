@@ -6,7 +6,7 @@ import Header from './Header';
 import Footer from './Footer';
 
 interface LayoutProps extends PageRendererProps {
-  title: String;
+  title: string;
   children: React.ReactElement;
   smallLogo?: boolean;
 }

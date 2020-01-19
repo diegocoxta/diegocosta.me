@@ -75,8 +75,8 @@ function PostHeader(props: PostHeaderProps) {
       </Details>
       {props.tags && (
         <TagList>
-          {props.tags.map(tag => (
-            <TagItem>
+          {props.tags.map((tag, index) => (
+            <TagItem key={`${index}-${tag}`}>
               <TagLink to={`/tags/${kebabCase(tag)}`}>#{tag.replace(/ /g, '-')}</TagLink>
             </TagItem>
           ))}

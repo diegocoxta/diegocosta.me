@@ -24,13 +24,14 @@ name: Deploy on Github Pages
 ```
 
 O próximo passo é definir qual evento será responsável por disparar os processos, como eu estou publicando meus arquivos de desenvolvimento na branch _develop_ eu quero que a trigger seja disparada quando eu realizar um novo push nela.
+
 ```yml
 name: Deploy on Github Pages
 
 on:
   push:
     branches:
-    - develop
+      - develop
 ```
 
 Agora chega a parte onde a mágica acontece, vamos definir o trabalho a ser executado, para isso eu usei duas [actions](https://help.github.com/en/actions/automating-your-workflow-with-github-actions/about-actions) da comunidade para atingir meus objetivos:
@@ -47,7 +48,7 @@ name: Deploy on Github Pages
 on:
   push:
     branches:
-    - develop
+      - develop
 
 jobs:
   build:
@@ -69,13 +70,17 @@ jobs:
 ```
 
 ## Como configurar chaves de deploy
+
 Se assim como eu, você precisou configurar pela primeira vez chaves de deploy no Github, vem que eu te ajudo.
 
 Primeiro você precisa gerar uma nova chave SSH usando o comando abaixo em seu terminal:
+
 ```shell
 ssh-keygen -t rsa -b 4096 -C "$(git config user.email)" -f gh-pages -N ""
 ```
+
 Se tudo deu certo, você vai receber o retorno abaixo:
+
 ```shell
 Generating public/private rsa key pair.
 Your identification has been saved in gh-pages.
@@ -83,15 +88,19 @@ Your public key has been saved in gh-pages.pub.
 The key fingerprint is:
 SHA256:TizUu... diego@...
 ```
+
 O próximo passo é configurar a chave publica, para isso vá nas configurações do seu repositório, clique em **Deploy Keys** e adicione o conteúdo do arquivo `gh-pages.pub` no campo _Key_, em _title_ deve informar o nome da chave que você definiu no `.yml` (em nosso caso é `ACTIONS_DEPLOY_KEY`) e deve marcar _Allow write access_ para conseguirmos fazer um _push_ com essa _key_.
+
 ```shell
 cat gh-pages.pub  # o cat serve também pra ver o conteúdo de um arquivo.
 ```
+
 Por fim devemos informar também a chave privada, ainda nas configurações escolha **Secrets** e adicione uma nova com o conteúdo do arquivo `gh-pages`:
+
 ```shell
 cat gh-pages
 ```
 
 E isso é tudo que você precisa fazer para ter um blog com deploy automatizado sem custos no Github.
 
-✅  Complete job.
+✅ Complete job.

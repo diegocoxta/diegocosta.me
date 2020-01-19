@@ -2,7 +2,6 @@ import React from 'react';
 import { graphql, PageRendererProps } from 'gatsby';
 import styled from 'styled-components';
 
-import Bio from '../components/Bio';
 import Layout from '../components/Layout';
 import SEO from '../components/SEO';
 import PostHeader from '../components/PostHeader';
@@ -33,12 +32,8 @@ interface SingleProps extends PageRendererProps {
   };
 }
 
-const Article = styled.article``;
-
-const Footer = styled.footer`
-  border-top: 1px solid #fff;
-  padding-top: 20px;
-  margin: 40px 0;
+const Article = styled.article`
+  margin-bottom: 50px;
 `;
 
 const Content = styled.section`
@@ -63,11 +58,14 @@ const Content = styled.section`
     padding: 10px 0;
   }
 
-  pre[class*="language-"], code[class*="language-"], .gatsby-highlight {
+  pre[class*='language-'],
+  code[class*='language-'],
+  .gatsby-highlight {
     background-color: transparent;
   }
 
-  .line-numbers-rows, .line-numbers-rows span::before {
+  .line-numbers-rows,
+  .line-numbers-rows span::before {
     border: 0.5px solid transparent;
   }
 

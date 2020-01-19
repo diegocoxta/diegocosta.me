@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/camelcase */
+
 module.exports = {
   siteMetadata: {
     title: 'Blog do Diego Costa',
@@ -27,14 +29,14 @@ module.exports = {
     {
       resolve: 'gatsby-source-filesystem',
       options: {
-        path: `${__dirname}/content/blog`,
+        path: `${__dirname}/content`,
         name: 'blog',
       },
     },
     {
       resolve: 'gatsby-source-filesystem',
       options: {
-        path: `${__dirname}/content/assets`,
+        path: `${__dirname}/src/assets`,
         name: 'assets',
       },
     },
@@ -85,10 +87,10 @@ module.exports = {
         background_color: '#0e0f11',
         theme_color: '#d73738',
         display: 'minimal-ui',
-        icon: 'content/assets/icon.png',
+        icon: 'src/assets/icon.png',
       },
     },
     'gatsby-plugin-react-helmet',
-    'gatsby-plugin-sitemap'
+    'gatsby-plugin-sitemap',
   ],
 };
