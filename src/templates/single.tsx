@@ -92,9 +92,6 @@ function Single(props: SingleProps) {
             readingTime={post.fields.readingTime.minutes}
           />
           <Content dangerouslySetInnerHTML={{ __html: post.html }} />
-          <Footer>
-            <Bio />
-          </Footer>
         </Article>
       </>
     </Layout>
