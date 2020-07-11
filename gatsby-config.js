@@ -1,14 +1,17 @@
-/* eslint-disable @typescript-eslint/camelcase */
-
 module.exports = {
   siteMetadata: {
     title: 'Blog do Diego Costa',
     author: 'Diego Costa',
     description: 'Diego Costa, desenvolvedor web e mobile - Salvador, BA',
     siteUrl: 'https://blog.diegocosta.com.br',
-    social: {
-      twitter: 'diegocoxta',
-    },
+    repository: 'https://github.com/diegocosta/blog.diegocosta.com.br',
+    contacts: [
+      { link: 'https://diegocosta.com.br', label: 'sobre mim' },
+      { link: 'https://github.com/diegocosta', label: 'github' },
+      { link: 'https://linkedin.com/in/diegoscosta', label: 'linkedin' },
+      { link: 'https://twitter.com/diegocoxta', label: 'twitter' },
+      { link: 'mailto://diego@diegocosta.com.br', label: 'e-mail' },
+    ],
   },
   plugins: [
     'gatsby-plugin-styled-components',
@@ -22,7 +25,7 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-typescript',
       options: {
-        isTSX: true, // defaults to false,
+        isTSX: true,
         allExtensions: true,
       },
     },
@@ -31,13 +34,6 @@ module.exports = {
       options: {
         path: `${__dirname}/posts`,
         name: 'blog',
-      },
-    },
-    {
-      resolve: 'gatsby-source-filesystem',
-      options: {
-        path: `${__dirname}/src/assets`,
-        name: 'assets',
       },
     },
     {
