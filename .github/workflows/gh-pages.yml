@@ -1,9 +1,6 @@
-name: Deploy on Github Pages
+name: Blog Diego Costa Workflow
 
-on:
-  push:
-    branches:
-    - develop
+on: [push, pull_request]
 
 jobs:
   test:
