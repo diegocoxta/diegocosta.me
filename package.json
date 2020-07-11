@@ -37,6 +37,9 @@
     "styled-components": "^5.1.1"
   },
   "devDependencies": {
+    "@babel/preset-typescript": "^7.10.4",
+    "@testing-library/jest-dom": "^5.11.0",
+    "@testing-library/react": "^10.4.5",
     "@types/lodash": "^4.14.157",
     "@types/node": "^14.0.22",
     "@types/react": "^16.9.42",
@@ -46,24 +49,47 @@
     "@typescript-eslint/eslint-plugin": "^3.6.0",
     "@typescript-eslint/parser": "^3.6.0",
     "babel-eslint": "^10.1.0",
+    "babel-jest": "^26.1.0",
     "babel-plugin-styled-components": "^1.10.7",
+    "babel-preset-gatsby": "^0.5.2",
     "eslint": "^7.4.0",
     "eslint-config-prettier": "^6.11.0",
     "eslint-loader": "^4.0.2",
     "eslint-plugin-import": "^2.22.0",
     "eslint-plugin-prettier": "^3.1.4",
     "eslint-plugin-react": "^7.20.3",
+    "husky": "^4.2.5",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^26.1.0",
+    "jest-styled-components": "^7.0.2",
+    "lint-staged": "^10.2.11",
     "prettier": "^2.0.5",
+    "stylelint": "^13.6.1",
+    "stylelint-config-recommended": "^3.0.0",
+    "stylelint-config-styled-components": "^0.1.1",
+    "stylelint-processor-styled-components": "^1.10.0",
     "typescript": "^3.9.6"
   },
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",
-    "format": "prettier --write \"**/*.{js,jsx,json,md,ts,tsx}\"",
+    "prettier": "prettier --write {src,*.js}",
     "start": "npm run develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "lint": "eslint ./src --ext ts,tsx,js,jsx",
-    "lint:fix": "eslint --fix src --ext ts,tsx,js,jsx"
+    "test": "jest",
+    "lint": "eslint {src,*.js} --ext .js,.ts,.tsx && stylelint 'src/**/*.{js,ts,tsx}'",
+    "lint:fix": "eslint {src,*.js} --ext .js,.ts,.tsx --fix"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{ts,tsx}": [
+      "yarn prettier",
+      "stylelint"
+    ]
   }
 }
