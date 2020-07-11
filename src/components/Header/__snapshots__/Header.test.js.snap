@@ -1,0 +1,100 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Header /> should not render the last name 1`] = `
+<body>
+  .c0 {
+  margin-bottom: 40px;
+}
+
+.c2 {
+  font-size: 6vw;
+  color: #fff;
+  font-weight: 700;
+  text-transform: lowercase;
+}
+
+.c1 {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  box-shadow: none;
+}
+
+@media (min-width:760px) {
+  .c2 {
+    font-size: 24px;
+  }
+}
+
+<div>
+    <header
+      class="c0"
+    >
+      <a
+        class="c1"
+        href="/"
+      >
+        <span
+          class="c2"
+        >
+          John
+        </span>
+      </a>
+    </header>
+  </div>
+</body>
+`;
+
+exports[`<Header /> should render properly 1`] = `
+.c0 {
+  margin-bottom: 40px;
+}
+
+.c2 {
+  font-size: 15vw;
+  color: #fff;
+  font-weight: 700;
+  text-transform: lowercase;
+}
+
+.c3 {
+  color: #d73738;
+}
+
+.c1 {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  box-shadow: none;
+}
+
+@media (min-width:760px) {
+  .c2 {
+    font-size: 80px;
+  }
+}
+
+<body>
+  <div>
+    <header
+      class="c0"
+    >
+      <a
+        class="c1"
+        href="/"
+      >
+        <span
+          class="c2"
+        >
+          John
+          <span
+            class="c3"
+            data-testid="header-lastname"
+          >
+            D
+            .
+          </span>
+        </span>
+      </a>
+    </header>
+  </div>
+</body>
+`;
