@@ -101,9 +101,9 @@ exports[`<ArticleHeader /> should not render the tags 1`] = `
          ·
          
         <span>
-          5 minutes
+          5 minutos
            
-          of reading
+          de leitura
         </span>
       </p>
     </header>
@@ -228,6 +228,70 @@ exports[`<ArticleHeader /> should render properly 1`] = `
           </a>
         </li>
       </ul>
+    </header>
+  </div>
+</body>
+`;
+
+exports[`<ArticleHeader /> should render properly in Poruguese 1`] = `
+<body>
+  .c0 {
+  margin: 20px 0 0 0;
+}
+
+.c1 {
+  font-family: 'Raleway',sans-serif;
+  font-weight: 700;
+  font-size: 36px;
+  margin: 0;
+}
+
+.c2 {
+  color: #fff;
+  box-shadow: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c2:hover {
+  border-bottom: 1px solid #fff;
+}
+
+.c3 {
+  color: #9a9a9a;
+  font-size: 18px;
+  margin: 5px 0;
+}
+
+<div>
+    <header
+      class="c0"
+    >
+      <h3
+        class="c1"
+      >
+        <a
+          class="c2"
+          data-testid="article-header-custom-link"
+          href="https://google.com"
+        >
+          Awesome Article
+        </a>
+      </h3>
+      <p
+        class="c3"
+      >
+        <span>
+          20/07/2020
+        </span>
+         ·
+         
+        <span>
+          5 minutos
+           
+          de leitura
+        </span>
+      </p>
     </header>
   </div>
 </body>
