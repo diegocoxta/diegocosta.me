@@ -1,0 +1,44 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<NotFoundPage> should render properly 1`] = `
+.c0 {
+  margin: auto;
+  max-width: 800px;
+  padding: 20px;
+}
+
+.c1 {
+  font-size: 22px;
+  background: #d73738;
+  display: inline;
+  padding: 5px;
+}
+
+<body>
+  <div>
+    <section
+      class="c0"
+    >
+      <p>
+        Header
+      </p>
+      <main>
+        <p>
+          Metatags
+        </p>
+        <h1
+          class="c1"
+        >
+          Não encontrado
+        </h1>
+        <p>
+          You just hit a route that doesn't exist... the sadness.
+        </p>
+      </main>
+      <p>
+        Footer
+      </p>
+    </section>
+  </div>
+</body>
+`;

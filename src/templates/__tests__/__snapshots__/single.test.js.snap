@@ -1,0 +1,87 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<SinglePage> should render properly 1`] = `
+.c0 {
+  margin: auto;
+  max-width: 800px;
+  padding: 20px;
+}
+
+.c1 {
+  margin: 0 0 60px 0;
+  font-weight: 400;
+}
+
+.c2 {
+  line-height: 1.5;
+}
+
+.c2 a {
+  color: #d73738;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+}
+
+.c2 a:hover {
+  border-bottom: 1px solid #d73738;
+}
+
+.c2 blockquote {
+  border-left: 5px solid #d73738;
+  padding-left: 20px;
+}
+
+.c2 .gatsby-highlight {
+  padding: 10px 0;
+}
+
+.c2 pre[class*='language-'],
+.c2 code[class*='language-'],
+.c2 .gatsby-highlight {
+  background-color: transparent;
+}
+
+.c2 .line-numbers-rows,
+.c2 .line-numbers-rows span::before {
+  border: 0.5px solid transparent;
+}
+
+.c2 img {
+  box-shadow: none !important;
+}
+
+<body>
+  <div>
+    <section
+      class="c0"
+    >
+      <p>
+        Header
+      </p>
+      <main>
+        <p>
+          Metatags
+        </p>
+        <article
+          class="c1"
+        >
+          <p>
+            ArticleHeader
+          </p>
+          <section
+            class="c2"
+          >
+            <p>
+              Post content
+            </p>
+          </section>
+        </article>
+      </main>
+      <p>
+        Footer
+      </p>
+    </section>
+  </div>
+</body>
+`;

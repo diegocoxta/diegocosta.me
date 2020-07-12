@@ -16,8 +16,9 @@ module.exports = {
     browser: true,
     node: true,
     es6: true,
+    'jest/globals': true,
   },
-  plugins: ['@typescript-eslint', 'react'],
+  plugins: ['@typescript-eslint', 'react', 'jest'],
   parserOptions: {
     ecmaFeatures: {
       jsx: true,
@@ -28,6 +29,7 @@ module.exports = {
   rules: {
     'react/prop-types': 'off', // Disable prop-types as we use TypeScript for type checking
     '@typescript-eslint/explicit-function-return-type': 'off',
+    'react/display-name': 'off',
   },
   overrides: [
     // Override some TypeScript rules just for .js files

@@ -1,0 +1,64 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<TagsPage> should render properly 1`] = `
+.c0 {
+  margin: auto;
+  max-width: 800px;
+  padding: 20px;
+}
+
+.c2 {
+  margin: 0 0 60px 0;
+  font-weight: 400;
+}
+
+.c1 {
+  font-size: 22px;
+  background: #d73738;
+  display: inline;
+  padding: 5px;
+}
+
+<body>
+  <div>
+    <section
+      class="c0"
+    >
+      <p>
+        Header
+      </p>
+      <main>
+        <p>
+          Metatags
+        </p>
+        <h1
+          class="c1"
+        >
+          Tech Stuff (2)
+        </h1>
+        <article
+          class="c2"
+          data-testid="tags-page-article"
+        >
+          <p>
+            ArticleHeader
+          </p>
+          Awesome first article
+        </article>
+        <article
+          class="c2"
+          data-testid="tags-page-article"
+        >
+          <p>
+            ArticleHeader
+          </p>
+          Awesome second article
+        </article>
+      </main>
+      <p>
+        Footer
+      </p>
+    </section>
+  </div>
+</body>
+`;
