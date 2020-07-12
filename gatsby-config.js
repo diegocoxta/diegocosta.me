@@ -2,6 +2,7 @@ module.exports = {
   siteMetadata: {
     title: 'Blog do Diego Costa',
     author: 'Diego Costa',
+    language: 'en',
     description: 'Diego Costa, desenvolvedor web e mobile - Salvador, BA',
     siteUrl: 'https://blog.diegocosta.com.br',
     repository: 'https://github.com/diegocosta/blog.diegocosta.com.br',

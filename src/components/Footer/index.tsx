@@ -3,7 +3,7 @@ import { useStaticQuery, graphql } from 'gatsby';
 
 import Footer from './Footer';
 
-export default () => {
+export default (): React.ReactElement => {
   const {
     site: {
       siteMetadata: { contacts, repository },

@@ -60,7 +60,7 @@ interface FooterProps {
   repository?: string;
 }
 
-export default function Footer(props: FooterProps) {
+export default function Footer(props: FooterProps): React.ReactElement {
   return (
     <Container>
       <Navigation>

@@ -1,0 +1,234 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ArticleHeader /> should not render the link 1`] = `
+<body>
+  .c0 {
+  margin: 20px 0 0 0;
+}
+
+.c1 {
+  font-family: 'Raleway',sans-serif;
+  margin-bottom: 0;
+  font-weight: 700;
+  font-size: 36px;
+  margin: 0;
+}
+
+.c2 {
+  color: #9a9a9a;
+  font-size: 18px;
+  margin: 5px 0;
+}
+
+<div>
+    <header
+      class="c0"
+    >
+      <h3
+        class="c1"
+      >
+        Awesome Article
+      </h3>
+      <p
+        class="c2"
+      >
+        <span>
+          20/07/2020
+        </span>
+         · 
+        <span>
+          5 minutes
+           
+          of reading
+        </span>
+      </p>
+    </header>
+  </div>
+</body>
+`;
+
+exports[`<ArticleHeader /> should not render the tags 1`] = `
+<body>
+  .c0 {
+  margin: 20px 0 0 0;
+}
+
+.c1 {
+  font-family: 'Raleway',sans-serif;
+  margin-bottom: 0;
+  font-weight: 700;
+  font-size: 36px;
+  margin: 0;
+}
+
+.c2 {
+  color: #fff;
+  box-shadow: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c2:hover {
+  border-bottom: 1px solid #fff;
+}
+
+.c3 {
+  color: #9a9a9a;
+  font-size: 18px;
+  margin: 5px 0;
+}
+
+<div>
+    <header
+      class="c0"
+    >
+      <h3
+        class="c1"
+      >
+        <a
+          class="c2"
+          data-testid="article-header-custom-link"
+          href="https://google.com"
+        >
+          Awesome Article
+        </a>
+      </h3>
+      <p
+        class="c3"
+      >
+        <span>
+          20/07/2020
+        </span>
+         · 
+        <span>
+          5 minutes
+           
+          of reading
+        </span>
+      </p>
+    </header>
+  </div>
+</body>
+`;
+
+exports[`<ArticleHeader /> should render properly 1`] = `
+.c0 {
+  margin: 20px 0 0 0;
+}
+
+.c1 {
+  font-family: 'Raleway',sans-serif;
+  margin-bottom: 0;
+  font-weight: 700;
+  font-size: 36px;
+  margin: 0;
+}
+
+.c2 {
+  color: #fff;
+  box-shadow: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c2:hover {
+  border-bottom: 1px solid #fff;
+}
+
+.c6 {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  box-shadow: none;
+  font-size: 14px;
+  color: #d73738;
+  font-weight: 700;
+  text-transform: lowercase;
+}
+
+.c6:hover {
+  border-bottom: 1px solid #d73738;
+}
+
+.c4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 0;
+  padding: 0;
+}
+
+.c5 {
+  list-style: none;
+  padding: 0 10px 0 0;
+  margin-bottom: 5px;
+}
+
+.c3 {
+  color: #9a9a9a;
+  font-size: 18px;
+  margin: 5px 0;
+}
+
+<body>
+  <div>
+    <header
+      class="c0"
+    >
+      <h3
+        class="c1"
+      >
+        <a
+          class="c2"
+          data-testid="article-header-custom-link"
+          href="https://google.com"
+        >
+          Awesome Article
+        </a>
+      </h3>
+      <p
+        class="c3"
+      >
+        <span>
+          20/07/2020
+        </span>
+         · 
+        <span>
+          5 minutes
+           
+          of reading
+        </span>
+      </p>
+      <ul
+        class="c4"
+        data-testid="article-header-tags"
+      >
+        <li
+          class="c5"
+          data-testid="article-header-tag"
+        >
+          <a
+            class="c6"
+            href="/tags/jest"
+          >
+            #
+            jest
+          </a>
+        </li>
+        <li
+          class="c5"
+          data-testid="article-header-tag"
+        >
+          <a
+            class="c6"
+            href="/tags/testing-library"
+          >
+            #
+            testing-library
+          </a>
+        </li>
+      </ul>
+    </header>
+  </div>
+</body>
+`;

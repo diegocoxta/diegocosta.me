@@ -3,7 +3,7 @@ import { useStaticQuery, graphql } from 'gatsby';
 
 import Header from './Header';
 
-export default ({ small }: { small: boolean }) => {
+export default ({ small }: { small: boolean }): React.ReactElement => {
   const {
     site: {
       siteMetadata: { author },

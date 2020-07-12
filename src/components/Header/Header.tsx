@@ -31,7 +31,7 @@ interface HeaderProps {
   author: string;
 }
 
-export default function Header(props: HeaderProps) {
+export default function Header(props: HeaderProps): React.ReactElement {
   const [name, lastname] = props.author.split(' ');
 
   return (

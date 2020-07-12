@@ -16,8 +16,9 @@ module.exports = {
     browser: true,
     node: true,
     es6: true,
+    'jest/globals': true,
   },
-  plugins: ['@typescript-eslint', 'react'],
+  plugins: ['@typescript-eslint', 'react', 'jest'],
   parserOptions: {
     ecmaFeatures: {
       jsx: true,
