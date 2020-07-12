@@ -9,7 +9,7 @@ import NotFoundPage from '../404';
 
 describe('<NotFoundPage>', () => {
   it('should render properly', () => {
-    const { baseElement, getAllByTestId, getByText } = render(<NotFoundPage />);
+    const { baseElement } = render(<NotFoundPage />);
     expect(baseElement).toMatchSnapshot();
   });
 });
