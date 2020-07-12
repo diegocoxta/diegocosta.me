@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<SinglePage> should render properly 1`] = `
+exports[`<ArticlePage> should render properly 1`] = `
 .c0 {
   margin: auto;
   max-width: 800px;

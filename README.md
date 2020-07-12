@@ -1,7 +1,9 @@
 # 👨🏿‍💻 blog.diegocosta.com.br
+
 My personal blog powered by gatsby, typescript and styled-components.
 
 ## 🖥️ Tech Stack
+
 - Build with Gatsby w/ TypeScript and styled-components.
 - Testing with Jest and Testing Library.
 - With ESLint, Prettier, stylelint, Husky, lint-staged and [much more](package.json).

@@ -1,19 +1,19 @@
 import React from 'react';
 import { graphql, PageRendererProps } from 'gatsby';
 
-import Container from '../components/Container';
-import Metatags from '../components/Metatags';
-import ArticleHeader from '../components/ArticleHeader';
-import Article, { Content } from '../components/Article';
+import Container from '~/components/Container';
+import Metatags from '~/components/Metatags';
+import ArticleHeader from '~/components/ArticleHeader';
+import Article, { Content } from '~/components/Article';
 
-import { SinglePageQuery } from '../../graphql-types';
+import { ArticlePageQuery } from '../../graphql-types';
 
-interface SinglePageProps extends PageRendererProps {
-  data: SinglePageQuery;
+interface ArticlePageProps extends PageRendererProps {
+  data: ArticlePageQuery;
 }
 
-export default function SinglePage({ data }: SinglePageProps): React.ReactElement {
-  const { html, excerpt, frontmatter, fields } = data.markdownRemark ?? {};
+export default function ArticlePage({ data }: ArticlePageProps): React.ReactElement {
+  const { html, excerpt, frontmatter, fields } = data.article ?? {};
   const { title, date, tags, lang, description } = frontmatter ?? {};
 
   return (
@@ -34,8 +34,8 @@ export default function SinglePage({ data }: SinglePageProps): React.ReactElemen
 }
 
 export const pageQuery = graphql`
-  query SinglePage($slug: String!) {
-    markdownRemark(fields: { slug: { eq: $slug } }) {
+  query ArticlePage($slug: String!) {
+    article: markdownRemark(fields: { slug: { eq: $slug } }) {
       excerpt(pruneLength: 160)
       html
       fields {

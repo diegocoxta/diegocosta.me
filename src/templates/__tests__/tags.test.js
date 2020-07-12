@@ -11,7 +11,7 @@ import TagsPage from '../tags';
 describe('<TagsPage>', () => {
   it('should render properly', () => {
     const data = {
-      allMarkdownRemark: {
+      articles: {
         totalCount: 2,
         edges: [
           {
@@ -55,10 +55,10 @@ describe('<TagsPage>', () => {
     const { baseElement, getAllByTestId, getByText } = render(
       <TagsPage data={data} pageContext={{ tag: 'Tech Stuff' }} />
     );
-    expect(getAllByTestId('tags-page-article').length).toEqual(data.allMarkdownRemark.totalCount);
+    expect(getAllByTestId('tags-page-article').length).toEqual(data.articles.totalCount);
     expect(getByText('Awesome second article')).toBeTruthy();
     expect(getByText('Awesome first article')).toBeTruthy();
-    expect(getByText(`Tech Stuff (${data.allMarkdownRemark.totalCount})`)).toBeTruthy();
+    expect(getByText(`Tech Stuff (${data.articles.totalCount})`)).toBeTruthy();
     expect(baseElement).toMatchSnapshot();
   });
 });

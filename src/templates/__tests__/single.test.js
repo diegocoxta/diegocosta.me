@@ -6,12 +6,12 @@ jest.mock('../../components/Footer', () => () => <p>Footer</p>);
 jest.mock('../../components/ArticleHeader', () => () => <p>ArticleHeader</p>);
 jest.mock('../../components/Metatags', () => () => <p>Metatags</p>);
 
-import SinglePage from '../single';
+import ArticlePage from '../article';
 
-describe('<SinglePage>', () => {
+describe('<ArticlePage>', () => {
   it('should render properly', () => {
     const data = {
-      markdownRemark: {
+      article: {
         frontmatter: {
           title: 'Title 1',
           date: '30/10/2020',
@@ -29,7 +29,7 @@ describe('<SinglePage>', () => {
       },
     };
 
-    const { baseElement, getByText } = render(<SinglePage data={data} />);
+    const { baseElement, getByText } = render(<ArticlePage data={data} />);
     expect(getByText('Post content')).toBeTruthy();
     expect(baseElement).toMatchSnapshot();
   });
