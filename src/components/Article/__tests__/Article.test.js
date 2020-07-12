@@ -1,7 +1,7 @@
 import React from 'react';
 import { render } from '@testing-library/react';
 
-import Article, { Content } from './Article';
+import Article, { Content } from '../Article';
 
 describe('<Article />', () => {
   it('should render properly', () => {

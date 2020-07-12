@@ -1,112 +1,41 @@
 import React from 'react';
 import { graphql, PageRendererProps } from 'gatsby';
-import styled from 'styled-components';
 
-import Layout from '../components/Layout';
-import SEO from '../components/SEO';
-import PostHeader from '../components/PostHeader';
+import Container from '../components/Container';
+import Metatags from '../components/Metatags';
+import ArticleHeader from '../components/ArticleHeader';
+import Article, { Content } from '../components/Article';
 
-interface SingleProps extends PageRendererProps {
-  data: {
-    site: {
-      siteMetadata: {
-        title: string;
-      };
-    };
-    markdownRemark: {
-      id: string;
-      excerpt: string;
-      html: string;
-      fields: {
-        readingTime: {
-          minutes: number;
-        };
-      };
-      frontmatter: {
-        title: string;
-        date: string;
-        description: string;
-        tags: string[];
-      };
-    };
-  };
+import { SinglePageQuery } from '../../graphql-types';
+
+interface SinglePageProps extends PageRendererProps {
+  data: SinglePageQuery;
 }
 
-const Article = styled.article`
-  margin-bottom: 50px;
-`;
-
-const Content = styled.section`
-  line-height: 1.5;
-
-  a {
-    color: #d73738;
-    text-decoration: none;
-    border-bottom: 1px solid transparent;
-
-    :hover {
-      border-bottom: 1px solid #d73738;
-    }
-  }
-
-  blockquote {
-    border-left: 5px solid #d73738;
-    padding-left: 20px;
-  }
-
-  .gatsby-highlight {
-    padding: 10px 0;
-  }
-
-  pre[class*='language-'],
-  code[class*='language-'],
-  .gatsby-highlight {
-    background-color: transparent;
-  }
-
-  .line-numbers-rows,
-  .line-numbers-rows span::before {
-    border: 0.5px solid transparent;
-  }
-
-  img {
-    box-shadow: none !important;
-  }
-`;
-
-function Single(props: SingleProps) {
-  const post = props.data.markdownRemark;
-  const siteTitle = props.data.site.siteMetadata.title;
+export default function SinglePage({ data }: SinglePageProps): React.ReactElement {
+  const { html, excerpt, frontmatter, fields } = data.markdownRemark ?? {};
+  const { title, date, tags, lang, description } = frontmatter ?? {};
 
   return (
-    <Layout location={props.location} title={siteTitle} smallLogo={true}>
-      <>
-        <SEO title={post.frontmatter.title} description={post.frontmatter.description || post.excerpt} />
-        <Article>
-          <PostHeader
-            title={post.frontmatter.title}
-            date={post.frontmatter.date}
-            tags={post.frontmatter.tags}
-            readingTime={post.fields.readingTime.minutes}
-          />
-          <Content dangerouslySetInnerHTML={{ __html: post.html }} />
-        </Article>
-      </>
-    </Layout>
+    <Container small={true}>
+      <Metatags title={title ?? ''} description={description || excerpt || ''} />
+      <Article>
+        <ArticleHeader
+          title={title ?? ''}
+          date={date}
+          tags={tags as string[]}
+          readingTime={fields?.readingTime?.minutes ?? 0}
+          lang={lang}
+        />
+        <Content dangerouslySetInnerHTML={{ __html: html ?? '' }} />
+      </Article>
+    </Container>
   );
 }
 
-export default Single;
-
 export const pageQuery = graphql`
-  query BlogPostBySlug($slug: String!) {
-    site {
-      siteMetadata {
-        title
-      }
-    }
+  query SinglePage($slug: String!) {
     markdownRemark(fields: { slug: { eq: $slug } }) {
-      id
       excerpt(pruneLength: 160)
       html
       fields {
@@ -119,6 +48,7 @@ export const pageQuery = graphql`
         date(formatString: "DD/MM/YYYY")
         description
         tags
+        lang
       }
     }
   }

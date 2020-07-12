@@ -1,89 +1,43 @@
 import React from 'react';
 import { graphql, PageRendererProps } from 'gatsby';
-import styled from 'styled-components';
 
-import Layout from '../components/Layout';
-import SEO from '../components/SEO';
-import PostHeader from '../components/PostHeader';
+import Container from '../components/Container';
+import Metatags from '../components/Metatags';
+import ArticleHeader from '../components/ArticleHeader';
+import Article from '../components/Article';
 
-interface BlogIndexProps extends PageRendererProps {
-  data: {
-    site: {
-      siteMetadata: {
-        title: string;
-      };
-    };
-    allMarkdownRemark: {
-      edges: [
-        {
-          node: {
-            excerpt: string;
-            fields: {
-              slug: string;
-              readingTime: {
-                minutes: number;
-              };
-            };
-            frontmatter: {
-              date: string;
-              title: string;
-              description: string;
-              tags: string[];
-            };
-          };
-        }
-      ];
-    };
-  };
+import { IndexPageQuery } from '../../graphql-types';
+
+interface IndexPageProps extends PageRendererProps {
+  data: IndexPageQuery;
 }
 
-const Article = styled.article`
-  margin: 0 0 60px 0;
-`;
-
-const Excerpt = styled.p`
-  font-weight: 400;
-`;
-
-function BlogIndex(props: BlogIndexProps) {
-  const { data } = props;
-  const siteTitle = data.site.siteMetadata.title;
-  const posts = data.allMarkdownRemark.edges;
-
+export default function IndexPage({ data }: IndexPageProps): React.ReactElement {
+  const {
+    allMarkdownRemark: { edges },
+  } = data;
   return (
-    <Layout location={props.location} title={siteTitle}>
-      <>
-        <SEO />
-        {posts.map(({ node }) => {
-          const title = node.frontmatter.title || node.fields.slug;
-          const date = node.frontmatter.date;
-          const tags = node.frontmatter.tags;
-          const readingTime = node.fields.readingTime.minutes;
-          const url = node.fields.slug;
-
-          return (
-            <Article key={node.fields.slug}>
-              <PostHeader title={title} date={date} url={url} tags={tags} readingTime={readingTime} />
-              <section>
-                <Excerpt>{node.frontmatter.description || node.excerpt}</Excerpt>
-              </section>
-            </Article>
-          );
-        })}
-      </>
-    </Layout>
+    <Container>
+      <Metatags />
+      {edges.map(({ node: { frontmatter, fields, excerpt } }, index: number) => (
+        <Article key={`article-${index}`} data-testid="index-page-article">
+          <ArticleHeader
+            title={frontmatter?.title ?? ''}
+            date={frontmatter?.date}
+            url={fields?.slug}
+            tags={frontmatter?.tags as string[]}
+            readingTime={fields?.readingTime?.minutes ?? 0}
+            lang={frontmatter?.lang}
+          />
+          {frontmatter?.description || excerpt}
+        </Article>
+      ))}
+    </Container>
   );
 }
 
-export default BlogIndex;
-
 export const pageQuery = graphql`
-  query {
-    site {
-      siteMetadata {
-        title
-      }
-    }
+  query IndexPage {
     allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
       group(field: frontmatter___tags) {
         tag: fieldValue
@@ -103,6 +57,7 @@ export const pageQuery = graphql`
             title
             description
             tags
+            lang
           }
         }
       }

@@ -1,7 +1,7 @@
 import React from 'react';
 import { render } from '@testing-library/react';
 
-import ArticleHeader from './ArticleHeader';
+import ArticleHeader from '../ArticleHeader';
 
 describe('<ArticleHeader />', () => {
   it('should render properly', () => {

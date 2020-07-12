@@ -4,7 +4,6 @@ import styled from 'styled-components';
 import kebabCase from 'lodash.kebabcase';
 
 import translations from './translations';
-import { Maybe } from '../../../graphql-types';
 
 const Container = styled.header`
   margin: 20px 0 0 0;
@@ -59,23 +58,23 @@ const Details = styled.p`
 `;
 
 export interface ArticleHeaderProps {
-  url?: string;
+  url?: string | null;
   title: string;
   readingTime: number;
-  lang: string;
+  lang?: string | null;
   date: string;
-  tags?: Maybe<string>[] | null;
+  tags?: string[] | null;
 }
 
 export default function ArticleHeader(props: ArticleHeaderProps): React.ReactElement {
-  const texts = translations[props.lang];
+  const texts = translations[props.lang ?? 'en'];
   const readingTime = props.readingTime < 1 ? texts.lessThan1Minute : `${props.readingTime.toFixed()} ${texts.minutes}`;
 
   const Tags = props.tags && (
     <TagList data-testid="article-header-tags">
-      {props.tags.map((tag: Maybe<string>, index: number) => (
+      {props.tags.map((tag: string, index: number) => (
         <TagItem key={`${index}-${tag}`} data-testid="article-header-tag">
-          <TagLink to={`/tags/${kebabCase(tag!)}`}>#{kebabCase(tag!)}</TagLink>
+          <TagLink to={`/tags/${kebabCase(tag ?? '')}`}>#{kebabCase(tag ?? '')}</TagLink>
         </TagItem>
       ))}
     </TagList>
