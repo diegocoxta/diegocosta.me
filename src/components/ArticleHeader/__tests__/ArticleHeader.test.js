@@ -25,11 +25,12 @@ describe('<ArticleHeader />', () => {
   });
 
   it('should not render the tags', () => {
-    const { baseElement, queryByTestId, queryAllByTestId } = render(
-      <ArticleHeader title="Awesome Article" url="https://google.com" readingTime={5} lang="en" date="20/07/2020" />
+    const { baseElement, queryByTestId, queryAllByTestId, getByText } = render(
+      <ArticleHeader title="Awesome Article" url="https://google.com" readingTime={5} lang="pt" date="20/07/2020" />
     );
 
     expect(queryByTestId('article-header-tags')).toBeFalsy();
+    expect(getByText('5 minutos de leitura')).toBeTruthy();
     expect(queryAllByTestId('article-header-tag').length).toEqual(0);
     expect(baseElement).toMatchSnapshot();
   });
@@ -40,6 +41,15 @@ describe('<ArticleHeader />', () => {
     );
 
     expect(queryByTestId('article-header-custom-link')).toBeFalsy();
+    expect(baseElement).toMatchSnapshot();
+  });
+
+  it('should render properly in Poruguese', () => {
+    const { baseElement, getByText } = render(
+      <ArticleHeader title="Awesome Article" url="https://google.com" readingTime={5} lang="pt" date="20/07/2020" />
+    );
+
+    expect(getByText('5 minutos de leitura')).toBeTruthy();
     expect(baseElement).toMatchSnapshot();
   });
 });
