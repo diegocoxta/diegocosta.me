@@ -1,10 +1,10 @@
 import React from 'react';
 import { graphql, PageRendererProps } from 'gatsby';
 
-import Container from '../components/Container';
-import Metatags from '../components/Metatags';
-import ArticleHeader from '../components/ArticleHeader';
-import Article from '../components/Article';
+import Container from '~/components/Container';
+import Metatags from '~/components/Metatags';
+import ArticleHeader from '~/components/ArticleHeader';
+import Article from '~/components/Article';
 
 import { IndexPageQuery } from '../../graphql-types';
 
@@ -14,7 +14,7 @@ interface IndexPageProps extends PageRendererProps {
 
 export default function IndexPage({ data }: IndexPageProps): React.ReactElement {
   const {
-    allMarkdownRemark: { edges },
+    articles: { edges },
   } = data;
   return (
     <Container>
@@ -38,7 +38,7 @@ export default function IndexPage({ data }: IndexPageProps): React.ReactElement 
 
 export const pageQuery = graphql`
   query IndexPage {
-    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
+    articles: allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
       group(field: frontmatter___tags) {
         tag: fieldValue
         totalCount

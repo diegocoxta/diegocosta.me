@@ -1,11 +1,11 @@
 import React from 'react';
 import { graphql, PageRendererProps } from 'gatsby';
 
-import Container from '../components/Container';
-import Metatags from '../components/Metatags';
-import ArticleHeader from '../components/ArticleHeader';
-import Article from '../components/Article';
-import PageTitle from '../components/PageTitle';
+import Container from '~/components/Container';
+import Metatags from '~/components/Metatags';
+import ArticleHeader from '~/components/ArticleHeader';
+import Article from '~/components/Article';
+import PageTitle from '~/components/PageTitle';
 
 import { TagsPageQuery, SitePageContext } from '../../graphql-types';
 
@@ -16,7 +16,7 @@ interface TagsPageProps extends PageRendererProps {
 
 export default function Tags({ data, pageContext }: TagsPageProps): React.ReactElement {
   const {
-    allMarkdownRemark: { edges, totalCount },
+    articles: { edges, totalCount },
   } = data;
   return (
     <Container>
@@ -41,7 +41,7 @@ export default function Tags({ data, pageContext }: TagsPageProps): React.ReactE
 
 export const pageQuery = graphql`
   query TagsPage($tag: String) {
-    allMarkdownRemark(
+    articles: allMarkdownRemark(
       limit: 2000
       sort: { fields: [frontmatter___date], order: DESC }
       filter: { frontmatter: { tags: { in: [$tag] } } }

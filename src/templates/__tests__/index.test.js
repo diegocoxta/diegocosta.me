@@ -11,7 +11,7 @@ import IndexPage from '../index';
 describe('<IndexPage>', () => {
   it('should render properly', () => {
     const data = {
-      allMarkdownRemark: {
+      articles: {
         edges: [
           {
             node: {
