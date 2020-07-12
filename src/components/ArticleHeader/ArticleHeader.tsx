@@ -3,7 +3,8 @@ import { Link } from 'gatsby';
 import styled from 'styled-components';
 import kebabCase from 'lodash.kebabcase';
 
-import translations, { Languages } from './translations';
+import translations from './translations';
+import { Maybe } from '../../../graphql-types';
 
 const Container = styled.header`
   margin: 20px 0 0 0;
@@ -61,9 +62,9 @@ export interface ArticleHeaderProps {
   url?: string;
   title: string;
   readingTime: number;
-  lang: Languages;
+  lang: string;
   date: string;
-  tags?: string[];
+  tags?: Maybe<string>[] | null;
 }
 
 export default function ArticleHeader(props: ArticleHeaderProps): React.ReactElement {
@@ -72,9 +73,9 @@ export default function ArticleHeader(props: ArticleHeaderProps): React.ReactEle
 
   const Tags = props.tags && (
     <TagList data-testid="article-header-tags">
-      {props.tags.map((tag, index) => (
+      {props.tags.map((tag: Maybe<string>, index: number) => (
         <TagItem key={`${index}-${tag}`} data-testid="article-header-tag">
-          <TagLink to={`/tags/${kebabCase(tag)}`}>#{kebabCase(tag)}</TagLink>
+          <TagLink to={`/tags/${kebabCase(tag!)}`}>#{kebabCase(tag!)}</TagLink>
         </TagItem>
       ))}
     </TagList>

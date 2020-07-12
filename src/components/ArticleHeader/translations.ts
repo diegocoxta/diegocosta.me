@@ -1,4 +1,3 @@
-export type Languages = 'pt' | 'en';
 export type Translations = typeof en;
 
 const en = {

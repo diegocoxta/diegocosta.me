@@ -43,7 +43,7 @@ const GlobalStyle = createGlobalStyle`
 `;
 
 export interface ContainerProps {
-  children: React.ReactElement;
+  children: React.ReactNode;
   small?: boolean;
 }
 
