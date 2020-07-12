@@ -9,4 +9,4 @@ My personal blog powered by gatsby, typescript and styled-components.
 
 ## Get in touch
 
-:coffee: Say hello on [twitter](https://twitter.com/diegocoxta) or [email](diego@diegocosta.com.br)
+:coffee: Say hello on [twitter](https://twitter.com/diegocoxta) or [email](mailto:diego@diegocosta.com.br)
