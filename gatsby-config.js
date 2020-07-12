@@ -15,6 +15,7 @@ module.exports = {
     ],
   },
   plugins: [
+    'gatsby-plugin-graphql-codegen',
     'gatsby-plugin-styled-components',
     {
       resolve: 'gatsby-plugin-google-fonts',
