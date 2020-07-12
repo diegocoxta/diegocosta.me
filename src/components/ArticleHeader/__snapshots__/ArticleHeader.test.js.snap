@@ -8,7 +8,6 @@ exports[`<ArticleHeader /> should not render the link 1`] = `
 
 .c1 {
   font-family: 'Raleway',sans-serif;
-  margin-bottom: 0;
   font-weight: 700;
   font-size: 36px;
   margin: 0;
@@ -35,7 +34,8 @@ exports[`<ArticleHeader /> should not render the link 1`] = `
         <span>
           20/07/2020
         </span>
-         · 
+         ·
+         
         <span>
           5 minutes
            
@@ -55,7 +55,6 @@ exports[`<ArticleHeader /> should not render the tags 1`] = `
 
 .c1 {
   font-family: 'Raleway',sans-serif;
-  margin-bottom: 0;
   font-weight: 700;
   font-size: 36px;
   margin: 0;
@@ -99,7 +98,8 @@ exports[`<ArticleHeader /> should not render the tags 1`] = `
         <span>
           20/07/2020
         </span>
-         · 
+         ·
+         
         <span>
           5 minutes
            
@@ -118,7 +118,6 @@ exports[`<ArticleHeader /> should render properly 1`] = `
 
 .c1 {
   font-family: 'Raleway',sans-serif;
-  margin-bottom: 0;
   font-weight: 700;
   font-size: 36px;
   margin: 0;
@@ -192,7 +191,8 @@ exports[`<ArticleHeader /> should render properly 1`] = `
         <span>
           20/07/2020
         </span>
-         · 
+         ·
+         
         <span>
           5 minutes
            
