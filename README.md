@@ -7,6 +7,6 @@ My personal blog powered by gatsby, typescript and styled-components.
 - With ESLint, Prettier, stylelint, Husky, lint-staged and [much more](package.json).
 - Hosted on Github Pages with [Github Actions](.github/workflows/blog.yml).
 
-## Get in touch
+## :coffee: Get in touch
 
-:coffee: Say hello on [twitter](https://twitter.com/diegocoxta) or [email](mailto:diego@diegocosta.com.br)
+Say hello on [twitter](https://twitter.com/diegocoxta) or [email](mailto:diego@diegocosta.com.br)
