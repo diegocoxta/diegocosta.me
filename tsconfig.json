@@ -11,8 +11,7 @@
     "noUnusedLocals": false,
     "baseUrl": "./",
     "paths": {
-      "@root/*": ["*"],
-      "@*": ["src/*"]
+      "~/*": ["src/*"]
     }
   },
   "exclude": ["node_modules", "public", ".cache"]
