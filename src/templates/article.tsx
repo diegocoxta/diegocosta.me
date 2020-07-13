@@ -6,7 +6,7 @@ import Metatags from '~/components/Metatags';
 import ArticleHeader from '~/components/ArticleHeader';
 import Article, { Content } from '~/components/Article';
 
-import { ArticlePageQuery } from '../../graphql-types';
+import { ArticlePageQuery } from '~/../graphql-types';
 
 interface ArticlePageProps extends PageRendererProps {
   data: ArticlePageQuery;

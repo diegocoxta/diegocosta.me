@@ -7,7 +7,7 @@ import ArticleHeader from '~/components/ArticleHeader';
 import Article from '~/components/Article';
 import PageTitle from '~/components/PageTitle';
 
-import { TagsPageQuery, SitePageContext } from '../../graphql-types';
+import { TagsPageQuery, SitePageContext } from '~/../graphql-types';
 
 interface TagsPageProps extends PageRendererProps {
   pageContext: SitePageContext;

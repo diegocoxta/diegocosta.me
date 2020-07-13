@@ -1,0 +1,276 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Search /> should render properly 1`] = `
+.c0 {
+  position: relative;
+  margin: 40px 0;
+}
+
+.c1 {
+  -webkit-transition: background 0.4s,box-shadow 0.2s;
+  transition: background 0.4s,box-shadow 0.2s;
+  width: 100%;
+  padding: 20px;
+  background: #0e0f11;
+  outline: none;
+  color: rgba(255,255,255,0.7);
+  font-size: 18px;
+  line-height: 18px;
+  border-radius: 4px;
+  box-sizing: border-box;
+  border: 1px solid #1b1b1d;
+}
+
+.c1:focus {
+  background-color: #1b1b1d;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+  color: #fff;
+}
+
+.c1::-webkit-input-placeholder {
+  color: white;
+}
+
+.c1::-moz-placeholder {
+  color: white;
+}
+
+.c1:-ms-input-placeholder {
+  color: white;
+}
+
+.c1::placeholder {
+  color: white;
+}
+
+.c1:focus::-webkit-input-placeholder {
+  color: white;
+}
+
+.c1:focus::-moz-placeholder {
+  color: white;
+}
+
+.c1:focus:-ms-input-placeholder {
+  color: white;
+}
+
+.c1:focus::placeholder {
+  color: white;
+}
+
+.c2 {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: calc(20px + 21px + 18px);
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: text;
+  background: #1b1b1d;
+  color: black;
+  z-index: 4;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  box-shadow: 0 3px 8px 0 rgba(0,0,0,0.1);
+}
+
+.c3 {
+  display: block;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  padding: 20px;
+}
+
+.c3:hover {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  background: rgba(255,255,255,0.1);
+}
+
+.c4 {
+  color: #fff;
+  font-size: 16px;
+  margin: 0 0 5px;
+  font-weight: 400;
+}
+
+.c5 {
+  color: #9a9a9a;
+  font-size: 14px;
+  margin: 0%;
+}
+
+<body>
+  <div>
+    <div
+      class="c0"
+    >
+      <input
+        autocomplete="off"
+        class="c1"
+        placeholder="Busque por publicações..."
+        type="text"
+      />
+      <div
+        class="c2"
+        data-testid="search-results"
+      >
+        <a
+          class="c3"
+          data-testid="search-results-link"
+          href="/como-migrar-para-o-windows-8-1/"
+        >
+          <h3
+            class="c4"
+            data-testid="search-results-title"
+          >
+            Como migrar para o Windows 8.1 a partir de uma nova instalação do Windows 8
+          </h3>
+          <p
+            class="c5"
+            data-testid="search-results-description"
+          >
+            Quem já precisou formatar um PC e acabou caindo no Windows 8 sabe como é uma dor de cabeça realizar o upgrade para o Windows 8.1.
+          </p>
+        </a>
+        <a
+          class="c3"
+          data-testid="search-results-link"
+          href="/enviando-aplicacao-heroku-windows/"
+        >
+          <h3
+            class="c4"
+            data-testid="search-results-title"
+          >
+            Enviando sua aplicação para o Heroku no Windows
+          </h3>
+          <p
+            class="c5"
+            data-testid="search-results-description"
+          >
+            Quem nunca precisou colocar aquela aplicação em produção para testar ou até mesmo compartilhar com colegas e ficou impedido por não ter um servidor bom para uso gratuito?
+          </p>
+        </a>
+        <a
+          class="c3"
+          data-testid="search-results-link"
+          href="/atualizando-programas-cask-homebrew-macos/"
+        >
+          <h3
+            class="c4"
+            data-testid="search-results-title"
+          >
+            Atualizando todos seus casks via Homebrew no macOS
+          </h3>
+          <p
+            class="c5"
+            data-testid="search-results-description"
+          >
+            Uma dica simples para forçar a atualização de todos seus casks via HomeBrew
+          </p>
+        </a>
+      </div>
+    </div>
+  </div>
+</body>
+`;
+
+exports[`<Search /> should render properly with results closed 1`] = `
+<body>
+  .c0 {
+  position: relative;
+  margin: 40px 0;
+}
+
+.c1 {
+  -webkit-transition: background 0.4s,box-shadow 0.2s;
+  transition: background 0.4s,box-shadow 0.2s;
+  width: 100%;
+  padding: 20px;
+  background: #0e0f11;
+  outline: none;
+  color: rgba(255,255,255,0.7);
+  font-size: 18px;
+  line-height: 18px;
+  border-radius: 4px;
+  box-sizing: border-box;
+  border: 1px solid #1b1b1d;
+}
+
+.c1:focus {
+  background-color: #1b1b1d;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+  color: #fff;
+}
+
+.c1::-webkit-input-placeholder {
+  color: white;
+}
+
+.c1::-moz-placeholder {
+  color: white;
+}
+
+.c1:-ms-input-placeholder {
+  color: white;
+}
+
+.c1::placeholder {
+  color: white;
+}
+
+.c1:focus::-webkit-input-placeholder {
+  color: white;
+}
+
+.c1:focus::-moz-placeholder {
+  color: white;
+}
+
+.c1:focus:-ms-input-placeholder {
+  color: white;
+}
+
+.c1:focus::placeholder {
+  color: white;
+}
+
+.c2 {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: calc(20px + 21px + 18px);
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: text;
+  background: #1b1b1d;
+  color: black;
+  z-index: 4;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  box-shadow: 0 3px 8px 0 rgba(0,0,0,0.1);
+}
+
+<div>
+    <div
+      class="c0"
+    >
+      <input
+        autocomplete="off"
+        class="c1"
+        placeholder="Busque por publicações..."
+        type="text"
+      />
+      <div
+        class="c2"
+        data-testid="search-results"
+      />
+    </div>
+  </div>
+</body>
+`;

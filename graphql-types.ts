@@ -3177,6 +3177,14 @@ export type Unnamed_4_QueryVariables = Exact<{ [key: string]: never; }>;
 
 export type Unnamed_4_Query = { site?: Maybe<{ siteMetadata?: Maybe<Pick<SiteSiteMetadata, 'title' | 'description' | 'author' | 'language'>> }> };
 
+export type SearchArticlesQueryVariables = Exact<{ [key: string]: never; }>;
+
+
+export type SearchArticlesQuery = { articles: { nodes: Array<(
+      Pick<MarkdownRemark, 'id'>
+      & { fields?: Maybe<Pick<MarkdownRemarkFields, 'slug'>>, frontmatter?: Maybe<Pick<MarkdownRemarkFrontmatter, 'title' | 'description'>> }
+    )> } };
+
 export type ArticlePageQueryVariables = Exact<{
   slug: Scalars['String'];
 }>;
