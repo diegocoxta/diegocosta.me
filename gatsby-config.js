@@ -1,18 +1,22 @@
+const siteMetadata = {
+  title: 'Blog do Diego Costa',
+  author: 'Diego Costa',
+  description: 'Diego Costa, desenvolvedor web e mobile - Salvador, BA',
+  siteUrl: 'https://blog.diegocosta.com.br',
+  contacts: [
+    { link: 'https://diegocosta.com.br', label: 'sobre mim' },
+    { link: 'https://github.com/diegocosta', label: 'github' },
+    { link: 'https://linkedin.com/in/diegoscosta', label: 'linkedin' },
+    { link: 'https://twitter.com/diegocoxta', label: 'twitter' },
+    { link: 'mailto://diego@diegocosta.com.br', label: 'e-mail' },
+  ],
+};
+
 module.exports = {
   siteMetadata: {
-    title: 'Blog do Diego Costa',
-    author: 'Diego Costa',
     language: 'en',
-    description: 'Diego Costa, desenvolvedor web e mobile - Salvador, BA',
-    siteUrl: 'https://blog.diegocosta.com.br',
     repository: 'https://github.com/diegocosta/blog.diegocosta.com.br',
-    contacts: [
-      { link: 'https://diegocosta.com.br', label: 'sobre mim' },
-      { link: 'https://github.com/diegocosta', label: 'github' },
-      { link: 'https://linkedin.com/in/diegoscosta', label: 'linkedin' },
-      { link: 'https://twitter.com/diegocoxta', label: 'twitter' },
-      { link: 'mailto://diego@diegocosta.com.br', label: 'e-mail' },
-    ],
+    ...siteMetadata,
   },
   plugins: [
     'gatsby-plugin-graphql-codegen',
@@ -79,9 +83,9 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-manifest',
       options: {
-        name: 'Blog do Diego Costa',
-        short_name: 'Diego Costa',
-        start_url: '/',
+        name: siteMetadata.title,
+        short_name: siteMetadata.author,
+        start_url: siteMetadata.siteUrl,
         background_color: '#0e0f11',
         theme_color: '#d73738',
         display: 'minimal-ui',
