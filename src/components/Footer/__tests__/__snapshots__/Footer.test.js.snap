@@ -78,6 +78,7 @@ exports[`<Footer /> should render properly 1`] = `
             <a
               class="c3"
               href="mailto:johndoe@doe.com"
+              rel="noopener"
               target="_blank"
             >
               email
@@ -89,6 +90,7 @@ exports[`<Footer /> should render properly 1`] = `
             <a
               class="c3"
               href="https://google.com"
+              rel="noopener"
               target="_blank"
             >
               site
@@ -106,6 +108,7 @@ exports[`<Footer /> should render properly 1`] = `
       <a
         class="c5"
         href="https://gatsbyjs.org"
+        rel="noopener"
         target="_blank"
       >
         gatsby
@@ -176,6 +179,7 @@ exports[`<Footer /> should render the repository url if passed 1`] = `
       <a
         class="c3"
         href="https://gatsbyjs.org"
+        rel="noopener"
         target="_blank"
       >
         gatsby
@@ -188,6 +192,7 @@ exports[`<Footer /> should render the repository url if passed 1`] = `
       <a
         class="c3"
         href="https://github.com/diegocosta/blog.diegocosta.com.br"
+        rel="noopener"
         target="_blank"
       >
         source code

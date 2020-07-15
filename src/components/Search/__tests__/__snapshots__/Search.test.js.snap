@@ -3,7 +3,7 @@
 exports[`<Search /> should render properly 1`] = `
 .c0 {
   position: relative;
-  margin: 40px 0;
+  margin: 40px 0 20px;
 }
 
 .c1 {
@@ -60,6 +60,10 @@ exports[`<Search /> should render properly 1`] = `
 }
 
 .c2 {
+  visibility: hidden;
+}
+
+.c3 {
   position: absolute;
   left: 0;
   right: 0;
@@ -77,27 +81,27 @@ exports[`<Search /> should render properly 1`] = `
   box-shadow: 0 3px 8px 0 rgba(0,0,0,0.1);
 }
 
-.c3 {
+.c4 {
   display: block;
   -webkit-text-decoration: none;
   text-decoration: none;
   padding: 20px;
 }
 
-.c3:hover {
+.c4:hover {
   -webkit-text-decoration: none;
   text-decoration: none;
   background: rgba(255,255,255,0.1);
 }
 
-.c4 {
+.c5 {
   color: #fff;
   font-size: 16px;
   margin: 0 0 5px;
   font-weight: 400;
 }
 
-.c5 {
+.c6 {
   color: #9a9a9a;
   font-size: 14px;
   margin: 0%;
@@ -111,62 +115,69 @@ exports[`<Search /> should render properly 1`] = `
       <input
         autocomplete="off"
         class="c1"
+        id="search-input"
         placeholder="Busque por publicações..."
         type="text"
       />
-      <div
+      <label
         class="c2"
+        for="search-input"
+      >
+        Busque por publicações...
+      </label>
+      <div
+        class="c3"
         data-testid="search-results"
       >
         <a
-          class="c3"
+          class="c4"
           data-testid="search-results-link"
           href="/como-migrar-para-o-windows-8-1/"
         >
           <h3
-            class="c4"
+            class="c5"
             data-testid="search-results-title"
           >
             Como migrar para o Windows 8.1 a partir de uma nova instalação do Windows 8
           </h3>
           <p
-            class="c5"
+            class="c6"
             data-testid="search-results-description"
           >
             Quem já precisou formatar um PC e acabou caindo no Windows 8 sabe como é uma dor de cabeça realizar o upgrade para o Windows 8.1.
           </p>
         </a>
         <a
-          class="c3"
+          class="c4"
           data-testid="search-results-link"
           href="/enviando-aplicacao-heroku-windows/"
         >
           <h3
-            class="c4"
+            class="c5"
             data-testid="search-results-title"
           >
             Enviando sua aplicação para o Heroku no Windows
           </h3>
           <p
-            class="c5"
+            class="c6"
             data-testid="search-results-description"
           >
             Quem nunca precisou colocar aquela aplicação em produção para testar ou até mesmo compartilhar com colegas e ficou impedido por não ter um servidor bom para uso gratuito?
           </p>
         </a>
         <a
-          class="c3"
+          class="c4"
           data-testid="search-results-link"
           href="/atualizando-programas-cask-homebrew-macos/"
         >
           <h3
-            class="c4"
+            class="c5"
             data-testid="search-results-title"
           >
             Atualizando todos seus casks via Homebrew no macOS
           </h3>
           <p
-            class="c5"
+            class="c6"
             data-testid="search-results-description"
           >
             Uma dica simples para forçar a atualização de todos seus casks via HomeBrew
@@ -182,7 +193,7 @@ exports[`<Search /> should render properly with results closed 1`] = `
 <body>
   .c0 {
   position: relative;
-  margin: 40px 0;
+  margin: 40px 0 20px;
 }
 
 .c1 {
@@ -239,6 +250,10 @@ exports[`<Search /> should render properly with results closed 1`] = `
 }
 
 .c2 {
+  visibility: hidden;
+}
+
+.c3 {
   position: absolute;
   left: 0;
   right: 0;
@@ -263,11 +278,18 @@ exports[`<Search /> should render properly with results closed 1`] = `
       <input
         autocomplete="off"
         class="c1"
+        id="search-input"
         placeholder="Busque por publicações..."
         type="text"
       />
-      <div
+      <label
         class="c2"
+        for="search-input"
+      >
+        Busque por publicações...
+      </label>
+      <div
+        class="c3"
         data-testid="search-results"
       />
     </div>

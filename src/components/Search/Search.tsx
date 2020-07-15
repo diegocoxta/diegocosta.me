@@ -8,7 +8,7 @@ import { SearchArticlesQuery } from '~/../graphql-types';
 
 const Container = styled.div`
   position: relative;
-  margin: 40px 0;
+  margin: 40px 0 20px;
 `;
 
 const Input = styled.input`
@@ -37,6 +37,10 @@ const Input = styled.input`
   :focus::placeholder {
     color: white;
   }
+`;
+
+const Label = styled.label`
+  visibility: hidden;
 `;
 
 const Results = styled.div`
@@ -88,7 +92,14 @@ interface SearchProps {
 export default function Search({ articles, combobox }: SearchProps): React.ReactElement {
   return (
     <Container {...combobox.getComboboxProps()}>
-      <Input type="text" placeholder="Busque por publicações..." autoComplete="off" {...combobox.getInputProps()} />
+      <Input
+        id="search-input"
+        type="text"
+        placeholder="Busque por publicações..."
+        autoComplete="off"
+        {...combobox.getInputProps()}
+      />
+      <Label htmlFor="search-input">Busque por publicações...</Label>
       <Results {...combobox.getMenuProps()} data-testid="search-results">
         {combobox.isOpen &&
           articles &&

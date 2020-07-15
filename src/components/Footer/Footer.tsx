@@ -9,6 +9,7 @@ const Label = styled.span`
 
 const Link = styled.a.attrs({
   target: '_blank',
+  rel: 'noopener',
 })`
   color: #d73738;
   text-decoration: none;
