@@ -115,13 +115,11 @@ exports[`<Search /> should render properly 1`] = `
       <input
         autocomplete="off"
         class="c1"
-        id="search-input"
         placeholder="Busque por publicações..."
         type="text"
       />
       <label
         class="c2"
-        for="search-input"
       >
         Busque por publicações...
       </label>
@@ -278,13 +276,11 @@ exports[`<Search /> should render properly with results closed 1`] = `
       <input
         autocomplete="off"
         class="c1"
-        id="search-input"
         placeholder="Busque por publicações..."
         type="text"
       />
       <label
         class="c2"
-        for="search-input"
       >
         Busque por publicações...
       </label>

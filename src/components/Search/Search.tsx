@@ -92,14 +92,8 @@ interface SearchProps {
 export default function Search({ articles, combobox }: SearchProps): React.ReactElement {
   return (
     <Container {...combobox.getComboboxProps()}>
-      <Input
-        id="search-input"
-        type="text"
-        placeholder="Busque por publicações..."
-        autoComplete="off"
-        {...combobox.getInputProps()}
-      />
-      <Label htmlFor="search-input">Busque por publicações...</Label>
+      <Input type="text" placeholder="Busque por publicações..." autoComplete="off" {...combobox.getInputProps()} />
+      <Label {...combobox.getLabelProps()}>Busque por publicações...</Label>
       <Results {...combobox.getMenuProps()} data-testid="search-results">
         {combobox.isOpen &&
           articles &&

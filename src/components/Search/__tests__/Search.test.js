@@ -8,6 +8,7 @@ const _MOCKED_COMBOBOX = {
   getInputProps: jest.fn(),
   getItemProps: jest.fn(),
   getMenuProps: jest.fn(),
+  getLabelProps: jest.fn(),
   isOpen: true,
 };
 
@@ -72,6 +73,15 @@ describe('<Search />', () => {
       );
       expect(getAllByTestId('search-results-link')[index].href).toContain(article.item.fields.slug);
     });
+
+    expect(_MOCKED_COMBOBOX.getComboboxProps).toHaveBeenCalledTimes(1);
+    expect(_MOCKED_COMBOBOX.getLabelProps).toHaveBeenCalledTimes(1);
+    expect(_MOCKED_COMBOBOX.getMenuProps).toHaveBeenCalledTimes(1);
+    expect(_MOCKED_COMBOBOX.getItemProps).toHaveBeenCalledTimes(3);
+
+    expect(_MOCKED_COMBOBOX.getItemProps).toHaveBeenNthCalledWith(1, { index: 0, item: _MOCKED_ARTICLES[0] });
+    expect(_MOCKED_COMBOBOX.getItemProps).toHaveBeenNthCalledWith(2, { index: 1, item: _MOCKED_ARTICLES[1] });
+    expect(_MOCKED_COMBOBOX.getItemProps).toHaveBeenNthCalledWith(3, { index: 2, item: _MOCKED_ARTICLES[2] });
 
     expect(baseElement).toMatchSnapshot();
   });
