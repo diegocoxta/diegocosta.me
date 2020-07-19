@@ -19,6 +19,11 @@ exports[`<Header /> should not render the last name 1`] = `
   box-shadow: none;
 }
 
+.c1:focus {
+  border-bottom: 1px solid #d73738;
+  outline: none;
+}
+
 @media (min-width:760px) {
   .c2 {
     font-size: 24px;
@@ -64,6 +69,11 @@ exports[`<Header /> should render properly 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   box-shadow: none;
+}
+
+.c1:focus {
+  border-bottom: 1px solid #d73738;
+  outline: none;
 }
 
 @media (min-width:760px) {

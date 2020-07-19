@@ -30,8 +30,10 @@ exports[`<Content /> should render properly 1`] = `
   border-bottom: 1px solid transparent;
 }
 
-.c0 a:hover {
+.c0 a:hover,
+.c0 a:focus {
   border-bottom: 1px solid #d73738;
+  outline: none;
 }
 
 .c0 blockquote {

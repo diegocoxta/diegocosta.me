@@ -67,8 +67,10 @@ exports[`<ArticleHeader /> should not render the tags 1`] = `
   text-decoration: none;
 }
 
-.c2:hover {
+.c2:hover,
+.c2:focus {
   border-bottom: 1px solid #fff;
+  outline: none;
 }
 
 .c3 {
@@ -130,8 +132,10 @@ exports[`<ArticleHeader /> should render properly 1`] = `
   text-decoration: none;
 }
 
-.c2:hover {
+.c2:hover,
+.c2:focus {
   border-bottom: 1px solid #fff;
+  outline: none;
 }
 
 .c6 {
@@ -144,8 +148,10 @@ exports[`<ArticleHeader /> should render properly 1`] = `
   text-transform: lowercase;
 }
 
-.c6:hover {
+.c6:hover,
+.c6:focus {
   border-bottom: 1px solid #d73738;
+  outline: none;
 }
 
 .c4 {
@@ -253,8 +259,10 @@ exports[`<ArticleHeader /> should render properly in Poruguese 1`] = `
   text-decoration: none;
 }
 
-.c2:hover {
+.c2:hover,
+.c2:focus {
   border-bottom: 1px solid #fff;
+  outline: none;
 }
 
 .c3 {

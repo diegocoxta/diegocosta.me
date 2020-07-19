@@ -21,8 +21,10 @@ const CustomLink = styled(Link)`
   box-shadow: none;
   text-decoration: none;
 
-  :hover {
+  :hover,
+  :focus {
     border-bottom: 1px solid #fff;
+    outline: none;
   }
 `;
 
@@ -34,8 +36,10 @@ const TagLink = styled(Link)`
   font-weight: 700;
   text-transform: lowercase;
 
-  :hover {
+  :hover,
+  :focus {
     border-bottom: 1px solid #d73738;
+    outline: none;
   }
 `;
 

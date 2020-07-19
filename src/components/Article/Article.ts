@@ -13,8 +13,10 @@ export const Content = styled.section`
     text-decoration: none;
     border-bottom: 1px solid transparent;
 
-    :hover {
+    :hover,
+    :focus {
       border-bottom: 1px solid #d73738;
+      outline: none;
     }
   }
 

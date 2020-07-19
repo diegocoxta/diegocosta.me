@@ -15,8 +15,10 @@ const Link = styled.a.attrs({
   text-decoration: none;
   box-shadow: none;
 
-  :hover {
+  :hover,
+  :focus {
     border-bottom: 1px solid #d73738;
+    outline: none;
   }
 `;
 

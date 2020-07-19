@@ -12,8 +12,10 @@ exports[`<Footer /> should render properly 1`] = `
   box-shadow: none;
 }
 
-.c5:hover {
+.c5:hover,
+.c5:focus {
   border-bottom: 1px solid #d73738;
+  outline: none;
 }
 
 .c0 {
@@ -53,8 +55,10 @@ exports[`<Footer /> should render properly 1`] = `
   border-bottom: 1px solid transparent;
 }
 
-.c3:hover {
+.c3:hover,
+.c3:focus {
   border-bottom: 1px solid #d73738;
+  outline: none;
 }
 
 .c3:hover {
@@ -136,8 +140,10 @@ exports[`<Footer /> should render the repository url if passed 1`] = `
   box-shadow: none;
 }
 
-.c3:hover {
+.c3:hover,
+.c3:focus {
   border-bottom: 1px solid #d73738;
+  outline: none;
 }
 
 .c0 {

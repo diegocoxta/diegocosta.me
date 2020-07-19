@@ -24,6 +24,11 @@ const LastName = styled.span`
 const StyledLink = styled(Link)`
   text-decoration: none;
   box-shadow: none;
+
+  :focus {
+    border-bottom: 1px solid #d73738;
+    outline: none;
+  }
 `;
 
 interface HeaderProps {
