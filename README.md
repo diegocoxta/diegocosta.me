@@ -1,4 +1,4 @@
-# 👨🏿‍💻 blog.diegocosta.com.br
+# 👨🏿‍💻 blog.diegocosta.me
 
 My personal blog powered by gatsby, typescript and styled-components.
 
