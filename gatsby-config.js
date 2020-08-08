@@ -2,9 +2,9 @@ const siteMetadata = {
   title: 'Blog do Diego Costa',
   author: 'Diego Costa',
   description: 'Diego Costa, desenvolvedor web e mobile - Salvador, BA',
-  siteUrl: 'https://blog.diegocosta.com.br',
+  siteUrl: 'https://blog.diegocosta.me',
   contacts: [
-    { link: 'https://diegocosta.com.br', label: 'sobre mim' },
+    { link: 'https://diegocosta.me', label: 'sobre mim' },
     { link: 'https://github.com/diegocosta', label: 'github' },
     { link: 'https://linkedin.com/in/diegoscosta', label: 'linkedin' },
     { link: 'https://twitter.com/diegocoxta', label: 'twitter' },
@@ -15,7 +15,7 @@ const siteMetadata = {
 module.exports = {
   siteMetadata: {
     language: 'en',
-    repository: 'https://github.com/diegocosta/blog.diegocosta.com.br',
+    repository: 'https://github.com/diegocosta/blog.diegocosta.me',
     ...siteMetadata,
   },
   plugins: [
