@@ -8,7 +8,7 @@ const siteMetadata = {
     { link: 'https://github.com/diegocosta', label: 'github' },
     { link: 'https://linkedin.com/in/diegoscosta', label: 'linkedin' },
     { link: 'https://twitter.com/diegocoxta', label: 'twitter' },
-    { link: 'mailto://diego@diegocosta.com.br', label: 'e-mail' },
+    { link: 'mailto:diego@diegocosta.com.br', label: 'e-mail' },
   ],
 };
 
