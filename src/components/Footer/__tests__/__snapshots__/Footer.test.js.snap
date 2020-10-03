@@ -105,7 +105,7 @@ exports[`<Footer /> should render properly 1`] = `
       <span
         class="c4"
       >
-        © $
+        © 
         2020
         , built with 
       </span>
@@ -178,7 +178,7 @@ exports[`<Footer /> should render the repository url if passed 1`] = `
       <span
         class="c2"
       >
-        © $
+        © 
         2020
         , built with 
       </span>
