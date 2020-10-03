@@ -1,17 +1,15 @@
-# Contribution Guide
+# :triangular_ruler: Contribution Guide
 
 Before starting, you may need to know how to contribute in a good way. You can follow the rules here:
 
-## Code Style
-Commits should follow the Angular commit message guidelines. This is because our release tool uses this format for determining release versions and generating changelogs.
-
 ## Issues
-If you encounter an issue with the Node.js library, you are welcome to submit a [bug report](https://github.com/calpa/gatsby-starter-calpa-blog/issues/new). Before that, please search for similar issues. It's possible somebody has already encountered this issue.
+If you encounter an issue with the project, you are welcome to submit a [bug report](https://github.com/diegocosta/blog.diegocosta.me/issues/new). Before that, please search for similar issues. It's possible somebody has already encountered this issue.
 
 ## Pull Requests
 If you want to contribute to the repository, follow these steps:
 
-- Fork the repo.
-- Develop and test your code changes: `npm install`
+- Fork the repo and develop.
+- Check if your code follow my linter rules: `yarn prettier && yarn lint`
+- Test your code changes (`yarn test`) and create/change the test suite if necessary.
 - Commit your changes.
 - Push to your fork and submit a pull request.
