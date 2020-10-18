@@ -84,7 +84,7 @@ export default function ArticleHeader(props: ArticleHeaderProps): React.ReactEle
     </TagList>
   );
 
-  const linkWithLanguage = (url: string) => (props.lang ? `${props.lang}${url}` : url);
+  const linkWithLanguage = (url: string) => (props.lang ? `/${props.lang}${url}` : url);
 
   return (
     <Container>
