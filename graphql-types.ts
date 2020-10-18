@@ -2357,6 +2357,7 @@ export type SitePageContext = {
   previous?: Maybe<SitePageContextPrevious>;
   next?: Maybe<SitePageContextNext>;
   tag?: Maybe<Scalars['String']>;
+  lang?: Maybe<Scalars['String']>;
 };
 
 export type SitePageContextFilterInput = {
@@ -2364,6 +2365,7 @@ export type SitePageContextFilterInput = {
   previous?: Maybe<SitePageContextPreviousFilterInput>;
   next?: Maybe<SitePageContextNextFilterInput>;
   tag?: Maybe<StringQueryOperatorInput>;
+  lang?: Maybe<StringQueryOperatorInput>;
 };
 
 export type SitePageContextNext = {
@@ -2387,11 +2389,13 @@ export type SitePageContextNextFilterInput = {
 export type SitePageContextNextFrontmatter = {
   tags?: Maybe<Array<Maybe<Scalars['String']>>>;
   title?: Maybe<Scalars['String']>;
+  lang?: Maybe<Scalars['String']>;
 };
 
 export type SitePageContextNextFrontmatterFilterInput = {
   tags?: Maybe<StringQueryOperatorInput>;
   title?: Maybe<StringQueryOperatorInput>;
+  lang?: Maybe<StringQueryOperatorInput>;
 };
 
 export type SitePageContextPrevious = {
@@ -2415,11 +2419,13 @@ export type SitePageContextPreviousFilterInput = {
 export type SitePageContextPreviousFrontmatter = {
   tags?: Maybe<Array<Maybe<Scalars['String']>>>;
   title?: Maybe<Scalars['String']>;
+  lang?: Maybe<Scalars['String']>;
 };
 
 export type SitePageContextPreviousFrontmatterFilterInput = {
   tags?: Maybe<StringQueryOperatorInput>;
   title?: Maybe<StringQueryOperatorInput>;
+  lang?: Maybe<StringQueryOperatorInput>;
 };
 
 export type SitePageEdge = {
@@ -2525,10 +2531,13 @@ export type SitePageFieldsEnum =
   | 'context___previous___fields___slug'
   | 'context___previous___frontmatter___tags'
   | 'context___previous___frontmatter___title'
+  | 'context___previous___frontmatter___lang'
   | 'context___next___fields___slug'
   | 'context___next___frontmatter___tags'
   | 'context___next___frontmatter___title'
+  | 'context___next___frontmatter___lang'
   | 'context___tag'
+  | 'context___lang'
   | 'pluginCreator___id'
   | 'pluginCreator___parent___id'
   | 'pluginCreator___parent___parent___id'
@@ -3208,6 +3217,22 @@ export type IndexPageQuery = { articles: { group: Array<(
           & { readingTime?: Maybe<Pick<MarkdownRemarkFieldsReadingTime, 'minutes'>> }
         )>, frontmatter?: Maybe<Pick<MarkdownRemarkFrontmatter, 'date' | 'title' | 'description' | 'tags' | 'lang'>> }
       ) }> } };
+
+export type LanguagePageQueryVariables = Exact<{
+  lang?: Maybe<Scalars['String']>;
+}>;
+
+
+export type LanguagePageQuery = { articles: (
+    Pick<MarkdownRemarkConnection, 'totalCount'>
+    & { edges: Array<{ node: (
+        Pick<MarkdownRemark, 'excerpt'>
+        & { fields?: Maybe<(
+          Pick<MarkdownRemarkFields, 'slug'>
+          & { readingTime?: Maybe<Pick<MarkdownRemarkFieldsReadingTime, 'minutes'>> }
+        )>, frontmatter?: Maybe<Pick<MarkdownRemarkFrontmatter, 'date' | 'title' | 'tags' | 'description' | 'lang'>> }
+      ) }> }
+  ) };
 
 export type TagsPageQueryVariables = Exact<{
   tag?: Maybe<Scalars['String']>;

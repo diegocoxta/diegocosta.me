@@ -89,7 +89,7 @@ exports[`<ArticleHeader /> should not render the tags 1`] = `
         <a
           class="c2"
           data-testid="article-header-custom-link"
-          href="https://google.com"
+          href="pthttps://google.com"
         >
           Awesome Article
         </a>
@@ -186,7 +186,7 @@ exports[`<ArticleHeader /> should render properly 1`] = `
         <a
           class="c2"
           data-testid="article-header-custom-link"
-          href="https://google.com"
+          href="enhttps://google.com"
         >
           Awesome Article
         </a>
@@ -281,7 +281,7 @@ exports[`<ArticleHeader /> should render properly in Poruguese 1`] = `
         <a
           class="c2"
           data-testid="article-header-custom-link"
-          href="https://google.com"
+          href="pthttps://google.com"
         >
           Awesome Article
         </a>

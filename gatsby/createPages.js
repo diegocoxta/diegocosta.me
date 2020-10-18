@@ -13,12 +13,18 @@ module.exports = async ({ graphql, actions }) => {
             frontmatter {
               tags
               title
+              lang
             }
           }
         }
       }
       tags: allMarkdownRemark(limit: 2000) {
         group(field: frontmatter___tags) {
+          fieldValue
+        }
+      }
+      languages: allMarkdownRemark(limit: 2000) {
+        group(field: frontmatter___lang) {
           fieldValue
         }
       }
@@ -42,8 +48,12 @@ module.exports = async ({ graphql, actions }) => {
     const previous = index === articles.length - 1 ? null : articles[index + 1].node;
     const next = index === 0 ? null : articles[index - 1].node;
 
+    const articlePath = article.node.frontmatter.lang
+      ? `/${article.node.frontmatter.lang}${article.node.fields.slug}`
+      : article.node.fields.slug;
+
     actions.createPage({
-      path: article.node.fields.slug,
+      path: articlePath,
       component: path.resolve('./src/templates/article.tsx'),
       context: {
         slug: article.node.fields.slug,
@@ -62,6 +72,19 @@ module.exports = async ({ graphql, actions }) => {
       component: path.resolve('./src/templates/tags.tsx'),
       context: {
         tag: tag.fieldValue,
+      },
+    });
+  });
+
+  // Create Language Page
+  const languages = result.data.languages.group;
+
+  languages.forEach((language) => {
+    actions.createPage({
+      path: language.fieldValue,
+      component: path.resolve('./src/templates/languages.tsx'),
+      context: {
+        lang: language.fieldValue,
       },
     });
   });
