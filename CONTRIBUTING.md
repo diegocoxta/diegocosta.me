@@ -3,9 +3,11 @@
 Before starting, you may need to know how to contribute in a good way. You can follow the rules here:
 
 ## Issues
+
 If you encounter an issue with the project, you are welcome to submit a [bug report](https://github.com/diegocosta/blog.diegocosta.me/issues/new). Before that, please search for similar issues. It's possible somebody has already encountered this issue.
 
 ## Pull Requests
+
 If you want to contribute to the repository, follow these steps:
 
 - Fork the repo and develop.

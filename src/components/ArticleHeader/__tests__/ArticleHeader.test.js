@@ -8,7 +8,7 @@ describe('<ArticleHeader />', () => {
     const { baseElement, getByTestId, getByText, getAllByTestId } = render(
       <ArticleHeader
         title="Awesome Article"
-        url="https://google.com"
+        url="/awesome-article"
         readingTime={5}
         lang="en"
         date="20/07/2020"
@@ -18,7 +18,7 @@ describe('<ArticleHeader />', () => {
     expect(getByText('Awesome Article')).toBeTruthy();
     expect(getByText('20/07/2020')).toBeTruthy();
     expect(getByText('5 minutes of reading')).toBeTruthy();
-    expect(getByTestId('article-header-custom-link').href).toBe('enhttps://google.com');
+    expect(getByTestId('article-header-custom-link').href).toBe('http://localhost/en/awesome-article');
     expect(getByTestId('article-header-tags')).toBeTruthy();
     expect(getAllByTestId('article-header-tag').length).toEqual(2);
     expect(baseElement).toMatchSnapshot();
@@ -26,7 +26,7 @@ describe('<ArticleHeader />', () => {
 
   it('should not render the tags', () => {
     const { baseElement, queryByTestId, queryAllByTestId, getByText } = render(
-      <ArticleHeader title="Awesome Article" url="https://google.com" readingTime={5} lang="pt" date="20/07/2020" />
+      <ArticleHeader title="Awesome Article" url="/awesome-article" readingTime={5} lang="pt" date="20/07/2020" />
     );
 
     expect(queryByTestId('article-header-tags')).toBeFalsy();
@@ -46,7 +46,7 @@ describe('<ArticleHeader />', () => {
 
   it('should render properly in Poruguese', () => {
     const { baseElement, getByText } = render(
-      <ArticleHeader title="Awesome Article" url="https://google.com" readingTime={5} lang="pt" date="20/07/2020" />
+      <ArticleHeader title="Awesome Article" url="/awesome-article" readingTime={5} lang="pt" date="20/07/2020" />
     );
 
     expect(getByText('5 minutos de leitura')).toBeTruthy();
@@ -57,7 +57,7 @@ describe('<ArticleHeader />', () => {
     const { getByTestId } = render(
       <ArticleHeader
         title="Awesome Article"
-        url="https://google.com"
+        url="/awesome-article"
         readingTime={5}
         lang="pt"
         date="20/07/2020"
@@ -65,6 +65,6 @@ describe('<ArticleHeader />', () => {
       />
     );
 
-    expect(getByTestId('article-header-custom-link').href).toBe('pthttps://google.com');
+    expect(getByTestId('article-header-custom-link').href).toBe('http://localhost/pt/awesome-article');
   });
 });

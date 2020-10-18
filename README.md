@@ -20,8 +20,8 @@ This project requires [Node.js 10.13.0 (LTS)](https://nodejs.org/en/) or higher 
 3. Start the development server with `yarn develop`.
 4. Open development site by going to [`http://localhost:8000`](http://localhost:8000) in your browser.
 
-
 ## :triangular_ruler: Contributing
+
 See [CONTRIBUTING.md](CONTRIBUTING.md) for details.
 
 ## :coffee: Get in touch
