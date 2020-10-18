@@ -18,7 +18,7 @@ describe('<ArticleHeader />', () => {
     expect(getByText('Awesome Article')).toBeTruthy();
     expect(getByText('20/07/2020')).toBeTruthy();
     expect(getByText('5 minutes of reading')).toBeTruthy();
-    expect(getByTestId('article-header-custom-link').href).toBe('https://google.com/');
+    expect(getByTestId('article-header-custom-link').href).toBe('enhttps://google.com');
     expect(getByTestId('article-header-tags')).toBeTruthy();
     expect(getAllByTestId('article-header-tag').length).toEqual(2);
     expect(baseElement).toMatchSnapshot();
@@ -51,5 +51,20 @@ describe('<ArticleHeader />', () => {
 
     expect(getByText('5 minutos de leitura')).toBeTruthy();
     expect(baseElement).toMatchSnapshot();
+  });
+
+  it('should render the language link properly', () => {
+    const { getByTestId } = render(
+      <ArticleHeader
+        title="Awesome Article"
+        url="https://google.com"
+        readingTime={5}
+        lang="pt"
+        date="20/07/2020"
+        tags={['jest', 'testing-library']}
+      />
+    );
+
+    expect(getByTestId('article-header-custom-link').href).toBe('pthttps://google.com');
   });
 });

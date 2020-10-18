@@ -1,0 +1,55 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<LanguagesPage> should render properly 1`] = `
+.c0 {
+  margin: auto;
+  max-width: 800px;
+  padding: 20px;
+}
+
+.c1 {
+  margin: 0 0 60px 0;
+  font-weight: 400;
+}
+
+<body>
+  <div>
+    <section
+      class="c0"
+    >
+      <p>
+        Header
+      </p>
+      <p>
+        Search
+      </p>
+      <main>
+        <p>
+          Metatags
+        </p>
+        <article
+          class="c1"
+          data-testid="languages-page-article"
+        >
+          <p>
+            ArticleHeader
+          </p>
+          Awesome first article
+        </article>
+        <article
+          class="c1"
+          data-testid="languages-page-article"
+        >
+          <p>
+            ArticleHeader
+          </p>
+          Awesome second article
+        </article>
+      </main>
+      <p>
+        Footer
+      </p>
+    </section>
+  </div>
+</body>
+`;

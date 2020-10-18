@@ -84,11 +84,13 @@ export default function ArticleHeader(props: ArticleHeaderProps): React.ReactEle
     </TagList>
   );
 
+  const linkWithLanguage = (url: string) => (props.lang ? `${props.lang}${url}` : url);
+
   return (
     <Container>
       <Title>
         {props.url ? (
-          <CustomLink to={props.url} data-testid="article-header-custom-link">
+          <CustomLink to={linkWithLanguage(props.url)} data-testid="article-header-custom-link">
             {props.title}
           </CustomLink>
         ) : (
