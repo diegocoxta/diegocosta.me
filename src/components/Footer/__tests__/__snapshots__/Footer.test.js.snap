@@ -93,7 +93,7 @@ exports[`<Footer /> should render properly 1`] = `
           >
             <a
               class="c3"
-              href="https://google.com"
+              href="https://google.com.br"
               rel="noopener"
               target="_blank"
             >
@@ -105,8 +105,8 @@ exports[`<Footer /> should render properly 1`] = `
       <span
         class="c4"
       >
-        © 
-        2020
+          © 
+          2020
         , built with 
       </span>
       <a
@@ -120,7 +120,7 @@ exports[`<Footer /> should render properly 1`] = `
       <span
         class="c4"
       >
-         • 
+          • 
       </span>
     </footer>
   </div>
