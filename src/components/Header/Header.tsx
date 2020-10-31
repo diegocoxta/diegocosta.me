@@ -26,7 +26,7 @@ const StyledLink = styled(Link)`
   box-shadow: none;
 
   :focus {
-    border-bottom: 1px solid #d73738;
+    border-bottom: 1px solid #DC143C;
     outline: none;
   }
 `;
