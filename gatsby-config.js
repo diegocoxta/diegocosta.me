@@ -6,6 +6,7 @@ const siteMetadata = {
   contacts: [
     { link: 'https://diegocosta.me', label: 'sobre mim' },
     { link: 'https://github.com/diegocosta', label: 'github' },
+    { link: 'https://gitlab.com/diegoscosta', label: 'gitlab' },
     { link: 'https://linkedin.com/in/diegoscosta', label: 'linkedin' },
     { link: 'https://twitter.com/diegocoxta', label: 'twitter' },
     { link: 'mailto:diego@diegocosta.com.br', label: 'e-mail' },
