@@ -19,7 +19,7 @@ exports[`<Footer /> should render properly 1`] = `
 }
 
 .c0 {
-  max-width: 400px;
+  max-width: 500px;
   margin-bottom: 50px;
 }
 
@@ -147,7 +147,7 @@ exports[`<Footer /> should render the repository url if passed 1`] = `
 }
 
 .c0 {
-  max-width: 400px;
+  max-width: 500px;
   margin-bottom: 50px;
 }
 
