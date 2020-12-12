@@ -23,7 +23,7 @@ const Link = styled.a.attrs({
 `;
 
 const Navigation = styled.nav`
-  max-width: 400px;
+  max-width: 500px;
   margin-bottom: 50px;
 `;
 
