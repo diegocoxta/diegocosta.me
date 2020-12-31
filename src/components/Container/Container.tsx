@@ -4,6 +4,7 @@ import styled, { createGlobalStyle } from 'styled-components';
 import Header from '~/components/Header';
 import Footer from '~/components/Footer';
 import Search from '~/components/Search';
+import AboutMe from '~/components/AboutMe';
 
 const Wrapper = styled.section`
   margin: auto;
@@ -53,7 +54,12 @@ export default function Container(props: ContainerProps): React.ReactElement {
     <Wrapper>
       <GlobalStyle />
       <Header small={props.small || false} />
-      {!props.small && <Search />}
+      {!props.small && (
+        <>
+          <AboutMe />
+          <Search />
+        </>
+      )}
       <main>{props.children}</main>
       {props.small && <Search />}
       <Footer />

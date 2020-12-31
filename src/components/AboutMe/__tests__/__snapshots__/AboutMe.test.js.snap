@@ -1,0 +1,51 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<AboutMe /> should render properly 1`] = `
+.c0 {
+  color: #fff;
+  font-size: 4vw;
+  font-weight: 700;
+  border-left: 0.7vw solid red;
+  padding-left: 4vw;
+}
+
+.c1 {
+  color: #fff;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  border-bottom: 0.7vw solid #d73738;
+}
+
+@media (min-width:760px) {
+  .c0 {
+    font-size: 22px;
+    padding-left: 20px;
+    border-left-width: 10px;
+  }
+}
+
+@media (min-width:760px) {
+  .c1 {
+    border-bottom-width: 2px;
+  }
+}
+
+<body>
+  <div>
+    <div
+      class="c0"
+    >
+      Olá, me chamo Diego e sou engenheiro de software graduando em Analise e Desenvolvimento de Sistemas pela Universidade Salvador com mais de 8 anos de experiência em desenvolvimento web e mobile. Atualmente trabalho na Sanar como Tech Lead do time de desenvolvimento mobile e ajudo a organizar meetups do
+       
+      <a
+        class="c1"
+        href="http://react.salvador.br"
+        rel="noopener"
+        target="_blank"
+      >
+        React Salvador.
+      </a>
+    </div>
+  </div>
+</body>
+`;
