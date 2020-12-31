@@ -16,6 +16,9 @@ exports[`<Container /> should render properly 1`] = `
         Header
       </p>
       <p>
+        AboutMe
+      </p>
+      <p>
         Search
       </p>
       <main>

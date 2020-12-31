@@ -1,17 +1,46 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<NotFoundPage> should render properly 1`] = `
+.c1 {
+  color: #fff;
+  font-size: 4vw;
+  font-weight: 700;
+  border-left: 0.7vw solid red;
+  padding-left: 4vw;
+}
+
+.c2 {
+  color: #fff;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  border-bottom: 0.7vw solid #d73738;
+}
+
 .c0 {
   margin: auto;
   max-width: 800px;
   padding: 20px;
 }
 
-.c1 {
+.c3 {
   font-size: 22px;
   background: #d73738;
   display: inline;
   padding: 5px;
+}
+
+@media (min-width:760px) {
+  .c1 {
+    font-size: 22px;
+    padding-left: 20px;
+    border-left-width: 10px;
+  }
+}
+
+@media (min-width:760px) {
+  .c2 {
+    border-bottom-width: 2px;
+  }
 }
 
 <body>
@@ -22,6 +51,20 @@ exports[`<NotFoundPage> should render properly 1`] = `
       <p>
         Header
       </p>
+      <div
+        class="c1"
+      >
+        Olá, me chamo Diego e sou engenheiro de software graduando em Analise e Desenvolvimento de Sistemas pela Universidade Salvador com mais de 8 anos de experiência em desenvolvimento web e mobile. Atualmente trabalho na Sanar como Tech Lead do time de desenvolvimento mobile e ajudo a organizar meetups do
+         
+        <a
+          class="c2"
+          href="http://react.salvador.br"
+          rel="noopener"
+          target="_blank"
+        >
+          React Salvador.
+        </a>
+      </div>
       <p>
         Search
       </p>
@@ -30,7 +73,7 @@ exports[`<NotFoundPage> should render properly 1`] = `
           Metatags
         </p>
         <h1
-          class="c1"
+          class="c3"
         >
           Não encontrado
         </h1>
