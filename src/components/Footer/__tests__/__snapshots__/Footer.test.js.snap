@@ -197,7 +197,7 @@ exports[`<Footer /> should render the repository url if passed 1`] = `
       </span>
       <a
         class="c3"
-        href="https://github.com/diegocosta/blog.diegocosta.com.br"
+        href="https://github.com/diegocosta/diegocosta.com.br"
         rel="noopener"
         target="_blank"
       >
