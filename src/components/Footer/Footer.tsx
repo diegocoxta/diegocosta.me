@@ -1,7 +1,34 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const Container = styled.footer``;
+import Navigation from '~/components/Navigation';
+
+const Container = styled.footer`
+  margin-bottom: 50px;
+
+  nav {
+    margin-bottom: 50px;
+  }
+
+  @media (min-width: 760px) {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+
+    nav {
+      margin-bottom: 0;
+    }
+  }
+`;
+
+const Content = styled.div`
+  font-size: 16px;
+
+  @media (min-width: 760px) {
+    font-size: 18px;
+  }
+`;
 
 const Label = styled.span`
   color: #fff;
@@ -22,64 +49,21 @@ const Link = styled.a.attrs({
   }
 `;
 
-const Navigation = styled.nav`
-  max-width: 500px;
-  margin-bottom: 50px;
-`;
-
-const NavigationList = styled.ul`
-  display: flex;
-  margin: 0;
-  padding: 0;
-  justify-content: space-between;
-`;
-
-const NavigationItem = styled.li`
-  list-style: none;
-  font-size: 18px;
-  font-weight: 700;
-`;
-
-const NavigationLink = styled(Link)`
-  text-decoration: none;
-  color: #d73738;
-  display: block;
-  padding: 0;
-  border-bottom: 1px solid transparent;
-
-  :hover {
-    border-bottom: 1px solid #d73738;
-  }
-`;
-
 interface FooterProps {
   year: number;
-  contacts: [
-    {
-      link: string;
-      label: string;
-    }
-  ];
   repository?: string;
 }
 
 export default function Footer(props: FooterProps): React.ReactElement {
   return (
     <Container>
-      <Navigation>
-        <NavigationList>
-          {props.contacts &&
-            props.contacts.map((item, index) => (
-              <NavigationItem key={index}>
-                <NavigationLink href={item.link}>{item.label}</NavigationLink>
-              </NavigationItem>
-            ))}
-        </NavigationList>
-      </Navigation>
-      <Label>© {props.year}, built with </Label>
-      <Link href="https://gatsbyjs.org">gatsby</Link>
-      <Label> • </Label>
-      {props.repository && <Link href={props.repository}>source code</Link>}
+      <Navigation />
+      <Content>
+        <Label>© {props.year}, built with </Label>
+        <Link href="https://gatsbyjs.org">gatsby</Link>
+        <Label> • </Label>
+        {props.repository && <Link href={props.repository}>source code</Link>}
+      </Content>
     </Container>
   );
 }

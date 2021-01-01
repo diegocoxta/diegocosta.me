@@ -3,6 +3,8 @@ import { render } from '@testing-library/react';
 
 import Header from '../Header';
 
+jest.mock('../../Navigation', () => () => <p>Navigation</p>);
+
 describe('<Header />', () => {
   it('should render properly', () => {
     const { baseElement, getByTestId, getByText } = render(<Header small={false} author="John Doe" />);

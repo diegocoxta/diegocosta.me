@@ -54,14 +54,7 @@ export default function Container(props: ContainerProps): React.ReactElement {
     <Wrapper>
       <GlobalStyle />
       <Header small={props.small || false} />
-      {!props.small && (
-        <>
-          <AboutMe />
-          <Search />
-        </>
-      )}
       <main>{props.children}</main>
-      {props.small && <Search />}
       <Footer />
     </Wrapper>
   );

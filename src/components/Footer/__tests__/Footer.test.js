@@ -3,6 +3,8 @@ import { render } from '@testing-library/react';
 
 import Footer from '../Footer';
 
+jest.mock('../../Navigation', () => () => <p>Navigation</p>);
+
 describe('<Footer />', () => {
   it('should render properly', () => {
     const contacts = [

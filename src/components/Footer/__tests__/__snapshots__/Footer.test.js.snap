@@ -1,45 +1,20 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Footer /> should render properly 1`] = `
-.c4 {
-  color: #fff;
-}
-
-.c5 {
-  color: #d73738;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  box-shadow: none;
-}
-
-.c5:hover,
-.c5:focus {
-  border-bottom: 1px solid #d73738;
-  outline: none;
-}
-
 .c0 {
-  max-width: 500px;
+  margin-bottom: 50px;
+}
+
+.c0 nav {
   margin-bottom: 50px;
 }
 
 .c1 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  margin: 0;
-  padding: 0;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
+  font-size: 16px;
 }
 
 .c2 {
-  list-style: none;
-  font-size: 18px;
-  font-weight: 700;
+  color: #fff;
 }
 
 .c3 {
@@ -47,12 +22,6 @@ exports[`<Footer /> should render properly 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   box-shadow: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  color: #d73738;
-  display: block;
-  padding: 0;
-  border-bottom: 1px solid transparent;
 }
 
 .c3:hover,
@@ -61,67 +30,68 @@ exports[`<Footer /> should render properly 1`] = `
   outline: none;
 }
 
-.c3:hover {
-  border-bottom: 1px solid #d73738;
+@media (min-width:760px) {
+  .c0 {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: row-reverse;
+    -ms-flex-direction: row-reverse;
+    flex-direction: row-reverse;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+
+  .c0 nav {
+    margin-bottom: 0;
+  }
+}
+
+@media (min-width:760px) {
+  .c1 {
+    font-size: 18px;
+  }
 }
 
 <body>
   <div>
     <footer
-      class=""
+      class="c0"
     >
-      <nav
-        class="c0"
+      <p>
+        Navigation
+      </p>
+      <div
+        class="c1"
       >
-        <ul
-          class="c1"
+        <span
+          class="c2"
         >
-          <li
-            class="c2"
-          >
-            <a
-              class="c3"
-              href="mailto:johndoe@doe.com"
-              rel="noopener"
-              target="_blank"
-            >
-              email
-            </a>
-          </li>
-          <li
-            class="c2"
-          >
-            <a
-              class="c3"
-              href="https://google.com"
-              rel="noopener"
-              target="_blank"
-            >
-              site
-            </a>
-          </li>
-        </ul>
-      </nav>
-      <span
-        class="c4"
-      >
-        © 
-        2020
-        , built with 
-      </span>
-      <a
-        class="c5"
-        href="https://gatsbyjs.org"
-        rel="noopener"
-        target="_blank"
-      >
-        gatsby
-      </a>
-      <span
-        class="c4"
-      >
-         • 
-      </span>
+          © 
+          2020
+          , built with 
+        </span>
+        <a
+          class="c3"
+          href="https://gatsbyjs.org"
+          rel="noopener"
+          target="_blank"
+        >
+          gatsby
+        </a>
+        <span
+          class="c2"
+        >
+           • 
+        </span>
+      </div>
     </footer>
   </div>
 </body>
@@ -129,7 +99,19 @@ exports[`<Footer /> should render properly 1`] = `
 
 exports[`<Footer /> should render the repository url if passed 1`] = `
 <body>
-  .c2 {
+  .c0 {
+  margin-bottom: 50px;
+}
+
+.c0 nav {
+  margin-bottom: 50px;
+}
+
+.c1 {
+  font-size: 16px;
+}
+
+.c2 {
   color: #fff;
 }
 
@@ -146,63 +128,75 @@ exports[`<Footer /> should render the repository url if passed 1`] = `
   outline: none;
 }
 
-.c0 {
-  max-width: 500px;
-  margin-bottom: 50px;
+@media (min-width:760px) {
+  .c0 {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: row-reverse;
+    -ms-flex-direction: row-reverse;
+    flex-direction: row-reverse;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+
+  .c0 nav {
+    margin-bottom: 0;
+  }
 }
 
-.c1 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  margin: 0;
-  padding: 0;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
+@media (min-width:760px) {
+  .c1 {
+    font-size: 18px;
+  }
 }
 
 <div>
     <footer
-      class=""
+      class="c0"
     >
-      <nav
-        class="c0"
+      <p>
+        Navigation
+      </p>
+      <div
+        class="c1"
       >
-        <ul
-          class="c1"
-        />
-      </nav>
-      <span
-        class="c2"
-      >
-        © 
-        2020
-        , built with 
-      </span>
-      <a
-        class="c3"
-        href="https://gatsbyjs.org"
-        rel="noopener"
-        target="_blank"
-      >
-        gatsby
-      </a>
-      <span
-        class="c2"
-      >
-         • 
-      </span>
-      <a
-        class="c3"
-        href="https://github.com/diegocosta/diegocosta.com.br"
-        rel="noopener"
-        target="_blank"
-      >
-        source code
-      </a>
+        <span
+          class="c2"
+        >
+          © 
+          2020
+          , built with 
+        </span>
+        <a
+          class="c3"
+          href="https://gatsbyjs.org"
+          rel="noopener"
+          target="_blank"
+        >
+          gatsby
+        </a>
+        <span
+          class="c2"
+        >
+           • 
+        </span>
+        <a
+          class="c3"
+          href="https://github.com/diegocosta/diegocosta.com.br"
+          rel="noopener"
+          target="_blank"
+        >
+          source code
+        </a>
+      </div>
     </footer>
   </div>
 </body>

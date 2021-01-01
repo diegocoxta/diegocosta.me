@@ -45,6 +45,7 @@ const TagLink = styled(Link)`
 
 const TagList = styled.ul`
   display: flex;
+  flex-wrap: wrap;
   margin-bottom: 0;
   padding: 0;
 `;

@@ -2,8 +2,24 @@ import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'gatsby';
 
+import Navigation from '~/components/Navigation';
+
 const Container = styled.header`
   margin-bottom: 40px;
+
+  @media (min-width: 760px) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  nav {
+    margin-top: 30px;
+
+    @media (min-width: 760px) {
+      margin-top: 10px;
+    }
+  }
 `;
 
 const Name = styled.span<{ small: boolean }>`
@@ -47,6 +63,7 @@ export default function Header(props: HeaderProps): React.ReactElement {
           {lastname && <LastName data-testid="header-lastname">{lastname[0]}.</LastName>}
         </Name>
       </StyledLink>
+      <Navigation />
     </Container>
   );
 }

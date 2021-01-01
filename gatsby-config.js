@@ -1,11 +1,12 @@
 const siteMetadata = {
-  title: 'Blog do Diego Costa',
+  title: 'Diego Costa - Tech Manager e Engenheiro de Software',
   author: 'Diego Costa',
-  description: 'Diego Costa, desenvolvedor web e mobile - Salvador, BA',
+  description:
+    'Engenheiro de software e Tech Manager apaixonado por construir produtos que impactem a vida das pessoas.',
   siteUrl: 'https://diegocosta.me',
   contacts: [
-    { link: 'https://github.com/diegocosta', label: 'github' },
     { link: 'https://linkedin.com/in/diegoscosta', label: 'linkedin' },
+    { link: 'https://github.com/diegocosta', label: 'github' },
     { link: 'https://twitter.com/diegocoxta', label: 'twitter' },
     { link: 'https://slides.com/diegocosta', label: 'slides' },
     { link: 'mailto:diego@diegocosta.com.br', label: 'e-mail' },

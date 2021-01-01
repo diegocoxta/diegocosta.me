@@ -1,26 +1,27 @@
 import React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 
-import Footer from './Footer';
+import Navigation from './Navigation';
 
 export default (): React.ReactElement => {
   const {
     site: {
-      siteMetadata: { repository },
+      siteMetadata: { contacts },
     },
   } = useStaticQuery(
     graphql`
       query {
         site {
           siteMetadata {
-            repository
+            contacts {
+              label
+              link
+            }
           }
         }
       }
     `
   );
 
-  const year = new Date().getFullYear();
-
-  return <Footer repository={repository} year={year} />;
+  return <Navigation list={contacts} />;
 };

@@ -6,6 +6,10 @@ exports[`<Header /> should not render the last name 1`] = `
   margin-bottom: 40px;
 }
 
+.c0 nav {
+  margin-top: 30px;
+}
+
 .c2 {
   font-size: 6vw;
   color: #fff;
@@ -22,6 +26,29 @@ exports[`<Header /> should not render the last name 1`] = `
 .c1:focus {
   border-bottom: 1px solid #d73738;
   outline: none;
+}
+
+@media (min-width:760px) {
+  .c0 {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+}
+
+@media (min-width:760px) {
+  .c0 nav {
+    margin-top: 10px;
+  }
 }
 
 @media (min-width:760px) {
@@ -44,6 +71,9 @@ exports[`<Header /> should not render the last name 1`] = `
           John
         </span>
       </a>
+      <p>
+        Navigation
+      </p>
     </header>
   </div>
 </body>
@@ -52,6 +82,10 @@ exports[`<Header /> should not render the last name 1`] = `
 exports[`<Header /> should render properly 1`] = `
 .c0 {
   margin-bottom: 40px;
+}
+
+.c0 nav {
+  margin-top: 30px;
 }
 
 .c2 {
@@ -74,6 +108,29 @@ exports[`<Header /> should render properly 1`] = `
 .c1:focus {
   border-bottom: 1px solid #d73738;
   outline: none;
+}
+
+@media (min-width:760px) {
+  .c0 {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+}
+
+@media (min-width:760px) {
+  .c0 nav {
+    margin-top: 10px;
+  }
 }
 
 @media (min-width:760px) {
@@ -104,6 +161,9 @@ exports[`<Header /> should render properly 1`] = `
           </span>
         </span>
       </a>
+      <p>
+        Navigation
+      </p>
     </header>
   </div>
 </body>
