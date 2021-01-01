@@ -14,7 +14,7 @@ Diante desta saída, meu grande desafio foi manter a felicidade do time alta, pa
 
 Acho que consegui realizar esse feito, visto que o time se manteve unido sem perder sua essência e, obviamente, produtividade. Entregamos o que eu considero como um divisor de águas na engenharia da empresa: um novo aplicativo em tempo recorde, sem débitos técnicos, com qualidade e, o mais importante, abraçado por nossos usuários.
 
-Teve até campanha de lançamento com ex-BBB!
+Teve até campanha de lançamento com campeã do BBB!
 
 A chegada de um novo gestor não é nada fácil. Considero esse grande momento como o segundo do meu ano. Confesso que tive bastante medo de como seria essa relação. Eu vinha de um histórico de ótima amizade com meu último gestor. Logo, vieram perguntas como: "Será que vamos ter alguma química para manter conversas construtivas?" "Será que nossos valores serão os mesmos?". Estas e outras passavam em minha cabeça, e eu tentava buscar respostas antes mesmo de sua chegada, bisbilhotando seu Linkedin.
 
