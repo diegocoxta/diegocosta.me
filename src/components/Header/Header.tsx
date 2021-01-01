@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'gatsby';
+import { FaChevronLeft } from 'react-icons/fa';
 
 import Navigation from '~/components/Navigation';
 import ThemeSwitcher from '~/components/ThemeSwitcher';
@@ -52,6 +53,13 @@ const Options = styled.div`
   align-items: center;
 `;
 
+const BackButton = styled(FaChevronLeft)`
+  color: ${({ theme }) => theme.titleColor};
+  font-size: 22px;
+  font-weight: bold;
+  margin-right: 10px;
+`;
+
 interface HeaderProps {
   small: boolean;
   author: string;
@@ -63,6 +71,7 @@ export default function Header(props: HeaderProps): React.ReactElement {
   return (
     <Container>
       <StyledLink to="/">
+        {props.small && <BackButton />}
         <Name small={props.small}>
           {name}
           {lastname && <LastName data-testid="header-lastname">{lastname[0]}.</LastName>}

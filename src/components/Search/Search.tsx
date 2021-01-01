@@ -12,7 +12,7 @@ const Container = styled.div`
 `;
 
 const Input = styled.input`
-  transition: background 0.4s, box-shadow 0.2s;
+  transition: box-shadow 0.2s;
   width: 100%;
   padding: 20px;
   background: ${({ theme }) => theme.searchBackgroundColor};
