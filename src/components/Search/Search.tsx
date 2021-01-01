@@ -15,27 +15,27 @@ const Input = styled.input`
   transition: background 0.4s, box-shadow 0.2s;
   width: 100%;
   padding: 20px;
-  background: #0e0f11;
+  background: ${({ theme }) => theme.searchBackgroundColor};
   outline: none;
-  color: rgba(255, 255, 255, 0.7);
+  color: ${({ theme }) => theme.titleColor};
   font-size: 18px;
   line-height: 18px;
   border-radius: 4px;
   box-sizing: border-box;
-  border: 1px solid #1b1b1d;
+  border: 1px solid ${({ theme }) => theme.searchResultsBackgroundColor};
 
   :focus {
-    background-color: #1b1b1d;
+    background-color: ${({ theme }) => theme.searchResultsBackgroundColor};
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-    color: #fff;
+    color: ${({ theme }) => theme.titleColor};
   }
 
   ::placeholder {
-    color: #9a9a9a;
+    color: ${({ theme }) => theme.subtitleColor};
   }
 
   :focus::placeholder {
-    color: #9a9a9a;
+    color: ${({ theme }) => theme.subtitleColor};
   }
 `;
 
@@ -50,7 +50,7 @@ const Results = styled.div`
   top: calc(20px + 21px + 18px);
   align-items: center;
   cursor: text;
-  background: #1b1b1d;
+  background: ${({ theme }) => theme.searchResultsBackgroundColor};
   color: black;
   z-index: 4;
   border-bottom-left-radius: 10px;
@@ -70,14 +70,14 @@ const ResultLink = styled(Link)<{ highlighted: boolean }>`
 `;
 
 const ResultItemTitle = styled.h3`
-  color: #fff;
+  color: ${({ theme }) => theme.titleColor};
   font-size: 16px;
   margin: 0 0 5px;
   font-weight: 400;
 `;
 
 const ResultItemDescription = styled.p`
-  color: #9a9a9a;
+  color: ${({ theme }) => theme.subtitleColor};
   font-size: 14px;
   margin: 0%;
 `;

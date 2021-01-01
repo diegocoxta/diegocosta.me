@@ -7,6 +7,12 @@ exports[`<Container /> should render properly 1`] = `
   padding: 20px;
 }
 
+@media (min-width:760px) {
+  .c1 {
+    display: none;
+  }
+}
+
 <body>
   <div>
     <section
@@ -15,6 +21,13 @@ exports[`<Container /> should render properly 1`] = `
       <p>
         Header
       </p>
+      <div
+        class="c1"
+      >
+        <p>
+          Navigation
+        </p>
+      </div>
       <p>
         Search
       </p>

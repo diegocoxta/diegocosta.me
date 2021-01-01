@@ -4,15 +4,27 @@ exports[`<Header /> should not render the last name 1`] = `
 <body>
   .c0 {
   margin-bottom: 40px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .c0 nav {
-  margin-top: 30px;
+  margin-top: 10px;
+  display: none;
 }
 
 .c2 {
-  font-size: 6vw;
-  color: #fff;
+  font-size: 8vw;
   font-weight: 700;
   text-transform: lowercase;
 }
@@ -24,36 +36,34 @@ exports[`<Header /> should not render the last name 1`] = `
 }
 
 .c1:focus {
-  border-bottom: 1px solid #d73738;
+  border-bottom: 1px solid;
   outline: none;
 }
 
-@media (min-width:760px) {
-  .c0 {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-    -webkit-justify-content: space-between;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
-    -webkit-align-items: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-  }
+.c3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 @media (min-width:760px) {
   .c0 nav {
-    margin-top: 10px;
+    display: block;
   }
 }
 
 @media (min-width:760px) {
   .c2 {
-    font-size: 24px;
+    font-size: 34px;
   }
 }
 
@@ -71,9 +81,16 @@ exports[`<Header /> should not render the last name 1`] = `
           John
         </span>
       </a>
-      <p>
-        Navigation
-      </p>
+      <div
+        class="c3"
+      >
+        <p>
+          Navigation
+        </p>
+        <p>
+          ThemeSwitcher
+        </p>
+      </div>
     </header>
   </div>
 </body>
@@ -82,21 +99,29 @@ exports[`<Header /> should not render the last name 1`] = `
 exports[`<Header /> should render properly 1`] = `
 .c0 {
   margin-bottom: 40px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .c0 nav {
-  margin-top: 30px;
+  margin-top: 10px;
+  display: none;
 }
 
 .c2 {
   font-size: 15vw;
-  color: #fff;
   font-weight: 700;
   text-transform: lowercase;
-}
-
-.c3 {
-  color: #d73738;
 }
 
 .c1 {
@@ -106,30 +131,28 @@ exports[`<Header /> should render properly 1`] = `
 }
 
 .c1:focus {
-  border-bottom: 1px solid #d73738;
+  border-bottom: 1px solid;
   outline: none;
 }
 
-@media (min-width:760px) {
-  .c0 {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-    -webkit-justify-content: space-between;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
-    -webkit-align-items: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-  }
+.c3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 @media (min-width:760px) {
   .c0 nav {
-    margin-top: 10px;
+    display: block;
   }
 }
 
@@ -153,7 +176,7 @@ exports[`<Header /> should render properly 1`] = `
         >
           John
           <span
-            class="c3"
+            class=""
             data-testid="header-lastname"
           >
             D
@@ -161,9 +184,16 @@ exports[`<Header /> should render properly 1`] = `
           </span>
         </span>
       </a>
-      <p>
-        Navigation
-      </p>
+      <div
+        class="c3"
+      >
+        <p>
+          Navigation
+        </p>
+        <p>
+          ThemeSwitcher
+        </p>
+      </div>
     </header>
   </div>
 </body>

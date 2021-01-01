@@ -7,9 +7,16 @@ exports[`<LanguagesPage> should render properly 1`] = `
   padding: 20px;
 }
 
-.c1 {
+.c2 {
   margin: 0 0 60px 0;
   font-weight: 400;
+  color: #FFFFFF;
+}
+
+@media (min-width:760px) {
+  .c1 {
+    display: none;
+  }
 }
 
 <body>
@@ -20,6 +27,13 @@ exports[`<LanguagesPage> should render properly 1`] = `
       <p>
         Header
       </p>
+      <div
+        class="c1"
+      >
+        <p>
+          Navigation
+        </p>
+      </div>
       <p>
         Search
       </p>
@@ -28,7 +42,7 @@ exports[`<LanguagesPage> should render properly 1`] = `
           Metatags
         </p>
         <article
-          class="c1"
+          class="c2"
           data-testid="languages-page-article"
         >
           <p>
@@ -37,7 +51,7 @@ exports[`<LanguagesPage> should render properly 1`] = `
           Awesome first article
         </article>
         <article
-          class="c1"
+          class="c2"
           data-testid="languages-page-article"
         >
           <p>

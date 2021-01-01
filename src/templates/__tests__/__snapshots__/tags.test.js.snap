@@ -7,16 +7,23 @@ exports[`<TagsPage> should render properly 1`] = `
   padding: 20px;
 }
 
-.c2 {
+.c3 {
   margin: 0 0 60px 0;
   font-weight: 400;
+  color: #FFFFFF;
 }
 
-.c1 {
+.c2 {
   font-size: 22px;
-  background: #d73738;
+  background: #CA222B;
   display: inline;
   padding: 5px;
+}
+
+@media (min-width:760px) {
+  .c1 {
+    display: none;
+  }
 }
 
 <body>
@@ -27,6 +34,13 @@ exports[`<TagsPage> should render properly 1`] = `
       <p>
         Header
       </p>
+      <div
+        class="c1"
+      >
+        <p>
+          Navigation
+        </p>
+      </div>
       <p>
         Search
       </p>
@@ -35,12 +49,12 @@ exports[`<TagsPage> should render properly 1`] = `
           Metatags
         </p>
         <h1
-          class="c1"
+          class="c2"
         >
           Tech Stuff (2)
         </h1>
         <article
-          class="c2"
+          class="c3"
           data-testid="tags-page-article"
         >
           <p>
@@ -49,7 +63,7 @@ exports[`<TagsPage> should render properly 1`] = `
           Awesome first article
         </article>
         <article
-          class="c2"
+          class="c3"
           data-testid="tags-page-article"
         >
           <p>

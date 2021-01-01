@@ -23,14 +23,13 @@ exports[`<Navigation /> should render properly 1`] = `
 .c3 {
   -webkit-text-decoration: none;
   text-decoration: none;
-  color: #d73738;
   display: block;
   padding: 0;
   border-bottom: 1px solid transparent;
 }
 
 .c3:hover {
-  border-bottom: 1px solid #d73738;
+  border-bottom: 1px solid;
 }
 
 @media (min-width:750px) {

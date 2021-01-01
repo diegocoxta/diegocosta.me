@@ -14,19 +14,14 @@ exports[`<Footer /> should render properly 1`] = `
 }
 
 .c2 {
-  color: #fff;
-}
-
-.c3 {
-  color: #d73738;
   -webkit-text-decoration: none;
   text-decoration: none;
   box-shadow: none;
 }
 
-.c3:hover,
-.c3:focus {
-  border-bottom: 1px solid #d73738;
+.c2:hover,
+.c2:focus {
+  border-bottom: 1px solid;
   outline: none;
 }
 
@@ -72,14 +67,14 @@ exports[`<Footer /> should render properly 1`] = `
         class="c1"
       >
         <span
-          class="c2"
+          class=""
         >
           © 
           2020
           , built with 
         </span>
         <a
-          class="c3"
+          class="c2"
           href="https://gatsbyjs.org"
           rel="noopener"
           target="_blank"
@@ -87,7 +82,7 @@ exports[`<Footer /> should render properly 1`] = `
           gatsby
         </a>
         <span
-          class="c2"
+          class=""
         >
            • 
         </span>
@@ -112,19 +107,14 @@ exports[`<Footer /> should render the repository url if passed 1`] = `
 }
 
 .c2 {
-  color: #fff;
-}
-
-.c3 {
-  color: #d73738;
   -webkit-text-decoration: none;
   text-decoration: none;
   box-shadow: none;
 }
 
-.c3:hover,
-.c3:focus {
-  border-bottom: 1px solid #d73738;
+.c2:hover,
+.c2:focus {
+  border-bottom: 1px solid;
   outline: none;
 }
 
@@ -169,14 +159,14 @@ exports[`<Footer /> should render the repository url if passed 1`] = `
         class="c1"
       >
         <span
-          class="c2"
+          class=""
         >
           © 
           2020
           , built with 
         </span>
         <a
-          class="c3"
+          class="c2"
           href="https://gatsbyjs.org"
           rel="noopener"
           target="_blank"
@@ -184,12 +174,12 @@ exports[`<Footer /> should render the repository url if passed 1`] = `
           gatsby
         </a>
         <span
-          class="c2"
+          class=""
         >
            • 
         </span>
         <a
-          class="c3"
+          class="c2"
           href="https://github.com/diegocosta/diegocosta.com.br"
           rel="noopener"
           target="_blank"

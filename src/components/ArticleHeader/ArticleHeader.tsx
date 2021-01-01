@@ -17,13 +17,13 @@ const Title = styled.h3`
 `;
 
 const CustomLink = styled(Link)`
-  color: #fff;
+  color: ${({ theme }) => theme.titleColor};
   box-shadow: none;
   text-decoration: none;
 
   :hover,
   :focus {
-    border-bottom: 1px solid #fff;
+    border-bottom: 1px solid ${({ theme }) => theme.titleColor};
     outline: none;
   }
 `;
@@ -32,13 +32,13 @@ const TagLink = styled(Link)`
   text-decoration: none;
   box-shadow: none;
   font-size: 14px;
-  color: #d73738;
+  color: ${({ theme }) => theme.accentColor};
   font-weight: 700;
   text-transform: lowercase;
 
   :hover,
   :focus {
-    border-bottom: 1px solid #d73738;
+    border-bottom: 1px solid ${({ theme }) => theme.accentColor};
     outline: none;
   }
 `;
@@ -57,7 +57,7 @@ const TagItem = styled.li`
 `;
 
 const Details = styled.p`
-  color: #9a9a9a;
+  color: ${({ theme }) => theme.subtitleColor};
   font-size: 18px;
   margin: 5px 0;
 `;

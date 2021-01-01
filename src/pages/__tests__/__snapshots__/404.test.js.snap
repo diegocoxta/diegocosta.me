@@ -7,11 +7,17 @@ exports[`<NotFoundPage> should render properly 1`] = `
   padding: 20px;
 }
 
-.c1 {
+.c2 {
   font-size: 22px;
-  background: #d73738;
+  background: #CA222B;
   display: inline;
   padding: 5px;
+}
+
+@media (min-width:760px) {
+  .c1 {
+    display: none;
+  }
 }
 
 <body>
@@ -22,6 +28,13 @@ exports[`<NotFoundPage> should render properly 1`] = `
       <p>
         Header
       </p>
+      <div
+        class="c1"
+      >
+        <p>
+          Navigation
+        </p>
+      </div>
       <p>
         Search
       </p>
@@ -30,7 +43,7 @@ exports[`<NotFoundPage> should render properly 1`] = `
           Metatags
         </p>
         <h1
-          class="c1"
+          class="c2"
         >
           Não encontrado
         </h1>

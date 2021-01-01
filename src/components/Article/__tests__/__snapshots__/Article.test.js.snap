@@ -24,20 +24,19 @@ exports[`<Content /> should render properly 1`] = `
 }
 
 .c0 a {
-  color: #d73738;
   -webkit-text-decoration: none;
   text-decoration: none;
-  border-bottom: 1px solid transparent;
+  border-bottom: 1px solid #0b0c0d;
 }
 
 .c0 a:hover,
 .c0 a:focus {
-  border-bottom: 1px solid #d73738;
+  border-bottom: 1px solid;
   outline: none;
 }
 
 .c0 blockquote {
-  border-left: 5px solid #d73738;
+  border-left: 5px solid;
   padding-left: 20px;
 }
 
@@ -48,12 +47,12 @@ exports[`<Content /> should render properly 1`] = `
 .c0 pre[class*='language-'],
 .c0 code[class*='language-'],
 .c0 .gatsby-highlight {
-  background-color: transparent;
+  background-color: #0b0c0d;
 }
 
 .c0 .line-numbers-rows,
 .c0 .line-numbers-rows span::before {
-  border: 0.5px solid transparent;
+  border: 0.5px solid #0b0c0d;
 }
 
 .c0 img {

@@ -3,7 +3,6 @@
 exports[`<PageTitle /> should render properly 1`] = `
 .c0 {
   font-size: 22px;
-  background: #d73738;
   display: inline;
   padding: 5px;
 }

@@ -3,38 +3,37 @@ import styled from 'styled-components';
 import { Link } from 'gatsby';
 
 import Navigation from '~/components/Navigation';
+import ThemeSwitcher from '~/components/ThemeSwitcher';
 
 const Container = styled.header`
   margin-bottom: 40px;
-
-  @media (min-width: 760px) {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 
   nav {
-    margin-top: 30px;
+    margin-top: 10px;
+    display: none;
 
     @media (min-width: 760px) {
-      margin-top: 10px;
+      display: block;
     }
   }
 `;
 
 const Name = styled.span<{ small: boolean }>`
-  font-size: ${(props) => (props.small ? '6vw' : '15vw')};
-  color: #fff;
+  font-size: ${(props) => (props.small ? '8vw' : '15vw')};
+  color: ${({ theme }) => theme.titleColor};
   font-weight: 700;
   text-transform: lowercase;
 
   @media (min-width: 760px) {
-    font-size: ${(props) => (props.small ? '24px' : '80px')};
+    font-size: ${(props) => (props.small ? '34px' : '80px')};
   }
 `;
 
 const LastName = styled.span`
-  color: #d73738;
+  color: ${({ theme }) => theme.accentColor};
 `;
 
 const StyledLink = styled(Link)`
@@ -42,9 +41,15 @@ const StyledLink = styled(Link)`
   box-shadow: none;
 
   :focus {
-    border-bottom: 1px solid #d73738;
+    border-bottom: 1px solid ${({ theme }) => theme.accentColor};
     outline: none;
   }
+`;
+
+const Options = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 `;
 
 interface HeaderProps {
@@ -63,7 +68,10 @@ export default function Header(props: HeaderProps): React.ReactElement {
           {lastname && <LastName data-testid="header-lastname">{lastname[0]}.</LastName>}
         </Name>
       </StyledLink>
-      <Navigation />
+      <Options>
+        <Navigation />
+        <ThemeSwitcher />
+      </Options>
     </Container>
   );
 }

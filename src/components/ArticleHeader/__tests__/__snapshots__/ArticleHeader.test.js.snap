@@ -14,7 +14,6 @@ exports[`<ArticleHeader /> should not render the link 1`] = `
 }
 
 .c2 {
-  color: #9a9a9a;
   font-size: 18px;
   margin: 5px 0;
 }
@@ -61,7 +60,6 @@ exports[`<ArticleHeader /> should not render the tags 1`] = `
 }
 
 .c2 {
-  color: #fff;
   box-shadow: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -69,12 +67,11 @@ exports[`<ArticleHeader /> should not render the tags 1`] = `
 
 .c2:hover,
 .c2:focus {
-  border-bottom: 1px solid #fff;
+  border-bottom: 1px solid;
   outline: none;
 }
 
 .c3 {
-  color: #9a9a9a;
   font-size: 18px;
   margin: 5px 0;
 }
@@ -126,7 +123,6 @@ exports[`<ArticleHeader /> should render properly 1`] = `
 }
 
 .c2 {
-  color: #fff;
   box-shadow: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -134,7 +130,7 @@ exports[`<ArticleHeader /> should render properly 1`] = `
 
 .c2:hover,
 .c2:focus {
-  border-bottom: 1px solid #fff;
+  border-bottom: 1px solid;
   outline: none;
 }
 
@@ -143,14 +139,13 @@ exports[`<ArticleHeader /> should render properly 1`] = `
   text-decoration: none;
   box-shadow: none;
   font-size: 14px;
-  color: #d73738;
   font-weight: 700;
   text-transform: lowercase;
 }
 
 .c6:hover,
 .c6:focus {
-  border-bottom: 1px solid #d73738;
+  border-bottom: 1px solid;
   outline: none;
 }
 
@@ -173,7 +168,6 @@ exports[`<ArticleHeader /> should render properly 1`] = `
 }
 
 .c3 {
-  color: #9a9a9a;
   font-size: 18px;
   margin: 5px 0;
 }
@@ -256,7 +250,6 @@ exports[`<ArticleHeader /> should render properly in Poruguese 1`] = `
 }
 
 .c2 {
-  color: #fff;
   box-shadow: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -264,12 +257,11 @@ exports[`<ArticleHeader /> should render properly in Poruguese 1`] = `
 
 .c2:hover,
 .c2:focus {
-  border-bottom: 1px solid #fff;
+  border-bottom: 1px solid;
   outline: none;
 }
 
 .c3 {
-  color: #9a9a9a;
   font-size: 18px;
   margin: 5px 0;
 }

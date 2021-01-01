@@ -3,25 +3,26 @@ import styled from 'styled-components';
 export default styled.article`
   margin: 0 0 60px 0;
   font-weight: 400;
+  color: ${({ theme }) => theme.textColor};
 `;
 
 export const Content = styled.section`
   line-height: 1.5;
 
   a {
-    color: #d73738;
+    color: ${({ theme }) => theme.accentColor};
     text-decoration: none;
-    border-bottom: 1px solid transparent;
+    border-bottom: 1px solid #0b0c0d;
 
     :hover,
     :focus {
-      border-bottom: 1px solid #d73738;
+      border-bottom: 1px solid ${({ theme }) => theme.accentColor};
       outline: none;
     }
   }
 
   blockquote {
-    border-left: 5px solid #d73738;
+    border-left: 5px solid ${({ theme }) => theme.accentColor};
     padding-left: 20px;
   }
 
@@ -32,12 +33,12 @@ export const Content = styled.section`
   pre[class*='language-'],
   code[class*='language-'],
   .gatsby-highlight {
-    background-color: transparent;
+    background-color: #0b0c0d;
   }
 
   .line-numbers-rows,
   .line-numbers-rows span::before {
-    border: 0.5px solid transparent;
+    border: 0.5px solid #0b0c0d;
   }
 
   img {

@@ -4,7 +4,6 @@ import { useCombobox } from 'downshift';
 import Fuse from 'fuse.js';
 
 import Search, { ArticleProps } from './Search';
-import { MarkdownRemark } from 'graphql-types';
 
 export default (): React.ReactElement => {
   const data = useStaticQuery(graphql`

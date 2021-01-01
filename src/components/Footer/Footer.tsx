@@ -31,20 +31,20 @@ const Content = styled.div`
 `;
 
 const Label = styled.span`
-  color: #fff;
+  color: ${({ theme }) => theme.textColor};
 `;
 
 const Link = styled.a.attrs({
   target: '_blank',
   rel: 'noopener',
 })`
-  color: #d73738;
+  color: ${({ theme }) => theme.accentColor};
   text-decoration: none;
   box-shadow: none;
 
   :hover,
   :focus {
-    border-bottom: 1px solid #d73738;
+    border-bottom: 1px solid ${({ theme }) => theme.accentColor};
     outline: none;
   }
 `;

@@ -26,13 +26,13 @@ const Item = styled.li`
 
 const Link = styled.a`
   text-decoration: none;
-  color: #d73738;
+  color: ${({ theme }) => theme.accentColor};
   display: block;
   padding: 0;
   border-bottom: 1px solid transparent;
 
   :hover {
-    border-bottom: 1px solid #d73738;
+    border-bottom: 1px solid ${({ theme }) => theme.accentColor};
   }
 `;
 

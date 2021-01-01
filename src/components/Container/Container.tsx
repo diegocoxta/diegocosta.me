@@ -1,9 +1,13 @@
 import React from 'react';
-import styled, { createGlobalStyle } from 'styled-components';
+import styled, { createGlobalStyle, ThemeContext } from 'styled-components';
 
 import Header from '~/components/Header';
 import Footer from '~/components/Footer';
 import Search from '~/components/Search';
+import Navigation from '~/components/Navigation';
+
+import { useTheme } from '~/hooks/useTheme';
+import { dark, light } from '~/themes';
 
 const Wrapper = styled.section`
   margin: auto;
@@ -13,7 +17,7 @@ const Wrapper = styled.section`
 
 const GlobalStyle = createGlobalStyle`
   body {
-    background: #0e0f11;
+    background: ${({ theme }: any) => theme.backgroundColor};
     font-family: 'Raleway', sans-serif;
     color: #fff;
   }
@@ -43,20 +47,35 @@ const GlobalStyle = createGlobalStyle`
   .pl-s { color: #D69D85 !important; }
 `;
 
+const OnlyMobile = styled.div`
+  @media (min-width: 760px) {
+    display: none;
+  }
+`;
+
 export interface ContainerProps {
   children: React.ReactNode;
   small?: boolean;
 }
 
 export default function Container(props: ContainerProps): React.ReactElement {
+  const [theme, themeToggler] = useTheme();
+
+  const themeMode = theme === 'light' ? light : dark;
+
   return (
-    <Wrapper>
-      <GlobalStyle />
-      <Header small={props.small || false} />
-      {!props.small && <Search />}
-      <main>{props.children}</main>
-      {props.small && <Search />}
-      <Footer />
-    </Wrapper>
+    <ThemeContext.Provider value={{ ...themeMode, theme, themeToggler }}>
+      <Wrapper>
+        <GlobalStyle />
+        <Header small={props.small || false} />
+        <OnlyMobile>
+          <Navigation />
+        </OnlyMobile>
+        {!props.small && <Search />}
+        <main>{props.children}</main>
+        {props.small && <Search />}
+        <Footer />
+      </Wrapper>
+    </ThemeContext.Provider>
   );
 }
