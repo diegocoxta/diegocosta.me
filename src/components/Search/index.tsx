@@ -4,6 +4,7 @@ import { useCombobox } from 'downshift';
 import Fuse from 'fuse.js';
 
 import Search, { ArticleProps } from './Search';
+import { MarkdownRemark } from 'graphql-types';
 
 export default (): React.ReactElement => {
   const data = useStaticQuery(graphql`
@@ -17,6 +18,7 @@ export default (): React.ReactElement => {
           frontmatter {
             title
             description
+            lang
           }
         }
       }
@@ -40,7 +42,8 @@ export default (): React.ReactElement => {
     items: articles,
     onInputValueChange: ({ inputValue }) => inputValue && setArticles(fuse.search<ArticleProps>(inputValue)),
     itemToString: (article) => article?.item?.frontmatter?.title ?? '',
-    onSelectedItemChange: ({ selectedItem }) => navigate(selectedItem?.item?.fields?.slug ?? ''),
+    onSelectedItemChange: ({ selectedItem }) =>
+      navigate(`/${selectedItem?.item?.frontmatter?.lang}${selectedItem?.item?.fields?.slug}`),
   });
 
   return <Search combobox={combobox} articles={articles} />;

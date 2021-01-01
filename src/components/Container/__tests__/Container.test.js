@@ -6,7 +6,6 @@ import Container from '../Container';
 jest.mock('../../Header', () => () => <p>Header</p>);
 jest.mock('../../Footer', () => () => <p>Footer</p>);
 jest.mock('../../Search', () => () => <p>Search</p>);
-jest.mock('../../AboutMe', () => () => <p>AboutMe</p>);
 
 describe('<Container />', () => {
   it('should render properly', () => {

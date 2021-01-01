@@ -20,6 +20,9 @@ exports[`<LanguagesPage> should render properly 1`] = `
       <p>
         Header
       </p>
+      <p>
+        Search
+      </p>
       <main>
         <p>
           Metatags

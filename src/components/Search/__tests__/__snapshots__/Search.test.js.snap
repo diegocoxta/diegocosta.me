@@ -28,35 +28,35 @@ exports[`<Search /> should render properly 1`] = `
 }
 
 .c1::-webkit-input-placeholder {
-  color: white;
+  color: #9a9a9a;
 }
 
 .c1::-moz-placeholder {
-  color: white;
+  color: #9a9a9a;
 }
 
 .c1:-ms-input-placeholder {
-  color: white;
+  color: #9a9a9a;
 }
 
 .c1::placeholder {
-  color: white;
+  color: #9a9a9a;
 }
 
 .c1:focus::-webkit-input-placeholder {
-  color: white;
+  color: #9a9a9a;
 }
 
 .c1:focus::-moz-placeholder {
-  color: white;
+  color: #9a9a9a;
 }
 
 .c1:focus:-ms-input-placeholder {
-  color: white;
+  color: #9a9a9a;
 }
 
 .c1:focus::placeholder {
-  color: white;
+  color: #9a9a9a;
 }
 
 .c2 {
@@ -130,7 +130,7 @@ exports[`<Search /> should render properly 1`] = `
         <a
           class="c4"
           data-testid="search-results-link"
-          href="/como-migrar-para-o-windows-8-1/"
+          href="/undefined/como-migrar-para-o-windows-8-1/"
         >
           <h3
             class="c5"
@@ -148,7 +148,7 @@ exports[`<Search /> should render properly 1`] = `
         <a
           class="c4"
           data-testid="search-results-link"
-          href="/enviando-aplicacao-heroku-windows/"
+          href="/undefined/enviando-aplicacao-heroku-windows/"
         >
           <h3
             class="c5"
@@ -166,7 +166,7 @@ exports[`<Search /> should render properly 1`] = `
         <a
           class="c4"
           data-testid="search-results-link"
-          href="/atualizando-programas-cask-homebrew-macos/"
+          href="/undefined/atualizando-programas-cask-homebrew-macos/"
         >
           <h3
             class="c5"
@@ -216,35 +216,35 @@ exports[`<Search /> should render properly with results closed 1`] = `
 }
 
 .c1::-webkit-input-placeholder {
-  color: white;
+  color: #9a9a9a;
 }
 
 .c1::-moz-placeholder {
-  color: white;
+  color: #9a9a9a;
 }
 
 .c1:-ms-input-placeholder {
-  color: white;
+  color: #9a9a9a;
 }
 
 .c1::placeholder {
-  color: white;
+  color: #9a9a9a;
 }
 
 .c1:focus::-webkit-input-placeholder {
-  color: white;
+  color: #9a9a9a;
 }
 
 .c1:focus::-moz-placeholder {
-  color: white;
+  color: #9a9a9a;
 }
 
 .c1:focus:-ms-input-placeholder {
-  color: white;
+  color: #9a9a9a;
 }
 
 .c1:focus::placeholder {
-  color: white;
+  color: #9a9a9a;
 }
 
 .c2 {

@@ -81,6 +81,9 @@ exports[`<ArticlePage> should render properly 1`] = `
         </article>
       </main>
       <p>
+        Search
+      </p>
+      <p>
         Footer
       </p>
     </section>

@@ -31,11 +31,11 @@ const Input = styled.input`
   }
 
   ::placeholder {
-    color: white;
+    color: #9a9a9a;
   }
 
   :focus::placeholder {
-    color: white;
+    color: #9a9a9a;
   }
 `;
 
@@ -101,7 +101,7 @@ export default function Search({ articles, combobox }: SearchProps): React.React
             <ResultLink
               key={article.item.id}
               data-testid="search-results-link"
-              to={article.item.fields?.slug ?? ''}
+              to={`/${article?.item?.frontmatter?.lang}${article?.item?.fields?.slug}`}
               {...combobox.getItemProps({ index, item: article })}>
               <ResultItemTitle data-testid="search-results-title">
                 {article.item.frontmatter?.title ?? ''}
