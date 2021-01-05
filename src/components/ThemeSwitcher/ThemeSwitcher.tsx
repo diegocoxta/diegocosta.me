@@ -36,7 +36,7 @@ export default function ThemeSwitcher(): React.ReactElement {
   const isDarkMode = themeContext?.theme === 'dark';
 
   return (
-    <Container enabled={isDarkMode} onClick={themeContext?.themeToggler}>
+    <Container enabled={isDarkMode} onClick={themeContext?.themeToggler} aria-label="Trocar o tema do site">
       <Indicator>{isDarkMode ? <BsMoon /> : <BsSun />}</Indicator>
     </Container>
   );

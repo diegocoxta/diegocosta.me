@@ -48,6 +48,7 @@ exports[`<ThemeSwitcher /> should render properly 1`] = `
 <body>
   <div>
     <button
+      aria-label="Trocar o tema do site"
       class="c0"
     >
       <div
