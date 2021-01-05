@@ -5,3 +5,4 @@ public
 build
 node_modules
 graphql-types.ts
+*.md
