@@ -1,6 +1,6 @@
 ---
 title: Minha retrospectiva 2020
-date: '2021-01-05T09:12:03.284Z'
+date: '2021-01-06T09:12:03.284Z'
 description: Flagrei-me pensando o quão insano 2020 foi para mim na vida profissional e resolvi escrever esse resumo.
 tags: ['Carreira', 'Retrospectiva']
 lang: pt
