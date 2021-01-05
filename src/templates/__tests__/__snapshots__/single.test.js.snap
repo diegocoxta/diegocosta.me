@@ -17,6 +17,10 @@ exports[`<ArticlePage> should render properly 1`] = `
   line-height: 1.5;
 }
 
+.c3 table {
+  width: 100%;
+}
+
 .c3 a {
   color: #CA222B;
   -webkit-text-decoration: none;

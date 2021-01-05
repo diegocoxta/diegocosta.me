@@ -69,7 +69,7 @@ export default function Header(props: HeaderProps): React.ReactElement {
   const [name, lastname] = props.author.split(' ');
 
   return (
-    <Container>
+    <Container aria-label="Trocar o tema do site">
       <StyledLink to="/">
         {props.small && <BackButton />}
         <Name small={props.small}>

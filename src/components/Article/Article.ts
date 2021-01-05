@@ -9,6 +9,10 @@ export default styled.article`
 export const Content = styled.section`
   line-height: 1.5;
 
+  table {
+    width: 100%;
+  }
+
   a {
     color: ${({ theme }) => theme.accentColor};
     text-decoration: none;

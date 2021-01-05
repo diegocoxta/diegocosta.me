@@ -75,6 +75,7 @@ exports[`<Header /> should not render the last name 1`] = `
 
 <div>
     <header
+      aria-label="Trocar o tema do site"
       class="c0"
     >
       <a
@@ -185,6 +186,7 @@ exports[`<Header /> should render properly 1`] = `
 <body>
   <div>
     <header
+      aria-label="Trocar o tema do site"
       class="c0"
     >
       <a

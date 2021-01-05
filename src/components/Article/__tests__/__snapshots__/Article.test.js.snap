@@ -23,6 +23,10 @@ exports[`<Content /> should render properly 1`] = `
   line-height: 1.5;
 }
 
+.c0 table {
+  width: 100%;
+}
+
 .c0 a {
   -webkit-text-decoration: none;
   text-decoration: none;
