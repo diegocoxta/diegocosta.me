@@ -1,6 +1,6 @@
 ---
 title: Minha recomendação de livros para futuros líderes técnicos
-date: '2021-01-19T22:12:03.284Z'
+date: '2021-01-26T22:12:03.284Z'
 description: Hoje quero falar de 4 livros que li em 2020 e que de certa forma me impactaram.
 tags: ['Livros', 'Management']
 lang: pt
