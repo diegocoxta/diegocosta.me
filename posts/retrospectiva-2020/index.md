@@ -8,7 +8,7 @@ lang: pt
 
 Nesse momento, estou nas minhas férias de fim de ano. Flagrei-me pensando o quão insano 2020 foi para mim, cheio de altos e baixos na vida profissional, a ponto de resolver escrever algo para que o meu eu do futuro possa rever e lembrar com bastante carinho desse ano que, sem dúvidas, minha primeira reação seria querer esquecer.
 
-O começo dele não foi nada fácil. Além da COVID-19 ceifar a liberdade de todos nós e nos forçar a trabalhar exclusivamente de modo remoto, tivemos no meu ambiente de trabalho a saída do CTO, um grande amigo e gestor que me ajudou na construção de minha carreira como manager. A partir desse momento, eu “estaria sozinho”, até termos uma nova pessoa para assumir esse posto. 
+O começo dele não foi nada fácil. Além da COVID-19 ceifar a liberdade de todos nós e nos forçar a trabalhar exclusivamente de modo remoto, tivemos no meu ambiente de trabalho a saída do CTO, um grande amigo e gestor que me ajudou no início da minha carreira como manager. A partir desse momento, eu “estaria sozinho”, até termos uma nova pessoa para assumir esse posto. 
 
 Diante desta saída, meu grande desafio foi manter a felicidade do time alta, passando segurança e mostrando que tudo continuava bem, mesmo que internamente eu estivesse bastante triste e inseguro. 
 
