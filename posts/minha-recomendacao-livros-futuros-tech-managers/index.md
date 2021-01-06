@@ -10,7 +10,7 @@ Quando você é desenvolvedor de softwares, existe uma infinidade de conteúdo t
 
 Diante desse cenário, nos últimos três anos tentei me aperfeiçoar através de diversas literaturas, pois, na minha opinião, entender os desafios de quem teve que trilhar esse caminho antes de mim é a melhor forma de construir um repertório para quando eu vivenciar problemas semelhantes.
 
-Hoje, gostaria de resumir quatro livros que li em 2020 e que, de certa forma, me impactaram.
+Hoje, gostaria de apresentar quatro livros que li em 2020 e que, de certa forma, me impactaram.
 
 
 ### #1 - Os 5 desafios das equipes - Patrick Lencioni e Simone Lemberg Reisner
