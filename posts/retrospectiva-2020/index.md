@@ -35,3 +35,6 @@ Voltando ao momento do meu desligamento, foi uma decisão bastante difícil, já
 O que 2021 reserva para mim ainda é incerto, mas sobre uma coisa eu posso falar: Aos quarenta e cinco minutos do segundo tempo, eu consegui realizar um grande sonho. A fagulha que me deixou inquieto somada a algo muito importante: palavras de incentivos da minha última gestora, me alertando que já sou bom o suficiente. A junção que me fez perder o medo em realizar minha aplicação para a minha empresa dos sonhos. Bem, consegui! Este ano, vou trabalhar em um produto que impacta dez vezes mais pessoas, e terei a oportunidade de me desafiar, aprender coisas novas, viver outras realidades e culturas… me aguarde, Nubank!
 
 Apesar de um ano caótico no mundo, eu só tenho a agradecer a tudo que 2020 me proporcionou. Ao menos, profissionalmente.
+
+### Este artigo também publicado no Linkedin.
+<iframe src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:6752606343049297921" height="591" width="504" frameborder="0" allowfullscreen="" title="Publicação incorporada"></iframe>
