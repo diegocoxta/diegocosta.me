@@ -7,7 +7,7 @@ import PageTitle from '~/components/PageTitle';
 export default function NotFoundPage(): React.ReactElement {
   return (
     <Container>
-      <Metatags title="Não encontrado" />
+      <Metatags title="Não encontrado - Diego Costa" />
       <PageTitle>Não encontrado</PageTitle>
       <p>You just hit a route that doesn&#39;t exist... the sadness.</p>
     </Container>

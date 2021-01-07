@@ -11,14 +11,13 @@ const siteMetadata = {
     { link: 'https://slides.com/diegocosta', label: 'slides' },
     { link: 'mailto:diego@diegocosta.com.br', label: 'e-mail' },
   ],
+  language: 'en',
+  repository: 'https://github.com/diegocosta/diegocosta.me',
+  image: 'https://repository-images.githubusercontent.com/278878641/3756a080-d995-11ea-9b9f-f91a4448af98',
 };
 
 module.exports = {
-  siteMetadata: {
-    language: 'en',
-    repository: 'https://github.com/diegocosta/diegocosta.me',
-    ...siteMetadata,
-  },
+  siteMetadata,
   plugins: [
     'gatsby-plugin-graphql-codegen',
     'gatsby-plugin-styled-components',

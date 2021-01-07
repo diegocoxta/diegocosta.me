@@ -17,9 +17,15 @@ export default function Tags({ data, pageContext }: TagsPageProps): React.ReactE
   const {
     articles: { edges },
   } = data;
+
+  const languages: { [key: string]: string } = {
+    pt: 'Publicações em Português',
+    en: 'Posts in English',
+  };
+
   return (
     <Container>
-      <Metatags title={`Publicações em ${pageContext.lang}`} />
+      <Metatags title={`${languages[pageContext.lang as string]} - Diego Costa`} />
       {edges.map(({ node: { frontmatter, fields, excerpt } }, index) => (
         <Article key={`article-${index}`} data-testid="languages-page-article">
           <ArticleHeader

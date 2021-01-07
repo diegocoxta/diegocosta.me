@@ -6,6 +6,7 @@ export interface MetatagsProps {
   description: string;
   author: string;
   lang: string;
+  image: string;
 }
 
 export default function Metatags(props: MetatagsProps): React.ReactElement {
@@ -15,35 +16,39 @@ export default function Metatags(props: MetatagsProps): React.ReactElement {
       title={props.title}
       meta={[
         {
-          name: `description`,
+          name: 'description',
           content: props.description,
         },
         {
-          property: `og:title`,
+          property: 'og:title',
           content: props.title,
         },
         {
-          property: `og:description`,
+          property: 'og:description',
           content: props.description,
         },
         {
-          property: `og:type`,
-          content: `website`,
+          property: 'og:image',
+          content: props.image,
         },
         {
-          name: `twitter:card`,
-          content: `summary`,
+          property: 'og:type',
+          content: 'website',
         },
         {
-          name: `twitter:creator`,
+          name: 'twitter:card',
+          content: 'summary',
+        },
+        {
+          name: 'twitter:creator',
           content: props.author,
         },
         {
-          name: `twitter:title`,
+          name: 'twitter:title',
           content: props.title,
         },
         {
-          name: `twitter:description`,
+          name: 'twitter:description',
           content: props.description,
         },
       ]}

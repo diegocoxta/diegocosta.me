@@ -18,10 +18,10 @@ export default function ArticlePage({ data }: ArticlePageProps): React.ReactElem
 
   return (
     <Container small={true}>
-      <Metatags title={title ?? ''} description={description || excerpt || ''} />
+      <Metatags title={`${title} - Diego Costa`} description={description || excerpt || ''} />
       <Article>
         <ArticleHeader
-          title={title ?? ''}
+          title={`${title} - Diego Costa`}
           date={date}
           tags={tags as string[]}
           readingTime={fields?.readingTime?.minutes ?? 0}
