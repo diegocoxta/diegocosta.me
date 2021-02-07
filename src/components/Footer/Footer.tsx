@@ -59,7 +59,7 @@ export default function Footer(props: FooterProps): React.ReactElement {
     <Container>
       <Navigation />
       <Content>
-        <Label>© {props.year}, built with </Label>
+        <Label>CC-BY {props.year}, built with </Label>
         <Link href="https://gatsbyjs.org">gatsby</Link>
         <Label> • </Label>
         {props.repository && <Link href={props.repository}>source code</Link>}
