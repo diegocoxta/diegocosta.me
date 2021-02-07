@@ -22,5 +22,5 @@ export default (): React.ReactElement => {
 
   const year = new Date().getFullYear();
 
-  return <Footer repository={repository} year={`2015-${year}`} />;
+  return <Footer repository={repository} year={year} />;
 };

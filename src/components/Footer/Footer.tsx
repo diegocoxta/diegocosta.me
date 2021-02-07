@@ -32,6 +32,7 @@ const Content = styled.div`
 
 const Label = styled.span`
   color: ${({ theme }) => theme.textColor};
+  line-height: 1.5;
 `;
 
 const Link = styled.a.attrs({
