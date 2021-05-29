@@ -9,7 +9,7 @@ exports[`<NotFoundPage> should render properly 1`] = `
 
 .c2 {
   font-size: 22px;
-  background: #CA222B;
+  background: #1FB651;
   display: inline;
   padding: 5px;
 }
