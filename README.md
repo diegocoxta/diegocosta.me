@@ -11,7 +11,7 @@ My personal blog powered by gatsby, typescript and styled-components.
 
 ## :clipboard: Requirements
 
-This project requires [Node.js 10.13.0 (LTS)](https://nodejs.org/en/) or higher and [yarn](https://yarnpkg.com/) as package manager.
+This project requires [Node.js 12.13.0](https://nodejs.org/en/) or higher and [yarn](https://yarnpkg.com/) as package manager.
 
 ## :keyboard: Developing
 
