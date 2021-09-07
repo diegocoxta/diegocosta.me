@@ -21,7 +21,7 @@ export default function ArticlePage({ data }: ArticlePageProps): React.ReactElem
       <Metatags title={`${title} - Diego Costa`} description={description || excerpt || ''} />
       <Article>
         <ArticleHeader
-          title={title}
+          title={title ?? ''}
           date={date}
           tags={tags as string[]}
           readingTime={fields?.readingTime?.minutes ?? 0}

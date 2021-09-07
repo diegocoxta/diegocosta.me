@@ -15,9 +15,11 @@ const Wrapper = styled.section`
   padding: 20px;
 `;
 
-const GlobalStyle = createGlobalStyle`
+type CustomTheme = typeof dark;
+
+const GlobalStyle = createGlobalStyle<{ theme: CustomTheme }>`
   body {
-    background: ${({ theme }: any) => theme.backgroundColor};
+    background: ${({ theme }) => theme.backgroundColor};
     font-family: 'Raleway', sans-serif;
     color: #fff;
   }
