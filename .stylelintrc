@@ -1,9 +1,6 @@
 {
   "processors": ["stylelint-processor-styled-components"],
-  "extends": [
-    "stylelint-config-recommended",
-    "stylelint-config-styled-components"
-  ],
+  "extends": ["stylelint-config-recommended", "stylelint-config-styled-components"],
   "rules": {
     "block-no-empty": null,
     "color-no-invalid-hex": true,
@@ -13,14 +10,20 @@
         "ignoreProperties": ["/^shadow-/", "/^margin-/", "/^padding-/"]
       }
     ],
-    "comment-empty-line-before": [ "always", {
-      "ignore": ["stylelint-commands", "after-comment"]
-    } ],
+    "comment-empty-line-before": [
+      "always",
+      {
+        "ignore": ["stylelint-commands", "after-comment"]
+      }
+    ],
     "declaration-colon-space-after": "always",
     "max-empty-lines": 2,
-    "rule-empty-line-before": [ "always", {
-      "except": ["first-nested"],
-      "ignore": ["after-comment"]
-    } ]
+    "rule-empty-line-before": [
+      "always",
+      {
+        "except": ["first-nested"],
+        "ignore": ["after-comment"]
+      }
+    ]
   }
 }

@@ -102,7 +102,8 @@ export default function Search({ articles, combobox }: SearchProps): React.React
               key={article.item.id}
               data-testid="search-results-link"
               to={`/${article?.item?.frontmatter?.lang}${article?.item?.fields?.slug}`}
-              {...combobox.getItemProps({ index, item: article })}>
+              {...combobox.getItemProps({ index, item: article })}
+            >
               <ResultItemTitle data-testid="search-results-title">
                 {article.item.frontmatter?.title ?? ''}
               </ResultItemTitle>
