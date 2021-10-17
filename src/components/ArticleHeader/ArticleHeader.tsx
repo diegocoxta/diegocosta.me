@@ -99,9 +99,8 @@ export default function ArticleHeader(props: ArticleHeaderProps): React.ReactEle
         )}
       </Title>
       <Details>
-        <span>{props.date}</span> ·{' '}
         <span>
-          {readingTime} {texts.ofReading}
+          {props.date} · {readingTime} {texts.ofReading}
         </span>
       </Details>
       {Tags}
