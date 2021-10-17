@@ -1,15 +1,24 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { navigate } from 'gatsby';
 
-import Container from '~/components/Container';
+import Page from '~/components/Page';
+import Divisor from '~/components/Divisor';
 import Metatags from '~/components/Metatags';
 import PageTitle from '~/components/PageTitle';
+import Container from '~/components/Container';
 
 export default function NotFoundPage(): React.ReactElement {
+  useEffect(() => {
+    navigate('/'); // redirecting to home page
+  }, []);
+
   return (
-    <Container>
+    <Page>
       <Metatags title="Não encontrado - Diego Costa" />
-      <PageTitle>Não encontrado</PageTitle>
-      <p>You just hit a route that doesn&#39;t exist... the sadness.</p>
-    </Container>
+      <Divisor />
+      <Container>
+        <PageTitle>Não encontrado</PageTitle>
+      </Container>
+    </Page>
   );
 }

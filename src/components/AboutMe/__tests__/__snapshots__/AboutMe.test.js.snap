@@ -1,0 +1,50 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<AboutMe /> should render properly 1`] = `
+.c0 {
+  max-width: 800px;
+  margin: 16px auto;
+}
+
+.c2 {
+  font-size: 24px;
+  line-height: 1.4;
+}
+
+.c1 {
+  padding-bottom: 40px;
+}
+
+<body>
+  <div>
+    <section
+      class="c0"
+    >
+      <main>
+        <div
+          class="c1"
+        >
+          <p
+            class="c2"
+          >
+            A passionate tech manager who loves the intersection of computers and people, I spend my days trying to help tech teams deliver their max potential.
+          </p>
+          <p
+            class="c2"
+          >
+            Currently at Nubank, I am working to simplify our users' relationship with their financial lives by providing a simple but powerful mobile experience.
+          </p>
+          <p
+            class="c2"
+          >
+            You can hear more about here:
+          </p>
+          <p>
+            Navigation
+          </p>
+        </div>
+      </main>
+    </section>
+  </div>
+</body>
+`;

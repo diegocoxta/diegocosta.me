@@ -1,10 +1,13 @@
 import React from 'react';
 import { graphql, PageRendererProps } from 'gatsby';
 
-import Container from '~/components/Container';
+import Page from '~/components/Page';
+import Divisor from '~/components/Divisor';
 import Metatags from '~/components/Metatags';
 import ArticleHeader from '~/components/ArticleHeader';
 import Article from '~/components/Article';
+import Container from '~/components/Container';
+import PageTitle from '~/components/PageTitle';
 
 import { LanguagePageQuery, SitePageContext } from '~/../graphql-types';
 
@@ -23,23 +26,29 @@ export default function Tags({ data, pageContext }: TagsPageProps): React.ReactE
     en: 'Posts in English',
   };
 
+  const currentTitle = languages[pageContext.lang as string];
+
   return (
-    <Container>
-      <Metatags title={`${languages[pageContext.lang as string]} - Diego Costa`} />
-      {edges.map(({ node: { frontmatter, fields, excerpt } }, index) => (
-        <Article key={`article-${index}`} data-testid="languages-page-article">
-          <ArticleHeader
-            title={frontmatter?.title ?? ''}
-            tags={frontmatter?.tags as string[]}
-            date={frontmatter?.date}
-            url={fields?.slug}
-            lang={frontmatter?.lang}
-            readingTime={fields?.readingTime?.minutes ?? 0}
-          />
-          {frontmatter?.description || excerpt}
-        </Article>
-      ))}
-    </Container>
+    <Page>
+      <Metatags title={`${currentTitle} - Diego Costa`} />
+      <Divisor />
+      <Container>
+        <PageTitle>{currentTitle}</PageTitle>
+        {edges.map(({ node: { frontmatter, fields, excerpt } }, index) => (
+          <Article key={`article-${index}`} data-testid="languages-page-article">
+            <ArticleHeader
+              title={frontmatter?.title ?? ''}
+              tags={frontmatter?.tags as string[]}
+              date={frontmatter?.date}
+              url={fields?.slug}
+              lang={frontmatter?.lang}
+              readingTime={fields?.readingTime?.minutes ?? 0}
+            />
+            {frontmatter?.description || excerpt}
+          </Article>
+        ))}
+      </Container>
+    </Page>
   );
 }
 

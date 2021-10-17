@@ -3,7 +3,12 @@
 exports[`<Header /> should not render the last name 1`] = `
 <body>
   .c0 {
-  margin-bottom: 40px;
+  max-width: 800px;
+  margin: 16px auto;
+}
+
+.c1 {
+  margin: 16px 0 40px 0;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -18,29 +23,28 @@ exports[`<Header /> should not render the last name 1`] = `
   align-items: center;
 }
 
-.c0 nav {
+.c1 nav {
   margin-top: 10px;
   display: none;
 }
 
-.c2 {
-  font-size: 8vw;
+.c3 {
+  font-size: 15vw;
   font-weight: 700;
   text-transform: lowercase;
 }
 
-.c1 {
+.c2 {
   -webkit-text-decoration: none;
   text-decoration: none;
   box-shadow: none;
 }
 
-.c1:focus {
-  border-bottom: 1px solid;
+.c2:focus {
   outline: none;
 }
 
-.c3 {
+.c4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -56,49 +60,63 @@ exports[`<Header /> should not render the last name 1`] = `
 }
 
 @media (min-width:760px) {
-  .c0 nav {
+  .c1 nav {
     display: block;
   }
 }
 
 @media (min-width:760px) {
-  .c2 {
-    font-size: 34px;
+  .c1 {
+    margin: 100px 0 0px 0;
+  }
+}
+
+@media (min-width:760px) {
+  .c3 {
+    font-size: 100px;
   }
 }
 
 <div>
-    <header
+    <section
       class="c0"
     >
-      <a
-        class="c1"
-        href="/"
-      >
-        <span
-          class="c2"
+      <main>
+        <header
+          class="c1"
         >
-          John
-        </span>
-      </a>
-      <div
-        class="c3"
-      >
-        <p>
-          Navigation
-        </p>
-        <p>
-          ThemeSwitcher
-        </p>
-      </div>
-    </header>
+          <a
+            class="c2"
+            href="/"
+          >
+            <span
+              class="c3"
+            >
+              John
+            </span>
+          </a>
+          <div
+            class="c4"
+          >
+            <p>
+              ThemeSwitcher
+            </p>
+          </div>
+        </header>
+      </main>
+    </section>
   </div>
 </body>
 `;
 
 exports[`<Header /> should render properly 1`] = `
 .c0 {
-  margin-bottom: 40px;
+  max-width: 800px;
+  margin: 16px auto;
+}
+
+.c1 {
+  margin: 16px 0 40px 0;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -113,29 +131,28 @@ exports[`<Header /> should render properly 1`] = `
   align-items: center;
 }
 
-.c0 nav {
+.c1 nav {
   margin-top: 10px;
   display: none;
 }
 
-.c2 {
+.c3 {
   font-size: 15vw;
   font-weight: 700;
   text-transform: lowercase;
 }
 
-.c1 {
+.c2 {
   -webkit-text-decoration: none;
   text-decoration: none;
   box-shadow: none;
 }
 
-.c1:focus {
-  border-bottom: 1px solid;
+.c2:focus {
   outline: none;
 }
 
-.c3 {
+.c4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -151,50 +168,59 @@ exports[`<Header /> should render properly 1`] = `
 }
 
 @media (min-width:760px) {
-  .c0 nav {
+  .c1 nav {
     display: block;
   }
 }
 
 @media (min-width:760px) {
-  .c2 {
-    font-size: 80px;
+  .c1 {
+    margin: 100px 0 0px 0;
+  }
+}
+
+@media (min-width:760px) {
+  .c3 {
+    font-size: 100px;
   }
 }
 
 <body>
   <div>
-    <header
+    <section
       class="c0"
     >
-      <a
-        class="c1"
-        href="/"
-      >
-        <span
-          class="c2"
+      <main>
+        <header
+          class="c1"
         >
-          John
-          <span
-            class=""
-            data-testid="header-lastname"
+          <a
+            class="c2"
+            href="/"
           >
-            D
-            .
-          </span>
-        </span>
-      </a>
-      <div
-        class="c3"
-      >
-        <p>
-          Navigation
-        </p>
-        <p>
-          ThemeSwitcher
-        </p>
-      </div>
-    </header>
+            <span
+              class="c3"
+            >
+              John
+              <span
+                class=""
+                data-testid="header-lastname"
+              >
+                D
+                .
+              </span>
+            </span>
+          </a>
+          <div
+            class="c4"
+          >
+            <p>
+              ThemeSwitcher
+            </p>
+          </div>
+        </header>
+      </main>
+    </section>
   </div>
 </body>
 `;

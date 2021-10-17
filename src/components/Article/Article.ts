@@ -12,7 +12,7 @@ export const Content = styled.section`
   a {
     color: ${({ theme }) => theme.accentColor};
     text-decoration: none;
-    border-bottom: 1px solid #0b0c0d;
+    border-bottom: 1px solid ${({ theme }) => theme.backgroundColor};
 
     :hover,
     :focus {
@@ -33,12 +33,13 @@ export const Content = styled.section`
   pre[class*='language-'],
   code[class*='language-'],
   .gatsby-highlight {
-    background-color: #0b0c0d;
+    background-color: ${({ theme }) => theme.backgroundColor};
+    font-family: monospace;
   }
 
   .line-numbers-rows,
   .line-numbers-rows span::before {
-    border: 0.5px solid #0b0c0d;
+    border: 0.5px solid ${({ theme }) => theme.backgroundColor};
   }
 
   img {

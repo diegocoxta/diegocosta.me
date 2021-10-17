@@ -1,38 +1,42 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const Container = styled.nav`
-  @media (min-width: 750px) {
-    width: 400px;
-  }
-`;
+const Container = styled.nav``;
 
 const List = styled.ul`
   margin: 0;
   display: flex;
   padding: 0;
-  justify-content: space-between;
 `;
 
 const Item = styled.li`
   list-style: none;
   font-size: 16px;
-  font-weight: 700;
+  font-weight: 900;
+  margin: 0 24px 0 0;
 
   @media (min-width: 760px) {
-    font-size: 18px;
+    font-size: 20px;
   }
 `;
 
 const Link = styled.a`
   text-decoration: none;
-  color: ${({ theme }) => theme.accentColor};
-  display: block;
+  color: ${({ theme }) => theme.textColor};
+  display: flex;
   padding: 0;
-  border-bottom: 1px solid transparent;
+  text-transform: uppercase;
 
-  :hover {
-    border-bottom: 1px solid ${({ theme }) => theme.accentColor};
+  :after {
+    content: '.';
+    display: block;
+    color: ${({ theme }) => theme.backgroundColor};
+    font-size: 38px;
+    line-height: 0.3;
+  }
+
+  :hover:after {
+    color: ${({ theme }) => theme.textColor};
   }
 `;
 

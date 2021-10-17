@@ -2,15 +2,8 @@
 
 exports[`<Container /> should render properly 1`] = `
 .c0 {
-  margin: auto;
   max-width: 800px;
-  padding: 20px;
-}
-
-@media (min-width:760px) {
-  .c1 {
-    display: none;
-  }
+  margin: 16px auto;
 }
 
 <body>
@@ -18,25 +11,9 @@ exports[`<Container /> should render properly 1`] = `
     <section
       class="c0"
     >
-      <p>
-        Header
-      </p>
-      <div
-        class="c1"
-      >
-        <p>
-          Navigation
-        </p>
-      </div>
-      <p>
-        Search
-      </p>
       <main>
         John Doe
       </main>
-      <p>
-        Footer
-      </p>
     </section>
   </div>
 </body>

@@ -1,24 +1,24 @@
 import React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 
-import Header from './Header';
+import AboutMe from './AboutMe';
 
 export default (): React.ReactElement => {
   const {
     site: {
-      siteMetadata: { author },
+      siteMetadata: { aboutMe },
     },
   } = useStaticQuery(
     graphql`
       query {
         site {
           siteMetadata {
-            author
+            aboutMe
           }
         }
       }
     `
   );
 
-  return <Header author={author} />;
+  return <AboutMe paragraphs={aboutMe} />;
 };

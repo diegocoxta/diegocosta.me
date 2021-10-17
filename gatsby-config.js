@@ -1,15 +1,20 @@
 const siteMetadata = {
-  title: 'Diego Costa - Tech Manager e Engenheiro de Software',
+  title: 'Diego Costa - Software Engineer, Engineering Tech Manager',
   author: 'Diego Costa',
   description:
     'Engenheiro de software e Tech Manager apaixonado por construir produtos que impactem a vida das pessoas.',
+  aboutMe: [
+    'A passionate tech manager who loves the intersection of computers and people, I spend my days trying to help tech teams deliver their max potential.',
+    "Currently at Nubank, I am working to simplify our users' relationship with their financial lives by providing a simple but powerful mobile experience.",
+    'You can hear more about here:',
+  ],
   siteUrl: 'https://diegocosta.me',
   contacts: [
     { link: 'https://linkedin.com/in/diegoscosta', label: 'linkedin' },
     { link: 'https://github.com/diegocosta', label: 'github' },
-    { link: 'https://twitter.com/diegocoxta', label: 'twitter' },
     { link: 'https://slides.com/diegocosta', label: 'slides' },
-    { link: 'mailto:diego@diegocosta.com.br', label: 'e-mail' },
+    { link: 'https://twitter.com/diegocoxta', label: 'twitter' },
+    { link: 'mailto:diego@diegocosta.me', label: 'e-mail' },
   ],
   language: 'en',
   repository: 'https://github.com/diegocosta/diegocosta.me',
@@ -19,12 +24,17 @@ const siteMetadata = {
 module.exports = {
   siteMetadata,
   plugins: [
-    'gatsby-plugin-graphql-codegen',
+    {
+      resolve: 'gatsby-plugin-graphql-codegen',
+      options: {
+        codegen: true,
+      },
+    },
     'gatsby-plugin-styled-components',
     {
       resolve: 'gatsby-plugin-google-fonts',
       options: {
-        fonts: ['raleway:400,700'],
+        fonts: ['raleway:400,700,900'],
         display: 'swap',
       },
     },

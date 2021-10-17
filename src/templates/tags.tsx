@@ -1,11 +1,13 @@
 import React from 'react';
 import { graphql, PageRendererProps } from 'gatsby';
 
-import Container from '~/components/Container';
+import Page from '~/components/Page';
+import Divisor from '~/components/Divisor';
 import Metatags from '~/components/Metatags';
 import ArticleHeader from '~/components/ArticleHeader';
 import Article from '~/components/Article';
 import PageTitle from '~/components/PageTitle';
+import Container from '~/components/Container';
 
 import { TagsPageQuery, SitePageContext } from '~/../graphql-types';
 
@@ -19,23 +21,27 @@ export default function Tags({ data, pageContext }: TagsPageProps): React.ReactE
     articles: { edges, totalCount },
   } = data;
   return (
-    <Container>
+    <Page>
       <Metatags title={`Publicações sobre ${pageContext.tag}`} />
-      <PageTitle>{`${pageContext.tag} (${totalCount})`}</PageTitle>
-      {edges.map(({ node: { frontmatter, fields, excerpt } }, index) => (
-        <Article key={`article-${index}`} data-testid="tags-page-article">
-          <ArticleHeader
-            title={frontmatter?.title ?? ''}
-            tags={frontmatter?.tags as string[]}
-            date={frontmatter?.date}
-            url={fields?.slug}
-            lang={frontmatter?.lang}
-            readingTime={fields?.readingTime?.minutes ?? 0}
-          />
-          {frontmatter?.description || excerpt}
-        </Article>
-      ))}
-    </Container>
+      <Divisor />
+      <Container>
+        <PageTitle>{`${pageContext.tag} (${totalCount})`}</PageTitle>
+
+        {edges.map(({ node: { frontmatter, fields, excerpt } }, index) => (
+          <Article key={`article-${index}`} data-testid="tags-page-article">
+            <ArticleHeader
+              title={frontmatter?.title ?? ''}
+              tags={frontmatter?.tags as string[]}
+              date={frontmatter?.date}
+              url={fields?.slug}
+              lang={frontmatter?.lang}
+              readingTime={fields?.readingTime?.minutes ?? 0}
+            />
+            {frontmatter?.description || excerpt}
+          </Article>
+        ))}
+      </Container>
+    </Page>
   );
 }
 

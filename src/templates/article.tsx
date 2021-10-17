@@ -1,10 +1,12 @@
 import React from 'react';
 import { graphql, PageRendererProps } from 'gatsby';
 
-import Container from '~/components/Container';
+import Page from '~/components/Page';
+import Divisor from '~/components/Divisor';
 import Metatags from '~/components/Metatags';
 import ArticleHeader from '~/components/ArticleHeader';
 import Article, { Content } from '~/components/Article';
+import Container from '~/components/Container';
 
 import { ArticlePageQuery } from '~/../graphql-types';
 
@@ -17,19 +19,22 @@ export default function ArticlePage({ data }: ArticlePageProps): React.ReactElem
   const { title, date, tags, lang, description } = frontmatter ?? {};
 
   return (
-    <Container small={true}>
+    <Page>
       <Metatags title={`${title} - Diego Costa`} description={description || excerpt || ''} />
-      <Article>
-        <ArticleHeader
-          title={title ?? ''}
-          date={date}
-          tags={tags as string[]}
-          readingTime={fields?.readingTime?.minutes ?? 0}
-          lang={lang}
-        />
-        <Content dangerouslySetInnerHTML={{ __html: html ?? '' }} />
-      </Article>
-    </Container>
+      <Divisor />
+      <Container>
+        <Article>
+          <ArticleHeader
+            title={title ?? ''}
+            date={date}
+            tags={tags as string[]}
+            readingTime={fields?.readingTime?.minutes ?? 0}
+            lang={lang}
+          />
+          <Content dangerouslySetInnerHTML={{ __html: html ?? '' }} />
+        </Article>
+      </Container>
+    </Page>
   );
 }
 

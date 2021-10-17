@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Divisor /> should render properly 1`] = `
+.c0 {
+  background: linear-gradient(90deg,20px,transparent 1%) center, linear-gradient( 20px,transparent 1%) center,;
+  background-size: 22px 22px;
+  height: 120px;
+  margin-top: 40px;
+}
+
+<body>
+  <div>
+    <div
+      class="c0"
+    />
+  </div>
+</body>
+`;

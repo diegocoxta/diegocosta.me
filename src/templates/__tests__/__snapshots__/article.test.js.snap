@@ -1,0 +1,102 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ArticlePage> should render properly 1`] = `
+.c0 {
+  background: linear-gradient(90deg,#0C0D0E 20px,transparent 1%) center, linear-gradient(#0C0D0E 20px,transparent 1%) center, #FFFFFF;
+  background-size: 22px 22px;
+  height: 120px;
+  margin-top: 40px;
+}
+
+.c2 {
+  margin: 0 0 60px 0;
+  font-weight: 400;
+  color: #FFFFFF;
+}
+
+.c3 {
+  line-height: 1.5;
+}
+
+.c3 a {
+  color: #383F27;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  border-bottom: 1px solid #0C0D0E;
+}
+
+.c3 a:hover,
+.c3 a:focus {
+  border-bottom: 1px solid #383F27;
+  outline: none;
+}
+
+.c3 blockquote {
+  border-left: 5px solid #383F27;
+  padding-left: 20px;
+}
+
+.c3 .gatsby-highlight {
+  padding: 10px 0;
+}
+
+.c3 pre[class*='language-'],
+.c3 code[class*='language-'],
+.c3 .gatsby-highlight {
+  background-color: #0C0D0E;
+  font-family: monospace;
+}
+
+.c3 .line-numbers-rows,
+.c3 .line-numbers-rows span::before {
+  border: 0.5px solid #0C0D0E;
+}
+
+.c3 img {
+  box-shadow: none !important;
+}
+
+.c1 {
+  max-width: 800px;
+  margin: 16px auto;
+}
+
+<body>
+  <div>
+    <p>
+      Header
+    </p>
+    <main>
+      <p>
+        Metatags
+      </p>
+      <div
+        class="c0"
+      />
+      <section
+        class="c1"
+      >
+        <main>
+          <article
+            class="c2"
+          >
+            <p>
+              ArticleHeader
+            </p>
+            <section
+              class="c3"
+            >
+              <p>
+                Post content
+              </p>
+            </section>
+          </article>
+        </main>
+      </section>
+    </main>
+    <p>
+      Footer
+    </p>
+  </div>
+</body>
+`;
