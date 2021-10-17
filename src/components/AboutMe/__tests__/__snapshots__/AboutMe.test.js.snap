@@ -3,18 +3,13 @@
 exports[`<AboutMe /> should render properly 1`] = `
 .c0 {
   max-width: 800px;
-  margin: 16px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
 .c2 {
   font-size: 18px;
   line-height: 1.4;
-}
-
-@media (min-width:760px) {
-  .c0 {
-    margin: 16px auto;
-  }
 }
 
 @media (min-width:760px) {

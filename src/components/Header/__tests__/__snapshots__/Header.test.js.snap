@@ -4,7 +4,8 @@ exports[`<Header /> should not render the last name 1`] = `
 <body>
   .c0 {
   max-width: 800px;
-  margin: 16px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
 .c1 {
@@ -57,12 +58,6 @@ exports[`<Header /> should not render the last name 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-}
-
-@media (min-width:760px) {
-  .c0 {
-    margin: 16px auto;
-  }
 }
 
 @media (min-width:760px) {
@@ -118,7 +113,8 @@ exports[`<Header /> should not render the last name 1`] = `
 exports[`<Header /> should render properly 1`] = `
 .c0 {
   max-width: 800px;
-  margin: 16px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
 .c1 {
@@ -171,12 +167,6 @@ exports[`<Header /> should render properly 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-}
-
-@media (min-width:760px) {
-  .c0 {
-    margin: 16px auto;
-  }
 }
 
 @media (min-width:760px) {

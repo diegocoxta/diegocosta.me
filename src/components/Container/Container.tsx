@@ -3,11 +3,8 @@ import styled from 'styled-components';
 
 const Wrapper = styled.section`
   max-width: 800px;
-  margin: 16px;
-
-  @media (min-width: 760px) {
-    margin: 16px auto;
-  }
+  margin: 0 auto;
+  padding: 0 20px;
 `;
 
 export interface ContainerProps {
