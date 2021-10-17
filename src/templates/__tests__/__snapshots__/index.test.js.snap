@@ -16,7 +16,13 @@ exports[`<IndexPage> should render properly 1`] = `
 
 .c1 {
   max-width: 800px;
-  margin: 16px auto;
+  margin: 16px;
+}
+
+@media (min-width:760px) {
+  .c1 {
+    margin: 16px auto;
+  }
 }
 
 <body>

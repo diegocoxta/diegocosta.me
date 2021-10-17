@@ -3,18 +3,14 @@
 exports[`<Navigation /> should render properly 1`] = `
 .c0 {
   margin: 0;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
   padding: 0;
 }
 
 .c1 {
   list-style: none;
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 900;
-  margin: 0 24px 0 0;
+  margin: 0 24px 5px 0;
 }
 
 .c2 {
@@ -32,12 +28,28 @@ exports[`<Navigation /> should render properly 1`] = `
   content: '.';
   display: block;
   font-size: 38px;
-  line-height: 0.3;
+  line-height: 0.2;
+}
+
+@media (min-width:760px) {
+  .c0 {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+  }
 }
 
 @media (min-width:760px) {
   .c1 {
     font-size: 20px;
+    margin: 0 24px 0 0;
+  }
+}
+
+@media (min-width:760px) {
+  .c2:after {
+    line-height: 0.3;
   }
 }
 
