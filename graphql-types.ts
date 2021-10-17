@@ -422,8 +422,6 @@ export type SitePluginPluginOptions = {
   enableWebVitalsTracking?: Maybe<Scalars['Boolean']>;
   short_name?: Maybe<Scalars['String']>;
   start_url?: Maybe<Scalars['String']>;
-  background_color?: Maybe<Scalars['String']>;
-  theme_color?: Maybe<Scalars['String']>;
   icon?: Maybe<Scalars['String']>;
   legacy?: Maybe<Scalars['Boolean']>;
   theme_color_in_head?: Maybe<Scalars['Boolean']>;
@@ -2663,8 +2661,6 @@ export type SitePluginPluginOptionsFilterInput = {
   enableWebVitalsTracking?: Maybe<BooleanQueryOperatorInput>;
   short_name?: Maybe<StringQueryOperatorInput>;
   start_url?: Maybe<StringQueryOperatorInput>;
-  background_color?: Maybe<StringQueryOperatorInput>;
-  theme_color?: Maybe<StringQueryOperatorInput>;
   icon?: Maybe<StringQueryOperatorInput>;
   legacy?: Maybe<BooleanQueryOperatorInput>;
   theme_color_in_head?: Maybe<BooleanQueryOperatorInput>;
@@ -2959,8 +2955,6 @@ export type SitePageFieldsEnum =
   | 'pluginCreator___pluginOptions___enableWebVitalsTracking'
   | 'pluginCreator___pluginOptions___short_name'
   | 'pluginCreator___pluginOptions___start_url'
-  | 'pluginCreator___pluginOptions___background_color'
-  | 'pluginCreator___pluginOptions___theme_color'
   | 'pluginCreator___pluginOptions___icon'
   | 'pluginCreator___pluginOptions___legacy'
   | 'pluginCreator___pluginOptions___theme_color_in_head'
@@ -3210,8 +3204,6 @@ export type SitePluginFieldsEnum =
   | 'pluginOptions___enableWebVitalsTracking'
   | 'pluginOptions___short_name'
   | 'pluginOptions___start_url'
-  | 'pluginOptions___background_color'
-  | 'pluginOptions___theme_color'
   | 'pluginOptions___icon'
   | 'pluginOptions___legacy'
   | 'pluginOptions___theme_color_in_head'

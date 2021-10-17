@@ -19,7 +19,7 @@ exports[`<ArticlePage> should render properly 1`] = `
 }
 
 .c3 a {
-  color: #383F27;
+  color: #424833;
   -webkit-text-decoration: none;
   text-decoration: none;
   border-bottom: 1px solid #0C0D0E;
@@ -27,12 +27,12 @@ exports[`<ArticlePage> should render properly 1`] = `
 
 .c3 a:hover,
 .c3 a:focus {
-  border-bottom: 1px solid #383F27;
+  border-bottom: 1px solid #424833;
   outline: none;
 }
 
 .c3 blockquote {
-  border-left: 5px solid #383F27;
+  border-left: 5px solid #424833;
   padding-left: 20px;
 }
 
@@ -59,13 +59,8 @@ exports[`<ArticlePage> should render properly 1`] = `
 
 .c1 {
   max-width: 800px;
-  margin: 16px;
-}
-
-@media (min-width:760px) {
-  .c1 {
-    margin: 16px auto;
-  }
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
 <body>

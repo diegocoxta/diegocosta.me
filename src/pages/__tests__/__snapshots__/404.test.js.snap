@@ -10,20 +10,15 @@ exports[`<NotFoundPage> should render properly 1`] = `
 
 .c2 {
   font-size: 22px;
-  background: #383F27;
+  background: #424833;
   display: inline;
   padding: 5px;
 }
 
 .c1 {
   max-width: 800px;
-  margin: 16px;
-}
-
-@media (min-width:760px) {
-  .c1 {
-    margin: 16px auto;
-  }
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
 <body>

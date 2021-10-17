@@ -3,13 +3,8 @@
 exports[`<Container /> should render properly 1`] = `
 .c0 {
   max-width: 800px;
-  margin: 16px;
-}
-
-@media (min-width:760px) {
-  .c0 {
-    margin: 16px auto;
-  }
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
 <body>

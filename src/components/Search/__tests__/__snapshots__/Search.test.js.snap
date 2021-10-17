@@ -3,7 +3,8 @@
 exports[`<Search /> should render properly 1`] = `
 .c0 {
   max-width: 800px;
-  margin: 16px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
 .c1 {
@@ -112,12 +113,6 @@ exports[`<Search /> should render properly 1`] = `
   margin: 0%;
 }
 
-@media (min-width:760px) {
-  .c0 {
-    margin: 16px auto;
-  }
-}
-
 <body>
   <div>
     <section
@@ -208,7 +203,8 @@ exports[`<Search /> should render properly with results closed 1`] = `
 <body>
   .c0 {
   max-width: 800px;
-  margin: 16px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
 .c1 {
@@ -291,12 +287,6 @@ exports[`<Search /> should render properly with results closed 1`] = `
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
   box-shadow: 0 3px 8px 0 rgba(0,0,0,0.1);
-}
-
-@media (min-width:760px) {
-  .c0 {
-    margin: 16px auto;
-  }
 }
 
 <div>

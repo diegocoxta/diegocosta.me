@@ -16,20 +16,15 @@ exports[`<LanguagesPage> should render properly 1`] = `
 
 .c1 {
   max-width: 800px;
-  margin: 16px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
 .c2 {
   font-size: 22px;
-  background: #383F27;
+  background: #424833;
   display: inline;
   padding: 5px;
-}
-
-@media (min-width:760px) {
-  .c1 {
-    margin: 16px auto;
-  }
 }
 
 <body>

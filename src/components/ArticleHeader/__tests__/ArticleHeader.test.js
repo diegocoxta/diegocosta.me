@@ -16,8 +16,7 @@ describe('<ArticleHeader />', () => {
       />
     );
     expect(getByText('Awesome Article')).toBeTruthy();
-    expect(getByText('20/07/2020')).toBeTruthy();
-    expect(getByText('5 minutes of reading')).toBeTruthy();
+    expect(getByText('20/07/2020 · 5 minutes of reading')).toBeTruthy();
     expect(getByTestId('article-header-custom-link').href).toBe('http://localhost/en/awesome-article');
     expect(getByTestId('article-header-tags')).toBeTruthy();
     expect(getAllByTestId('article-header-tag').length).toEqual(2);
@@ -30,7 +29,7 @@ describe('<ArticleHeader />', () => {
     );
 
     expect(queryByTestId('article-header-tags')).toBeFalsy();
-    expect(getByText('5 minutos de leitura')).toBeTruthy();
+    expect(getByText('20/07/2020 · 5 minutos de leitura')).toBeTruthy();
     expect(queryAllByTestId('article-header-tag').length).toEqual(0);
     expect(baseElement).toMatchSnapshot();
   });
@@ -49,7 +48,7 @@ describe('<ArticleHeader />', () => {
       <ArticleHeader title="Awesome Article" url="/awesome-article" readingTime={5} lang="pt" date="20/07/2020" />
     );
 
-    expect(getByText('5 minutos de leitura')).toBeTruthy();
+    expect(getByText('20/07/2020 · 5 minutos de leitura')).toBeTruthy();
     expect(baseElement).toMatchSnapshot();
   });
 
