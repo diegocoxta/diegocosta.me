@@ -48,6 +48,7 @@ exports[`<Content /> should render properly 1`] = `
 .c0 code[class*='language-'],
 .c0 .gatsby-highlight {
   font-family: monospace;
+  white-space: pre-wrap;
 }
 
 .c0 .line-numbers-rows,

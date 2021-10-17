@@ -5,13 +5,19 @@ import Container from '~/components/Container';
 import Navigation from '~/components/Navigation';
 
 const Paragraph = styled.p`
-  font-size: 24px;
+  font-size: 18px;
   line-height: 1.4;
   color: ${({ theme }) => theme.textColor};
+
+  @media (min-width: 760px) {
+    font-size: 24px;
+  }
 `;
 
 const Content = styled.div`
-  padding-bottom: 40px;
+  @media (min-width: 760px) {
+    padding-bottom: 40px;
+  }
 `;
 
 interface AboutMeProps {

@@ -5,18 +5,22 @@ const Container = styled.nav``;
 
 const List = styled.ul`
   margin: 0;
-  display: flex;
   padding: 0;
+
+  @media (min-width: 760px) {
+    display: flex;
+  }
 `;
 
 const Item = styled.li`
   list-style: none;
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 900;
-  margin: 0 24px 0 0;
+  margin: 0 24px 5px 0;
 
   @media (min-width: 760px) {
     font-size: 20px;
+    margin: 0 24px 0 0;
   }
 `;
 
@@ -32,7 +36,11 @@ const Link = styled.a`
     display: block;
     color: ${({ theme }) => theme.backgroundColor};
     font-size: 38px;
-    line-height: 0.3;
+    line-height: 0.2;
+
+    @media (min-width: 760px) {
+      line-height: 0.3;
+    }
   }
 
   :hover:after {

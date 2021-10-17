@@ -35,6 +35,7 @@ export const Content = styled.section`
   .gatsby-highlight {
     background-color: ${({ theme }) => theme.backgroundColor};
     font-family: monospace;
+    white-space: pre-wrap;
   }
 
   .line-numbers-rows,

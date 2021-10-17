@@ -1,3 +1,5 @@
+const theme = require('./src/themes/dark');
+
 const siteMetadata = {
   title: 'Diego Costa - Software Engineer, Engineering Tech Manager',
   author: 'Diego Costa',
@@ -96,8 +98,6 @@ module.exports = {
         name: siteMetadata.title,
         short_name: siteMetadata.author,
         start_url: siteMetadata.siteUrl,
-        background_color: '#0e0f11',
-        theme_color: '#d73738',
         display: 'minimal-ui',
         icon: 'static/icon.png',
       },

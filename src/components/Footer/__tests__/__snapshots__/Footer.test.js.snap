@@ -3,7 +3,7 @@
 exports[`<Footer /> should render properly 1`] = `
 .c0 {
   max-width: 800px;
-  margin: 16px auto;
+  margin: 16px;
 }
 
 .c1 {
@@ -28,6 +28,12 @@ exports[`<Footer /> should render properly 1`] = `
 .c3:focus {
   border-bottom: 1px solid;
   outline: none;
+}
+
+@media (min-width:760px) {
+  .c0 {
+    margin: 16px auto;
+  }
 }
 
 @media (min-width:760px) {
@@ -76,7 +82,7 @@ exports[`<Footer /> should render the repository url if passed 1`] = `
 <body>
   .c0 {
   max-width: 800px;
-  margin: 16px auto;
+  margin: 16px;
 }
 
 .c1 {
@@ -101,6 +107,12 @@ exports[`<Footer /> should render the repository url if passed 1`] = `
 .c3:focus {
   border-bottom: 1px solid;
   outline: none;
+}
+
+@media (min-width:760px) {
+  .c0 {
+    margin: 16px auto;
+  }
 }
 
 @media (min-width:760px) {
