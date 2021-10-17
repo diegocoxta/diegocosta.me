@@ -1,69 +1,70 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<IndexPage> should render properly 1`] = `
-.c0 {
-  margin: auto;
-  max-width: 800px;
-  padding: 20px;
-}
-
 .c2 {
   margin: 0 0 60px 0;
   font-weight: 400;
   color: #FFFFFF;
 }
 
-@media (min-width:760px) {
-  .c1 {
-    display: none;
-  }
+.c0 {
+  background: linear-gradient(90deg,#0C0D0E 20px,transparent 1%) center, linear-gradient(#0C0D0E 20px,transparent 1%) center, #FFFFFF;
+  background-size: 22px 22px;
+  height: 120px;
+  margin-top: 40px;
+}
+
+.c1 {
+  max-width: 800px;
+  margin: 16px auto;
 }
 
 <body>
   <div>
-    <section
-      class="c0"
-    >
+    <p>
+      Header
+    </p>
+    <main>
       <p>
-        Header
+        Metatags
+      </p>
+      <p>
+        AboutMe
       </p>
       <div
-        class="c1"
-      >
-        <p>
-          Navigation
-        </p>
-      </div>
+        class="c0"
+      />
       <p>
         Search
       </p>
-      <main>
-        <p>
-          Metatags
-        </p>
-        <article
-          class="c2"
-          data-testid="index-page-article"
-        >
-          <p>
-            ArticleHeader
-          </p>
-          Awesome first article
-        </article>
-        <article
-          class="c2"
-          data-testid="index-page-article"
-        >
-          <p>
-            ArticleHeader
-          </p>
-          Awesome second article
-        </article>
-      </main>
-      <p>
-        Footer
-      </p>
-    </section>
+      <section
+        class="c1"
+      >
+        <main>
+          <article
+            class="c2"
+            data-testid="index-page-article"
+          >
+            <p>
+              ArticleHeader
+            </p>
+            Awesome first article
+          </article>
+          <article
+            class="c2"
+            data-testid="index-page-article"
+          >
+            <p>
+              ArticleHeader
+            </p>
+            Awesome second article
+          </article>
+        </main>
+      </section>
+    </main>
+    <p>
+      Footer
+    </p>
   </div>
 </body>
 `;

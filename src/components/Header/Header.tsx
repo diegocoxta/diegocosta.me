@@ -2,11 +2,11 @@ import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'gatsby';
 
-import Navigation from '~/components/Navigation';
+import Container from '~/components/Container';
 import ThemeSwitcher from '~/components/ThemeSwitcher';
 
-const Container = styled.header`
-  margin-bottom: 40px;
+const Content = styled.header`
+  margin: 16px 0 40px 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -19,16 +19,20 @@ const Container = styled.header`
       display: block;
     }
   }
+
+  @media (min-width: 760px) {
+    margin: 100px 0 0px 0;
+  }
 `;
 
-const Name = styled.span<{ small: boolean }>`
-  font-size: ${(props) => (props.small ? '8vw' : '15vw')};
+const Name = styled.span`
+  font-size: 15vw;
   color: ${({ theme }) => theme.titleColor};
   font-weight: 700;
   text-transform: lowercase;
 
   @media (min-width: 760px) {
-    font-size: ${(props) => (props.small ? '34px' : '80px')};
+    font-size: 100px;
   }
 `;
 
@@ -41,7 +45,6 @@ const StyledLink = styled(Link)`
   box-shadow: none;
 
   :focus {
-    border-bottom: 1px solid ${({ theme }) => theme.accentColor};
     outline: none;
   }
 `;
@@ -53,7 +56,6 @@ const Options = styled.div`
 `;
 
 interface HeaderProps {
-  small: boolean;
   author: string;
 }
 
@@ -62,16 +64,17 @@ export default function Header(props: HeaderProps): React.ReactElement {
 
   return (
     <Container>
-      <StyledLink to="/">
-        <Name small={props.small}>
-          {name}
-          {lastname && <LastName data-testid="header-lastname">{lastname[0]}.</LastName>}
-        </Name>
-      </StyledLink>
-      <Options>
-        <Navigation />
-        <ThemeSwitcher />
-      </Options>
+      <Content>
+        <StyledLink to="/">
+          <Name>
+            {name}
+            {lastname && <LastName data-testid="header-lastname">{lastname[0]}.</LastName>}
+          </Name>
+        </StyledLink>
+        <Options>
+          <ThemeSwitcher />
+        </Options>
+      </Content>
     </Container>
   );
 }

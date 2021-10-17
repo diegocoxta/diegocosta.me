@@ -4,9 +4,11 @@ import { Link } from 'gatsby';
 import { UseComboboxReturnValue } from 'downshift';
 import Fuse from 'fuse.js';
 
+import Container from '~/components/Container';
+
 import { SearchArticlesQuery } from '~/../graphql-types';
 
-const Container = styled.div`
+const Content = styled.div`
   position: relative;
   margin: 40px 0 20px;
 `;
@@ -91,28 +93,30 @@ interface SearchProps {
 
 export default function Search({ articles, combobox }: SearchProps): React.ReactElement {
   return (
-    <Container {...combobox.getComboboxProps()}>
-      <Input type="text" placeholder="Busque por publicações..." autoComplete="off" {...combobox.getInputProps()} />
-      <Label {...combobox.getLabelProps()}>Busque por publicações...</Label>
-      <Results {...combobox.getMenuProps()} data-testid="search-results">
-        {combobox.isOpen &&
-          articles &&
-          articles.map((article, index: number) => (
-            <ResultLink
-              key={article.item.id}
-              data-testid="search-results-link"
-              to={`/${article?.item?.frontmatter?.lang}${article?.item?.fields?.slug}`}
-              {...combobox.getItemProps({ index, item: article })}
-            >
-              <ResultItemTitle data-testid="search-results-title">
-                {article.item.frontmatter?.title ?? ''}
-              </ResultItemTitle>
-              <ResultItemDescription data-testid="search-results-description">
-                {article.item.frontmatter?.description ?? ''}
-              </ResultItemDescription>
-            </ResultLink>
-          ))}
-      </Results>
+    <Container>
+      <Content {...combobox.getComboboxProps()}>
+        <Input type="text" placeholder="Busque por publicações..." autoComplete="off" {...combobox.getInputProps()} />
+        <Label {...combobox.getLabelProps()}>Busque por publicações...</Label>
+        <Results {...combobox.getMenuProps()} data-testid="search-results">
+          {combobox.isOpen &&
+            articles &&
+            articles.map((article, index: number) => (
+              <ResultLink
+                key={article.item.id}
+                data-testid="search-results-link"
+                to={`/${article?.item?.frontmatter?.lang}${article?.item?.fields?.slug}`}
+                {...combobox.getItemProps({ index, item: article })}
+              >
+                <ResultItemTitle data-testid="search-results-title">
+                  {article.item.frontmatter?.title ?? ''}
+                </ResultItemTitle>
+                <ResultItemDescription data-testid="search-results-description">
+                  {article.item.frontmatter?.description ?? ''}
+                </ResultItemDescription>
+              </ResultLink>
+            ))}
+        </Results>
+      </Content>
     </Container>
   );
 }

@@ -2,15 +2,16 @@
 
 exports[`<Footer /> should render properly 1`] = `
 .c0 {
-  margin-bottom: 50px;
-}
-
-.c0 nav {
-  margin-bottom: 50px;
+  max-width: 800px;
+  margin: 16px auto;
 }
 
 .c1 {
-  font-size: 16px;
+  margin-bottom: 50px;
+}
+
+.c1 nav {
+  margin-bottom: 50px;
 }
 
 .c2 {
@@ -30,68 +31,43 @@ exports[`<Footer /> should render properly 1`] = `
 }
 
 @media (min-width:760px) {
-  .c0 {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-flex-direction: row-reverse;
-    -ms-flex-direction: row-reverse;
-    flex-direction: row-reverse;
-    -webkit-box-pack: justify;
-    -webkit-justify-content: space-between;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
-    -webkit-align-items: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-  }
-
-  .c0 nav {
+  .c1 nav {
     margin-bottom: 0;
-  }
-}
-
-@media (min-width:760px) {
-  .c1 {
-    font-size: 18px;
   }
 }
 
 <body>
   <div>
-    <footer
+    <section
       class="c0"
     >
-      <p>
-        Navigation
-      </p>
-      <div
-        class="c1"
-      >
-        <span
-          class="c2"
+      <main>
+        <footer
+          class="c1"
         >
-          CC-BY 
-          2020
-          , built with 
-        </span>
-        <a
-          class="c3"
-          href="https://gatsbyjs.org"
-          rel="noopener"
-          target="_blank"
-        >
-          gatsby
-        </a>
-        <span
-          class="c2"
-        >
-           • 
-        </span>
-      </div>
-    </footer>
+          <span
+            class="c2"
+          >
+            CC-BY 
+            2020
+            , built with 
+          </span>
+          <a
+            class="c3"
+            href="https://gatsbyjs.org"
+            rel="noopener"
+            target="_blank"
+          >
+            gatsby
+          </a>
+          <span
+            class="c2"
+          >
+             • 
+          </span>
+        </footer>
+      </main>
+    </section>
   </div>
 </body>
 `;
@@ -99,15 +75,16 @@ exports[`<Footer /> should render properly 1`] = `
 exports[`<Footer /> should render the repository url if passed 1`] = `
 <body>
   .c0 {
-  margin-bottom: 50px;
-}
-
-.c0 nav {
-  margin-bottom: 50px;
+  max-width: 800px;
+  margin: 16px auto;
 }
 
 .c1 {
-  font-size: 16px;
+  margin-bottom: 50px;
+}
+
+.c1 nav {
+  margin-bottom: 50px;
 }
 
 .c2 {
@@ -127,75 +104,50 @@ exports[`<Footer /> should render the repository url if passed 1`] = `
 }
 
 @media (min-width:760px) {
-  .c0 {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-flex-direction: row-reverse;
-    -ms-flex-direction: row-reverse;
-    flex-direction: row-reverse;
-    -webkit-box-pack: justify;
-    -webkit-justify-content: space-between;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
-    -webkit-align-items: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-  }
-
-  .c0 nav {
+  .c1 nav {
     margin-bottom: 0;
   }
 }
 
-@media (min-width:760px) {
-  .c1 {
-    font-size: 18px;
-  }
-}
-
 <div>
-    <footer
+    <section
       class="c0"
     >
-      <p>
-        Navigation
-      </p>
-      <div
-        class="c1"
-      >
-        <span
-          class="c2"
+      <main>
+        <footer
+          class="c1"
         >
-          CC-BY 
-          2020
-          , built with 
-        </span>
-        <a
-          class="c3"
-          href="https://gatsbyjs.org"
-          rel="noopener"
-          target="_blank"
-        >
-          gatsby
-        </a>
-        <span
-          class="c2"
-        >
-           • 
-        </span>
-        <a
-          class="c3"
-          href="https://github.com/diegocosta/diegocosta.com.br"
-          rel="noopener"
-          target="_blank"
-        >
-          source code
-        </a>
-      </div>
-    </footer>
+          <span
+            class="c2"
+          >
+            CC-BY 
+            2020
+            , built with 
+          </span>
+          <a
+            class="c3"
+            href="https://gatsbyjs.org"
+            rel="noopener"
+            target="_blank"
+          >
+            gatsby
+          </a>
+          <span
+            class="c2"
+          >
+             • 
+          </span>
+          <a
+            class="c3"
+            href="https://github.com/diegocosta/diegocosta.com.br"
+            rel="noopener"
+            target="_blank"
+          >
+            source code
+          </a>
+        </footer>
+      </main>
+    </section>
   </div>
 </body>
 `;

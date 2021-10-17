@@ -1,62 +1,59 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Navigation /> should render properly 1`] = `
-.c1 {
+.c0 {
   margin: 0;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   padding: 0;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
+}
+
+.c1 {
+  list-style: none;
+  font-size: 16px;
+  font-weight: 900;
+  margin: 0 24px 0 0;
 }
 
 .c2 {
-  list-style: none;
-  font-size: 16px;
-  font-weight: 700;
-}
-
-.c3 {
   -webkit-text-decoration: none;
   text-decoration: none;
-  display: block;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   padding: 0;
-  border-bottom: 1px solid transparent;
+  text-transform: uppercase;
 }
 
-.c3:hover {
-  border-bottom: 1px solid;
-}
-
-@media (min-width:750px) {
-  .c0 {
-    width: 400px;
-  }
+.c2:after {
+  content: '.';
+  display: block;
+  font-size: 38px;
+  line-height: 0.3;
 }
 
 @media (min-width:760px) {
-  .c2 {
-    font-size: 18px;
+  .c1 {
+    font-size: 20px;
   }
 }
 
 <body>
   <div>
     <nav
-      class="c0"
+      class=""
     >
       <ul
-        class="c1"
+        class="c0"
       >
         <li
-          class="c2"
+          class="c1"
         >
           <a
-            class="c3"
+            class="c2"
             href="mailto:johndoe@doe.com"
             rel="noopener"
             target="_blank"
@@ -65,10 +62,10 @@ exports[`<Navigation /> should render properly 1`] = `
           </a>
         </li>
         <li
-          class="c2"
+          class="c1"
         >
           <a
-            class="c3"
+            class="c2"
             href="https://google.com"
             rel="noopener"
             target="_blank"

@@ -1,9 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import Navigation from '~/components/Navigation';
+import Container from '~/components/Container';
 
-const Container = styled.footer`
+const Content = styled.footer`
   margin-bottom: 50px;
 
   nav {
@@ -11,22 +11,9 @@ const Container = styled.footer`
   }
 
   @media (min-width: 760px) {
-    display: flex;
-    flex-direction: row-reverse;
-    justify-content: space-between;
-    align-items: center;
-
     nav {
       margin-bottom: 0;
     }
-  }
-`;
-
-const Content = styled.div`
-  font-size: 16px;
-
-  @media (min-width: 760px) {
-    font-size: 18px;
   }
 `;
 
@@ -58,7 +45,6 @@ interface FooterProps {
 export default function Footer(props: FooterProps): React.ReactElement {
   return (
     <Container>
-      <Navigation />
       <Content>
         <Label>CC-BY {props.year}, built with </Label>
         <Link href="https://gatsbyjs.org">gatsby</Link>
