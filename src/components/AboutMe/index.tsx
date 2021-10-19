@@ -5,20 +5,16 @@ import AboutMe from './AboutMe';
 
 export default (): React.ReactElement => {
   const {
-    site: {
-      siteMetadata: { aboutMe },
-    },
+    aboutMe: { html },
   } = useStaticQuery(
     graphql`
-      query {
-        site {
-          siteMetadata {
-            aboutMe
-          }
+      query AboutMeComponent {
+        aboutMe: markdownRemark(fields: { slug: { eq: "/" } }) {
+          html
         }
       }
     `
   );
 
-  return <AboutMe paragraphs={aboutMe} />;
+  return <AboutMe htmlContent={html} />;
 };

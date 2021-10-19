@@ -9,11 +9,11 @@ import Article from '~/components/Article';
 import Container from '~/components/Container';
 import PageTitle from '~/components/PageTitle';
 
-import { LanguagePageQuery, SitePageContext } from '~/../graphql-types';
+import { LanguageTemplateQuery, SitePageContext } from '~/../graphql-types';
 
 interface TagsPageProps extends PageRendererProps {
   pageContext: SitePageContext;
-  data: LanguagePageQuery;
+  data: LanguageTemplateQuery;
 }
 
 export default function Tags({ data, pageContext }: TagsPageProps): React.ReactElement {
@@ -26,7 +26,7 @@ export default function Tags({ data, pageContext }: TagsPageProps): React.ReactE
     en: 'Posts in English',
   };
 
-  const currentTitle = languages[pageContext.lang as string];
+  const currentTitle = languages[pageContext.language as string];
 
   return (
     <Page>
@@ -41,7 +41,7 @@ export default function Tags({ data, pageContext }: TagsPageProps): React.ReactE
               tags={frontmatter?.tags as string[]}
               date={frontmatter?.date}
               url={fields?.slug}
-              lang={frontmatter?.lang}
+              lang={frontmatter?.language}
               readingTime={fields?.readingTime?.minutes ?? 0}
             />
             {frontmatter?.description || excerpt}
@@ -53,11 +53,10 @@ export default function Tags({ data, pageContext }: TagsPageProps): React.ReactE
 }
 
 export const pageQuery = graphql`
-  query LanguagePage($lang: String) {
+  query LanguageTemplate($language: String) {
     articles: allMarkdownRemark(
-      limit: 2000
       sort: { fields: [frontmatter___date], order: DESC }
-      filter: { frontmatter: { lang: { in: [$lang] } } }
+      filter: { frontmatter: { language: { eq: $language } } }
     ) {
       totalCount
       edges {
@@ -74,7 +73,7 @@ export const pageQuery = graphql`
             title
             tags
             description
-            lang
+            language
           }
         }
       }

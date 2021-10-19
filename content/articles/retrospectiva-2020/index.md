@@ -3,7 +3,7 @@ title: Minha retrospectiva profissional de 2020
 date: '2021-01-09T09:12:03.284Z'
 description: Flagrei-me pensando o quão insano 2020 foi para mim na vida profissional e resolvi escrever esse resumo.
 tags: ['Carreira', 'Retrospectiva']
-lang: pt
+language: pt
 ---
 
 Nesse momento, estou nas minhas férias de fim de ano. Flagrei-me pensando o quão insano 2020 foi para mim, cheio de altos e baixos na vida profissional, a ponto de resolver escrever algo para que o meu eu do futuro possa rever e lembrar com bastante carinho desse ano que, sem dúvidas, minha primeira reação seria querer esquecer.

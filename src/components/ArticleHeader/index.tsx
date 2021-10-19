@@ -10,7 +10,7 @@ export default (props: ArticleHeaderProps): React.ReactElement => {
     },
   } = useStaticQuery(
     graphql`
-      query {
+      query ArticleHeaderComponent {
         site {
           siteMetadata {
             language

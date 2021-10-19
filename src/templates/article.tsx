@@ -8,15 +8,15 @@ import ArticleHeader from '~/components/ArticleHeader';
 import Article, { Content } from '~/components/Article';
 import Container from '~/components/Container';
 
-import { ArticlePageQuery } from '~/../graphql-types';
+import { ArticleTemplateQuery } from '~/../graphql-types';
 
-interface ArticlePageProps extends PageRendererProps {
-  data: ArticlePageQuery;
+interface ArticleTemplateProps extends PageRendererProps {
+  data: ArticleTemplateQuery;
 }
 
-export default function ArticlePage({ data }: ArticlePageProps): React.ReactElement {
+export default function ArticleTemplate({ data }: ArticleTemplateProps): React.ReactElement {
   const { html, excerpt, frontmatter, fields } = data.article ?? {};
-  const { title, date, tags, lang, description } = frontmatter ?? {};
+  const { title, date, tags, language, description } = frontmatter ?? {};
 
   return (
     <Page>
@@ -29,7 +29,7 @@ export default function ArticlePage({ data }: ArticlePageProps): React.ReactElem
             date={date}
             tags={tags as string[]}
             readingTime={fields?.readingTime?.minutes ?? 0}
-            lang={lang}
+            lang={language}
           />
           <Content dangerouslySetInnerHTML={{ __html: html ?? '' }} />
         </Article>
@@ -39,7 +39,7 @@ export default function ArticlePage({ data }: ArticlePageProps): React.ReactElem
 }
 
 export const pageQuery = graphql`
-  query ArticlePage($slug: String!) {
+  query ArticleTemplate($slug: String!) {
     article: markdownRemark(fields: { slug: { eq: $slug } }) {
       excerpt(pruneLength: 160)
       html
@@ -53,7 +53,7 @@ export const pageQuery = graphql`
         date(formatString: "DD/MM/YYYY")
         description
         tags
-        lang
+        language
       }
     }
   }

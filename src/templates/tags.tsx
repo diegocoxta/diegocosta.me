@@ -9,14 +9,14 @@ import Article from '~/components/Article';
 import PageTitle from '~/components/PageTitle';
 import Container from '~/components/Container';
 
-import { TagsPageQuery, SitePageContext } from '~/../graphql-types';
+import { TagsTemplateQuery, SitePageContext } from '~/../graphql-types';
 
-interface TagsPageProps extends PageRendererProps {
+interface TagsTemplateProps extends PageRendererProps {
   pageContext: SitePageContext;
-  data: TagsPageQuery;
+  data: TagsTemplateQuery;
 }
 
-export default function Tags({ data, pageContext }: TagsPageProps): React.ReactElement {
+export default function Tags({ data, pageContext }: TagsTemplateProps): React.ReactElement {
   const {
     articles: { edges, totalCount },
   } = data;
@@ -34,7 +34,7 @@ export default function Tags({ data, pageContext }: TagsPageProps): React.ReactE
               tags={frontmatter?.tags as string[]}
               date={frontmatter?.date}
               url={fields?.slug}
-              lang={frontmatter?.lang}
+              lang={frontmatter?.language}
               readingTime={fields?.readingTime?.minutes ?? 0}
             />
             {frontmatter?.description || excerpt}
@@ -46,9 +46,8 @@ export default function Tags({ data, pageContext }: TagsPageProps): React.ReactE
 }
 
 export const pageQuery = graphql`
-  query TagsPage($tag: String) {
+  query TagsTemplate($tag: String) {
     articles: allMarkdownRemark(
-      limit: 2000
       sort: { fields: [frontmatter___date], order: DESC }
       filter: { frontmatter: { tags: { in: [$tag] } } }
     ) {
@@ -67,7 +66,7 @@ export const pageQuery = graphql`
             title
             tags
             description
-            lang
+            language
           }
         }
       }

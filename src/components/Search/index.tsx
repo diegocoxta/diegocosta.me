@@ -7,7 +7,7 @@ import Search, { ArticleProps } from './Search';
 
 export default (): React.ReactElement => {
   const data = useStaticQuery(graphql`
-    query SearchArticles {
+    query SearchComponent {
       articles: allMarkdownRemark {
         nodes {
           id
@@ -17,7 +17,7 @@ export default (): React.ReactElement => {
           frontmatter {
             title
             description
-            lang
+            language
           }
         }
       }
@@ -42,7 +42,7 @@ export default (): React.ReactElement => {
     onInputValueChange: ({ inputValue }) => inputValue && setArticles(fuse.search<ArticleProps>(inputValue)),
     itemToString: (article) => article?.item?.frontmatter?.title ?? '',
     onSelectedItemChange: ({ selectedItem }) =>
-      navigate(`/${selectedItem?.item?.frontmatter?.lang}${selectedItem?.item?.fields?.slug}`),
+      navigate(`/${selectedItem?.item?.frontmatter?.language}${selectedItem?.item?.fields?.slug}`),
   });
 
   return <Search combobox={combobox} articles={articles} />;

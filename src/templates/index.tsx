@@ -10,13 +10,13 @@ import Article from '~/components/Article';
 import Divisor from '~/components/Divisor';
 import Container from '~/components/Container';
 
-import { IndexPageQuery } from '~/../graphql-types';
+import { IndexTemplateQuery } from '~/../graphql-types';
 
-interface IndexPageProps extends PageRendererProps {
-  data: IndexPageQuery;
+interface IndexTemplateProps extends PageRendererProps {
+  data: IndexTemplateQuery;
 }
 
-export default function IndexPage({ data }: IndexPageProps): React.ReactElement {
+export default function IndexTemplate({ data }: IndexTemplateProps): React.ReactElement {
   const {
     articles: { edges },
   } = data;
@@ -35,7 +35,7 @@ export default function IndexPage({ data }: IndexPageProps): React.ReactElement 
               url={fields?.slug}
               tags={frontmatter?.tags as string[]}
               readingTime={fields?.readingTime?.minutes ?? 0}
-              lang={frontmatter?.lang}
+              lang={frontmatter?.language}
             />
             {frontmatter?.description || excerpt}
           </Article>
@@ -46,8 +46,11 @@ export default function IndexPage({ data }: IndexPageProps): React.ReactElement 
 }
 
 export const pageQuery = graphql`
-  query IndexPage {
-    articles: allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
+  query IndexTemplate {
+    articles: allMarkdownRemark(
+      sort: { fields: [frontmatter___date], order: DESC }
+      filter: { fields: { collection: { eq: "articles" } } }
+    ) {
       group(field: frontmatter___tags) {
         tag: fieldValue
         totalCount
@@ -66,7 +69,7 @@ export const pageQuery = graphql`
             title
             description
             tags
-            lang
+            language
           }
         }
       }

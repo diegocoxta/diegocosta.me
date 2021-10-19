@@ -45,9 +45,7 @@ exports[`<LanguagesPage> should render properly 1`] = `
         <main>
           <h1
             class="c2"
-          >
-            Posts in English
-          </h1>
+          />
           <article
             class="c3"
             data-testid="languages-page-article"

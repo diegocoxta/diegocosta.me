@@ -4,16 +4,17 @@ const kebabCase = require('lodash.kebabcase');
 module.exports = async ({ graphql, actions }) => {
   const result = await graphql(`
     {
-      articles: allMarkdownRemark(sort: { order: DESC, fields: [frontmatter___date] }, limit: 2000) {
+      content: allMarkdownRemark(sort: { order: DESC, fields: [frontmatter___date] }) {
         edges {
           node {
             fields {
               slug
+              collection
             }
             frontmatter {
               tags
               title
-              lang
+              language
             }
           }
         }
@@ -24,7 +25,7 @@ module.exports = async ({ graphql, actions }) => {
         }
       }
       languages: allMarkdownRemark(limit: 2000) {
-        group(field: frontmatter___lang) {
+        group(field: frontmatter___language) {
           fieldValue
         }
       }
@@ -42,14 +43,16 @@ module.exports = async ({ graphql, actions }) => {
   });
 
   // Create Article Pages
-  const articles = result.data.articles.edges;
+  const content = result.data.content.edges;
+  const tags = result.data.tags.group;
+  const languages = result.data.languages.group;
 
-  articles.forEach((article, index) => {
-    const previous = index === articles.length - 1 ? null : articles[index + 1].node;
-    const next = index === 0 ? null : articles[index - 1].node;
+  const articles = content.filter((edge) => edge.node.fields.collection === 'articles');
+  const pages = content.filter((edge) => edge.node.fields.collection === 'pages');
 
-    const articlePath = article.node.frontmatter.lang
-      ? `/${article.node.frontmatter.lang}${article.node.fields.slug}`
+  articles.forEach((article) => {
+    const articlePath = article.node.frontmatter.language
+      ? `/${article.node.frontmatter.language}${article.node.fields.slug}`
       : article.node.fields.slug;
 
     actions.createPage({
@@ -57,15 +60,24 @@ module.exports = async ({ graphql, actions }) => {
       component: path.resolve('./src/templates/article.tsx'),
       context: {
         slug: article.node.fields.slug,
-        previous,
-        next,
       },
     });
   });
 
-  // Create Tags Page
-  const tags = result.data.tags.group;
+  // Create static pages
+  pages.forEach((page) => {
+    if (page.node.fields.slug !== '/') {
+      actions.createPage({
+        path: kebabCase(page.node.fields.slug),
+        component: path.resolve('./src/templates/page.tsx'),
+        context: {
+          slug: page.node.fields.slug,
+        },
+      });
+    }
+  });
 
+  // Create Tags Page
   tags.forEach((tag) => {
     actions.createPage({
       path: `/tags/${kebabCase(tag.fieldValue)}/`,
@@ -77,14 +89,12 @@ module.exports = async ({ graphql, actions }) => {
   });
 
   // Create Language Page
-  const languages = result.data.languages.group;
-
   languages.forEach((language) => {
     actions.createPage({
-      path: language.fieldValue,
+      path: `/languages/${language.fieldValue}/`,
       component: path.resolve('./src/templates/languages.tsx'),
       context: {
-        lang: language.fieldValue,
+        language: language.fieldValue,
       },
     });
   });

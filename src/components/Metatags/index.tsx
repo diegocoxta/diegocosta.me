@@ -12,7 +12,7 @@ export default (props: Props): React.ReactElement => {
     },
   } = useStaticQuery(
     graphql`
-      query {
+      query MetatagsComponent {
         site {
           siteMetadata {
             title
