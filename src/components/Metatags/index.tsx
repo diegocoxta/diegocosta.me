@@ -27,7 +27,7 @@ export default (props: Props): React.ReactElement => {
   );
 
   const metaDescription = props.description || description;
-  const metaTitle = props.title || title;
+  const metaTitle = `${props.title} - ${author}` || title;
   const metaImage = props.image || image;
 
   return <Metatags title={metaTitle} description={metaDescription} lang={language} author={author} image={metaImage} />;

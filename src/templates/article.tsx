@@ -20,7 +20,7 @@ export default function ArticleTemplate({ data }: ArticleTemplateProps): React.R
 
   return (
     <Page>
-      <Metatags title={`${title} - Diego Costa`} description={description || excerpt || ''} />
+      <Metatags title={title ?? ''} description={description || excerpt || ''} />
       <Divisor />
       <Container>
         <Article>

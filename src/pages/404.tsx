@@ -14,7 +14,7 @@ export default function NotFoundPage(): React.ReactElement {
 
   return (
     <Page>
-      <Metatags title="Não encontrado - Diego Costa" />
+      <Metatags title="Não encontrado" />
       <Divisor />
       <Container>
         <PageTitle>Não encontrado</PageTitle>

@@ -26,7 +26,6 @@ export default function Tags({ data, pageContext }: TagsTemplateProps): React.Re
       <Divisor />
       <Container>
         <PageTitle>{`${pageContext.tag} (${totalCount})`}</PageTitle>
-
         {edges.map(({ node: { frontmatter, fields, excerpt } }, index) => (
           <Article key={`article-${index}`} data-testid="tags-page-article">
             <ArticleHeader

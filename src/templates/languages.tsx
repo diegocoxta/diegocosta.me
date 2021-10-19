@@ -30,7 +30,7 @@ export default function Tags({ data, pageContext }: TagsPageProps): React.ReactE
 
   return (
     <Page>
-      <Metatags title={`${currentTitle} - Diego Costa`} />
+      <Metatags title={currentTitle} />
       <Divisor />
       <Container>
         <PageTitle>{currentTitle}</PageTitle>

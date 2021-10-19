@@ -20,7 +20,7 @@ export default function PageTemplate({ data }: PageTemplateProps): React.ReactEl
 
   return (
     <Page>
-      <Metatags title={`${title} - Diego Costa`} />
+      <Metatags title={title ?? ''} />
       <Divisor />
       <Container>
         <Article>
