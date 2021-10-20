@@ -258,6 +258,8 @@ export type DirectoryCtimeArgs = {
 export type Site = Node & {
   buildTime?: Maybe<Scalars['Date']>;
   siteMetadata?: Maybe<SiteSiteMetadata>;
+  port?: Maybe<Scalars['Int']>;
+  host?: Maybe<Scalars['String']>;
   polyfill?: Maybe<Scalars['Boolean']>;
   pathPrefix?: Maybe<Scalars['String']>;
   id: Scalars['ID'];
@@ -282,7 +284,7 @@ export type SiteSiteMetadata = {
   language?: Maybe<Scalars['String']>;
   repository?: Maybe<Scalars['String']>;
   image?: Maybe<Scalars['String']>;
-  googleAnalyticKey?: Maybe<Scalars['String']>;
+  googleAnalyticsKey?: Maybe<Scalars['String']>;
 };
 
 export type SiteFunction = Node & {
@@ -953,6 +955,8 @@ export type QueryAllDirectoryArgs = {
 export type QuerySiteArgs = {
   buildTime?: Maybe<DateQueryOperatorInput>;
   siteMetadata?: Maybe<SiteSiteMetadataFilterInput>;
+  port?: Maybe<IntQueryOperatorInput>;
+  host?: Maybe<StringQueryOperatorInput>;
   polyfill?: Maybe<BooleanQueryOperatorInput>;
   pathPrefix?: Maybe<StringQueryOperatorInput>;
   id?: Maybe<StringQueryOperatorInput>;
@@ -2110,7 +2114,7 @@ export type SiteSiteMetadataFilterInput = {
   language?: Maybe<StringQueryOperatorInput>;
   repository?: Maybe<StringQueryOperatorInput>;
   image?: Maybe<StringQueryOperatorInput>;
-  googleAnalyticKey?: Maybe<StringQueryOperatorInput>;
+  googleAnalyticsKey?: Maybe<StringQueryOperatorInput>;
 };
 
 export type SiteConnection = {
@@ -2167,7 +2171,9 @@ export type SiteFieldsEnum =
   | 'siteMetadata___language'
   | 'siteMetadata___repository'
   | 'siteMetadata___image'
-  | 'siteMetadata___googleAnalyticKey'
+  | 'siteMetadata___googleAnalyticsKey'
+  | 'port'
+  | 'host'
   | 'polyfill'
   | 'pathPrefix'
   | 'id'
@@ -2301,6 +2307,8 @@ export type SiteGroupConnectionGroupArgs = {
 export type SiteFilterInput = {
   buildTime?: Maybe<DateQueryOperatorInput>;
   siteMetadata?: Maybe<SiteSiteMetadataFilterInput>;
+  port?: Maybe<IntQueryOperatorInput>;
+  host?: Maybe<StringQueryOperatorInput>;
   polyfill?: Maybe<BooleanQueryOperatorInput>;
   pathPrefix?: Maybe<StringQueryOperatorInput>;
   id?: Maybe<StringQueryOperatorInput>;

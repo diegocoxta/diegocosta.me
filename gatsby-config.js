@@ -7,7 +7,7 @@ const siteMetadata = {
   language: 'en',
   repository: 'https://github.com/diegocosta/diegocosta.me',
   image: 'https://repository-images.githubusercontent.com/278878641/3756a080-d995-11ea-9b9f-f91a4448af98',
-  googleAnalyticKey: 'UA-53539968-4',
+  googleAnalyticsKey: 'UA-53539968-4',
 };
 
 module.exports = {
@@ -81,14 +81,14 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-google-analytics',
       options: {
-        trackingId: siteMetadata.googleAnalyticKey,
+        trackingId: siteMetadata.googleAnalyticsKey,
       },
     },
     {
       resolve: 'gatsby-plugin-feed',
       options: {
         query: `
-          {
+          query GatsbyPluginFeedSiteMetadata {
             site {
               siteMetadata {
                 title
@@ -113,7 +113,7 @@ module.exports = {
               })
             },
             query: `
-              {
+              query GatsbyPluginFeedArticles {
                 allMarkdownRemark(
                   sort: { order: DESC, fields: [frontmatter___date] },
                   filter: { fields: { collection: { eq: "articles" } } }
