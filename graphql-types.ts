@@ -284,6 +284,7 @@ export type SiteSiteMetadata = {
   language?: Maybe<Scalars['String']>;
   repository?: Maybe<Scalars['String']>;
   image?: Maybe<Scalars['String']>;
+  googleAnalyticsKey?: Maybe<Scalars['String']>;
 };
 
 export type SiteFunction = Node & {
@@ -381,6 +382,8 @@ export type SitePluginPluginOptions = {
   respectDNT?: Maybe<Scalars['Boolean']>;
   pageTransitionDelay?: Maybe<Scalars['Int']>;
   enableWebVitalsTracking?: Maybe<Scalars['Boolean']>;
+  query?: Maybe<Scalars['String']>;
+  feeds?: Maybe<Array<Maybe<SitePluginPluginOptionsFeeds>>>;
   short_name?: Maybe<Scalars['String']>;
   start_url?: Maybe<Scalars['String']>;
   icon?: Maybe<Scalars['String']>;
@@ -393,7 +396,6 @@ export type SitePluginPluginOptions = {
   output?: Maybe<Scalars['String']>;
   createLinkInHead?: Maybe<Scalars['Boolean']>;
   entryLimit?: Maybe<Scalars['Int']>;
-  query?: Maybe<Scalars['String']>;
   pathCheck?: Maybe<Scalars['Boolean']>;
 };
 
@@ -424,6 +426,12 @@ export type SitePluginPluginOptionsPluginsPluginOptions = {
   disableBgImage?: Maybe<Scalars['Boolean']>;
   wrapperStyle?: Maybe<Scalars['String']>;
   showLineNumbers?: Maybe<Scalars['Boolean']>;
+};
+
+export type SitePluginPluginOptionsFeeds = {
+  query?: Maybe<Scalars['String']>;
+  output?: Maybe<Scalars['String']>;
+  title?: Maybe<Scalars['String']>;
 };
 
 export type SitePluginPackageJson = {
@@ -2106,6 +2114,7 @@ export type SiteSiteMetadataFilterInput = {
   language?: Maybe<StringQueryOperatorInput>;
   repository?: Maybe<StringQueryOperatorInput>;
   image?: Maybe<StringQueryOperatorInput>;
+  googleAnalyticsKey?: Maybe<StringQueryOperatorInput>;
 };
 
 export type SiteConnection = {
@@ -2162,6 +2171,7 @@ export type SiteFieldsEnum =
   | 'siteMetadata___language'
   | 'siteMetadata___repository'
   | 'siteMetadata___image'
+  | 'siteMetadata___googleAnalyticsKey'
   | 'port'
   | 'host'
   | 'polyfill'
@@ -2577,6 +2587,8 @@ export type SitePluginPluginOptionsFilterInput = {
   respectDNT?: Maybe<BooleanQueryOperatorInput>;
   pageTransitionDelay?: Maybe<IntQueryOperatorInput>;
   enableWebVitalsTracking?: Maybe<BooleanQueryOperatorInput>;
+  query?: Maybe<StringQueryOperatorInput>;
+  feeds?: Maybe<SitePluginPluginOptionsFeedsFilterListInput>;
   short_name?: Maybe<StringQueryOperatorInput>;
   start_url?: Maybe<StringQueryOperatorInput>;
   icon?: Maybe<StringQueryOperatorInput>;
@@ -2589,7 +2601,6 @@ export type SitePluginPluginOptionsFilterInput = {
   output?: Maybe<StringQueryOperatorInput>;
   createLinkInHead?: Maybe<BooleanQueryOperatorInput>;
   entryLimit?: Maybe<IntQueryOperatorInput>;
-  query?: Maybe<StringQueryOperatorInput>;
   pathCheck?: Maybe<BooleanQueryOperatorInput>;
 };
 
@@ -2624,6 +2635,16 @@ export type SitePluginPluginOptionsPluginsPluginOptionsFilterInput = {
   disableBgImage?: Maybe<BooleanQueryOperatorInput>;
   wrapperStyle?: Maybe<StringQueryOperatorInput>;
   showLineNumbers?: Maybe<BooleanQueryOperatorInput>;
+};
+
+export type SitePluginPluginOptionsFeedsFilterListInput = {
+  elemMatch?: Maybe<SitePluginPluginOptionsFeedsFilterInput>;
+};
+
+export type SitePluginPluginOptionsFeedsFilterInput = {
+  query?: Maybe<StringQueryOperatorInput>;
+  output?: Maybe<StringQueryOperatorInput>;
+  title?: Maybe<StringQueryOperatorInput>;
 };
 
 export type SitePluginPackageJsonFilterInput = {
@@ -2862,6 +2883,11 @@ export type SitePageFieldsEnum =
   | 'pluginCreator___pluginOptions___respectDNT'
   | 'pluginCreator___pluginOptions___pageTransitionDelay'
   | 'pluginCreator___pluginOptions___enableWebVitalsTracking'
+  | 'pluginCreator___pluginOptions___query'
+  | 'pluginCreator___pluginOptions___feeds'
+  | 'pluginCreator___pluginOptions___feeds___query'
+  | 'pluginCreator___pluginOptions___feeds___output'
+  | 'pluginCreator___pluginOptions___feeds___title'
   | 'pluginCreator___pluginOptions___short_name'
   | 'pluginCreator___pluginOptions___start_url'
   | 'pluginCreator___pluginOptions___icon'
@@ -2874,7 +2900,6 @@ export type SitePageFieldsEnum =
   | 'pluginCreator___pluginOptions___output'
   | 'pluginCreator___pluginOptions___createLinkInHead'
   | 'pluginCreator___pluginOptions___entryLimit'
-  | 'pluginCreator___pluginOptions___query'
   | 'pluginCreator___pluginOptions___pathCheck'
   | 'pluginCreator___packageJson___name'
   | 'pluginCreator___packageJson___description'
@@ -3111,6 +3136,11 @@ export type SitePluginFieldsEnum =
   | 'pluginOptions___respectDNT'
   | 'pluginOptions___pageTransitionDelay'
   | 'pluginOptions___enableWebVitalsTracking'
+  | 'pluginOptions___query'
+  | 'pluginOptions___feeds'
+  | 'pluginOptions___feeds___query'
+  | 'pluginOptions___feeds___output'
+  | 'pluginOptions___feeds___title'
   | 'pluginOptions___short_name'
   | 'pluginOptions___start_url'
   | 'pluginOptions___icon'
@@ -3123,7 +3153,6 @@ export type SitePluginFieldsEnum =
   | 'pluginOptions___output'
   | 'pluginOptions___createLinkInHead'
   | 'pluginOptions___entryLimit'
-  | 'pluginOptions___query'
   | 'pluginOptions___pathCheck'
   | 'packageJson___name'
   | 'packageJson___description'
