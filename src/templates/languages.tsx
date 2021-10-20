@@ -15,12 +15,12 @@ interface TagsPageProps extends PageRendererProps {
 }
 
 export default function Tags({ data }: TagsPageProps): React.ReactElement {
-  const { articles } = data;
+  const { articles, aboutMe } = data;
 
   return (
     <Page>
       <Metatags />
-      <AboutMe />
+      <AboutMe htmlContent={aboutMe?.html ?? ''} />
       <Divisor />
       <Search />
       {articles.edges.map(({ node: { frontmatter, fields, excerpt } }, index) => (
@@ -41,6 +41,9 @@ export default function Tags({ data }: TagsPageProps): React.ReactElement {
 
 export const pageQuery = graphql`
   query LanguageTemplate($language: String) {
+    aboutMe: markdownRemark(fields: { slug: { eq: "/" } }) {
+      html
+    }
     articles: allMarkdownRemark(
       sort: { fields: [frontmatter___date], order: DESC }
       filter: { frontmatter: { language: { eq: $language } } }

@@ -3908,11 +3908,6 @@ export type ImageSharpSortInput = {
   order?: Maybe<Array<Maybe<SortOrderEnum>>>;
 };
 
-export type AboutMeComponentQueryVariables = Exact<{ [key: string]: never; }>;
-
-
-export type AboutMeComponentQuery = { aboutMe?: Maybe<Pick<MarkdownRemark, 'html'>> };
-
 export type FooterComponentQueryVariables = Exact<{ [key: string]: never; }>;
 
 
@@ -3949,7 +3944,7 @@ export type ArticleTemplateQuery = { article?: Maybe<(
 export type IndexTemplateQueryVariables = Exact<{ [key: string]: never; }>;
 
 
-export type IndexTemplateQuery = { articles: { group: Array<(
+export type IndexTemplateQuery = { aboutMe?: Maybe<Pick<MarkdownRemark, 'html'>>, articles: { group: Array<(
       Pick<MarkdownRemarkGroupConnection, 'totalCount'>
       & { tag: MarkdownRemarkGroupConnection['fieldValue'] }
     )>, edges: Array<{ node: (
@@ -3965,7 +3960,7 @@ export type LanguageTemplateQueryVariables = Exact<{
 }>;
 
 
-export type LanguageTemplateQuery = { articles: (
+export type LanguageTemplateQuery = { aboutMe?: Maybe<Pick<MarkdownRemark, 'html'>>, articles: (
     Pick<MarkdownRemarkConnection, 'totalCount'>
     & { edges: Array<{ node: (
         Pick<MarkdownRemark, 'excerpt'>

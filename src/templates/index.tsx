@@ -15,11 +15,12 @@ interface IndexTemplateProps extends PageRendererProps {
 }
 
 export default function IndexTemplate({ data }: IndexTemplateProps): React.ReactElement {
-  const { articles } = data;
+  const { articles, aboutMe } = data;
+
   return (
     <Page>
       <Metatags />
-      <AboutMe />
+      <AboutMe htmlContent={aboutMe?.html ?? ''} />
       <Divisor />
       <Search />
       {articles.edges.map(({ node: { frontmatter, fields, excerpt } }, index: number) => (
@@ -40,6 +41,9 @@ export default function IndexTemplate({ data }: IndexTemplateProps): React.React
 
 export const pageQuery = graphql`
   query IndexTemplate {
+    aboutMe: markdownRemark(fields: { slug: { eq: "/" } }) {
+      html
+    }
     articles: allMarkdownRemark(
       sort: { fields: [frontmatter___date], order: DESC }
       filter: { fields: { collection: { eq: "articles" } } }

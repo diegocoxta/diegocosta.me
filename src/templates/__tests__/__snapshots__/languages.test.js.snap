@@ -1,50 +1,50 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<LanguagesPage> should render properly 1`] = `
-.c0 {
+.c2 {
   background: linear-gradient(90deg,#0C0D0E 20px,transparent 1%) center, linear-gradient(#0C0D0E 20px,transparent 1%) center, #FFFFFF;
   background-size: 22px 22px;
   height: 120px;
   margin-top: 40px;
 }
 
-.c1 {
+.c0 {
   max-width: 800px;
   margin: 0 auto;
   padding: 0 20px;
 }
 
-.c2 {
+.c3 {
   margin: 0 0 60px 0;
   font-weight: 400;
   color: #FFFFFF;
 }
 
-.c3 {
+.c4 {
   margin: 20px 0 0 0;
 }
 
-.c4 {
+.c5 {
   font-family: 'Raleway',sans-serif;
   font-weight: 700;
   font-size: 36px;
   margin: 0;
 }
 
-.c5 {
+.c6 {
   color: #FFFFFF;
   box-shadow: none;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.c5:hover,
-.c5:focus {
+.c6:hover,
+.c6:focus {
   border-bottom: 1px solid #FFFFFF;
   outline: none;
 }
 
-.c7 {
+.c8 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -56,53 +56,129 @@ exports[`<LanguagesPage> should render properly 1`] = `
   padding: 0;
 }
 
-.c6 {
+.c7 {
   color: #9a9a9a;
   font-size: 18px;
   margin: 5px 0;
 }
 
-.c8 {
+.c9 {
   line-height: 1.5;
 }
 
-.c8 a {
+.c9 a {
   color: #424833;
   -webkit-text-decoration: none;
   text-decoration: none;
   border-bottom: 1px solid #0C0D0E;
 }
 
-.c8 a:hover,
-.c8 a:focus {
+.c9 a:hover,
+.c9 a:focus {
   border-bottom: 1px solid #424833;
   outline: none;
 }
 
-.c8 blockquote {
+.c9 blockquote {
   border-left: 5px solid #424833;
   padding-left: 20px;
 }
 
-.c8 .gatsby-highlight {
+.c9 .gatsby-highlight {
   padding: 10px 0;
 }
 
-.c8 pre[class*='language-'],
-.c8 code[class*='language-'],
-.c8 .gatsby-highlight {
+.c9 pre[class*='language-'],
+.c9 code[class*='language-'],
+.c9 .gatsby-highlight {
   background-color: #0C0D0E;
   font-family: monospace;
   white-space: pre-wrap;
 }
 
-.c8 .line-numbers-rows,
-.c8 .line-numbers-rows span::before {
+.c9 .line-numbers-rows,
+.c9 .line-numbers-rows span::before {
   border: 0.5px solid #0C0D0E;
 }
 
-.c8 img {
+.c9 img {
   box-shadow: none !important;
+}
+
+.c1 p {
+  font-size: 18px;
+  line-height: 1.4;
+  color: #FFFFFF;
+}
+
+.c1 ul {
+  margin: 0;
+  padding: 0;
+}
+
+.c1 li {
+  list-style: none;
+  font-size: 18px;
+  font-weight: 900;
+  margin: 0 24px 5px 0;
+}
+
+.c1 li a {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: #FFFFFF;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0;
+  text-transform: uppercase;
+}
+
+.c1 li a:after {
+  content: '.';
+  display: block;
+  color: #0C0D0E;
+  font-size: 38px;
+  line-height: 0.2;
+}
+
+.c1 li a:hover:after {
+  color: #FFFFFF;
+}
+
+@media (min-width:760px) {
+  .c1 {
+    padding-bottom: 40px;
+  }
+}
+
+@media (min-width:760px) {
+  .c1 p {
+    font-size: 24px;
+  }
+}
+
+@media (min-width:760px) {
+  .c1 ul {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+@media (min-width:760px) {
+  .c1 li {
+    font-size: 20px;
+    margin: 0 24px 0 0;
+  }
+}
+
+@media (min-width:760px) {
+  .c1 li a:after {
+    line-height: 0.3;
+  }
 }
 
 <body>
@@ -114,31 +190,37 @@ exports[`<LanguagesPage> should render properly 1`] = `
       <p>
         Metatags
       </p>
-      <p>
-        AboutMe
-      </p>
-      <div
+      <section
         class="c0"
+      >
+        <main>
+          <div
+            class="c1"
+          />
+        </main>
+      </section>
+      <div
+        class="c2"
       />
       <p>
         Search
       </p>
       <section
-        class="c1"
+        class="c0"
       >
         <main>
           <article
-            class="c2"
+            class="c3"
             data-testid="article-item"
           >
             <header
-              class="c3"
+              class="c4"
             >
               <h3
-                class="c4"
+                class="c5"
               >
                 <a
-                  class="c5"
+                  class="c6"
                   data-testid="article-header-custom-link"
                   href="/path-to-article"
                 >
@@ -146,19 +228,19 @@ exports[`<LanguagesPage> should render properly 1`] = `
                 </a>
               </h3>
               <p
-                class="c6"
+                class="c7"
               >
                 30/10/2020
                  
                  · 5 minutes of reading
               </p>
               <ul
-                class="c7"
+                class="c8"
                 data-testid="article-header-tags"
               />
             </header>
             <section
-              class="c8"
+              class="c9"
             >
               Awesome first article
             </section>
@@ -166,21 +248,21 @@ exports[`<LanguagesPage> should render properly 1`] = `
         </main>
       </section>
       <section
-        class="c1"
+        class="c0"
       >
         <main>
           <article
-            class="c2"
+            class="c3"
             data-testid="article-item"
           >
             <header
-              class="c3"
+              class="c4"
             >
               <h3
-                class="c4"
+                class="c5"
               >
                 <a
-                  class="c5"
+                  class="c6"
                   data-testid="article-header-custom-link"
                   href="/path-to-article-2"
                 >
@@ -188,19 +270,19 @@ exports[`<LanguagesPage> should render properly 1`] = `
                 </a>
               </h3>
               <p
-                class="c6"
+                class="c7"
               >
                 30/10/2020
                  
                  · 2 minutes of reading
               </p>
               <ul
-                class="c7"
+                class="c8"
                 data-testid="article-header-tags"
               />
             </header>
             <section
-              class="c8"
+              class="c9"
             >
               Awesome second article
             </section>
