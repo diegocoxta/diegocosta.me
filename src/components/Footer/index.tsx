@@ -10,7 +10,7 @@ export default (): React.ReactElement => {
     },
   } = useStaticQuery(
     graphql`
-      query {
+      query FooterComponent {
         site {
           siteMetadata {
             repository

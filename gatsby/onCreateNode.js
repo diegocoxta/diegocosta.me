@@ -7,5 +7,13 @@ module.exports = ({ node, actions, getNode }) => {
       value: createFilePath({ node, getNode }),
       node,
     });
+
+    const { sourceInstanceName } = getNode(node.parent);
+
+    actions.createNodeField({
+      name: 'collection',
+      value: sourceInstanceName,
+      node,
+    });
   }
 };

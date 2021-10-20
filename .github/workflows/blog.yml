@@ -1,4 +1,4 @@
-name: Blog Diego Costa Workflow
+name: Blog Workflow
 
 on: [push, pull_request]
 

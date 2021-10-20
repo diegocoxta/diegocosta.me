@@ -4,21 +4,15 @@ import { useStaticQuery, graphql } from 'gatsby';
 import AboutMe from './AboutMe';
 
 export default (): React.ReactElement => {
-  const {
-    site: {
-      siteMetadata: { aboutMe },
-    },
-  } = useStaticQuery(
+  const { aboutMe } = useStaticQuery(
     graphql`
-      query {
-        site {
-          siteMetadata {
-            aboutMe
-          }
+      query AboutMeComponent {
+        aboutMe: markdownRemark(fields: { slug: { eq: "/" } }) {
+          html
         }
       }
     `
   );
 
-  return <AboutMe paragraphs={aboutMe} />;
+  return aboutMe && <AboutMe htmlContent={aboutMe?.html} />;
 };

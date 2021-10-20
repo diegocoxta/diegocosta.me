@@ -280,17 +280,10 @@ export type SiteSiteMetadata = {
   title?: Maybe<Scalars['String']>;
   description?: Maybe<Scalars['String']>;
   author?: Maybe<Scalars['String']>;
-  aboutMe?: Maybe<Array<Maybe<Scalars['String']>>>;
   siteUrl?: Maybe<Scalars['String']>;
-  contacts?: Maybe<Array<Maybe<SiteSiteMetadataContacts>>>;
   language?: Maybe<Scalars['String']>;
   repository?: Maybe<Scalars['String']>;
   image?: Maybe<Scalars['String']>;
-};
-
-export type SiteSiteMetadataContacts = {
-  link?: Maybe<Scalars['String']>;
-  label?: Maybe<Scalars['String']>;
 };
 
 export type SiteFunction = Node & {
@@ -325,40 +318,8 @@ export type SitePage = Node & {
 
 export type SitePageContext = {
   slug?: Maybe<Scalars['String']>;
-  previous?: Maybe<SitePageContextPrevious>;
-  next?: Maybe<SitePageContextNext>;
   tag?: Maybe<Scalars['String']>;
-  lang?: Maybe<Scalars['String']>;
-};
-
-export type SitePageContextPrevious = {
-  fields?: Maybe<SitePageContextPreviousFields>;
-  frontmatter?: Maybe<SitePageContextPreviousFrontmatter>;
-};
-
-export type SitePageContextPreviousFields = {
-  slug?: Maybe<Scalars['String']>;
-};
-
-export type SitePageContextPreviousFrontmatter = {
-  tags?: Maybe<Array<Maybe<Scalars['String']>>>;
-  title?: Maybe<Scalars['String']>;
-  lang?: Maybe<Scalars['String']>;
-};
-
-export type SitePageContextNext = {
-  fields?: Maybe<SitePageContextNextFields>;
-  frontmatter?: Maybe<SitePageContextNextFrontmatter>;
-};
-
-export type SitePageContextNextFields = {
-  slug?: Maybe<Scalars['String']>;
-};
-
-export type SitePageContextNextFrontmatter = {
-  tags?: Maybe<Array<Maybe<Scalars['String']>>>;
-  title?: Maybe<Scalars['String']>;
-  lang?: Maybe<Scalars['String']>;
+  language?: Maybe<Scalars['String']>;
 };
 
 export type SitePlugin = Node & {
@@ -444,7 +405,6 @@ export type SitePluginPluginOptionsPlugins = {
   pluginOptions?: Maybe<SitePluginPluginOptionsPluginsPluginOptions>;
   nodeAPIs?: Maybe<Array<Maybe<Scalars['String']>>>;
   browserAPIs?: Maybe<Array<Maybe<Scalars['String']>>>;
-  ssrAPIs?: Maybe<Array<Maybe<Scalars['String']>>>;
   pluginFilepath?: Maybe<Scalars['String']>;
 };
 
@@ -471,6 +431,7 @@ export type SitePluginPackageJson = {
   description?: Maybe<Scalars['String']>;
   version?: Maybe<Scalars['String']>;
   main?: Maybe<Scalars['String']>;
+  author?: Maybe<Scalars['String']>;
   license?: Maybe<Scalars['String']>;
   dependencies?: Maybe<Array<Maybe<SitePluginPackageJsonDependencies>>>;
   devDependencies?: Maybe<Array<Maybe<SitePluginPackageJsonDevDependencies>>>;
@@ -584,7 +545,7 @@ export type MarkdownRemarkFrontmatter = {
   date?: Maybe<Scalars['Date']>;
   description?: Maybe<Scalars['String']>;
   tags?: Maybe<Array<Maybe<Scalars['String']>>>;
-  lang?: Maybe<Scalars['String']>;
+  language?: Maybe<Scalars['String']>;
 };
 
 
@@ -598,6 +559,7 @@ export type MarkdownRemarkFrontmatterDateArgs = {
 export type MarkdownRemarkFields = {
   readingTime?: Maybe<MarkdownRemarkFieldsReadingTime>;
   slug?: Maybe<Scalars['String']>;
+  collection?: Maybe<Scalars['String']>;
 };
 
 export type MarkdownRemarkFieldsReadingTime = {
@@ -1213,12 +1175,13 @@ export type MarkdownRemarkFrontmatterFilterInput = {
   date?: Maybe<DateQueryOperatorInput>;
   description?: Maybe<StringQueryOperatorInput>;
   tags?: Maybe<StringQueryOperatorInput>;
-  lang?: Maybe<StringQueryOperatorInput>;
+  language?: Maybe<StringQueryOperatorInput>;
 };
 
 export type MarkdownRemarkFieldsFilterInput = {
   readingTime?: Maybe<MarkdownRemarkFieldsReadingTimeFilterInput>;
   slug?: Maybe<StringQueryOperatorInput>;
+  collection?: Maybe<StringQueryOperatorInput>;
 };
 
 export type MarkdownRemarkFieldsReadingTimeFilterInput = {
@@ -1437,7 +1400,7 @@ export type FileFieldsEnum =
   | 'childrenMarkdownRemark___frontmatter___date'
   | 'childrenMarkdownRemark___frontmatter___description'
   | 'childrenMarkdownRemark___frontmatter___tags'
-  | 'childrenMarkdownRemark___frontmatter___lang'
+  | 'childrenMarkdownRemark___frontmatter___language'
   | 'childrenMarkdownRemark___excerpt'
   | 'childrenMarkdownRemark___rawMarkdownBody'
   | 'childrenMarkdownRemark___fileAbsolutePath'
@@ -1446,6 +1409,7 @@ export type FileFieldsEnum =
   | 'childrenMarkdownRemark___fields___readingTime___time'
   | 'childrenMarkdownRemark___fields___readingTime___words'
   | 'childrenMarkdownRemark___fields___slug'
+  | 'childrenMarkdownRemark___fields___collection'
   | 'childrenMarkdownRemark___html'
   | 'childrenMarkdownRemark___htmlAst'
   | 'childrenMarkdownRemark___excerptAst'
@@ -1500,7 +1464,7 @@ export type FileFieldsEnum =
   | 'childMarkdownRemark___frontmatter___date'
   | 'childMarkdownRemark___frontmatter___description'
   | 'childMarkdownRemark___frontmatter___tags'
-  | 'childMarkdownRemark___frontmatter___lang'
+  | 'childMarkdownRemark___frontmatter___language'
   | 'childMarkdownRemark___excerpt'
   | 'childMarkdownRemark___rawMarkdownBody'
   | 'childMarkdownRemark___fileAbsolutePath'
@@ -1509,6 +1473,7 @@ export type FileFieldsEnum =
   | 'childMarkdownRemark___fields___readingTime___time'
   | 'childMarkdownRemark___fields___readingTime___words'
   | 'childMarkdownRemark___fields___slug'
+  | 'childMarkdownRemark___fields___collection'
   | 'childMarkdownRemark___html'
   | 'childMarkdownRemark___htmlAst'
   | 'childMarkdownRemark___excerptAst'
@@ -2137,21 +2102,10 @@ export type SiteSiteMetadataFilterInput = {
   title?: Maybe<StringQueryOperatorInput>;
   description?: Maybe<StringQueryOperatorInput>;
   author?: Maybe<StringQueryOperatorInput>;
-  aboutMe?: Maybe<StringQueryOperatorInput>;
   siteUrl?: Maybe<StringQueryOperatorInput>;
-  contacts?: Maybe<SiteSiteMetadataContactsFilterListInput>;
   language?: Maybe<StringQueryOperatorInput>;
   repository?: Maybe<StringQueryOperatorInput>;
   image?: Maybe<StringQueryOperatorInput>;
-};
-
-export type SiteSiteMetadataContactsFilterListInput = {
-  elemMatch?: Maybe<SiteSiteMetadataContactsFilterInput>;
-};
-
-export type SiteSiteMetadataContactsFilterInput = {
-  link?: Maybe<StringQueryOperatorInput>;
-  label?: Maybe<StringQueryOperatorInput>;
 };
 
 export type SiteConnection = {
@@ -2204,11 +2158,7 @@ export type SiteFieldsEnum =
   | 'siteMetadata___title'
   | 'siteMetadata___description'
   | 'siteMetadata___author'
-  | 'siteMetadata___aboutMe'
   | 'siteMetadata___siteUrl'
-  | 'siteMetadata___contacts'
-  | 'siteMetadata___contacts___link'
-  | 'siteMetadata___contacts___label'
   | 'siteMetadata___language'
   | 'siteMetadata___repository'
   | 'siteMetadata___image'
@@ -2564,40 +2514,8 @@ export type SiteFunctionSortInput = {
 
 export type SitePageContextFilterInput = {
   slug?: Maybe<StringQueryOperatorInput>;
-  previous?: Maybe<SitePageContextPreviousFilterInput>;
-  next?: Maybe<SitePageContextNextFilterInput>;
   tag?: Maybe<StringQueryOperatorInput>;
-  lang?: Maybe<StringQueryOperatorInput>;
-};
-
-export type SitePageContextPreviousFilterInput = {
-  fields?: Maybe<SitePageContextPreviousFieldsFilterInput>;
-  frontmatter?: Maybe<SitePageContextPreviousFrontmatterFilterInput>;
-};
-
-export type SitePageContextPreviousFieldsFilterInput = {
-  slug?: Maybe<StringQueryOperatorInput>;
-};
-
-export type SitePageContextPreviousFrontmatterFilterInput = {
-  tags?: Maybe<StringQueryOperatorInput>;
-  title?: Maybe<StringQueryOperatorInput>;
-  lang?: Maybe<StringQueryOperatorInput>;
-};
-
-export type SitePageContextNextFilterInput = {
-  fields?: Maybe<SitePageContextNextFieldsFilterInput>;
-  frontmatter?: Maybe<SitePageContextNextFrontmatterFilterInput>;
-};
-
-export type SitePageContextNextFieldsFilterInput = {
-  slug?: Maybe<StringQueryOperatorInput>;
-};
-
-export type SitePageContextNextFrontmatterFilterInput = {
-  tags?: Maybe<StringQueryOperatorInput>;
-  title?: Maybe<StringQueryOperatorInput>;
-  lang?: Maybe<StringQueryOperatorInput>;
+  language?: Maybe<StringQueryOperatorInput>;
 };
 
 export type SitePluginFilterInput = {
@@ -2687,7 +2605,6 @@ export type SitePluginPluginOptionsPluginsFilterInput = {
   pluginOptions?: Maybe<SitePluginPluginOptionsPluginsPluginOptionsFilterInput>;
   nodeAPIs?: Maybe<StringQueryOperatorInput>;
   browserAPIs?: Maybe<StringQueryOperatorInput>;
-  ssrAPIs?: Maybe<StringQueryOperatorInput>;
   pluginFilepath?: Maybe<StringQueryOperatorInput>;
 };
 
@@ -2714,6 +2631,7 @@ export type SitePluginPackageJsonFilterInput = {
   description?: Maybe<StringQueryOperatorInput>;
   version?: Maybe<StringQueryOperatorInput>;
   main?: Maybe<StringQueryOperatorInput>;
+  author?: Maybe<StringQueryOperatorInput>;
   license?: Maybe<StringQueryOperatorInput>;
   dependencies?: Maybe<SitePluginPackageJsonDependenciesFilterListInput>;
   devDependencies?: Maybe<SitePluginPackageJsonDevDependenciesFilterListInput>;
@@ -2887,16 +2805,8 @@ export type SitePageFieldsEnum =
   | 'internal___type'
   | 'isCreatedByStatefulCreatePages'
   | 'context___slug'
-  | 'context___previous___fields___slug'
-  | 'context___previous___frontmatter___tags'
-  | 'context___previous___frontmatter___title'
-  | 'context___previous___frontmatter___lang'
-  | 'context___next___fields___slug'
-  | 'context___next___frontmatter___tags'
-  | 'context___next___frontmatter___title'
-  | 'context___next___frontmatter___lang'
   | 'context___tag'
-  | 'context___lang'
+  | 'context___language'
   | 'pluginCreator___resolve'
   | 'pluginCreator___name'
   | 'pluginCreator___version'
@@ -2911,7 +2821,6 @@ export type SitePageFieldsEnum =
   | 'pluginCreator___pluginOptions___plugins___version'
   | 'pluginCreator___pluginOptions___plugins___nodeAPIs'
   | 'pluginCreator___pluginOptions___plugins___browserAPIs'
-  | 'pluginCreator___pluginOptions___plugins___ssrAPIs'
   | 'pluginCreator___pluginOptions___plugins___pluginFilepath'
   | 'pluginCreator___pluginOptions___codegen'
   | 'pluginCreator___pluginOptions___displayName'
@@ -2971,6 +2880,7 @@ export type SitePageFieldsEnum =
   | 'pluginCreator___packageJson___description'
   | 'pluginCreator___packageJson___version'
   | 'pluginCreator___packageJson___main'
+  | 'pluginCreator___packageJson___author'
   | 'pluginCreator___packageJson___license'
   | 'pluginCreator___packageJson___dependencies'
   | 'pluginCreator___packageJson___dependencies___name'
@@ -3160,7 +3070,6 @@ export type SitePluginFieldsEnum =
   | 'pluginOptions___plugins___pluginOptions___showLineNumbers'
   | 'pluginOptions___plugins___nodeAPIs'
   | 'pluginOptions___plugins___browserAPIs'
-  | 'pluginOptions___plugins___ssrAPIs'
   | 'pluginOptions___plugins___pluginFilepath'
   | 'pluginOptions___codegen'
   | 'pluginOptions___displayName'
@@ -3220,6 +3129,7 @@ export type SitePluginFieldsEnum =
   | 'packageJson___description'
   | 'packageJson___version'
   | 'packageJson___main'
+  | 'packageJson___author'
   | 'packageJson___license'
   | 'packageJson___dependencies'
   | 'packageJson___dependencies___name'
@@ -3604,7 +3514,7 @@ export type MarkdownRemarkFieldsEnum =
   | 'frontmatter___date'
   | 'frontmatter___description'
   | 'frontmatter___tags'
-  | 'frontmatter___lang'
+  | 'frontmatter___language'
   | 'excerpt'
   | 'rawMarkdownBody'
   | 'fileAbsolutePath'
@@ -3613,6 +3523,7 @@ export type MarkdownRemarkFieldsEnum =
   | 'fields___readingTime___time'
   | 'fields___readingTime___words'
   | 'fields___slug'
+  | 'fields___collection'
   | 'html'
   | 'htmlAst'
   | 'excerptAst'
@@ -3968,58 +3879,48 @@ export type ImageSharpSortInput = {
   order?: Maybe<Array<Maybe<SortOrderEnum>>>;
 };
 
-export type Unnamed_1_QueryVariables = Exact<{ [key: string]: never; }>;
+export type AboutMeComponentQueryVariables = Exact<{ [key: string]: never; }>;
 
 
-export type Unnamed_1_Query = { site?: Maybe<{ siteMetadata?: Maybe<Pick<SiteSiteMetadata, 'aboutMe'>> }> };
+export type AboutMeComponentQuery = { aboutMe?: Maybe<Pick<MarkdownRemark, 'html'>> };
 
-export type Unnamed_2_QueryVariables = Exact<{ [key: string]: never; }>;
-
-
-export type Unnamed_2_Query = { site?: Maybe<{ siteMetadata?: Maybe<Pick<SiteSiteMetadata, 'language'>> }> };
-
-export type Unnamed_3_QueryVariables = Exact<{ [key: string]: never; }>;
+export type FooterComponentQueryVariables = Exact<{ [key: string]: never; }>;
 
 
-export type Unnamed_3_Query = { site?: Maybe<{ siteMetadata?: Maybe<Pick<SiteSiteMetadata, 'repository'>> }> };
+export type FooterComponentQuery = { site?: Maybe<{ siteMetadata?: Maybe<Pick<SiteSiteMetadata, 'repository'>> }> };
 
-export type Unnamed_4_QueryVariables = Exact<{ [key: string]: never; }>;
-
-
-export type Unnamed_4_Query = { site?: Maybe<{ siteMetadata?: Maybe<Pick<SiteSiteMetadata, 'author'>> }> };
-
-export type Unnamed_5_QueryVariables = Exact<{ [key: string]: never; }>;
+export type HeaderComponentQueryVariables = Exact<{ [key: string]: never; }>;
 
 
-export type Unnamed_5_Query = { site?: Maybe<{ siteMetadata?: Maybe<Pick<SiteSiteMetadata, 'title' | 'description' | 'author' | 'language' | 'image'>> }> };
+export type HeaderComponentQuery = { site?: Maybe<{ siteMetadata?: Maybe<Pick<SiteSiteMetadata, 'author'>> }> };
 
-export type Unnamed_6_QueryVariables = Exact<{ [key: string]: never; }>;
-
-
-export type Unnamed_6_Query = { site?: Maybe<{ siteMetadata?: Maybe<{ contacts?: Maybe<Array<Maybe<Pick<SiteSiteMetadataContacts, 'label' | 'link'>>>> }> }> };
-
-export type SearchArticlesQueryVariables = Exact<{ [key: string]: never; }>;
+export type MetatagsComponentQueryVariables = Exact<{ [key: string]: never; }>;
 
 
-export type SearchArticlesQuery = { articles: { nodes: Array<(
+export type MetatagsComponentQuery = { site?: Maybe<{ siteMetadata?: Maybe<Pick<SiteSiteMetadata, 'title' | 'description' | 'author' | 'language' | 'image'>> }> };
+
+export type SearchComponentQueryVariables = Exact<{ [key: string]: never; }>;
+
+
+export type SearchComponentQuery = { articles: { nodes: Array<(
       Pick<MarkdownRemark, 'id'>
-      & { fields?: Maybe<Pick<MarkdownRemarkFields, 'slug'>>, frontmatter?: Maybe<Pick<MarkdownRemarkFrontmatter, 'title' | 'description' | 'lang'>> }
+      & { fields?: Maybe<Pick<MarkdownRemarkFields, 'slug'>>, frontmatter?: Maybe<Pick<MarkdownRemarkFrontmatter, 'title' | 'description'>> }
     )> } };
 
-export type ArticlePageQueryVariables = Exact<{
+export type ArticleTemplateQueryVariables = Exact<{
   slug: Scalars['String'];
 }>;
 
 
-export type ArticlePageQuery = { article?: Maybe<(
+export type ArticleTemplateQuery = { article?: Maybe<(
     Pick<MarkdownRemark, 'excerpt' | 'html'>
-    & { fields?: Maybe<{ readingTime?: Maybe<Pick<MarkdownRemarkFieldsReadingTime, 'minutes'>> }>, frontmatter?: Maybe<Pick<MarkdownRemarkFrontmatter, 'title' | 'date' | 'description' | 'tags' | 'lang'>> }
+    & { fields?: Maybe<{ readingTime?: Maybe<Pick<MarkdownRemarkFieldsReadingTime, 'minutes'>> }>, frontmatter?: Maybe<Pick<MarkdownRemarkFrontmatter, 'title' | 'date' | 'description' | 'tags' | 'language'>> }
   )> };
 
-export type IndexPageQueryVariables = Exact<{ [key: string]: never; }>;
+export type IndexTemplateQueryVariables = Exact<{ [key: string]: never; }>;
 
 
-export type IndexPageQuery = { articles: { group: Array<(
+export type IndexTemplateQuery = { articles: { group: Array<(
       Pick<MarkdownRemarkGroupConnection, 'totalCount'>
       & { tag: MarkdownRemarkGroupConnection['fieldValue'] }
     )>, edges: Array<{ node: (
@@ -4027,37 +3928,47 @@ export type IndexPageQuery = { articles: { group: Array<(
         & { fields?: Maybe<(
           Pick<MarkdownRemarkFields, 'slug'>
           & { readingTime?: Maybe<Pick<MarkdownRemarkFieldsReadingTime, 'minutes'>> }
-        )>, frontmatter?: Maybe<Pick<MarkdownRemarkFrontmatter, 'date' | 'title' | 'description' | 'tags' | 'lang'>> }
+        )>, frontmatter?: Maybe<Pick<MarkdownRemarkFrontmatter, 'date' | 'title' | 'description' | 'tags' | 'language'>> }
       ) }> } };
 
-export type LanguagePageQueryVariables = Exact<{
-  lang?: Maybe<Scalars['String']>;
+export type LanguageTemplateQueryVariables = Exact<{
+  language?: Maybe<Scalars['String']>;
 }>;
 
 
-export type LanguagePageQuery = { articles: (
+export type LanguageTemplateQuery = { articles: (
     Pick<MarkdownRemarkConnection, 'totalCount'>
     & { edges: Array<{ node: (
         Pick<MarkdownRemark, 'excerpt'>
         & { fields?: Maybe<(
           Pick<MarkdownRemarkFields, 'slug'>
           & { readingTime?: Maybe<Pick<MarkdownRemarkFieldsReadingTime, 'minutes'>> }
-        )>, frontmatter?: Maybe<Pick<MarkdownRemarkFrontmatter, 'date' | 'title' | 'tags' | 'description' | 'lang'>> }
+        )>, frontmatter?: Maybe<Pick<MarkdownRemarkFrontmatter, 'date' | 'title' | 'tags' | 'description' | 'language'>> }
       ) }> }
   ) };
 
-export type TagsPageQueryVariables = Exact<{
+export type PageTemplateQueryVariables = Exact<{
+  slug: Scalars['String'];
+}>;
+
+
+export type PageTemplateQuery = { article?: Maybe<(
+    Pick<MarkdownRemark, 'html'>
+    & { frontmatter?: Maybe<Pick<MarkdownRemarkFrontmatter, 'title'>> }
+  )> };
+
+export type TagsTemplateQueryVariables = Exact<{
   tag?: Maybe<Scalars['String']>;
 }>;
 
 
-export type TagsPageQuery = { articles: (
+export type TagsTemplateQuery = { articles: (
     Pick<MarkdownRemarkConnection, 'totalCount'>
     & { edges: Array<{ node: (
         Pick<MarkdownRemark, 'excerpt'>
         & { fields?: Maybe<(
           Pick<MarkdownRemarkFields, 'slug'>
           & { readingTime?: Maybe<Pick<MarkdownRemarkFieldsReadingTime, 'minutes'>> }
-        )>, frontmatter?: Maybe<Pick<MarkdownRemarkFrontmatter, 'date' | 'title' | 'tags' | 'description' | 'lang'>> }
+        )>, frontmatter?: Maybe<Pick<MarkdownRemarkFrontmatter, 'date' | 'title' | 'tags' | 'description' | 'language'>> }
       ) }> }
   ) };

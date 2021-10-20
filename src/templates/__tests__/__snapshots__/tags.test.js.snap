@@ -8,23 +8,109 @@ exports[`<TagsPage> should render properly 1`] = `
   margin-top: 40px;
 }
 
+.c1 {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
 .c3 {
   margin: 0 0 60px 0;
   font-weight: 400;
   color: #FFFFFF;
 }
 
-.c2 {
-  font-size: 22px;
-  background: #424833;
-  display: inline;
-  padding: 5px;
+.c4 {
+  margin: 20px 0 0 0;
 }
 
-.c1 {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 0 20px;
+.c5 {
+  font-family: 'Raleway',sans-serif;
+  font-weight: 700;
+  font-size: 36px;
+  margin: 0;
+}
+
+.c6 {
+  color: #FFFFFF;
+  box-shadow: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c6:hover,
+.c6:focus {
+  border-bottom: 1px solid #FFFFFF;
+  outline: none;
+}
+
+.c8 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-bottom: 0;
+  padding: 0;
+}
+
+.c7 {
+  color: #9a9a9a;
+  font-size: 18px;
+  margin: 5px 0;
+}
+
+.c9 {
+  line-height: 1.5;
+}
+
+.c9 a {
+  color: #424833;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  border-bottom: 1px solid #0C0D0E;
+}
+
+.c9 a:hover,
+.c9 a:focus {
+  border-bottom: 1px solid #424833;
+  outline: none;
+}
+
+.c9 blockquote {
+  border-left: 5px solid #424833;
+  padding-left: 20px;
+}
+
+.c9 .gatsby-highlight {
+  padding: 10px 0;
+}
+
+.c9 pre[class*='language-'],
+.c9 code[class*='language-'],
+.c9 .gatsby-highlight {
+  background-color: #0C0D0E;
+  font-family: monospace;
+  white-space: pre-wrap;
+}
+
+.c9 .line-numbers-rows,
+.c9 .line-numbers-rows span::before {
+  border: 0.5px solid #0C0D0E;
+}
+
+.c9 img {
+  box-shadow: none !important;
+}
+
+.c2 {
+  font-size: 28px;
+  background: #424833;
+  display: inline-block;
+  padding: 5px;
+  margin: 40px 0 20px 0;
 }
 
 <body>
@@ -46,25 +132,94 @@ exports[`<TagsPage> should render properly 1`] = `
           <h1
             class="c2"
           >
-            Tech Stuff (2)
+            Tech Stuff
+             (
+            2
+            )
           </h1>
+        </main>
+      </section>
+      <section
+        class="c1"
+      >
+        <main>
           <article
             class="c3"
-            data-testid="tags-page-article"
+            data-testid="article-item"
           >
-            <p>
-              ArticleHeader
-            </p>
-            Awesome first article
+            <header
+              class="c4"
+            >
+              <h3
+                class="c5"
+              >
+                <a
+                  class="c6"
+                  data-testid="article-header-custom-link"
+                  href="/path-to-article"
+                >
+                  Title 1
+                </a>
+              </h3>
+              <p
+                class="c7"
+              >
+                30/10/2020
+                 
+                 · 5 minutes of reading
+              </p>
+              <ul
+                class="c8"
+                data-testid="article-header-tags"
+              />
+            </header>
+            <section
+              class="c9"
+            >
+              Awesome first article
+            </section>
           </article>
+        </main>
+      </section>
+      <section
+        class="c1"
+      >
+        <main>
           <article
             class="c3"
-            data-testid="tags-page-article"
+            data-testid="article-item"
           >
-            <p>
-              ArticleHeader
-            </p>
-            Awesome second article
+            <header
+              class="c4"
+            >
+              <h3
+                class="c5"
+              >
+                <a
+                  class="c6"
+                  data-testid="article-header-custom-link"
+                  href="/path-to-article-2"
+                >
+                  Title 2
+                </a>
+              </h3>
+              <p
+                class="c7"
+              >
+                30/10/2020
+                 
+                 · 2 minutos de leitura
+              </p>
+              <ul
+                class="c8"
+                data-testid="article-header-tags"
+              />
+            </header>
+            <section
+              class="c9"
+            >
+              Awesome second article
+            </section>
           </article>
         </main>
       </section>

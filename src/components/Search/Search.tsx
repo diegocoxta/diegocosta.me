@@ -6,7 +6,7 @@ import Fuse from 'fuse.js';
 
 import Container from '~/components/Container';
 
-import { SearchArticlesQuery } from '~/../graphql-types';
+import { SearchComponentQuery } from '~/../graphql-types';
 
 const Content = styled.div`
   position: relative;
@@ -84,7 +84,7 @@ const ResultItemDescription = styled.p`
   margin: 0%;
 `;
 
-export type ArticleProps = SearchArticlesQuery['articles']['nodes'][0];
+export type ArticleProps = SearchComponentQuery['articles']['nodes'][0];
 
 interface SearchProps {
   combobox: UseComboboxReturnValue<Fuse.FuseResult<ArticleProps>>;
@@ -104,7 +104,7 @@ export default function Search({ articles, combobox }: SearchProps): React.React
               <ResultLink
                 key={article.item.id}
                 data-testid="search-results-link"
-                to={`/${article?.item?.frontmatter?.lang}${article?.item?.fields?.slug}`}
+                to={article?.item?.fields?.slug}
                 {...combobox.getItemProps({ index, item: article })}
               >
                 <ResultItemTitle data-testid="search-results-title">

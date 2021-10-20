@@ -140,7 +140,7 @@ exports[`<Search /> should render properly 1`] = `
             <a
               class="c5"
               data-testid="search-results-link"
-              href="/undefined/como-migrar-para-o-windows-8-1/"
+              href="/como-migrar-para-o-windows-8-1/"
             >
               <h3
                 class="c6"
@@ -158,7 +158,7 @@ exports[`<Search /> should render properly 1`] = `
             <a
               class="c5"
               data-testid="search-results-link"
-              href="/undefined/enviando-aplicacao-heroku-windows/"
+              href="/enviando-aplicacao-heroku-windows/"
             >
               <h3
                 class="c6"
@@ -176,7 +176,7 @@ exports[`<Search /> should render properly 1`] = `
             <a
               class="c5"
               data-testid="search-results-link"
-              href="/undefined/atualizando-programas-cask-homebrew-macos/"
+              href="/atualizando-programas-cask-homebrew-macos/"
             >
               <h3
                 class="c6"

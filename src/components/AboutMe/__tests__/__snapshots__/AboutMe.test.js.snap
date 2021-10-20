@@ -7,20 +7,72 @@ exports[`<AboutMe /> should render properly 1`] = `
   padding: 0 20px;
 }
 
-.c2 {
+.c1 p {
   font-size: 18px;
   line-height: 1.4;
 }
 
-@media (min-width:760px) {
-  .c2 {
-    font-size: 24px;
-  }
+.c1 ul {
+  margin: 0;
+  padding: 0;
+}
+
+.c1 li {
+  list-style: none;
+  font-size: 18px;
+  font-weight: 900;
+  margin: 0 24px 5px 0;
+}
+
+.c1 li a {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0;
+  text-transform: uppercase;
+}
+
+.c1 li a:after {
+  content: '.';
+  display: block;
+  font-size: 38px;
+  line-height: 0.2;
 }
 
 @media (min-width:760px) {
   .c1 {
     padding-bottom: 40px;
+  }
+}
+
+@media (min-width:760px) {
+  .c1 p {
+    font-size: 24px;
+  }
+}
+
+@media (min-width:760px) {
+  .c1 ul {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+@media (min-width:760px) {
+  .c1 li {
+    font-size: 20px;
+    margin: 0 24px 0 0;
+  }
+}
+
+@media (min-width:760px) {
+  .c1 li a:after {
+    line-height: 0.3;
   }
 }
 
@@ -33,24 +85,7 @@ exports[`<AboutMe /> should render properly 1`] = `
         <div
           class="c1"
         >
-          <p
-            class="c2"
-          >
-            A passionate tech manager who loves the intersection of computers and people, I spend my days trying to help tech teams deliver their max potential.
-          </p>
-          <p
-            class="c2"
-          >
-            Currently at Nubank, I am working to simplify our users' relationship with their financial lives by providing a simple but powerful mobile experience.
-          </p>
-          <p
-            class="c2"
-          >
-            You can hear more about here:
-          </p>
-          <p>
-            Navigation
-          </p>
+          You can hear more about here:
         </div>
       </main>
     </section>

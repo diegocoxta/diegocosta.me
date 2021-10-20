@@ -5,49 +5,45 @@ import Page from '~/components/Page';
 import Metatags from '~/components/Metatags';
 import AboutMe from '~/components/AboutMe';
 import Search from '~/components/Search';
-import ArticleHeader from '~/components/ArticleHeader';
 import Article from '~/components/Article';
 import Divisor from '~/components/Divisor';
-import Container from '~/components/Container';
 
-import { IndexPageQuery } from '~/../graphql-types';
+import { IndexTemplateQuery } from '~/../graphql-types';
 
-interface IndexPageProps extends PageRendererProps {
-  data: IndexPageQuery;
+interface IndexTemplateProps extends PageRendererProps {
+  data: IndexTemplateQuery;
 }
 
-export default function IndexPage({ data }: IndexPageProps): React.ReactElement {
-  const {
-    articles: { edges },
-  } = data;
+export default function IndexTemplate({ data }: IndexTemplateProps): React.ReactElement {
+  const { articles } = data;
   return (
     <Page>
       <Metatags />
       <AboutMe />
       <Divisor />
       <Search />
-      <Container>
-        {edges.map(({ node: { frontmatter, fields, excerpt } }, index: number) => (
-          <Article key={`article-${index}`} data-testid="index-page-article">
-            <ArticleHeader
-              title={frontmatter?.title ?? ''}
-              date={frontmatter?.date}
-              url={fields?.slug}
-              tags={frontmatter?.tags as string[]}
-              readingTime={fields?.readingTime?.minutes ?? 0}
-              lang={frontmatter?.lang}
-            />
-            {frontmatter?.description || excerpt}
-          </Article>
-        ))}
-      </Container>
+      {articles.edges.map(({ node: { frontmatter, fields, excerpt } }, index: number) => (
+        <Article
+          key={`article-${index}`}
+          title={frontmatter?.title ?? ''}
+          date={frontmatter?.date}
+          url={fields?.slug}
+          tags={frontmatter?.tags as string[]}
+          readingTime={fields?.readingTime?.minutes ?? 0}
+          language={frontmatter?.language}
+          content={frontmatter?.description || excerpt}
+        />
+      ))}
     </Page>
   );
 }
 
 export const pageQuery = graphql`
-  query IndexPage {
-    articles: allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
+  query IndexTemplate {
+    articles: allMarkdownRemark(
+      sort: { fields: [frontmatter___date], order: DESC }
+      filter: { fields: { collection: { eq: "articles" } } }
+    ) {
       group(field: frontmatter___tags) {
         tag: fieldValue
         totalCount
@@ -66,7 +62,7 @@ export const pageQuery = graphql`
             title
             description
             tags
-            lang
+            language
           }
         }
       }
