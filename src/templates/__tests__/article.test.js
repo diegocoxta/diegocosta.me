@@ -3,7 +3,6 @@ import { render } from '@testing-library/react';
 
 jest.mock('../../components/Header', () => () => <p>Header</p>);
 jest.mock('../../components/Footer', () => () => <p>Footer</p>);
-jest.mock('../../components/ArticleHeader', () => () => <p>ArticleHeader</p>);
 jest.mock('../../components/Metatags', () => () => <p>Metatags</p>);
 
 import ArticlePage from '../article';

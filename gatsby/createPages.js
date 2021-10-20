@@ -51,12 +51,8 @@ module.exports = async ({ graphql, actions }) => {
   const pages = content.filter((edge) => edge.node.fields.collection === 'pages');
 
   articles.forEach((article) => {
-    const articlePath = article.node.frontmatter.language
-      ? `/${article.node.frontmatter.language}${article.node.fields.slug}`
-      : article.node.fields.slug;
-
     actions.createPage({
-      path: articlePath,
+      path: article.node.fields.slug,
       component: path.resolve('./src/templates/article.tsx'),
       context: {
         slug: article.node.fields.slug,
@@ -68,7 +64,7 @@ module.exports = async ({ graphql, actions }) => {
   pages.forEach((page) => {
     if (page.node.fields.slug !== '/') {
       actions.createPage({
-        path: kebabCase(page.node.fields.slug),
+        path: page.node.fields.slug,
         component: path.resolve('./src/templates/page.tsx'),
         context: {
           slug: page.node.fields.slug,
@@ -91,7 +87,7 @@ module.exports = async ({ graphql, actions }) => {
   // Create Language Page
   languages.forEach((language) => {
     actions.createPage({
-      path: `/languages/${language.fieldValue}/`,
+      path: `/${language.fieldValue}/`,
       component: path.resolve('./src/templates/languages.tsx'),
       context: {
         language: language.fieldValue,

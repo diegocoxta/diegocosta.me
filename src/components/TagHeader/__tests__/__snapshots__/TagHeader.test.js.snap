@@ -1,0 +1,35 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<TagHeader /> should render properly 1`] = `
+.c0 {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.c1 {
+  font-size: 28px;
+  display: inline-block;
+  padding: 5px;
+  margin: 40px 0 20px 0;
+}
+
+<body>
+  <div>
+    <section
+      class="c0"
+    >
+      <main>
+        <h1
+          class="c1"
+        >
+          John Doe
+           (
+          0
+          )
+        </h1>
+      </main>
+    </section>
+  </div>
+</body>
+`;

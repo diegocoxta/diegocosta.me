@@ -1,10 +1,101 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<IndexPage> should render properly 1`] = `
+.c1 {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
 .c2 {
   margin: 0 0 60px 0;
   font-weight: 400;
   color: #FFFFFF;
+}
+
+.c3 {
+  margin: 20px 0 0 0;
+}
+
+.c4 {
+  font-family: 'Raleway',sans-serif;
+  font-weight: 700;
+  font-size: 36px;
+  margin: 0;
+}
+
+.c5 {
+  color: #FFFFFF;
+  box-shadow: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c5:hover,
+.c5:focus {
+  border-bottom: 1px solid #FFFFFF;
+  outline: none;
+}
+
+.c7 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-bottom: 0;
+  padding: 0;
+}
+
+.c6 {
+  color: #9a9a9a;
+  font-size: 18px;
+  margin: 5px 0;
+}
+
+.c8 {
+  line-height: 1.5;
+}
+
+.c8 a {
+  color: #424833;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  border-bottom: 1px solid #0C0D0E;
+}
+
+.c8 a:hover,
+.c8 a:focus {
+  border-bottom: 1px solid #424833;
+  outline: none;
+}
+
+.c8 blockquote {
+  border-left: 5px solid #424833;
+  padding-left: 20px;
+}
+
+.c8 .gatsby-highlight {
+  padding: 10px 0;
+}
+
+.c8 pre[class*='language-'],
+.c8 code[class*='language-'],
+.c8 .gatsby-highlight {
+  background-color: #0C0D0E;
+  font-family: monospace;
+  white-space: pre-wrap;
+}
+
+.c8 .line-numbers-rows,
+.c8 .line-numbers-rows span::before {
+  border: 0.5px solid #0C0D0E;
+}
+
+.c8 img {
+  box-shadow: none !important;
 }
 
 .c0 {
@@ -12,12 +103,6 @@ exports[`<IndexPage> should render properly 1`] = `
   background-size: 22px 22px;
   height: 120px;
   margin-top: 40px;
-}
-
-.c1 {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 0 20px;
 }
 
 <body>
@@ -44,21 +129,81 @@ exports[`<IndexPage> should render properly 1`] = `
         <main>
           <article
             class="c2"
-            data-testid="index-page-article"
+            data-testid="article-item"
           >
-            <p>
-              ArticleHeader
-            </p>
-            Awesome first article
+            <header
+              class="c3"
+            >
+              <h3
+                class="c4"
+              >
+                <a
+                  class="c5"
+                  data-testid="article-header-custom-link"
+                  href="/path-to-article"
+                >
+                  Title 1
+                </a>
+              </h3>
+              <p
+                class="c6"
+              >
+                30/10/2020
+                 
+                 · 5 minutes of reading
+              </p>
+              <ul
+                class="c7"
+                data-testid="article-header-tags"
+              />
+            </header>
+            <section
+              class="c8"
+            >
+              Awesome first article
+            </section>
           </article>
+        </main>
+      </section>
+      <section
+        class="c1"
+      >
+        <main>
           <article
             class="c2"
-            data-testid="index-page-article"
+            data-testid="article-item"
           >
-            <p>
-              ArticleHeader
-            </p>
-            Awesome second article
+            <header
+              class="c3"
+            >
+              <h3
+                class="c4"
+              >
+                <a
+                  class="c5"
+                  data-testid="article-header-custom-link"
+                  href="/path-to-article-2"
+                >
+                  Title 2
+                </a>
+              </h3>
+              <p
+                class="c6"
+              >
+                30/10/2020
+                 
+                 · 2 minutes of reading
+              </p>
+              <ul
+                class="c7"
+                data-testid="article-header-tags"
+              />
+            </header>
+            <section
+              class="c8"
+            >
+              Awesome second article
+            </section>
           </article>
         </main>
       </section>

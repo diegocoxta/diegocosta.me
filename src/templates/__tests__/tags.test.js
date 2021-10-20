@@ -3,7 +3,6 @@ import { render } from '@testing-library/react';
 
 jest.mock('../../components/Header', () => () => <p>Header</p>);
 jest.mock('../../components/Footer', () => () => <p>Footer</p>);
-jest.mock('../../components/ArticleHeader', () => () => <p>ArticleHeader</p>);
 jest.mock('../../components/Metatags', () => () => <p>Metatags</p>);
 
 import TagsPage from '../tags';
@@ -21,6 +20,7 @@ describe('<TagsPage>', () => {
                 date: '30/10/2020',
                 tags: [],
                 description: 'Awesome first article',
+                language: 'en',
               },
               fields: {
                 slug: '/path-to-article',
@@ -38,6 +38,7 @@ describe('<TagsPage>', () => {
                 date: '30/10/2020',
                 tags: [],
                 description: 'Awesome second article',
+                language: 'pt',
               },
               fields: {
                 slug: '/path-to-article-2',
@@ -55,7 +56,7 @@ describe('<TagsPage>', () => {
     const { baseElement, getAllByTestId, getByText } = render(
       <TagsPage data={data} pageContext={{ tag: 'Tech Stuff' }} />
     );
-    expect(getAllByTestId('tags-page-article').length).toEqual(data.articles.totalCount);
+    expect(getAllByTestId('article-item').length).toEqual(data.articles.totalCount);
     expect(getByText('Awesome second article')).toBeTruthy();
     expect(getByText('Awesome first article')).toBeTruthy();
     expect(getByText(`Tech Stuff (${data.articles.totalCount})`)).toBeTruthy();

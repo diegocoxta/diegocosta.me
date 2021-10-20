@@ -8,17 +8,76 @@ exports[`<NotFoundPage> should render properly 1`] = `
   margin-top: 40px;
 }
 
-.c2 {
-  font-size: 22px;
-  background: #424833;
-  display: inline;
-  padding: 5px;
-}
-
 .c1 {
   max-width: 800px;
   margin: 0 auto;
   padding: 0 20px;
+}
+
+.c2 {
+  margin: 0 0 60px 0;
+  font-weight: 400;
+  color: #FFFFFF;
+}
+
+.c3 {
+  margin: 20px 0 0 0;
+}
+
+.c4 {
+  font-family: 'Raleway',sans-serif;
+  font-weight: 700;
+  font-size: 36px;
+  margin: 0;
+}
+
+.c5 {
+  color: #9a9a9a;
+  font-size: 18px;
+  margin: 5px 0;
+}
+
+.c6 {
+  line-height: 1.5;
+}
+
+.c6 a {
+  color: #424833;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  border-bottom: 1px solid #0C0D0E;
+}
+
+.c6 a:hover,
+.c6 a:focus {
+  border-bottom: 1px solid #424833;
+  outline: none;
+}
+
+.c6 blockquote {
+  border-left: 5px solid #424833;
+  padding-left: 20px;
+}
+
+.c6 .gatsby-highlight {
+  padding: 10px 0;
+}
+
+.c6 pre[class*='language-'],
+.c6 code[class*='language-'],
+.c6 .gatsby-highlight {
+  background-color: #0C0D0E;
+  font-family: monospace;
+  white-space: pre-wrap;
+}
+
+.c6 .line-numbers-rows,
+.c6 .line-numbers-rows span::before {
+  border: 0.5px solid #0C0D0E;
+}
+
+.c6 img {
+  box-shadow: none !important;
 }
 
 <body>
@@ -37,11 +96,30 @@ exports[`<NotFoundPage> should render properly 1`] = `
         class="c1"
       >
         <main>
-          <h1
+          <article
             class="c2"
+            data-testid="article-item"
           >
-            Não encontrado
-          </h1>
+            <header
+              class="c3"
+            >
+              <h3
+                class="c4"
+              >
+                Não encontrado
+              </h3>
+              <p
+                class="c5"
+              >
+                 
+              </p>
+            </header>
+            <section
+              class="c6"
+            >
+              Página não encontrada
+            </section>
+          </article>
         </main>
       </section>
     </main>

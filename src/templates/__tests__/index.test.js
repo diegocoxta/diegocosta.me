@@ -3,7 +3,6 @@ import { render } from '@testing-library/react';
 
 jest.mock('../../components/Header', () => () => <p>Header</p>);
 jest.mock('../../components/Footer', () => () => <p>Footer</p>);
-jest.mock('../../components/ArticleHeader', () => () => <p>ArticleHeader</p>);
 jest.mock('../../components/Metatags', () => () => <p>Metatags</p>);
 jest.mock('../../components/Search', () => () => <p>Search</p>);
 jest.mock('../../components/AboutMe', () => () => <p>AboutMe</p>);
@@ -54,7 +53,7 @@ describe('<IndexPage>', () => {
     };
 
     const { baseElement, getAllByTestId, getByText } = render(<IndexPage data={data} />);
-    expect(getAllByTestId('index-page-article').length).toEqual(2);
+    expect(getAllByTestId('article-item').length).toEqual(2);
     expect(getByText('Awesome second article')).toBeTruthy();
     expect(getByText('Awesome first article')).toBeTruthy();
     expect(baseElement).toMatchSnapshot();

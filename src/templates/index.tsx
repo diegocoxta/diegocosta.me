@@ -5,10 +5,8 @@ import Page from '~/components/Page';
 import Metatags from '~/components/Metatags';
 import AboutMe from '~/components/AboutMe';
 import Search from '~/components/Search';
-import ArticleHeader from '~/components/ArticleHeader';
 import Article from '~/components/Article';
 import Divisor from '~/components/Divisor';
-import Container from '~/components/Container';
 
 import { IndexTemplateQuery } from '~/../graphql-types';
 
@@ -17,30 +15,26 @@ interface IndexTemplateProps extends PageRendererProps {
 }
 
 export default function IndexTemplate({ data }: IndexTemplateProps): React.ReactElement {
-  const {
-    articles: { edges },
-  } = data;
+  const { articles } = data;
   return (
     <Page>
       <Metatags />
       <AboutMe />
       <Divisor />
       <Search />
-      <Container>
-        {edges.map(({ node: { frontmatter, fields, excerpt } }, index: number) => (
-          <Article key={`article-${index}`} data-testid="index-page-article">
-            <ArticleHeader
-              title={frontmatter?.title ?? ''}
-              date={frontmatter?.date}
-              url={fields?.slug}
-              tags={frontmatter?.tags as string[]}
-              readingTime={fields?.readingTime?.minutes ?? 0}
-              lang={frontmatter?.language}
-            />
-            {frontmatter?.description || excerpt}
-          </Article>
-        ))}
-      </Container>
+      {articles.edges.map(({ node: { frontmatter, fields, excerpt } }, index: number) => (
+        <Article
+          key={`article-${index}`}
+          data-testid="index-page-article"
+          title={frontmatter?.title ?? ''}
+          date={frontmatter?.date}
+          url={fields?.slug}
+          tags={frontmatter?.tags as string[]}
+          readingTime={fields?.readingTime?.minutes ?? 0}
+          language={frontmatter?.language}
+          content={frontmatter?.description || excerpt}
+        />
+      ))}
     </Page>
   );
 }

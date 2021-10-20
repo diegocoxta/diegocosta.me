@@ -17,7 +17,6 @@ export default (): React.ReactElement => {
           frontmatter {
             title
             description
-            language
           }
         }
       }
@@ -41,8 +40,7 @@ export default (): React.ReactElement => {
     items: articles,
     onInputValueChange: ({ inputValue }) => inputValue && setArticles(fuse.search<ArticleProps>(inputValue)),
     itemToString: (article) => article?.item?.frontmatter?.title ?? '',
-    onSelectedItemChange: ({ selectedItem }) =>
-      navigate(`/${selectedItem?.item?.frontmatter?.language}${selectedItem?.item?.fields?.slug}`),
+    onSelectedItemChange: ({ selectedItem }) => navigate(selectedItem?.item?.fields?.slug ?? ''),
   });
 
   return <Search combobox={combobox} articles={articles} />;

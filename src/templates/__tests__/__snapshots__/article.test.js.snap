@@ -8,6 +8,12 @@ exports[`<ArticlePage> should render properly 1`] = `
   margin-top: 40px;
 }
 
+.c1 {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
 .c2 {
   margin: 0 0 60px 0;
   font-weight: 400;
@@ -15,52 +21,75 @@ exports[`<ArticlePage> should render properly 1`] = `
 }
 
 .c3 {
+  margin: 20px 0 0 0;
+}
+
+.c4 {
+  font-family: 'Raleway',sans-serif;
+  font-weight: 700;
+  font-size: 36px;
+  margin: 0;
+}
+
+.c6 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-bottom: 0;
+  padding: 0;
+}
+
+.c5 {
+  color: #9a9a9a;
+  font-size: 18px;
+  margin: 5px 0;
+}
+
+.c7 {
   line-height: 1.5;
 }
 
-.c3 a {
+.c7 a {
   color: #424833;
   -webkit-text-decoration: none;
   text-decoration: none;
   border-bottom: 1px solid #0C0D0E;
 }
 
-.c3 a:hover,
-.c3 a:focus {
+.c7 a:hover,
+.c7 a:focus {
   border-bottom: 1px solid #424833;
   outline: none;
 }
 
-.c3 blockquote {
+.c7 blockquote {
   border-left: 5px solid #424833;
   padding-left: 20px;
 }
 
-.c3 .gatsby-highlight {
+.c7 .gatsby-highlight {
   padding: 10px 0;
 }
 
-.c3 pre[class*='language-'],
-.c3 code[class*='language-'],
-.c3 .gatsby-highlight {
+.c7 pre[class*='language-'],
+.c7 code[class*='language-'],
+.c7 .gatsby-highlight {
   background-color: #0C0D0E;
   font-family: monospace;
   white-space: pre-wrap;
 }
 
-.c3 .line-numbers-rows,
-.c3 .line-numbers-rows span::before {
+.c7 .line-numbers-rows,
+.c7 .line-numbers-rows span::before {
   border: 0.5px solid #0C0D0E;
 }
 
-.c3 img {
+.c7 img {
   box-shadow: none !important;
-}
-
-.c1 {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 0 20px;
 }
 
 <body>
@@ -81,12 +110,30 @@ exports[`<ArticlePage> should render properly 1`] = `
         <main>
           <article
             class="c2"
+            data-testid="article-item"
           >
-            <p>
-              ArticleHeader
-            </p>
-            <section
+            <header
               class="c3"
+            >
+              <h3
+                class="c4"
+              >
+                Title 1
+              </h3>
+              <p
+                class="c5"
+              >
+                30/10/2020
+                 
+                 · 5 minutes of reading
+              </p>
+              <ul
+                class="c6"
+                data-testid="article-header-tags"
+              />
+            </header>
+            <section
+              class="c7"
             >
               <p>
                 Post content

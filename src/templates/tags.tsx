@@ -4,10 +4,8 @@ import { graphql, PageRendererProps } from 'gatsby';
 import Page from '~/components/Page';
 import Divisor from '~/components/Divisor';
 import Metatags from '~/components/Metatags';
-import ArticleHeader from '~/components/ArticleHeader';
 import Article from '~/components/Article';
-import PageTitle from '~/components/PageTitle';
-import Container from '~/components/Container';
+import TagHeader from '~/components/TagHeader';
 
 import { TagsTemplateQuery, SitePageContext } from '~/../graphql-types';
 
@@ -17,29 +15,25 @@ interface TagsTemplateProps extends PageRendererProps {
 }
 
 export default function Tags({ data, pageContext }: TagsTemplateProps): React.ReactElement {
-  const {
-    articles: { edges, totalCount },
-  } = data;
+  const { articles } = data;
   return (
     <Page>
       <Metatags title={`Publicações sobre ${pageContext.tag}`} />
       <Divisor />
-      <Container>
-        <PageTitle>{`${pageContext.tag} (${totalCount})`}</PageTitle>
-        {edges.map(({ node: { frontmatter, fields, excerpt } }, index) => (
-          <Article key={`article-${index}`} data-testid="tags-page-article">
-            <ArticleHeader
-              title={frontmatter?.title ?? ''}
-              tags={frontmatter?.tags as string[]}
-              date={frontmatter?.date}
-              url={fields?.slug}
-              lang={frontmatter?.language}
-              readingTime={fields?.readingTime?.minutes ?? 0}
-            />
-            {frontmatter?.description || excerpt}
-          </Article>
-        ))}
-      </Container>
+      <TagHeader name={pageContext.tag ?? ''} count={articles.totalCount} />
+      {articles.edges.map(({ node: { frontmatter, fields, excerpt } }, index) => (
+        <Article
+          key={`article-${index}`}
+          data-testid="tags-page-article"
+          title={frontmatter?.title ?? ''}
+          tags={frontmatter?.tags as string[]}
+          date={frontmatter?.date}
+          url={fields?.slug}
+          language={frontmatter?.language}
+          readingTime={fields?.readingTime?.minutes ?? 0}
+          content={frontmatter?.description || excerpt}
+        />
+      ))}
     </Page>
   );
 }
