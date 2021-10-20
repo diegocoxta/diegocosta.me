@@ -25,7 +25,6 @@ export default function IndexTemplate({ data }: IndexTemplateProps): React.React
       {articles.edges.map(({ node: { frontmatter, fields, excerpt } }, index: number) => (
         <Article
           key={`article-${index}`}
-          data-testid="index-page-article"
           title={frontmatter?.title ?? ''}
           date={frontmatter?.date}
           url={fields?.slug}

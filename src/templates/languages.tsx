@@ -26,7 +26,6 @@ export default function Tags({ data }: TagsPageProps): React.ReactElement {
       {articles.edges.map(({ node: { frontmatter, fields, excerpt } }, index) => (
         <Article
           key={`article-${index}`}
-          data-testid="languages-page-article"
           title={frontmatter?.title ?? ''}
           tags={frontmatter?.tags as string[]}
           date={frontmatter?.date}

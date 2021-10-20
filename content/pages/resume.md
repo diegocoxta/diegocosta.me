@@ -1,5 +1,0 @@
----
-title: Resume
----
-
-Página Resume
