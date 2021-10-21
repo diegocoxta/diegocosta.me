@@ -102,7 +102,7 @@ exports[`<IndexPage> should render properly 1`] = `
 }
 
 .c9 a {
-  color: #424833;
+  color: #626D4A;
   -webkit-text-decoration: none;
   text-decoration: none;
   border-bottom: 1px solid #0C0D0E;
@@ -110,12 +110,12 @@ exports[`<IndexPage> should render properly 1`] = `
 
 .c9 a:hover,
 .c9 a:focus {
-  border-bottom: 1px solid #424833;
+  border-bottom: 1px solid #626D4A;
   outline: none;
 }
 
 .c9 blockquote {
-  border-left: 5px solid #424833;
+  border-left: 5px solid #626D4A;
   padding-left: 20px;
 }
 
