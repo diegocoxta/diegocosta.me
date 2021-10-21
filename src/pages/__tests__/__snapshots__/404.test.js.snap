@@ -42,7 +42,7 @@ exports[`<NotFoundPage> should render properly 1`] = `
 }
 
 .c6 a {
-  color: #424833;
+  color: #626D4A;
   -webkit-text-decoration: none;
   text-decoration: none;
   border-bottom: 1px solid #0C0D0E;
@@ -50,12 +50,12 @@ exports[`<NotFoundPage> should render properly 1`] = `
 
 .c6 a:hover,
 .c6 a:focus {
-  border-bottom: 1px solid #424833;
+  border-bottom: 1px solid #626D4A;
   outline: none;
 }
 
 .c6 blockquote {
-  border-left: 5px solid #424833;
+  border-left: 5px solid #626D4A;
   padding-left: 20px;
 }
 
