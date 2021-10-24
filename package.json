@@ -87,15 +87,13 @@
     "test": "jest",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
-    "stylelint": "stylelint src",
-    "prepare": "husky install"
+    "stylelint": "stylelint src"
   },
   "lint-staged": {
     "*.{ts,tsx,js}": [
       "yarn lint",
       "yarn stylelint",
-      "yarn prettier",
-      "stylelint"
+      "yarn prettier"
     ]
   }
 }

@@ -7,10 +7,10 @@ import Metatags from '~/components/Metatags';
 import Article from '~/components/Article';
 import TagHeader from '~/components/TagHeader';
 
-import { TagsTemplateQuery, SitePageContext } from '~/../graphql-types';
+import { TagsTemplateQuery, TagsTemplateQueryVariables } from '~/../graphql-types';
 
 interface TagsTemplateProps extends PageRendererProps {
-  pageContext: SitePageContext;
+  pageContext: TagsTemplateQueryVariables;
   data: TagsTemplateQuery;
 }
 
