@@ -120,6 +120,7 @@ export interface ArticleProps {
   date?: string;
   tags?: string[] | null;
   content?: string | null;
+  children?: React.ReactElement;
 }
 
 export default function Article(props: ArticleProps): React.ReactElement {
@@ -166,6 +167,7 @@ export default function Article(props: ArticleProps): React.ReactElement {
           {Tags}
         </Header>
         {props.content && <Body dangerouslySetInnerHTML={{ __html: props.content }} />}
+        {props.children && <Body>{props.children}</Body>}
       </Content>
     </Container>
   );

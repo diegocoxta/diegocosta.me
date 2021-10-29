@@ -359,3 +359,255 @@ exports[`<Article /> should render properly in Poruguese 1`] = `
   </div>
 </body>
 `;
+
+exports[`<Article /> should render properly the children 1`] = `
+<body>
+  .c0 {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.c1 {
+  margin: 0 0 60px 0;
+  font-weight: 400;
+}
+
+.c2 {
+  margin: 20px 0 0 0;
+}
+
+.c3 {
+  font-family: 'Raleway',sans-serif;
+  font-weight: 700;
+  font-size: 36px;
+  margin: 0;
+}
+
+.c4 {
+  box-shadow: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c4:hover,
+.c4:focus {
+  border-bottom: 1px solid;
+  outline: none;
+}
+
+.c5 {
+  font-size: 18px;
+  margin: 5px 0;
+}
+
+.c6 {
+  line-height: 1.5;
+}
+
+.c6 a {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  border-bottom: 1px solid;
+}
+
+.c6 a:hover,
+.c6 a:focus {
+  border-bottom: 1px solid;
+  outline: none;
+}
+
+.c6 blockquote {
+  border-left: 5px solid;
+  padding-left: 20px;
+}
+
+.c6 .gatsby-highlight {
+  padding: 10px 0;
+}
+
+.c6 pre[class*='language-'],
+.c6 code[class*='language-'],
+.c6 .gatsby-highlight {
+  font-family: monospace;
+  white-space: pre-wrap;
+}
+
+.c6 .line-numbers-rows,
+.c6 .line-numbers-rows span::before {
+  border: 0.5px solid;
+}
+
+.c6 img {
+  box-shadow: none !important;
+}
+
+<div>
+    <section
+      class="c0"
+    >
+      <main>
+        <article
+          class="c1"
+          data-testid="article-item"
+        >
+          <header
+            class="c2"
+          >
+            <h3
+              class="c3"
+            >
+              <a
+                class="c4"
+                data-testid="article-header-custom-link"
+                href="/awesome-article"
+              >
+                Awesome Article
+              </a>
+            </h3>
+            <p
+              class="c5"
+            >
+              20/07/2020
+               
+               · 5 minutos de leitura
+            </p>
+          </header>
+          <section
+            class="c6"
+          >
+            <p>
+              Article as a Children
+            </p>
+          </section>
+        </article>
+      </main>
+    </section>
+  </div>
+</body>
+`;
+
+exports[`<Article /> should render properly the content 1`] = `
+<body>
+  .c0 {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.c1 {
+  margin: 0 0 60px 0;
+  font-weight: 400;
+}
+
+.c2 {
+  margin: 20px 0 0 0;
+}
+
+.c3 {
+  font-family: 'Raleway',sans-serif;
+  font-weight: 700;
+  font-size: 36px;
+  margin: 0;
+}
+
+.c4 {
+  box-shadow: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c4:hover,
+.c4:focus {
+  border-bottom: 1px solid;
+  outline: none;
+}
+
+.c5 {
+  font-size: 18px;
+  margin: 5px 0;
+}
+
+.c6 {
+  line-height: 1.5;
+}
+
+.c6 a {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  border-bottom: 1px solid;
+}
+
+.c6 a:hover,
+.c6 a:focus {
+  border-bottom: 1px solid;
+  outline: none;
+}
+
+.c6 blockquote {
+  border-left: 5px solid;
+  padding-left: 20px;
+}
+
+.c6 .gatsby-highlight {
+  padding: 10px 0;
+}
+
+.c6 pre[class*='language-'],
+.c6 code[class*='language-'],
+.c6 .gatsby-highlight {
+  font-family: monospace;
+  white-space: pre-wrap;
+}
+
+.c6 .line-numbers-rows,
+.c6 .line-numbers-rows span::before {
+  border: 0.5px solid;
+}
+
+.c6 img {
+  box-shadow: none !important;
+}
+
+<div>
+    <section
+      class="c0"
+    >
+      <main>
+        <article
+          class="c1"
+          data-testid="article-item"
+        >
+          <header
+            class="c2"
+          >
+            <h3
+              class="c3"
+            >
+              <a
+                class="c4"
+                data-testid="article-header-custom-link"
+                href="/awesome-article"
+              >
+                Awesome Article
+              </a>
+            </h3>
+            <p
+              class="c5"
+            >
+              20/07/2020
+               
+               · 5 minutos de leitura
+            </p>
+          </header>
+          <section
+            class="c6"
+          >
+            Article as a Children
+          </section>
+        </article>
+      </main>
+    </section>
+  </div>
+</body>
+`;
