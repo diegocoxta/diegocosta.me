@@ -2,7 +2,7 @@
 
 exports[`<LanguagesPage> should render properly 1`] = `
 .c2 {
-  background: linear-gradient(90deg,#0C0D0E 20px,transparent 1%) center, linear-gradient(#0C0D0E 20px,transparent 1%) center, #FFFFFF;
+  background: linear-gradient(90deg,#FFFFFF 20px,transparent 1%) center, linear-gradient(#FFFFFF 20px,transparent 1%) center, #0C0D0E;
   background-size: 22px 22px;
   height: 120px;
   margin-top: 40px;
@@ -17,7 +17,7 @@ exports[`<LanguagesPage> should render properly 1`] = `
 .c3 {
   margin: 0 0 60px 0;
   font-weight: 400;
-  color: #FFFFFF;
+  color: #0C0D0E;
 }
 
 .c4 {
@@ -32,7 +32,7 @@ exports[`<LanguagesPage> should render properly 1`] = `
 }
 
 .c6 {
-  color: #FFFFFF;
+  color: #0C0D0E;
   box-shadow: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -40,7 +40,7 @@ exports[`<LanguagesPage> should render properly 1`] = `
 
 .c6:hover,
 .c6:focus {
-  border-bottom: 1px solid #FFFFFF;
+  border-bottom: 1px solid #0C0D0E;
   outline: none;
 }
 
@@ -57,7 +57,7 @@ exports[`<LanguagesPage> should render properly 1`] = `
 }
 
 .c7 {
-  color: #9a9a9a;
+  color: #737373;
   font-size: 18px;
   margin: 5px 0;
 }
@@ -70,7 +70,7 @@ exports[`<LanguagesPage> should render properly 1`] = `
   color: #626D4A;
   -webkit-text-decoration: none;
   text-decoration: none;
-  border-bottom: 1px solid #0C0D0E;
+  border-bottom: 1px solid #FFFFFF;
 }
 
 .c9 a:hover,
@@ -91,14 +91,14 @@ exports[`<LanguagesPage> should render properly 1`] = `
 .c9 pre[class*='language-'],
 .c9 code[class*='language-'],
 .c9 .gatsby-highlight {
-  background-color: #0C0D0E;
+  background-color: #FFFFFF;
   font-family: monospace;
   white-space: pre-wrap;
 }
 
 .c9 .line-numbers-rows,
 .c9 .line-numbers-rows span::before {
-  border: 0.5px solid #0C0D0E;
+  border: 0.5px solid #FFFFFF;
 }
 
 .c9 img {
@@ -108,7 +108,7 @@ exports[`<LanguagesPage> should render properly 1`] = `
 .c1 p {
   font-size: 18px;
   line-height: 1.4;
-  color: #FFFFFF;
+  color: #0C0D0E;
 }
 
 .c1 ul {
@@ -126,7 +126,7 @@ exports[`<LanguagesPage> should render properly 1`] = `
 .c1 li a {
   -webkit-text-decoration: none;
   text-decoration: none;
-  color: #FFFFFF;
+  color: #0C0D0E;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -138,13 +138,13 @@ exports[`<LanguagesPage> should render properly 1`] = `
 .c1 li a:after {
   content: '.';
   display: block;
-  color: #0C0D0E;
+  color: #FFFFFF;
   font-size: 38px;
   line-height: 0.2;
 }
 
 .c1 li a:hover:after {
-  color: #FFFFFF;
+  color: #0C0D0E;
 }
 
 @media (min-width:760px) {
