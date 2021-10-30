@@ -2,7 +2,7 @@
 
 exports[`<NotFoundPage> should render properly 1`] = `
 .c0 {
-  background: linear-gradient(90deg,#0C0D0E 20px,transparent 1%) center, linear-gradient(#0C0D0E 20px,transparent 1%) center, #FFFFFF;
+  background: linear-gradient(90deg,#FFFFFF 20px,transparent 1%) center, linear-gradient(#FFFFFF 20px,transparent 1%) center, #0C0D0E;
   background-size: 22px 22px;
   height: 120px;
   margin-top: 40px;
@@ -17,7 +17,7 @@ exports[`<NotFoundPage> should render properly 1`] = `
 .c2 {
   margin: 0 0 60px 0;
   font-weight: 400;
-  color: #FFFFFF;
+  color: #0C0D0E;
 }
 
 .c3 {
@@ -32,7 +32,7 @@ exports[`<NotFoundPage> should render properly 1`] = `
 }
 
 .c5 {
-  color: #9a9a9a;
+  color: #737373;
   font-size: 18px;
   margin: 5px 0;
 }
@@ -45,7 +45,7 @@ exports[`<NotFoundPage> should render properly 1`] = `
   color: #626D4A;
   -webkit-text-decoration: none;
   text-decoration: none;
-  border-bottom: 1px solid #0C0D0E;
+  border-bottom: 1px solid #FFFFFF;
 }
 
 .c6 a:hover,
@@ -66,14 +66,14 @@ exports[`<NotFoundPage> should render properly 1`] = `
 .c6 pre[class*='language-'],
 .c6 code[class*='language-'],
 .c6 .gatsby-highlight {
-  background-color: #0C0D0E;
+  background-color: #FFFFFF;
   font-family: monospace;
   white-space: pre-wrap;
 }
 
 .c6 .line-numbers-rows,
 .c6 .line-numbers-rows span::before {
-  border: 0.5px solid #0C0D0E;
+  border: 0.5px solid #FFFFFF;
 }
 
 .c6 img {
