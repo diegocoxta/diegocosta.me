@@ -29,7 +29,8 @@ Graphics: AMD Radeon Pro 5500M 4 GB / Intel UHD Graphics 630 1536 MB
 
 - Visual Studio Code with [Shades of Purple](https://marketplace.visualstudio.com/items?itemName=ahmadawais.shades-of-purple) and [Fira Code](https://github.com/tonsky/FiraCode). (check my [detailed configuration](https://github.com/diegocosta/setup/tree/main/vscode)).
 - iTerm2 with [Oh My Zsh](https://ohmyz.sh/) and [Dracula theme](https://draculatheme.com/iterm).
-- Xcode and Android Studio for Flutter and Clojure ([Cursive plugin](https://cursive-ide.com/)) development.
+- Basic Xcode installation to use iOS simulators.
+- Android Studio for Flutter and Clojure ([Cursive plugin](https://cursive-ide.com/)) development with [Material Theme UI - Moonlight](https://plugins.jetbrains.com/plugin/8006-material-theme-ui) and [Atom Material Icons](https://plugins.jetbrains.com/plugin/10044-atom-material-icons).
 - LastPass and Authy to manage my credentials and 2FA.
 - [PixelSnap](https://getpixelsnap.com/) to measure anything on my screen.
 - Docker and Docker-Compose to avoid installing programming languages and development tools on my machine.
@@ -43,10 +44,10 @@ Graphics: AMD Radeon Pro 5500M 4 GB / Intel UHD Graphics 630 1536 MB
 
 ## Other Devices
 
-- Cameras: [Canon EOS Rebel T7](https://www.usa.canon.com/internet/portal/us/home/products/details/cameras/eos-dslr-and-mirrorless-cameras/dslr/eos-rebel-t7-ef-s-18-55mm-is-ii-kit) with [EF 50mm f/1.8 STM Lens](https://www.usa.canon.com/internet/portal/us/home/products/details/lenses/ef/standard-medium-telephoto/ef-50mm-f-1-8-stm/ef-50mm-f1-8-stm) and [1928 Analog Olympus Trip 35](https://en.wikipedia.org/wiki/Olympus_Trip_35).
 - Tablet: [iPad (6th generation)](https://support.apple.com/kb/SP774?locale=pt_BR) with [Apple Pencil (1st generation)](https://www.apple.com/shop/product/MK0C2AM/A/apple-pencil-1st-generation).
 - Phone: [iPhone XR Black 64GB](https://support.apple.com/kb/SP781?locale=pt_BR) and [Motorola Moto G8 Power Smoke Black 64GB](https://www.motorola.com/we/smartphones-moto-g-power-gen-8/p?skuId=113).
 - Smartwatch: [Apple Watch Series 3](https://support.apple.com/kb/SP766?viewlocale=en_US&locale=pt_BR) GPS Aluminum case with Sport Band.
+- Cameras: [Canon EOS Rebel T7](https://www.usa.canon.com/internet/portal/us/home/products/details/cameras/eos-dslr-and-mirrorless-cameras/dslr/eos-rebel-t7-ef-s-18-55mm-is-ii-kit) with [EF 50mm f/1.8 STM Lens](https://www.usa.canon.com/internet/portal/us/home/products/details/lenses/ef/standard-medium-telephoto/ef-50mm-f-1-8-stm/ef-50mm-f1-8-stm) and [1928 Analog Olympus Trip 35](https://en.wikipedia.org/wiki/Olympus_Trip_35).
 - Smart Speakers: [Echo (3rd Gen)](https://www.amazon.com/all-new-Echo/dp/B07PBGN2WX?th=1) and [Echo Show 5 (1st Gen)](https://www.amazon.com/Introducing-Echo-Show-Compact-Charcoal/dp/B07HZLHPKP).
 - Earbuds: [AirPods (1st generation)](https://support.apple.com/kb/SP750?locale=en_US).
 - eReader: [Kindle (10th Gen), 6" Display with Built-in Light,WiFi (White)](https://www.amazon.com/dp/B07978J597?ref=MarsFS_KINDLE_kindle).
