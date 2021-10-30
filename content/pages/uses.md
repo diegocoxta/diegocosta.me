@@ -40,7 +40,9 @@ Graphics: AMD Radeon Pro 5500M 4 GB / Intel UHD Graphics 630 1536 MB
 - [GoodNotes](https://apps.apple.com/br/app/goodnotes-5/id1444383602) and [Procreate](https://apps.apple.com/br/app/procreate/id425073498) are my favorite apps to use with Apple Pencil on iPad.
 - [Homebrew](https://brew.sh) to manage [all my software](https://github.com/diegocosta/setup/blob/main/Brewfile) on macOS.
 
-## Services
+## Services [work in progress]
+- Google Workspace to use Gmail with custom domain and 2 TB on Google Drive.
+- Namecheap and Registro.br to handle domains.
 
 ## Other Devices
 
