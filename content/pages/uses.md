@@ -4,17 +4,17 @@ title: The Stuff I Use
 
 ## Workstation
 
-**Personal Computer**
-MacBook Pro (13-inch, 2017, Two Thunderbolt 3 ports)
-Processor: 2,3 GHz Dual-Core Intel Core i5
-Memory: 8 GB 2133 MHz LPDDR3
-Graphics: Intel Iris Plus Graphics 640 1536 MB
+**Personal Computer**  
+MacBook Pro (13-inch, 2017, Two Thunderbolt 3 ports)  
+Processor: 2,3 GHz Dual-Core Intel Core i5  
+Memory: 8 GB 2133 MHz LPDDR3  
+Graphics: Intel Iris Plus Graphics 640 1536 MB  
 
 **Work Computer**
-MacBook Pro (16-inch, 2019)
-Processor: 2,3 GHz 8-Core Intel Core i9
-Memory: 16 GB 2667 MHz DDR4
-Graphics: AMD Radeon Pro 5500M 4 GB / Intel UHD Graphics 630 1536 MB
+MacBook Pro (16-inch, 2019)  
+Processor: 2,3 GHz 8-Core Intel Core i9  
+Memory: 16 GB 2667 MHz DDR4  
+Graphics: AMD Radeon Pro 5500M 4 GB / Intel UHD Graphics 630 1536 MB  
 
 **Peripherals and Accessories**
 
