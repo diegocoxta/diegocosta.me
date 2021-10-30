@@ -10,7 +10,7 @@ Processor: 2,3 GHz Dual-Core Intel Core i5
 Memory: 8 GB 2133 MHz LPDDR3  
 Graphics: Intel Iris Plus Graphics 640 1536 MB  
 
-**Work Computer**
+**Work Computer**  
 MacBook Pro (16-inch, 2019)  
 Processor: 2,3 GHz 8-Core Intel Core i9  
 Memory: 16 GB 2667 MHz DDR4  
@@ -29,13 +29,21 @@ Graphics: AMD Radeon Pro 5500M 4 GB / Intel UHD Graphics 630 1536 MB
 
 - Visual Studio Code with [Shades of Purple](https://marketplace.visualstudio.com/items?itemName=ahmadawais.shades-of-purple) and [Fira Code](https://github.com/tonsky/FiraCode). (check my [detailed configuration](https://github.com/diegocosta/setup/tree/main/vscode)).
 - iTerm2 with [Oh My Zsh](https://ohmyz.sh/) and [Dracula theme](https://draculatheme.com/iterm).
-- Xcode and Android Studio for Flutter and [Clojure](https://cursive-ide.com/) development.
+- Xcode and Android Studio for Flutter and Clojure ([Cursive plugin](https://cursive-ide.com/)) development.
 - LastPass and Authy to manage my credentials and 2FA.
-- Homebrew to manage my all macOS softwares.
+- [PixelSnap](https://getpixelsnap.com/) to measure anything on my screen.
+- Docker and Docker-Compose to avoid installing programming languages and development tools on my machine.
+- [OmniDiskSweeper](https://www.omnigroup.com/more) to keep my local storage under control by removing unnecessary files.
+- [Numi](https://numi.app/) is my favorite calculator, beautiful and powerful.
+- Notion to keep my life on track. I create pages, databases and lists for different areas of my life.
+- [GoodNotes](https://apps.apple.com/br/app/goodnotes-5/id1444383602) and [Procreate](https://apps.apple.com/br/app/procreate/id425073498) are my favorite apps to use with Apple Pencil on iPad.
+- [Homebrew](https://brew.sh) to manage [all my software](https://github.com/diegocosta/setup/blob/main/Brewfile) on macOS.
+
+## Services
 
 ## Other Gear
 
-- Camera: [Canon EOS Rebel T7](https://www.usa.canon.com/internet/portal/us/home/products/details/cameras/eos-dslr-and-mirrorless-cameras/dslr/eos-rebel-t7-ef-s-18-55mm-is-ii-kit) with [EF 50mm f/1.8 STM Lens](https://www.usa.canon.com/internet/portal/us/home/products/details/lenses/ef/standard-medium-telephoto/ef-50mm-f-1-8-stm/ef-50mm-f1-8-stm).
+- Cameras: [Canon EOS Rebel T7](https://www.usa.canon.com/internet/portal/us/home/products/details/cameras/eos-dslr-and-mirrorless-cameras/dslr/eos-rebel-t7-ef-s-18-55mm-is-ii-kit) with [EF 50mm f/1.8 STM Lens](https://www.usa.canon.com/internet/portal/us/home/products/details/lenses/ef/standard-medium-telephoto/ef-50mm-f-1-8-stm/ef-50mm-f1-8-stm) and [1928's Analog Olympus Trip 35](https://en.wikipedia.org/wiki/Olympus_Trip_35).
 - Tablet: [iPad (6th generation)](https://support.apple.com/kb/SP774?locale=pt_BR) with [Apple Pencil (1st generation)](https://www.apple.com/shop/product/MK0C2AM/A/apple-pencil-1st-generation).
 - Phone: [iPhone XR Black 64GB](https://support.apple.com/kb/SP781?locale=pt_BR) and [Motorola Moto G8 Power](https://www.motorola.com/we/smartphones-moto-g-power-gen-8/p?skuId=113).
 - Smartwatch: [Apple Watch Series 3](https://support.apple.com/kb/SP766?viewlocale=en_US&locale=pt_BR) GPS Aluminum case with Sport Band.
