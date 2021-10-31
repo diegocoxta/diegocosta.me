@@ -25,8 +25,6 @@ exports[`<LanguagesPage> should render properly 1`] = `
 }
 
 .c5 {
-  font-family: 'Raleway',sans-serif;
-  font-weight: 700;
   font-size: 36px;
   margin: 0;
 }
@@ -103,6 +101,10 @@ exports[`<LanguagesPage> should render properly 1`] = `
 
 .c9 img {
   box-shadow: none !important;
+}
+
+.c9 h3 {
+  font-size: 28px;
 }
 
 .c1 p {
@@ -216,7 +218,7 @@ exports[`<LanguagesPage> should render properly 1`] = `
             <header
               class="c4"
             >
-              <h3
+              <h2
                 class="c5"
               >
                 <a
@@ -226,7 +228,7 @@ exports[`<LanguagesPage> should render properly 1`] = `
                 >
                   Title 1
                 </a>
-              </h3>
+              </h2>
               <p
                 class="c7"
               >
@@ -258,7 +260,7 @@ exports[`<LanguagesPage> should render properly 1`] = `
             <header
               class="c4"
             >
-              <h3
+              <h2
                 class="c5"
               >
                 <a
@@ -268,7 +270,7 @@ exports[`<LanguagesPage> should render properly 1`] = `
                 >
                   Title 2
                 </a>
-              </h3>
+              </h2>
               <p
                 class="c7"
               >

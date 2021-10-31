@@ -18,8 +18,6 @@ exports[`<Article /> should not render the link 1`] = `
 }
 
 .c3 {
-  font-family: 'Raleway',sans-serif;
-  font-weight: 700;
   font-size: 36px;
   margin: 0;
 }
@@ -41,11 +39,11 @@ exports[`<Article /> should not render the link 1`] = `
           <header
             class="c2"
           >
-            <h3
+            <h2
               class="c3"
             >
               Awesome Article
-            </h3>
+            </h2>
             <p
               class="c4"
             >
@@ -79,8 +77,6 @@ exports[`<Article /> should not render the tags 1`] = `
 }
 
 .c3 {
-  font-family: 'Raleway',sans-serif;
-  font-weight: 700;
   font-size: 36px;
   margin: 0;
 }
@@ -114,7 +110,7 @@ exports[`<Article /> should not render the tags 1`] = `
           <header
             class="c2"
           >
-            <h3
+            <h2
               class="c3"
             >
               <a
@@ -124,7 +120,7 @@ exports[`<Article /> should not render the tags 1`] = `
               >
                 Awesome Article
               </a>
-            </h3>
+            </h2>
             <p
               class="c5"
             >
@@ -157,8 +153,6 @@ exports[`<Article /> should render properly 1`] = `
 }
 
 .c3 {
-  font-family: 'Raleway',sans-serif;
-  font-weight: 700;
   font-size: 36px;
   margin: 0;
 }
@@ -226,7 +220,7 @@ exports[`<Article /> should render properly 1`] = `
           <header
             class="c2"
           >
-            <h3
+            <h2
               class="c3"
             >
               <a
@@ -236,7 +230,7 @@ exports[`<Article /> should render properly 1`] = `
               >
                 Awesome Article
               </a>
-            </h3>
+            </h2>
             <p
               class="c5"
             >
@@ -299,8 +293,6 @@ exports[`<Article /> should render properly in Poruguese 1`] = `
 }
 
 .c3 {
-  font-family: 'Raleway',sans-serif;
-  font-weight: 700;
   font-size: 36px;
   margin: 0;
 }
@@ -334,7 +326,7 @@ exports[`<Article /> should render properly in Poruguese 1`] = `
           <header
             class="c2"
           >
-            <h3
+            <h2
               class="c3"
             >
               <a
@@ -344,7 +336,7 @@ exports[`<Article /> should render properly in Poruguese 1`] = `
               >
                 Awesome Article
               </a>
-            </h3>
+            </h2>
             <p
               class="c5"
             >
@@ -378,8 +370,6 @@ exports[`<Article /> should render properly the children 1`] = `
 }
 
 .c3 {
-  font-family: 'Raleway',sans-serif;
-  font-weight: 700;
   font-size: 36px;
   margin: 0;
 }
@@ -442,6 +432,10 @@ exports[`<Article /> should render properly the children 1`] = `
   box-shadow: none !important;
 }
 
+.c6 h3 {
+  font-size: 28px;
+}
+
 <div>
     <section
       class="c0"
@@ -454,7 +448,7 @@ exports[`<Article /> should render properly the children 1`] = `
           <header
             class="c2"
           >
-            <h3
+            <h2
               class="c3"
             >
               <a
@@ -464,7 +458,7 @@ exports[`<Article /> should render properly the children 1`] = `
               >
                 Awesome Article
               </a>
-            </h3>
+            </h2>
             <p
               class="c5"
             >
@@ -505,8 +499,6 @@ exports[`<Article /> should render properly the content 1`] = `
 }
 
 .c3 {
-  font-family: 'Raleway',sans-serif;
-  font-weight: 700;
   font-size: 36px;
   margin: 0;
 }
@@ -569,6 +561,10 @@ exports[`<Article /> should render properly the content 1`] = `
   box-shadow: none !important;
 }
 
+.c6 h3 {
+  font-size: 28px;
+}
+
 <div>
     <section
       class="c0"
@@ -581,7 +577,7 @@ exports[`<Article /> should render properly the content 1`] = `
           <header
             class="c2"
           >
-            <h3
+            <h2
               class="c3"
             >
               <a
@@ -591,7 +587,7 @@ exports[`<Article /> should render properly the content 1`] = `
               >
                 Awesome Article
               </a>
-            </h3>
+            </h2>
             <p
               class="c5"
             >

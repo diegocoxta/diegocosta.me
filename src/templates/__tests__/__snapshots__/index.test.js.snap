@@ -60,8 +60,6 @@ exports[`<IndexPage> should render properly 1`] = `
 }
 
 .c5 {
-  font-family: 'Raleway',sans-serif;
-  font-weight: 700;
   font-size: 36px;
   margin: 0;
 }
@@ -140,6 +138,10 @@ exports[`<IndexPage> should render properly 1`] = `
   box-shadow: none !important;
 }
 
+.c9 h3 {
+  font-size: 28px;
+}
+
 .c2 {
   background: linear-gradient(90deg,#FFFFFF 20px,transparent 1%) center, linear-gradient(#FFFFFF 20px,transparent 1%) center, #0C0D0E;
   background-size: 22px 22px;
@@ -216,7 +218,7 @@ exports[`<IndexPage> should render properly 1`] = `
             <header
               class="c4"
             >
-              <h3
+              <h2
                 class="c5"
               >
                 <a
@@ -226,7 +228,7 @@ exports[`<IndexPage> should render properly 1`] = `
                 >
                   Title 1
                 </a>
-              </h3>
+              </h2>
               <p
                 class="c7"
               >
@@ -258,7 +260,7 @@ exports[`<IndexPage> should render properly 1`] = `
             <header
               class="c4"
             >
-              <h3
+              <h2
                 class="c5"
               >
                 <a
@@ -268,7 +270,7 @@ exports[`<IndexPage> should render properly 1`] = `
                 >
                   Title 2
                 </a>
-              </h3>
+              </h2>
               <p
                 class="c7"
               >

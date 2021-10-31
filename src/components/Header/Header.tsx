@@ -25,11 +25,12 @@ const Content = styled.header`
   }
 `;
 
-const Name = styled.span`
+const Name = styled.h1`
   font-size: 15vw;
   color: ${({ theme }) => theme.titleColor};
   font-weight: 700;
   text-transform: lowercase;
+  margin: 0;
 
   @media (min-width: 760px) {
     font-size: 100px;
