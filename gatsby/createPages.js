@@ -11,6 +11,27 @@ module.exports = async ({ graphql, actions }) => {
               slug
               collection
             }
+            internal {
+              type
+            }
+            frontmatter {
+              tags
+              title
+              language
+            }
+          }
+        }
+      }
+      mdxContent: allMdx(sort: { order: DESC, fields: [frontmatter___date] }) {
+        edges {
+          node {
+            fields {
+              collection
+              slug
+            }
+            internal {
+              type
+            }
             frontmatter {
               tags
               title
@@ -27,19 +48,6 @@ module.exports = async ({ graphql, actions }) => {
       languages: allMarkdownRemark(limit: 2000) {
         group(field: frontmatter___language) {
           fieldValue
-        }
-      }
-      mdxContent: allMdx {
-        edges {
-          node {
-            fields {
-              collection
-              slug
-            }
-            frontmatter {
-              title
-            }
-          }
         }
       }
     }
@@ -61,42 +69,22 @@ module.exports = async ({ graphql, actions }) => {
   const tags = result.data.tags.group;
   const languages = result.data.languages.group;
 
-  const articles = markdownContent.filter((edge) => edge.node.fields.collection === 'articles');
-  const pages = markdownContent.filter((edge) => edge.node.fields.collection === 'pages');
-  const pagesMdx = mdxContent.filter((edge) => edge.node.fields.collection === 'pages');
+  [...markdownContent, ...mdxContent].forEach((content) => {
+    if (content.node.fields.slug !== '/') {
+      const isMdx = content.node.internal.type === 'Mdx';
+      const isMarkdown = content.node.internal.type === 'MarkdownRemark';
+      const template = content.node.fields.collection === 'articles' ? 'article' : 'page';
 
-  articles.forEach((article) => {
-    actions.createPage({
-      path: article.node.fields.slug,
-      component: path.resolve('./src/templates/article.tsx'),
-      context: {
-        slug: article.node.fields.slug,
-      },
-    });
-  });
-
-  // Create markdown pages
-  pages.forEach((page) => {
-    if (page.node.fields.slug !== '/') {
       actions.createPage({
-        path: page.node.fields.slug,
-        component: path.resolve('./src/templates/page.tsx'),
+        path: content.node.fields.slug,
+        component: path.resolve(`./src/templates/${template}.tsx`),
         context: {
-          slug: page.node.fields.slug,
+          slug: content.node.fields.slug,
+          isMdx,
+          isMarkdown,
         },
       });
     }
-  });
-
-  // create MDX pages
-  pagesMdx.forEach((page) => {
-    actions.createPage({
-      path: page.node.fields.slug,
-      component: path.resolve('./src/templates/mdx.tsx'),
-      context: {
-        slug: page.node.fields.slug,
-      },
-    });
   });
 
   // Create Tags Page

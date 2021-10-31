@@ -232,7 +232,7 @@ exports[`<LanguageTemplate> should render properly 1`] = `
               <p
                 class="c7"
               >
-                30/10/2020
+                Invalid Date
                  
                  · 5 minutes of reading
               </p>
@@ -274,7 +274,7 @@ exports[`<LanguageTemplate> should render properly 1`] = `
               <p
                 class="c7"
               >
-                30/10/2020
+                Invalid Date
                  
                  · 2 minutes of reading
               </p>

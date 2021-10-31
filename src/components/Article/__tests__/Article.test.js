@@ -11,12 +11,12 @@ describe('<Article />', () => {
         url="/awesome-article"
         readingTime={5}
         language="en"
-        date="20/07/2020"
+        date="2020-01-18T22:12:03.284Z"
         tags={['jest', 'testing-library']}
       />
     );
     expect(getByText('Awesome Article')).toBeTruthy();
-    expect(getByText('20/07/2020 · 5 minutes of reading')).toBeTruthy();
+    expect(getByText('01/18/2020 · 5 minutes of reading')).toBeTruthy();
     expect(getByTestId('article-header-custom-link').href).toBe('http://localhost/awesome-article');
     expect(getByTestId('article-header-tags')).toBeTruthy();
     expect(getAllByTestId('article-header-tag').length).toEqual(2);
@@ -25,7 +25,13 @@ describe('<Article />', () => {
 
   it('should not render the tags', () => {
     const { baseElement, queryByTestId, queryAllByTestId, getByText } = render(
-      <Article title="Awesome Article" url="/awesome-article" readingTime={5} language="pt" date="20/07/2020" />
+      <Article
+        title="Awesome Article"
+        url="/awesome-article"
+        readingTime={5}
+        language="pt"
+        date="2020-07-20T22:12:03.284Z"
+      />
     );
 
     expect(queryByTestId('article-header-tags')).toBeFalsy();
@@ -36,7 +42,7 @@ describe('<Article />', () => {
 
   it('should not render the link', () => {
     const { baseElement, queryByTestId } = render(
-      <Article title="Awesome Article" readingTime={5} language="en" date="20/07/2020" />
+      <Article title="Awesome Article" readingTime={5} language="en" date="2020-01-18T22:12:03.284Z" />
     );
 
     expect(queryByTestId('article-header-custom-link')).toBeFalsy();
@@ -45,7 +51,13 @@ describe('<Article />', () => {
 
   it('should render properly in Poruguese', () => {
     const { baseElement, getByText } = render(
-      <Article title="Awesome Article" url="/awesome-article" readingTime={5} language="pt" date="20/07/2020" />
+      <Article
+        title="Awesome Article"
+        url="/awesome-article"
+        readingTime={5}
+        language="pt"
+        date="2020-07-20T22:12:03.284Z"
+      />
     );
 
     expect(getByText('20/07/2020 · 5 minutos de leitura')).toBeTruthy();
@@ -54,7 +66,13 @@ describe('<Article />', () => {
 
   it('should render properly the children', () => {
     const { baseElement, getByText } = render(
-      <Article title="Awesome Article" url="/awesome-article" readingTime={5} language="pt" date="20/07/2020">
+      <Article
+        title="Awesome Article"
+        url="/awesome-article"
+        readingTime={5}
+        language="pt"
+        date="2020-01-18T22:12:03.284Z"
+      >
         <p>Article as a Children</p>
       </Article>
     );
@@ -70,12 +88,12 @@ describe('<Article />', () => {
         url="/awesome-article"
         readingTime={5}
         language="pt"
-        date="20/07/2020"
-        content="Article as a Children"
+        date="2020-01-18T22:12:03.284Z"
+        content="Article as a content"
       />
     );
 
-    expect(getByText('Article as a Children')).toBeTruthy();
+    expect(getByText('Article as a content')).toBeTruthy();
     expect(baseElement).toMatchSnapshot();
   });
 });
