@@ -17,7 +17,7 @@ describe('<IndexTemplate>', () => {
             node: {
               frontmatter: {
                 title: 'Title 1',
-                date: '30/10/2020',
+                date: '2021-01-16T22:12:03.284Z',
                 tags: [],
                 description: 'Awesome first article',
               },
@@ -34,7 +34,7 @@ describe('<IndexTemplate>', () => {
             node: {
               frontmatter: {
                 title: 'Title 2',
-                date: '30/10/2020',
+                date: '2020-01-18T22:12:03.284Z',
                 tags: [],
                 description: 'Awesome second article',
               },
@@ -48,6 +48,9 @@ describe('<IndexTemplate>', () => {
             },
           },
         ],
+      },
+      articlesMdx: {
+        edges: [],
       },
     };
 

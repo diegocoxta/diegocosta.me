@@ -41,13 +41,19 @@ const Description = styled.p`
 `;
 
 const Urls = styled.div`
-  display: flex;
-  align-content: flex-end;
+  @media (min-width: 760px) {
+    display: flex;
+  }
 `;
 
 const UrlsLink = styled.a`
   display: flex;
   margin-right: 10px;
+  padding: 5px 0;
+
+  @media (min-width: 760px) {
+    padding: 0;
+  }
 `;
 
 type LinkType = 'slide' | 'repository' | 'video';

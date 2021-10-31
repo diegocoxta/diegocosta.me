@@ -198,22 +198,13 @@ exports[`<Talk /> should render properly 1`] = `
   margin: 0 0 5px;
 }
 
-.c5 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-content: flex-end;
-  -ms-flex-line-pack: end;
-  align-content: flex-end;
-}
-
 .c6 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   margin-right: 10px;
+  padding: 5px 0;
 }
 
 .c7 {
@@ -245,6 +236,21 @@ exports[`<Talk /> should render properly 1`] = `
   .c1 {
     width: 105px;
     height: 105px;
+  }
+}
+
+@media (min-width:760px) {
+  .c5 {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+@media (min-width:760px) {
+  .c6 {
+    padding: 0;
   }
 }
 
@@ -378,22 +384,13 @@ exports[`<Talk /> should render the correctly icons 1`] = `
   margin: 0 0 5px;
 }
 
-.c5 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-content: flex-end;
-  -ms-flex-line-pack: end;
-  align-content: flex-end;
-}
-
 .c6 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   margin-right: 10px;
+  padding: 5px 0;
 }
 
 .c7 {
@@ -425,6 +422,21 @@ exports[`<Talk /> should render the correctly icons 1`] = `
   .c1 {
     width: 105px;
     height: 105px;
+  }
+}
+
+@media (min-width:760px) {
+  .c5 {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+@media (min-width:760px) {
+  .c6 {
+    padding: 0;
   }
 }
 

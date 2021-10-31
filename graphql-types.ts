@@ -700,6 +700,18 @@ export type ImageSharpResize = {
 
 export type MdxFrontmatter = {
   title: Scalars['String'];
+  date?: Maybe<Scalars['Date']>;
+  description?: Maybe<Scalars['String']>;
+  tags?: Maybe<Array<Maybe<Scalars['String']>>>;
+  language?: Maybe<Scalars['String']>;
+};
+
+
+export type MdxFrontmatterDateArgs = {
+  formatString?: Maybe<Scalars['String']>;
+  fromNow?: Maybe<Scalars['Boolean']>;
+  difference?: Maybe<Scalars['String']>;
+  locale?: Maybe<Scalars['String']>;
 };
 
 export type MdxHeadingMdx = {
@@ -1309,6 +1321,10 @@ export type MdxFilterInput = {
 
 export type MdxFrontmatterFilterInput = {
   title?: Maybe<StringQueryOperatorInput>;
+  date?: Maybe<DateQueryOperatorInput>;
+  description?: Maybe<StringQueryOperatorInput>;
+  tags?: Maybe<StringQueryOperatorInput>;
+  language?: Maybe<StringQueryOperatorInput>;
 };
 
 export type MdxHeadingMdxFilterListInput = {
@@ -1703,6 +1719,10 @@ export type FileFieldsEnum =
   | 'childrenMdx___rawBody'
   | 'childrenMdx___fileAbsolutePath'
   | 'childrenMdx___frontmatter___title'
+  | 'childrenMdx___frontmatter___date'
+  | 'childrenMdx___frontmatter___description'
+  | 'childrenMdx___frontmatter___tags'
+  | 'childrenMdx___frontmatter___language'
   | 'childrenMdx___slug'
   | 'childrenMdx___body'
   | 'childrenMdx___excerpt'
@@ -1763,6 +1783,10 @@ export type FileFieldsEnum =
   | 'childMdx___rawBody'
   | 'childMdx___fileAbsolutePath'
   | 'childMdx___frontmatter___title'
+  | 'childMdx___frontmatter___date'
+  | 'childMdx___frontmatter___description'
+  | 'childMdx___frontmatter___tags'
+  | 'childMdx___frontmatter___language'
   | 'childMdx___slug'
   | 'childMdx___body'
   | 'childMdx___excerpt'
@@ -3771,6 +3795,10 @@ export type MdxFieldsEnum =
   | 'rawBody'
   | 'fileAbsolutePath'
   | 'frontmatter___title'
+  | 'frontmatter___date'
+  | 'frontmatter___description'
+  | 'frontmatter___tags'
+  | 'frontmatter___language'
   | 'slug'
   | 'body'
   | 'excerpt'
@@ -3944,30 +3972,42 @@ export type SearchComponentQueryVariables = Exact<{ [key: string]: never; }>;
 export type SearchComponentQuery = { articles: { nodes: Array<(
       Pick<MarkdownRemark, 'id'>
       & { fields?: Maybe<Pick<MarkdownRemarkFields, 'slug'>>, frontmatter?: Maybe<Pick<MarkdownRemarkFrontmatter, 'title' | 'description'>> }
+    )> }, articlesMdx: { nodes: Array<(
+      Pick<Mdx, 'id'>
+      & { fields?: Maybe<Pick<MdxFields, 'slug'>>, frontmatter?: Maybe<Pick<MdxFrontmatter, 'title'>> }
     )> } };
 
 export type ArticleTemplateQueryVariables = Exact<{
   slug: Scalars['String'];
+  isMdx: Scalars['Boolean'];
+  isMarkdown: Scalars['Boolean'];
 }>;
 
 
 export type ArticleTemplateQuery = { article?: Maybe<(
-    Pick<MarkdownRemark, 'excerpt' | 'html'>
+    Pick<MarkdownRemark, 'excerpt'>
+    & { body: MarkdownRemark['html'] }
     & { fields?: Maybe<{ readingTime?: Maybe<Pick<MarkdownRemarkFieldsReadingTime, 'minutes'>> }>, frontmatter?: Maybe<Pick<MarkdownRemarkFrontmatter, 'title' | 'date' | 'description' | 'tags' | 'language'>> }
+  )>, articleMdx?: Maybe<(
+    Pick<Mdx, 'excerpt' | 'body'>
+    & { fields?: Maybe<{ readingTime?: Maybe<Pick<MdxFieldsReadingTime, 'minutes'>> }>, frontmatter?: Maybe<Pick<MdxFrontmatter, 'title' | 'date' | 'description' | 'tags' | 'language'>> }
   )> };
 
 export type IndexTemplateQueryVariables = Exact<{ [key: string]: never; }>;
 
 
-export type IndexTemplateQuery = { aboutMe?: Maybe<Pick<MarkdownRemark, 'html'>>, articles: { group: Array<(
-      Pick<MarkdownRemarkGroupConnection, 'totalCount'>
-      & { tag: MarkdownRemarkGroupConnection['fieldValue'] }
-    )>, edges: Array<{ node: (
+export type IndexTemplateQuery = { aboutMe?: Maybe<Pick<MarkdownRemark, 'html'>>, articles: { edges: Array<{ node: (
         Pick<MarkdownRemark, 'excerpt'>
         & { fields?: Maybe<(
           Pick<MarkdownRemarkFields, 'slug'>
           & { readingTime?: Maybe<Pick<MarkdownRemarkFieldsReadingTime, 'minutes'>> }
         )>, frontmatter?: Maybe<Pick<MarkdownRemarkFrontmatter, 'date' | 'title' | 'description' | 'tags' | 'language'>> }
+      ) }> }, articlesMdx: { edges: Array<{ node: (
+        Pick<Mdx, 'excerpt'>
+        & { fields?: Maybe<(
+          Pick<MdxFields, 'slug'>
+          & { readingTime?: Maybe<Pick<MdxFieldsReadingTime, 'minutes'>> }
+        )>, frontmatter?: Maybe<Pick<MdxFrontmatter, 'date' | 'title' | 'description' | 'tags' | 'language'>> }
       ) }> } };
 
 export type LanguageTemplateQueryVariables = Exact<{
@@ -3986,24 +4026,19 @@ export type LanguageTemplateQuery = { aboutMe?: Maybe<Pick<MarkdownRemark, 'html
       ) }> }
   ) };
 
-export type MdxTemplateQueryVariables = Exact<{
-  slug: Scalars['String'];
-}>;
-
-
-export type MdxTemplateQuery = { mdxPage?: Maybe<(
-    Pick<Mdx, 'body'>
-    & { fields?: Maybe<Pick<MdxFields, 'slug'>>, frontmatter?: Maybe<Pick<MdxFrontmatter, 'title'>> }
-  )> };
-
 export type PageTemplateQueryVariables = Exact<{
   slug: Scalars['String'];
+  isMdx: Scalars['Boolean'];
+  isMarkdown: Scalars['Boolean'];
 }>;
 
 
 export type PageTemplateQuery = { page?: Maybe<(
-    Pick<MarkdownRemark, 'html'>
+    { body: MarkdownRemark['html'] }
     & { frontmatter?: Maybe<Pick<MarkdownRemarkFrontmatter, 'title'>> }
+  )>, pageMdx?: Maybe<(
+    Pick<Mdx, 'body'>
+    & { frontmatter?: Maybe<Pick<MdxFrontmatter, 'title'>> }
   )> };
 
 export type TagsTemplateQueryVariables = Exact<{

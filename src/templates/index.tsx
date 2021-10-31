@@ -15,7 +15,11 @@ interface IndexTemplateProps extends PageRendererProps {
 }
 
 export default function IndexTemplate({ data }: IndexTemplateProps): React.ReactElement {
-  const { articles, aboutMe } = data;
+  const { articles, aboutMe, articlesMdx } = data;
+
+  const posts = [...articles.edges, ...articlesMdx.edges].sort(
+    (a, b) => new Date(b.node.frontmatter?.date).getTime() - new Date(a.node.frontmatter?.date).getTime()
+  );
 
   return (
     <Page>
@@ -23,7 +27,7 @@ export default function IndexTemplate({ data }: IndexTemplateProps): React.React
       <AboutMe htmlContent={aboutMe?.html ?? ''} />
       <Divisor />
       <Search />
-      {articles.edges.map(({ node: { frontmatter, fields, excerpt } }, index: number) => (
+      {posts.map(({ node: { frontmatter, fields, excerpt } }, index: number) => (
         <Article
           key={`article-${index}`}
           title={frontmatter?.title ?? ''}
@@ -44,14 +48,7 @@ export const pageQuery = graphql`
     aboutMe: markdownRemark(fields: { slug: { eq: "/" } }) {
       html
     }
-    articles: allMarkdownRemark(
-      sort: { fields: [frontmatter___date], order: DESC }
-      filter: { fields: { collection: { eq: "articles" } } }
-    ) {
-      group(field: frontmatter___tags) {
-        tag: fieldValue
-        totalCount
-      }
+    articles: allMarkdownRemark(filter: { fields: { collection: { eq: "articles" } } }) {
       edges {
         node {
           excerpt
@@ -62,7 +59,27 @@ export const pageQuery = graphql`
             }
           }
           frontmatter {
-            date(formatString: "DD/MM/YYYY")
+            date
+            title
+            description
+            tags
+            language
+          }
+        }
+      }
+    }
+    articlesMdx: allMdx(filter: { fields: { collection: { eq: "articles" } } }) {
+      edges {
+        node {
+          excerpt
+          fields {
+            slug
+            readingTime {
+              minutes
+            }
+          }
+          frontmatter {
+            date
             title
             description
             tags

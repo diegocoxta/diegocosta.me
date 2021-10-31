@@ -54,7 +54,7 @@ export const pageQuery = graphql`
             }
           }
           frontmatter {
-            date(formatString: "DD/MM/YYYY")
+            date
             title
             tags
             description

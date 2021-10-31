@@ -126,8 +126,10 @@ export interface ArticleProps {
 }
 
 export default function Article(props: ArticleProps): React.ReactElement {
+  const currentArticleLanguage = props.language ?? 'en';
+
   const getReadingTime = () => {
-    const texts = translations[props.language ?? 'en'];
+    const texts = translations[currentArticleLanguage];
 
     if (!props.readingTime) {
       return undefined;
@@ -139,6 +141,14 @@ export default function Article(props: ArticleProps): React.ReactElement {
 
     return ` · ${props.readingTime?.toFixed()} ${texts.minutes} ${texts.ofReading}`;
   };
+
+  const date =
+    props.date &&
+    new Date(props.date).toLocaleDateString(currentArticleLanguage, {
+      year: 'numeric',
+      month: '2-digit',
+      day: '2-digit',
+    });
 
   const Tags = props.tags && (
     <TagList data-testid="article-header-tags">
@@ -164,7 +174,7 @@ export default function Article(props: ArticleProps): React.ReactElement {
             )}
           </Title>
           <Details>
-            {props.date && props.date} {getReadingTime()}
+            {date} {getReadingTime()}
           </Details>
           {Tags}
         </Header>

@@ -232,7 +232,7 @@ exports[`<IndexTemplate> should render properly 1`] = `
               <p
                 class="c7"
               >
-                30/10/2020
+                01/16/2021
                  
                  · 5 minutes of reading
               </p>
@@ -274,7 +274,7 @@ exports[`<IndexTemplate> should render properly 1`] = `
               <p
                 class="c7"
               >
-                30/10/2020
+                01/18/2020
                  
                  · 2 minutes of reading
               </p>

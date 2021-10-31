@@ -10,11 +10,11 @@ import Search from '~/components/Search';
 
 import { LanguageTemplateQuery } from '~/../graphql-types';
 
-interface TagsPageProps extends PageRendererProps {
+interface LanguagesTemplateProps extends PageRendererProps {
   data: LanguageTemplateQuery;
 }
 
-export default function Tags({ data }: TagsPageProps): React.ReactElement {
+export default function LanguagesTemplate({ data }: LanguagesTemplateProps): React.ReactElement {
   const { articles, aboutMe } = data;
 
   return (
@@ -59,7 +59,7 @@ export const pageQuery = graphql`
             }
           }
           frontmatter {
-            date(formatString: "DD/MM/YYYY")
+            date
             title
             tags
             description
