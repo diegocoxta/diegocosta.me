@@ -229,7 +229,7 @@ exports[`<Talk /> should render properly 1`] = `
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
-  margin-right: 10px;
+  margin-right: 5px;
 }
 
 @media (min-width:760px) {
@@ -409,7 +409,7 @@ exports[`<Talk /> should render the correctly icons 1`] = `
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
-  margin-right: 10px;
+  margin-right: 5px;
 }
 
 @media (min-width:760px) {

@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<TagsPage> should render properly 1`] = `
+exports[`<TagsTemplate> should render properly 1`] = `
 .c0 {
   background: linear-gradient(90deg,#FFFFFF 20px,transparent 1%) center, linear-gradient(#FFFFFF 20px,transparent 1%) center, #0C0D0E;
   background-size: 22px 22px;

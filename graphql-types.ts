@@ -3991,7 +3991,7 @@ export type MdxTemplateQueryVariables = Exact<{
 }>;
 
 
-export type MdxTemplateQuery = { page?: Maybe<(
+export type MdxTemplateQuery = { mdxPage?: Maybe<(
     Pick<Mdx, 'body'>
     & { fields?: Maybe<Pick<MdxFields, 'slug'>>, frontmatter?: Maybe<Pick<MdxFrontmatter, 'title'>> }
   )> };

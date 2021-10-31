@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<ArticleTemplate> should render properly 1`] = `
+exports[`<PageTemplate> should render properly 1`] = `
 .c0 {
   background: linear-gradient(90deg,#FFFFFF 20px,transparent 1%) center, linear-gradient(#FFFFFF 20px,transparent 1%) center, #0C0D0E;
   background-size: 22px 22px;
@@ -29,68 +29,56 @@ exports[`<ArticleTemplate> should render properly 1`] = `
   margin: 0;
 }
 
-.c6 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  margin-bottom: 0;
-  padding: 0;
-}
-
 .c5 {
   color: #737373;
   font-size: 18px;
   margin: 5px 0;
 }
 
-.c7 {
+.c6 {
   line-height: 1.5;
 }
 
-.c7 a {
+.c6 a {
   color: #626D4A;
   -webkit-text-decoration: none;
   text-decoration: none;
   border-bottom: 1px solid #FFFFFF;
 }
 
-.c7 a:hover,
-.c7 a:focus {
+.c6 a:hover,
+.c6 a:focus {
   border-bottom: 1px solid #626D4A;
   outline: none;
 }
 
-.c7 blockquote {
+.c6 blockquote {
   border-left: 5px solid #626D4A;
   padding-left: 20px;
 }
 
-.c7 .gatsby-highlight {
+.c6 .gatsby-highlight {
   padding: 10px 0;
 }
 
-.c7 pre[class*='language-'],
-.c7 code[class*='language-'],
-.c7 .gatsby-highlight {
+.c6 pre[class*='language-'],
+.c6 code[class*='language-'],
+.c6 .gatsby-highlight {
   background-color: #FFFFFF;
   font-family: monospace;
   white-space: pre-wrap;
 }
 
-.c7 .line-numbers-rows,
-.c7 .line-numbers-rows span::before {
+.c6 .line-numbers-rows,
+.c6 .line-numbers-rows span::before {
   border: 0.5px solid #FFFFFF;
 }
 
-.c7 img {
+.c6 img {
   box-shadow: none !important;
 }
 
-.c7 h3 {
+.c6 h3 {
   font-size: 28px;
 }
 
@@ -125,17 +113,11 @@ exports[`<ArticleTemplate> should render properly 1`] = `
               <p
                 class="c5"
               >
-                30/10/2020
                  
-                 · 5 minutes of reading
               </p>
-              <ul
-                class="c6"
-                data-testid="article-header-tags"
-              />
             </header>
             <section
-              class="c7"
+              class="c6"
             >
               <p>
                 Post content

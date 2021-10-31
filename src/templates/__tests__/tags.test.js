@@ -5,9 +5,9 @@ jest.mock('../../components/Header', () => () => <p>Header</p>);
 jest.mock('../../components/Footer', () => () => <p>Footer</p>);
 jest.mock('../../components/Metatags', () => () => <p>Metatags</p>);
 
-import TagsPage from '../tags';
+import TagsTemplate from '../tags';
 
-describe('<TagsPage>', () => {
+describe('<TagsTemplate>', () => {
   it('should render properly', () => {
     const data = {
       articles: {
@@ -54,7 +54,7 @@ describe('<TagsPage>', () => {
     };
 
     const { baseElement, getAllByTestId, getByText } = render(
-      <TagsPage data={data} pageContext={{ tag: 'Tech Stuff' }} />
+      <TagsTemplate data={data} pageContext={{ tag: 'Tech Stuff' }} />
     );
     expect(getAllByTestId('article-item').length).toEqual(data.articles.totalCount);
     expect(getByText('Awesome second article')).toBeTruthy();

@@ -71,7 +71,7 @@ const UrlsIcon = styled.div.attrs<{ icon: LinkType }>((props) => ({
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-right: 10px;
+  margin-right: 5px;
 `;
 
 interface TalkProps {
