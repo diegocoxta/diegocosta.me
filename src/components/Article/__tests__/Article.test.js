@@ -51,4 +51,31 @@ describe('<Article />', () => {
     expect(getByText('20/07/2020 · 5 minutos de leitura')).toBeTruthy();
     expect(baseElement).toMatchSnapshot();
   });
+
+  it('should render properly the children', () => {
+    const { baseElement, getByText } = render(
+      <Article title="Awesome Article" url="/awesome-article" readingTime={5} language="pt" date="20/07/2020">
+        <p>Article as a Children</p>
+      </Article>
+    );
+
+    expect(getByText('Article as a Children')).toBeTruthy();
+    expect(baseElement).toMatchSnapshot();
+  });
+
+  it('should render properly the content', () => {
+    const { baseElement, getByText } = render(
+      <Article
+        title="Awesome Article"
+        url="/awesome-article"
+        readingTime={5}
+        language="pt"
+        date="20/07/2020"
+        content="Article as a Children"
+      />
+    );
+
+    expect(getByText('Article as a Children')).toBeTruthy();
+    expect(baseElement).toMatchSnapshot();
+  });
 });

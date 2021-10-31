@@ -13,7 +13,7 @@ interface PageTemplateProps extends PageRendererProps {
 }
 
 export default function PageTemplate({ data }: PageTemplateProps): React.ReactElement {
-  const { html, frontmatter } = data.article ?? {};
+  const { html, frontmatter } = data.page ?? {};
   const { title } = frontmatter ?? {};
 
   return (
@@ -27,7 +27,7 @@ export default function PageTemplate({ data }: PageTemplateProps): React.ReactEl
 
 export const pageQuery = graphql`
   query PageTemplate($slug: String!) {
-    article: markdownRemark(fields: { slug: { eq: $slug } }) {
+    page: markdownRemark(fields: { slug: { eq: $slug } }) {
       html
       frontmatter {
         title

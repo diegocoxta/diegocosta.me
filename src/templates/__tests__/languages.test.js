@@ -6,9 +6,9 @@ jest.mock('../../components/Footer', () => () => <p>Footer</p>);
 jest.mock('../../components/Metatags', () => () => <p>Metatags</p>);
 jest.mock('../../components/Search', () => () => <p>Search</p>);
 
-import LanguagesPage from '../languages';
+import LanguageTemplate from '../languages';
 
-describe('<LanguagesPage>', () => {
+describe('<LanguageTemplate>', () => {
   it('should render properly', () => {
     const data = {
       articles: {
@@ -52,7 +52,7 @@ describe('<LanguagesPage>', () => {
       },
     };
 
-    const { baseElement, getByText } = render(<LanguagesPage data={data} pageContext={{ lang: 'en' }} />);
+    const { baseElement, getByText } = render(<LanguageTemplate data={data} pageContext={{ lang: 'en' }} />);
     expect(getByText('Awesome second article')).toBeTruthy();
     expect(getByText('Awesome first article')).toBeTruthy();
     expect(baseElement).toMatchSnapshot();

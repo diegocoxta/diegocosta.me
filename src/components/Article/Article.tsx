@@ -17,9 +17,7 @@ const Header = styled.header`
   margin: 20px 0 0 0;
 `;
 
-const Title = styled.h3`
-  font-family: 'Raleway', sans-serif;
-  font-weight: 700;
+const Title = styled.h2`
   font-size: 36px;
   margin: 0;
 `;
@@ -110,6 +108,10 @@ export const Body = styled.section`
   img {
     box-shadow: none !important;
   }
+
+  h3 {
+    font-size: 28px;
+  }
 `;
 
 export interface ArticleProps {
@@ -120,6 +122,7 @@ export interface ArticleProps {
   date?: string;
   tags?: string[] | null;
   content?: string | null;
+  children?: React.ReactElement;
 }
 
 export default function Article(props: ArticleProps): React.ReactElement {
@@ -166,6 +169,7 @@ export default function Article(props: ArticleProps): React.ReactElement {
           {Tags}
         </Header>
         {props.content && <Body dangerouslySetInnerHTML={{ __html: props.content }} />}
+        {props.children && <Body>{props.children}</Body>}
       </Content>
     </Container>
   );

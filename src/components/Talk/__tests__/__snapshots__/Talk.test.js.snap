@@ -1,0 +1,548 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Talk /> should not render the description 1`] = `
+<body>
+  .c0 {
+  margin-bottom: 16px;
+}
+
+.c1 {
+  width: 150px;
+  height: 150px;
+  margin-right: 20px;
+  border: 1px solid;
+  box-sizing: border-box;
+}
+
+.c2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.c3 {
+  font-size: 18px;
+  margin: 0;
+}
+
+@media (min-width:760px) {
+  .c0 {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+@media (min-width:760px) {
+  .c1 {
+    width: 105px;
+    height: 105px;
+  }
+}
+
+<div>
+    <div
+      class="c0"
+    >
+      <img
+        alt="Preview for Workshop React: da web ao app!"
+        class="c1"
+        src="https://media.slid.es/thumbnails/f58621e7fcd466702bb9ad5858ce67ec/thumb.jpg?1634646022"
+      />
+      <div
+        class="c2"
+      >
+        <div
+          class=""
+        >
+          <h4
+            class="c3"
+          >
+            Workshop React: da web ao app!
+          </h4>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+`;
+
+exports[`<Talk /> should not render the url list 1`] = `
+<body>
+  .c0 {
+  margin-bottom: 16px;
+}
+
+.c1 {
+  width: 150px;
+  height: 150px;
+  margin-right: 20px;
+  border: 1px solid;
+  box-sizing: border-box;
+}
+
+.c2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.c3 {
+  font-size: 18px;
+  margin: 0;
+}
+
+.c4 {
+  margin: 0 0 5px;
+}
+
+@media (min-width:760px) {
+  .c0 {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+@media (min-width:760px) {
+  .c1 {
+    width: 105px;
+    height: 105px;
+  }
+}
+
+<div>
+    <div
+      class="c0"
+    >
+      <img
+        alt="Preview for Workshop React: da web ao app!"
+        class="c1"
+        src="https://media.slid.es/thumbnails/f58621e7fcd466702bb9ad5858ce67ec/thumb.jpg?1634646022"
+      />
+      <div
+        class="c2"
+      >
+        <div
+          class=""
+        >
+          <h4
+            class="c3"
+          >
+            Workshop React: da web ao app!
+          </h4>
+          <p
+            class="c4"
+            data-testid="talk-description"
+          >
+            blabla
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+`;
+
+exports[`<Talk /> should render properly 1`] = `
+.c0 {
+  margin-bottom: 16px;
+}
+
+.c1 {
+  width: 150px;
+  height: 150px;
+  margin-right: 20px;
+  border: 1px solid;
+  box-sizing: border-box;
+}
+
+.c2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.c3 {
+  font-size: 18px;
+  margin: 0;
+}
+
+.c4 {
+  margin: 0 0 5px;
+}
+
+.c5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-content: flex-end;
+  -ms-flex-line-pack: end;
+  align-content: flex-end;
+}
+
+.c6 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-right: 10px;
+}
+
+.c7 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  margin-right: 5px;
+}
+
+@media (min-width:760px) {
+  .c0 {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+@media (min-width:760px) {
+  .c1 {
+    width: 105px;
+    height: 105px;
+  }
+}
+
+<body>
+  <div>
+    <div
+      class="c0"
+    >
+      <img
+        alt="Preview for Workshop React: da web ao app!"
+        class="c1"
+        src="https://media.slid.es/thumbnails/f58621e7fcd466702bb9ad5858ce67ec/thumb.jpg?1634646022"
+      />
+      <div
+        class="c2"
+      >
+        <div
+          class=""
+        >
+          <h4
+            class="c3"
+          >
+            Workshop React: da web ao app!
+          </h4>
+          <p
+            class="c4"
+            data-testid="talk-description"
+          >
+            blabla
+          </p>
+        </div>
+        <div
+          class="c5"
+          data-testid="talk-urls-list"
+        >
+          <a
+            class="c6"
+            data-testid="talk-urls-item"
+            href="https://slides.com/diegocosta/workshop-react-da-web-ao-app"
+            rel="noopener"
+            target="_blank"
+          >
+            <div
+              class="c7"
+            >
+              <svg
+                data-testid="talk-icon-slide"
+                fill="currentColor"
+                height="1em"
+                stroke="currentColor"
+                stroke-width="0"
+                viewBox="0 0 16 16"
+                width="1em"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M8.473.337a.5.5 0 0 0-.946 0L6.954 2H2a1 1 0 0 0-1 1v7a1 1 0 0 0 1 1h1.85l-1.323 3.837a.5.5 0 1 0 .946.326L4.908 11H7.5v2.5a.5.5 0 0 0 1 0V11h2.592l1.435 4.163a.5.5 0 0 0 .946-.326L12.15 11H14a1 1 0 0 0 1-1V3a1 1 0 0 0-1-1H9.046L8.473.337z"
+                />
+              </svg>
+            </div>
+            Slides
+          </a>
+          <a
+            class="c6"
+            data-testid="talk-urls-item"
+            href="https://github.com/ReactSSA/meetup1-web"
+            rel="noopener"
+            target="_blank"
+          >
+            <div
+              class="c7"
+            >
+              <svg
+                data-testid="talk-icon-repository"
+                fill="currentColor"
+                height="1em"
+                stroke="currentColor"
+                stroke-width="0"
+                viewBox="0 0 16 16"
+                width="1em"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"
+                />
+              </svg>
+            </div>
+            Código Fonte
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+`;
+
+exports[`<Talk /> should render the correctly icons 1`] = `
+<body>
+  .c0 {
+  margin-bottom: 16px;
+}
+
+.c1 {
+  width: 150px;
+  height: 150px;
+  margin-right: 20px;
+  border: 1px solid;
+  box-sizing: border-box;
+}
+
+.c2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.c3 {
+  font-size: 18px;
+  margin: 0;
+}
+
+.c4 {
+  margin: 0 0 5px;
+}
+
+.c5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-content: flex-end;
+  -ms-flex-line-pack: end;
+  align-content: flex-end;
+}
+
+.c6 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-right: 10px;
+}
+
+.c7 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  margin-right: 5px;
+}
+
+@media (min-width:760px) {
+  .c0 {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+@media (min-width:760px) {
+  .c1 {
+    width: 105px;
+    height: 105px;
+  }
+}
+
+<div>
+    <div
+      class="c0"
+    >
+      <img
+        alt="Preview for Workshop React: da web ao app!"
+        class="c1"
+        src="https://media.slid.es/thumbnails/f58621e7fcd466702bb9ad5858ce67ec/thumb.jpg?1634646022"
+      />
+      <div
+        class="c2"
+      >
+        <div
+          class=""
+        >
+          <h4
+            class="c3"
+          >
+            Workshop React: da web ao app!
+          </h4>
+          <p
+            class="c4"
+            data-testid="talk-description"
+          >
+            blabla
+          </p>
+        </div>
+        <div
+          class="c5"
+          data-testid="talk-urls-list"
+        >
+          <a
+            class="c6"
+            data-testid="talk-urls-item"
+            href="https://slides.com/diegocosta/workshop-react-da-web-ao-app"
+            rel="noopener"
+            target="_blank"
+          >
+            <div
+              class="c7"
+            >
+              <svg
+                data-testid="talk-icon-slide"
+                fill="currentColor"
+                height="1em"
+                stroke="currentColor"
+                stroke-width="0"
+                viewBox="0 0 16 16"
+                width="1em"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M8.473.337a.5.5 0 0 0-.946 0L6.954 2H2a1 1 0 0 0-1 1v7a1 1 0 0 0 1 1h1.85l-1.323 3.837a.5.5 0 1 0 .946.326L4.908 11H7.5v2.5a.5.5 0 0 0 1 0V11h2.592l1.435 4.163a.5.5 0 0 0 .946-.326L12.15 11H14a1 1 0 0 0 1-1V3a1 1 0 0 0-1-1H9.046L8.473.337z"
+                />
+              </svg>
+            </div>
+            Slides
+          </a>
+          <a
+            class="c6"
+            data-testid="talk-urls-item"
+            href="https://github.com/ReactSSA/meetup1-web"
+            rel="noopener"
+            target="_blank"
+          >
+            <div
+              class="c7"
+            >
+              <svg
+                data-testid="talk-icon-repository"
+                fill="currentColor"
+                height="1em"
+                stroke="currentColor"
+                stroke-width="0"
+                viewBox="0 0 16 16"
+                width="1em"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"
+                />
+              </svg>
+            </div>
+            Código Fonte
+          </a>
+          <a
+            class="c6"
+            data-testid="talk-urls-item"
+            href="https://github.com/ReactSSA/meetup1-web"
+            rel="noopener"
+            target="_blank"
+          >
+            <div
+              class="c7"
+            >
+              <svg
+                data-testid="talk-icon-video"
+                fill="currentColor"
+                height="1em"
+                stroke="currentColor"
+                stroke-width="0"
+                viewBox="0 0 16 16"
+                width="1em"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.007 2.007 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.007 2.007 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31.4 31.4 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.007 2.007 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A99.788 99.788 0 0 1 7.858 2h.193zM6.4 5.209v4.818l4.157-2.408L6.4 5.209z"
+                />
+              </svg>
+            </div>
+            Código Fonte
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+`;

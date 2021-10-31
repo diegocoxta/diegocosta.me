@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<NotFoundPage> should render properly 1`] = `
+exports[`<MdxTemplate> should render properly 1`] = `
 .c0 {
   background: linear-gradient(90deg,#FFFFFF 20px,transparent 1%) center, linear-gradient(#FFFFFF 20px,transparent 1%) center, #0C0D0E;
   background-size: 22px 22px;
@@ -94,36 +94,40 @@ exports[`<NotFoundPage> should render properly 1`] = `
       <div
         class="c0"
       />
-      <section
-        class="c1"
-      >
-        <main>
-          <article
-            class="c2"
-            data-testid="article-item"
-          >
-            <header
-              class="c3"
+      <div>
+        <section
+          class="c1"
+        >
+          <main>
+            <article
+              class="c2"
+              data-testid="article-item"
             >
-              <h2
-                class="c4"
+              <header
+                class="c3"
               >
-                Não encontrado
-              </h2>
-              <p
-                class="c5"
+                <h2
+                  class="c4"
+                >
+                  Title 1
+                </h2>
+                <p
+                  class="c5"
+                >
+                   
+                </p>
+              </header>
+              <section
+                class="c6"
               >
-                 
-              </p>
-            </header>
-            <section
-              class="c6"
-            >
-              Página não encontrada
-            </section>
-          </article>
-        </main>
-      </section>
+                <div>
+                  Post content
+                </div>
+              </section>
+            </article>
+          </main>
+        </section>
+      </div>
     </main>
     <p>
       Footer

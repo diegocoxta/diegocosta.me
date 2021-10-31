@@ -33,6 +33,7 @@ exports[`<Header /> should not render the last name 1`] = `
   font-size: 15vw;
   font-weight: 700;
   text-transform: lowercase;
+  margin: 0;
 }
 
 .c2 {
@@ -90,11 +91,11 @@ exports[`<Header /> should not render the last name 1`] = `
             class="c2"
             href="/"
           >
-            <span
+            <h1
               class="c3"
             >
               John
-            </span>
+            </h1>
           </a>
           <div
             class="c4"
@@ -142,6 +143,7 @@ exports[`<Header /> should render properly 1`] = `
   font-size: 15vw;
   font-weight: 700;
   text-transform: lowercase;
+  margin: 0;
 }
 
 .c2 {
@@ -200,7 +202,7 @@ exports[`<Header /> should render properly 1`] = `
             class="c2"
             href="/"
           >
-            <span
+            <h1
               class="c3"
             >
               John
@@ -211,7 +213,7 @@ exports[`<Header /> should render properly 1`] = `
                 D
                 .
               </span>
-            </span>
+            </h1>
           </a>
           <div
             class="c4"
