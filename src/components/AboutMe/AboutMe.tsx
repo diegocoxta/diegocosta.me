@@ -65,13 +65,13 @@ const Content = styled.div`
 `;
 
 interface AboutMeProps {
-  htmlContent: string;
+  children: React.ReactElement;
 }
 
 export default function AboutMe(props: AboutMeProps): JSX.Element {
   return (
     <Container>
-      <Content dangerouslySetInnerHTML={{ __html: props.htmlContent }} />
+      <Content>{props.children}</Content>
     </Container>
   );
 }

@@ -4,6 +4,7 @@ import { render } from '@testing-library/react';
 jest.mock('../../components/Header', () => () => <p>Header</p>);
 jest.mock('../../components/Footer', () => () => <p>Footer</p>);
 jest.mock('../../components/Metatags', () => () => <p>Metatags</p>);
+jest.mock('../../components/MDXProvider', () => ({ children }) => <div>{children}</div>);
 
 import TagsTemplate from '../tags';
 

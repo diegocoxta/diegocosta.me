@@ -1,5 +1,6 @@
 import React from 'react';
 import { graphql, PageRendererProps } from 'gatsby';
+import { MDXRenderer } from 'gatsby-plugin-mdx';
 
 import Page from '~/components/Page';
 import Divisor from '~/components/Divisor';
@@ -7,6 +8,7 @@ import Metatags from '~/components/Metatags';
 import Article from '~/components/Article';
 import AboutMe from '~/components/AboutMe';
 import Search from '~/components/Search';
+import MDXProvider from '~/components/MDXProvider';
 
 import { LanguageTemplateQuery } from '~/../graphql-types';
 
@@ -20,7 +22,11 @@ export default function LanguagesTemplate({ data }: LanguagesTemplateProps): Rea
   return (
     <Page>
       <Metatags />
-      <AboutMe htmlContent={aboutMe?.html ?? ''} />
+      <MDXProvider>
+        <AboutMe>
+          <MDXRenderer>{aboutMe?.body ?? ''}</MDXRenderer>
+        </AboutMe>
+      </MDXProvider>
       <Divisor />
       <Search />
       {articles.edges.map(({ node: { frontmatter, fields, excerpt } }, index) => (
@@ -41,10 +47,10 @@ export default function LanguagesTemplate({ data }: LanguagesTemplateProps): Rea
 
 export const pageQuery = graphql`
   query LanguageTemplate($language: String) {
-    aboutMe: markdownRemark(fields: { slug: { eq: "/" } }) {
-      html
+    aboutMe: mdx(fields: { slug: { eq: "/" } }) {
+      body
     }
-    articles: allMarkdownRemark(
+    articles: allMdx(
       sort: { fields: [frontmatter___date], order: DESC }
       filter: { frontmatter: { language: { eq: $language } } }
     ) {

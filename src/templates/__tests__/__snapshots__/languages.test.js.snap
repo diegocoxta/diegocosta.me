@@ -192,15 +192,19 @@ exports[`<LanguageTemplate> should render properly 1`] = `
       <p>
         Metatags
       </p>
-      <section
-        class="c0"
-      >
-        <main>
-          <div
-            class="c1"
-          />
-        </main>
-      </section>
+      <div>
+        <section
+          class="c0"
+        >
+          <main>
+            <div
+              class="c1"
+            >
+              
+            </div>
+          </main>
+        </section>
+      </div>
       <div
         class="c2"
       />

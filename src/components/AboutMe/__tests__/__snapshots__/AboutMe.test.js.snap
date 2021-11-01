@@ -85,7 +85,9 @@ exports[`<AboutMe /> should render properly 1`] = `
         <div
           class="c1"
         >
-          You can hear more about here:
+          <p>
+            You can hear more about here:
+          </p>
         </div>
       </main>
     </section>

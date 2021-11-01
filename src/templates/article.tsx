@@ -8,18 +8,14 @@ import Metatags from '~/components/Metatags';
 import Article from '~/components/Article';
 import MDXProvider from '~/components/MDXProvider';
 
-import { ArticleTemplateQuery, ArticleTemplateQueryVariables } from '~/../graphql-types';
+import { ArticleTemplateQuery } from '~/../graphql-types';
 
 interface ArticleTemplateProps extends PageRendererProps {
   data: ArticleTemplateQuery;
-  pageContext: ArticleTemplateQueryVariables;
 }
 
-export default function ArticleTemplate({ data, pageContext }: ArticleTemplateProps): React.ReactElement {
-  const { isMdx, isMarkdown } = pageContext;
-  const article = isMarkdown ? data.article : data.articleMdx;
-
-  const { body, excerpt, frontmatter, fields } = article ?? {};
+export default function ArticleTemplate({ data }: ArticleTemplateProps): React.ReactElement {
+  const { body, excerpt, frontmatter, fields } = data.article ?? {};
   const { title, date, tags, language, description } = frontmatter ?? {};
 
   return (
@@ -33,9 +29,8 @@ export default function ArticleTemplate({ data, pageContext }: ArticleTemplatePr
           tags={tags as string[]}
           readingTime={fields?.readingTime?.minutes ?? 0}
           language={language}
-          content={isMarkdown ? body : undefined}
         >
-          {isMdx ? <MDXRenderer>{body ?? ''}</MDXRenderer> : undefined}
+          <MDXRenderer>{body ?? ''}</MDXRenderer>
         </Article>
       </MDXProvider>
     </Page>
@@ -43,26 +38,10 @@ export default function ArticleTemplate({ data, pageContext }: ArticleTemplatePr
 }
 
 export const pageQuery = graphql`
-  query ArticleTemplate($slug: String!, $isMdx: Boolean!, $isMarkdown: Boolean!) {
-    article: markdownRemark(fields: { slug: { eq: $slug } }) @include(if: $isMarkdown) {
-      body: html
-      excerpt(pruneLength: 160)
-      fields {
-        readingTime {
-          minutes
-        }
-      }
-      frontmatter {
-        title
-        date
-        description
-        tags
-        language
-      }
-    }
-    articleMdx: mdx(fields: { slug: { eq: $slug } }) @include(if: $isMdx) {
-      excerpt(pruneLength: 160)
+  query ArticleTemplate($slug: String!) {
+    article: mdx(fields: { slug: { eq: $slug } }) {
       body
+      excerpt(pruneLength: 160)
       fields {
         readingTime {
           minutes

@@ -8,19 +8,7 @@ import Search, { ArticleProps } from './Search';
 export default (): React.ReactElement => {
   const data = useStaticQuery(graphql`
     query SearchComponent {
-      articles: allMarkdownRemark(filter: { fields: { collection: { eq: "articles" } } }) {
-        nodes {
-          id
-          fields {
-            slug
-          }
-          frontmatter {
-            title
-            description
-          }
-        }
-      }
-      articlesMdx: allMdx(filter: { fields: { collection: { eq: "articles" } } }) {
+      articles: allMdx(filter: { fields: { collection: { eq: "articles" } } }) {
         nodes {
           id
           fields {
@@ -36,15 +24,14 @@ export default (): React.ReactElement => {
   `);
 
   const items = data.articles.nodes;
-  const itemsMdx = data.articlesMdx.nodes;
 
   const fuse = React.useMemo(
     () =>
-      new Fuse([...items, ...itemsMdx], {
+      new Fuse(items, {
         minMatchCharLength: 3,
         keys: ['frontmatter.title', 'frontmatter.description'],
       }),
-    [items, itemsMdx]
+    [items]
   );
 
   const [articles, setArticles] = useState<Fuse.FuseResult<ArticleProps>[]>([]);

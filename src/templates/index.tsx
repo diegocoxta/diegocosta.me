@@ -7,27 +7,29 @@ import AboutMe from '~/components/AboutMe';
 import Search from '~/components/Search';
 import Article from '~/components/Article';
 import Divisor from '~/components/Divisor';
+import MDXProvider from '~/components/MDXProvider';
 
 import { IndexTemplateQuery } from '~/../graphql-types';
+import { MDXRenderer } from 'gatsby-plugin-mdx';
 
 interface IndexTemplateProps extends PageRendererProps {
   data: IndexTemplateQuery;
 }
 
 export default function IndexTemplate({ data }: IndexTemplateProps): React.ReactElement {
-  const { articles, aboutMe, articlesMdx } = data;
-
-  const posts = [...articles.edges, ...articlesMdx.edges].sort(
-    (a, b) => new Date(b.node.frontmatter?.date).getTime() - new Date(a.node.frontmatter?.date).getTime()
-  );
+  const { articles, aboutMe } = data;
 
   return (
     <Page>
       <Metatags />
-      <AboutMe htmlContent={aboutMe?.html ?? ''} />
+      <MDXProvider>
+        <AboutMe>
+          <MDXRenderer>{aboutMe?.body ?? ''}</MDXRenderer>
+        </AboutMe>
+      </MDXProvider>
       <Divisor />
       <Search />
-      {posts.map(({ node: { frontmatter, fields, excerpt } }, index: number) => (
+      {articles.edges.map(({ node: { frontmatter, fields, excerpt } }, index: number) => (
         <Article
           key={`article-${index}`}
           title={frontmatter?.title ?? ''}
@@ -45,30 +47,13 @@ export default function IndexTemplate({ data }: IndexTemplateProps): React.React
 
 export const pageQuery = graphql`
   query IndexTemplate {
-    aboutMe: markdownRemark(fields: { slug: { eq: "/" } }) {
-      html
+    aboutMe: mdx(fields: { slug: { eq: "/" } }) {
+      body
     }
-    articles: allMarkdownRemark(filter: { fields: { collection: { eq: "articles" } } }) {
-      edges {
-        node {
-          excerpt
-          fields {
-            slug
-            readingTime {
-              minutes
-            }
-          }
-          frontmatter {
-            date
-            title
-            description
-            tags
-            language
-          }
-        }
-      }
-    }
-    articlesMdx: allMdx(filter: { fields: { collection: { eq: "articles" } } }) {
+    articles: allMdx(
+      sort: { fields: [frontmatter___date], order: DESC }
+      filter: { fields: { collection: { eq: "articles" } } }
+    ) {
       edges {
         node {
           excerpt

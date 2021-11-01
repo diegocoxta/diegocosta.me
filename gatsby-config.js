@@ -17,6 +17,7 @@ module.exports = {
       resolve: 'gatsby-plugin-graphql-codegen',
       options: {
         codegen: true,
+        documentPaths: ['./src/**/*.{ts,tsx}'],
       },
     },
     'gatsby-plugin-styled-components',
@@ -48,10 +49,12 @@ module.exports = {
         name: 'pages',
       },
     },
+    'gatsby-remark-images',
     {
-      resolve: 'gatsby-transformer-remark',
+      resolve: 'gatsby-plugin-mdx',
       options: {
-        plugins: [
+        extensions: ['.mdx', '.md'],
+        gatsbyRemarkPlugins: [
           {
             resolve: 'gatsby-remark-images',
             options: {
@@ -60,21 +63,9 @@ module.exports = {
               quality: 100,
             },
           },
-          {
-            resolve: 'gatsby-remark-responsive-iframe',
-            options: {
-              wrapperStyle: 'margin-bottom: 1.0725rem',
-            },
-          },
-          {
-            resolve: 'gatsby-remark-prismjs',
-            options: {
-              showLineNumbers: true,
-            },
-          },
+          'gatsby-remark-reading-time',
           'gatsby-remark-copy-linked-files',
           'gatsby-remark-smartypants',
-          'gatsby-remark-reading-time',
         ],
       },
     },
@@ -103,27 +94,27 @@ module.exports = {
         `,
         feeds: [
           {
-            serialize: ({ query: { site, allMarkdownRemark } }) => {
-              return allMarkdownRemark.edges.map((edge) => {
+            serialize: ({ query: { site, articles } }) => {
+              return articles.edges.map((edge) => {
                 return Object.assign({}, edge.node.frontmatter, {
                   description: edge.node.excerpt,
                   date: edge.node.frontmatter.date,
                   url: site.siteMetadata.siteUrl + edge.node.fields.slug,
                   guid: site.siteMetadata.siteUrl + edge.node.fields.slug,
-                  custom_elements: [{ 'content:encoded': edge.node.html }],
+                  custom_elements: [{ 'content:encoded': edge.node.body }],
                 });
               });
             },
             query: `
               query GatsbyPluginFeedArticles {
-                allMarkdownRemark(
+                articles: allMdx(
                   sort: { order: DESC, fields: [frontmatter___date] },
                   filter: { fields: { collection: { eq: "articles" } } }
                 ) {
                   edges {
                     node {
                       excerpt
-                      html
+                      body
                       fields { slug }
                       frontmatter {
                         title
@@ -152,6 +143,5 @@ module.exports = {
     },
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-sitemap',
-    'gatsby-plugin-mdx',
   ],
 };
