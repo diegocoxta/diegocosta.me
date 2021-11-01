@@ -352,7 +352,7 @@ exports[`<Article /> should render properly in Poruguese 1`] = `
 </body>
 `;
 
-exports[`<Article /> should render properly the children 1`] = `
+exports[`<Article /> should render properly the body content 1`] = `
 <body>
   .c0 {
   max-width: 800px;
@@ -470,9 +470,7 @@ exports[`<Article /> should render properly the children 1`] = `
           <section
             class="c6"
           >
-            <p>
-              Article as a Children
-            </p>
+            Article as a Children
           </section>
         </article>
       </main>
@@ -481,7 +479,7 @@ exports[`<Article /> should render properly the children 1`] = `
 </body>
 `;
 
-exports[`<Article /> should render properly the content 1`] = `
+exports[`<Article /> should render properly the description 1`] = `
 <body>
   .c0 {
   max-width: 800px;
@@ -599,7 +597,7 @@ exports[`<Article /> should render properly the content 1`] = `
           <section
             class="c6"
           >
-            Article as a content
+            Article as a Children
           </section>
         </article>
       </main>

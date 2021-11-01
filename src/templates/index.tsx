@@ -9,7 +9,6 @@ import Article from '~/components/Article';
 import Divisor from '~/components/Divisor';
 
 import { IndexTemplateQuery } from '~/../graphql-types';
-import { MDXRenderer } from 'gatsby-plugin-mdx';
 
 interface IndexTemplateProps extends PageRendererProps {
   data: IndexTemplateQuery;
@@ -21,9 +20,7 @@ export default function IndexTemplate({ data }: IndexTemplateProps): React.React
   return (
     <Page>
       <Metatags />
-      <AboutMe>
-        <MDXRenderer>{aboutMe?.body ?? ''}</MDXRenderer>
-      </AboutMe>
+      <AboutMe bodyContent={aboutMe?.body || ''} />
       <Divisor />
       <Search />
       {articles.edges.map(({ node: { frontmatter, fields, excerpt } }, index: number) => (
@@ -35,7 +32,7 @@ export default function IndexTemplate({ data }: IndexTemplateProps): React.React
           tags={frontmatter?.tags as string[]}
           readingTime={fields?.readingTime?.minutes ?? 0}
           language={frontmatter?.language}
-          content={frontmatter?.description || excerpt}
+          description={frontmatter?.description || excerpt}
         />
       ))}
     </Page>

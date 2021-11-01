@@ -1,6 +1,5 @@
 import React from 'react';
 import { graphql, PageRendererProps } from 'gatsby';
-import { MDXRenderer } from 'gatsby-plugin-mdx';
 
 import Page from '~/components/Page';
 import Divisor from '~/components/Divisor';
@@ -21,9 +20,7 @@ export default function LanguagesTemplate({ data }: LanguagesTemplateProps): Rea
   return (
     <Page>
       <Metatags />
-      <AboutMe>
-        <MDXRenderer>{aboutMe?.body ?? ''}</MDXRenderer>
-      </AboutMe>
+      <AboutMe bodyContent={aboutMe?.body ?? ''} />
       <Divisor />
       <Search />
       {articles.edges.map(({ node: { frontmatter, fields, excerpt } }, index) => (
@@ -35,7 +32,7 @@ export default function LanguagesTemplate({ data }: LanguagesTemplateProps): Rea
           url={fields?.slug}
           language={frontmatter?.language}
           readingTime={fields?.readingTime?.minutes ?? 0}
-          content={frontmatter?.description || excerpt}
+          description={frontmatter?.description || excerpt}
         />
       ))}
     </Page>

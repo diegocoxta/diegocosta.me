@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'gatsby';
 import styled from 'styled-components';
 import kebabCase from 'lodash.kebabcase';
+import { MDXRenderer } from 'gatsby-plugin-mdx';
 
 import translations from './translations';
 
@@ -121,8 +122,8 @@ export interface ArticleProps {
   language?: string | null;
   date?: string;
   tags?: string[] | null;
-  content?: string | null;
-  children?: React.ReactElement;
+  description?: string | null;
+  bodyContent?: string | null;
 }
 
 export default function Article(props: ArticleProps): React.ReactElement {
@@ -178,8 +179,12 @@ export default function Article(props: ArticleProps): React.ReactElement {
           </Details>
           {Tags}
         </Header>
-        {props.content && <Body dangerouslySetInnerHTML={{ __html: props.content }} />}
-        {props.children && <Body>{props.children}</Body>}
+        {props.description && <Body dangerouslySetInnerHTML={{ __html: props.description }} />}
+        {props.bodyContent && (
+          <Body>
+            <MDXRenderer>{props.bodyContent}</MDXRenderer>
+          </Body>
+        )}
       </Content>
     </Container>
   );

@@ -1,6 +1,5 @@
 import React from 'react';
 import { graphql, PageRendererProps } from 'gatsby';
-import { MDXRenderer } from 'gatsby-plugin-mdx';
 
 import Page from '~/components/Page';
 import Divisor from '~/components/Divisor';
@@ -21,9 +20,7 @@ export default function PageTemplate({ data }: PageTemplateProps): React.ReactEl
     <Page>
       <Metatags title={title ?? ''} />
       <Divisor />
-      <Article title={title ?? ''}>
-        <MDXRenderer>{body ?? ''}</MDXRenderer>
-      </Article>
+      <Article title={title ?? ''} bodyContent={body} />
     </Page>
   );
 }

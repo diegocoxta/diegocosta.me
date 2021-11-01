@@ -1,6 +1,5 @@
 import React from 'react';
 import { graphql, PageRendererProps } from 'gatsby';
-import { MDXRenderer } from 'gatsby-plugin-mdx';
 
 import Page from '~/components/Page';
 import Divisor from '~/components/Divisor';
@@ -27,9 +26,8 @@ export default function ArticleTemplate({ data }: ArticleTemplateProps): React.R
         tags={tags as string[]}
         readingTime={fields?.readingTime?.minutes ?? 0}
         language={language}
-      >
-        <MDXRenderer>{body ?? ''}</MDXRenderer>
-      </Article>
+        bodyContent={body}
+      />
     </Page>
   );
 }
