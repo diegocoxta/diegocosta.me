@@ -198,7 +198,9 @@ exports[`<IndexTemplate> should render properly 1`] = `
         <main>
           <div
             class="c1"
-          />
+          >
+            
+          </div>
         </main>
       </section>
       <div

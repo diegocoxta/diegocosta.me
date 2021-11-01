@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { MDXRenderer } from 'gatsby-plugin-mdx';
 
 import Container from '~/components/Container';
 
@@ -65,13 +66,15 @@ const Content = styled.div`
 `;
 
 interface AboutMeProps {
-  htmlContent: string;
+  bodyContent: string;
 }
 
 export default function AboutMe(props: AboutMeProps): JSX.Element {
   return (
     <Container>
-      <Content dangerouslySetInnerHTML={{ __html: props.htmlContent }} />
+      <Content>
+        <MDXRenderer>{props.bodyContent}</MDXRenderer>
+      </Content>
     </Container>
   );
 }

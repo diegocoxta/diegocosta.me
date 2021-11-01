@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<PageTemplate> should render markdown properly 1`] = `
+exports[`<PageTemplate> should render properly 1`] = `
 .c0 {
   background: linear-gradient(90deg,#FFFFFF 20px,transparent 1%) center, linear-gradient(#FFFFFF 20px,transparent 1%) center, #0C0D0E;
   background-size: 22px 22px;
@@ -94,174 +94,36 @@ exports[`<PageTemplate> should render markdown properly 1`] = `
       <div
         class="c0"
       />
-      <div>
-        <section
-          class="c1"
-        >
-          <main>
-            <article
-              class="c2"
-              data-testid="article-item"
+      <section
+        class="c1"
+      >
+        <main>
+          <article
+            class="c2"
+            data-testid="article-item"
+          >
+            <header
+              class="c3"
             >
-              <header
-                class="c3"
+              <h2
+                class="c4"
               >
-                <h2
-                  class="c4"
-                >
-                  Title 1
-                </h2>
-                <p
-                  class="c5"
-                >
-                   
-                </p>
-              </header>
-              <section
-                class="c6"
+                Title 1
+              </h2>
+              <p
+                class="c5"
               >
-                <p>
-                  Post content
-                </p>
-              </section>
-            </article>
-          </main>
-        </section>
-      </div>
-    </main>
-    <p>
-      Footer
-    </p>
-  </div>
-</body>
-`;
-
-exports[`<PageTemplate> should render mdx properly 1`] = `
-<body>
-  .c0 {
-  background: linear-gradient(90deg,#FFFFFF 20px,transparent 1%) center, linear-gradient(#FFFFFF 20px,transparent 1%) center, #0C0D0E;
-  background-size: 22px 22px;
-  height: 120px;
-  margin-top: 40px;
-}
-
-.c1 {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
-
-.c2 {
-  margin: 0 0 60px 0;
-  font-weight: 400;
-  color: #0C0D0E;
-}
-
-.c3 {
-  margin: 20px 0 0 0;
-}
-
-.c4 {
-  font-size: 36px;
-  margin: 0;
-}
-
-.c5 {
-  color: #737373;
-  font-size: 18px;
-  margin: 5px 0;
-}
-
-.c6 {
-  line-height: 1.5;
-}
-
-.c6 a {
-  color: #626D4A;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  border-bottom: 1px solid #FFFFFF;
-}
-
-.c6 a:hover,
-.c6 a:focus {
-  border-bottom: 1px solid #626D4A;
-  outline: none;
-}
-
-.c6 blockquote {
-  border-left: 5px solid #626D4A;
-  padding-left: 20px;
-}
-
-.c6 .gatsby-highlight {
-  padding: 10px 0;
-}
-
-.c6 pre[class*='language-'],
-.c6 code[class*='language-'],
-.c6 .gatsby-highlight {
-  background-color: #FFFFFF;
-  font-family: monospace;
-  white-space: pre-wrap;
-}
-
-.c6 .line-numbers-rows,
-.c6 .line-numbers-rows span::before {
-  border: 0.5px solid #FFFFFF;
-}
-
-.c6 img {
-  box-shadow: none !important;
-}
-
-.c6 h3 {
-  font-size: 28px;
-}
-
-<div>
-    <p>
-      Header
-    </p>
-    <main>
-      <p>
-        Metatags
-      </p>
-      <div
-        class="c0"
-      />
-      <div>
-        <section
-          class="c1"
-        >
-          <main>
-            <article
-              class="c2"
-              data-testid="article-item"
+                 
+              </p>
+            </header>
+            <section
+              class="c6"
             >
-              <header
-                class="c3"
-              >
-                <h2
-                  class="c4"
-                >
-                  Title 1
-                </h2>
-                <p
-                  class="c5"
-                >
-                   
-                </p>
-              </header>
-              <section
-                class="c6"
-              >
-                Post content
-              </section>
-            </article>
-          </main>
-        </section>
-      </div>
+              Post content
+            </section>
+          </article>
+        </main>
+      </section>
     </main>
     <p>
       Footer

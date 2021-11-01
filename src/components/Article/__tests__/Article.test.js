@@ -64,7 +64,7 @@ describe('<Article />', () => {
     expect(baseElement).toMatchSnapshot();
   });
 
-  it('should render properly the children', () => {
+  it('should render properly the body content', () => {
     const { baseElement, getByText } = render(
       <Article
         title="Awesome Article"
@@ -72,16 +72,15 @@ describe('<Article />', () => {
         readingTime={5}
         language="pt"
         date="2020-01-18T22:12:03.284Z"
-      >
-        <p>Article as a Children</p>
-      </Article>
+        bodyContent="Article as a Children"
+      />
     );
 
     expect(getByText('Article as a Children')).toBeTruthy();
     expect(baseElement).toMatchSnapshot();
   });
 
-  it('should render properly the content', () => {
+  it('should render properly the description', () => {
     const { baseElement, getByText } = render(
       <Article
         title="Awesome Article"
@@ -89,11 +88,11 @@ describe('<Article />', () => {
         readingTime={5}
         language="pt"
         date="2020-01-18T22:12:03.284Z"
-        content="Article as a content"
+        description="Article as a Children"
       />
     );
 
-    expect(getByText('Article as a content')).toBeTruthy();
+    expect(getByText('Article as a Children')).toBeTruthy();
     expect(baseElement).toMatchSnapshot();
   });
 });

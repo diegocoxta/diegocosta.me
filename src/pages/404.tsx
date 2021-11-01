@@ -10,7 +10,7 @@ export default function NotFoundPage(): React.ReactElement {
     <Page>
       <Metatags title="Não encontrado" />
       <Divisor />
-      <Article title="Não encontrado" content="Página não encontrada" />
+      <Article title="Não encontrado" description="Página não encontrada" />
     </Page>
   );
 }

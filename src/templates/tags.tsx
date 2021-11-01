@@ -30,7 +30,7 @@ export default function Tags({ data, pageContext }: TagsTemplateProps): React.Re
           url={fields?.slug}
           language={frontmatter?.language}
           readingTime={fields?.readingTime?.minutes ?? 0}
-          content={frontmatter?.description || excerpt}
+          description={frontmatter?.description || excerpt}
         />
       ))}
     </Page>
@@ -39,7 +39,7 @@ export default function Tags({ data, pageContext }: TagsTemplateProps): React.Re
 
 export const pageQuery = graphql`
   query TagsTemplate($tag: String) {
-    articles: allMarkdownRemark(
+    articles: allMdx(
       sort: { fields: [frontmatter___date], order: DESC }
       filter: { frontmatter: { tags: { in: [$tag] } } }
     ) {

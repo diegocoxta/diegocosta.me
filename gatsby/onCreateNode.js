@@ -1,7 +1,7 @@
 const { createFilePath } = require('gatsby-source-filesystem');
 
 module.exports = ({ node, actions, getNode }) => {
-  if (node.internal.type === 'MarkdownRemark' || node.internal.type === 'Mdx') {
+  if (node.internal.type === 'Mdx') {
     actions.createNodeField({
       name: 'slug',
       value: createFilePath({ node, getNode }),

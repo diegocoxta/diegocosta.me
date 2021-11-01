@@ -20,7 +20,7 @@ export default function LanguagesTemplate({ data }: LanguagesTemplateProps): Rea
   return (
     <Page>
       <Metatags />
-      <AboutMe htmlContent={aboutMe?.html ?? ''} />
+      <AboutMe bodyContent={aboutMe?.body ?? ''} />
       <Divisor />
       <Search />
       {articles.edges.map(({ node: { frontmatter, fields, excerpt } }, index) => (
@@ -32,7 +32,7 @@ export default function LanguagesTemplate({ data }: LanguagesTemplateProps): Rea
           url={fields?.slug}
           language={frontmatter?.language}
           readingTime={fields?.readingTime?.minutes ?? 0}
-          content={frontmatter?.description || excerpt}
+          description={frontmatter?.description || excerpt}
         />
       ))}
     </Page>
@@ -41,10 +41,10 @@ export default function LanguagesTemplate({ data }: LanguagesTemplateProps): Rea
 
 export const pageQuery = graphql`
   query LanguageTemplate($language: String) {
-    aboutMe: markdownRemark(fields: { slug: { eq: "/" } }) {
-      html
+    aboutMe: mdx(fields: { slug: { eq: "/" } }) {
+      body
     }
-    articles: allMarkdownRemark(
+    articles: allMdx(
       sort: { fields: [frontmatter___date], order: DESC }
       filter: { frontmatter: { language: { eq: $language } } }
     ) {
