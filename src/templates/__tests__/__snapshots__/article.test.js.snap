@@ -106,44 +106,42 @@ exports[`<ArticleTemplate> should render properly 1`] = `
       <div
         class="c0"
       />
-      <div>
-        <section
-          class="c1"
-        >
-          <main>
-            <article
-              class="c2"
-              data-testid="article-item"
+      <section
+        class="c1"
+      >
+        <main>
+          <article
+            class="c2"
+            data-testid="article-item"
+          >
+            <header
+              class="c3"
             >
-              <header
-                class="c3"
+              <h2
+                class="c4"
               >
-                <h2
-                  class="c4"
-                >
-                  Title 1
-                </h2>
-                <p
-                  class="c5"
-                >
-                  Invalid Date
-                   
-                   · 5 minutes of reading
-                </p>
-                <ul
-                  class="c6"
-                  data-testid="article-header-tags"
-                />
-              </header>
-              <section
-                class="c7"
+                Title 1
+              </h2>
+              <p
+                class="c5"
               >
-                Post content
-              </section>
-            </article>
-          </main>
-        </section>
-      </div>
+                Invalid Date
+                 
+                 · 5 minutes of reading
+              </p>
+              <ul
+                class="c6"
+                data-testid="article-header-tags"
+              />
+            </header>
+            <section
+              class="c7"
+            >
+              Post content
+            </section>
+          </article>
+        </main>
+      </section>
     </main>
     <p>
       Footer

@@ -6,7 +6,6 @@ import Page from '~/components/Page';
 import Divisor from '~/components/Divisor';
 import Metatags from '~/components/Metatags';
 import Article from '~/components/Article';
-import MDXProvider from '~/components/MDXProvider';
 
 import { ArticleTemplateQuery } from '~/../graphql-types';
 
@@ -22,17 +21,15 @@ export default function ArticleTemplate({ data }: ArticleTemplateProps): React.R
     <Page>
       <Metatags title={title ?? ''} description={description || excerpt || ''} />
       <Divisor />
-      <MDXProvider>
-        <Article
-          title={title ?? ''}
-          date={date}
-          tags={tags as string[]}
-          readingTime={fields?.readingTime?.minutes ?? 0}
-          language={language}
-        >
-          <MDXRenderer>{body ?? ''}</MDXRenderer>
-        </Article>
-      </MDXProvider>
+      <Article
+        title={title ?? ''}
+        date={date}
+        tags={tags as string[]}
+        readingTime={fields?.readingTime?.minutes ?? 0}
+        language={language}
+      >
+        <MDXRenderer>{body ?? ''}</MDXRenderer>
+      </Article>
     </Page>
   );
 }

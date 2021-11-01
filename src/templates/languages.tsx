@@ -8,7 +8,6 @@ import Metatags from '~/components/Metatags';
 import Article from '~/components/Article';
 import AboutMe from '~/components/AboutMe';
 import Search from '~/components/Search';
-import MDXProvider from '~/components/MDXProvider';
 
 import { LanguageTemplateQuery } from '~/../graphql-types';
 
@@ -22,11 +21,9 @@ export default function LanguagesTemplate({ data }: LanguagesTemplateProps): Rea
   return (
     <Page>
       <Metatags />
-      <MDXProvider>
-        <AboutMe>
-          <MDXRenderer>{aboutMe?.body ?? ''}</MDXRenderer>
-        </AboutMe>
-      </MDXProvider>
+      <AboutMe>
+        <MDXRenderer>{aboutMe?.body ?? ''}</MDXRenderer>
+      </AboutMe>
       <Divisor />
       <Search />
       {articles.edges.map(({ node: { frontmatter, fields, excerpt } }, index) => (

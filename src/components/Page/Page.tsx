@@ -1,8 +1,10 @@
 import React from 'react';
 import { createGlobalStyle, ThemeContext } from 'styled-components';
+import { MDXProvider } from '@mdx-js/react';
 
 import Header from '~/components/Header';
 import Footer from '~/components/Footer';
+import Talk from '~/components/Talk';
 
 import { useTheme } from '~/hooks/useTheme';
 import { dark, light } from '~/themes';
@@ -28,11 +30,17 @@ export default function Page(props: PageProps): React.ReactElement {
 
   const themeMode = theme === 'light' ? light : dark;
 
+  const mdxComponents = {
+    Talk,
+  };
+
   return (
     <ThemeContext.Provider value={{ ...themeMode, theme, themeToggler }}>
       <GlobalStyle />
       <Header />
-      <main>{props.children}</main>
+      <MDXProvider components={{ ...mdxComponents }}>
+        <main>{props.children}</main>
+      </MDXProvider>
       <Footer />
     </ThemeContext.Provider>
   );

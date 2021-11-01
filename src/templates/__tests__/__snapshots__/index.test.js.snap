@@ -192,19 +192,17 @@ exports[`<IndexTemplate> should render properly 1`] = `
       <p>
         Metatags
       </p>
-      <div>
-        <section
-          class="c0"
-        >
-          <main>
-            <div
-              class="c1"
-            >
-              
-            </div>
-          </main>
-        </section>
-      </div>
+      <section
+        class="c0"
+      >
+        <main>
+          <div
+            class="c1"
+          >
+            
+          </div>
+        </main>
+      </section>
       <div
         class="c2"
       />
