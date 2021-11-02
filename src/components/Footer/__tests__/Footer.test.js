@@ -5,21 +5,16 @@ import Footer from '../Footer';
 
 describe('<Footer />', () => {
   it('should render properly', () => {
-    const contacts = [
-      { link: 'mailto:johndoe@doe.com', label: 'email' },
-      { link: 'https://google.com', label: 'site' },
-    ];
-
-    const { baseElement, queryByText } = render(<Footer year={2020} contacts={contacts} />);
-    expect(queryByText('source code')).toBeFalsy();
+    const { baseElement, queryByText } = render(<Footer year={2020} />);
+    expect(queryByText('footer.sourceCode')).toBeFalsy();
     expect(baseElement).toMatchSnapshot();
   });
 
   it('should render the repository url if passed', () => {
     const { baseElement, getByText } = render(
-      <Footer year={2020} contacts={[]} repository="https://github.com/diegocosta/diegocosta.com.br" />
+      <Footer year={2020} repository="https://github.com/diegocosta/diegocosta.com.br" />
     );
-    expect(getByText('source code')).toBeTruthy();
+    expect(getByText('footer.sourceCode')).toBeTruthy();
     expect(baseElement).toMatchSnapshot();
   });
 });

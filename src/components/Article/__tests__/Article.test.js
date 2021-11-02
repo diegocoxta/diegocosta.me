@@ -16,7 +16,7 @@ describe('<Article />', () => {
       />
     );
     expect(getByText('Awesome Article')).toBeTruthy();
-    expect(getByText('01/18/2020 · 5 minutes of reading')).toBeTruthy();
+    expect(getByText('01/18/2020 · 5 article.minutes article.ofReading')).toBeTruthy();
     expect(getByTestId('article-header-custom-link').href).toBe('http://localhost/awesome-article');
     expect(getByTestId('article-header-tags')).toBeTruthy();
     expect(getAllByTestId('article-header-tag').length).toEqual(2);
@@ -35,7 +35,6 @@ describe('<Article />', () => {
     );
 
     expect(queryByTestId('article-header-tags')).toBeFalsy();
-    expect(getByText('20/07/2020 · 5 minutos de leitura')).toBeTruthy();
     expect(queryAllByTestId('article-header-tag').length).toEqual(0);
     expect(baseElement).toMatchSnapshot();
   });
@@ -46,21 +45,6 @@ describe('<Article />', () => {
     );
 
     expect(queryByTestId('article-header-custom-link')).toBeFalsy();
-    expect(baseElement).toMatchSnapshot();
-  });
-
-  it('should render properly in Poruguese', () => {
-    const { baseElement, getByText } = render(
-      <Article
-        title="Awesome Article"
-        url="/awesome-article"
-        readingTime={5}
-        language="pt"
-        date="2020-07-20T22:12:03.284Z"
-      />
-    );
-
-    expect(getByText('20/07/2020 · 5 minutos de leitura')).toBeTruthy();
     expect(baseElement).toMatchSnapshot();
   });
 

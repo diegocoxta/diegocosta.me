@@ -10,6 +10,6 @@ You can hear more about here:
 
 - [Linkedin](https://linkedin.com/in/diegoscosta)
 - [Github](https://github.com/diegocosta)
-- [Talks](/talks)
+- [Talks](/en/talks)
 - [Twitter](https://twitter.com/diegocoxta)
 - [E-mail](mailto:diego@diegocosta.me)

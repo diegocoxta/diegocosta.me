@@ -1,11 +1,9 @@
 import React from 'react';
-import { Link } from 'gatsby';
 import styled from 'styled-components';
 import kebabCase from 'lodash.kebabcase';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
 
-import translations from './translations';
-
+import { usei18n, Link } from '~/helpers/i18n';
 import Container from '~/components/Container';
 
 const Content = styled.article`
@@ -127,25 +125,27 @@ export interface ArticleProps {
 }
 
 export default function Article(props: ArticleProps): React.ReactElement {
-  const currentArticleLanguage = props.language ?? 'en';
+  const i18n = usei18n();
 
   const getReadingTime = () => {
-    const texts = translations[currentArticleLanguage];
+    const lessThan1Minute = i18n.getTranslationFor('article.lessThan1Minute');
+    const ofReading = i18n.getTranslationFor('article.ofReading');
+    const minutes = i18n.getTranslationFor('article.minutes');
 
     if (!props.readingTime) {
       return undefined;
     }
 
     if (props.readingTime < 1) {
-      return ` · ${texts.lessThan1Minute} ${texts.ofReading}`;
+      return ` · ${lessThan1Minute} ${ofReading}`;
     }
 
-    return ` · ${props.readingTime?.toFixed()} ${texts.minutes} ${texts.ofReading}`;
+    return ` · ${props.readingTime?.toFixed()} ${minutes} ${ofReading}`;
   };
 
   const date =
     props.date &&
-    new Date(props.date).toLocaleDateString(currentArticleLanguage, {
+    new Date(props.date).toLocaleDateString(i18n.getCurrentLanguage(), {
       year: 'numeric',
       month: '2-digit',
       day: '2-digit',
@@ -167,7 +167,7 @@ export default function Article(props: ArticleProps): React.ReactElement {
         <Header>
           <Title>
             {props.url ? (
-              <CustomLink to={props.url} data-testid="article-header-custom-link">
+              <CustomLink to={props.url} data-testid="article-header-custom-link" language={props.language}>
                 {props.title}
               </CustomLink>
             ) : (

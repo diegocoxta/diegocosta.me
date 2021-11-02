@@ -24,11 +24,6 @@ exports[`<Header /> should not render the last name 1`] = `
   align-items: center;
 }
 
-.c1 nav {
-  margin-top: 10px;
-  display: none;
-}
-
 .c3 {
   font-size: 15vw;
   font-weight: 700;
@@ -62,14 +57,8 @@ exports[`<Header /> should not render the last name 1`] = `
 }
 
 @media (min-width:760px) {
-  .c1 nav {
-    display: block;
-  }
-}
-
-@media (min-width:760px) {
   .c1 {
-    margin: 100px 0 0px 0;
+    margin: 40px 0 40px 0;
   }
 }
 
@@ -134,11 +123,6 @@ exports[`<Header /> should render properly 1`] = `
   align-items: center;
 }
 
-.c1 nav {
-  margin-top: 10px;
-  display: none;
-}
-
 .c3 {
   font-size: 15vw;
   font-weight: 700;
@@ -172,14 +156,8 @@ exports[`<Header /> should render properly 1`] = `
 }
 
 @media (min-width:760px) {
-  .c1 nav {
-    display: block;
-  }
-}
-
-@media (min-width:760px) {
   .c1 {
-    margin: 100px 0 0px 0;
+    margin: 40px 0 40px 0;
   }
 }
 

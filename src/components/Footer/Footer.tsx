@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
+import { usei18n } from '~/helpers/i18n';
 import Container from '~/components/Container';
 
 const Content = styled.footer`
@@ -43,13 +44,17 @@ interface FooterProps {
 }
 
 export default function Footer(props: FooterProps): React.ReactElement {
+  const i18n = usei18n();
+
   return (
     <Container>
       <Content>
-        <Label>CC-BY {props.year}, built with </Label>
+        <Label>
+          CC-BY {props.year}, {i18n.getTranslationFor('footer.builtWith')}{' '}
+        </Label>
         <Link href="https://gatsbyjs.org">gatsby</Link>
         <Label> • </Label>
-        {props.repository && <Link href={props.repository}>source code</Link>}
+        {props.repository && <Link href={props.repository}>{i18n.getTranslationFor('footer.sourceCode')}</Link>}
       </Content>
     </Container>
   );

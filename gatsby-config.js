@@ -1,14 +1,4 @@
-const siteMetadata = {
-  title: 'Diego Costa - Software Engineer, Engineering Tech Manager',
-  author: 'Diego Costa',
-  description:
-    'Engenheiro de software e Tech Manager apaixonado por construir produtos que impactem a vida das pessoas.',
-  siteUrl: 'https://diegocosta.me',
-  language: 'en',
-  repository: 'https://github.com/diegocosta/diegocosta.me',
-  image: 'https://repository-images.githubusercontent.com/278878641/3756a080-d995-11ea-9b9f-f91a4448af98',
-  googleAnalyticsKey: 'UA-53539968-4',
-};
+const siteMetadata = require('./site-config.json');
 
 module.exports = {
   siteMetadata,
@@ -47,6 +37,28 @@ module.exports = {
       options: {
         path: `${__dirname}/content/pages`,
         name: 'pages',
+      },
+    },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        path: `${__dirname}/i18n`,
+        name: 'locale',
+      },
+    },
+    {
+      resolve: 'gatsby-plugin-react-i18next',
+      options: {
+        localeJsonSourceName: 'locale', // name given to 'gatsby-source-filesystem' plugin.
+        languages: siteMetadata.languages,
+        defaultLanguage: siteMetadata.defaultLanguage,
+        siteUrl: siteMetadata.siteUrl,
+        generateDefaultLanguagePage: true,
+        redirect: false,
+        i18nextOptions: {
+          keySeparator: false,
+          nsSeparator: false,
+        },
       },
     },
     'gatsby-remark-images',

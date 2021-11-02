@@ -2,88 +2,125 @@
 
 exports[`<NotFoundPage> should render properly 1`] = `
 .c0 {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 40px 0 0 0;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+}
+
+.c2 {
+  margin: 0 5px;
+  text-transform: uppercase;
+  color: #0C0D0E;
+  font-weight: 700;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c3 {
   background: linear-gradient(90deg,#FFFFFF 20px,transparent 1%) center, linear-gradient(#FFFFFF 20px,transparent 1%) center, #0C0D0E;
   background-size: 22px 22px;
   height: 120px;
   margin-top: 40px;
 }
 
-.c1 {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
-
-.c2 {
+.c4 {
   margin: 0 0 60px 0;
   font-weight: 400;
   color: #0C0D0E;
 }
 
-.c3 {
+.c5 {
   margin: 20px 0 0 0;
 }
 
-.c4 {
+.c6 {
   font-size: 36px;
   margin: 0;
 }
 
-.c5 {
+.c7 {
   color: #737373;
   font-size: 18px;
   margin: 5px 0;
 }
 
-.c6 {
+.c8 {
   line-height: 1.5;
 }
 
-.c6 a {
+.c8 a {
   color: #626D4A;
   -webkit-text-decoration: none;
   text-decoration: none;
   border-bottom: 1px solid #FFFFFF;
 }
 
-.c6 a:hover,
-.c6 a:focus {
+.c8 a:hover,
+.c8 a:focus {
   border-bottom: 1px solid #626D4A;
   outline: none;
 }
 
-.c6 blockquote {
+.c8 blockquote {
   border-left: 5px solid #626D4A;
   padding-left: 20px;
 }
 
-.c6 .gatsby-highlight {
+.c8 .gatsby-highlight {
   padding: 10px 0;
 }
 
-.c6 pre[class*='language-'],
-.c6 code[class*='language-'],
-.c6 .gatsby-highlight {
+.c8 pre[class*='language-'],
+.c8 code[class*='language-'],
+.c8 .gatsby-highlight {
   background-color: #FFFFFF;
   font-family: monospace;
   white-space: pre-wrap;
 }
 
-.c6 .line-numbers-rows,
-.c6 .line-numbers-rows span::before {
+.c8 .line-numbers-rows,
+.c8 .line-numbers-rows span::before {
   border: 0.5px solid #FFFFFF;
 }
 
-.c6 img {
+.c8 img {
   box-shadow: none !important;
 }
 
-.c6 h3 {
+.c8 h3 {
   font-size: 28px;
 }
 
 <body>
   <div>
+    <section
+      class="c0"
+    >
+      <main>
+        <div
+          class="c1"
+        >
+          <a
+            class="c2"
+            language="pt"
+          >
+            pt
+          </a>
+        </div>
+      </main>
+    </section>
     <p>
       Header
     </p>
@@ -92,34 +129,34 @@ exports[`<NotFoundPage> should render properly 1`] = `
         Metatags
       </p>
       <div
-        class="c0"
+        class="c3"
       />
       <section
-        class="c1"
+        class="c0"
       >
         <main>
           <article
-            class="c2"
+            class="c4"
             data-testid="article-item"
           >
             <header
-              class="c3"
+              class="c5"
             >
               <h2
-                class="c4"
+                class="c6"
               >
-                Não encontrado
+                404page.title
               </h2>
               <p
-                class="c5"
+                class="c7"
               >
                  
               </p>
             </header>
             <section
-              class="c6"
+              class="c8"
             >
-              Página não encontrada
+              404page.message
             </section>
           </article>
         </main>

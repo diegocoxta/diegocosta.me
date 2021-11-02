@@ -1,7 +1,8 @@
 const path = require('path');
 const kebabCase = require('lodash.kebabcase');
+const { getSlugWithoutFile, siteMetadata } = require('./helpers');
 
-module.exports = async ({ graphql, actions }) => {
+module.exports = async ({ graphql, actions, reporter }) => {
   const result = await graphql(`
     {
       content: allMdx(sort: { order: DESC, fields: [frontmatter___date] }) {
@@ -15,9 +16,7 @@ module.exports = async ({ graphql, actions }) => {
               type
             }
             frontmatter {
-              tags
               title
-              language
             }
           }
         }
@@ -27,17 +26,13 @@ module.exports = async ({ graphql, actions }) => {
           fieldValue
         }
       }
-      languages: allMdx(limit: 2000) {
-        group(field: frontmatter___language) {
-          fieldValue
-        }
-      }
     }
   `);
 
   if (result.errors) {
-    console.log(result.errors);
-    throw result.errors;
+    console.log({ erros: result.errors });
+    reporter.panicOnBuild(result.errors);
+    return;
   }
 
   // Create Home Page
@@ -49,17 +44,19 @@ module.exports = async ({ graphql, actions }) => {
   // Create Article Pages
   const content = result.data.content.edges;
   const tags = result.data.tags.group;
-  const languages = result.data.languages.group;
 
   content.forEach((content) => {
-    if (content.node.fields.slug !== '/') {
+    const slug = getSlugWithoutFile(content.node.fields.slug);
+
+    if (slug !== '/') {
       const template = content.node.fields.collection === 'articles' ? 'article' : 'page';
 
       actions.createPage({
-        path: content.node.fields.slug,
+        path: slug,
         component: path.resolve(`./src/templates/${template}.tsx`),
         context: {
-          slug: content.node.fields.slug,
+          slug: slug,
+          defaultLanguage: siteMetadata.defaultLanguage,
         },
       });
     }
@@ -72,17 +69,6 @@ module.exports = async ({ graphql, actions }) => {
       component: path.resolve('./src/templates/tags.tsx'),
       context: {
         tag: tag.fieldValue,
-      },
-    });
-  });
-
-  // Create Language Page
-  languages.forEach((language) => {
-    actions.createPage({
-      path: `/${language.fieldValue}/`,
-      component: path.resolve('./src/templates/languages.tsx'),
-      context: {
-        language: language.fieldValue,
       },
     });
   });

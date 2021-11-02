@@ -48,7 +48,7 @@ exports[`<ThemeSwitcher /> should render properly 1`] = `
 <body>
   <div>
     <button
-      aria-label="Toggle color scheme"
+      aria-label="themeSwitcher.toggle"
       class="c0"
     >
       <div

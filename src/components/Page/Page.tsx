@@ -5,6 +5,7 @@ import { MDXProvider } from '@mdx-js/react';
 import Header from '~/components/Header';
 import Footer from '~/components/Footer';
 import Talk from '~/components/Talk';
+import LanguageSwitcher from '~/components/LanguageSwitcher';
 
 import { useTheme } from '~/hooks/useTheme';
 import { dark, light } from '~/themes';
@@ -37,6 +38,7 @@ export default function Page(props: PageProps): React.ReactElement {
   return (
     <ThemeContext.Provider value={{ ...themeMode, theme, themeToggler }}>
       <GlobalStyle />
+      <LanguageSwitcher />
       <Header />
       <MDXProvider components={{ ...mdxComponents }}>
         <main>{props.children}</main>

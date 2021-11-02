@@ -38,7 +38,16 @@ export default function Tags({ data, pageContext }: TagsTemplateProps): React.Re
 }
 
 export const pageQuery = graphql`
-  query TagsTemplate($tag: String) {
+  query TagsTemplate($tag: String, $language: String!) {
+    locales: allLocale(filter: { language: { eq: $language } }) {
+      edges {
+        node {
+          ns
+          data
+          language
+        }
+      }
+    }
     articles: allMdx(
       sort: { fields: [frontmatter___date], order: DESC }
       filter: { frontmatter: { tags: { in: [$tag] } } }
