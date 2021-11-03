@@ -27,7 +27,7 @@ export default function ArticleTemplate(props: ArticleTemplateProps): React.Reac
         tags={tags as string[]}
         readingTime={fields?.readingTime?.minutes ?? 0}
         language={fields?.language}
-        bodyContent={body}
+        mdxContent={body}
       />
     </Page>
   );

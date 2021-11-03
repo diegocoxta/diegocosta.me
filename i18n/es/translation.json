@@ -1,12 +1,17 @@
 {
+  "languages.pt": "Portugués",
+  "languages.en": "Inglés",
+  "languages.es": "Español",
   "article.lessThan1Minute": "Menos de 1 minuto",
   "article.minutes": "minutos",
   "article.ofReading": "de lectura",
   "article.translationNotFound": "Lo siento, esta página no está disponible en español.",
+  "article.languagePrefix": "En",
   "404page.title": "No encontrado",
   "404page.message": "Página no encontrada",
   "footer.builtWith": "construido con",
   "footer.sourceCode": "código fuente",
   "search.searchForPosts": "Buscar publicaciones...",
-  "themeSwitcher.toggle": "Cambiar esquema de color"
+  "themeSwitcher.toggle": "Cambiar esquema de color",
+  "languageswitcher.toggle": "Cambiar el idioma a"
 }

@@ -1,12 +1,17 @@
 {
+  "languages.pt": "Portuguese",
+  "languages.en": "English",
+  "languages.es": "Spanish",
   "article.lessThan1Minute": "Less than 1 minute",
   "article.minutes": "minutes",
   "article.ofReading": "of reading",
   "article.translationNotFound": "Sorry, this page is not available in English.",
+  "article.languagePrefix": "In",
   "404page.title": "Not Found",
   "404page.message": "Page not found",
   "footer.builtWith": "built with",
   "footer.sourceCode": "source code",
   "search.searchForPosts": "Search for posts...",
-  "themeSwitcher.toggle": "Change color scheme"
+  "themeSwitcher.toggle": "Change color scheme",
+  "languageswitcher.toggle": "Change the language to"
 }

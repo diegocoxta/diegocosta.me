@@ -20,7 +20,7 @@ export default function IndexTemplate({ data }: IndexTemplateProps): React.React
   return (
     <Page>
       <Metatags />
-      <AboutMe bodyContent={aboutMe?.body || ''} />
+      <AboutMe mdxContent={aboutMe?.body || ''} />
       <Divisor />
       <Search />
       {articles.edges.map(({ node: { frontmatter, fields, excerpt } }, index: number) => (

@@ -214,6 +214,7 @@ exports[`<IndexTemplate> should render properly 1`] = `
           class="c1"
         >
           <a
+            aria-label="languageswitcher.toggle languages.pt"
             class="c2"
             href="/about-us"
             language="pt"
@@ -222,6 +223,7 @@ exports[`<IndexTemplate> should render properly 1`] = `
             pt
           </a>
           <a
+            aria-label="languageswitcher.toggle languages.en"
             class="c2"
             href="/about-us"
             language="en"
@@ -229,6 +231,7 @@ exports[`<IndexTemplate> should render properly 1`] = `
             en
           </a>
           <a
+            aria-label="languageswitcher.toggle languages.es"
             class="c2"
             href="/about-us"
             language="es"
@@ -290,6 +293,8 @@ exports[`<IndexTemplate> should render properly 1`] = `
                 16/01/2021
                  
                  · 5 article.minutes article.ofReading
+                 
+                 · article.languagePrefix languages.undefined
               </p>
               <ul
                 class="c10"
@@ -332,6 +337,8 @@ exports[`<IndexTemplate> should render properly 1`] = `
                 18/01/2020
                  
                  · 2 article.minutes article.ofReading
+                 
+                 · article.languagePrefix languages.undefined
               </p>
               <ul
                 class="c10"

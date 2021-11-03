@@ -21,15 +21,19 @@ const LanguageLink = styled(Link)`
 export default function LanguageSwitcher() {
   const i18n = usei18n();
 
-  const currentLanguage = i18n.getCurrentLanguage();
-  const allLanguages = i18n.getAllLanguages();
-
   return (
     <Container>
       <List>
-        {allLanguages.map((language) => (
-          <LanguageLink key={`footer-languages-${language}`} to={i18n.getOriginalPath()} language={language}>
-            {currentLanguage === language && '/'}
+        {i18n.getAllLanguages().map((language) => (
+          <LanguageLink
+            aria-label={`${i18n.getTranslationFor('languageswitcher.toggle')} ${i18n.getTranslationFor(
+              `languages.${language}`
+            )}`}
+            key={`footer-languages-${language}`}
+            to={i18n.getOriginalPath()}
+            language={language}
+          >
+            {i18n.getCurrentLanguage() === language && '/'}
             {language}
           </LanguageLink>
         ))}

@@ -128,7 +128,7 @@ export interface ArticleProps {
   date?: string;
   tags?: string[] | null;
   description?: string | null;
-  bodyContent?: string | null;
+  mdxContent?: string | null;
 }
 
 export default function Article(props: ArticleProps): React.ReactElement {
@@ -139,6 +139,8 @@ export default function Article(props: ArticleProps): React.ReactElement {
   const lessThan1Minute = i18n.getTranslationFor('article.lessThan1Minute');
   const ofReading = i18n.getTranslationFor('article.ofReading');
   const minutes = i18n.getTranslationFor('article.minutes');
+  const languagePrefix = i18n.getTranslationFor('article.languagePrefix');
+  const languageName = i18n.getTranslationFor(`languages.${props.language}`);
   const isValidTranslation = pageLanguage === props.language;
 
   const getReadingTime = () => {
@@ -161,6 +163,14 @@ export default function Article(props: ArticleProps): React.ReactElement {
       day: '2-digit',
     });
 
+  const language = () => {
+    if (!props.date) {
+      return undefined;
+    }
+
+    return ` · ${languagePrefix} ${languageName}`;
+  };
+
   const Tags = props.tags && (
     <TagList data-testid="article-header-tags">
       {props.tags.map((tag: string, index: number) => (
@@ -173,7 +183,7 @@ export default function Article(props: ArticleProps): React.ReactElement {
 
   return (
     <Container>
-      {!isValidTranslation && !!props.bodyContent && (
+      {!isValidTranslation && !!props.mdxContent && (
         <LanguageFallbackMessage>{articleTranslationNotFound}</LanguageFallbackMessage>
       )}
       <Content data-testid="article-item">
@@ -188,14 +198,14 @@ export default function Article(props: ArticleProps): React.ReactElement {
             )}
           </Title>
           <Details>
-            {date} {getReadingTime()}
+            {date} {getReadingTime()} {language()}
           </Details>
           {Tags}
         </Header>
         {props.description && <Body dangerouslySetInnerHTML={{ __html: props.description }} />}
-        {props.bodyContent && (
+        {props.mdxContent && (
           <Body>
-            <MDXRenderer>{props.bodyContent}</MDXRenderer>
+            <MDXRenderer>{props.mdxContent}</MDXRenderer>
           </Body>
         )}
       </Content>

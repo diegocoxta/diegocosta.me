@@ -113,6 +113,7 @@ exports[`<NotFoundPage> should render properly 1`] = `
           class="c1"
         >
           <a
+            aria-label="languageswitcher.toggle languages.pt"
             class="c2"
             href="/about-us"
             language="pt"
@@ -121,6 +122,7 @@ exports[`<NotFoundPage> should render properly 1`] = `
             pt
           </a>
           <a
+            aria-label="languageswitcher.toggle languages.en"
             class="c2"
             href="/about-us"
             language="en"
@@ -128,6 +130,7 @@ exports[`<NotFoundPage> should render properly 1`] = `
             en
           </a>
           <a
+            aria-label="languageswitcher.toggle languages.es"
             class="c2"
             href="/about-us"
             language="es"
@@ -166,6 +169,7 @@ exports[`<NotFoundPage> should render properly 1`] = `
               <p
                 class="c7"
               >
+                 
                  
               </p>
             </header>
