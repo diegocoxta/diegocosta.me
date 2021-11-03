@@ -5,7 +5,6 @@ import Page from '~/components/Page';
 import Divisor from '~/components/Divisor';
 import Metatags from '~/components/Metatags';
 import Article from '~/components/Article';
-import LanguageNotFoundBox from '~/components/LanguageNotFoundBox';
 
 import { PageTemplateQuery } from '~/../graphql-types';
 
@@ -22,8 +21,7 @@ export default function PageTemplate({ data }: PageTemplateProps): React.ReactEl
     <Page>
       <Metatags title={title ?? ''} />
       <Divisor />
-      <LanguageNotFoundBox language={fields?.language} />
-      <Article title={title ?? ''} bodyContent={body} />
+      <Article language={fields?.language} title={title ?? ''} bodyContent={body} />
     </Page>
   );
 }

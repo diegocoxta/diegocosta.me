@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Link /> should render properly 1`] = `
+<body>
+  <div>
+    <a
+      href="/about-us"
+      language="pt"
+    >
+      Link to page
+    </a>
+  </div>
+</body>
+`;

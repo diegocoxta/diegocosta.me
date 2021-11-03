@@ -5,7 +5,6 @@ import Page from '~/components/Page';
 import Divisor from '~/components/Divisor';
 import Metatags from '~/components/Metatags';
 import Article from '~/components/Article';
-import LanguageNotFoundBox from '~/components/LanguageNotFoundBox';
 
 import { ArticleTemplateQuery } from '~/../graphql-types';
 
@@ -22,7 +21,6 @@ export default function ArticleTemplate(props: ArticleTemplateProps): React.Reac
     <Page>
       <Metatags title={title ?? ''} description={description || excerpt || ''} />
       <Divisor />
-      <LanguageNotFoundBox language={fields?.language} />
       <Article
         title={title ?? ''}
         date={date}

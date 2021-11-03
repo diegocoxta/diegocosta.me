@@ -16,7 +16,7 @@ describe('<Article />', () => {
       />
     );
     expect(getByText('Awesome Article')).toBeTruthy();
-    expect(getByText('01/18/2020 · 5 article.minutes article.ofReading')).toBeTruthy();
+    expect(getByText('18/01/2020 · 5 article.minutes article.ofReading')).toBeTruthy();
     expect(getByTestId('article-header-custom-link').href).toBe('http://localhost/awesome-article');
     expect(getByTestId('article-header-tags')).toBeTruthy();
     expect(getAllByTestId('article-header-tag').length).toEqual(2);

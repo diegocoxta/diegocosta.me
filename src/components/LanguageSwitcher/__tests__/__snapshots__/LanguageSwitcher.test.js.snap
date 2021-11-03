@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<Page /> should render properly 1`] = `
+exports[`<LanguageSwitcher /> should render properly 1`] = `
 .c0 {
   max-width: 800px;
   margin: 0 auto;
@@ -22,7 +22,6 @@ exports[`<Page /> should render properly 1`] = `
 .c2 {
   margin: 0 5px;
   text-transform: uppercase;
-  color: #0C0D0E;
   font-weight: 700;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -62,15 +61,6 @@ exports[`<Page /> should render properly 1`] = `
         </div>
       </main>
     </section>
-    <p>
-      Header
-    </p>
-    <main>
-      John Doe
-    </main>
-    <p>
-      Footer
-    </p>
   </div>
 </body>
 `;

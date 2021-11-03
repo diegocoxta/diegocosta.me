@@ -16,7 +16,7 @@ export default function NotFoundPage(): React.ReactElement {
       <Divisor />
       <Article
         title={i18n.getTranslationFor('404page.title')}
-        description={i18n.getTranslationFor('404page.message')}
+        bodyContent={i18n.getTranslationFor('404page.message')}
       />
     </Page>
   );

@@ -47,7 +47,7 @@ exports[`<Article /> should not render the link 1`] = `
             <p
               class="c4"
             >
-              01/18/2020
+              18/01/2020
                
                · 5 article.minutes article.ofReading
             </p>
@@ -125,7 +125,7 @@ exports[`<Article /> should not render the tags 1`] = `
             <p
               class="c5"
             >
-              07/20/2020
+              20/07/2020
                
                · 5 article.minutes article.ofReading
             </p>
@@ -236,7 +236,7 @@ exports[`<Article /> should render properly 1`] = `
             <p
               class="c5"
             >
-              01/18/2020
+              18/01/2020
                
                · 5 article.minutes article.ofReading
             </p>
@@ -388,7 +388,7 @@ exports[`<Article /> should render properly the body content 1`] = `
             <p
               class="c5"
             >
-              01/18/2020
+              18/01/2020
                
                · 5 article.minutes article.ofReading
             </p>
@@ -516,7 +516,7 @@ exports[`<Article /> should render properly the description 1`] = `
             <p
               class="c5"
             >
-              01/18/2020
+              18/01/2020
                
                · 5 article.minutes article.ofReading
             </p>

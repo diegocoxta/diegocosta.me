@@ -147,9 +147,25 @@ exports[`<TagsTemplate> should render properly 1`] = `
         >
           <a
             class="c2"
+            href="/about-us"
             language="pt"
           >
+            /
             pt
+          </a>
+          <a
+            class="c2"
+            href="/about-us"
+            language="en"
+          >
+            en
+          </a>
+          <a
+            class="c2"
+            href="/about-us"
+            language="es"
+          >
+            es
           </a>
         </div>
       </main>
@@ -196,7 +212,6 @@ exports[`<TagsTemplate> should render properly 1`] = `
                   class="c8"
                   data-testid="article-header-custom-link"
                   href="/path-to-article"
-                  language="en"
                 >
                   Title 1
                 </a>
@@ -239,7 +254,6 @@ exports[`<TagsTemplate> should render properly 1`] = `
                   class="c8"
                   data-testid="article-header-custom-link"
                   href="/path-to-article-2"
-                  language="pt"
                 >
                   Title 2
                 </a>

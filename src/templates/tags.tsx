@@ -28,7 +28,7 @@ export default function Tags({ data, pageContext }: TagsTemplateProps): React.Re
           tags={frontmatter?.tags as string[]}
           date={frontmatter?.date}
           url={fields?.slug}
-          language={frontmatter?.language}
+          language={fields?.language}
           readingTime={fields?.readingTime?.minutes ?? 0}
           description={frontmatter?.description || excerpt}
         />

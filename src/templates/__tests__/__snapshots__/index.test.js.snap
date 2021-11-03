@@ -215,9 +215,25 @@ exports[`<IndexTemplate> should render properly 1`] = `
         >
           <a
             class="c2"
+            href="/about-us"
             language="pt"
           >
+            /
             pt
+          </a>
+          <a
+            class="c2"
+            href="/about-us"
+            language="en"
+          >
+            en
+          </a>
+          <a
+            class="c2"
+            href="/about-us"
+            language="es"
+          >
+            es
           </a>
         </div>
       </main>
@@ -271,7 +287,7 @@ exports[`<IndexTemplate> should render properly 1`] = `
               <p
                 class="c9"
               >
-                01/16/2021
+                16/01/2021
                  
                  · 5 article.minutes article.ofReading
               </p>
@@ -313,7 +329,7 @@ exports[`<IndexTemplate> should render properly 1`] = `
               <p
                 class="c9"
               >
-                01/18/2020
+                18/01/2020
                  
                  · 2 article.minutes article.ofReading
               </p>

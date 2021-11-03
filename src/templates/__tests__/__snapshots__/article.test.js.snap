@@ -35,22 +35,22 @@ exports[`<ArticleTemplate> should render properly 1`] = `
   margin-top: 40px;
 }
 
-.c4 {
+.c5 {
   margin: 0 0 60px 0;
   font-weight: 400;
   color: #0C0D0E;
 }
 
-.c5 {
+.c6 {
   margin: 20px 0 0 0;
 }
 
-.c6 {
+.c7 {
   font-size: 36px;
   margin: 0;
 }
 
-.c8 {
+.c9 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -62,57 +62,64 @@ exports[`<ArticleTemplate> should render properly 1`] = `
   padding: 0;
 }
 
-.c7 {
+.c8 {
   color: #737373;
   font-size: 18px;
   margin: 5px 0;
 }
 
-.c9 {
+.c10 {
   line-height: 1.5;
 }
 
-.c9 a {
+.c10 a {
   color: #626D4A;
   -webkit-text-decoration: none;
   text-decoration: none;
   border-bottom: 1px solid #FFFFFF;
 }
 
-.c9 a:hover,
-.c9 a:focus {
+.c10 a:hover,
+.c10 a:focus {
   border-bottom: 1px solid #626D4A;
   outline: none;
 }
 
-.c9 blockquote {
+.c10 blockquote {
   border-left: 5px solid #626D4A;
   padding-left: 20px;
 }
 
-.c9 .gatsby-highlight {
+.c10 .gatsby-highlight {
   padding: 10px 0;
 }
 
-.c9 pre[class*='language-'],
-.c9 code[class*='language-'],
-.c9 .gatsby-highlight {
+.c10 pre[class*='language-'],
+.c10 code[class*='language-'],
+.c10 .gatsby-highlight {
   background-color: #FFFFFF;
   font-family: monospace;
   white-space: pre-wrap;
 }
 
-.c9 .line-numbers-rows,
-.c9 .line-numbers-rows span::before {
+.c10 .line-numbers-rows,
+.c10 .line-numbers-rows span::before {
   border: 0.5px solid #FFFFFF;
 }
 
-.c9 img {
+.c10 img {
   box-shadow: none !important;
 }
 
-.c9 h3 {
+.c10 h3 {
   font-size: 28px;
+}
+
+.c4 {
+  background: #626D4A;
+  padding: 20px;
+  color: #FFFFFF;
+  margin: 20px 0;
 }
 
 <body>
@@ -126,9 +133,25 @@ exports[`<ArticleTemplate> should render properly 1`] = `
         >
           <a
             class="c2"
+            href="/about-us"
             language="pt"
           >
+            /
             pt
+          </a>
+          <a
+            class="c2"
+            href="/about-us"
+            language="en"
+          >
+            en
+          </a>
+          <a
+            class="c2"
+            href="/about-us"
+            language="es"
+          >
+            es
           </a>
         </div>
       </main>
@@ -146,38 +169,38 @@ exports[`<ArticleTemplate> should render properly 1`] = `
       <section
         class="c0"
       >
-        <main />
-      </section>
-      <section
-        class="c0"
-      >
         <main>
-          <article
+          <p
             class="c4"
+          >
+            article.translationNotFound
+          </p>
+          <article
+            class="c5"
             data-testid="article-item"
           >
             <header
-              class="c5"
+              class="c6"
             >
               <h2
-                class="c6"
+                class="c7"
               >
                 Title 1
               </h2>
               <p
-                class="c7"
+                class="c8"
               >
                 Invalid Date
                  
                  · 5 article.minutes article.ofReading
               </p>
               <ul
-                class="c8"
+                class="c9"
                 data-testid="article-header-tags"
               />
             </header>
             <section
-              class="c9"
+              class="c10"
             >
               Post content
             </section>

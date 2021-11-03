@@ -113,6 +113,13 @@ export const Body = styled.section`
   }
 `;
 
+const LanguageFallbackMessage = styled.p`
+  background: ${({ theme }) => theme.accentColor};
+  padding: 20px;
+  color: ${({ theme }) => theme.backgroundColor};
+  margin: 20px 0;
+`;
+
 export interface ArticleProps {
   title: string;
   url?: string | null;
@@ -127,11 +134,14 @@ export interface ArticleProps {
 export default function Article(props: ArticleProps): React.ReactElement {
   const i18n = usei18n();
 
-  const getReadingTime = () => {
-    const lessThan1Minute = i18n.getTranslationFor('article.lessThan1Minute');
-    const ofReading = i18n.getTranslationFor('article.ofReading');
-    const minutes = i18n.getTranslationFor('article.minutes');
+  const pageLanguage = i18n.getCurrentLanguage();
+  const articleTranslationNotFound = i18n.getTranslationFor('article.translationNotFound');
+  const lessThan1Minute = i18n.getTranslationFor('article.lessThan1Minute');
+  const ofReading = i18n.getTranslationFor('article.ofReading');
+  const minutes = i18n.getTranslationFor('article.minutes');
+  const isValidTranslation = pageLanguage === props.language;
 
+  const getReadingTime = () => {
     if (!props.readingTime) {
       return undefined;
     }
@@ -145,7 +155,7 @@ export default function Article(props: ArticleProps): React.ReactElement {
 
   const date =
     props.date &&
-    new Date(props.date).toLocaleDateString(i18n.getCurrentLanguage(), {
+    new Date(props.date).toLocaleDateString(pageLanguage, {
       year: 'numeric',
       month: '2-digit',
       day: '2-digit',
@@ -163,6 +173,9 @@ export default function Article(props: ArticleProps): React.ReactElement {
 
   return (
     <Container>
+      {!isValidTranslation && !!props.bodyContent && (
+        <LanguageFallbackMessage>{articleTranslationNotFound}</LanguageFallbackMessage>
+      )}
       <Content data-testid="article-item">
         <Header>
           <Title>
