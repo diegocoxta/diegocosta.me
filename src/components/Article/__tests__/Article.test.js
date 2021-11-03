@@ -24,7 +24,7 @@ describe('<Article />', () => {
   });
 
   it('should not render the tags', () => {
-    const { baseElement, queryByTestId, queryAllByTestId, getByText } = render(
+    const { baseElement, queryByTestId, queryAllByTestId } = render(
       <Article
         title="Awesome Article"
         url="/awesome-article"
