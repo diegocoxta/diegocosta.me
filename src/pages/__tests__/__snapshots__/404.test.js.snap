@@ -35,79 +35,72 @@ exports[`<NotFoundPage> should render properly 1`] = `
   margin-top: 40px;
 }
 
-.c5 {
+.c4 {
   margin: 0 0 60px 0;
   font-weight: 400;
   color: #0C0D0E;
 }
 
-.c6 {
+.c5 {
   margin: 20px 0 0 0;
 }
 
-.c7 {
+.c6 {
   font-size: 36px;
   margin: 0;
 }
 
-.c8 {
+.c7 {
   color: #737373;
   font-size: 18px;
   margin: 5px 0;
 }
 
-.c9 {
+.c8 {
   line-height: 1.5;
 }
 
-.c9 a {
+.c8 a {
   color: #626D4A;
   -webkit-text-decoration: none;
   text-decoration: none;
   border-bottom: 1px solid #FFFFFF;
 }
 
-.c9 a:hover,
-.c9 a:focus {
+.c8 a:hover,
+.c8 a:focus {
   border-bottom: 1px solid #626D4A;
   outline: none;
 }
 
-.c9 blockquote {
+.c8 blockquote {
   border-left: 5px solid #626D4A;
   padding-left: 20px;
 }
 
-.c9 .gatsby-highlight {
+.c8 .gatsby-highlight {
   padding: 10px 0;
 }
 
-.c9 pre[class*='language-'],
-.c9 code[class*='language-'],
-.c9 .gatsby-highlight {
+.c8 pre[class*='language-'],
+.c8 code[class*='language-'],
+.c8 .gatsby-highlight {
   background-color: #FFFFFF;
   font-family: monospace;
   white-space: pre-wrap;
 }
 
-.c9 .line-numbers-rows,
-.c9 .line-numbers-rows span::before {
+.c8 .line-numbers-rows,
+.c8 .line-numbers-rows span::before {
   border: 0.5px solid #FFFFFF;
 }
 
-.c9 img {
+.c8 img {
   box-shadow: none !important;
 }
 
-.c9 h3 {
+.c8 h3 {
   font-size: 28px;
-}
-
-.c4 {
-  background: #626D4A;
-  padding: 20px;
-  color: #FFFFFF;
-  margin: 20px 0;
 }
 
 <body>
@@ -158,31 +151,26 @@ exports[`<NotFoundPage> should render properly 1`] = `
         class="c0"
       >
         <main>
-          <p
-            class="c4"
-          >
-            article.translationNotFound
-          </p>
           <article
-            class="c5"
+            class="c4"
             data-testid="article-item"
           >
             <header
-              class="c6"
+              class="c5"
             >
               <h2
-                class="c7"
+                class="c6"
               >
                 404page.title
               </h2>
               <p
-                class="c8"
+                class="c7"
               >
                  
               </p>
             </header>
             <section
-              class="c9"
+              class="c8"
             >
               404page.message
             </section>

@@ -9,15 +9,14 @@ import Article from '~/components/Article';
 
 export default function NotFoundPage(): React.ReactElement {
   const i18n = usei18n();
+  const title = i18n.getTranslationFor('404page.title') ?? '';
+  const message = i18n.getTranslationFor('404page.message');
 
   return (
     <Page>
-      <Metatags title={i18n.getTranslationFor('404page.title')} />
+      <Metatags title={title} />
       <Divisor />
-      <Article
-        title={i18n.getTranslationFor('404page.title')}
-        bodyContent={i18n.getTranslationFor('404page.message')}
-      />
+      <Article title={title} description={message} />
     </Page>
   );
 }
