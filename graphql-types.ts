@@ -20,15 +20,6 @@ export type Scalars = {
   JSON: any;
 };
 
-
-
-
-
-
-
-
-
-
 export type File = Node & {
   sourceInstanceName: Scalars['String'];
   absolutePath: Scalars['String'];
@@ -159,7 +150,6 @@ export type Internal = {
   owner: Scalars['String'];
   type: Scalars['String'];
 };
-
 
 export type Directory = Node & {
   sourceInstanceName: Scalars['String'];
@@ -318,7 +308,6 @@ export type SitePage = Node & {
   children: Array<Node>;
   internal: Internal;
 };
-
 
 export type SitePlugin = Node & {
   resolve?: Maybe<Scalars['String']>;
@@ -3759,40 +3748,31 @@ export type LocaleSortInput = {
 export type FooterComponentQueryVariables = Exact<{ [key: string]: never; }>;
 
 
-export type FooterComponentQuery = { site?: Maybe<{ siteMetadata?: Maybe<Pick<SiteSiteMetadata, 'repository'>> }> };
+export type FooterComponentQuery = { site?: { siteMetadata?: { repository?: string | null | undefined } | null | undefined } | null | undefined };
 
 export type HeaderComponentQueryVariables = Exact<{ [key: string]: never; }>;
 
 
-export type HeaderComponentQuery = { site?: Maybe<{ siteMetadata?: Maybe<Pick<SiteSiteMetadata, 'author'>> }> };
+export type HeaderComponentQuery = { site?: { siteMetadata?: { author?: string | null | undefined } | null | undefined } | null | undefined };
 
 export type MetatagsComponentQueryVariables = Exact<{ [key: string]: never; }>;
 
 
-export type MetatagsComponentQuery = { site?: Maybe<{ siteMetadata?: Maybe<Pick<SiteSiteMetadata, 'title' | 'description' | 'author' | 'defaultLanguage' | 'image'>> }> };
+export type MetatagsComponentQuery = { site?: { siteMetadata?: { title?: string | null | undefined, description?: string | null | undefined, author?: string | null | undefined, defaultLanguage?: string | null | undefined, image?: string | null | undefined } | null | undefined } | null | undefined };
 
 export type SearchComponentQueryVariables = Exact<{ [key: string]: never; }>;
 
 
-export type SearchComponentQuery = { articles: { nodes: Array<(
-      Pick<Mdx, 'id'>
-      & { fields?: Maybe<Pick<MdxFields, 'slug' | 'language'>>, frontmatter?: Maybe<Pick<MdxFrontmatter, 'title' | 'description'>> }
-    )> } };
+export type SearchComponentQuery = { articles: { nodes: Array<{ id: string, fields?: { slug?: string | null | undefined, language?: string | null | undefined } | null | undefined, frontmatter?: { title: string, description?: string | null | undefined } | null | undefined }> } };
 
 export type PageNotFoundQueryQueryVariables = Exact<{
   language: Scalars['String'];
 }>;
 
 
-export type PageNotFoundQueryQuery = { locales: { edges: Array<{ node: Pick<Locale, 'ns' | 'data' | 'language'> }> } };
+export type PageNotFoundQueryQuery = { locales: { edges: Array<{ node: { ns?: string | null | undefined, data?: string | null | undefined, language?: string | null | undefined } }> } };
 
-export type ArticleFieldsFragment = (
-  Pick<Mdx, 'body' | 'excerpt'>
-  & { fields?: Maybe<(
-    Pick<MdxFields, 'language'>
-    & { readingTime?: Maybe<Pick<MdxFieldsReadingTime, 'minutes'>> }
-  )>, frontmatter?: Maybe<Pick<MdxFrontmatter, 'title' | 'date' | 'description' | 'tags'>> }
-);
+export type ArticleFieldsFragment = { body: string, excerpt: string, fields?: { language?: string | null | undefined, readingTime?: { minutes?: number | null | undefined } | null | undefined } | null | undefined, frontmatter?: { title: string, date?: any | null | undefined, description?: string | null | undefined, tags?: Array<string | null | undefined> | null | undefined } | null | undefined };
 
 export type ArticleTemplateQueryVariables = Exact<{
   slug: Scalars['String'];
@@ -3801,25 +3781,16 @@ export type ArticleTemplateQueryVariables = Exact<{
 }>;
 
 
-export type ArticleTemplateQuery = { locales: { edges: Array<{ node: Pick<Locale, 'ns' | 'data' | 'language'> }> }, article?: Maybe<ArticleFieldsFragment>, articleLanguageFallback?: Maybe<ArticleFieldsFragment> };
+export type ArticleTemplateQuery = { locales: { edges: Array<{ node: { ns?: string | null | undefined, data?: string | null | undefined, language?: string | null | undefined } }> }, article?: { body: string, excerpt: string, fields?: { language?: string | null | undefined, readingTime?: { minutes?: number | null | undefined } | null | undefined } | null | undefined, frontmatter?: { title: string, date?: any | null | undefined, description?: string | null | undefined, tags?: Array<string | null | undefined> | null | undefined } | null | undefined } | null | undefined, articleLanguageFallback?: { body: string, excerpt: string, fields?: { language?: string | null | undefined, readingTime?: { minutes?: number | null | undefined } | null | undefined } | null | undefined, frontmatter?: { title: string, date?: any | null | undefined, description?: string | null | undefined, tags?: Array<string | null | undefined> | null | undefined } | null | undefined } | null | undefined };
 
 export type IndexTemplateQueryVariables = Exact<{
   language: Scalars['String'];
 }>;
 
 
-export type IndexTemplateQuery = { locales: { edges: Array<{ node: Pick<Locale, 'ns' | 'data' | 'language'> }> }, aboutMe?: Maybe<Pick<Mdx, 'body'>>, articles: { edges: Array<{ node: (
-        Pick<Mdx, 'excerpt'>
-        & { fields?: Maybe<(
-          Pick<MdxFields, 'slug' | 'language'>
-          & { readingTime?: Maybe<Pick<MdxFieldsReadingTime, 'minutes'>> }
-        )>, frontmatter?: Maybe<Pick<MdxFrontmatter, 'date' | 'title' | 'description' | 'tags'>> }
-      ) }> } };
+export type IndexTemplateQuery = { locales: { edges: Array<{ node: { ns?: string | null | undefined, data?: string | null | undefined, language?: string | null | undefined } }> }, aboutMe?: { body: string } | null | undefined, articles: { edges: Array<{ node: { excerpt: string, fields?: { slug?: string | null | undefined, language?: string | null | undefined, readingTime?: { minutes?: number | null | undefined } | null | undefined } | null | undefined, frontmatter?: { date?: any | null | undefined, title: string, description?: string | null | undefined, tags?: Array<string | null | undefined> | null | undefined } | null | undefined } }> } };
 
-export type PageFieldsFragment = (
-  Pick<Mdx, 'body'>
-  & { fields?: Maybe<Pick<MdxFields, 'language'>>, frontmatter?: Maybe<Pick<MdxFrontmatter, 'title'>> }
-);
+export type PageFieldsFragment = { body: string, fields?: { language?: string | null | undefined } | null | undefined, frontmatter?: { title: string } | null | undefined };
 
 export type PageTemplateQueryVariables = Exact<{
   slug: Scalars['String'];
@@ -3828,7 +3799,7 @@ export type PageTemplateQueryVariables = Exact<{
 }>;
 
 
-export type PageTemplateQuery = { locales: { edges: Array<{ node: Pick<Locale, 'ns' | 'data' | 'language'> }> }, page?: Maybe<PageFieldsFragment>, pageLanguageFallback?: Maybe<ArticleFieldsFragment> };
+export type PageTemplateQuery = { locales: { edges: Array<{ node: { ns?: string | null | undefined, data?: string | null | undefined, language?: string | null | undefined } }> }, page?: { body: string, fields?: { language?: string | null | undefined } | null | undefined, frontmatter?: { title: string } | null | undefined } | null | undefined, pageLanguageFallback?: { body: string, excerpt: string, fields?: { language?: string | null | undefined, readingTime?: { minutes?: number | null | undefined } | null | undefined } | null | undefined, frontmatter?: { title: string, date?: any | null | undefined, description?: string | null | undefined, tags?: Array<string | null | undefined> | null | undefined } | null | undefined } | null | undefined };
 
 export type TagsTemplateQueryVariables = Exact<{
   tag?: Maybe<Scalars['String']>;
@@ -3836,13 +3807,4 @@ export type TagsTemplateQueryVariables = Exact<{
 }>;
 
 
-export type TagsTemplateQuery = { locales: { edges: Array<{ node: Pick<Locale, 'ns' | 'data' | 'language'> }> }, articles: (
-    Pick<MdxConnection, 'totalCount'>
-    & { edges: Array<{ node: (
-        Pick<Mdx, 'excerpt'>
-        & { fields?: Maybe<(
-          Pick<MdxFields, 'slug'>
-          & { readingTime?: Maybe<Pick<MdxFieldsReadingTime, 'minutes'>> }
-        )>, frontmatter?: Maybe<Pick<MdxFrontmatter, 'date' | 'title' | 'tags' | 'description' | 'language'>> }
-      ) }> }
-  ) };
+export type TagsTemplateQuery = { locales: { edges: Array<{ node: { ns?: string | null | undefined, data?: string | null | undefined, language?: string | null | undefined } }> }, articles: { totalCount: number, edges: Array<{ node: { excerpt: string, fields?: { slug?: string | null | undefined, language?: string | null | undefined, readingTime?: { minutes?: number | null | undefined } | null | undefined } | null | undefined, frontmatter?: { date?: any | null | undefined, title: string, tags?: Array<string | null | undefined> | null | undefined, description?: string | null | undefined } | null | undefined } }> } };

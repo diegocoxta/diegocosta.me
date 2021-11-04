@@ -61,13 +61,13 @@ export const pageQuery = graphql`
             readingTime {
               minutes
             }
+            language
           }
           frontmatter {
             date
             title
             tags
             description
-            language
           }
         }
       }
