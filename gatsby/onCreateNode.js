@@ -1,4 +1,5 @@
 const { createFilePath } = require('gatsby-source-filesystem');
+const readingTime = require('reading-time');
 
 module.exports = ({ node, actions, getNode }) => {
   if (node.internal.type === 'Mdx') {
@@ -14,6 +15,12 @@ module.exports = ({ node, actions, getNode }) => {
       name: 'collection',
       value: sourceInstanceName,
       node,
+    });
+
+    actions.createNodeField({
+      node,
+      name: 'readingTime',
+      value: readingTime(node.rawBody),
     });
   }
 };
