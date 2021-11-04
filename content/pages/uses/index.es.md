@@ -10,7 +10,7 @@ Procesador: 2,3 GHz Dual-Core Intel Core i5
 Memoria: 8 GB 2133 MHz LPDDR3  
 Gráficos: Intel Iris Plus Graphics 640 1536 MB
 
-**Computadora de  trabajo**  
+**Computadora de trabajo**  
 MacBook Pro (16-inch, 2019)  
 Procesador: 2,3 GHz 8-Core Intel Core i9  
 Memoria: 16 GB 2667 MHz DDR4  
@@ -29,7 +29,7 @@ Gráficos: AMD Radeon Pro 5500M 4 GB / Intel UHD Graphics 630 1536 MB
 
 - Visual Studio Code con [Material Theme Ocean](https://marketplace.visualstudio.com/items?itemName=Equinusocio.vsc-material-theme) y [Jetbrains Mono](https://www.jetbrains.com/lp/mono/). (ver mi [configuración detallada](https://github.com/diegocosta/setup/tree/main/vscode)).
 - iTerm2 con [Oh My Zsh](https://ohmyz.sh/) y [tema Dracula](https://draculatheme.com/iterm).
-- Instalación básica de Xcode para usar los simuladores de iOS. 
+- Instalación básica de Xcode para usar los simuladores de iOS.
 - Android Studio para desarrollo con Flutter y Clojure ([plugin Cursive](https://cursive-ide.com/)) con [Material Theme UI - Moonlight](https://plugins.jetbrains.com/plugin/8006-material-theme-ui) y [Atom Material Icons](https://plugins.jetbrains.com/plugin/10044-atom-material-icons).
 - LastPass y Authy para administrar mis contraseñas y 2FA.
 - [PixelSnap](https://getpixelsnap.com/) para medir cualquier cosa en mi pantalla.
@@ -42,7 +42,7 @@ Gráficos: AMD Radeon Pro 5500M 4 GB / Intel UHD Graphics 630 1536 MB
 
 ## Servicios [trabajo en curso]
 
-- Google Workspace para usar Gmail con dominio personalizado y 2TB en Google Drive. 
+- Google Workspace para usar Gmail con dominio personalizado y 2TB en Google Drive.
 - Namecheap y Registro.br para administrar domínios.
 
 ## Otros dispositivos

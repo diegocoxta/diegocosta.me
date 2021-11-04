@@ -17,4 +17,5 @@ module.exports = {
         href: to,
       })
   ),
+  Helmet: jest.fn(),
 };

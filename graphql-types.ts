@@ -3758,7 +3758,7 @@ export type HeaderComponentQuery = { site?: { siteMetadata?: { author?: string |
 export type MetatagsComponentQueryVariables = Exact<{ [key: string]: never; }>;
 
 
-export type MetatagsComponentQuery = { site?: { siteMetadata?: { title?: string | null | undefined, description?: string | null | undefined, author?: string | null | undefined, defaultLanguage?: string | null | undefined, image?: string | null | undefined } | null | undefined } | null | undefined };
+export type MetatagsComponentQuery = { site?: { siteMetadata?: { title?: string | null | undefined, description?: string | null | undefined, author?: string | null | undefined, image?: string | null | undefined } | null | undefined } | null | undefined };
 
 export type SearchComponentQueryVariables = Exact<{ [key: string]: never; }>;
 
