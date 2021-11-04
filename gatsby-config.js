@@ -63,7 +63,6 @@ module.exports = {
               quality: 100,
             },
           },
-          'gatsby-remark-reading-time',
           'gatsby-remark-copy-linked-files',
           'gatsby-remark-smartypants',
         ],
