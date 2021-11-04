@@ -1,7 +1,7 @@
 import React from 'react';
 import { graphql } from 'gatsby';
 
-import { usei18n } from '~/helpers/i18n';
+import { usei18n } from '~/utils/i18n';
 import Page from '~/components/Page';
 import Divisor from '~/components/Divisor';
 import Metatags from '~/components/Metatags';

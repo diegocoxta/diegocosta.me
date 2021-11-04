@@ -1,10 +1,10 @@
 const path = require('path');
 const kebabCase = require('lodash.kebabcase');
-const { getSlugWithoutFile, siteMetadata } = require('./helpers');
+const { getSlugWithoutFile, siteMetadata } = require('./utils');
 
 module.exports = async ({ graphql, actions, reporter }) => {
   const result = await graphql(`
-    {
+    query GatsbyCreatePage {
       content: allMdx(sort: { order: DESC, fields: [frontmatter___date] }) {
         edges {
           node {

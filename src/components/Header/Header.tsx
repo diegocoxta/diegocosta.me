@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import { Link } from '~/helpers/i18n';
+import { Link } from '~/utils/i18n';
 import Container from '~/components/Container';
 import ThemeSwitcher from '~/components/ThemeSwitcher';
 

@@ -3808,3 +3808,8 @@ export type TagsTemplateQueryVariables = Exact<{
 
 
 export type TagsTemplateQuery = { locales: { edges: Array<{ node: { ns?: string | null | undefined, data?: string | null | undefined, language?: string | null | undefined } }> }, articles: { totalCount: number, edges: Array<{ node: { excerpt: string, fields?: { slug?: string | null | undefined, language?: string | null | undefined, readingTime?: { minutes?: number | null | undefined } | null | undefined } | null | undefined, frontmatter?: { date?: any | null | undefined, title: string, tags?: Array<string | null | undefined> | null | undefined, description?: string | null | undefined } | null | undefined } }> } };
+
+export type GatsbyCreatePageQueryVariables = Exact<{ [key: string]: never; }>;
+
+
+export type GatsbyCreatePageQuery = { content: { edges: Array<{ node: { fields?: { slug?: string | null | undefined, collection?: string | null | undefined } | null | undefined, internal: { type: string }, frontmatter?: { title: string } | null | undefined } }> }, tags: { group: Array<{ fieldValue?: string | null | undefined }> } };

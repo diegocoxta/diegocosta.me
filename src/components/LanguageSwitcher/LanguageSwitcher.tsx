@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { usei18n, Link } from '~/helpers/i18n';
+import { usei18n, Link } from '~/utils/i18n';
 
 import Container from '~/components/Container';
 

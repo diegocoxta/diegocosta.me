@@ -7,7 +7,7 @@ module.exports = {
       resolve: 'gatsby-plugin-graphql-codegen',
       options: {
         codegen: true,
-        documentPaths: ['./src/**/*.{ts,tsx}'],
+        documentPaths: ['./src/**/*.{ts,tsx,js,jsx}', './gatsby/**/*.{ts,tsx,js,jsx}'],
       },
     },
     'gatsby-plugin-styled-components',

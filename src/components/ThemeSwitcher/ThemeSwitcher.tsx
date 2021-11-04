@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import styled, { ThemeContext } from 'styled-components';
 import { BsMoon, BsSun } from 'react-icons/bs';
 
-import { usei18n } from '~/helpers/i18n';
+import { usei18n } from '~/utils/i18n';
 
 const Container = styled.button<{ enabled: boolean }>`
   background: transparent;

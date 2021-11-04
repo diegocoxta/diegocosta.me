@@ -6,6 +6,7 @@
     "lib": ["dom", "esnext"],
     "strict": true,
     "noEmit": true,
+    "resolveJsonModule": true,
     "isolatedModules": true,
     "esModuleInterop": true,
     "noUnusedLocals": false,

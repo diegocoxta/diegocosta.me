@@ -1,6 +1,6 @@
 const { createFilePath } = require('gatsby-source-filesystem');
 const readingTime = require('reading-time');
-const { getNodeLangCode, getSlugWithoutFile } = require('./helpers');
+const { getNodeLangCode, getSlugWithoutFile } = require('./utils');
 
 module.exports = ({ node, actions, getNode }) => {
   if (node.internal.type === 'Mdx') {
@@ -20,7 +20,7 @@ module.exports = ({ node, actions, getNode }) => {
 
     actions.createNodeField({
       name: 'language',
-      value: getNodeLangCode(node),
+      value: getNodeLangCode(node.fileAbsolutePath),
       node,
     });
 

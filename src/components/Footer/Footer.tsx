@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import { usei18n } from '~/helpers/i18n';
+import { usei18n } from '~/utils/i18n';
 import Container from '~/components/Container';
 
 const Content = styled.footer`

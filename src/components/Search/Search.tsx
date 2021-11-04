@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { UseComboboxReturnValue } from 'downshift';
 import Fuse from 'fuse.js';
 
-import { usei18n, Link } from '~/helpers/i18n';
+import { usei18n, Link } from '~/utils/i18n';
 import Container from '~/components/Container';
 
 import { SearchComponentQuery } from '~/../graphql-types';
