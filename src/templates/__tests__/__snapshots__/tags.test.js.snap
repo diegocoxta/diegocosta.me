@@ -226,7 +226,6 @@ exports[`<TagsTemplate> should render properly 1`] = `
                  
                  · 5 article.minutes article.ofReading
                  
-                 · article.languagePrefix languages.undefined
               </p>
               <ul
                 class="c10"
@@ -270,7 +269,6 @@ exports[`<TagsTemplate> should render properly 1`] = `
                  
                  · 2 article.minutes article.ofReading
                  
-                 · article.languagePrefix languages.undefined
               </p>
               <ul
                 class="c10"

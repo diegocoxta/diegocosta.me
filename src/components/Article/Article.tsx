@@ -129,24 +129,24 @@ export interface ArticleProps {
   tags?: string[] | null;
   description?: string | null;
   mdxContent?: string | null;
+  showArticleDetails?: boolean;
 }
 
 export default function Article(props: ArticleProps): React.ReactElement {
   const i18n = usei18n();
 
   const pageLanguage = i18n.getCurrentLanguage();
-  const articleTranslationNotFound = i18n.getTranslationFor('article.translationNotFound');
-  const lessThan1Minute = i18n.getTranslationFor('article.lessThan1Minute');
-  const ofReading = i18n.getTranslationFor('article.ofReading');
-  const minutes = i18n.getTranslationFor('article.minutes');
-  const languagePrefix = i18n.getTranslationFor('article.languagePrefix');
-  const languageName = i18n.getTranslationFor(`languages.${props.language}`);
   const isValidTranslation = pageLanguage === props.language;
+  const articleTranslationNotFound = i18n.getTranslationFor('article.translationNotFound');
 
   const getReadingTime = () => {
     if (!props.readingTime) {
       return undefined;
     }
+
+    const lessThan1Minute = i18n.getTranslationFor('article.lessThan1Minute');
+    const ofReading = i18n.getTranslationFor('article.ofReading');
+    const minutes = i18n.getTranslationFor('article.minutes');
 
     if (props.readingTime < 1) {
       return ` · ${lessThan1Minute} ${ofReading}`;
@@ -164,14 +164,17 @@ export default function Article(props: ArticleProps): React.ReactElement {
     });
 
   const language = () => {
-    if (!props.date) {
-      return undefined;
+    if (!props.language) {
+      return;
     }
+
+    const languagePrefix = i18n.getTranslationFor('article.languagePrefix');
+    const languageName = i18n.getTranslationFor(`languages.${props.language}`);
 
     return ` · ${languagePrefix} ${languageName}`;
   };
 
-  const Tags = props.tags && (
+  const Tags = props.showArticleDetails && props.tags && (
     <TagList data-testid="article-header-tags">
       {props.tags.map((tag: string, index: number) => (
         <TagItem key={`${index}-${tag}`} data-testid="article-header-tag">
@@ -197,9 +200,11 @@ export default function Article(props: ArticleProps): React.ReactElement {
               props.title
             )}
           </Title>
-          <Details>
-            {date} {getReadingTime()} {language()}
-          </Details>
+          {props.showArticleDetails && (
+            <Details>
+              {date} {getReadingTime()} {language()}
+            </Details>
+          )}
           {Tags}
         </Header>
         {props.description && <Body dangerouslySetInnerHTML={{ __html: props.description }} />}
@@ -212,3 +217,7 @@ export default function Article(props: ArticleProps): React.ReactElement {
     </Container>
   );
 }
+
+Article.defaultProps = {
+  showArticleDetails: true,
+};

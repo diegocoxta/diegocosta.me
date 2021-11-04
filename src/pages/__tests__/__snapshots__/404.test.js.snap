@@ -51,55 +51,49 @@ exports[`<NotFoundPage> should render properly 1`] = `
 }
 
 .c7 {
-  color: #737373;
-  font-size: 18px;
-  margin: 5px 0;
-}
-
-.c8 {
   line-height: 1.5;
 }
 
-.c8 a {
+.c7 a {
   color: #626D4A;
   -webkit-text-decoration: none;
   text-decoration: none;
   border-bottom: 1px solid #FFFFFF;
 }
 
-.c8 a:hover,
-.c8 a:focus {
+.c7 a:hover,
+.c7 a:focus {
   border-bottom: 1px solid #626D4A;
   outline: none;
 }
 
-.c8 blockquote {
+.c7 blockquote {
   border-left: 5px solid #626D4A;
   padding-left: 20px;
 }
 
-.c8 .gatsby-highlight {
+.c7 .gatsby-highlight {
   padding: 10px 0;
 }
 
-.c8 pre[class*='language-'],
-.c8 code[class*='language-'],
-.c8 .gatsby-highlight {
+.c7 pre[class*='language-'],
+.c7 code[class*='language-'],
+.c7 .gatsby-highlight {
   background-color: #FFFFFF;
   font-family: monospace;
   white-space: pre-wrap;
 }
 
-.c8 .line-numbers-rows,
-.c8 .line-numbers-rows span::before {
+.c7 .line-numbers-rows,
+.c7 .line-numbers-rows span::before {
   border: 0.5px solid #FFFFFF;
 }
 
-.c8 img {
+.c7 img {
   box-shadow: none !important;
 }
 
-.c8 h3 {
+.c7 h3 {
   font-size: 28px;
 }
 
@@ -166,15 +160,9 @@ exports[`<NotFoundPage> should render properly 1`] = `
               >
                 404page.title
               </h2>
-              <p
-                class="c7"
-              >
-                 
-                 
-              </p>
             </header>
             <section
-              class="c8"
+              class="c7"
             >
               404page.message
             </section>

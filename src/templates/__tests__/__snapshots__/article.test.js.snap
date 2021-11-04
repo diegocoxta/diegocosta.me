@@ -197,7 +197,6 @@ exports[`<ArticleTemplate> should render properly 1`] = `
                  
                  · 5 article.minutes article.ofReading
                  
-                 · article.languagePrefix languages.undefined
               </p>
               <ul
                 class="c9"

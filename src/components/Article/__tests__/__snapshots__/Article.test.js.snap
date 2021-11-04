@@ -1,5 +1,71 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`<Article /> should not render the article details 1`] = `
+<body>
+  .c0 {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.c1 {
+  margin: 0 0 60px 0;
+  font-weight: 400;
+}
+
+.c2 {
+  margin: 20px 0 0 0;
+}
+
+.c3 {
+  font-size: 36px;
+  margin: 0;
+}
+
+.c4 {
+  box-shadow: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c4:hover,
+.c4:focus {
+  border-bottom: 1px solid;
+  outline: none;
+}
+
+<div>
+    <section
+      class="c0"
+    >
+      <main>
+        <article
+          class="c1"
+          data-testid="article-item"
+        >
+          <header
+            class="c2"
+          >
+            <h2
+              class="c3"
+            >
+              <a
+                class="c4"
+                data-testid="article-header-custom-link"
+                href="/awesome-article"
+                language="en"
+              >
+                Awesome Article
+              </a>
+            </h2>
+          </header>
+        </article>
+      </main>
+    </section>
+  </div>
+</body>
+`;
+
 exports[`<Article /> should not render the article language name 1`] = `
 <body>
   .c0 {
@@ -49,6 +115,7 @@ exports[`<Article /> should not render the article language name 1`] = `
             >
                
                
+               · article.languagePrefix languages.en
             </p>
           </header>
         </article>
@@ -654,6 +721,148 @@ exports[`<Article /> should render properly the description 1`] = `
           >
             Article as a Children
           </section>
+        </article>
+      </main>
+    </section>
+  </div>
+</body>
+`;
+
+exports[`<Article /> should render the article details 1`] = `
+<body>
+  .c0 {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.c1 {
+  margin: 0 0 60px 0;
+  font-weight: 400;
+}
+
+.c2 {
+  margin: 20px 0 0 0;
+}
+
+.c3 {
+  font-size: 36px;
+  margin: 0;
+}
+
+.c4 {
+  box-shadow: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c4:hover,
+.c4:focus {
+  border-bottom: 1px solid;
+  outline: none;
+}
+
+.c8 {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  box-shadow: none;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: lowercase;
+}
+
+.c8:hover,
+.c8:focus {
+  border-bottom: 1px solid;
+  outline: none;
+}
+
+.c6 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-bottom: 0;
+  padding: 0;
+}
+
+.c7 {
+  list-style: none;
+  padding: 0 10px 0 0;
+  margin-bottom: 5px;
+}
+
+.c5 {
+  font-size: 18px;
+  margin: 5px 0;
+}
+
+<div>
+    <section
+      class="c0"
+    >
+      <main>
+        <article
+          class="c1"
+          data-testid="article-item"
+        >
+          <header
+            class="c2"
+          >
+            <h2
+              class="c3"
+            >
+              <a
+                class="c4"
+                data-testid="article-header-custom-link"
+                href="/awesome-article"
+                language="en"
+              >
+                Awesome Article
+              </a>
+            </h2>
+            <p
+              class="c5"
+            >
+              18/01/2020
+               
+               · 5 article.minutes article.ofReading
+               
+               · article.languagePrefix languages.en
+            </p>
+            <ul
+              class="c6"
+              data-testid="article-header-tags"
+            >
+              <li
+                class="c7"
+                data-testid="article-header-tag"
+              >
+                <a
+                  class="c8"
+                  href="/tags/jest"
+                >
+                  #
+                  jest
+                </a>
+              </li>
+              <li
+                class="c7"
+                data-testid="article-header-tag"
+              >
+                <a
+                  class="c8"
+                  href="/tags/testing-library"
+                >
+                  #
+                  testing-library
+                </a>
+              </li>
+            </ul>
+          </header>
         </article>
       </main>
     </section>

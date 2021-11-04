@@ -21,7 +21,7 @@ export default function PageTemplate({ data }: PageTemplateProps): React.ReactEl
     <Page>
       <Metatags title={title ?? ''} />
       <Divisor />
-      <Article language={fields?.language} title={title ?? ''} mdxContent={body} />
+      <Article language={fields?.language} title={title ?? ''} mdxContent={body} showArticleDetails={false} />
     </Page>
   );
 }

@@ -63,11 +63,54 @@ describe('<Article />', () => {
   });
 
   it('should not render the article language name', () => {
-    const { baseElement, getByText, queryByText } = render(<Article title="Awesome Article" language="en" />);
+    const { baseElement, queryByText } = render(<Article title="Awesome Article" language="en" />);
 
     expect(
       queryByText('18/01/2020 · 5 article.minutes article.ofReading · article.languagePrefix languages.en')
     ).toBeFalsy();
+    expect(baseElement).toMatchSnapshot();
+  });
+
+  it('should render the article details', () => {
+    const { baseElement, getByText, getByTestId, getAllByTestId } = render(
+      <Article
+        title="Awesome Article"
+        url="/awesome-article"
+        readingTime={5}
+        language="en"
+        date="2020-01-18T22:12:03.284Z"
+        tags={['jest', 'testing-library']}
+      />
+    );
+
+    expect(
+      getByText('18/01/2020 · 5 article.minutes article.ofReading · article.languagePrefix languages.en')
+    ).toBeTruthy();
+    expect(getByTestId('article-header-tags')).toBeTruthy();
+    expect(getAllByTestId('article-header-tag').length).toEqual(2);
+
+    expect(baseElement).toMatchSnapshot();
+  });
+
+  it('should not render the article details', () => {
+    const { baseElement, queryByText, queryByTestId, queryAllByTestId } = render(
+      <Article
+        title="Awesome Article"
+        url="/awesome-article"
+        readingTime={5}
+        language="en"
+        date="2020-01-18T22:12:03.284Z"
+        tags={['jest', 'testing-library']}
+        showArticleDetails={false}
+      />
+    );
+
+    expect(
+      queryByText('18/01/2020 · 5 article.minutes article.ofReading · article.languagePrefix languages.en')
+    ).toBeFalsy();
+    expect(queryByTestId('article-header-tags')).toBeFalsy();
+    expect(queryAllByTestId('article-header-tag').length).toEqual(0);
+
     expect(baseElement).toMatchSnapshot();
   });
 

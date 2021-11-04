@@ -51,55 +51,49 @@ exports[`<PageTemplate> should render properly 1`] = `
 }
 
 .c8 {
-  color: #737373;
-  font-size: 18px;
-  margin: 5px 0;
-}
-
-.c9 {
   line-height: 1.5;
 }
 
-.c9 a {
+.c8 a {
   color: #626D4A;
   -webkit-text-decoration: none;
   text-decoration: none;
   border-bottom: 1px solid #FFFFFF;
 }
 
-.c9 a:hover,
-.c9 a:focus {
+.c8 a:hover,
+.c8 a:focus {
   border-bottom: 1px solid #626D4A;
   outline: none;
 }
 
-.c9 blockquote {
+.c8 blockquote {
   border-left: 5px solid #626D4A;
   padding-left: 20px;
 }
 
-.c9 .gatsby-highlight {
+.c8 .gatsby-highlight {
   padding: 10px 0;
 }
 
-.c9 pre[class*='language-'],
-.c9 code[class*='language-'],
-.c9 .gatsby-highlight {
+.c8 pre[class*='language-'],
+.c8 code[class*='language-'],
+.c8 .gatsby-highlight {
   background-color: #FFFFFF;
   font-family: monospace;
   white-space: pre-wrap;
 }
 
-.c9 .line-numbers-rows,
-.c9 .line-numbers-rows span::before {
+.c8 .line-numbers-rows,
+.c8 .line-numbers-rows span::before {
   border: 0.5px solid #FFFFFF;
 }
 
-.c9 img {
+.c8 img {
   box-shadow: none !important;
 }
 
-.c9 h3 {
+.c8 h3 {
   font-size: 28px;
 }
 
@@ -178,15 +172,9 @@ exports[`<PageTemplate> should render properly 1`] = `
               >
                 Title 1
               </h2>
-              <p
-                class="c8"
-              >
-                 
-                 
-              </p>
             </header>
             <section
-              class="c9"
+              class="c8"
             >
               Post content
             </section>
