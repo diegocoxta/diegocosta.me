@@ -1,4 +1,5 @@
 const { createFilePath } = require('gatsby-source-filesystem');
+const readingTime = require('reading-time');
 const { getNodeLangCode, getSlugWithoutFile } = require('./helpers');
 
 module.exports = ({ node, actions, getNode }) => {
@@ -20,6 +21,12 @@ module.exports = ({ node, actions, getNode }) => {
     actions.createNodeField({
       name: 'language',
       value: getNodeLangCode(node),
+      node,
+    });
+
+    actions.createNodeField({
+      name: 'readingTime',
+      value: readingTime(node.rawBody),
       node,
     });
   }

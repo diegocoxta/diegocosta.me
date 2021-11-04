@@ -413,10 +413,10 @@ export type MdxTableOfContentsArgs = {
 };
 
 export type MdxFields = {
-  readingTime?: Maybe<MdxFieldsReadingTime>;
   slug?: Maybe<Scalars['String']>;
   collection?: Maybe<Scalars['String']>;
   language?: Maybe<Scalars['String']>;
+  readingTime?: Maybe<MdxFieldsReadingTime>;
 };
 
 export type MdxFieldsReadingTime = {
@@ -1092,10 +1092,10 @@ export type MdxWordCountFilterInput = {
 };
 
 export type MdxFieldsFilterInput = {
-  readingTime?: Maybe<MdxFieldsReadingTimeFilterInput>;
   slug?: Maybe<StringQueryOperatorInput>;
   collection?: Maybe<StringQueryOperatorInput>;
   language?: Maybe<StringQueryOperatorInput>;
+  readingTime?: Maybe<MdxFieldsReadingTimeFilterInput>;
 };
 
 export type MdxFieldsReadingTimeFilterInput = {
@@ -1319,13 +1319,13 @@ export type FileFieldsEnum =
   | 'childrenMdx___wordCount___paragraphs'
   | 'childrenMdx___wordCount___sentences'
   | 'childrenMdx___wordCount___words'
+  | 'childrenMdx___fields___slug'
+  | 'childrenMdx___fields___collection'
+  | 'childrenMdx___fields___language'
   | 'childrenMdx___fields___readingTime___text'
   | 'childrenMdx___fields___readingTime___minutes'
   | 'childrenMdx___fields___readingTime___time'
   | 'childrenMdx___fields___readingTime___words'
-  | 'childrenMdx___fields___slug'
-  | 'childrenMdx___fields___collection'
-  | 'childrenMdx___fields___language'
   | 'childrenMdx___id'
   | 'childrenMdx___parent___id'
   | 'childrenMdx___parent___parent___id'
@@ -1384,13 +1384,13 @@ export type FileFieldsEnum =
   | 'childMdx___wordCount___paragraphs'
   | 'childMdx___wordCount___sentences'
   | 'childMdx___wordCount___words'
+  | 'childMdx___fields___slug'
+  | 'childMdx___fields___collection'
+  | 'childMdx___fields___language'
   | 'childMdx___fields___readingTime___text'
   | 'childMdx___fields___readingTime___minutes'
   | 'childMdx___fields___readingTime___time'
   | 'childMdx___fields___readingTime___words'
-  | 'childMdx___fields___slug'
-  | 'childMdx___fields___collection'
-  | 'childMdx___fields___language'
   | 'childMdx___id'
   | 'childMdx___parent___id'
   | 'childMdx___parent___parent___id'
@@ -3211,13 +3211,13 @@ export type MdxFieldsEnum =
   | 'wordCount___paragraphs'
   | 'wordCount___sentences'
   | 'wordCount___words'
+  | 'fields___slug'
+  | 'fields___collection'
+  | 'fields___language'
   | 'fields___readingTime___text'
   | 'fields___readingTime___minutes'
   | 'fields___readingTime___time'
   | 'fields___readingTime___words'
-  | 'fields___slug'
-  | 'fields___collection'
-  | 'fields___language'
   | 'id'
   | 'parent___id'
   | 'parent___parent___id'
