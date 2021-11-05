@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { usei18n, Link } from '~/utils/i18n';
 
-import Container from '~/components/Container';
+import FixedContainer from '~/components/FixedContainer';
 
 const List = styled.div`
   display: flex;
@@ -22,9 +22,9 @@ export default function LanguageSwitcher() {
   const i18n = usei18n();
 
   return (
-    <Container>
+    <FixedContainer>
       <List>
-        {i18n.getAllLanguages().map((language) => (
+        {i18n.getAllLanguages().map((language: string) => (
           <LanguageLink
             aria-label={`${i18n.getTranslationFor('languageswitcher.toggle')} ${i18n.getTranslationFor(
               `languages.${language}`
@@ -38,6 +38,6 @@ export default function LanguageSwitcher() {
           </LanguageLink>
         ))}
       </List>
-    </Container>
+    </FixedContainer>
   );
 }

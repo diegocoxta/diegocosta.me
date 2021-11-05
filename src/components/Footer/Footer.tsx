@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 import { usei18n } from '~/utils/i18n';
-import Container from '~/components/Container';
+import FixedContainer from '~/components/FixedContainer';
 
 const Content = styled.footer`
   margin-bottom: 50px;
@@ -47,7 +47,7 @@ export default function Footer(props: FooterProps): React.ReactElement {
   const i18n = usei18n();
 
   return (
-    <Container>
+    <FixedContainer>
       <Content>
         <Label>
           CC-BY {props.year}, {i18n.getTranslationFor('footer.builtWith')}{' '}
@@ -56,6 +56,6 @@ export default function Footer(props: FooterProps): React.ReactElement {
         <Label> • </Label>
         {props.repository && <Link href={props.repository}>{i18n.getTranslationFor('footer.sourceCode')}</Link>}
       </Content>
-    </Container>
+    </FixedContainer>
   );
 }

@@ -4,7 +4,7 @@ import { UseComboboxReturnValue } from 'downshift';
 import Fuse from 'fuse.js';
 
 import { usei18n, Link } from '~/utils/i18n';
-import Container from '~/components/Container';
+import FixedContainer from '~/components/FixedContainer';
 
 import { SearchComponentQuery } from '~/../graphql-types';
 
@@ -97,7 +97,7 @@ export default function Search({ articles, combobox }: SearchProps): React.React
   const placeholder = i18n.getTranslationFor('search.searchForPosts');
 
   return (
-    <Container>
+    <FixedContainer>
       <Content {...combobox.getComboboxProps()}>
         <Input type="text" placeholder={placeholder} autoComplete="off" {...combobox.getInputProps()} />
         <Label {...combobox.getLabelProps()}>{placeholder}</Label>
@@ -122,6 +122,6 @@ export default function Search({ articles, combobox }: SearchProps): React.React
             ))}
         </Results>
       </Content>
-    </Container>
+    </FixedContainer>
   );
 }

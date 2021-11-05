@@ -1,7 +1,7 @@
 import React from 'react';
 import { graphql, PageRendererProps } from 'gatsby';
 
-import Page from '~/components/Page';
+import Layout from '~/components/Layout';
 import Divisor from '~/components/Divisor';
 import Metatags from '~/components/Metatags';
 import Article from '~/components/Article';
@@ -18,7 +18,7 @@ export default function ArticleTemplate(props: ArticleTemplateProps): React.Reac
   const { title, date, tags, description } = frontmatter ?? {};
 
   return (
-    <Page>
+    <Layout>
       <Metatags title={title ?? ''} description={description || excerpt || ''} />
       <Divisor />
       <Article
@@ -29,7 +29,7 @@ export default function ArticleTemplate(props: ArticleTemplateProps): React.Reac
         language={fields?.language}
         mdxContent={body}
       />
-    </Page>
+    </Layout>
   );
 }
 

@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 import { Link } from '~/utils/i18n';
-import Container from '~/components/Container';
+import FixedContainer from '~/components/FixedContainer';
 import ThemeSwitcher from '~/components/ThemeSwitcher';
 
 const Content = styled.header`
@@ -55,7 +55,7 @@ export default function Header(props: HeaderProps): React.ReactElement {
   const [name, lastname] = props.author.split(' ');
 
   return (
-    <Container>
+    <FixedContainer>
       <Content>
         <StyledLink to="/">
           <Name>
@@ -67,6 +67,6 @@ export default function Header(props: HeaderProps): React.ReactElement {
           <ThemeSwitcher />
         </Options>
       </Content>
-    </Container>
+    </FixedContainer>
   );
 }

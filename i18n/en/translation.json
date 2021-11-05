@@ -13,5 +13,6 @@
   "footer.sourceCode": "source code",
   "search.searchForPosts": "Search for posts...",
   "themeSwitcher.toggle": "Change color scheme",
-  "languageswitcher.toggle": "Change the language to"
+  "languageswitcher.toggle": "Change the language to",
+  "tagsTemplate.titlePrefix": "Posts about"
 }

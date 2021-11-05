@@ -2,7 +2,7 @@ import React from 'react';
 import { graphql } from 'gatsby';
 
 import { usei18n } from '~/utils/i18n';
-import Page from '~/components/Page';
+import Layout from '~/components/Layout';
 import Divisor from '~/components/Divisor';
 import Metatags from '~/components/Metatags';
 import Article from '~/components/Article';
@@ -13,11 +13,11 @@ export default function NotFoundPage(): React.ReactElement {
   const message = i18n.getTranslationFor('404page.message');
 
   return (
-    <Page>
+    <Layout>
       <Metatags title={title} />
       <Divisor />
       <Article title={title} description={message} showArticleDetails={false} />
-    </Page>
+    </Layout>
   );
 }
 

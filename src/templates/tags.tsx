@@ -1,7 +1,9 @@
 import React from 'react';
 import { graphql, PageRendererProps } from 'gatsby';
 
-import Page from '~/components/Page';
+import { usei18n } from '~/utils/i18n';
+
+import Layout from '~/components/Layout';
 import Divisor from '~/components/Divisor';
 import Metatags from '~/components/Metatags';
 import Article from '~/components/Article';
@@ -16,9 +18,12 @@ interface TagsTemplateProps extends PageRendererProps {
 
 export default function Tags({ data, pageContext }: TagsTemplateProps): React.ReactElement {
   const { articles } = data;
+
+  const i18n = usei18n();
+
   return (
-    <Page>
-      <Metatags title={`Publicações sobre ${pageContext.tag}`} />
+    <Layout>
+      <Metatags title={`${i18n.getTranslationFor('tagsTemplate.titlePrefix')} ${pageContext.tag}`} />
       <Divisor />
       <TagHeader name={pageContext.tag ?? ''} count={articles.totalCount} />
       {articles.edges.map(({ node: { frontmatter, fields, excerpt } }, index) => (
@@ -33,7 +38,7 @@ export default function Tags({ data, pageContext }: TagsTemplateProps): React.Re
           description={frontmatter?.description || excerpt}
         />
       ))}
-    </Page>
+    </Layout>
   );
 }
 

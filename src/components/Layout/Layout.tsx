@@ -3,9 +3,11 @@ import { createGlobalStyle, ThemeContext } from 'styled-components';
 import { MDXProvider } from '@mdx-js/react';
 
 import Header from '~/components/Header';
-import Footer from '~/components/Footer';
-import Talk from '~/components/Talk';
 import LanguageSwitcher from '~/components/LanguageSwitcher';
+import Footer from '~/components/Footer';
+
+import Talk from '~/components/Talk';
+import Divisor from '~/components/Divisor';
 
 import { useTheme } from '~/hooks/useTheme';
 import { dark, light } from '~/themes';
@@ -22,17 +24,18 @@ const GlobalStyle = createGlobalStyle<{ theme: CustomTheme }>`
   }
 `;
 
-export interface PageProps {
+export interface LayoutProps {
   children: React.ReactNode;
 }
 
-export default function Page(props: PageProps): React.ReactElement {
+export default function Layout(props: LayoutProps): React.ReactElement {
   const [theme, themeToggler] = useTheme();
 
   const themeMode = theme === 'light' ? light : dark;
 
   const mdxComponents = {
     Talk,
+    Divisor,
   };
 
   return (
