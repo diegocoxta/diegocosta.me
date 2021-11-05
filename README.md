@@ -2,11 +2,14 @@
 
 My personal blog powered by gatsby, typescript and styled-components.
 
-## 🖥️ Tech Stack
+## 🖥️ Tech Stack (and capabilities)
 
-- Build with Gatsby w/ TypeScript and styled-components.
+- Build with Gatsby w/ TypeScript.
 - Testing with Jest and Testing Library.
 - With ESLint, Prettier, stylelint, Husky, lint-staged and [much more](package.json).
+- Supports contents with multiple languages using i18next (see folder [/content](/content)).
+- Dark mode using styled-components themes.
+- Search engine with [fuse.js](https://fusejs.io/)
 - Hosted on Github Pages with [Github Actions](.github/workflows/blog.yml).
 
 ## :clipboard: Requirements
