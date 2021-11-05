@@ -4,7 +4,7 @@ import { render } from '@testing-library/react';
 import Article from '../Article';
 
 describe('<Article />', () => {
-  it('should render properly', () => {
+  it('renders properly', () => {
     const { baseElement, getByTestId, getByText, getAllByTestId } = render(
       <Article
         title="Awesome Article"
@@ -16,15 +16,17 @@ describe('<Article />', () => {
       />
     );
     expect(getByText('Awesome Article')).toBeTruthy();
-    expect(getByText('01/18/2020 · 5 minutes of reading')).toBeTruthy();
+    expect(
+      getByText('18/01/2020 · 5 article.minutes article.ofReading · article.languagePrefix languages.en')
+    ).toBeTruthy();
     expect(getByTestId('article-header-custom-link').href).toBe('http://localhost/awesome-article');
     expect(getByTestId('article-header-tags')).toBeTruthy();
     expect(getAllByTestId('article-header-tag').length).toEqual(2);
     expect(baseElement).toMatchSnapshot();
   });
 
-  it('should not render the tags', () => {
-    const { baseElement, queryByTestId, queryAllByTestId, getByText } = render(
+  it('does not render the tags', () => {
+    const { baseElement, queryByTestId, queryAllByTestId } = render(
       <Article
         title="Awesome Article"
         url="/awesome-article"
@@ -35,12 +37,11 @@ describe('<Article />', () => {
     );
 
     expect(queryByTestId('article-header-tags')).toBeFalsy();
-    expect(getByText('20/07/2020 · 5 minutos de leitura')).toBeTruthy();
     expect(queryAllByTestId('article-header-tag').length).toEqual(0);
     expect(baseElement).toMatchSnapshot();
   });
 
-  it('should not render the link', () => {
+  it('does not render the link', () => {
     const { baseElement, queryByTestId } = render(
       <Article title="Awesome Article" readingTime={5} language="en" date="2020-01-18T22:12:03.284Z" />
     );
@@ -49,22 +50,71 @@ describe('<Article />', () => {
     expect(baseElement).toMatchSnapshot();
   });
 
-  it('should render properly in Poruguese', () => {
-    const { baseElement, getByText } = render(
+  it('does not render the reading time', () => {
+    const { baseElement, getByText, queryByText } = render(
+      <Article title="Awesome Article" language="en" date="2020-01-18T22:12:03.284Z" />
+    );
+
+    expect(
+      queryByText('18/01/2020 · 5 article.minutes article.ofReading · article.languagePrefix languages.en')
+    ).toBeFalsy();
+    expect(getByText('18/01/2020 · article.languagePrefix languages.en')).toBeTruthy();
+    expect(baseElement).toMatchSnapshot();
+  });
+
+  it('does not render the article language name', () => {
+    const { baseElement, queryByText } = render(<Article title="Awesome Article" language="en" />);
+
+    expect(
+      queryByText('18/01/2020 · 5 article.minutes article.ofReading · article.languagePrefix languages.en')
+    ).toBeFalsy();
+    expect(baseElement).toMatchSnapshot();
+  });
+
+  it('renders the article details', () => {
+    const { baseElement, getByText, getByTestId, getAllByTestId } = render(
       <Article
         title="Awesome Article"
         url="/awesome-article"
         readingTime={5}
-        language="pt"
-        date="2020-07-20T22:12:03.284Z"
+        language="en"
+        date="2020-01-18T22:12:03.284Z"
+        tags={['jest', 'testing-library']}
       />
     );
 
-    expect(getByText('20/07/2020 · 5 minutos de leitura')).toBeTruthy();
+    expect(
+      getByText('18/01/2020 · 5 article.minutes article.ofReading · article.languagePrefix languages.en')
+    ).toBeTruthy();
+    expect(getByTestId('article-header-tags')).toBeTruthy();
+    expect(getAllByTestId('article-header-tag').length).toEqual(2);
+
     expect(baseElement).toMatchSnapshot();
   });
 
-  it('should render properly the body content', () => {
+  it('does not render the article details', () => {
+    const { baseElement, queryByText, queryByTestId, queryAllByTestId } = render(
+      <Article
+        title="Awesome Article"
+        url="/awesome-article"
+        readingTime={5}
+        language="en"
+        date="2020-01-18T22:12:03.284Z"
+        tags={['jest', 'testing-library']}
+        showArticleDetails={false}
+      />
+    );
+
+    expect(
+      queryByText('18/01/2020 · 5 article.minutes article.ofReading · article.languagePrefix languages.en')
+    ).toBeFalsy();
+    expect(queryByTestId('article-header-tags')).toBeFalsy();
+    expect(queryAllByTestId('article-header-tag').length).toEqual(0);
+
+    expect(baseElement).toMatchSnapshot();
+  });
+
+  it('renders properly the body content', () => {
     const { baseElement, getByText } = render(
       <Article
         title="Awesome Article"
@@ -72,7 +122,7 @@ describe('<Article />', () => {
         readingTime={5}
         language="pt"
         date="2020-01-18T22:12:03.284Z"
-        bodyContent="Article as a Children"
+        mdxContent="Article as a Children"
       />
     );
 
@@ -80,7 +130,7 @@ describe('<Article />', () => {
     expect(baseElement).toMatchSnapshot();
   });
 
-  it('should render properly the description', () => {
+  it('renders properly the description', () => {
     const { baseElement, getByText } = render(
       <Article
         title="Awesome Article"

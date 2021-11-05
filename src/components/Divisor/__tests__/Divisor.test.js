@@ -4,7 +4,7 @@ import { render } from '@testing-library/react';
 import Divisor from '../Divisor';
 
 describe('<Divisor />', () => {
-  it('should render properly', () => {
+  it('renders properly', () => {
     const { baseElement } = render(<Divisor />);
     expect(baseElement).toMatchSnapshot();
   });

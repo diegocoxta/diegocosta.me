@@ -3,7 +3,7 @@ import { renderHook, act } from '@testing-library/react-hooks';
 import { useTheme } from '~/hooks/useTheme';
 
 describe('useTheme', () => {
-  it('should return the correct properties', async () => {
+  it('returns the correct properties', async () => {
     const { result } = renderHook(() => useTheme());
 
     expect(result.current[0]).toBe('light');

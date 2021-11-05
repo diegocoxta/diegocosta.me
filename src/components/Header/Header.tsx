@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Link } from 'gatsby';
 
+import { Link } from '~/utils/i18n';
 import FixedContainer from '~/components/FixedContainer';
 import ThemeSwitcher from '~/components/ThemeSwitcher';
 
@@ -11,17 +11,8 @@ const Content = styled.header`
   justify-content: space-between;
   align-items: center;
 
-  nav {
-    margin-top: 10px;
-    display: none;
-
-    @media (min-width: 760px) {
-      display: block;
-    }
-  }
-
   @media (min-width: 760px) {
-    margin: 100px 0 0px 0;
+    margin: 40px 0 40px 0;
   }
 `;
 

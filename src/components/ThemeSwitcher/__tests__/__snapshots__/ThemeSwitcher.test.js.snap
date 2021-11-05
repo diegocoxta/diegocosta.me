@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<ThemeSwitcher /> should render properly 1`] = `
+exports[`<ThemeSwitcher /> renders properly 1`] = `
 .c0 {
   background: transparent;
   border: 2px solid;
@@ -48,7 +48,7 @@ exports[`<ThemeSwitcher /> should render properly 1`] = `
 <body>
   <div>
     <button
-      aria-label="Toggle color scheme"
+      aria-label="themeSwitcher.toggle"
       class="c0"
     >
       <div

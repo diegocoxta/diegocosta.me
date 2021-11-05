@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useStaticQuery, graphql, navigate } from 'gatsby';
+import { useStaticQuery, graphql } from 'gatsby';
 import { useCombobox } from 'downshift';
 import Fuse from 'fuse.js';
 
@@ -13,6 +13,7 @@ export default (): React.ReactElement => {
           id
           fields {
             slug
+            language
           }
           frontmatter {
             title
@@ -40,7 +41,6 @@ export default (): React.ReactElement => {
     items: articles,
     onInputValueChange: ({ inputValue }) => inputValue && setArticles(fuse.search<ArticleProps>(inputValue)),
     itemToString: (article) => article?.item?.frontmatter?.title ?? '',
-    onSelectedItemChange: ({ selectedItem }) => navigate(selectedItem?.item?.fields?.slug ?? ''),
   });
 
   return <Search combobox={combobox} articles={articles} />;

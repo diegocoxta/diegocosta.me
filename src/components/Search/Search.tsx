@@ -1,9 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Link } from 'gatsby';
 import { UseComboboxReturnValue } from 'downshift';
 import Fuse from 'fuse.js';
 
+import { usei18n, Link } from '~/utils/i18n';
 import FixedContainer from '~/components/FixedContainer';
 
 import { SearchComponentQuery } from '~/../graphql-types';
@@ -92,11 +92,15 @@ interface SearchProps {
 }
 
 export default function Search({ articles, combobox }: SearchProps): React.ReactElement {
+  const i18n = usei18n();
+
+  const placeholder = i18n.getTranslationFor('search.searchForPosts');
+
   return (
     <FixedContainer>
       <Content {...combobox.getComboboxProps()}>
-        <Input type="text" placeholder="Busque por publicações..." autoComplete="off" {...combobox.getInputProps()} />
-        <Label {...combobox.getLabelProps()}>Busque por publicações...</Label>
+        <Input type="text" placeholder={placeholder} autoComplete="off" {...combobox.getInputProps()} />
+        <Label {...combobox.getLabelProps()}>{placeholder}</Label>
         <Results {...combobox.getMenuProps()} data-testid="search-results">
           {combobox.isOpen &&
             articles &&
@@ -105,6 +109,7 @@ export default function Search({ articles, combobox }: SearchProps): React.React
                 key={article.item.id}
                 data-testid="search-results-link"
                 to={article?.item?.fields?.slug}
+                language={article?.item?.fields?.language}
                 {...combobox.getItemProps({ index, item: article })}
               >
                 <ResultItemTitle data-testid="search-results-title">

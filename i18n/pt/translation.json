@@ -1,0 +1,18 @@
+{
+  "languages.pt": "Português",
+  "languages.en": "Inglês",
+  "languages.es": "Espanhol",
+  "article.lessThan1Minute": "Menos de 1 minuto",
+  "article.minutes": "minutos",
+  "article.ofReading": "de leitura",
+  "article.translationNotFound": "Desculpe, essa página não está disponível em Português.",
+  "article.languagePrefix": "Em",
+  "404page.title": "Não encontrado",
+  "404page.message": "Página não encontrada",
+  "footer.builtWith": "construído com",
+  "footer.sourceCode": "código fonte",
+  "search.searchForPosts": "Pesquisar por postagens...",
+  "themeSwitcher.toggle": "Trocar esquema de cores",
+  "languageswitcher.toggle": "Alterar o idioma para",
+  "tagsTemplate.titlePrefix": "Publicações sobre"
+}

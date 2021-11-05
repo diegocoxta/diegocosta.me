@@ -1,18 +1,16 @@
 import React from 'react';
-import { Helmet } from 'react-helmet';
+import { Helmet } from '~/utils/i18n';
 
 export interface MetatagsProps {
   title: string;
   description: string;
   author: string;
-  lang: string;
   image: string;
 }
 
 export default function Metatags(props: MetatagsProps): React.ReactElement {
   return (
     <Helmet
-      htmlAttributes={{ lang: props.lang }}
       title={props.title}
       meta={[
         {

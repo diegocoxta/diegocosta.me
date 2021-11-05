@@ -66,14 +66,14 @@ const Content = styled.div`
 `;
 
 interface AboutMeProps {
-  bodyContent: string;
+  mdxContent: string;
 }
 
 export default function AboutMe(props: AboutMeProps): JSX.Element {
   return (
     <FixedContainer>
       <Content>
-        <MDXRenderer>{props.bodyContent}</MDXRenderer>
+        <MDXRenderer>{props.mdxContent}</MDXRenderer>
       </Content>
     </FixedContainer>
   );

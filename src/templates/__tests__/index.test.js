@@ -9,7 +9,7 @@ jest.mock('../../components/Search', () => () => <p>Search</p>);
 import IndexTemplate from '../index';
 
 describe('<IndexTemplate>', () => {
-  it('should render properly', () => {
+  it('renders properly', () => {
     const data = {
       articles: {
         edges: [

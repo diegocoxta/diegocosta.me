@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<Talk /> should not render the description 1`] = `
+exports[`<Talk /> does not render the description 1`] = `
 <body>
   .c0 {
   margin-bottom: 16px;
@@ -69,7 +69,7 @@ exports[`<Talk /> should not render the description 1`] = `
 </body>
 `;
 
-exports[`<Talk /> should not render the url list 1`] = `
+exports[`<Talk /> does not render the url list 1`] = `
 <body>
   .c0 {
   margin-bottom: 16px;
@@ -148,7 +148,7 @@ exports[`<Talk /> should not render the url list 1`] = `
 </body>
 `;
 
-exports[`<Talk /> should render properly 1`] = `
+exports[`<Talk /> renders properly 1`] = `
 .c0 {
   margin-bottom: 16px;
 }
@@ -326,7 +326,7 @@ exports[`<Talk /> should render properly 1`] = `
 </body>
 `;
 
-exports[`<Talk /> should render the correctly icons 1`] = `
+exports[`<Talk /> renders the correctly icons 1`] = `
 <body>
   .c0 {
   margin-bottom: 16px;

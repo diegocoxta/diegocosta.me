@@ -57,7 +57,7 @@ const _MOCKED_ARTICLES = [
 ];
 
 describe('<Search />', () => {
-  it('should render properly', () => {
+  it('renders properly', () => {
     const { baseElement, getAllByTestId, getByTestId } = render(
       <Search articles={_MOCKED_ARTICLES} combobox={_MOCKED_COMBOBOX} />
     );
@@ -86,7 +86,7 @@ describe('<Search />', () => {
     expect(baseElement).toMatchSnapshot();
   });
 
-  it('should render properly with results closed', () => {
+  it('renders properly with results closed', () => {
     const { baseElement, queryByTestId, getByTestId } = render(
       <Search articles={_MOCKED_ARTICLES} combobox={{ ..._MOCKED_COMBOBOX, isOpen: false }} />
     );

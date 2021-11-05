@@ -66,6 +66,10 @@ export type File = Node & {
   childrenImageSharp?: Maybe<Array<Maybe<ImageSharp>>>;
   /** Returns the first child node of type ImageSharp or null if there are no children of given type on this node */
   childImageSharp?: Maybe<ImageSharp>;
+  /** Returns all children nodes filtered by type Locale */
+  childrenLocale?: Maybe<Array<Maybe<Locale>>>;
+  /** Returns the first child node of type Locale or null if there are no children of given type on this node */
+  childLocale?: Maybe<Locale>;
   id: Scalars['ID'];
   parent?: Maybe<Node>;
   children: Array<Node>;
@@ -270,7 +274,8 @@ export type SiteSiteMetadata = {
   description?: Maybe<Scalars['String']>;
   author?: Maybe<Scalars['String']>;
   siteUrl?: Maybe<Scalars['String']>;
-  language?: Maybe<Scalars['String']>;
+  defaultLanguage?: Maybe<Scalars['String']>;
+  languages?: Maybe<Array<Maybe<Scalars['String']>>>;
   repository?: Maybe<Scalars['String']>;
   image?: Maybe<Scalars['String']>;
   googleAnalyticsKey?: Maybe<Scalars['String']>;
@@ -410,6 +415,7 @@ export type MdxTableOfContentsArgs = {
 export type MdxFields = {
   slug?: Maybe<Scalars['String']>;
   collection?: Maybe<Scalars['String']>;
+  language?: Maybe<Scalars['String']>;
   readingTime?: Maybe<MdxFieldsReadingTime>;
 };
 
@@ -669,6 +675,17 @@ export type ImageSharpResize = {
   originalName?: Maybe<Scalars['String']>;
 };
 
+export type Locale = Node & {
+  id: Scalars['ID'];
+  parent?: Maybe<Node>;
+  children: Array<Node>;
+  internal: Internal;
+  language?: Maybe<Scalars['String']>;
+  ns?: Maybe<Scalars['String']>;
+  data?: Maybe<Scalars['String']>;
+  fileAbsolutePath?: Maybe<Scalars['String']>;
+};
+
 export type Query = {
   file?: Maybe<File>;
   allFile: FileConnection;
@@ -688,6 +705,8 @@ export type Query = {
   allMdx: MdxConnection;
   imageSharp?: Maybe<ImageSharp>;
   allImageSharp: ImageSharpConnection;
+  locale?: Maybe<Locale>;
+  allLocale: LocaleConnection;
 };
 
 
@@ -730,6 +749,8 @@ export type QueryFileArgs = {
   childMdx?: Maybe<MdxFilterInput>;
   childrenImageSharp?: Maybe<ImageSharpFilterListInput>;
   childImageSharp?: Maybe<ImageSharpFilterInput>;
+  childrenLocale?: Maybe<LocaleFilterListInput>;
+  childLocale?: Maybe<LocaleFilterInput>;
   id?: Maybe<StringQueryOperatorInput>;
   parent?: Maybe<NodeFilterInput>;
   children?: Maybe<NodeFilterListInput>;
@@ -952,6 +973,26 @@ export type QueryAllImageSharpArgs = {
   limit?: Maybe<Scalars['Int']>;
 };
 
+
+export type QueryLocaleArgs = {
+  id?: Maybe<StringQueryOperatorInput>;
+  parent?: Maybe<NodeFilterInput>;
+  children?: Maybe<NodeFilterListInput>;
+  internal?: Maybe<InternalFilterInput>;
+  language?: Maybe<StringQueryOperatorInput>;
+  ns?: Maybe<StringQueryOperatorInput>;
+  data?: Maybe<StringQueryOperatorInput>;
+  fileAbsolutePath?: Maybe<StringQueryOperatorInput>;
+};
+
+
+export type QueryAllLocaleArgs = {
+  filter?: Maybe<LocaleFilterInput>;
+  sort?: Maybe<LocaleSortInput>;
+  skip?: Maybe<Scalars['Int']>;
+  limit?: Maybe<Scalars['Int']>;
+};
+
 export type StringQueryOperatorInput = {
   eq?: Maybe<Scalars['String']>;
   ne?: Maybe<Scalars['String']>;
@@ -1053,6 +1094,7 @@ export type MdxWordCountFilterInput = {
 export type MdxFieldsFilterInput = {
   slug?: Maybe<StringQueryOperatorInput>;
   collection?: Maybe<StringQueryOperatorInput>;
+  language?: Maybe<StringQueryOperatorInput>;
   readingTime?: Maybe<MdxFieldsReadingTimeFilterInput>;
 };
 
@@ -1149,6 +1191,21 @@ export type ImageSharpResizeFilterInput = {
   height?: Maybe<IntQueryOperatorInput>;
   aspectRatio?: Maybe<FloatQueryOperatorInput>;
   originalName?: Maybe<StringQueryOperatorInput>;
+};
+
+export type LocaleFilterListInput = {
+  elemMatch?: Maybe<LocaleFilterInput>;
+};
+
+export type LocaleFilterInput = {
+  id?: Maybe<StringQueryOperatorInput>;
+  parent?: Maybe<NodeFilterInput>;
+  children?: Maybe<NodeFilterListInput>;
+  internal?: Maybe<InternalFilterInput>;
+  language?: Maybe<StringQueryOperatorInput>;
+  ns?: Maybe<StringQueryOperatorInput>;
+  data?: Maybe<StringQueryOperatorInput>;
+  fileAbsolutePath?: Maybe<StringQueryOperatorInput>;
 };
 
 export type FileConnection = {
@@ -1264,6 +1321,7 @@ export type FileFieldsEnum =
   | 'childrenMdx___wordCount___words'
   | 'childrenMdx___fields___slug'
   | 'childrenMdx___fields___collection'
+  | 'childrenMdx___fields___language'
   | 'childrenMdx___fields___readingTime___text'
   | 'childrenMdx___fields___readingTime___minutes'
   | 'childrenMdx___fields___readingTime___time'
@@ -1328,6 +1386,7 @@ export type FileFieldsEnum =
   | 'childMdx___wordCount___words'
   | 'childMdx___fields___slug'
   | 'childMdx___fields___collection'
+  | 'childMdx___fields___language'
   | 'childMdx___fields___readingTime___text'
   | 'childMdx___fields___readingTime___minutes'
   | 'childMdx___fields___readingTime___time'
@@ -1511,6 +1570,91 @@ export type FileFieldsEnum =
   | 'childImageSharp___internal___mediaType'
   | 'childImageSharp___internal___owner'
   | 'childImageSharp___internal___type'
+  | 'childrenLocale'
+  | 'childrenLocale___id'
+  | 'childrenLocale___parent___id'
+  | 'childrenLocale___parent___parent___id'
+  | 'childrenLocale___parent___parent___children'
+  | 'childrenLocale___parent___children'
+  | 'childrenLocale___parent___children___id'
+  | 'childrenLocale___parent___children___children'
+  | 'childrenLocale___parent___internal___content'
+  | 'childrenLocale___parent___internal___contentDigest'
+  | 'childrenLocale___parent___internal___description'
+  | 'childrenLocale___parent___internal___fieldOwners'
+  | 'childrenLocale___parent___internal___ignoreType'
+  | 'childrenLocale___parent___internal___mediaType'
+  | 'childrenLocale___parent___internal___owner'
+  | 'childrenLocale___parent___internal___type'
+  | 'childrenLocale___children'
+  | 'childrenLocale___children___id'
+  | 'childrenLocale___children___parent___id'
+  | 'childrenLocale___children___parent___children'
+  | 'childrenLocale___children___children'
+  | 'childrenLocale___children___children___id'
+  | 'childrenLocale___children___children___children'
+  | 'childrenLocale___children___internal___content'
+  | 'childrenLocale___children___internal___contentDigest'
+  | 'childrenLocale___children___internal___description'
+  | 'childrenLocale___children___internal___fieldOwners'
+  | 'childrenLocale___children___internal___ignoreType'
+  | 'childrenLocale___children___internal___mediaType'
+  | 'childrenLocale___children___internal___owner'
+  | 'childrenLocale___children___internal___type'
+  | 'childrenLocale___internal___content'
+  | 'childrenLocale___internal___contentDigest'
+  | 'childrenLocale___internal___description'
+  | 'childrenLocale___internal___fieldOwners'
+  | 'childrenLocale___internal___ignoreType'
+  | 'childrenLocale___internal___mediaType'
+  | 'childrenLocale___internal___owner'
+  | 'childrenLocale___internal___type'
+  | 'childrenLocale___language'
+  | 'childrenLocale___ns'
+  | 'childrenLocale___data'
+  | 'childrenLocale___fileAbsolutePath'
+  | 'childLocale___id'
+  | 'childLocale___parent___id'
+  | 'childLocale___parent___parent___id'
+  | 'childLocale___parent___parent___children'
+  | 'childLocale___parent___children'
+  | 'childLocale___parent___children___id'
+  | 'childLocale___parent___children___children'
+  | 'childLocale___parent___internal___content'
+  | 'childLocale___parent___internal___contentDigest'
+  | 'childLocale___parent___internal___description'
+  | 'childLocale___parent___internal___fieldOwners'
+  | 'childLocale___parent___internal___ignoreType'
+  | 'childLocale___parent___internal___mediaType'
+  | 'childLocale___parent___internal___owner'
+  | 'childLocale___parent___internal___type'
+  | 'childLocale___children'
+  | 'childLocale___children___id'
+  | 'childLocale___children___parent___id'
+  | 'childLocale___children___parent___children'
+  | 'childLocale___children___children'
+  | 'childLocale___children___children___id'
+  | 'childLocale___children___children___children'
+  | 'childLocale___children___internal___content'
+  | 'childLocale___children___internal___contentDigest'
+  | 'childLocale___children___internal___description'
+  | 'childLocale___children___internal___fieldOwners'
+  | 'childLocale___children___internal___ignoreType'
+  | 'childLocale___children___internal___mediaType'
+  | 'childLocale___children___internal___owner'
+  | 'childLocale___children___internal___type'
+  | 'childLocale___internal___content'
+  | 'childLocale___internal___contentDigest'
+  | 'childLocale___internal___description'
+  | 'childLocale___internal___fieldOwners'
+  | 'childLocale___internal___ignoreType'
+  | 'childLocale___internal___mediaType'
+  | 'childLocale___internal___owner'
+  | 'childLocale___internal___type'
+  | 'childLocale___language'
+  | 'childLocale___ns'
+  | 'childLocale___data'
+  | 'childLocale___fileAbsolutePath'
   | 'id'
   | 'parent___id'
   | 'parent___parent___id'
@@ -1678,6 +1822,8 @@ export type FileFilterInput = {
   childMdx?: Maybe<MdxFilterInput>;
   childrenImageSharp?: Maybe<ImageSharpFilterListInput>;
   childImageSharp?: Maybe<ImageSharpFilterInput>;
+  childrenLocale?: Maybe<LocaleFilterListInput>;
+  childLocale?: Maybe<LocaleFilterInput>;
   id?: Maybe<StringQueryOperatorInput>;
   parent?: Maybe<NodeFilterInput>;
   children?: Maybe<NodeFilterListInput>;
@@ -1946,7 +2092,8 @@ export type SiteSiteMetadataFilterInput = {
   description?: Maybe<StringQueryOperatorInput>;
   author?: Maybe<StringQueryOperatorInput>;
   siteUrl?: Maybe<StringQueryOperatorInput>;
-  language?: Maybe<StringQueryOperatorInput>;
+  defaultLanguage?: Maybe<StringQueryOperatorInput>;
+  languages?: Maybe<StringQueryOperatorInput>;
   repository?: Maybe<StringQueryOperatorInput>;
   image?: Maybe<StringQueryOperatorInput>;
   googleAnalyticsKey?: Maybe<StringQueryOperatorInput>;
@@ -2003,7 +2150,8 @@ export type SiteFieldsEnum =
   | 'siteMetadata___description'
   | 'siteMetadata___author'
   | 'siteMetadata___siteUrl'
-  | 'siteMetadata___language'
+  | 'siteMetadata___defaultLanguage'
+  | 'siteMetadata___languages'
   | 'siteMetadata___repository'
   | 'siteMetadata___image'
   | 'siteMetadata___googleAnalyticsKey'
@@ -3065,6 +3213,7 @@ export type MdxFieldsEnum =
   | 'wordCount___words'
   | 'fields___slug'
   | 'fields___collection'
+  | 'fields___language'
   | 'fields___readingTime___text'
   | 'fields___readingTime___minutes'
   | 'fields___readingTime___time'
@@ -3413,6 +3562,189 @@ export type ImageSharpSortInput = {
   order?: Maybe<Array<Maybe<SortOrderEnum>>>;
 };
 
+export type LocaleConnection = {
+  totalCount: Scalars['Int'];
+  edges: Array<LocaleEdge>;
+  nodes: Array<Locale>;
+  pageInfo: PageInfo;
+  distinct: Array<Scalars['String']>;
+  max?: Maybe<Scalars['Float']>;
+  min?: Maybe<Scalars['Float']>;
+  sum?: Maybe<Scalars['Float']>;
+  group: Array<LocaleGroupConnection>;
+};
+
+
+export type LocaleConnectionDistinctArgs = {
+  field: LocaleFieldsEnum;
+};
+
+
+export type LocaleConnectionMaxArgs = {
+  field: LocaleFieldsEnum;
+};
+
+
+export type LocaleConnectionMinArgs = {
+  field: LocaleFieldsEnum;
+};
+
+
+export type LocaleConnectionSumArgs = {
+  field: LocaleFieldsEnum;
+};
+
+
+export type LocaleConnectionGroupArgs = {
+  skip?: Maybe<Scalars['Int']>;
+  limit?: Maybe<Scalars['Int']>;
+  field: LocaleFieldsEnum;
+};
+
+export type LocaleEdge = {
+  next?: Maybe<Locale>;
+  node: Locale;
+  previous?: Maybe<Locale>;
+};
+
+export type LocaleFieldsEnum =
+  | 'id'
+  | 'parent___id'
+  | 'parent___parent___id'
+  | 'parent___parent___parent___id'
+  | 'parent___parent___parent___children'
+  | 'parent___parent___children'
+  | 'parent___parent___children___id'
+  | 'parent___parent___children___children'
+  | 'parent___parent___internal___content'
+  | 'parent___parent___internal___contentDigest'
+  | 'parent___parent___internal___description'
+  | 'parent___parent___internal___fieldOwners'
+  | 'parent___parent___internal___ignoreType'
+  | 'parent___parent___internal___mediaType'
+  | 'parent___parent___internal___owner'
+  | 'parent___parent___internal___type'
+  | 'parent___children'
+  | 'parent___children___id'
+  | 'parent___children___parent___id'
+  | 'parent___children___parent___children'
+  | 'parent___children___children'
+  | 'parent___children___children___id'
+  | 'parent___children___children___children'
+  | 'parent___children___internal___content'
+  | 'parent___children___internal___contentDigest'
+  | 'parent___children___internal___description'
+  | 'parent___children___internal___fieldOwners'
+  | 'parent___children___internal___ignoreType'
+  | 'parent___children___internal___mediaType'
+  | 'parent___children___internal___owner'
+  | 'parent___children___internal___type'
+  | 'parent___internal___content'
+  | 'parent___internal___contentDigest'
+  | 'parent___internal___description'
+  | 'parent___internal___fieldOwners'
+  | 'parent___internal___ignoreType'
+  | 'parent___internal___mediaType'
+  | 'parent___internal___owner'
+  | 'parent___internal___type'
+  | 'children'
+  | 'children___id'
+  | 'children___parent___id'
+  | 'children___parent___parent___id'
+  | 'children___parent___parent___children'
+  | 'children___parent___children'
+  | 'children___parent___children___id'
+  | 'children___parent___children___children'
+  | 'children___parent___internal___content'
+  | 'children___parent___internal___contentDigest'
+  | 'children___parent___internal___description'
+  | 'children___parent___internal___fieldOwners'
+  | 'children___parent___internal___ignoreType'
+  | 'children___parent___internal___mediaType'
+  | 'children___parent___internal___owner'
+  | 'children___parent___internal___type'
+  | 'children___children'
+  | 'children___children___id'
+  | 'children___children___parent___id'
+  | 'children___children___parent___children'
+  | 'children___children___children'
+  | 'children___children___children___id'
+  | 'children___children___children___children'
+  | 'children___children___internal___content'
+  | 'children___children___internal___contentDigest'
+  | 'children___children___internal___description'
+  | 'children___children___internal___fieldOwners'
+  | 'children___children___internal___ignoreType'
+  | 'children___children___internal___mediaType'
+  | 'children___children___internal___owner'
+  | 'children___children___internal___type'
+  | 'children___internal___content'
+  | 'children___internal___contentDigest'
+  | 'children___internal___description'
+  | 'children___internal___fieldOwners'
+  | 'children___internal___ignoreType'
+  | 'children___internal___mediaType'
+  | 'children___internal___owner'
+  | 'children___internal___type'
+  | 'internal___content'
+  | 'internal___contentDigest'
+  | 'internal___description'
+  | 'internal___fieldOwners'
+  | 'internal___ignoreType'
+  | 'internal___mediaType'
+  | 'internal___owner'
+  | 'internal___type'
+  | 'language'
+  | 'ns'
+  | 'data'
+  | 'fileAbsolutePath';
+
+export type LocaleGroupConnection = {
+  totalCount: Scalars['Int'];
+  edges: Array<LocaleEdge>;
+  nodes: Array<Locale>;
+  pageInfo: PageInfo;
+  distinct: Array<Scalars['String']>;
+  max?: Maybe<Scalars['Float']>;
+  min?: Maybe<Scalars['Float']>;
+  sum?: Maybe<Scalars['Float']>;
+  group: Array<LocaleGroupConnection>;
+  field: Scalars['String'];
+  fieldValue?: Maybe<Scalars['String']>;
+};
+
+
+export type LocaleGroupConnectionDistinctArgs = {
+  field: LocaleFieldsEnum;
+};
+
+
+export type LocaleGroupConnectionMaxArgs = {
+  field: LocaleFieldsEnum;
+};
+
+
+export type LocaleGroupConnectionMinArgs = {
+  field: LocaleFieldsEnum;
+};
+
+
+export type LocaleGroupConnectionSumArgs = {
+  field: LocaleFieldsEnum;
+};
+
+
+export type LocaleGroupConnectionGroupArgs = {
+  skip?: Maybe<Scalars['Int']>;
+  limit?: Maybe<Scalars['Int']>;
+  field: LocaleFieldsEnum;
+};
+
+export type LocaleSortInput = {
+  fields?: Maybe<Array<Maybe<LocaleFieldsEnum>>>;
+  order?: Maybe<Array<Maybe<SortOrderEnum>>>;
+};
+
 export type FooterComponentQueryVariables = Exact<{ [key: string]: never; }>;
 
 
@@ -3426,42 +3758,58 @@ export type HeaderComponentQuery = { site?: { siteMetadata?: { author?: string |
 export type MetatagsComponentQueryVariables = Exact<{ [key: string]: never; }>;
 
 
-export type MetatagsComponentQuery = { site?: { siteMetadata?: { title?: string | null | undefined, description?: string | null | undefined, author?: string | null | undefined, language?: string | null | undefined, image?: string | null | undefined } | null | undefined } | null | undefined };
+export type MetatagsComponentQuery = { site?: { siteMetadata?: { title?: string | null | undefined, description?: string | null | undefined, author?: string | null | undefined, image?: string | null | undefined } | null | undefined } | null | undefined };
 
 export type SearchComponentQueryVariables = Exact<{ [key: string]: never; }>;
 
 
-export type SearchComponentQuery = { articles: { nodes: Array<{ id: string, fields?: { slug?: string | null | undefined } | null | undefined, frontmatter?: { title: string, description?: string | null | undefined } | null | undefined }> } };
+export type SearchComponentQuery = { articles: { nodes: Array<{ id: string, fields?: { slug?: string | null | undefined, language?: string | null | undefined } | null | undefined, frontmatter?: { title: string, description?: string | null | undefined } | null | undefined }> } };
+
+export type PageNotFoundQueryQueryVariables = Exact<{
+  language: Scalars['String'];
+}>;
+
+
+export type PageNotFoundQueryQuery = { locales: { edges: Array<{ node: { ns?: string | null | undefined, data?: string | null | undefined, language?: string | null | undefined } }> } };
+
+export type ArticleFieldsFragment = { body: string, excerpt: string, fields?: { language?: string | null | undefined, readingTime?: { minutes?: number | null | undefined } | null | undefined } | null | undefined, frontmatter?: { title: string, date?: any | null | undefined, description?: string | null | undefined, tags?: Array<string | null | undefined> | null | undefined } | null | undefined };
 
 export type ArticleTemplateQueryVariables = Exact<{
   slug: Scalars['String'];
+  language: Scalars['String'];
+  defaultLanguage: Scalars['String'];
 }>;
 
 
-export type ArticleTemplateQuery = { article?: { body: string, excerpt: string, fields?: { readingTime?: { minutes?: number | null | undefined } | null | undefined } | null | undefined, frontmatter?: { title: string, date?: any | null | undefined, description?: string | null | undefined, tags?: Array<string | null | undefined> | null | undefined, language?: string | null | undefined } | null | undefined } | null | undefined };
+export type ArticleTemplateQuery = { locales: { edges: Array<{ node: { ns?: string | null | undefined, data?: string | null | undefined, language?: string | null | undefined } }> }, article?: { body: string, excerpt: string, fields?: { language?: string | null | undefined, readingTime?: { minutes?: number | null | undefined } | null | undefined } | null | undefined, frontmatter?: { title: string, date?: any | null | undefined, description?: string | null | undefined, tags?: Array<string | null | undefined> | null | undefined } | null | undefined } | null | undefined, articleLanguageFallback?: { body: string, excerpt: string, fields?: { language?: string | null | undefined, readingTime?: { minutes?: number | null | undefined } | null | undefined } | null | undefined, frontmatter?: { title: string, date?: any | null | undefined, description?: string | null | undefined, tags?: Array<string | null | undefined> | null | undefined } | null | undefined } | null | undefined };
 
-export type IndexTemplateQueryVariables = Exact<{ [key: string]: never; }>;
-
-
-export type IndexTemplateQuery = { aboutMe?: { body: string } | null | undefined, articles: { edges: Array<{ node: { excerpt: string, fields?: { slug?: string | null | undefined, readingTime?: { minutes?: number | null | undefined } | null | undefined } | null | undefined, frontmatter?: { date?: any | null | undefined, title: string, description?: string | null | undefined, tags?: Array<string | null | undefined> | null | undefined, language?: string | null | undefined } | null | undefined } }> } };
-
-export type LanguageTemplateQueryVariables = Exact<{
-  language?: Maybe<Scalars['String']>;
+export type IndexTemplateQueryVariables = Exact<{
+  language: Scalars['String'];
 }>;
 
 
-export type LanguageTemplateQuery = { aboutMe?: { body: string } | null | undefined, articles: { totalCount: number, edges: Array<{ node: { excerpt: string, fields?: { slug?: string | null | undefined, readingTime?: { minutes?: number | null | undefined } | null | undefined } | null | undefined, frontmatter?: { date?: any | null | undefined, title: string, tags?: Array<string | null | undefined> | null | undefined, description?: string | null | undefined, language?: string | null | undefined } | null | undefined } }> } };
+export type IndexTemplateQuery = { locales: { edges: Array<{ node: { ns?: string | null | undefined, data?: string | null | undefined, language?: string | null | undefined } }> }, aboutMe?: { body: string } | null | undefined, articles: { edges: Array<{ node: { excerpt: string, fields?: { slug?: string | null | undefined, language?: string | null | undefined, readingTime?: { minutes?: number | null | undefined } | null | undefined } | null | undefined, frontmatter?: { date?: any | null | undefined, title: string, description?: string | null | undefined, tags?: Array<string | null | undefined> | null | undefined } | null | undefined } }> } };
+
+export type PageFieldsFragment = { body: string, fields?: { language?: string | null | undefined } | null | undefined, frontmatter?: { title: string } | null | undefined };
 
 export type PageTemplateQueryVariables = Exact<{
   slug: Scalars['String'];
+  language: Scalars['String'];
+  defaultLanguage: Scalars['String'];
 }>;
 
 
-export type PageTemplateQuery = { page?: { body: string, frontmatter?: { title: string } | null | undefined } | null | undefined };
+export type PageTemplateQuery = { locales: { edges: Array<{ node: { ns?: string | null | undefined, data?: string | null | undefined, language?: string | null | undefined } }> }, page?: { body: string, fields?: { language?: string | null | undefined } | null | undefined, frontmatter?: { title: string } | null | undefined } | null | undefined, pageLanguageFallback?: { body: string, excerpt: string, fields?: { language?: string | null | undefined, readingTime?: { minutes?: number | null | undefined } | null | undefined } | null | undefined, frontmatter?: { title: string, date?: any | null | undefined, description?: string | null | undefined, tags?: Array<string | null | undefined> | null | undefined } | null | undefined } | null | undefined };
 
 export type TagsTemplateQueryVariables = Exact<{
   tag?: Maybe<Scalars['String']>;
+  language: Scalars['String'];
 }>;
 
 
-export type TagsTemplateQuery = { articles: { totalCount: number, edges: Array<{ node: { excerpt: string, fields?: { slug?: string | null | undefined, readingTime?: { minutes?: number | null | undefined } | null | undefined } | null | undefined, frontmatter?: { date?: any | null | undefined, title: string, tags?: Array<string | null | undefined> | null | undefined, description?: string | null | undefined, language?: string | null | undefined } | null | undefined } }> } };
+export type TagsTemplateQuery = { locales: { edges: Array<{ node: { ns?: string | null | undefined, data?: string | null | undefined, language?: string | null | undefined } }> }, articles: { totalCount: number, edges: Array<{ node: { excerpt: string, fields?: { slug?: string | null | undefined, language?: string | null | undefined, readingTime?: { minutes?: number | null | undefined } | null | undefined } | null | undefined, frontmatter?: { date?: any | null | undefined, title: string, tags?: Array<string | null | undefined> | null | undefined, description?: string | null | undefined } | null | undefined } }> } };
+
+export type GatsbyCreatePageQueryVariables = Exact<{ [key: string]: never; }>;
+
+
+export type GatsbyCreatePageQuery = { content: { edges: Array<{ node: { fields?: { slug?: string | null | undefined, collection?: string | null | undefined } | null | undefined, internal: { type: string }, frontmatter?: { title: string } | null | undefined } }> }, tags: { group: Array<{ fieldValue?: string | null | undefined }> } };

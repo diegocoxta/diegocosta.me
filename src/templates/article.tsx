@@ -12,9 +12,10 @@ interface ArticleTemplateProps extends PageRendererProps {
   data: ArticleTemplateQuery;
 }
 
-export default function ArticleTemplate({ data }: ArticleTemplateProps): React.ReactElement {
-  const { body, excerpt, frontmatter, fields } = data.article ?? {};
-  const { title, date, tags, language, description } = frontmatter ?? {};
+export default function ArticleTemplate(props: ArticleTemplateProps): React.ReactElement {
+  const article = props.data.article ?? props.data.articleLanguageFallback;
+  const { body, excerpt, frontmatter, fields } = article ?? {};
+  const { title, date, tags, description } = frontmatter ?? {};
 
   return (
     <Layout>
@@ -25,30 +26,45 @@ export default function ArticleTemplate({ data }: ArticleTemplateProps): React.R
         date={date}
         tags={tags as string[]}
         readingTime={fields?.readingTime?.minutes ?? 0}
-        language={language}
-        bodyContent={body}
+        language={fields?.language}
+        mdxContent={body}
       />
     </Layout>
   );
 }
 
 export const pageQuery = graphql`
-  query ArticleTemplate($slug: String!) {
-    article: mdx(fields: { slug: { eq: $slug } }) {
-      body
-      excerpt(pruneLength: 160)
-      fields {
-        readingTime {
-          minutes
+  fragment articleFields on Mdx {
+    body
+    excerpt(pruneLength: 160)
+    fields {
+      readingTime {
+        minutes
+      }
+      language
+    }
+    frontmatter {
+      title
+      date
+      description
+      tags
+    }
+  }
+  query ArticleTemplate($slug: String!, $language: String!, $defaultLanguage: String!) {
+    locales: allLocale(filter: { language: { eq: $language } }) {
+      edges {
+        node {
+          ns
+          data
+          language
         }
       }
-      frontmatter {
-        title
-        date
-        description
-        tags
-        language
-      }
+    }
+    article: mdx(fields: { slug: { eq: $slug }, language: { eq: $language } }) {
+      ...articleFields
+    }
+    articleLanguageFallback: mdx(fields: { slug: { eq: $slug }, language: { eq: $defaultLanguage } }) {
+      ...articleFields
     }
   }
 `;

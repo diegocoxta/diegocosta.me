@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<Header /> should not render the last name 1`] = `
+exports[`<Header /> does not render the last name 1`] = `
 <body>
   .c0 {
   max-width: 800px;
@@ -22,11 +22,6 @@ exports[`<Header /> should not render the last name 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-}
-
-.c1 nav {
-  margin-top: 10px;
-  display: none;
 }
 
 .c3 {
@@ -62,14 +57,8 @@ exports[`<Header /> should not render the last name 1`] = `
 }
 
 @media (min-width:760px) {
-  .c1 nav {
-    display: block;
-  }
-}
-
-@media (min-width:760px) {
   .c1 {
-    margin: 100px 0 0px 0;
+    margin: 40px 0 40px 0;
   }
 }
 
@@ -111,7 +100,7 @@ exports[`<Header /> should not render the last name 1`] = `
 </body>
 `;
 
-exports[`<Header /> should render properly 1`] = `
+exports[`<Header /> renders properly 1`] = `
 .c0 {
   max-width: 800px;
   margin: 0 auto;
@@ -132,11 +121,6 @@ exports[`<Header /> should render properly 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-}
-
-.c1 nav {
-  margin-top: 10px;
-  display: none;
 }
 
 .c3 {
@@ -172,14 +156,8 @@ exports[`<Header /> should render properly 1`] = `
 }
 
 @media (min-width:760px) {
-  .c1 nav {
-    display: block;
-  }
-}
-
-@media (min-width:760px) {
   .c1 {
-    margin: 100px 0 0px 0;
+    margin: 40px 0 40px 0;
   }
 }
 

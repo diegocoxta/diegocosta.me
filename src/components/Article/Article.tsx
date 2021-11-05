@@ -1,10 +1,9 @@
 import React from 'react';
-import { Link } from 'gatsby';
 import styled from 'styled-components';
 import kebabCase from 'lodash.kebabcase';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
 
-import translations from './translations';
+import { usei18n, Link } from '~/utils/i18n';
 
 import FixedContainer from '~/components/FixedContainer';
 
@@ -115,6 +114,13 @@ export const Body = styled.section`
   }
 `;
 
+const LanguageFallbackMessage = styled.p`
+  background: ${({ theme }) => theme.accentColor};
+  padding: 20px;
+  color: ${({ theme }) => theme.backgroundColor};
+  margin: 20px 0;
+`;
+
 export interface ArticleProps {
   title: string;
   url?: string | null;
@@ -123,35 +129,53 @@ export interface ArticleProps {
   date?: string;
   tags?: string[] | null;
   description?: string | null;
-  bodyContent?: string | null;
+  mdxContent?: string | null;
+  showArticleDetails?: boolean;
 }
 
 export default function Article(props: ArticleProps): React.ReactElement {
-  const currentArticleLanguage = props.language ?? 'en';
+  const i18n = usei18n();
+
+  const pageLanguage = i18n.getCurrentLanguage();
+  const isValidTranslation = pageLanguage === props.language;
+  const articleTranslationNotFound = i18n.getTranslationFor('article.translationNotFound');
 
   const getReadingTime = () => {
-    const texts = translations[currentArticleLanguage];
-
     if (!props.readingTime) {
       return undefined;
     }
 
+    const lessThan1Minute = i18n.getTranslationFor('article.lessThan1Minute');
+    const ofReading = i18n.getTranslationFor('article.ofReading');
+    const minutes = i18n.getTranslationFor('article.minutes');
+
     if (props.readingTime < 1) {
-      return ` · ${texts.lessThan1Minute} ${texts.ofReading}`;
+      return ` · ${lessThan1Minute} ${ofReading}`;
     }
 
-    return ` · ${props.readingTime?.toFixed()} ${texts.minutes} ${texts.ofReading}`;
+    return ` · ${props.readingTime?.toFixed()} ${minutes} ${ofReading}`;
   };
 
   const date =
     props.date &&
-    new Date(props.date).toLocaleDateString(currentArticleLanguage, {
+    new Date(props.date).toLocaleDateString(pageLanguage, {
       year: 'numeric',
       month: '2-digit',
       day: '2-digit',
     });
 
-  const Tags = props.tags && (
+  const language = () => {
+    if (!props.language) {
+      return;
+    }
+
+    const languagePrefix = i18n.getTranslationFor('article.languagePrefix');
+    const languageName = i18n.getTranslationFor(`languages.${props.language}`);
+
+    return ` · ${languagePrefix} ${languageName}`;
+  };
+
+  const Tags = props.showArticleDetails && props.tags && (
     <TagList data-testid="article-header-tags">
       {props.tags.map((tag: string, index: number) => (
         <TagItem key={`${index}-${tag}`} data-testid="article-header-tag">
@@ -163,29 +187,38 @@ export default function Article(props: ArticleProps): React.ReactElement {
 
   return (
     <FixedContainer>
+      {!isValidTranslation && !!props.mdxContent && (
+        <LanguageFallbackMessage>{articleTranslationNotFound}</LanguageFallbackMessage>
+      )}
       <Content data-testid="article-item">
         <Header>
           <Title>
             {props.url ? (
-              <CustomLink to={props.url} data-testid="article-header-custom-link">
+              <CustomLink to={props.url} data-testid="article-header-custom-link" language={props.language}>
                 {props.title}
               </CustomLink>
             ) : (
               props.title
             )}
           </Title>
-          <Details>
-            {date} {getReadingTime()}
-          </Details>
+          {props.showArticleDetails && (
+            <Details>
+              {date} {getReadingTime()} {language()}
+            </Details>
+          )}
           {Tags}
         </Header>
         {props.description && <Body dangerouslySetInnerHTML={{ __html: props.description }} />}
-        {props.bodyContent && (
+        {props.mdxContent && (
           <Body>
-            <MDXRenderer>{props.bodyContent}</MDXRenderer>
+            <MDXRenderer>{props.mdxContent}</MDXRenderer>
           </Body>
         )}
       </Content>
     </FixedContainer>
   );
 }
+
+Article.defaultProps = {
+  showArticleDetails: true,
+};

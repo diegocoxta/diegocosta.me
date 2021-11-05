@@ -8,7 +8,7 @@ jest.mock('../../components/Metatags', () => () => <p>Metatags</p>);
 import ArticleTemplate from '../article';
 
 describe('<ArticleTemplate>', () => {
-  it('should render properly', () => {
+  it('renders properly', () => {
     const props = {
       data: {
         article: {

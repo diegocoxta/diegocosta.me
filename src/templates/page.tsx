@@ -13,25 +13,44 @@ interface PageTemplateProps extends PageRendererProps {
 }
 
 export default function PageTemplate({ data }: PageTemplateProps): React.ReactElement {
-  const { body, frontmatter } = data.page ?? {};
+  const page = data.page ?? data.pageLanguageFallback;
+  const { body, frontmatter, fields } = page ?? {};
   const { title } = frontmatter ?? {};
 
   return (
     <Layout>
       <Metatags title={title ?? ''} />
       <Divisor />
-      <Article title={title ?? ''} bodyContent={body} />
+      <Article language={fields?.language} title={title ?? ''} mdxContent={body} showArticleDetails={false} />
     </Layout>
   );
 }
 
 export const pageQuery = graphql`
-  query PageTemplate($slug: String!) {
-    page: mdx(fields: { slug: { eq: $slug } }) {
-      body
-      frontmatter {
-        title
+  fragment pageFields on Mdx {
+    body
+    fields {
+      language
+    }
+    frontmatter {
+      title
+    }
+  }
+  query PageTemplate($slug: String!, $language: String!, $defaultLanguage: String!) {
+    locales: allLocale(filter: { language: { eq: $language } }) {
+      edges {
+        node {
+          ns
+          data
+          language
+        }
       }
+    }
+    page: mdx(fields: { slug: { eq: $slug }, language: { eq: $language } }) {
+      ...pageFields
+    }
+    pageLanguageFallback: mdx(fields: { slug: { eq: $slug }, language: { eq: $defaultLanguage } }) {
+      ...articleFields
     }
   }
 `;

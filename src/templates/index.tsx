@@ -20,7 +20,7 @@ export default function IndexTemplate({ data }: IndexTemplateProps): React.React
   return (
     <Layout>
       <Metatags />
-      <AboutMe bodyContent={aboutMe?.body || ''} />
+      <AboutMe mdxContent={aboutMe?.body || ''} />
       <Divisor />
       <Search />
       {articles.edges.map(({ node: { frontmatter, fields, excerpt } }, index: number) => (
@@ -31,7 +31,7 @@ export default function IndexTemplate({ data }: IndexTemplateProps): React.React
           url={fields?.slug}
           tags={frontmatter?.tags as string[]}
           readingTime={fields?.readingTime?.minutes ?? 0}
-          language={frontmatter?.language}
+          language={fields?.language}
           description={frontmatter?.description || excerpt}
         />
       ))}
@@ -40,8 +40,17 @@ export default function IndexTemplate({ data }: IndexTemplateProps): React.React
 }
 
 export const pageQuery = graphql`
-  query IndexTemplate {
-    aboutMe: mdx(fields: { slug: { eq: "/" } }) {
+  query IndexTemplate($language: String!) {
+    locales: allLocale(filter: { language: { eq: $language } }) {
+      edges {
+        node {
+          ns
+          data
+          language
+        }
+      }
+    }
+    aboutMe: mdx(fields: { slug: { eq: "/home/" }, language: { eq: $language } }) {
       body
     }
     articles: allMdx(
@@ -56,13 +65,13 @@ export const pageQuery = graphql`
             readingTime {
               minutes
             }
+            language
           }
           frontmatter {
             date
             title
             description
             tags
-            language
           }
         }
       }

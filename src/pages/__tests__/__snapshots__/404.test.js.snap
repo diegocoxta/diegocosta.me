@@ -1,7 +1,34 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<NotFoundPage> should render properly 1`] = `
+exports[`<NotFoundPage> renders properly 1`] = `
 .c0 {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 40px 0 0 0;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+}
+
+.c2 {
+  margin: 0 5px;
+  text-transform: uppercase;
+  color: #0C0D0E;
+  font-weight: 700;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c3 {
   background: linear-gradient(90deg,#FFFFFF 20px,transparent 1%) center, linear-gradient(#FFFFFF 20px,transparent 1%) center, #0C0D0E;
   background-size: 22px 22px;
   height: 120px;
@@ -9,82 +36,105 @@ exports[`<NotFoundPage> should render properly 1`] = `
   width: 100%;
 }
 
-.c1 {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
-
-.c2 {
+.c4 {
   margin: 0 0 60px 0;
   font-weight: 400;
   color: #0C0D0E;
 }
 
-.c3 {
+.c5 {
   margin: 20px 0 0 0;
 }
 
-.c4 {
+.c6 {
   font-size: 36px;
   margin: 0;
 }
 
-.c5 {
-  color: #737373;
-  font-size: 18px;
-  margin: 5px 0;
-}
-
-.c6 {
+.c7 {
   line-height: 1.5;
 }
 
-.c6 a {
+.c7 a {
   color: #626D4A;
   -webkit-text-decoration: none;
   text-decoration: none;
   border-bottom: 1px solid #FFFFFF;
 }
 
-.c6 a:hover,
-.c6 a:focus {
+.c7 a:hover,
+.c7 a:focus {
   border-bottom: 1px solid #626D4A;
   outline: none;
 }
 
-.c6 blockquote {
+.c7 blockquote {
   border-left: 5px solid #626D4A;
   padding-left: 20px;
 }
 
-.c6 .gatsby-highlight {
+.c7 .gatsby-highlight {
   padding: 10px 0;
 }
 
-.c6 pre[class*='language-'],
-.c6 code[class*='language-'],
-.c6 .gatsby-highlight {
+.c7 pre[class*='language-'],
+.c7 code[class*='language-'],
+.c7 .gatsby-highlight {
   background-color: #FFFFFF;
   font-family: monospace;
   white-space: pre-wrap;
 }
 
-.c6 .line-numbers-rows,
-.c6 .line-numbers-rows span::before {
+.c7 .line-numbers-rows,
+.c7 .line-numbers-rows span::before {
   border: 0.5px solid #FFFFFF;
 }
 
-.c6 img {
+.c7 img {
   box-shadow: none !important;
 }
 
-.c6 h3 {
+.c7 h3 {
   font-size: 28px;
 }
 
 <body>
   <div>
+    <section
+      class="c0"
+    >
+      <main>
+        <div
+          class="c1"
+        >
+          <a
+            aria-label="languageswitcher.toggle languages.pt"
+            class="c2"
+            href="/about-us"
+            language="pt"
+          >
+            /
+            pt
+          </a>
+          <a
+            aria-label="languageswitcher.toggle languages.en"
+            class="c2"
+            href="/about-us"
+            language="en"
+          >
+            en
+          </a>
+          <a
+            aria-label="languageswitcher.toggle languages.es"
+            class="c2"
+            href="/about-us"
+            language="es"
+          >
+            es
+          </a>
+        </div>
+      </main>
+    </section>
     <p>
       Header
     </p>
@@ -93,34 +143,29 @@ exports[`<NotFoundPage> should render properly 1`] = `
         Metatags
       </p>
       <div
-        class="c0"
+        class="c3"
       />
       <section
-        class="c1"
+        class="c0"
       >
         <main>
           <article
-            class="c2"
+            class="c4"
             data-testid="article-item"
           >
             <header
-              class="c3"
+              class="c5"
             >
               <h2
-                class="c4"
+                class="c6"
               >
-                Não encontrado
+                404page.title
               </h2>
-              <p
-                class="c5"
-              >
-                 
-              </p>
             </header>
             <section
-              class="c6"
+              class="c7"
             >
-              Página não encontrada
+              404page.message
             </section>
           </article>
         </main>

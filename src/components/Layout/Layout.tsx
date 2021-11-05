@@ -3,7 +3,9 @@ import { createGlobalStyle, ThemeContext } from 'styled-components';
 import { MDXProvider } from '@mdx-js/react';
 
 import Header from '~/components/Header';
+import LanguageSwitcher from '~/components/LanguageSwitcher';
 import Footer from '~/components/Footer';
+
 import Talk from '~/components/Talk';
 import Divisor from '~/components/Divisor';
 
@@ -39,6 +41,7 @@ export default function Layout(props: LayoutProps): React.ReactElement {
   return (
     <ThemeContext.Provider value={{ ...themeMode, theme, themeToggler }}>
       <GlobalStyle />
+      <LanguageSwitcher />
       <Header />
       <MDXProvider components={{ ...mdxComponents }}>
         <main>{props.children}</main>

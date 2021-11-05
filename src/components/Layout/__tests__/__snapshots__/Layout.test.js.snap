@@ -1,8 +1,70 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Layout /> should render properly 1`] = `
+.c0 {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 40px 0 0 0;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+}
+
+.c2 {
+  margin: 0 5px;
+  text-transform: uppercase;
+  color: #0C0D0E;
+  font-weight: 700;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
 <body>
   <div>
+    <section
+      class="c0"
+    >
+      <main>
+        <div
+          class="c1"
+        >
+          <a
+            aria-label="languageswitcher.toggle languages.pt"
+            class="c2"
+            href="/about-us"
+            language="pt"
+          >
+            /
+            pt
+          </a>
+          <a
+            aria-label="languageswitcher.toggle languages.en"
+            class="c2"
+            href="/about-us"
+            language="en"
+          >
+            en
+          </a>
+          <a
+            aria-label="languageswitcher.toggle languages.es"
+            class="c2"
+            href="/about-us"
+            language="es"
+          >
+            es
+          </a>
+        </div>
+      </main>
+    </section>
     <p>
       Header
     </p>
