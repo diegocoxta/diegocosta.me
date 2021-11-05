@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
 
-import Container from '~/components/Container';
+import FixedContainer from '~/components/FixedContainer';
 
 const Content = styled.div`
   @media (min-width: 760px) {
@@ -71,10 +71,10 @@ interface AboutMeProps {
 
 export default function AboutMe(props: AboutMeProps): JSX.Element {
   return (
-    <Container>
+    <FixedContainer>
       <Content>
         <MDXRenderer>{props.bodyContent}</MDXRenderer>
       </Content>
-    </Container>
+    </FixedContainer>
   );
 }

@@ -6,7 +6,7 @@ import { MDXRenderer } from 'gatsby-plugin-mdx';
 
 import translations from './translations';
 
-import Container from '~/components/Container';
+import FixedContainer from '~/components/FixedContainer';
 
 const Content = styled.article`
   margin: 0 0 60px 0;
@@ -162,7 +162,7 @@ export default function Article(props: ArticleProps): React.ReactElement {
   );
 
   return (
-    <Container>
+    <FixedContainer>
       <Content data-testid="article-item">
         <Header>
           <Title>
@@ -186,6 +186,6 @@ export default function Article(props: ArticleProps): React.ReactElement {
           </Body>
         )}
       </Content>
-    </Container>
+    </FixedContainer>
   );
 }

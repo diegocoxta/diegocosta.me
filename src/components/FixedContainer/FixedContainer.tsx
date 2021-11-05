@@ -7,11 +7,11 @@ const Wrapper = styled.section`
   padding: 0 20px;
 `;
 
-export interface ContainerProps {
+export interface FixedContainerProps {
   children: React.ReactNode;
 }
 
-export default function Container(props: ContainerProps): React.ReactElement {
+export default function FixedContainer(props: FixedContainerProps): React.ReactElement {
   return (
     <Wrapper>
       <main>{props.children}</main>

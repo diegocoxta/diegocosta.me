@@ -16,11 +16,6 @@ const Image = styled.img`
   margin-right: 20px;
   border: 1px solid ${({ theme }) => theme.textColor};
   box-sizing: border-box;
-
-  @media (min-width: 760px) {
-    width: 105px;
-    height: 105px;
-  }
 `;
 
 const Details = styled.div`
@@ -48,8 +43,8 @@ const Urls = styled.div`
 
 const UrlsLink = styled.a`
   display: flex;
-  margin-right: 10px;
   padding: 5px 0;
+  margin: 0 20px 0 0;
 
   @media (min-width: 760px) {
     padding: 0;

@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import Container from '~/components/Container';
+import FixedContainer from '~/components/FixedContainer';
 
 const Content = styled.footer`
   margin-bottom: 50px;
@@ -44,13 +44,13 @@ interface FooterProps {
 
 export default function Footer(props: FooterProps): React.ReactElement {
   return (
-    <Container>
+    <FixedContainer>
       <Content>
         <Label>CC-BY {props.year}, built with </Label>
         <Link href="https://gatsbyjs.org">gatsby</Link>
         <Label> • </Label>
         {props.repository && <Link href={props.repository}>source code</Link>}
       </Content>
-    </Container>
+    </FixedContainer>
   );
 }

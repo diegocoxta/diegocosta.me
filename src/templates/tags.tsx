@@ -1,7 +1,7 @@
 import React from 'react';
 import { graphql, PageRendererProps } from 'gatsby';
 
-import Page from '~/components/Page';
+import Layout from '~/components/Layout';
 import Divisor from '~/components/Divisor';
 import Metatags from '~/components/Metatags';
 import Article from '~/components/Article';
@@ -17,7 +17,7 @@ interface TagsTemplateProps extends PageRendererProps {
 export default function Tags({ data, pageContext }: TagsTemplateProps): React.ReactElement {
   const { articles } = data;
   return (
-    <Page>
+    <Layout>
       <Metatags title={`Publicações sobre ${pageContext.tag}`} />
       <Divisor />
       <TagHeader name={pageContext.tag ?? ''} count={articles.totalCount} />
@@ -33,7 +33,7 @@ export default function Tags({ data, pageContext }: TagsTemplateProps): React.Re
           description={frontmatter?.description || excerpt}
         />
       ))}
-    </Page>
+    </Layout>
   );
 }
 
