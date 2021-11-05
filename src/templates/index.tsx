@@ -1,7 +1,7 @@
 import React from 'react';
 import { graphql, PageRendererProps } from 'gatsby';
 
-import Page from '~/components/Page';
+import Layout from '~/components/Layout';
 import Metatags from '~/components/Metatags';
 import AboutMe from '~/components/AboutMe';
 import Search from '~/components/Search';
@@ -18,7 +18,7 @@ export default function IndexTemplate({ data }: IndexTemplateProps): React.React
   const { articles, aboutMe } = data;
 
   return (
-    <Page>
+    <Layout>
       <Metatags />
       <AboutMe bodyContent={aboutMe?.body || ''} />
       <Divisor />
@@ -35,7 +35,7 @@ export default function IndexTemplate({ data }: IndexTemplateProps): React.React
           description={frontmatter?.description || excerpt}
         />
       ))}
-    </Page>
+    </Layout>
   );
 }
 

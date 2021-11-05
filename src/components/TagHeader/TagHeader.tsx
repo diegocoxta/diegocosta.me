@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import Container from '~/components/Container';
+import FixedContainer from '~/components/FixedContainer';
 
 const Content = styled.h1`
   font-size: 28px;
@@ -18,10 +18,10 @@ interface TagHeaderProps {
 
 export default function TagHeader(props: TagHeaderProps): React.ReactElement {
   return (
-    <Container>
+    <FixedContainer>
       <Content>
         {props.name} ({props.count})
       </Content>
-    </Container>
+    </FixedContainer>
   );
 }

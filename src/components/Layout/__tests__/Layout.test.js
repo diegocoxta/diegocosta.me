@@ -1,14 +1,14 @@
 import React from 'react';
 import { render } from '@testing-library/react';
 
-import Page from '../Page';
+import Layout from '../Layout';
 
 jest.mock('../../Header', () => () => <p>Header</p>);
 jest.mock('../../Footer', () => () => <p>Footer</p>);
 
-describe('<Page />', () => {
+describe('<Layout />', () => {
   it('should render properly', () => {
-    const { baseElement, queryByText } = render(<Page>John Doe</Page>);
+    const { baseElement, queryByText } = render(<Layout>John Doe</Layout>);
     expect(queryByText('John Doe')).toBeTruthy();
     expect(baseElement).toMatchSnapshot();
   });

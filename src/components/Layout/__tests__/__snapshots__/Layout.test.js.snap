@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<Page /> should render properly 1`] = `
+exports[`<Layout /> should render properly 1`] = `
 <body>
   <div>
     <p>

@@ -5,7 +5,8 @@ exports[`<Divisor /> should render properly 1`] = `
   background: linear-gradient(90deg,20px,transparent 1%) center, linear-gradient( 20px,transparent 1%) center,;
   background-size: 22px 22px;
   height: 120px;
-  margin-top: 40px;
+  margin: 40px 0;
+  width: 100%;
 }
 
 <body>

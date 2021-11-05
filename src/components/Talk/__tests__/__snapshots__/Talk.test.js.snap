@@ -42,13 +42,6 @@ exports[`<Talk /> should not render the description 1`] = `
   }
 }
 
-@media (min-width:760px) {
-  .c1 {
-    width: 105px;
-    height: 105px;
-  }
-}
-
 <div>
     <div
       class="c0"
@@ -119,13 +112,6 @@ exports[`<Talk /> should not render the url list 1`] = `
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
-  }
-}
-
-@media (min-width:760px) {
-  .c1 {
-    width: 105px;
-    height: 105px;
   }
 }
 
@@ -203,8 +189,8 @@ exports[`<Talk /> should render properly 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  margin-right: 10px;
   padding: 5px 0;
+  margin: 0 20px 0 0;
 }
 
 .c7 {
@@ -229,13 +215,6 @@ exports[`<Talk /> should render properly 1`] = `
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
-  }
-}
-
-@media (min-width:760px) {
-  .c1 {
-    width: 105px;
-    height: 105px;
   }
 }
 
@@ -389,8 +368,8 @@ exports[`<Talk /> should render the correctly icons 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  margin-right: 10px;
   padding: 5px 0;
+  margin: 0 20px 0 0;
 }
 
 .c7 {
@@ -415,13 +394,6 @@ exports[`<Talk /> should render the correctly icons 1`] = `
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
-  }
-}
-
-@media (min-width:760px) {
-  .c1 {
-    width: 105px;
-    height: 105px;
   }
 }
 

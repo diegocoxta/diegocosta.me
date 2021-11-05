@@ -1,6 +1,14 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<IndexTemplate> should render properly 1`] = `
+.c2 {
+  background: linear-gradient(90deg,#FFFFFF 20px,transparent 1%) center, linear-gradient(#FFFFFF 20px,transparent 1%) center, #0C0D0E;
+  background-size: 22px 22px;
+  height: 120px;
+  margin: 40px 0;
+  width: 100%;
+}
+
 .c0 {
   max-width: 800px;
   margin: 0 auto;
@@ -140,13 +148,6 @@ exports[`<IndexTemplate> should render properly 1`] = `
 
 .c9 h3 {
   font-size: 28px;
-}
-
-.c2 {
-  background: linear-gradient(90deg,#FFFFFF 20px,transparent 1%) center, linear-gradient(#FFFFFF 20px,transparent 1%) center, #0C0D0E;
-  background-size: 22px 22px;
-  height: 120px;
-  margin-top: 40px;
 }
 
 @media (min-width:760px) {

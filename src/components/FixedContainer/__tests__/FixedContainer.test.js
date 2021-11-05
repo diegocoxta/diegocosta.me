@@ -1,11 +1,11 @@
 import React from 'react';
 import { render } from '@testing-library/react';
 
-import Container from '../Container';
+import FixedContainer from '../FixedContainer';
 
-describe('<Container />', () => {
+describe('<FixedContainer />', () => {
   it('should render properly', () => {
-    const { baseElement, queryByText } = render(<Container>John Doe</Container>);
+    const { baseElement, queryByText } = render(<FixedContainer>John Doe</FixedContainer>);
     expect(queryByText('John Doe')).toBeTruthy();
     expect(baseElement).toMatchSnapshot();
   });

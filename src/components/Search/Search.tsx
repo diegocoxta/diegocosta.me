@@ -4,7 +4,7 @@ import { Link } from 'gatsby';
 import { UseComboboxReturnValue } from 'downshift';
 import Fuse from 'fuse.js';
 
-import Container from '~/components/Container';
+import FixedContainer from '~/components/FixedContainer';
 
 import { SearchComponentQuery } from '~/../graphql-types';
 
@@ -93,7 +93,7 @@ interface SearchProps {
 
 export default function Search({ articles, combobox }: SearchProps): React.ReactElement {
   return (
-    <Container>
+    <FixedContainer>
       <Content {...combobox.getComboboxProps()}>
         <Input type="text" placeholder="Busque por publicações..." autoComplete="off" {...combobox.getInputProps()} />
         <Label {...combobox.getLabelProps()}>Busque por publicações...</Label>
@@ -117,6 +117,6 @@ export default function Search({ articles, combobox }: SearchProps): React.React
             ))}
         </Results>
       </Content>
-    </Container>
+    </FixedContainer>
   );
 }
