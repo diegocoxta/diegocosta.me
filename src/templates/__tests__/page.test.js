@@ -8,7 +8,7 @@ jest.mock('../../components/Metatags', () => () => <p>Metatags</p>);
 import PageTemplate from '../page';
 
 describe('<PageTemplate>', () => {
-  it('should render properly', () => {
+  it('renders properly', () => {
     const props = {
       data: {
         page: {

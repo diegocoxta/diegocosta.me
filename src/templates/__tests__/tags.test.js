@@ -8,7 +8,7 @@ jest.mock('../../components/Metatags', () => () => <p>Metatags</p>);
 import TagsTemplate from '../tags';
 
 describe('<TagsTemplate>', () => {
-  it('should render properly', () => {
+  it('renders properly', () => {
     const data = {
       articles: {
         totalCount: 2,

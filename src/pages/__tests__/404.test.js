@@ -8,7 +8,7 @@ jest.mock('../../components/Metatags', () => () => <p>Metatags</p>);
 import NotFoundPage from '../404';
 
 describe('<NotFoundPage>', () => {
-  it('should render properly', () => {
+  it('renders properly', () => {
     const { baseElement } = render(<NotFoundPage />);
     expect(baseElement).toMatchSnapshot();
   });

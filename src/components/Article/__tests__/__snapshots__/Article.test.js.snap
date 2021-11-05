@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<Article /> should not render the article details 1`] = `
+exports[`<Article /> does not render the article details 1`] = `
 <body>
   .c0 {
   max-width: 800px;
@@ -66,7 +66,7 @@ exports[`<Article /> should not render the article details 1`] = `
 </body>
 `;
 
-exports[`<Article /> should not render the article language name 1`] = `
+exports[`<Article /> does not render the article language name 1`] = `
 <body>
   .c0 {
   max-width: 800px;
@@ -125,7 +125,7 @@ exports[`<Article /> should not render the article language name 1`] = `
 </body>
 `;
 
-exports[`<Article /> should not render the link 1`] = `
+exports[`<Article /> does not render the link 1`] = `
 <body>
   .c0 {
   max-width: 800px;
@@ -186,7 +186,7 @@ exports[`<Article /> should not render the link 1`] = `
 </body>
 `;
 
-exports[`<Article /> should not render the reading time 1`] = `
+exports[`<Article /> does not render the reading time 1`] = `
 <body>
   .c0 {
   max-width: 800px;
@@ -246,7 +246,7 @@ exports[`<Article /> should not render the reading time 1`] = `
 </body>
 `;
 
-exports[`<Article /> should not render the tags 1`] = `
+exports[`<Article /> does not render the tags 1`] = `
 <body>
   .c0 {
   max-width: 800px;
@@ -326,7 +326,7 @@ exports[`<Article /> should not render the tags 1`] = `
 </body>
 `;
 
-exports[`<Article /> should render properly 1`] = `
+exports[`<Article /> renders properly 1`] = `
 .c0 {
   max-width: 800px;
   margin: 0 auto;
@@ -468,7 +468,7 @@ exports[`<Article /> should render properly 1`] = `
 </body>
 `;
 
-exports[`<Article /> should render properly the body content 1`] = `
+exports[`<Article /> renders properly the body content 1`] = `
 <body>
   .c0 {
   max-width: 800px;
@@ -598,7 +598,7 @@ exports[`<Article /> should render properly the body content 1`] = `
 </body>
 `;
 
-exports[`<Article /> should render properly the description 1`] = `
+exports[`<Article /> renders properly the description 1`] = `
 <body>
   .c0 {
   max-width: 800px;
@@ -728,7 +728,7 @@ exports[`<Article /> should render properly the description 1`] = `
 </body>
 `;
 
-exports[`<Article /> should render the article details 1`] = `
+exports[`<Article /> renders the article details 1`] = `
 <body>
   .c0 {
   max-width: 800px;

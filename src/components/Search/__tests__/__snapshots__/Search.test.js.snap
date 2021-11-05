@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<Search /> should render properly 1`] = `
+exports[`<Search /> renders properly 1`] = `
 .c0 {
   max-width: 800px;
   margin: 0 auto;
@@ -199,7 +199,7 @@ exports[`<Search /> should render properly 1`] = `
 </body>
 `;
 
-exports[`<Search /> should render properly with results closed 1`] = `
+exports[`<Search /> renders properly with results closed 1`] = `
 <body>
   .c0 {
   max-width: 800px;

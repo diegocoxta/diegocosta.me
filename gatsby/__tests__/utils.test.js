@@ -1,7 +1,7 @@
 import { getNodeLangCode, getSlugWithoutFile, siteMetadata } from '../utils';
 
 describe('getNodeLangCode', () => {
-  it('should return the correct language code', () => {
+  it('returns the correct language code', () => {
     expect(getNodeLangCode('/diegocosta.me/content/articles/index.es.md')).toBe('es');
     expect(getNodeLangCode('/diegocosta.me/content/articles/index.pt.mdx')).toBe('pt');
     expect(getNodeLangCode('/diegocosta.me/content/articles/index.pt.md')).toBe('pt');
@@ -16,7 +16,7 @@ describe('getNodeLangCode', () => {
 });
 
 describe('getSlugWithoutFile', () => {
-  it('should return slug without filename', () => {
+  it('returns slug without filename', () => {
     expect(getSlugWithoutFile('/atualizando-programas-cask/index.en/')).toBe('/atualizando-programas-cask/');
     expect(getSlugWithoutFile('/atualizando-programas-cask/index.en.md/')).toBe('/atualizando-programas-cask/');
     expect(getSlugWithoutFile('/atualizando-programas-cask/index.en.md')).toBe('/atualizando-programas-cask/');

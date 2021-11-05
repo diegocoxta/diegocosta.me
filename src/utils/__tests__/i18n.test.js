@@ -4,7 +4,7 @@ import { render } from '@testing-library/react';
 import { usei18n, Link } from '../i18n';
 
 describe('usei18n', () => {
-  it('should return the correct values', () => {
+  it('returns the correct values', () => {
     const i18n = usei18n();
 
     expect(i18n.getTranslationFor('test.key')).toBe('test.key');
@@ -15,7 +15,7 @@ describe('usei18n', () => {
 });
 
 describe('<Link />', () => {
-  it('should render properly', () => {
+  it('renders properly', () => {
     const { baseElement, getByText } = render(
       <Link to="/about-us" language="pt">
         Link to page

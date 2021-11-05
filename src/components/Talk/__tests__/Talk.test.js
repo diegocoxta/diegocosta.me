@@ -4,7 +4,7 @@ import { render } from '@testing-library/react';
 import Talk from '../Talk';
 
 describe('<Talk />', () => {
-  it('should render properly', () => {
+  it('renders properly', () => {
     const { baseElement, getByText, getAllByTestId, getByTestId } = render(
       <Talk
         title="Workshop React: da web ao app!"
@@ -25,7 +25,7 @@ describe('<Talk />', () => {
     expect(baseElement).toMatchSnapshot();
   });
 
-  it('should not render the url list', () => {
+  it('does not render the url list', () => {
     const { baseElement, queryByTestId } = render(
       <Talk
         title="Workshop React: da web ao app!"
@@ -38,7 +38,7 @@ describe('<Talk />', () => {
     expect(baseElement).toMatchSnapshot();
   });
 
-  it('should not render the description', () => {
+  it('does not render the description', () => {
     const { baseElement, queryByTestId } = render(
       <Talk
         title="Workshop React: da web ao app!"
@@ -50,7 +50,7 @@ describe('<Talk />', () => {
     expect(baseElement).toMatchSnapshot();
   });
 
-  it('should render the correctly icons', () => {
+  it('renders the correctly icons', () => {
     const { baseElement, queryByTestId, getAllByTestId } = render(
       <Talk
         title="Workshop React: da web ao app!"

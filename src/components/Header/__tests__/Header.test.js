@@ -6,14 +6,14 @@ import Header from '../Header';
 jest.mock('../../ThemeSwitcher', () => () => <p>ThemeSwitcher</p>);
 
 describe('<Header />', () => {
-  it('should render properly', () => {
+  it('renders properly', () => {
     const { baseElement, getByTestId, getByText } = render(<Header author="John Doe" />);
     expect(getByTestId('header-lastname')).toBeTruthy();
     expect(getByText('John')).toBeTruthy();
     expect(baseElement).toMatchSnapshot();
   });
 
-  it('should not render the last name', () => {
+  it('does not render the last name', () => {
     const { baseElement, queryByTestId } = render(<Header author="John" />);
     expect(queryByTestId('header-lastname')).toBeFalsy();
     expect(baseElement).toMatchSnapshot();

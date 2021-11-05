@@ -4,7 +4,7 @@ import { render } from '@testing-library/react';
 import Article from '../Article';
 
 describe('<Article />', () => {
-  it('should render properly', () => {
+  it('renders properly', () => {
     const { baseElement, getByTestId, getByText, getAllByTestId } = render(
       <Article
         title="Awesome Article"
@@ -25,7 +25,7 @@ describe('<Article />', () => {
     expect(baseElement).toMatchSnapshot();
   });
 
-  it('should not render the tags', () => {
+  it('does not render the tags', () => {
     const { baseElement, queryByTestId, queryAllByTestId } = render(
       <Article
         title="Awesome Article"
@@ -41,7 +41,7 @@ describe('<Article />', () => {
     expect(baseElement).toMatchSnapshot();
   });
 
-  it('should not render the link', () => {
+  it('does not render the link', () => {
     const { baseElement, queryByTestId } = render(
       <Article title="Awesome Article" readingTime={5} language="en" date="2020-01-18T22:12:03.284Z" />
     );
@@ -50,7 +50,7 @@ describe('<Article />', () => {
     expect(baseElement).toMatchSnapshot();
   });
 
-  it('should not render the reading time', () => {
+  it('does not render the reading time', () => {
     const { baseElement, getByText, queryByText } = render(
       <Article title="Awesome Article" language="en" date="2020-01-18T22:12:03.284Z" />
     );
@@ -62,7 +62,7 @@ describe('<Article />', () => {
     expect(baseElement).toMatchSnapshot();
   });
 
-  it('should not render the article language name', () => {
+  it('does not render the article language name', () => {
     const { baseElement, queryByText } = render(<Article title="Awesome Article" language="en" />);
 
     expect(
@@ -71,7 +71,7 @@ describe('<Article />', () => {
     expect(baseElement).toMatchSnapshot();
   });
 
-  it('should render the article details', () => {
+  it('renders the article details', () => {
     const { baseElement, getByText, getByTestId, getAllByTestId } = render(
       <Article
         title="Awesome Article"
@@ -92,7 +92,7 @@ describe('<Article />', () => {
     expect(baseElement).toMatchSnapshot();
   });
 
-  it('should not render the article details', () => {
+  it('does not render the article details', () => {
     const { baseElement, queryByText, queryByTestId, queryAllByTestId } = render(
       <Article
         title="Awesome Article"
@@ -114,7 +114,7 @@ describe('<Article />', () => {
     expect(baseElement).toMatchSnapshot();
   });
 
-  it('should render properly the body content', () => {
+  it('renders properly the body content', () => {
     const { baseElement, getByText } = render(
       <Article
         title="Awesome Article"
@@ -130,7 +130,7 @@ describe('<Article />', () => {
     expect(baseElement).toMatchSnapshot();
   });
 
-  it('should render properly the description', () => {
+  it('renders properly the description', () => {
     const { baseElement, getByText } = render(
       <Article
         title="Awesome Article"

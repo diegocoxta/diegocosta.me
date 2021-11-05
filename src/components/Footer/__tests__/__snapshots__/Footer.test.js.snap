@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<Footer /> should render properly 1`] = `
+exports[`<Footer /> renders properly 1`] = `
 .c0 {
   max-width: 800px;
   margin: 0 auto;
@@ -75,7 +75,7 @@ exports[`<Footer /> should render properly 1`] = `
 </body>
 `;
 
-exports[`<Footer /> should render the repository url if passed 1`] = `
+exports[`<Footer /> renders the repository url if defined 1`] = `
 <body>
   .c0 {
   max-width: 800px;
