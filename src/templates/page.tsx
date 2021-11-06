@@ -6,14 +6,17 @@ import Divisor from '~/components/Divisor';
 import Metatags from '~/components/Metatags';
 import Article from '~/components/Article';
 
-import { PageTemplateQuery } from '~/../graphql-types';
+import { PageTemplateQuery, PageTemplateQueryVariables } from '~/../graphql-types';
+import TranslationMissingAlert from '~/components/TranslationMissingAlert';
 
 interface PageTemplateProps extends PageRendererProps {
   data: PageTemplateQuery;
+  pageContext: PageTemplateQueryVariables;
 }
 
-export default function PageTemplate({ data }: PageTemplateProps): React.ReactElement {
-  const page = data.page ?? data.pageLanguageFallback;
+export default function PageTemplate(props: PageTemplateProps): React.ReactElement {
+  const { data, pageContext } = props;
+  const { page, translations } = data;
   const { body, frontmatter, fields } = page ?? {};
   const { title } = frontmatter ?? {};
 
@@ -21,22 +24,18 @@ export default function PageTemplate({ data }: PageTemplateProps): React.ReactEl
     <Layout>
       <Metatags title={title ?? ''} />
       <Divisor />
+      <TranslationMissingAlert
+        slug={pageContext.slug}
+        pageLanguage={pageContext.language}
+        translations={translations?.translations}
+      />
       <Article language={fields?.language} title={title ?? ''} mdxContent={body} showArticleDetails={false} />
     </Layout>
   );
 }
 
 export const pageQuery = graphql`
-  fragment pageFields on Mdx {
-    body
-    fields {
-      language
-    }
-    frontmatter {
-      title
-    }
-  }
-  query PageTemplate($slug: String!, $language: String!, $defaultLanguage: String!) {
+  query PageTemplate($slug: String!, $language: String!) {
     locales: allLocale(filter: { language: { eq: $language } }) {
       edges {
         node {
@@ -47,10 +46,16 @@ export const pageQuery = graphql`
       }
     }
     page: mdx(fields: { slug: { eq: $slug }, language: { eq: $language } }) {
-      ...pageFields
+      body
+      fields {
+        language
+      }
+      frontmatter {
+        title
+      }
     }
-    pageLanguageFallback: mdx(fields: { slug: { eq: $slug }, language: { eq: $defaultLanguage } }) {
-      ...articleFields
+    translations: mdx(fields: { slug: { eq: $slug } }) {
+      translations
     }
   }
 `;

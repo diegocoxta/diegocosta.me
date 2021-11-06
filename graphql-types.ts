@@ -346,7 +346,6 @@ export type MdxFrontmatter = {
   date?: Maybe<Scalars['Date']>;
   description?: Maybe<Scalars['String']>;
   tags?: Maybe<Array<Maybe<Scalars['String']>>>;
-  language?: Maybe<Scalars['String']>;
 };
 
 
@@ -394,6 +393,7 @@ export type Mdx = Node & {
   parent?: Maybe<Node>;
   children: Array<Node>;
   internal: Internal;
+  translations?: Maybe<Array<Maybe<Scalars['String']>>>;
 };
 
 
@@ -1064,7 +1064,6 @@ export type MdxFrontmatterFilterInput = {
   date?: Maybe<DateQueryOperatorInput>;
   description?: Maybe<StringQueryOperatorInput>;
   tags?: Maybe<StringQueryOperatorInput>;
-  language?: Maybe<StringQueryOperatorInput>;
 };
 
 export type MdxHeadingMdxFilterListInput = {
@@ -1305,7 +1304,6 @@ export type FileFieldsEnum =
   | 'childrenMdx___frontmatter___date'
   | 'childrenMdx___frontmatter___description'
   | 'childrenMdx___frontmatter___tags'
-  | 'childrenMdx___frontmatter___language'
   | 'childrenMdx___slug'
   | 'childrenMdx___body'
   | 'childrenMdx___excerpt'
@@ -1370,7 +1368,6 @@ export type FileFieldsEnum =
   | 'childMdx___frontmatter___date'
   | 'childMdx___frontmatter___description'
   | 'childMdx___frontmatter___tags'
-  | 'childMdx___frontmatter___language'
   | 'childMdx___slug'
   | 'childMdx___body'
   | 'childMdx___excerpt'
@@ -3197,7 +3194,6 @@ export type MdxFieldsEnum =
   | 'frontmatter___date'
   | 'frontmatter___description'
   | 'frontmatter___tags'
-  | 'frontmatter___language'
   | 'slug'
   | 'body'
   | 'excerpt'
@@ -3772,16 +3768,13 @@ export type PageNotFoundQueryQueryVariables = Exact<{
 
 export type PageNotFoundQueryQuery = { locales: { edges: Array<{ node: { ns?: string | null | undefined, data?: string | null | undefined, language?: string | null | undefined } }> } };
 
-export type ArticleFieldsFragment = { body: string, excerpt: string, fields?: { language?: string | null | undefined, readingTime?: { minutes?: number | null | undefined } | null | undefined } | null | undefined, frontmatter?: { title: string, date?: any | null | undefined, description?: string | null | undefined, tags?: Array<string | null | undefined> | null | undefined } | null | undefined };
-
 export type ArticleTemplateQueryVariables = Exact<{
   slug: Scalars['String'];
   language: Scalars['String'];
-  defaultLanguage: Scalars['String'];
 }>;
 
 
-export type ArticleTemplateQuery = { locales: { edges: Array<{ node: { ns?: string | null | undefined, data?: string | null | undefined, language?: string | null | undefined } }> }, article?: { body: string, excerpt: string, fields?: { language?: string | null | undefined, readingTime?: { minutes?: number | null | undefined } | null | undefined } | null | undefined, frontmatter?: { title: string, date?: any | null | undefined, description?: string | null | undefined, tags?: Array<string | null | undefined> | null | undefined } | null | undefined } | null | undefined, articleLanguageFallback?: { body: string, excerpt: string, fields?: { language?: string | null | undefined, readingTime?: { minutes?: number | null | undefined } | null | undefined } | null | undefined, frontmatter?: { title: string, date?: any | null | undefined, description?: string | null | undefined, tags?: Array<string | null | undefined> | null | undefined } | null | undefined } | null | undefined };
+export type ArticleTemplateQuery = { locales: { edges: Array<{ node: { ns?: string | null | undefined, data?: string | null | undefined, language?: string | null | undefined } }> }, article?: { body: string, excerpt: string, fields?: { language?: string | null | undefined, readingTime?: { minutes?: number | null | undefined } | null | undefined } | null | undefined, frontmatter?: { title: string, date?: any | null | undefined, description?: string | null | undefined, tags?: Array<string | null | undefined> | null | undefined } | null | undefined } | null | undefined, translations?: { translations?: Array<string | null | undefined> | null | undefined } | null | undefined };
 
 export type IndexTemplateQueryVariables = Exact<{
   language: Scalars['String'];
@@ -3790,16 +3783,13 @@ export type IndexTemplateQueryVariables = Exact<{
 
 export type IndexTemplateQuery = { locales: { edges: Array<{ node: { ns?: string | null | undefined, data?: string | null | undefined, language?: string | null | undefined } }> }, aboutMe?: { body: string } | null | undefined, articles: { edges: Array<{ node: { excerpt: string, fields?: { slug?: string | null | undefined, language?: string | null | undefined, readingTime?: { minutes?: number | null | undefined } | null | undefined } | null | undefined, frontmatter?: { date?: any | null | undefined, title: string, description?: string | null | undefined, tags?: Array<string | null | undefined> | null | undefined } | null | undefined } }> } };
 
-export type PageFieldsFragment = { body: string, fields?: { language?: string | null | undefined } | null | undefined, frontmatter?: { title: string } | null | undefined };
-
 export type PageTemplateQueryVariables = Exact<{
   slug: Scalars['String'];
   language: Scalars['String'];
-  defaultLanguage: Scalars['String'];
 }>;
 
 
-export type PageTemplateQuery = { locales: { edges: Array<{ node: { ns?: string | null | undefined, data?: string | null | undefined, language?: string | null | undefined } }> }, page?: { body: string, fields?: { language?: string | null | undefined } | null | undefined, frontmatter?: { title: string } | null | undefined } | null | undefined, pageLanguageFallback?: { body: string, excerpt: string, fields?: { language?: string | null | undefined, readingTime?: { minutes?: number | null | undefined } | null | undefined } | null | undefined, frontmatter?: { title: string, date?: any | null | undefined, description?: string | null | undefined, tags?: Array<string | null | undefined> | null | undefined } | null | undefined } | null | undefined };
+export type PageTemplateQuery = { locales: { edges: Array<{ node: { ns?: string | null | undefined, data?: string | null | undefined, language?: string | null | undefined } }> }, page?: { body: string, fields?: { language?: string | null | undefined } | null | undefined, frontmatter?: { title: string } | null | undefined } | null | undefined, translations?: { translations?: Array<string | null | undefined> | null | undefined } | null | undefined };
 
 export type TagsTemplateQueryVariables = Exact<{
   tag?: Maybe<Scalars['String']>;

@@ -10,6 +10,10 @@ import ArticleTemplate from '../article';
 describe('<ArticleTemplate>', () => {
   it('renders properly', () => {
     const props = {
+      pageContext: {
+        lang: 'pt',
+        slug: '/path-to-article/',
+      },
       data: {
         article: {
           frontmatter: {

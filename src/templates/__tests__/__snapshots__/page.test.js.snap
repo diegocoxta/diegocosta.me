@@ -21,11 +21,11 @@ exports[`<PageTemplate> renders properly 1`] = `
 
 .c2 {
   margin: 0 5px;
-  text-transform: uppercase;
   color: #0C0D0E;
   font-weight: 700;
   -webkit-text-decoration: none;
   text-decoration: none;
+  font-size: 20px;
 }
 
 .c3 {
@@ -36,65 +36,65 @@ exports[`<PageTemplate> renders properly 1`] = `
   width: 100%;
 }
 
-.c5 {
+.c6 {
   margin: 0 0 60px 0;
   font-weight: 400;
   color: #0C0D0E;
 }
 
-.c6 {
+.c7 {
   margin: 20px 0 0 0;
 }
 
-.c7 {
+.c8 {
   font-size: 36px;
   margin: 0;
 }
 
-.c8 {
+.c9 {
   line-height: 1.5;
 }
 
-.c8 a {
+.c9 a {
   color: #626D4A;
   -webkit-text-decoration: none;
   text-decoration: none;
   border-bottom: 1px solid #FFFFFF;
 }
 
-.c8 a:hover,
-.c8 a:focus {
+.c9 a:hover,
+.c9 a:focus {
   border-bottom: 1px solid #626D4A;
   outline: none;
 }
 
-.c8 blockquote {
+.c9 blockquote {
   border-left: 5px solid #626D4A;
   padding-left: 20px;
 }
 
-.c8 .gatsby-highlight {
+.c9 .gatsby-highlight {
   padding: 10px 0;
 }
 
-.c8 pre[class*='language-'],
-.c8 code[class*='language-'],
-.c8 .gatsby-highlight {
+.c9 pre[class*='language-'],
+.c9 code[class*='language-'],
+.c9 .gatsby-highlight {
   background-color: #FFFFFF;
   font-family: monospace;
   white-space: pre-wrap;
 }
 
-.c8 .line-numbers-rows,
-.c8 .line-numbers-rows span::before {
+.c9 .line-numbers-rows,
+.c9 .line-numbers-rows span::before {
   border: 0.5px solid #FFFFFF;
 }
 
-.c8 img {
+.c9 img {
   box-shadow: none !important;
 }
 
-.c8 h3 {
+.c9 h3 {
   font-size: 28px;
 }
 
@@ -103,6 +103,10 @@ exports[`<PageTemplate> renders properly 1`] = `
   padding: 20px;
   color: #FFFFFF;
   margin: 20px 0;
+}
+
+.c5 {
+  margin: 5px 0;
 }
 
 <body>
@@ -156,26 +160,45 @@ exports[`<PageTemplate> renders properly 1`] = `
         class="c0"
       >
         <main>
-          <p
+          <div
             class="c4"
+            data-testid="translation-missing-alert"
           >
-            article.translationNotFound
-          </p>
+            <p
+              class="c5"
+            >
+              translationMissingAlert.title
+            </p>
+            <p
+              class="c5"
+              data-testid="translation-missing-alert-subtitle"
+            >
+              translationMissingAlert.subtitle
+               
+              .
+            </p>
+          </div>
+        </main>
+      </section>
+      <section
+        class="c0"
+      >
+        <main>
           <article
-            class="c5"
+            class="c6"
             data-testid="article-item"
           >
             <header
-              class="c6"
+              class="c7"
             >
               <h2
-                class="c7"
+                class="c8"
               >
                 Title 1
               </h2>
             </header>
             <section
-              class="c8"
+              class="c9"
             >
               Post content
             </section>

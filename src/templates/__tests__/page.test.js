@@ -10,13 +10,17 @@ import PageTemplate from '../page';
 describe('<PageTemplate>', () => {
   it('renders properly', () => {
     const props = {
+      pageContext: {
+        lang: 'pt',
+        slug: '/path-to-article/',
+      },
       data: {
         page: {
           frontmatter: {
             title: 'Title 1',
           },
           fields: {
-            slug: '/path-to-article',
+            slug: '/path-to-article/',
           },
           body: 'Post content',
         },

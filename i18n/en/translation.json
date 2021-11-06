@@ -5,7 +5,6 @@
   "article.lessThan1Minute": "Less than 1 minute",
   "article.minutes": "minutes",
   "article.ofReading": "of reading",
-  "article.translationNotFound": "Sorry, this page is not available in English.",
   "article.languagePrefix": "In",
   "404page.title": "Not Found",
   "404page.message": "Page not found",
@@ -14,5 +13,8 @@
   "search.searchForPosts": "Search for posts...",
   "themeSwitcher.toggle": "Change color scheme",
   "languageswitcher.toggle": "Change the language to",
-  "tagsTemplate.titlePrefix": "Posts about"
+  "tagsTemplate.titlePrefix": "Posts about",
+  "translationMissingAlert.title": "Sorry, this page is not available in English.",
+  "translationMissingAlert.subtitle": "But you can find it in",
+  "translationMissingAlert.separator": "and"
 }

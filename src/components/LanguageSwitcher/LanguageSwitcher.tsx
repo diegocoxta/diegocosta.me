@@ -12,10 +12,10 @@ const List = styled.div`
 
 const LanguageLink = styled(Link)`
   margin: 0 5px;
-  text-transform: uppercase;
   color: ${({ theme }) => theme.textColor};
   font-weight: 700;
   text-decoration: none;
+  font-size: 20px;
 `;
 
 export default function LanguageSwitcher() {

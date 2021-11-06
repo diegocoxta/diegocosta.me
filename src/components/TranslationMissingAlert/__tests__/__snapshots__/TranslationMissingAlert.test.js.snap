@@ -1,0 +1,143 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<TranslationMissingAlert /> does not renders because the page exists 1`] = `
+<body>
+  <div />
+</body>
+`;
+
+exports[`<TranslationMissingAlert /> renders properly with 1 languages available 1`] = `
+<body>
+  .c0 {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.c1 {
+  padding: 20px;
+  margin: 20px 0;
+}
+
+.c2 {
+  margin: 5px 0;
+}
+
+.c3 {
+  color: #ffffff;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  border-bottom: 1px dotted #ffffff;
+}
+
+<div>
+    <section
+      class="c0"
+    >
+      <main>
+        <div
+          class="c1"
+          data-testid="translation-missing-alert"
+        >
+          <p
+            class="c2"
+          >
+            translationMissingAlert.title
+          </p>
+          <p
+            class="c2"
+            data-testid="translation-missing-alert-subtitle"
+          >
+            translationMissingAlert.subtitle
+             
+            <span>
+              
+              <a
+                class="c3"
+                href="/path-to-article"
+                language="en"
+              >
+                languages.en
+              </a>
+            </span>
+            .
+          </p>
+        </div>
+      </main>
+    </section>
+  </div>
+</body>
+`;
+
+exports[`<TranslationMissingAlert /> renders properly with 2 languages available 1`] = `
+.c0 {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.c1 {
+  padding: 20px;
+  margin: 20px 0;
+}
+
+.c2 {
+  margin: 5px 0;
+}
+
+.c3 {
+  color: #ffffff;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  border-bottom: 1px dotted #ffffff;
+}
+
+<body>
+  <div>
+    <section
+      class="c0"
+    >
+      <main>
+        <div
+          class="c1"
+          data-testid="translation-missing-alert"
+        >
+          <p
+            class="c2"
+          >
+            translationMissingAlert.title
+          </p>
+          <p
+            class="c2"
+            data-testid="translation-missing-alert-subtitle"
+          >
+            translationMissingAlert.subtitle
+             
+            <span>
+              
+              <a
+                class="c3"
+                href="/path-to-article"
+                language="en"
+              >
+                languages.en
+              </a>
+            </span>
+            <span>
+               translationMissingAlert.separator 
+              <a
+                class="c3"
+                href="/path-to-article"
+                language="es"
+              >
+                languages.es
+              </a>
+            </span>
+            .
+          </p>
+        </div>
+      </main>
+    </section>
+  </div>
+</body>
+`;

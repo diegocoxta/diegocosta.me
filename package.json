@@ -87,6 +87,7 @@
     "prettier": "prettier --write .",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
+    "restart": "yarn clean && yarn start",
     "test": "jest",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",

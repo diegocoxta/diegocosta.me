@@ -114,13 +114,6 @@ export const Body = styled.section`
   }
 `;
 
-const LanguageFallbackMessage = styled.p`
-  background: ${({ theme }) => theme.accentColor};
-  padding: 20px;
-  color: ${({ theme }) => theme.backgroundColor};
-  margin: 20px 0;
-`;
-
 export interface ArticleProps {
   title: string;
   url?: string | null;
@@ -137,8 +130,6 @@ export default function Article(props: ArticleProps): React.ReactElement {
   const i18n = usei18n();
 
   const pageLanguage = i18n.getCurrentLanguage();
-  const isValidTranslation = pageLanguage === props.language;
-  const articleTranslationNotFound = i18n.getTranslationFor('article.translationNotFound');
 
   const getReadingTime = () => {
     if (!props.readingTime) {
@@ -187,9 +178,6 @@ export default function Article(props: ArticleProps): React.ReactElement {
 
   return (
     <FixedContainer>
-      {!isValidTranslation && !!props.mdxContent && (
-        <LanguageFallbackMessage>{articleTranslationNotFound}</LanguageFallbackMessage>
-      )}
       <Content data-testid="article-item">
         <Header>
           <Title>
