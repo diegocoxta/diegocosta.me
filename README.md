@@ -2,7 +2,7 @@
 
 My personal blog powered by gatsby, typescript and styled-components.
 
-## 🖥️ Tech Stack 
+## 🖥️ Tech Stack
 
 - Build with Gatsby w/ TypeScript.
 - Testing with Jest and Testing Library.
