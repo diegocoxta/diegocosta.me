@@ -7,7 +7,7 @@ jest.mock('../../Header', () => () => <p>Header</p>);
 jest.mock('../../Footer', () => () => <p>Footer</p>);
 
 describe('<Layout />', () => {
-  it('should render properly', () => {
+  it('renders properly', () => {
     const { baseElement, queryByText } = render(<Layout>John Doe</Layout>);
     expect(queryByText('John Doe')).toBeTruthy();
     expect(baseElement).toMatchSnapshot();
