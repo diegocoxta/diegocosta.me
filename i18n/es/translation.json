@@ -5,7 +5,6 @@
   "article.lessThan1Minute": "Menos de 1 minuto",
   "article.minutes": "minutos",
   "article.ofReading": "de lectura",
-  "article.translationNotFound": "Lo siento, esta página no está disponible en español.",
   "article.languagePrefix": "En",
   "404page.title": "No encontrado",
   "404page.message": "Página no encontrada",
@@ -14,5 +13,8 @@
   "search.searchForPosts": "Buscar publicaciones...",
   "themeSwitcher.toggle": "Cambiar esquema de color",
   "languageswitcher.toggle": "Cambiar el idioma a",
-  "tagsTemplate.titlePrefix": "Publicaciones sobre"
+  "tagsTemplate.titlePrefix": "Publicaciones sobre",
+  "translationMissingAlert.title": "Lo siento, esta página no está disponible en español.",
+  "translationMissingAlert.subtitle": "Pero puedes encontrarlo en",
+  "translationMissingAlert.separator": "y"
 }

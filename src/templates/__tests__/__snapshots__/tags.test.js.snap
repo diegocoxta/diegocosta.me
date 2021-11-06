@@ -21,11 +21,11 @@ exports[`<TagsTemplate> renders properly 1`] = `
 
 .c2 {
   margin: 0 5px;
-  text-transform: uppercase;
   color: #0C0D0E;
   font-weight: 700;
   -webkit-text-decoration: none;
   text-decoration: none;
+  font-size: 20px;
 }
 
 .c3 {

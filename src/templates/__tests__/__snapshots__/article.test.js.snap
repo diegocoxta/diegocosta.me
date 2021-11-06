@@ -21,11 +21,11 @@ exports[`<ArticleTemplate> renders properly 1`] = `
 
 .c2 {
   margin: 0 5px;
-  text-transform: uppercase;
   color: #0C0D0E;
   font-weight: 700;
   -webkit-text-decoration: none;
   text-decoration: none;
+  font-size: 20px;
 }
 
 .c3 {
@@ -36,22 +36,22 @@ exports[`<ArticleTemplate> renders properly 1`] = `
   width: 100%;
 }
 
-.c5 {
+.c6 {
   margin: 0 0 60px 0;
   font-weight: 400;
   color: #0C0D0E;
 }
 
-.c6 {
+.c7 {
   margin: 20px 0 0 0;
 }
 
-.c7 {
+.c8 {
   font-size: 36px;
   margin: 0;
 }
 
-.c9 {
+.c10 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -63,56 +63,56 @@ exports[`<ArticleTemplate> renders properly 1`] = `
   padding: 0;
 }
 
-.c8 {
+.c9 {
   color: #737373;
   font-size: 18px;
   margin: 5px 0;
 }
 
-.c10 {
+.c11 {
   line-height: 1.5;
 }
 
-.c10 a {
+.c11 a {
   color: #626D4A;
   -webkit-text-decoration: none;
   text-decoration: none;
   border-bottom: 1px solid #FFFFFF;
 }
 
-.c10 a:hover,
-.c10 a:focus {
+.c11 a:hover,
+.c11 a:focus {
   border-bottom: 1px solid #626D4A;
   outline: none;
 }
 
-.c10 blockquote {
+.c11 blockquote {
   border-left: 5px solid #626D4A;
   padding-left: 20px;
 }
 
-.c10 .gatsby-highlight {
+.c11 .gatsby-highlight {
   padding: 10px 0;
 }
 
-.c10 pre[class*='language-'],
-.c10 code[class*='language-'],
-.c10 .gatsby-highlight {
+.c11 pre[class*='language-'],
+.c11 code[class*='language-'],
+.c11 .gatsby-highlight {
   background-color: #FFFFFF;
   font-family: monospace;
   white-space: pre-wrap;
 }
 
-.c10 .line-numbers-rows,
-.c10 .line-numbers-rows span::before {
+.c11 .line-numbers-rows,
+.c11 .line-numbers-rows span::before {
   border: 0.5px solid #FFFFFF;
 }
 
-.c10 img {
+.c11 img {
   box-shadow: none !important;
 }
 
-.c10 h3 {
+.c11 h3 {
   font-size: 28px;
 }
 
@@ -121,6 +121,10 @@ exports[`<ArticleTemplate> renders properly 1`] = `
   padding: 20px;
   color: #FFFFFF;
   margin: 20px 0;
+}
+
+.c5 {
+  margin: 5px 0;
 }
 
 <body>
@@ -174,25 +178,44 @@ exports[`<ArticleTemplate> renders properly 1`] = `
         class="c0"
       >
         <main>
-          <p
+          <div
             class="c4"
+            data-testid="translation-missing-alert"
           >
-            article.translationNotFound
-          </p>
+            <p
+              class="c5"
+            >
+              translationMissingAlert.title
+            </p>
+            <p
+              class="c5"
+              data-testid="translation-missing-alert-subtitle"
+            >
+              translationMissingAlert.subtitle
+               
+              .
+            </p>
+          </div>
+        </main>
+      </section>
+      <section
+        class="c0"
+      >
+        <main>
           <article
-            class="c5"
+            class="c6"
             data-testid="article-item"
           >
             <header
-              class="c6"
+              class="c7"
             >
               <h2
-                class="c7"
+                class="c8"
               >
                 Title 1
               </h2>
               <p
-                class="c8"
+                class="c9"
               >
                 Invalid Date
                  
@@ -200,12 +223,12 @@ exports[`<ArticleTemplate> renders properly 1`] = `
                  
               </p>
               <ul
-                class="c9"
+                class="c10"
                 data-testid="article-header-tags"
               />
             </header>
             <section
-              class="c10"
+              class="c11"
             >
               Post content
             </section>
