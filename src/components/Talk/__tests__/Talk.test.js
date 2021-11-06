@@ -14,6 +14,7 @@ describe('<Talk />', () => {
           { link: 'https://slides.com/diegocosta/workshop-react-da-web-ao-app', label: 'Slides', type: 'slide' },
           { link: 'https://github.com/ReactSSA/meetup1-web', label: 'Código Fonte', type: 'repository' },
         ]}
+        language="pt"
       />
     );
 
@@ -47,6 +48,32 @@ describe('<Talk />', () => {
     );
 
     expect(queryByTestId('talk-description')).toBeFalsy();
+    expect(baseElement).toMatchSnapshot();
+  });
+
+  it('does not render the language', () => {
+    const { baseElement, queryByTestId } = render(
+      <Talk
+        title="Workshop React: da web ao app!"
+        image="https://media.slid.es/thumbnails/f58621e7fcd466702bb9ad5858ce67ec/thumb.jpg?1634646022"
+      />
+    );
+
+    expect(queryByTestId('talk-language')).toBeFalsy();
+    expect(baseElement).toMatchSnapshot();
+  });
+
+  it('renders the language', () => {
+    const { baseElement, queryByTestId, getByText } = render(
+      <Talk
+        title="Workshop React: da web ao app!"
+        image="https://media.slid.es/thumbnails/f58621e7fcd466702bb9ad5858ce67ec/thumb.jpg?1634646022"
+        language="es"
+      />
+    );
+
+    expect(queryByTestId('talk-language')).toBeTruthy();
+    expect(getByText('article.languagePrefix languages.es')).toBeTruthy();
     expect(baseElement).toMatchSnapshot();
   });
 

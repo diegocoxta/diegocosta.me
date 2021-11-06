@@ -2,6 +2,8 @@ import React from 'react';
 import styled from 'styled-components';
 import { BsGithub, BsYoutube, BsEaselFill } from 'react-icons/bs';
 
+import { usei18n } from '~/utils/i18n';
+
 const Container = styled.div`
   margin-bottom: 16px;
 
@@ -27,8 +29,13 @@ const Details = styled.div`
 const Header = styled.div``;
 
 const Title = styled.h4`
-  font-size: 18px;
+  font-size: 22px;
   margin: 0;
+`;
+
+const Language = styled.p`
+  font-weight: 700;
+  margin: 0 0 10px;
 `;
 
 const Description = styled.p`
@@ -80,15 +87,26 @@ interface TalkProps {
   image: string;
   description?: string;
   urls?: [{ link: string; label: string; type: LinkType }];
+  language?: string;
 }
 
 export default function Talk(props: TalkProps): React.ReactElement {
+  const i18n = usei18n();
+
+  const language = props.language && i18n.getTranslationFor(`languages.${props.language}`);
+  const languagePrefix = props.language && i18n.getTranslationFor('article.languagePrefix');
+
   return (
     <Container>
       <Image src={props.image} alt={`Preview for ${props.title}`} />
       <Details>
         <Header>
           <Title>{props.title}</Title>
+          {languagePrefix && (
+            <Language data-testid="talk-language">
+              {languagePrefix} {language}
+            </Language>
+          )}
           {props.description && <Description data-testid="talk-description">{props.description}</Description>}
         </Header>
         {props.urls && (
