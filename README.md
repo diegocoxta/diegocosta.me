@@ -29,4 +29,4 @@ See [CONTRIBUTING.md](CONTRIBUTING.md) for details.
 
 ## :coffee: Get in touch
 
-Say hello on [twitter](https://twitter.com/diegocoxta) or [email](mailto:diego@diegocosta.com.br)
+Say hello on [twitter](https://twitter.com/diegocoxta) or [email](mailto:diego@diegocosta.me)
