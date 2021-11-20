@@ -6,14 +6,14 @@ on:
   workflow_dispatch:
 
 jobs:
-  upgrade:
+  update:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
       - uses: actions/setup-node@v2
         with:
           node-version: '16'
-      - name: Getting outdated dependencies
+      - name: Get outdated dependencies
         id: outdated_dependencies
         run: |
           set +e
@@ -21,11 +21,11 @@ jobs:
           yarn outdated --json | npx yarn-outdated-formatter >> $GITHUB_ENV
           echo "EOF" >> $GITHUB_ENV
           set -e
-      - name: Updating dependencies to the latest version
+      - name: Update dependencies to the latest version
         run: yarn upgrade --latest
       - name: Run all test suite
         run: yarn test
-      - name: Creating pull request
+      - name: Create pull request
         uses: peter-evans/create-pull-request@v3
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
