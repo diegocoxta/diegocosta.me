@@ -1,4 +1,4 @@
-name: Update project dependencies
+name: Upgrade Dependencies
 
 on:
   schedule:
@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  update:
+  upgrade:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
@@ -23,6 +23,8 @@ jobs:
           set -e
       - name: Updating dependencies to the latest version
         run: yarn upgrade --latest
+      - name: Run all test suite
+        run: yarn test
       - name: Creating pull request
         uses: peter-evans/create-pull-request@v3
         with:
