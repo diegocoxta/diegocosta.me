@@ -1,4 +1,4 @@
-name: Upgrade Dependencies
+name: Update Dependencies
 
 on:
   schedule:
