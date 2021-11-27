@@ -1,8 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Article /> does not render the article details 1`] = `
-<body>
-  .c0 {
+.c0 {
   max-width: 800px;
   margin: 0 auto;
   padding: 0 20px;
@@ -34,7 +33,8 @@ exports[`<Article /> does not render the article details 1`] = `
   outline: none;
 }
 
-<div>
+<body>
+  <div>
     <section
       class="c0"
     >
@@ -67,8 +67,7 @@ exports[`<Article /> does not render the article details 1`] = `
 `;
 
 exports[`<Article /> does not render the article language name 1`] = `
-<body>
-  .c0 {
+.c0 {
   max-width: 800px;
   margin: 0 auto;
   padding: 0 20px;
@@ -93,7 +92,8 @@ exports[`<Article /> does not render the article language name 1`] = `
   margin: 5px 0;
 }
 
-<div>
+<body>
+  <div>
     <section
       class="c0"
     >
@@ -126,8 +126,7 @@ exports[`<Article /> does not render the article language name 1`] = `
 `;
 
 exports[`<Article /> does not render the link 1`] = `
-<body>
-  .c0 {
+.c0 {
   max-width: 800px;
   margin: 0 auto;
   padding: 0 20px;
@@ -152,7 +151,8 @@ exports[`<Article /> does not render the link 1`] = `
   margin: 5px 0;
 }
 
-<div>
+<body>
+  <div>
     <section
       class="c0"
     >
@@ -187,8 +187,7 @@ exports[`<Article /> does not render the link 1`] = `
 `;
 
 exports[`<Article /> does not render the reading time 1`] = `
-<body>
-  .c0 {
+.c0 {
   max-width: 800px;
   margin: 0 auto;
   padding: 0 20px;
@@ -213,7 +212,8 @@ exports[`<Article /> does not render the reading time 1`] = `
   margin: 5px 0;
 }
 
-<div>
+<body>
+  <div>
     <section
       class="c0"
     >
@@ -247,8 +247,7 @@ exports[`<Article /> does not render the reading time 1`] = `
 `;
 
 exports[`<Article /> does not render the tags 1`] = `
-<body>
-  .c0 {
+.c0 {
   max-width: 800px;
   margin: 0 auto;
   padding: 0 20px;
@@ -285,7 +284,8 @@ exports[`<Article /> does not render the tags 1`] = `
   margin: 5px 0;
 }
 
-<div>
+<body>
+  <div>
     <section
       class="c0"
     >
@@ -469,8 +469,7 @@ exports[`<Article /> renders properly 1`] = `
 `;
 
 exports[`<Article /> renders properly the body content 1`] = `
-<body>
-  .c0 {
+.c0 {
   max-width: 800px;
   margin: 0 auto;
   padding: 0 20px;
@@ -552,7 +551,8 @@ exports[`<Article /> renders properly the body content 1`] = `
   font-size: 28px;
 }
 
-<div>
+<body>
+  <div>
     <section
       class="c0"
     >
@@ -599,8 +599,7 @@ exports[`<Article /> renders properly the body content 1`] = `
 `;
 
 exports[`<Article /> renders properly the description 1`] = `
-<body>
-  .c0 {
+.c0 {
   max-width: 800px;
   margin: 0 auto;
   padding: 0 20px;
@@ -682,7 +681,8 @@ exports[`<Article /> renders properly the description 1`] = `
   font-size: 28px;
 }
 
-<div>
+<body>
+  <div>
     <section
       class="c0"
     >
@@ -729,8 +729,7 @@ exports[`<Article /> renders properly the description 1`] = `
 `;
 
 exports[`<Article /> renders the article details 1`] = `
-<body>
-  .c0 {
+.c0 {
   max-width: 800px;
   margin: 0 auto;
   padding: 0 20px;
@@ -800,7 +799,8 @@ exports[`<Article /> renders the article details 1`] = `
   margin: 5px 0;
 }
 
-<div>
+<body>
+  <div>
     <section
       class="c0"
     >

@@ -200,8 +200,7 @@ exports[`<Search /> renders properly 1`] = `
 `;
 
 exports[`<Search /> renders properly with results closed 1`] = `
-<body>
-  .c0 {
+.c0 {
   max-width: 800px;
   margin: 0 auto;
   padding: 0 20px;
@@ -289,7 +288,8 @@ exports[`<Search /> renders properly with results closed 1`] = `
   box-shadow: 0 3px 8px 0 rgba(0,0,0,0.1);
 }
 
-<div>
+<body>
+  <div>
     <section
       class="c0"
     >

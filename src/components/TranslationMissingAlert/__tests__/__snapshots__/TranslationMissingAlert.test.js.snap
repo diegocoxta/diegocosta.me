@@ -7,8 +7,7 @@ exports[`<TranslationMissingAlert /> does not renders because the page exists 1`
 `;
 
 exports[`<TranslationMissingAlert /> renders properly with 1 languages available 1`] = `
-<body>
-  .c0 {
+.c0 {
   max-width: 800px;
   margin: 0 auto;
   padding: 0 20px;
@@ -30,7 +29,8 @@ exports[`<TranslationMissingAlert /> renders properly with 1 languages available
   border-bottom: 1px dotted #ffffff;
 }
 
-<div>
+<body>
+  <div>
     <section
       class="c0"
     >
