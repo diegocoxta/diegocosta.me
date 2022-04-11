@@ -48,8 +48,7 @@ exports[`<TranslationMissingAlert /> renders properly with 1 languages available
             class="c2"
             data-testid="translation-missing-alert-subtitle"
           >
-            translationMissingAlert.subtitle
-             
+            translationMissingAlert.subtitle 
             <span>
               
               <a
@@ -111,8 +110,7 @@ exports[`<TranslationMissingAlert /> renders properly with 2 languages available
             class="c2"
             data-testid="translation-missing-alert-subtitle"
           >
-            translationMissingAlert.subtitle
-             
+            translationMissingAlert.subtitle 
             <span>
               
               <a

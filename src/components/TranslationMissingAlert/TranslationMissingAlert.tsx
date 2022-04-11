@@ -50,7 +50,7 @@ export default function TranslationMissingAlert(props: TranslationMissingAlertPr
       <Content data-testid="translation-missing-alert">
         <Paragraph>{title}</Paragraph>
         <Paragraph data-testid="translation-missing-alert-subtitle">
-          {subtitle}{' '}
+          {`${subtitle} `}
           {props.translations?.map((lang, index) => (
             <span key={`translation-missing-alert-${lang}`}>
               {renderSeparator(index, props.translations?.length ?? 0, separator)}

@@ -173,8 +173,7 @@ exports[`<PageTemplate> renders properly 1`] = `
               class="c5"
               data-testid="translation-missing-alert-subtitle"
             >
-              translationMissingAlert.subtitle
-               
+              translationMissingAlert.subtitle 
               .
             </p>
           </div>
