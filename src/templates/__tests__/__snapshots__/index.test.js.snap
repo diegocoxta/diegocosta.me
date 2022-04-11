@@ -255,9 +255,7 @@ exports[`<IndexTemplate> renders properly 1`] = `
         <main>
           <div
             class="c3"
-          >
-            
-          </div>
+          />
         </main>
       </section>
       <div

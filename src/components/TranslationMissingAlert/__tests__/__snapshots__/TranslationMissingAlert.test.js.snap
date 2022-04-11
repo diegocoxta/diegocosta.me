@@ -50,7 +50,6 @@ exports[`<TranslationMissingAlert /> renders properly with 1 languages available
           >
             translationMissingAlert.subtitle 
             <span>
-              
               <a
                 class="c3"
                 href="/path-to-article"
@@ -112,7 +111,6 @@ exports[`<TranslationMissingAlert /> renders properly with 2 languages available
           >
             translationMissingAlert.subtitle 
             <span>
-              
               <a
                 class="c3"
                 href="/path-to-article"
