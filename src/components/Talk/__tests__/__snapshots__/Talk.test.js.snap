@@ -49,6 +49,7 @@ exports[`<Talk /> does not render the description 1`] = `
       <img
         alt="Preview for Workshop React: da web ao app!"
         class="c1"
+        data-testid="talk-image"
         src="https://media.slid.es/thumbnails/f58621e7fcd466702bb9ad5858ce67ec/thumb.jpg?1634646022"
       />
       <div
@@ -59,6 +60,62 @@ exports[`<Talk /> does not render the description 1`] = `
         >
           <h4
             class="c3"
+          >
+            Workshop React: da web ao app!
+          </h4>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+`;
+
+exports[`<Talk /> does not render the image 1`] = `
+.c0 {
+  margin-bottom: 16px;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.c2 {
+  font-size: 22px;
+  margin: 0;
+}
+
+@media (min-width:760px) {
+  .c0 {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+<body>
+  <div>
+    <div
+      class="c0"
+    >
+      <div
+        class="c1"
+      >
+        <div
+          class=""
+        >
+          <h4
+            class="c2"
           >
             Workshop React: da web ao app!
           </h4>
@@ -118,6 +175,7 @@ exports[`<Talk /> does not render the language 1`] = `
       <img
         alt="Preview for Workshop React: da web ao app!"
         class="c1"
+        data-testid="talk-image"
         src="https://media.slid.es/thumbnails/f58621e7fcd466702bb9ad5858ce67ec/thumb.jpg?1634646022"
       />
       <div
@@ -191,6 +249,7 @@ exports[`<Talk /> does not render the url list 1`] = `
       <img
         alt="Preview for Workshop React: da web ao app!"
         class="c1"
+        data-testid="talk-image"
         src="https://media.slid.es/thumbnails/f58621e7fcd466702bb9ad5858ce67ec/thumb.jpg?1634646022"
       />
       <div
@@ -315,6 +374,7 @@ exports[`<Talk /> renders properly 1`] = `
       <img
         alt="Preview for Workshop React: da web ao app!"
         class="c1"
+        data-testid="talk-image"
         src="https://media.slid.es/thumbnails/f58621e7fcd466702bb9ad5858ce67ec/thumb.jpg?1634646022"
       />
       <div
@@ -501,6 +561,7 @@ exports[`<Talk /> renders the correctly icons 1`] = `
       <img
         alt="Preview for Workshop React: da web ao app!"
         class="c1"
+        data-testid="talk-image"
         src="https://media.slid.es/thumbnails/f58621e7fcd466702bb9ad5858ce67ec/thumb.jpg?1634646022"
       />
       <div
@@ -667,6 +728,7 @@ exports[`<Talk /> renders the language 1`] = `
       <img
         alt="Preview for Workshop React: da web ao app!"
         class="c1"
+        data-testid="talk-image"
         src="https://media.slid.es/thumbnails/f58621e7fcd466702bb9ad5858ce67ec/thumb.jpg?1634646022"
       />
       <div

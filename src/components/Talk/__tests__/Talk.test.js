@@ -21,6 +21,7 @@ describe('<Talk />', () => {
     expect(getByText('Workshop React: da web ao app!')).toBeTruthy();
     expect(getByText('blabla')).toBeTruthy();
     expect(getByTestId('talk-description')).toBeTruthy();
+    expect(getByTestId('talk-image')).toBeTruthy();
     expect(getAllByTestId('talk-urls-item').length).toEqual(2);
     expect(getAllByTestId('talk-urls-list').length).toEqual(1);
     expect(baseElement).toMatchSnapshot();
@@ -60,6 +61,13 @@ describe('<Talk />', () => {
     );
 
     expect(queryByTestId('talk-language')).toBeFalsy();
+    expect(baseElement).toMatchSnapshot();
+  });
+
+  it('does not render the image', () => {
+    const { baseElement, queryByTestId } = render(<Talk title="Workshop React: da web ao app!" />);
+
+    expect(queryByTestId('talk-image')).toBeFalsy();
     expect(baseElement).toMatchSnapshot();
   });
 

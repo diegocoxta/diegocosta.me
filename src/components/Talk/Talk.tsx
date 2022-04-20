@@ -84,7 +84,7 @@ const UrlsIcon = styled.div.attrs<{ icon: LinkType }>((props) => ({
 
 interface TalkProps {
   title: string;
-  image: string;
+  image?: string;
   description?: string;
   urls?: [{ link: string; label: string; type: LinkType }];
   language?: string;
@@ -98,7 +98,7 @@ export default function Talk(props: TalkProps): React.ReactElement {
 
   return (
     <Container>
-      <Image src={props.image} alt={`Preview for ${props.title}`} />
+      {props.image && <Image src={props.image} alt={`Preview for ${props.title}`} data-testid="talk-image" />}
       <Details>
         <Header>
           <Title>{props.title}</Title>
