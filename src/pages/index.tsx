@@ -8,13 +8,13 @@ import Search from '~/components/Search';
 import Article from '~/components/Article';
 import Divisor from '~/components/Divisor';
 
-import { IndexTemplateQuery } from '~/../graphql-types';
+import { IndexPageQuery } from '~/../graphql-types';
 
-interface IndexTemplateProps extends PageRendererProps {
-  data: IndexTemplateQuery;
+interface IndexPageProps extends PageRendererProps {
+  data: IndexPageQuery;
 }
 
-export default function IndexTemplate({ data }: IndexTemplateProps): React.ReactElement {
+export default function IndexPage({ data }: IndexPageProps): React.ReactElement {
   const { articles, aboutMe } = data;
 
   return (
@@ -40,7 +40,7 @@ export default function IndexTemplate({ data }: IndexTemplateProps): React.React
 }
 
 export const pageQuery = graphql`
-  query IndexTemplate($language: String!) {
+  query IndexPage($language: String!) {
     locales: allLocale(filter: { language: { eq: $language } }) {
       edges {
         node {

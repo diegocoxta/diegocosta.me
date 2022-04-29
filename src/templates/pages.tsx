@@ -6,36 +6,27 @@ import Divisor from '~/components/Divisor';
 import Metatags from '~/components/Metatags';
 import Article from '~/components/Article';
 
-import { PageTemplateQuery, PageTemplateQueryVariables } from '~/../graphql-types';
-import TranslationMissingAlert from '~/components/TranslationMissingAlert';
+import { PagesTemplateQuery } from '~/../graphql-types';
 
-interface PageTemplateProps extends PageRendererProps {
-  data: PageTemplateQuery;
-  pageContext: PageTemplateQueryVariables;
+interface PagesTemplateProps extends PageRendererProps {
+  data: PagesTemplateQuery;
 }
 
-export default function PageTemplate(props: PageTemplateProps): React.ReactElement {
-  const { data, pageContext } = props;
-  const { page, translations } = data;
-  const { body, frontmatter, fields } = page ?? {};
+export default function PagesTemplate({ data }: PagesTemplateProps): React.ReactElement {
+  const { body, frontmatter, fields } = data.page ?? {};
   const { title } = frontmatter ?? {};
 
   return (
     <Layout>
       <Metatags title={title ?? ''} />
       <Divisor />
-      <TranslationMissingAlert
-        slug={pageContext.slug}
-        pageLanguage={pageContext.language}
-        translations={translations?.translations}
-      />
       <Article language={fields?.language} title={title ?? ''} mdxContent={body} showArticleDetails={false} />
     </Layout>
   );
 }
 
 export const pageQuery = graphql`
-  query PageTemplate($slug: String!, $language: String!) {
+  query PagesTemplate($slug: String!, $language: String!) {
     locales: allLocale(filter: { language: { eq: $language } }) {
       edges {
         node {
@@ -53,9 +44,6 @@ export const pageQuery = graphql`
       frontmatter {
         title
       }
-    }
-    translations: mdx(fields: { slug: { eq: $slug } }) {
-      translations
     }
   }
 `;

@@ -28,6 +28,14 @@ exports[`<TagsTemplate> renders properly 1`] = `
   font-size: 20px;
 }
 
+.c4 {
+  font-size: 28px;
+  background: #626D4A;
+  display: inline-block;
+  padding: 5px;
+  margin: 40px 0 20px 0;
+}
+
 .c3 {
   background: linear-gradient(90deg,#FFFFFF 20px,transparent 1%) center, linear-gradient(#FFFFFF 20px,transparent 1%) center, #0C0D0E;
   background-size: 22px 22px;
@@ -127,14 +135,6 @@ exports[`<TagsTemplate> renders properly 1`] = `
 
 .c11 h3 {
   font-size: 28px;
-}
-
-.c4 {
-  font-size: 28px;
-  background: #626D4A;
-  display: inline-block;
-  padding: 5px;
-  margin: 40px 0 20px 0;
 }
 
 <body>

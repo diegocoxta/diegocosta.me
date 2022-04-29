@@ -5,30 +5,21 @@ import Layout from '~/components/Layout';
 import Divisor from '~/components/Divisor';
 import Metatags from '~/components/Metatags';
 import Article from '~/components/Article';
-import TranslationMissingAlert from '~/components/TranslationMissingAlert';
 
-import { ArticleTemplateQuery, ArticleTemplateQueryVariables } from '~/../graphql-types';
+import { ArticlesTemplateQuery } from '~/../graphql-types';
 
-interface ArticleTemplateProps extends PageRendererProps {
-  data: ArticleTemplateQuery;
-  pageContext: ArticleTemplateQueryVariables;
+interface ArticlesTemplateProps extends PageRendererProps {
+  data: ArticlesTemplateQuery;
 }
 
-export default function ArticleTemplate(props: ArticleTemplateProps): React.ReactElement {
-  const { data, pageContext } = props;
-  const { article, translations } = data;
-  const { body, excerpt, frontmatter, fields } = article ?? {};
+export default function ArticlesTemplate({ data }: ArticlesTemplateProps): React.ReactElement {
+  const { body, excerpt, frontmatter, fields } = data.article ?? {};
   const { title, date, tags, description } = frontmatter ?? {};
 
   return (
     <Layout>
       <Metatags title={title ?? ''} description={description || excerpt || ''} />
       <Divisor />
-      <TranslationMissingAlert
-        slug={pageContext.slug}
-        pageLanguage={pageContext.language}
-        translations={translations?.translations}
-      />
       <Article
         title={title ?? ''}
         date={date}
@@ -42,7 +33,7 @@ export default function ArticleTemplate(props: ArticleTemplateProps): React.Reac
 }
 
 export const pageQuery = graphql`
-  query ArticleTemplate($slug: String!, $language: String!) {
+  query ArticlesTemplate($slug: String!, $language: String!) {
     locales: allLocale(filter: { language: { eq: $language } }) {
       edges {
         node {
@@ -52,7 +43,7 @@ export const pageQuery = graphql`
         }
       }
     }
-    article: mdx(fields: { slug: { eq: $slug }, language: { eq: $language } }) {
+    article: mdx(fields: { slug: { eq: $slug } }) {
       body
       excerpt(pruneLength: 160)
       fields {
@@ -67,9 +58,6 @@ export const pageQuery = graphql`
         description
         tags
       }
-    }
-    translations: mdx(fields: { slug: { eq: $slug } }) {
-      translations
     }
   }
 `;

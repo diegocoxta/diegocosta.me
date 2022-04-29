@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<ArticleTemplate> renders properly 1`] = `
+exports[`<ArticlesTemplate> renders properly 1`] = `
 .c0 {
   max-width: 800px;
   margin: 0 auto;
@@ -36,22 +36,22 @@ exports[`<ArticleTemplate> renders properly 1`] = `
   width: 100%;
 }
 
-.c6 {
+.c4 {
   margin: 0 0 60px 0;
   font-weight: 400;
   color: #0C0D0E;
 }
 
-.c7 {
+.c5 {
   margin: 20px 0 0 0;
 }
 
-.c8 {
+.c6 {
   font-size: 36px;
   margin: 0;
 }
 
-.c10 {
+.c8 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -63,68 +63,57 @@ exports[`<ArticleTemplate> renders properly 1`] = `
   padding: 0;
 }
 
-.c9 {
+.c7 {
   color: #737373;
   font-size: 18px;
   margin: 5px 0;
 }
 
-.c11 {
+.c9 {
   line-height: 1.5;
 }
 
-.c11 a {
+.c9 a {
   color: #626D4A;
   -webkit-text-decoration: none;
   text-decoration: none;
   border-bottom: 1px solid #FFFFFF;
 }
 
-.c11 a:hover,
-.c11 a:focus {
+.c9 a:hover,
+.c9 a:focus {
   border-bottom: 1px solid #626D4A;
   outline: none;
 }
 
-.c11 blockquote {
+.c9 blockquote {
   border-left: 5px solid #626D4A;
   padding-left: 20px;
 }
 
-.c11 .gatsby-highlight {
+.c9 .gatsby-highlight {
   padding: 10px 0;
 }
 
-.c11 pre[class*='language-'],
-.c11 code[class*='language-'],
-.c11 .gatsby-highlight {
+.c9 pre[class*='language-'],
+.c9 code[class*='language-'],
+.c9 .gatsby-highlight {
   background-color: #FFFFFF;
   font-family: monospace;
   white-space: pre-wrap;
 }
 
-.c11 .line-numbers-rows,
-.c11 .line-numbers-rows span::before {
+.c9 .line-numbers-rows,
+.c9 .line-numbers-rows span::before {
   border: 0.5px solid #FFFFFF;
 }
 
-.c11 img {
+.c9 img {
   box-shadow: none !important;
 }
 
-.c11 h3 {
+.c9 h3 {
   font-size: 28px;
-}
-
-.c4 {
-  background: #626D4A;
-  padding: 20px;
-  color: #FFFFFF;
-  margin: 20px 0;
-}
-
-.c5 {
-  margin: 5px 0;
 }
 
 <body>
@@ -178,43 +167,20 @@ exports[`<ArticleTemplate> renders properly 1`] = `
         class="c0"
       >
         <main>
-          <div
-            class="c4"
-            data-testid="translation-missing-alert"
-          >
-            <p
-              class="c5"
-            >
-              translationMissingAlert.title
-            </p>
-            <p
-              class="c5"
-              data-testid="translation-missing-alert-subtitle"
-            >
-              translationMissingAlert.subtitle 
-              .
-            </p>
-          </div>
-        </main>
-      </section>
-      <section
-        class="c0"
-      >
-        <main>
           <article
-            class="c6"
+            class="c4"
             data-testid="article-item"
           >
             <header
-              class="c7"
+              class="c5"
             >
               <h2
-                class="c8"
+                class="c6"
               >
                 Title 1
               </h2>
               <p
-                class="c9"
+                class="c7"
               >
                 Invalid Date
                  
@@ -222,12 +188,12 @@ exports[`<ArticleTemplate> renders properly 1`] = `
                  
               </p>
               <ul
-                class="c10"
+                class="c8"
                 data-testid="article-header-tags"
               />
             </header>
             <section
-              class="c11"
+              class="c9"
             >
               Post content
             </section>

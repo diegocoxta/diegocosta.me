@@ -5,9 +5,9 @@ jest.mock('../../components/Header', () => () => <p>Header</p>);
 jest.mock('../../components/Footer', () => () => <p>Footer</p>);
 jest.mock('../../components/Metatags', () => () => <p>Metatags</p>);
 
-import PageTemplate from '../page';
+import PagesTemplate from '../pages';
 
-describe('<PageTemplate>', () => {
+describe('<PagesTemplate>', () => {
   it('renders properly', () => {
     const props = {
       pageContext: {
@@ -27,7 +27,7 @@ describe('<PageTemplate>', () => {
       },
     };
 
-    const { baseElement, getByText } = render(<PageTemplate {...props} />);
+    const { baseElement, getByText } = render(<PagesTemplate {...props} />);
     expect(getByText('Post content')).toBeTruthy();
     expect(baseElement).toMatchSnapshot();
   });
