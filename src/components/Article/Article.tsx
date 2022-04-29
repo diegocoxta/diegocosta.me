@@ -182,7 +182,7 @@ export default function Article(props: ArticleProps): React.ReactElement {
         <Header>
           <Title>
             {props.url ? (
-              <CustomLink to={props.url} data-testid="article-header-custom-link" language={props.language}>
+              <CustomLink to={props.url} data-testid="article-header-custom-link">
                 {props.title}
               </CustomLink>
             ) : (
