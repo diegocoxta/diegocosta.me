@@ -8,7 +8,7 @@ import Search, { ArticleProps } from './Search';
 export default (): React.ReactElement => {
   const data = useStaticQuery(graphql`
     query SearchComponent {
-      articles: allMdx(filter: { fields: { collection: { eq: "articles" } } }) {
+      articles: allMdx {
         nodes {
           id
           fields {
