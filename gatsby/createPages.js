@@ -1,6 +1,5 @@
 const path = require('path');
 const kebabCase = require('lodash.kebabcase');
-const { getSlugWithoutFile, siteMetadata } = require('./utils');
 
 module.exports = async ({ graphql, actions, reporter }) => {
   const result = await graphql(`
@@ -35,29 +34,19 @@ module.exports = async ({ graphql, actions, reporter }) => {
     return;
   }
 
-  // Create Home Page
-  actions.createPage({
-    path: '/',
-    component: path.resolve('./src/templates/index.tsx'),
-  });
-
   // Create Article Pages
   const content = result.data.content.edges;
   const tags = result.data.tags.group;
 
   content.forEach((content) => {
-    const slug = getSlugWithoutFile(content.node.fields.slug);
+    const { collection } = content.node.fields;
+    const { slug } = content.node.fields;
 
     if (slug !== '/') {
-      const template = content.node.fields.collection === 'articles' ? 'article' : 'page';
-
       actions.createPage({
         path: slug,
-        component: path.resolve(`./src/templates/${template}.tsx`),
-        context: {
-          slug: slug,
-          defaultLanguage: siteMetadata.defaultLanguage,
-        },
+        component: path.resolve(`./src/templates/${collection}.tsx`),
+        context: { slug },
       });
     }
   });
@@ -67,9 +56,7 @@ module.exports = async ({ graphql, actions, reporter }) => {
     actions.createPage({
       path: `/tags/${kebabCase(tag.fieldValue)}/`,
       component: path.resolve('./src/templates/tags.tsx'),
-      context: {
-        tag: tag.fieldValue,
-      },
+      context: { tag: tag.fieldValue },
     });
   });
 };

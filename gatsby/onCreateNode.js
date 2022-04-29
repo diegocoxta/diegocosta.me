@@ -4,13 +4,13 @@ const { getNodeLangCode, getSlugWithoutFile } = require('./utils');
 
 module.exports = ({ node, actions, getNode }) => {
   if (node.internal.type === 'Mdx') {
+    const { sourceInstanceName } = getNode(node.parent);
+
     actions.createNodeField({
       name: 'slug',
-      value: getSlugWithoutFile(createFilePath({ node, getNode })),
+      value: getSlugWithoutFile(createFilePath({ node, getNode }), sourceInstanceName),
       node,
     });
-
-    const { sourceInstanceName } = getNode(node.parent);
 
     actions.createNodeField({
       name: 'collection',
@@ -20,7 +20,7 @@ module.exports = ({ node, actions, getNode }) => {
 
     actions.createNodeField({
       name: 'language',
-      value: getNodeLangCode(node.fileAbsolutePath),
+      value: getNodeLangCode(node.fileAbsolutePath, node.frontmatter.language),
       node,
     });
 
