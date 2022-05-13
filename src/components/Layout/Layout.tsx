@@ -18,7 +18,7 @@ const GlobalStyle = createGlobalStyle<{ theme: CustomTheme }>`
   body {
     background: ${({ theme }) => theme.backgroundColor};
     font-family: 'Raleway', sans-serif;
-    color: #fff;
+    color: ${({ theme }) => theme.textColor};
     margin: 0;
     padding: 0;
   }
