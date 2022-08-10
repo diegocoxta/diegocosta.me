@@ -77,8 +77,7 @@ exports[`<PageTemplate> renders properly 1`] = `
   padding: 10px 0;
 }
 
-.c9 pre[class*='language-'],
-.c9 code[class*='language-'],
+.c9 pre[class*='language-'],.c9 code[class*='language-'],
 .c9 .gatsby-highlight {
   background-color: #FFFFFF;
   font-family: monospace;

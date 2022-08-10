@@ -531,8 +531,7 @@ exports[`<Article /> renders properly the body content 1`] = `
   padding: 10px 0;
 }
 
-.c6 pre[class*='language-'],
-.c6 code[class*='language-'],
+.c6 pre[class*='language-'],.c6 code[class*='language-'],
 .c6 .gatsby-highlight {
   font-family: monospace;
   white-space: pre-wrap;
@@ -661,8 +660,7 @@ exports[`<Article /> renders properly the description 1`] = `
   padding: 10px 0;
 }
 
-.c6 pre[class*='language-'],
-.c6 code[class*='language-'],
+.c6 pre[class*='language-'],.c6 code[class*='language-'],
 .c6 .gatsby-highlight {
   font-family: monospace;
   white-space: pre-wrap;

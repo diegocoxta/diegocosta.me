@@ -95,8 +95,7 @@ exports[`<ArticleTemplate> renders properly 1`] = `
   padding: 10px 0;
 }
 
-.c11 pre[class*='language-'],
-.c11 code[class*='language-'],
+.c11 pre[class*='language-'],.c11 code[class*='language-'],
 .c11 .gatsby-highlight {
   background-color: #FFFFFF;
   font-family: monospace;
