@@ -19,6 +19,7 @@ export type Scalars = {
   Date: any;
   /** The `JSON` scalar type represents JSON values as specified by [ECMA-404](http://www.ecma-international.org/publications/files/ECMA-ST/ECMA-404.pdf). */
   JSON: any;
+  GatsbyImageData: any;
 };
 
 export type File = Node & {
@@ -257,6 +258,7 @@ export type Site = Node & {
   pathPrefix?: Maybe<Scalars['String']>;
   jsxRuntime?: Maybe<Scalars['String']>;
   trailingSlash?: Maybe<Scalars['String']>;
+  graphqlTypegen?: Maybe<Scalars['Boolean']>;
   id: Scalars['ID'];
   parent?: Maybe<Node>;
   children: Array<Node>;
@@ -351,6 +353,7 @@ export type MdxFrontmatter = {
   language?: Maybe<Scalars['String']>;
   at?: Maybe<Scalars['String']>;
   featuredImage?: Maybe<File>;
+  homepage_full_article?: Maybe<Scalars['Boolean']>;
 };
 
 
@@ -492,7 +495,7 @@ export type Potrace = {
 export type ImageSharp = Node & {
   fixed?: Maybe<ImageSharpFixed>;
   fluid?: Maybe<ImageSharpFluid>;
-  gatsbyImageData: Scalars['JSON'];
+  gatsbyImageData: Scalars['GatsbyImageData'];
   original?: Maybe<ImageSharpOriginal>;
   resize?: Maybe<ImageSharpResize>;
   id: Scalars['ID'];
@@ -826,6 +829,7 @@ export type QuerySiteArgs = {
   pathPrefix?: InputMaybe<StringQueryOperatorInput>;
   jsxRuntime?: InputMaybe<StringQueryOperatorInput>;
   trailingSlash?: InputMaybe<StringQueryOperatorInput>;
+  graphqlTypegen?: InputMaybe<BooleanQueryOperatorInput>;
   id?: InputMaybe<StringQueryOperatorInput>;
   parent?: InputMaybe<NodeFilterInput>;
   children?: InputMaybe<NodeFilterListInput>;
@@ -961,7 +965,7 @@ export type QueryAllMdxArgs = {
 export type QueryImageSharpArgs = {
   fixed?: InputMaybe<ImageSharpFixedFilterInput>;
   fluid?: InputMaybe<ImageSharpFluidFilterInput>;
-  gatsbyImageData?: InputMaybe<JsonQueryOperatorInput>;
+  gatsbyImageData?: InputMaybe<GatsbyImageDataQueryOperatorInput>;
   original?: InputMaybe<ImageSharpOriginalFilterInput>;
   resize?: InputMaybe<ImageSharpResizeFilterInput>;
   id?: InputMaybe<StringQueryOperatorInput>;
@@ -1072,6 +1076,7 @@ export type MdxFrontmatterFilterInput = {
   language?: InputMaybe<StringQueryOperatorInput>;
   at?: InputMaybe<StringQueryOperatorInput>;
   featuredImage?: InputMaybe<FileFilterInput>;
+  homepage_full_article?: InputMaybe<BooleanQueryOperatorInput>;
 };
 
 export type FileFilterInput = {
@@ -1128,7 +1133,7 @@ export type ImageSharpFilterListInput = {
 export type ImageSharpFilterInput = {
   fixed?: InputMaybe<ImageSharpFixedFilterInput>;
   fluid?: InputMaybe<ImageSharpFluidFilterInput>;
-  gatsbyImageData?: InputMaybe<JsonQueryOperatorInput>;
+  gatsbyImageData?: InputMaybe<GatsbyImageDataQueryOperatorInput>;
   original?: InputMaybe<ImageSharpOriginalFilterInput>;
   resize?: InputMaybe<ImageSharpResizeFilterInput>;
   id?: InputMaybe<StringQueryOperatorInput>;
@@ -1165,13 +1170,11 @@ export type ImageSharpFluidFilterInput = {
   presentationHeight?: InputMaybe<IntQueryOperatorInput>;
 };
 
-export type JsonQueryOperatorInput = {
-  eq?: InputMaybe<Scalars['JSON']>;
-  ne?: InputMaybe<Scalars['JSON']>;
-  in?: InputMaybe<Array<InputMaybe<Scalars['JSON']>>>;
-  nin?: InputMaybe<Array<InputMaybe<Scalars['JSON']>>>;
-  regex?: InputMaybe<Scalars['JSON']>;
-  glob?: InputMaybe<Scalars['JSON']>;
+export type GatsbyImageDataQueryOperatorInput = {
+  eq?: InputMaybe<Scalars['GatsbyImageData']>;
+  ne?: InputMaybe<Scalars['GatsbyImageData']>;
+  in?: InputMaybe<Array<InputMaybe<Scalars['GatsbyImageData']>>>;
+  nin?: InputMaybe<Array<InputMaybe<Scalars['GatsbyImageData']>>>;
 };
 
 export type ImageSharpOriginalFilterInput = {
@@ -1240,6 +1243,15 @@ export type MdxHeadingMdxFilterListInput = {
 export type MdxHeadingMdxFilterInput = {
   value?: InputMaybe<StringQueryOperatorInput>;
   depth?: InputMaybe<IntQueryOperatorInput>;
+};
+
+export type JsonQueryOperatorInput = {
+  eq?: InputMaybe<Scalars['JSON']>;
+  ne?: InputMaybe<Scalars['JSON']>;
+  in?: InputMaybe<Array<InputMaybe<Scalars['JSON']>>>;
+  nin?: InputMaybe<Array<InputMaybe<Scalars['JSON']>>>;
+  regex?: InputMaybe<Scalars['JSON']>;
+  glob?: InputMaybe<Scalars['JSON']>;
 };
 
 export type MdxWordCountFilterInput = {
@@ -1400,6 +1412,7 @@ export type FileFieldsEnum =
   | 'childrenMdx___frontmatter___featuredImage___childrenLocale'
   | 'childrenMdx___frontmatter___featuredImage___id'
   | 'childrenMdx___frontmatter___featuredImage___children'
+  | 'childrenMdx___frontmatter___homepage_full_article'
   | 'childrenMdx___slug'
   | 'childrenMdx___body'
   | 'childrenMdx___excerpt'
@@ -1505,6 +1518,7 @@ export type FileFieldsEnum =
   | 'childMdx___frontmatter___featuredImage___childrenLocale'
   | 'childMdx___frontmatter___featuredImage___id'
   | 'childMdx___frontmatter___featuredImage___children'
+  | 'childMdx___frontmatter___homepage_full_article'
   | 'childMdx___slug'
   | 'childMdx___body'
   | 'childMdx___excerpt'
@@ -2248,6 +2262,7 @@ export type SiteFieldsEnum =
   | 'pathPrefix'
   | 'jsxRuntime'
   | 'trailingSlash'
+  | 'graphqlTypegen'
   | 'id'
   | 'parent___id'
   | 'parent___parent___id'
@@ -2385,6 +2400,7 @@ export type SiteFilterInput = {
   pathPrefix?: InputMaybe<StringQueryOperatorInput>;
   jsxRuntime?: InputMaybe<StringQueryOperatorInput>;
   trailingSlash?: InputMaybe<StringQueryOperatorInput>;
+  graphqlTypegen?: InputMaybe<BooleanQueryOperatorInput>;
   id?: InputMaybe<StringQueryOperatorInput>;
   parent?: InputMaybe<NodeFilterInput>;
   children?: InputMaybe<NodeFilterListInput>;
@@ -3381,6 +3397,7 @@ export type MdxFieldsEnum =
   | 'frontmatter___featuredImage___internal___mediaType'
   | 'frontmatter___featuredImage___internal___owner'
   | 'frontmatter___featuredImage___internal___type'
+  | 'frontmatter___homepage_full_article'
   | 'slug'
   | 'body'
   | 'excerpt'
@@ -3960,7 +3977,7 @@ export type IndexPageQueryVariables = Exact<{
 }>;
 
 
-export type IndexPageQuery = { locales: { edges: Array<{ node: { ns?: string | null, data?: string | null, language?: string | null } }> }, aboutMe?: { body: string } | null, articles: { edges: Array<{ node: { excerpt: string, fields?: { slug?: string | null, language?: string | null, readingTime?: { minutes?: number | null } | null } | null, frontmatter?: { date?: any | null, title: string, description?: string | null, tags?: Array<string | null> | null } | null } }> } };
+export type IndexPageQuery = { locales: { edges: Array<{ node: { ns?: string | null, data?: string | null, language?: string | null } }> }, aboutMe?: { body: string } | null, articles: { edges: Array<{ node: { body: string, excerpt: string, fields?: { slug?: string | null, language?: string | null, readingTime?: { minutes?: number | null } | null } | null, frontmatter?: { date?: any | null, title: string, description?: string | null, tags?: Array<string | null> | null, homepage_full_article?: boolean | null } | null } }> } };
 
 export type TalksPageQueryVariables = Exact<{
   language: Scalars['String'];

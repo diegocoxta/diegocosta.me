@@ -8,6 +8,7 @@ import Footer from '~/components/Footer';
 
 import Talk from '~/components/Talk';
 import Divisor from '~/components/Divisor';
+import YoutubeVideo from '~/components/YoutubeVideo';
 
 import { useTheme } from '~/hooks/useTheme';
 import { dark, light } from '~/themes';
@@ -36,6 +37,7 @@ export default function Layout(props: LayoutProps): React.ReactElement {
   const mdxComponents = {
     Talk,
     Divisor,
+    YoutubeVideo,
   };
 
   return (
