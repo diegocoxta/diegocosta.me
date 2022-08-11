@@ -1,6 +1,5 @@
 import React from 'react';
 import { graphql, PageRendererProps } from 'gatsby';
-import { getSrc } from 'gatsby-plugin-image';
 
 import { usei18n } from '~/utils/i18n';
 
@@ -18,7 +17,7 @@ interface TalksPageProps extends PageRendererProps {
 
 export default function TaksPage({ data }: TalksPageProps): React.ReactElement {
   const i18n = usei18n();
-  const talks = data.talks.byDate.reverse();
+  const talks = data.talks.byDate;
 
   return (
     <Layout>
@@ -31,9 +30,9 @@ export default function TaksPage({ data }: TalksPageProps): React.ReactElement {
             <Talk
               key={`talks-${index}`}
               title={frontmatter?.title ?? ''}
+              url={fields.slug}
               description={frontmatter?.description || excerpt}
               language={fields?.language ?? ''}
-              image={frontmatter?.featuredImage && getSrc(frontmatter?.featuredImage)}
             />
           ))}
         </FixedContainer>
@@ -69,6 +68,7 @@ export const pageQuery = graphql`
             }
             fields {
               language
+              slug
             }
             excerpt
           }

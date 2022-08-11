@@ -104,4 +104,4 @@ cat gh-pages
 
 E isso é tudo que você precisa fazer para ter um blog com deploy automatizado sem custos no Github.
 
-✅ Complete job.
+✅ Done.
