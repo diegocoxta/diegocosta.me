@@ -30,6 +30,7 @@ export default function YoutubeVideo(props: YoutubeVideo): React.ReactElement {
       <iframe
         width="560"
         height="315"
+        data-testid="youtube-player"
         src={`https://www.youtube.com/embed/${props.uuid}`}
         title="YouTube video player"
         frameBorder="0"

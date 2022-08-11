@@ -77,7 +77,8 @@ exports[`<NotFoundPage> renders properly 1`] = `
   padding: 10px 0;
 }
 
-.c7 pre[class*='language-'],.c7 code[class*='language-'],
+.c7 pre[class*='language-'],
+.c7 code[class*='language-'],
 .c7 .gatsby-highlight {
   background-color: #FFFFFF;
   font-family: monospace;
