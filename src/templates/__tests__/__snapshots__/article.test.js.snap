@@ -91,22 +91,6 @@ exports[`<ArticleTemplate> renders properly 1`] = `
   padding-left: 20px;
 }
 
-.c11 .gatsby-highlight {
-  padding: 10px 0;
-}
-
-.c11 pre[class*='language-'],.c11 code[class*='language-'],
-.c11 .gatsby-highlight {
-  background-color: #FFFFFF;
-  font-family: monospace;
-  white-space: pre-wrap;
-}
-
-.c11 .line-numbers-rows,
-.c11 .line-numbers-rows span::before {
-  border: 0.5px solid #FFFFFF;
-}
-
 .c11 img {
   box-shadow: none !important;
 }

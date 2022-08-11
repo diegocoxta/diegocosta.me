@@ -23,7 +23,7 @@ export default function IndexTemplate({ data }: IndexTemplateProps): React.React
       <AboutMe mdxContent={aboutMe?.body || ''} />
       <Divisor />
       <Search />
-      {articles.edges.map(({ node: { frontmatter, fields, excerpt } }, index: number) => (
+      {articles.edges.map(({ node: { frontmatter, fields, excerpt, body } }, index: number) => (
         <Article
           key={`article-${index}`}
           title={frontmatter?.title ?? ''}
@@ -32,7 +32,8 @@ export default function IndexTemplate({ data }: IndexTemplateProps): React.React
           tags={frontmatter?.tags as string[]}
           readingTime={fields?.readingTime?.minutes ?? 0}
           language={fields?.language}
-          description={frontmatter?.description || excerpt}
+          description={frontmatter?.homepage_full_article ? '' : frontmatter?.description || excerpt}
+          mdxContent={frontmatter?.homepage_full_article ? body : undefined}
         />
       ))}
     </Layout>
@@ -59,6 +60,7 @@ export const pageQuery = graphql`
     ) {
       edges {
         node {
+          body
           excerpt
           fields {
             slug
@@ -72,6 +74,7 @@ export const pageQuery = graphql`
             title
             description
             tags
+            homepage_full_article
           }
         }
       }
