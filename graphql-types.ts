@@ -350,7 +350,6 @@ export type MdxFrontmatter = {
   date?: Maybe<Scalars['Date']>;
   description?: Maybe<Scalars['String']>;
   tags?: Maybe<Array<Maybe<Scalars['String']>>>;
-  view?: Maybe<Scalars['String']>;
   homepage_full_article?: Maybe<Scalars['Boolean']>;
 };
 
@@ -1072,7 +1071,6 @@ export type MdxFrontmatterFilterInput = {
   date?: InputMaybe<DateQueryOperatorInput>;
   description?: InputMaybe<StringQueryOperatorInput>;
   tags?: InputMaybe<StringQueryOperatorInput>;
-  view?: InputMaybe<StringQueryOperatorInput>;
   homepage_full_article?: InputMaybe<BooleanQueryOperatorInput>;
 };
 
@@ -1321,7 +1319,6 @@ export type FileFieldsEnum =
   | 'childrenMdx___frontmatter___date'
   | 'childrenMdx___frontmatter___description'
   | 'childrenMdx___frontmatter___tags'
-  | 'childrenMdx___frontmatter___view'
   | 'childrenMdx___frontmatter___homepage_full_article'
   | 'childrenMdx___slug'
   | 'childrenMdx___body'
@@ -1387,7 +1384,6 @@ export type FileFieldsEnum =
   | 'childMdx___frontmatter___date'
   | 'childMdx___frontmatter___description'
   | 'childMdx___frontmatter___tags'
-  | 'childMdx___frontmatter___view'
   | 'childMdx___frontmatter___homepage_full_article'
   | 'childMdx___slug'
   | 'childMdx___body'
@@ -3219,7 +3215,6 @@ export type MdxFieldsEnum =
   | 'frontmatter___date'
   | 'frontmatter___description'
   | 'frontmatter___tags'
-  | 'frontmatter___view'
   | 'frontmatter___homepage_full_article'
   | 'slug'
   | 'body'
