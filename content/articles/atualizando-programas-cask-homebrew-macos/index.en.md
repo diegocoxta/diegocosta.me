@@ -12,7 +12,5 @@ In Homebrew the command to update all software is `brew upgrade --cask` but it's
 Here's the tip! To avoid having to run `upgrade` to each item manually, run this command in your terminal:
 
 ```shell
-for cask in $(brew list --cask); do brew upgrade --cask $cask; done;
+brew list --cask | xargs brew upgrade --cask
 ```
-
-With this script, we use the `for` to iterate in each item returned by the `brew list --cask` command and force the update.

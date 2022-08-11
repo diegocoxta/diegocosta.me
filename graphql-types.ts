@@ -351,7 +351,7 @@ export type MdxFrontmatter = {
   description?: Maybe<Scalars['String']>;
   tags?: Maybe<Array<Maybe<Scalars['String']>>>;
   view?: Maybe<Scalars['String']>;
-  preview?: Maybe<Scalars['String']>;
+  homepage_full_article?: Maybe<Scalars['Boolean']>;
 };
 
 
@@ -1073,7 +1073,14 @@ export type MdxFrontmatterFilterInput = {
   description?: InputMaybe<StringQueryOperatorInput>;
   tags?: InputMaybe<StringQueryOperatorInput>;
   view?: InputMaybe<StringQueryOperatorInput>;
-  preview?: InputMaybe<StringQueryOperatorInput>;
+  homepage_full_article?: InputMaybe<BooleanQueryOperatorInput>;
+};
+
+export type BooleanQueryOperatorInput = {
+  eq?: InputMaybe<Scalars['Boolean']>;
+  ne?: InputMaybe<Scalars['Boolean']>;
+  in?: InputMaybe<Array<InputMaybe<Scalars['Boolean']>>>;
+  nin?: InputMaybe<Array<InputMaybe<Scalars['Boolean']>>>;
 };
 
 export type MdxHeadingMdxFilterListInput = {
@@ -1134,13 +1141,6 @@ export type InternalFilterInput = {
   mediaType?: InputMaybe<StringQueryOperatorInput>;
   owner?: InputMaybe<StringQueryOperatorInput>;
   type?: InputMaybe<StringQueryOperatorInput>;
-};
-
-export type BooleanQueryOperatorInput = {
-  eq?: InputMaybe<Scalars['Boolean']>;
-  ne?: InputMaybe<Scalars['Boolean']>;
-  in?: InputMaybe<Array<InputMaybe<Scalars['Boolean']>>>;
-  nin?: InputMaybe<Array<InputMaybe<Scalars['Boolean']>>>;
 };
 
 export type ImageSharpFilterListInput = {
@@ -1322,7 +1322,7 @@ export type FileFieldsEnum =
   | 'childrenMdx___frontmatter___description'
   | 'childrenMdx___frontmatter___tags'
   | 'childrenMdx___frontmatter___view'
-  | 'childrenMdx___frontmatter___preview'
+  | 'childrenMdx___frontmatter___homepage_full_article'
   | 'childrenMdx___slug'
   | 'childrenMdx___body'
   | 'childrenMdx___excerpt'
@@ -1388,7 +1388,7 @@ export type FileFieldsEnum =
   | 'childMdx___frontmatter___description'
   | 'childMdx___frontmatter___tags'
   | 'childMdx___frontmatter___view'
-  | 'childMdx___frontmatter___preview'
+  | 'childMdx___frontmatter___homepage_full_article'
   | 'childMdx___slug'
   | 'childMdx___body'
   | 'childMdx___excerpt'
@@ -3220,7 +3220,7 @@ export type MdxFieldsEnum =
   | 'frontmatter___description'
   | 'frontmatter___tags'
   | 'frontmatter___view'
-  | 'frontmatter___preview'
+  | 'frontmatter___homepage_full_article'
   | 'slug'
   | 'body'
   | 'excerpt'
@@ -3808,7 +3808,7 @@ export type IndexTemplateQueryVariables = Exact<{
 }>;
 
 
-export type IndexTemplateQuery = { locales: { edges: Array<{ node: { ns?: string | null, data?: string | null, language?: string | null } }> }, aboutMe?: { body: string } | null, articles: { edges: Array<{ node: { excerpt: string, fields?: { slug?: string | null, language?: string | null, readingTime?: { minutes?: number | null } | null } | null, frontmatter?: { date?: any | null, title: string, description?: string | null, tags?: Array<string | null> | null } | null } }> } };
+export type IndexTemplateQuery = { locales: { edges: Array<{ node: { ns?: string | null, data?: string | null, language?: string | null } }> }, aboutMe?: { body: string } | null, articles: { edges: Array<{ node: { body: string, excerpt: string, fields?: { slug?: string | null, language?: string | null, readingTime?: { minutes?: number | null } | null } | null, frontmatter?: { date?: any | null, title: string, description?: string | null, tags?: Array<string | null> | null, homepage_full_article?: boolean | null } | null } }> } };
 
 export type PageTemplateQueryVariables = Exact<{
   slug: Scalars['String'];
