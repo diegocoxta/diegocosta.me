@@ -6,4 +6,5 @@ export default {
   accentColor: '#626D4A',
   searchBackgroundColor: '#0e0f11',
   searchResultsBackgroundColor: '#1b1b1d',
+  codeblockBackgroundColor: '#333333',
 };

@@ -88,23 +88,6 @@ export const Body = styled.section`
     padding-left: 20px;
   }
 
-  .gatsby-highlight {
-    padding: 10px 0;
-  }
-
-  pre[class*='language-'],
-  code[class*='language-'],
-  .gatsby-highlight {
-    background-color: ${({ theme }) => theme.backgroundColor};
-    font-family: monospace;
-    white-space: pre-wrap;
-  }
-
-  .line-numbers-rows,
-  .line-numbers-rows span::before {
-    border: 0.5px solid ${({ theme }) => theme.backgroundColor};
-  }
-
   img {
     box-shadow: none !important;
   }

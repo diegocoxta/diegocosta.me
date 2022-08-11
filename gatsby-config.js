@@ -6,7 +6,7 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-graphql-codegen',
       options: {
-        codegen: true,
+        codegen: false,
         documentPaths: ['./src/**/*.{ts,tsx,js,jsx}', './gatsby/**/*.{ts,tsx,js,jsx}'],
       },
     },
@@ -77,6 +77,7 @@ module.exports = {
           },
           'gatsby-remark-copy-linked-files',
           'gatsby-remark-smartypants',
+          'gatsby-remark-highlight-code',
         ],
       },
     },
