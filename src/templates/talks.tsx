@@ -14,14 +14,14 @@ interface TalksTemplateProps extends PageRendererProps {
 
 export default function TalksTemplate({ data }: TalksTemplateProps): React.ReactElement {
   const { page } = data;
-  const { body, frontmatter, fields } = page ?? {};
+  const { html, frontmatter, fields } = page ?? {};
   const { title } = frontmatter ?? {};
 
   return (
     <Layout>
       <Metatags title={title ?? ''} />
       <Divisor />
-      <Article language={fields?.language} title={title ?? ''} mdxContent={body} showArticleDetails={false} />
+      <Article language={fields?.language} title={title ?? ''} content={html} showArticleDetails={false} />
     </Layout>
   );
 }
@@ -37,8 +37,8 @@ export const pageQuery = graphql`
         }
       }
     }
-    page: mdx(fields: { slug: { eq: $slug } }) {
-      body
+    page: markdownRemark(fields: { slug: { eq: $slug } }) {
+      html
       fields {
         language
       }

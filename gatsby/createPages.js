@@ -4,7 +4,7 @@ const kebabCase = require('lodash.kebabcase');
 module.exports = async ({ graphql, actions, reporter }) => {
   const result = await graphql(`
     query GatsbyCreatePage {
-      content: allMdx(sort: { order: DESC, fields: [frontmatter___date] }) {
+      content: allMarkdownRemark(sort: { order: DESC, fields: [frontmatter___date] }) {
         edges {
           node {
             fields {
@@ -20,7 +20,7 @@ module.exports = async ({ graphql, actions, reporter }) => {
           }
         }
       }
-      tags: allMdx(limit: 2000) {
+      tags: allMarkdownRemark(limit: 2000) {
         group(field: frontmatter___tags) {
           fieldValue
         }

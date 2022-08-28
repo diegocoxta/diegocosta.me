@@ -35,7 +35,7 @@ export default function Tags({ data, pageContext }: TagsTemplateProps): React.Re
           url={fields?.slug}
           language={fields?.language}
           readingTime={fields?.readingTime?.minutes ?? 0}
-          description={frontmatter?.description || excerpt}
+          content={frontmatter?.description || excerpt}
         />
       ))}
     </Layout>
@@ -53,7 +53,7 @@ export const pageQuery = graphql`
         }
       }
     }
-    articles: allMdx(
+    articles: allMarkdownRemark(
       sort: { fields: [frontmatter___date], order: DESC }
       filter: { frontmatter: { tags: { in: [$tag] } } }
     ) {

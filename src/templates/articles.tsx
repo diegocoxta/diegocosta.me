@@ -12,9 +12,11 @@ interface ArticlesTemplateProps extends PageRendererProps {
   data: ArticlesTemplateQuery;
 }
 
-export default function ArticlesTemplate({ data }: ArticlesTemplateProps): React.ReactElement {
-  const { body, excerpt, frontmatter, fields } = data.article ?? {};
+export default function ArticlesTemplate(props: ArticlesTemplateProps): React.ReactElement {
+  const { html, excerpt, frontmatter, fields } = props.data.article ?? {};
   const { title, date, tags, description } = frontmatter ?? {};
+
+  console.log(props);
 
   return (
     <Layout>
@@ -26,7 +28,7 @@ export default function ArticlesTemplate({ data }: ArticlesTemplateProps): React
         tags={tags as string[]}
         readingTime={fields?.readingTime?.minutes ?? 0}
         language={fields?.language}
-        mdxContent={body}
+        content={html}
       />
     </Layout>
   );
@@ -43,8 +45,8 @@ export const pageQuery = graphql`
         }
       }
     }
-    article: mdx(fields: { slug: { eq: $slug } }) {
-      body
+    article: markdownRemark(fields: { slug: { eq: $slug } }) {
+      html
       excerpt(pruneLength: 160)
       fields {
         readingTime {

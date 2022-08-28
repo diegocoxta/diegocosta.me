@@ -28,14 +28,6 @@ exports[`<IndexPage> renders properly 1`] = `
   font-size: 20px;
 }
 
-.c4 {
-  background: linear-gradient(90deg,#FFFFFF 20px,transparent 1%) center, linear-gradient(#FFFFFF 20px,transparent 1%) center, #0C0D0E;
-  background-size: 22px 22px;
-  height: 120px;
-  margin: 40px 0;
-  width: 100%;
-}
-
 .c3 p {
   font-size: 18px;
   line-height: 1.4;
@@ -152,6 +144,14 @@ exports[`<IndexPage> renders properly 1`] = `
 
 .c11 h3 {
   font-size: 28px;
+}
+
+.c4 {
+  background: linear-gradient(90deg,#FFFFFF 20px,transparent 1%) center, linear-gradient(#FFFFFF 20px,transparent 1%) center, #0C0D0E;
+  background-size: 22px 22px;
+  height: 120px;
+  margin: 40px 0;
+  width: 100%;
 }
 
 @media (min-width:760px) {

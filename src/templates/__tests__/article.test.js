@@ -29,7 +29,7 @@ describe('<ArticlesTemplate>', () => {
             },
           },
           excerpt: 'Awesome first article',
-          body: 'Post content',
+          html: 'Post content',
         },
       },
     };

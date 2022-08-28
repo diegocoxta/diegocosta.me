@@ -22,7 +22,7 @@ describe('<PagesTemplate>', () => {
           fields: {
             slug: '/path-to-article/',
           },
-          body: 'Post content',
+          html: 'Post content',
         },
       },
     };

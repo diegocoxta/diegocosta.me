@@ -21,5 +21,6 @@ Palestra para meetup ReactSSA abordando uma breve introdução sobre React e Rea
 ></iframe>
 
 ### Outros Links
+
 - [Código Fonte Web](https://github.com/ReactSSA/meetup1-web)
 - [Código Fonte Mobile](https://github.com/ReactSSA/meetup1-app)

@@ -51,36 +51,6 @@ exports[`<NotFoundPage> renders properly 1`] = `
   margin: 0;
 }
 
-.c7 {
-  line-height: 1.5;
-}
-
-.c7 a {
-  color: #626D4A;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  border-bottom: 1px solid #FFFFFF;
-}
-
-.c7 a:hover,
-.c7 a:focus {
-  border-bottom: 1px solid #626D4A;
-  outline: none;
-}
-
-.c7 blockquote {
-  border-left: 5px solid #626D4A;
-  padding-left: 20px;
-}
-
-.c7 img {
-  box-shadow: none !important;
-}
-
-.c7 h3 {
-  font-size: 28px;
-}
-
 <body>
   <div>
     <section
@@ -145,11 +115,6 @@ exports[`<NotFoundPage> renders properly 1`] = `
                 404page.title
               </h2>
             </header>
-            <section
-              class="c7"
-            >
-              404page.message
-            </section>
           </article>
         </main>
       </section>

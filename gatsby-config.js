@@ -70,10 +70,9 @@ module.exports = {
     },
     'gatsby-remark-images',
     {
-      resolve: 'gatsby-plugin-mdx',
+      resolve: 'gatsby-transformer-remark',
       options: {
-        extensions: ['.mdx', '.md'],
-        gatsbyRemarkPlugins: [
+        plugins: [
           {
             resolve: 'gatsby-remark-images',
             options: {
@@ -85,6 +84,8 @@ module.exports = {
           'gatsby-remark-copy-linked-files',
           'gatsby-remark-smartypants',
           'gatsby-remark-highlight-code',
+          'gatsby-remark-reading-time',
+          'gatsby-remark-responsive-iframe',
         ],
       },
     },
@@ -126,7 +127,7 @@ module.exports = {
             },
             query: `
               query GatsbyPluginFeedArticles {
-                articles: allMdx(
+                articles: allMarkdownRemark(
                   sort: { order: DESC, fields: [frontmatter___date] },
                   filter: { fields: { collection: { eq: "articles" } } }
                 ) {

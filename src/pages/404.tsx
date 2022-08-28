@@ -16,7 +16,7 @@ export default function NotFoundPage(): React.ReactElement {
     <Layout>
       <Metatags title={title} />
       <Divisor />
-      <Article title={title} description={message} showArticleDetails={false} />
+      <Article title={title} content={message} showArticleDetails={false} />
     </Layout>
   );
 }

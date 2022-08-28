@@ -20,10 +20,10 @@ export default function IndexPage({ data }: IndexPageProps): React.ReactElement 
   return (
     <Layout>
       <Metatags />
-      <AboutMe mdxContent={aboutMe?.body || ''} />
+      <AboutMe content={aboutMe?.html || ''} />
       <Divisor />
       <Search />
-      {articles.edges.map(({ node: { frontmatter, fields, excerpt, body } }, index: number) => (
+      {articles.edges.map(({ node: { frontmatter, fields, excerpt, html } }, index: number) => (
         <Article
           key={`article-${index}`}
           title={frontmatter?.title ?? ''}
@@ -32,8 +32,7 @@ export default function IndexPage({ data }: IndexPageProps): React.ReactElement 
           tags={frontmatter?.tags as string[]}
           readingTime={fields?.readingTime?.minutes ?? 0}
           language={fields?.language}
-          description={frontmatter?.homepage_full_article ? '' : frontmatter?.description || excerpt}
-          mdxContent={frontmatter?.homepage_full_article ? body : undefined}
+          content={frontmatter?.homepage_full_article ? html : frontmatter?.description || excerpt}
         />
       ))}
     </Layout>
@@ -51,16 +50,16 @@ export const pageQuery = graphql`
         }
       }
     }
-    aboutMe: mdx(fields: { slug: { eq: "/home/" }, language: { eq: $language } }) {
-      body
+    aboutMe: markdownRemark(fields: { slug: { eq: "/home/" }, language: { eq: $language } }) {
+      html
     }
-    articles: allMdx(
+    articles: allMarkdownRemark(
       sort: { fields: [frontmatter___date], order: DESC }
       filter: { fields: { collection: { eq: "articles" } } }
     ) {
       edges {
         node {
-          body
+          html
           excerpt
           fields {
             slug

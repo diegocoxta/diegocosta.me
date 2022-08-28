@@ -52,7 +52,7 @@ export const pageQuery = graphql`
         }
       }
     }
-    talks: allMdx(filter: { fields: { collection: { eq: "talks" } } }) {
+    talks: allMarkdownRemark(filter: { fields: { collection: { eq: "talks" } } }) {
       byDate: group(field: frontmatter___date) {
         date: fieldValue
         edges {

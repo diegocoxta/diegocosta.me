@@ -1,7 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
 import kebabCase from 'lodash.kebabcase';
-import { MDXRenderer } from 'gatsby-plugin-mdx';
 
 import { usei18n, Link } from '~/utils/i18n';
 
@@ -104,8 +103,7 @@ export interface ArticleProps {
   language?: string | null;
   date?: string;
   tags?: string[] | null;
-  description?: string | null;
-  mdxContent?: string | null;
+  content?: string | null;
   showArticleDetails?: boolean;
 }
 
@@ -179,12 +177,7 @@ export default function Article(props: ArticleProps): React.ReactElement {
           )}
           {Tags}
         </Header>
-        {props.description && <Body dangerouslySetInnerHTML={{ __html: props.description }} />}
-        {props.mdxContent && (
-          <Body>
-            <MDXRenderer>{props.mdxContent}</MDXRenderer>
-          </Body>
-        )}
+        {props.content && <Body dangerouslySetInnerHTML={{ __html: props.content }} />}
       </Content>
     </FixedContainer>
   );
