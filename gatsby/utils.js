@@ -7,16 +7,10 @@ module.exports.getNodeLangCode = function (fileAbsolutePath, defaultLang = siteM
   return langCode;
 };
 
-module.exports.getSlugWithoutFile = function (slug, collection = '') {
+module.exports.getSlugWithoutFile = function (slug) {
   const parts = slug.split('/').filter((segment) => segment !== '');
 
-  const customPathsPrefix = {
-    articles: '',
-    pages: '',
-    talks: 'talks/',
-  };
-
-  return `/${customPathsPrefix[collection]}${parts?.[0]}/`;
+  return `/${parts?.[0]}/`;
 };
 
 module.exports.siteMetadata = siteMetadata;

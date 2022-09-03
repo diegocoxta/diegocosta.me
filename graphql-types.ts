@@ -423,8 +423,6 @@ export type MarkdownRemarkFrontmatter = {
   tags?: Maybe<Array<Maybe<Scalars['String']>>>;
   language?: Maybe<Scalars['String']>;
   homepage_full_article?: Maybe<Scalars['Boolean']>;
-  at?: Maybe<Scalars['String']>;
-  featuredImage?: Maybe<File>;
 };
 
 
@@ -1089,8 +1087,6 @@ export type MarkdownRemarkFrontmatterFilterInput = {
   tags?: InputMaybe<StringQueryOperatorInput>;
   language?: InputMaybe<StringQueryOperatorInput>;
   homepage_full_article?: InputMaybe<BooleanQueryOperatorInput>;
-  at?: InputMaybe<StringQueryOperatorInput>;
-  featuredImage?: InputMaybe<FileFilterInput>;
 };
 
 export type BooleanQueryOperatorInput = {
@@ -1100,51 +1096,66 @@ export type BooleanQueryOperatorInput = {
   nin?: InputMaybe<Array<InputMaybe<Scalars['Boolean']>>>;
 };
 
-export type FileFilterInput = {
-  sourceInstanceName?: InputMaybe<StringQueryOperatorInput>;
-  absolutePath?: InputMaybe<StringQueryOperatorInput>;
-  relativePath?: InputMaybe<StringQueryOperatorInput>;
-  extension?: InputMaybe<StringQueryOperatorInput>;
-  size?: InputMaybe<IntQueryOperatorInput>;
-  prettySize?: InputMaybe<StringQueryOperatorInput>;
-  modifiedTime?: InputMaybe<DateQueryOperatorInput>;
-  accessTime?: InputMaybe<DateQueryOperatorInput>;
-  changeTime?: InputMaybe<DateQueryOperatorInput>;
-  birthTime?: InputMaybe<DateQueryOperatorInput>;
-  root?: InputMaybe<StringQueryOperatorInput>;
-  dir?: InputMaybe<StringQueryOperatorInput>;
-  base?: InputMaybe<StringQueryOperatorInput>;
-  ext?: InputMaybe<StringQueryOperatorInput>;
-  name?: InputMaybe<StringQueryOperatorInput>;
-  relativeDirectory?: InputMaybe<StringQueryOperatorInput>;
-  dev?: InputMaybe<IntQueryOperatorInput>;
-  mode?: InputMaybe<IntQueryOperatorInput>;
-  nlink?: InputMaybe<IntQueryOperatorInput>;
-  uid?: InputMaybe<IntQueryOperatorInput>;
-  gid?: InputMaybe<IntQueryOperatorInput>;
-  rdev?: InputMaybe<IntQueryOperatorInput>;
-  ino?: InputMaybe<FloatQueryOperatorInput>;
-  atimeMs?: InputMaybe<FloatQueryOperatorInput>;
-  mtimeMs?: InputMaybe<FloatQueryOperatorInput>;
-  ctimeMs?: InputMaybe<FloatQueryOperatorInput>;
-  atime?: InputMaybe<DateQueryOperatorInput>;
-  mtime?: InputMaybe<DateQueryOperatorInput>;
-  ctime?: InputMaybe<DateQueryOperatorInput>;
-  birthtime?: InputMaybe<DateQueryOperatorInput>;
-  birthtimeMs?: InputMaybe<FloatQueryOperatorInput>;
-  blksize?: InputMaybe<IntQueryOperatorInput>;
-  blocks?: InputMaybe<IntQueryOperatorInput>;
-  publicURL?: InputMaybe<StringQueryOperatorInput>;
-  childrenMarkdownRemark?: InputMaybe<MarkdownRemarkFilterListInput>;
-  childMarkdownRemark?: InputMaybe<MarkdownRemarkFilterInput>;
-  childrenImageSharp?: InputMaybe<ImageSharpFilterListInput>;
-  childImageSharp?: InputMaybe<ImageSharpFilterInput>;
-  childrenLocale?: InputMaybe<LocaleFilterListInput>;
-  childLocale?: InputMaybe<LocaleFilterInput>;
+export type MarkdownRemarkFieldsFilterInput = {
+  readingTime?: InputMaybe<MarkdownRemarkFieldsReadingTimeFilterInput>;
+  slug?: InputMaybe<StringQueryOperatorInput>;
+  collection?: InputMaybe<StringQueryOperatorInput>;
+  language?: InputMaybe<StringQueryOperatorInput>;
+};
+
+export type MarkdownRemarkFieldsReadingTimeFilterInput = {
+  text?: InputMaybe<StringQueryOperatorInput>;
+  minutes?: InputMaybe<FloatQueryOperatorInput>;
+  time?: InputMaybe<IntQueryOperatorInput>;
+  words?: InputMaybe<IntQueryOperatorInput>;
+};
+
+export type JsonQueryOperatorInput = {
+  eq?: InputMaybe<Scalars['JSON']>;
+  ne?: InputMaybe<Scalars['JSON']>;
+  in?: InputMaybe<Array<InputMaybe<Scalars['JSON']>>>;
+  nin?: InputMaybe<Array<InputMaybe<Scalars['JSON']>>>;
+  regex?: InputMaybe<Scalars['JSON']>;
+  glob?: InputMaybe<Scalars['JSON']>;
+};
+
+export type MarkdownHeadingFilterListInput = {
+  elemMatch?: InputMaybe<MarkdownHeadingFilterInput>;
+};
+
+export type MarkdownHeadingFilterInput = {
+  id?: InputMaybe<StringQueryOperatorInput>;
+  value?: InputMaybe<StringQueryOperatorInput>;
+  depth?: InputMaybe<IntQueryOperatorInput>;
+};
+
+export type MarkdownWordCountFilterInput = {
+  paragraphs?: InputMaybe<IntQueryOperatorInput>;
+  sentences?: InputMaybe<IntQueryOperatorInput>;
+  words?: InputMaybe<IntQueryOperatorInput>;
+};
+
+export type NodeFilterInput = {
   id?: InputMaybe<StringQueryOperatorInput>;
   parent?: InputMaybe<NodeFilterInput>;
   children?: InputMaybe<NodeFilterListInput>;
   internal?: InputMaybe<InternalFilterInput>;
+};
+
+export type NodeFilterListInput = {
+  elemMatch?: InputMaybe<NodeFilterInput>;
+};
+
+export type InternalFilterInput = {
+  content?: InputMaybe<StringQueryOperatorInput>;
+  contentDigest?: InputMaybe<StringQueryOperatorInput>;
+  description?: InputMaybe<StringQueryOperatorInput>;
+  fieldOwners?: InputMaybe<StringQueryOperatorInput>;
+  ignoreType?: InputMaybe<BooleanQueryOperatorInput>;
+  mediaType?: InputMaybe<StringQueryOperatorInput>;
+  owner?: InputMaybe<StringQueryOperatorInput>;
+  type?: InputMaybe<StringQueryOperatorInput>;
+  contentFilePath?: InputMaybe<StringQueryOperatorInput>;
 };
 
 export type ImageSharpFilterListInput = {
@@ -1213,29 +1224,6 @@ export type ImageSharpResizeFilterInput = {
   originalName?: InputMaybe<StringQueryOperatorInput>;
 };
 
-export type NodeFilterInput = {
-  id?: InputMaybe<StringQueryOperatorInput>;
-  parent?: InputMaybe<NodeFilterInput>;
-  children?: InputMaybe<NodeFilterListInput>;
-  internal?: InputMaybe<InternalFilterInput>;
-};
-
-export type NodeFilterListInput = {
-  elemMatch?: InputMaybe<NodeFilterInput>;
-};
-
-export type InternalFilterInput = {
-  content?: InputMaybe<StringQueryOperatorInput>;
-  contentDigest?: InputMaybe<StringQueryOperatorInput>;
-  description?: InputMaybe<StringQueryOperatorInput>;
-  fieldOwners?: InputMaybe<StringQueryOperatorInput>;
-  ignoreType?: InputMaybe<BooleanQueryOperatorInput>;
-  mediaType?: InputMaybe<StringQueryOperatorInput>;
-  owner?: InputMaybe<StringQueryOperatorInput>;
-  type?: InputMaybe<StringQueryOperatorInput>;
-  contentFilePath?: InputMaybe<StringQueryOperatorInput>;
-};
-
 export type LocaleFilterListInput = {
   elemMatch?: InputMaybe<LocaleFilterInput>;
 };
@@ -1249,45 +1237,6 @@ export type LocaleFilterInput = {
   ns?: InputMaybe<StringQueryOperatorInput>;
   data?: InputMaybe<StringQueryOperatorInput>;
   fileAbsolutePath?: InputMaybe<StringQueryOperatorInput>;
-};
-
-export type MarkdownRemarkFieldsFilterInput = {
-  readingTime?: InputMaybe<MarkdownRemarkFieldsReadingTimeFilterInput>;
-  slug?: InputMaybe<StringQueryOperatorInput>;
-  collection?: InputMaybe<StringQueryOperatorInput>;
-  language?: InputMaybe<StringQueryOperatorInput>;
-};
-
-export type MarkdownRemarkFieldsReadingTimeFilterInput = {
-  text?: InputMaybe<StringQueryOperatorInput>;
-  minutes?: InputMaybe<FloatQueryOperatorInput>;
-  time?: InputMaybe<IntQueryOperatorInput>;
-  words?: InputMaybe<IntQueryOperatorInput>;
-};
-
-export type JsonQueryOperatorInput = {
-  eq?: InputMaybe<Scalars['JSON']>;
-  ne?: InputMaybe<Scalars['JSON']>;
-  in?: InputMaybe<Array<InputMaybe<Scalars['JSON']>>>;
-  nin?: InputMaybe<Array<InputMaybe<Scalars['JSON']>>>;
-  regex?: InputMaybe<Scalars['JSON']>;
-  glob?: InputMaybe<Scalars['JSON']>;
-};
-
-export type MarkdownHeadingFilterListInput = {
-  elemMatch?: InputMaybe<MarkdownHeadingFilterInput>;
-};
-
-export type MarkdownHeadingFilterInput = {
-  id?: InputMaybe<StringQueryOperatorInput>;
-  value?: InputMaybe<StringQueryOperatorInput>;
-  depth?: InputMaybe<IntQueryOperatorInput>;
-};
-
-export type MarkdownWordCountFilterInput = {
-  paragraphs?: InputMaybe<IntQueryOperatorInput>;
-  sentences?: InputMaybe<IntQueryOperatorInput>;
-  words?: InputMaybe<IntQueryOperatorInput>;
 };
 
 export type FileConnection = {
@@ -1388,46 +1337,6 @@ export type FileFieldsEnum =
   | 'childrenMarkdownRemark___frontmatter___tags'
   | 'childrenMarkdownRemark___frontmatter___language'
   | 'childrenMarkdownRemark___frontmatter___homepage_full_article'
-  | 'childrenMarkdownRemark___frontmatter___at'
-  | 'childrenMarkdownRemark___frontmatter___featuredImage___sourceInstanceName'
-  | 'childrenMarkdownRemark___frontmatter___featuredImage___absolutePath'
-  | 'childrenMarkdownRemark___frontmatter___featuredImage___relativePath'
-  | 'childrenMarkdownRemark___frontmatter___featuredImage___extension'
-  | 'childrenMarkdownRemark___frontmatter___featuredImage___size'
-  | 'childrenMarkdownRemark___frontmatter___featuredImage___prettySize'
-  | 'childrenMarkdownRemark___frontmatter___featuredImage___modifiedTime'
-  | 'childrenMarkdownRemark___frontmatter___featuredImage___accessTime'
-  | 'childrenMarkdownRemark___frontmatter___featuredImage___changeTime'
-  | 'childrenMarkdownRemark___frontmatter___featuredImage___birthTime'
-  | 'childrenMarkdownRemark___frontmatter___featuredImage___root'
-  | 'childrenMarkdownRemark___frontmatter___featuredImage___dir'
-  | 'childrenMarkdownRemark___frontmatter___featuredImage___base'
-  | 'childrenMarkdownRemark___frontmatter___featuredImage___ext'
-  | 'childrenMarkdownRemark___frontmatter___featuredImage___name'
-  | 'childrenMarkdownRemark___frontmatter___featuredImage___relativeDirectory'
-  | 'childrenMarkdownRemark___frontmatter___featuredImage___dev'
-  | 'childrenMarkdownRemark___frontmatter___featuredImage___mode'
-  | 'childrenMarkdownRemark___frontmatter___featuredImage___nlink'
-  | 'childrenMarkdownRemark___frontmatter___featuredImage___uid'
-  | 'childrenMarkdownRemark___frontmatter___featuredImage___gid'
-  | 'childrenMarkdownRemark___frontmatter___featuredImage___rdev'
-  | 'childrenMarkdownRemark___frontmatter___featuredImage___ino'
-  | 'childrenMarkdownRemark___frontmatter___featuredImage___atimeMs'
-  | 'childrenMarkdownRemark___frontmatter___featuredImage___mtimeMs'
-  | 'childrenMarkdownRemark___frontmatter___featuredImage___ctimeMs'
-  | 'childrenMarkdownRemark___frontmatter___featuredImage___atime'
-  | 'childrenMarkdownRemark___frontmatter___featuredImage___mtime'
-  | 'childrenMarkdownRemark___frontmatter___featuredImage___ctime'
-  | 'childrenMarkdownRemark___frontmatter___featuredImage___birthtime'
-  | 'childrenMarkdownRemark___frontmatter___featuredImage___birthtimeMs'
-  | 'childrenMarkdownRemark___frontmatter___featuredImage___blksize'
-  | 'childrenMarkdownRemark___frontmatter___featuredImage___blocks'
-  | 'childrenMarkdownRemark___frontmatter___featuredImage___publicURL'
-  | 'childrenMarkdownRemark___frontmatter___featuredImage___childrenMarkdownRemark'
-  | 'childrenMarkdownRemark___frontmatter___featuredImage___childrenImageSharp'
-  | 'childrenMarkdownRemark___frontmatter___featuredImage___childrenLocale'
-  | 'childrenMarkdownRemark___frontmatter___featuredImage___id'
-  | 'childrenMarkdownRemark___frontmatter___featuredImage___children'
   | 'childrenMarkdownRemark___excerpt'
   | 'childrenMarkdownRemark___rawMarkdownBody'
   | 'childrenMarkdownRemark___fileAbsolutePath'
@@ -1497,46 +1406,6 @@ export type FileFieldsEnum =
   | 'childMarkdownRemark___frontmatter___tags'
   | 'childMarkdownRemark___frontmatter___language'
   | 'childMarkdownRemark___frontmatter___homepage_full_article'
-  | 'childMarkdownRemark___frontmatter___at'
-  | 'childMarkdownRemark___frontmatter___featuredImage___sourceInstanceName'
-  | 'childMarkdownRemark___frontmatter___featuredImage___absolutePath'
-  | 'childMarkdownRemark___frontmatter___featuredImage___relativePath'
-  | 'childMarkdownRemark___frontmatter___featuredImage___extension'
-  | 'childMarkdownRemark___frontmatter___featuredImage___size'
-  | 'childMarkdownRemark___frontmatter___featuredImage___prettySize'
-  | 'childMarkdownRemark___frontmatter___featuredImage___modifiedTime'
-  | 'childMarkdownRemark___frontmatter___featuredImage___accessTime'
-  | 'childMarkdownRemark___frontmatter___featuredImage___changeTime'
-  | 'childMarkdownRemark___frontmatter___featuredImage___birthTime'
-  | 'childMarkdownRemark___frontmatter___featuredImage___root'
-  | 'childMarkdownRemark___frontmatter___featuredImage___dir'
-  | 'childMarkdownRemark___frontmatter___featuredImage___base'
-  | 'childMarkdownRemark___frontmatter___featuredImage___ext'
-  | 'childMarkdownRemark___frontmatter___featuredImage___name'
-  | 'childMarkdownRemark___frontmatter___featuredImage___relativeDirectory'
-  | 'childMarkdownRemark___frontmatter___featuredImage___dev'
-  | 'childMarkdownRemark___frontmatter___featuredImage___mode'
-  | 'childMarkdownRemark___frontmatter___featuredImage___nlink'
-  | 'childMarkdownRemark___frontmatter___featuredImage___uid'
-  | 'childMarkdownRemark___frontmatter___featuredImage___gid'
-  | 'childMarkdownRemark___frontmatter___featuredImage___rdev'
-  | 'childMarkdownRemark___frontmatter___featuredImage___ino'
-  | 'childMarkdownRemark___frontmatter___featuredImage___atimeMs'
-  | 'childMarkdownRemark___frontmatter___featuredImage___mtimeMs'
-  | 'childMarkdownRemark___frontmatter___featuredImage___ctimeMs'
-  | 'childMarkdownRemark___frontmatter___featuredImage___atime'
-  | 'childMarkdownRemark___frontmatter___featuredImage___mtime'
-  | 'childMarkdownRemark___frontmatter___featuredImage___ctime'
-  | 'childMarkdownRemark___frontmatter___featuredImage___birthtime'
-  | 'childMarkdownRemark___frontmatter___featuredImage___birthtimeMs'
-  | 'childMarkdownRemark___frontmatter___featuredImage___blksize'
-  | 'childMarkdownRemark___frontmatter___featuredImage___blocks'
-  | 'childMarkdownRemark___frontmatter___featuredImage___publicURL'
-  | 'childMarkdownRemark___frontmatter___featuredImage___childrenMarkdownRemark'
-  | 'childMarkdownRemark___frontmatter___featuredImage___childrenImageSharp'
-  | 'childMarkdownRemark___frontmatter___featuredImage___childrenLocale'
-  | 'childMarkdownRemark___frontmatter___featuredImage___id'
-  | 'childMarkdownRemark___frontmatter___featuredImage___children'
   | 'childMarkdownRemark___excerpt'
   | 'childMarkdownRemark___rawMarkdownBody'
   | 'childMarkdownRemark___fileAbsolutePath'
@@ -1970,6 +1839,53 @@ export type FileGroupConnectionGroupArgs = {
   skip?: InputMaybe<Scalars['Int']>;
   limit?: InputMaybe<Scalars['Int']>;
   field: FileFieldsEnum;
+};
+
+export type FileFilterInput = {
+  sourceInstanceName?: InputMaybe<StringQueryOperatorInput>;
+  absolutePath?: InputMaybe<StringQueryOperatorInput>;
+  relativePath?: InputMaybe<StringQueryOperatorInput>;
+  extension?: InputMaybe<StringQueryOperatorInput>;
+  size?: InputMaybe<IntQueryOperatorInput>;
+  prettySize?: InputMaybe<StringQueryOperatorInput>;
+  modifiedTime?: InputMaybe<DateQueryOperatorInput>;
+  accessTime?: InputMaybe<DateQueryOperatorInput>;
+  changeTime?: InputMaybe<DateQueryOperatorInput>;
+  birthTime?: InputMaybe<DateQueryOperatorInput>;
+  root?: InputMaybe<StringQueryOperatorInput>;
+  dir?: InputMaybe<StringQueryOperatorInput>;
+  base?: InputMaybe<StringQueryOperatorInput>;
+  ext?: InputMaybe<StringQueryOperatorInput>;
+  name?: InputMaybe<StringQueryOperatorInput>;
+  relativeDirectory?: InputMaybe<StringQueryOperatorInput>;
+  dev?: InputMaybe<IntQueryOperatorInput>;
+  mode?: InputMaybe<IntQueryOperatorInput>;
+  nlink?: InputMaybe<IntQueryOperatorInput>;
+  uid?: InputMaybe<IntQueryOperatorInput>;
+  gid?: InputMaybe<IntQueryOperatorInput>;
+  rdev?: InputMaybe<IntQueryOperatorInput>;
+  ino?: InputMaybe<FloatQueryOperatorInput>;
+  atimeMs?: InputMaybe<FloatQueryOperatorInput>;
+  mtimeMs?: InputMaybe<FloatQueryOperatorInput>;
+  ctimeMs?: InputMaybe<FloatQueryOperatorInput>;
+  atime?: InputMaybe<DateQueryOperatorInput>;
+  mtime?: InputMaybe<DateQueryOperatorInput>;
+  ctime?: InputMaybe<DateQueryOperatorInput>;
+  birthtime?: InputMaybe<DateQueryOperatorInput>;
+  birthtimeMs?: InputMaybe<FloatQueryOperatorInput>;
+  blksize?: InputMaybe<IntQueryOperatorInput>;
+  blocks?: InputMaybe<IntQueryOperatorInput>;
+  publicURL?: InputMaybe<StringQueryOperatorInput>;
+  childrenMarkdownRemark?: InputMaybe<MarkdownRemarkFilterListInput>;
+  childMarkdownRemark?: InputMaybe<MarkdownRemarkFilterInput>;
+  childrenImageSharp?: InputMaybe<ImageSharpFilterListInput>;
+  childImageSharp?: InputMaybe<ImageSharpFilterInput>;
+  childrenLocale?: InputMaybe<LocaleFilterListInput>;
+  childLocale?: InputMaybe<LocaleFilterInput>;
+  id?: InputMaybe<StringQueryOperatorInput>;
+  parent?: InputMaybe<NodeFilterInput>;
+  children?: InputMaybe<NodeFilterListInput>;
+  internal?: InputMaybe<InternalFilterInput>;
 };
 
 export type FileSortInput = {
@@ -3389,99 +3305,6 @@ export type MarkdownRemarkFieldsEnum =
   | 'frontmatter___tags'
   | 'frontmatter___language'
   | 'frontmatter___homepage_full_article'
-  | 'frontmatter___at'
-  | 'frontmatter___featuredImage___sourceInstanceName'
-  | 'frontmatter___featuredImage___absolutePath'
-  | 'frontmatter___featuredImage___relativePath'
-  | 'frontmatter___featuredImage___extension'
-  | 'frontmatter___featuredImage___size'
-  | 'frontmatter___featuredImage___prettySize'
-  | 'frontmatter___featuredImage___modifiedTime'
-  | 'frontmatter___featuredImage___accessTime'
-  | 'frontmatter___featuredImage___changeTime'
-  | 'frontmatter___featuredImage___birthTime'
-  | 'frontmatter___featuredImage___root'
-  | 'frontmatter___featuredImage___dir'
-  | 'frontmatter___featuredImage___base'
-  | 'frontmatter___featuredImage___ext'
-  | 'frontmatter___featuredImage___name'
-  | 'frontmatter___featuredImage___relativeDirectory'
-  | 'frontmatter___featuredImage___dev'
-  | 'frontmatter___featuredImage___mode'
-  | 'frontmatter___featuredImage___nlink'
-  | 'frontmatter___featuredImage___uid'
-  | 'frontmatter___featuredImage___gid'
-  | 'frontmatter___featuredImage___rdev'
-  | 'frontmatter___featuredImage___ino'
-  | 'frontmatter___featuredImage___atimeMs'
-  | 'frontmatter___featuredImage___mtimeMs'
-  | 'frontmatter___featuredImage___ctimeMs'
-  | 'frontmatter___featuredImage___atime'
-  | 'frontmatter___featuredImage___mtime'
-  | 'frontmatter___featuredImage___ctime'
-  | 'frontmatter___featuredImage___birthtime'
-  | 'frontmatter___featuredImage___birthtimeMs'
-  | 'frontmatter___featuredImage___blksize'
-  | 'frontmatter___featuredImage___blocks'
-  | 'frontmatter___featuredImage___publicURL'
-  | 'frontmatter___featuredImage___childrenMarkdownRemark'
-  | 'frontmatter___featuredImage___childrenMarkdownRemark___id'
-  | 'frontmatter___featuredImage___childrenMarkdownRemark___excerpt'
-  | 'frontmatter___featuredImage___childrenMarkdownRemark___rawMarkdownBody'
-  | 'frontmatter___featuredImage___childrenMarkdownRemark___fileAbsolutePath'
-  | 'frontmatter___featuredImage___childrenMarkdownRemark___html'
-  | 'frontmatter___featuredImage___childrenMarkdownRemark___htmlAst'
-  | 'frontmatter___featuredImage___childrenMarkdownRemark___excerptAst'
-  | 'frontmatter___featuredImage___childrenMarkdownRemark___headings'
-  | 'frontmatter___featuredImage___childrenMarkdownRemark___timeToRead'
-  | 'frontmatter___featuredImage___childrenMarkdownRemark___tableOfContents'
-  | 'frontmatter___featuredImage___childrenMarkdownRemark___children'
-  | 'frontmatter___featuredImage___childMarkdownRemark___id'
-  | 'frontmatter___featuredImage___childMarkdownRemark___excerpt'
-  | 'frontmatter___featuredImage___childMarkdownRemark___rawMarkdownBody'
-  | 'frontmatter___featuredImage___childMarkdownRemark___fileAbsolutePath'
-  | 'frontmatter___featuredImage___childMarkdownRemark___html'
-  | 'frontmatter___featuredImage___childMarkdownRemark___htmlAst'
-  | 'frontmatter___featuredImage___childMarkdownRemark___excerptAst'
-  | 'frontmatter___featuredImage___childMarkdownRemark___headings'
-  | 'frontmatter___featuredImage___childMarkdownRemark___timeToRead'
-  | 'frontmatter___featuredImage___childMarkdownRemark___tableOfContents'
-  | 'frontmatter___featuredImage___childMarkdownRemark___children'
-  | 'frontmatter___featuredImage___childrenImageSharp'
-  | 'frontmatter___featuredImage___childrenImageSharp___gatsbyImageData'
-  | 'frontmatter___featuredImage___childrenImageSharp___id'
-  | 'frontmatter___featuredImage___childrenImageSharp___children'
-  | 'frontmatter___featuredImage___childImageSharp___gatsbyImageData'
-  | 'frontmatter___featuredImage___childImageSharp___id'
-  | 'frontmatter___featuredImage___childImageSharp___children'
-  | 'frontmatter___featuredImage___childrenLocale'
-  | 'frontmatter___featuredImage___childrenLocale___id'
-  | 'frontmatter___featuredImage___childrenLocale___children'
-  | 'frontmatter___featuredImage___childrenLocale___language'
-  | 'frontmatter___featuredImage___childrenLocale___ns'
-  | 'frontmatter___featuredImage___childrenLocale___data'
-  | 'frontmatter___featuredImage___childrenLocale___fileAbsolutePath'
-  | 'frontmatter___featuredImage___childLocale___id'
-  | 'frontmatter___featuredImage___childLocale___children'
-  | 'frontmatter___featuredImage___childLocale___language'
-  | 'frontmatter___featuredImage___childLocale___ns'
-  | 'frontmatter___featuredImage___childLocale___data'
-  | 'frontmatter___featuredImage___childLocale___fileAbsolutePath'
-  | 'frontmatter___featuredImage___id'
-  | 'frontmatter___featuredImage___parent___id'
-  | 'frontmatter___featuredImage___parent___children'
-  | 'frontmatter___featuredImage___children'
-  | 'frontmatter___featuredImage___children___id'
-  | 'frontmatter___featuredImage___children___children'
-  | 'frontmatter___featuredImage___internal___content'
-  | 'frontmatter___featuredImage___internal___contentDigest'
-  | 'frontmatter___featuredImage___internal___description'
-  | 'frontmatter___featuredImage___internal___fieldOwners'
-  | 'frontmatter___featuredImage___internal___ignoreType'
-  | 'frontmatter___featuredImage___internal___mediaType'
-  | 'frontmatter___featuredImage___internal___owner'
-  | 'frontmatter___featuredImage___internal___type'
-  | 'frontmatter___featuredImage___internal___contentFilePath'
   | 'excerpt'
   | 'rawMarkdownBody'
   | 'fileAbsolutePath'
@@ -4085,13 +3908,6 @@ export type IndexPageQueryVariables = Exact<{
 
 export type IndexPageQuery = { locales: { edges: Array<{ node: { ns?: string | null, data?: string | null, language?: string | null } }> }, aboutMe?: { html?: string | null } | null, articles: { edges: Array<{ node: { html?: string | null, excerpt?: string | null, fields?: { slug?: string | null, language?: string | null, readingTime?: { minutes?: number | null } | null } | null, frontmatter?: { date?: any | null, title?: string | null, description?: string | null, tags?: Array<string | null> | null, homepage_full_article?: boolean | null } | null } }> } };
 
-export type TalksPageQueryVariables = Exact<{
-  language: Scalars['String'];
-}>;
-
-
-export type TalksPageQuery = { locales: { edges: Array<{ node: { ns?: string | null, data?: string | null, language?: string | null } }> }, talks: { byDate: Array<{ date?: string | null, edges: Array<{ node: { excerpt?: string | null, frontmatter?: { title?: string | null, description?: string | null, featuredImage?: { childImageSharp?: { gatsbyImageData: any } | null } | null } | null, fields?: { language?: string | null, slug?: string | null } | null } }> }> } };
-
 export type ArticlesTemplateQueryVariables = Exact<{
   slug: Scalars['String'];
   language: Scalars['String'];
@@ -4115,14 +3931,6 @@ export type TagsTemplateQueryVariables = Exact<{
 
 
 export type TagsTemplateQuery = { locales: { edges: Array<{ node: { ns?: string | null, data?: string | null, language?: string | null } }> }, articles: { totalCount: number, edges: Array<{ node: { excerpt?: string | null, fields?: { slug?: string | null, language?: string | null, readingTime?: { minutes?: number | null } | null } | null, frontmatter?: { date?: any | null, title?: string | null, tags?: Array<string | null> | null, description?: string | null } | null } }> } };
-
-export type TalksTemplateQueryVariables = Exact<{
-  slug: Scalars['String'];
-  language: Scalars['String'];
-}>;
-
-
-export type TalksTemplateQuery = { locales: { edges: Array<{ node: { ns?: string | null, data?: string | null, language?: string | null } }> }, page?: { html?: string | null, fields?: { language?: string | null } | null, frontmatter?: { title?: string | null } | null } | null };
 
 export type GatsbyCreatePageQueryVariables = Exact<{ [key: string]: never; }>;
 

@@ -1,9 +1,9 @@
 ---
-title: Workshop React - da web ao app!
-at: React Salvador
-date: '2018'
+title: Workshop no React Salvador - da web ao app!
+description: Palestra para meetup ReactSSA abordando uma breve introdução sobre React e React Native em parceria com o @lucianomlima
+date: '2018-04-10T22:12:03.284Z'
+tags: ['React', 'React-Native', 'Talks']
 language: pt
-featuredImage: thumb.jpeg
 ---
 
 Palestra para meetup ReactSSA abordando uma breve introdução sobre React e React Native em parceria com o @lucianomlima

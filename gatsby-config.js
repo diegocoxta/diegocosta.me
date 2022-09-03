@@ -6,7 +6,7 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-graphql-codegen',
       options: {
-        codegen: true,
+        codegen: false,
         documentPaths: ['./src/**/*.{ts,tsx,js,jsx}', './gatsby/**/*.{ts,tsx,js,jsx}'],
       },
     },
@@ -37,13 +37,6 @@ module.exports = {
       options: {
         path: `${__dirname}/content/pages`,
         name: 'pages',
-      },
-    },
-    {
-      resolve: 'gatsby-source-filesystem',
-      options: {
-        path: `${__dirname}/content/talks`,
-        name: 'talks',
       },
     },
     {

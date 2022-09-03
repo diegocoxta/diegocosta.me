@@ -7,7 +7,7 @@ module.exports = async ({ node, actions, getNode }) => {
 
     actions.createNodeField({
       name: 'slug',
-      value: getSlugWithoutFile(createFilePath({ node, getNode }), sourceInstanceName),
+      value: getSlugWithoutFile(createFilePath({ node, getNode })),
       node,
     });
 

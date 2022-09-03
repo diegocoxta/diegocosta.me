@@ -10,6 +10,6 @@ Você pode encontrar mais sobre mim aqui:
 
 - [Linkedin](https://linkedin.com/in/diegoscosta)
 - [Github](https://github.com/diegocosta)
-- [Talks](/pt/talks)
+- [Talks](/pt/tags/talks)
 - [Twitter](https://twitter.com/diegocoxta)
 - [E-mail](mailto:diego@diegocosta.me)
