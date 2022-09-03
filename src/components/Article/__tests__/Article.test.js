@@ -122,7 +122,7 @@ describe('<Article />', () => {
         readingTime={5}
         language="pt"
         date="2020-01-18T22:12:03.284Z"
-        mdxContent="Article as a Children"
+        content="Article as a Children"
       />
     );
 
@@ -138,7 +138,7 @@ describe('<Article />', () => {
         readingTime={5}
         language="pt"
         date="2020-01-18T22:12:03.284Z"
-        description="Article as a Children"
+        content="Article as a Children"
       />
     );
 

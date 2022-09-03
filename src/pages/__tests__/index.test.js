@@ -6,9 +6,9 @@ jest.mock('../../components/Footer', () => () => <p>Footer</p>);
 jest.mock('../../components/Metatags', () => () => <p>Metatags</p>);
 jest.mock('../../components/Search', () => () => <p>Search</p>);
 
-import IndexTemplate from '../index';
+import IndexPage from '../index';
 
-describe('<IndexTemplate>', () => {
+describe('<IndexPage>', () => {
   it('renders properly', () => {
     const data = {
       articles: {
@@ -54,7 +54,7 @@ describe('<IndexTemplate>', () => {
       },
     };
 
-    const { baseElement, getAllByTestId, getByText } = render(<IndexTemplate data={data} />);
+    const { baseElement, getAllByTestId, getByText } = render(<IndexPage data={data} />);
     expect(getAllByTestId('article-item').length).toEqual(2);
     expect(getByText('Awesome second article')).toBeTruthy();
     expect(getByText('Awesome first article')).toBeTruthy();

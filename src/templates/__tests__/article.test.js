@@ -5,9 +5,9 @@ jest.mock('../../components/Header', () => () => <p>Header</p>);
 jest.mock('../../components/Footer', () => () => <p>Footer</p>);
 jest.mock('../../components/Metatags', () => () => <p>Metatags</p>);
 
-import ArticleTemplate from '../article';
+import ArticlesTemplate from '../articles';
 
-describe('<ArticleTemplate>', () => {
+describe('<ArticlesTemplate>', () => {
   it('renders properly', () => {
     const props = {
       pageContext: {
@@ -29,12 +29,12 @@ describe('<ArticleTemplate>', () => {
             },
           },
           excerpt: 'Awesome first article',
-          body: 'Post content',
+          html: 'Post content',
         },
       },
     };
 
-    const { baseElement, getByText } = render(<ArticleTemplate {...props} />);
+    const { baseElement, getByText } = render(<ArticlesTemplate {...props} />);
     expect(getByText('Post content')).toBeTruthy();
     expect(baseElement).toMatchSnapshot();
   });

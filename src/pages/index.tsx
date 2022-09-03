@@ -8,22 +8,22 @@ import Search from '~/components/Search';
 import Article from '~/components/Article';
 import Divisor from '~/components/Divisor';
 
-import { IndexTemplateQuery } from '~/../graphql-types';
+import { IndexPageQuery } from '~/../graphql-types';
 
-interface IndexTemplateProps extends PageRendererProps {
-  data: IndexTemplateQuery;
+interface IndexPageProps extends PageRendererProps {
+  data: IndexPageQuery;
 }
 
-export default function IndexTemplate({ data }: IndexTemplateProps): React.ReactElement {
+export default function IndexPage({ data }: IndexPageProps): React.ReactElement {
   const { articles, aboutMe } = data;
 
   return (
     <Layout>
       <Metatags />
-      <AboutMe mdxContent={aboutMe?.body || ''} />
+      <AboutMe content={aboutMe?.html || ''} />
       <Divisor />
       <Search />
-      {articles.edges.map(({ node: { frontmatter, fields, excerpt, body } }, index: number) => (
+      {articles.edges.map(({ node: { frontmatter, fields, excerpt, html } }, index: number) => (
         <Article
           key={`article-${index}`}
           title={frontmatter?.title ?? ''}
@@ -32,8 +32,7 @@ export default function IndexTemplate({ data }: IndexTemplateProps): React.React
           tags={frontmatter?.tags as string[]}
           readingTime={fields?.readingTime?.minutes ?? 0}
           language={fields?.language}
-          description={frontmatter?.homepage_full_article ? '' : frontmatter?.description || excerpt}
-          mdxContent={frontmatter?.homepage_full_article ? body : undefined}
+          content={frontmatter?.homepage_full_article ? html : frontmatter?.description || excerpt}
         />
       ))}
     </Layout>
@@ -41,7 +40,7 @@ export default function IndexTemplate({ data }: IndexTemplateProps): React.React
 }
 
 export const pageQuery = graphql`
-  query IndexTemplate($language: String!) {
+  query IndexPage($language: String!) {
     locales: allLocale(filter: { language: { eq: $language } }) {
       edges {
         node {
@@ -51,16 +50,16 @@ export const pageQuery = graphql`
         }
       }
     }
-    aboutMe: mdx(fields: { slug: { eq: "/home/" }, language: { eq: $language } }) {
-      body
+    aboutMe: markdownRemark(fields: { slug: { eq: "/home/" }, language: { eq: $language } }) {
+      html
     }
-    articles: allMdx(
+    articles: allMarkdownRemark(
       sort: { fields: [frontmatter___date], order: DESC }
       filter: { fields: { collection: { eq: "articles" } } }
     ) {
       edges {
         node {
-          body
+          html
           excerpt
           fields {
             slug

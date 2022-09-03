@@ -1,4 +1,4 @@
-import { getNodeLangCode, getSlugWithoutFile, siteMetadata } from '../utils';
+import { getNodeLangCode, siteMetadata, getSlugWithoutFile } from '../utils';
 
 describe('getNodeLangCode', () => {
   it('returns the correct language code', () => {

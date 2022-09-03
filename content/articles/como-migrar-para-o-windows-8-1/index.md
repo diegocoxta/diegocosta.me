@@ -3,6 +3,7 @@ title: Como migrar para o Windows 8.1 a partir de uma nova instalação do Windo
 date: '2015-11-20T22:12:03.284Z'
 description: Quem já precisou formatar um PC e acabou caindo no Windows 8 sabe como é uma dor de cabeça realizar o upgrade para o Windows 8.1.
 tags: ['Windows']
+language: pt
 ---
 
 Quem já precisou formatar um PC e acabou caindo no Windows 8 sabe como é uma dor de cabeça realizar o upgrade para o Windows 8.1. Para me auxiliar nessa tarefa em um futuro não muito distante e até mesmo ajudar pessoas que apresentem o mesmo problema criei este pequeno guia.

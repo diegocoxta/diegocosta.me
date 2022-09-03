@@ -1,14 +1,9 @@
 import React from 'react';
 import { createGlobalStyle, ThemeContext } from 'styled-components';
-import { MDXProvider } from '@mdx-js/react';
 
 import Header from '~/components/Header';
 import LanguageSwitcher from '~/components/LanguageSwitcher';
 import Footer from '~/components/Footer';
-
-import Talk from '~/components/Talk';
-import Divisor from '~/components/Divisor';
-import YoutubeVideo from '~/components/YoutubeVideo';
 
 import { useTheme } from '~/hooks/useTheme';
 import { dark, light } from '~/themes';
@@ -19,7 +14,7 @@ const GlobalStyle = createGlobalStyle<{ theme: CustomTheme }>`
   body {
     background: ${({ theme }) => theme.backgroundColor};
     font-family: 'Raleway', sans-serif;
-    color: #fff;
+    color: ${({ theme }) => theme.textColor};
     margin: 0;
     padding: 0;
   }
@@ -34,20 +29,12 @@ export default function Layout(props: LayoutProps): React.ReactElement {
 
   const themeMode = theme === 'light' ? light : dark;
 
-  const mdxComponents = {
-    Talk,
-    Divisor,
-    YoutubeVideo,
-  };
-
   return (
     <ThemeContext.Provider value={{ ...themeMode, theme, themeToggler }}>
       <GlobalStyle />
       <LanguageSwitcher />
       <Header />
-      <MDXProvider components={{ ...mdxComponents }}>
-        <main>{props.children}</main>
-      </MDXProvider>
+      <main>{props.children}</main>
       <Footer />
     </ThemeContext.Provider>
   );
