@@ -9,9 +9,17 @@ exports[`<TagHeader /> renders properly 1`] = `
 
 .c1 {
   font-size: 28px;
-  display: inline-block;
+  border-bottom: 5px solid;
   padding: 5px;
   margin: 40px 0 20px 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
 }
 
 <body>
@@ -24,9 +32,6 @@ exports[`<TagHeader /> renders properly 1`] = `
           class="c1"
         >
           John Doe
-           (
-          0
-          )
         </h1>
       </main>
     </section>

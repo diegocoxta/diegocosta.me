@@ -25,7 +25,7 @@ export default function Tags({ data, pageContext }: TagsTemplateProps): React.Re
     <Layout>
       <Metatags title={`${i18n.getTranslationFor('tagsTemplate.titlePrefix')} ${pageContext.tag}`} />
       <Divisor />
-      <TagHeader name={pageContext.tag ?? ''} count={articles.totalCount} />
+      <TagHeader name={pageContext.tag ?? ''} />
       {articles.edges.map(({ node: { frontmatter, fields, excerpt } }, index) => (
         <Article
           key={`article-${index}`}
@@ -57,7 +57,6 @@ export const pageQuery = graphql`
       sort: { fields: [frontmatter___date], order: DESC }
       filter: { frontmatter: { tags: { in: [$tag] } } }
     ) {
-      totalCount
       edges {
         node {
           excerpt

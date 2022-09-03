@@ -59,7 +59,7 @@ describe('<TagsTemplate>', () => {
     expect(getAllByTestId('article-item').length).toEqual(data.articles.totalCount);
     expect(getByText('Awesome second article')).toBeTruthy();
     expect(getByText('Awesome first article')).toBeTruthy();
-    expect(getByText(`Tech Stuff (${data.articles.totalCount})`)).toBeTruthy();
+    expect(getByText(`Tech Stuff`)).toBeTruthy();
     expect(baseElement).toMatchSnapshot();
   });
 });
