@@ -20,6 +20,7 @@ Apresentação tendo como base os ensinamentos do Project Aristotle
   allowfullscreen
 ></iframe>
 
+<!--
 ### Anotações
 
 - Slide 4: Na literatura moderna, o que difere um time de um grupo de pessoas trabalhando em um projeto?
@@ -62,6 +63,7 @@ Como isso funciona? A autora defende que ao expor todas as opiniões em público
 A história do Projeto Aristóteles começa seis anos atrás, quando o Google – um dos maiores entusiastas da teoria de que o trabalho pode ser mais produtivo – dedicou-se à construção de uma equipe perfeita. Os altos executivos da empresa sempre acreditaram que, para isso, bastava combinar as melhores pessoas – as mentes mais brilhantes reunidas no mesmo time.
 
 Os pesquisadores começaram revendo meio século de estudos acadêmicos, em que observaram a evolução do trabalho em equipe. A partir disso, analisaram a composição dos grupos dentro do Google.
+-->
 
 ### Referências
 

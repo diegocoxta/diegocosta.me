@@ -20,6 +20,7 @@ Apresentação sobre disfunções em times com base no livro 'Os 5 desafios das 
   allowfullscreen
 ></iframe>
 
+<!--
 ### Anotações
 
 - Slide 4: Tudo começa com a falta de confiança entre os membros do time. isso vem da falta de vontade de cada um de se mostrar vulnerável dentro do grupo. Os membros da equipe que não se abrem com os outro sobre seus erros e fraquezas impossibilitam a criação de uma base de confiança.
@@ -33,6 +34,7 @@ Apresentação sobre disfunções em times com base no livro 'Os 5 desafios das 
 - Slide X: As melhores equipes tomam decisões claras e oportunas para seguir em frente e cada um dos seus integrantes concordam com ela, mesmo os que voltaram contra.
   As duas maiores causas de falta de comprometimento são o desejo de consejo (todos votarem na mesma ideia, não aceitar o discordo mas to dentro) e a necessidade de certeza, ter medo da decisão tomada seja a correta, incapacidade de assumir riscos.
 - Slide X: Não é culpar e penalizar as pessoas.
+-->
 
 ### Referências
 
