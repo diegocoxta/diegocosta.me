@@ -1,5 +1,5 @@
 ---
-title: Diferentes papeis nos times de produto digital | NuLab Meetup #4
+title: Diferentes papeis nos times de produto digital no NuLab Meetup 4
 description:
 date: '2022-05-25T22:12:03.284Z'
 tags: ['Management', 'Produtos', 'Gestão', 'Talks']
