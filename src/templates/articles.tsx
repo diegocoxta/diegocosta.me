@@ -16,8 +16,6 @@ export default function ArticlesTemplate(props: ArticlesTemplateProps): React.Re
   const { html, excerpt, frontmatter, fields } = props.data.article ?? {};
   const { title, date, tags, description } = frontmatter ?? {};
 
-  console.log(props);
-
   return (
     <Layout>
       <Metatags title={title ?? ''} description={description || excerpt || ''} />
