@@ -74,7 +74,6 @@ describe('<Search />', () => {
       expect(getAllByTestId('search-results-link')[index].href).toContain(article.item.fields.slug);
     });
 
-    expect(_MOCKED_COMBOBOX.getComboboxProps).toHaveBeenCalledTimes(1);
     expect(_MOCKED_COMBOBOX.getLabelProps).toHaveBeenCalledTimes(1);
     expect(_MOCKED_COMBOBOX.getMenuProps).toHaveBeenCalledTimes(1);
     expect(_MOCKED_COMBOBOX.getItemProps).toHaveBeenCalledTimes(3);

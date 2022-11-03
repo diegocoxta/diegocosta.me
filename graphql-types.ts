@@ -418,8 +418,8 @@ export type MarkdownRemarkTableOfContentsArgs = {
 
 export type MarkdownRemarkFrontmatter = {
   title?: Maybe<Scalars['String']>;
-  date?: Maybe<Scalars['Date']>;
   description?: Maybe<Scalars['String']>;
+  date?: Maybe<Scalars['Date']>;
   tags?: Maybe<Array<Maybe<Scalars['String']>>>;
   language?: Maybe<Scalars['String']>;
   homepage_full_article?: Maybe<Scalars['Boolean']>;
@@ -1082,8 +1082,8 @@ export type MarkdownRemarkFilterInput = {
 
 export type MarkdownRemarkFrontmatterFilterInput = {
   title?: InputMaybe<StringQueryOperatorInput>;
-  date?: InputMaybe<DateQueryOperatorInput>;
   description?: InputMaybe<StringQueryOperatorInput>;
+  date?: InputMaybe<DateQueryOperatorInput>;
   tags?: InputMaybe<StringQueryOperatorInput>;
   language?: InputMaybe<StringQueryOperatorInput>;
   homepage_full_article?: InputMaybe<BooleanQueryOperatorInput>;
@@ -1332,8 +1332,8 @@ export type FileFieldsEnum =
   | 'childrenMarkdownRemark'
   | 'childrenMarkdownRemark___id'
   | 'childrenMarkdownRemark___frontmatter___title'
-  | 'childrenMarkdownRemark___frontmatter___date'
   | 'childrenMarkdownRemark___frontmatter___description'
+  | 'childrenMarkdownRemark___frontmatter___date'
   | 'childrenMarkdownRemark___frontmatter___tags'
   | 'childrenMarkdownRemark___frontmatter___language'
   | 'childrenMarkdownRemark___frontmatter___homepage_full_article'
@@ -1401,8 +1401,8 @@ export type FileFieldsEnum =
   | 'childrenMarkdownRemark___internal___contentFilePath'
   | 'childMarkdownRemark___id'
   | 'childMarkdownRemark___frontmatter___title'
-  | 'childMarkdownRemark___frontmatter___date'
   | 'childMarkdownRemark___frontmatter___description'
+  | 'childMarkdownRemark___frontmatter___date'
   | 'childMarkdownRemark___frontmatter___tags'
   | 'childMarkdownRemark___frontmatter___language'
   | 'childMarkdownRemark___frontmatter___homepage_full_article'
@@ -3300,8 +3300,8 @@ export type MarkdownRemarkEdge = {
 export type MarkdownRemarkFieldsEnum =
   | 'id'
   | 'frontmatter___title'
-  | 'frontmatter___date'
   | 'frontmatter___description'
+  | 'frontmatter___date'
   | 'frontmatter___tags'
   | 'frontmatter___language'
   | 'frontmatter___homepage_full_article'
@@ -3930,7 +3930,7 @@ export type TagsTemplateQueryVariables = Exact<{
 }>;
 
 
-export type TagsTemplateQuery = { locales: { edges: Array<{ node: { ns?: string | null, data?: string | null, language?: string | null } }> }, articles: { totalCount: number, edges: Array<{ node: { excerpt?: string | null, fields?: { slug?: string | null, language?: string | null, readingTime?: { minutes?: number | null } | null } | null, frontmatter?: { date?: any | null, title?: string | null, tags?: Array<string | null> | null, description?: string | null } | null } }> } };
+export type TagsTemplateQuery = { locales: { edges: Array<{ node: { ns?: string | null, data?: string | null, language?: string | null } }> }, articles: { edges: Array<{ node: { excerpt?: string | null, fields?: { slug?: string | null, language?: string | null, readingTime?: { minutes?: number | null } | null } | null, frontmatter?: { date?: any | null, title?: string | null, tags?: Array<string | null> | null, description?: string | null } | null } }> } };
 
 export type GatsbyCreatePageQueryVariables = Exact<{ [key: string]: never; }>;
 
