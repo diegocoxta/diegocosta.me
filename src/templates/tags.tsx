@@ -54,7 +54,7 @@ export const pageQuery = graphql`
       }
     }
     articles: allMarkdownRemark(
-      sort: { fields: [frontmatter___date], order: DESC }
+      sort: { frontmatter: { date: DESC } }
       filter: { frontmatter: { tags: { in: [$tag] } } }
     ) {
       edges {

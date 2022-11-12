@@ -60,7 +60,7 @@ const Results = styled.div`
   box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.1);
 `;
 
-const ResultLink = styled(Link) <{ highlighted: boolean }>`
+const ResultLink = styled(Link)<{ highlighted: boolean }>`
   display: block;
   text-decoration: none;
   padding: 20px;
