@@ -14,7 +14,7 @@ interface ArticlesTemplateProps extends PageRendererProps {
 
 export default function ArticlesTemplate(props: ArticlesTemplateProps): React.ReactElement {
   const { html, excerpt, frontmatter, fields } = props.data.article ?? {};
-  const { title, date, tags, description } = frontmatter ?? {};
+  const { title, date, tags, description, category } = frontmatter ?? {};
 
   return (
     <Layout>
@@ -24,6 +24,7 @@ export default function ArticlesTemplate(props: ArticlesTemplateProps): React.Re
         title={title ?? ''}
         date={date}
         tags={tags as string[]}
+        category={category}
         readingTime={fields?.readingTime?.minutes ?? 0}
         language={fields?.language}
         content={html}
@@ -57,6 +58,7 @@ export const pageQuery = graphql`
         date
         description
         tags
+        category
       }
     }
   }

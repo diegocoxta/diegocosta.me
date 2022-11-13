@@ -21,6 +21,14 @@ const Title = styled.h2`
   margin: 0;
 `;
 
+const Category = styled.span`
+  background: ${({ theme }) => theme.accentColor};
+  padding: 2px 10px;
+  margin: 0px 10px 0 0;
+  color: #ffffff;
+  border-radius: 5px;
+`;
+
 const CustomLink = styled(Link)`
   color: ${({ theme }) => theme.titleColor};
   box-shadow: none;
@@ -105,6 +113,7 @@ export interface ArticleProps {
   tags?: string[] | null;
   content?: string | null;
   showArticleDetails?: boolean;
+  category?: string | null;
 }
 
 export default function Article(props: ArticleProps): React.ReactElement {
@@ -162,6 +171,7 @@ export default function Article(props: ArticleProps): React.ReactElement {
       <Content data-testid="article-item">
         <Header>
           <Title>
+            {props.category && <Category>{props.category}</Category>}
             {props.url ? (
               <CustomLink to={props.url} data-testid="article-header-custom-link">
                 {props.title}

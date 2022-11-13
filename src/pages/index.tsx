@@ -28,6 +28,7 @@ export default function IndexPage({ data }: IndexPageProps): React.ReactElement 
           key={`article-${index}`}
           title={frontmatter?.title ?? ''}
           date={frontmatter?.date}
+          category={frontmatter?.category}
           url={fields?.slug}
           tags={frontmatter?.tags as string[]}
           readingTime={fields?.readingTime?.minutes ?? 0}
@@ -74,6 +75,7 @@ export const pageQuery = graphql`
             description
             tags
             homepage_full_article
+            category
           }
         }
       }
