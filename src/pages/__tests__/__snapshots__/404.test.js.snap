@@ -21,7 +21,7 @@ exports[`<NotFoundPage> renders properly 1`] = `
 
 .c2 {
   margin: 0 5px;
-  color: #0C0D0E;
+  color: #2F3D4F;
   font-weight: 700;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -29,7 +29,7 @@ exports[`<NotFoundPage> renders properly 1`] = `
 }
 
 .c3 {
-  background: linear-gradient(90deg,#FFFFFF 20px,transparent 1%) center, linear-gradient(#FFFFFF 20px,transparent 1%) center, #0C0D0E;
+  background: linear-gradient(90deg,#EDF0F1 20px,transparent 1%) center, linear-gradient(#EDF0F1 20px,transparent 1%) center, #2F3D4F;
   background-size: 22px 22px;
   height: 120px;
   margin: 40px 0;
@@ -39,7 +39,7 @@ exports[`<NotFoundPage> renders properly 1`] = `
 .c4 {
   margin: 0 0 60px 0;
   font-weight: 400;
-  color: #0C0D0E;
+  color: #2F3D4F;
 }
 
 .c5 {
@@ -56,20 +56,20 @@ exports[`<NotFoundPage> renders properly 1`] = `
 }
 
 .c7 a {
-  color: #728567;
+  color: #E9702D;
   -webkit-text-decoration: none;
   text-decoration: none;
-  border-bottom: 1px solid #FFFFFF;
+  border-bottom: 1px solid #EDF0F1;
 }
 
 .c7 a:hover,
 .c7 a:focus {
-  border-bottom: 1px solid #728567;
+  border-bottom: 1px solid #E9702D;
   outline: none;
 }
 
 .c7 blockquote {
-  border-left: 5px solid #728567;
+  border-left: 5px solid #E9702D;
   padding-left: 20px;
 }
 

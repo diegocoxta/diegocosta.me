@@ -1,4 +1,4 @@
-export default {
+const colors = {
   AMBER: '#E5A53B',
   BROWN: '#7C5B34',
   COBALT: '#1B56E6',
@@ -19,4 +19,14 @@ export default {
   TEAL: '#4BA8A8',
   VIOLET: '#9B31F6',
   YELLOW: '#D4C03F',
+  TAUPE: '#87794E',
+  CLOUDS: '#EDF0F1',
+  MIDNIGHTBLUE: '#2F3D4F',
+  WETASPHALT: '#38485D',
+  SILVER: '#BEC3C7',
+  BLACK: '#0C0D0E',
 };
+
+export const accent = colors.ORANGE;
+
+export default colors;

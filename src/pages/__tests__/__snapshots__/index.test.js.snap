@@ -21,7 +21,7 @@ exports[`<IndexPage> renders properly 1`] = `
 
 .c2 {
   margin: 0 5px;
-  color: #0C0D0E;
+  color: #2F3D4F;
   font-weight: 700;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -31,7 +31,7 @@ exports[`<IndexPage> renders properly 1`] = `
 .c3 p {
   font-size: 18px;
   line-height: 1.4;
-  color: #0C0D0E;
+  color: #2F3D4F;
 }
 
 .c3 ul {
@@ -49,7 +49,7 @@ exports[`<IndexPage> renders properly 1`] = `
 .c3 li a {
   -webkit-text-decoration: none;
   text-decoration: none;
-  color: #0C0D0E;
+  color: #2F3D4F;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -61,19 +61,19 @@ exports[`<IndexPage> renders properly 1`] = `
 .c3 li a:after {
   content: '.';
   display: block;
-  color: #FFFFFF;
+  color: #EDF0F1;
   font-size: 38px;
   line-height: 0.2;
 }
 
 .c3 li a:hover:after {
-  color: #0C0D0E;
+  color: #2F3D4F;
 }
 
 .c5 {
   margin: 0 0 60px 0;
   font-weight: 400;
-  color: #0C0D0E;
+  color: #2F3D4F;
 }
 
 .c6 {
@@ -86,7 +86,7 @@ exports[`<IndexPage> renders properly 1`] = `
 }
 
 .c8 {
-  color: #0C0D0E;
+  color: #2F3D4F;
   box-shadow: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -94,7 +94,7 @@ exports[`<IndexPage> renders properly 1`] = `
 
 .c8:hover,
 .c8:focus {
-  border-bottom: 1px solid #0C0D0E;
+  border-bottom: 1px solid #2F3D4F;
   outline: none;
 }
 
@@ -111,7 +111,7 @@ exports[`<IndexPage> renders properly 1`] = `
 }
 
 .c9 {
-  color: #737373;
+  color: #38485D;
   font-size: 18px;
   margin: 5px 0;
 }
@@ -121,20 +121,20 @@ exports[`<IndexPage> renders properly 1`] = `
 }
 
 .c11 a {
-  color: #728567;
+  color: #E9702D;
   -webkit-text-decoration: none;
   text-decoration: none;
-  border-bottom: 1px solid #FFFFFF;
+  border-bottom: 1px solid #EDF0F1;
 }
 
 .c11 a:hover,
 .c11 a:focus {
-  border-bottom: 1px solid #728567;
+  border-bottom: 1px solid #E9702D;
   outline: none;
 }
 
 .c11 blockquote {
-  border-left: 5px solid #728567;
+  border-left: 5px solid #E9702D;
   padding-left: 20px;
 }
 
@@ -147,7 +147,7 @@ exports[`<IndexPage> renders properly 1`] = `
 }
 
 .c4 {
-  background: linear-gradient(90deg,#FFFFFF 20px,transparent 1%) center, linear-gradient(#FFFFFF 20px,transparent 1%) center, #0C0D0E;
+  background: linear-gradient(90deg,#EDF0F1 20px,transparent 1%) center, linear-gradient(#EDF0F1 20px,transparent 1%) center, #2F3D4F;
   background-size: 22px 22px;
   height: 120px;
   margin: 40px 0;
