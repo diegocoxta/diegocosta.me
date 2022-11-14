@@ -25,8 +25,9 @@ const colors = {
   WETASPHALT: '#38485D',
   SILVER: '#BEC3C7',
   BLACK: '#0C0D0E',
+  REVOLUTION: '#CC433C',
 };
 
-export const accent = colors.ORANGE;
+export const accent = colors.REVOLUTION;
 
 export default colors;
