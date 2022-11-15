@@ -1,12 +1,14 @@
 import React from 'react';
 import styled from 'styled-components';
-import kebabCase from 'lodash.kebabcase';
 
-import { usei18n, Link } from '~/utils/i18n';
+import { usei18n } from '~/utils/i18n';
 
 import FixedContainer from '~/components/FixedContainer';
 
-const Content = styled.article`
+import Title, { TitleProps } from './components/Title';
+import Tags, { TagsProps } from './components/Tags';
+
+const Container = styled.article`
   margin: 0 0 60px 0;
   font-weight: 400;
   color: ${({ theme }) => theme.textColor};
@@ -16,66 +18,13 @@ const Header = styled.header`
   margin: 20px 0 0 0;
 `;
 
-const Title = styled.h2`
-  font-size: 36px;
-  margin: 0;
-`;
-
-const Category = styled.span`
-  background: ${({ theme }) => theme.accentColor};
-  padding: 2px 10px;
-  margin: 0px 10px 0 0;
-  color: #ffffff;
-  border-radius: 5px;
-`;
-
-const CustomLink = styled(Link)`
-  color: ${({ theme }) => theme.titleColor};
-  box-shadow: none;
-  text-decoration: none;
-
-  :hover,
-  :focus {
-    border-bottom: 1px solid ${({ theme }) => theme.titleColor};
-    outline: none;
-  }
-`;
-
-const TagLink = styled(Link)`
-  text-decoration: none;
-  box-shadow: none;
-  font-size: 14px;
-  color: ${({ theme }) => theme.accentColor};
-  font-weight: 700;
-  text-transform: lowercase;
-
-  :hover,
-  :focus {
-    border-bottom: 1px solid ${({ theme }) => theme.accentColor};
-    outline: none;
-  }
-`;
-
-const TagList = styled.ul`
-  display: flex;
-  flex-wrap: wrap;
-  margin-bottom: 0;
-  padding: 0;
-`;
-
-const TagItem = styled.li`
-  list-style: none;
-  padding: 0 10px 0 0;
-  margin-bottom: 5px;
-`;
-
-const Details = styled.p`
+const MetaAttributes = styled.p`
   color: ${({ theme }) => theme.subtitleColor};
   font-size: 18px;
   margin: 5px 0;
 `;
 
-export const Body = styled.section`
+export const Content = styled.section`
   line-height: 1.5;
 
   a {
@@ -104,17 +53,14 @@ export const Body = styled.section`
   }
 `;
 
-export interface ArticleProps {
-  title: string;
-  url?: string | null;
-  readingTime?: number;
-  language?: string | null;
-  date?: string;
-  tags?: string[] | null;
-  content?: string | null;
-  showArticleDetails?: boolean;
-  category?: string | null;
-}
+export type ArticleProps = TitleProps &
+  TagsProps & {
+    readingTime?: number;
+    language?: string | null;
+    date?: string;
+    content?: string | null;
+    showArticleMetaAttributes?: boolean;
+  };
 
 export default function Article(props: ArticleProps): React.ReactElement {
   const i18n = usei18n();
@@ -131,10 +77,10 @@ export default function Article(props: ArticleProps): React.ReactElement {
     const minutes = i18n.getTranslationFor('article.minutes');
 
     if (props.readingTime < 1) {
-      return ` · ${lessThan1Minute} ${ofReading}`;
+      return `· ${lessThan1Minute} ${ofReading}`;
     }
 
-    return ` · ${props.readingTime?.toFixed()} ${minutes} ${ofReading}`;
+    return `· ${props.readingTime?.toFixed()} ${minutes} ${ofReading}`;
   };
 
   const date =
@@ -153,46 +99,31 @@ export default function Article(props: ArticleProps): React.ReactElement {
     const languagePrefix = i18n.getTranslationFor('article.languagePrefix');
     const languageName = i18n.getTranslationFor(`languages.${props.language}`);
 
-    return ` · ${languagePrefix} ${languageName}`;
+    return `· ${languagePrefix} ${languageName}`;
   };
 
-  const Tags = props.showArticleDetails && props.tags && (
-    <TagList data-testid="article-header-tags">
-      {props.tags.map((tag: string, index: number) => (
-        <TagItem key={`${index}-${tag}`} data-testid="article-header-tag">
-          <TagLink to={`/tags/${kebabCase(tag ?? '')}`}>#{kebabCase(tag ?? '')}</TagLink>
-        </TagItem>
-      ))}
-    </TagList>
-  );
+  const talkLabel = props.tags?.includes('Talks') ? 'Talk' : undefined;
 
   return (
     <FixedContainer>
-      <Content data-testid="article-item">
+      <Container data-testid="article-item">
         <Header>
-          <Title>
-            {props.category && <Category>{props.category}</Category>}
-            {props.url ? (
-              <CustomLink to={props.url} data-testid="article-header-custom-link">
-                {props.title}
-              </CustomLink>
-            ) : (
-              props.title
-            )}
-          </Title>
-          {props.showArticleDetails && (
-            <Details>
-              {date} {getReadingTime()} {language()}
-            </Details>
+          <Title title={props.title} url={props.url} label={talkLabel} />
+          {props.showArticleMetaAttributes && (
+            <>
+              <MetaAttributes>
+                {date} {getReadingTime()} {language()}
+              </MetaAttributes>
+              <Tags tags={props.tags} />
+            </>
           )}
-          {Tags}
         </Header>
-        {props.content && <Body dangerouslySetInnerHTML={{ __html: props.content }} />}
-      </Content>
+        {props.content && <Content dangerouslySetInnerHTML={{ __html: props.content }} />}
+      </Container>
     </FixedContainer>
   );
 }
 
 Article.defaultProps = {
-  showArticleDetails: true,
+  showArticleMetaAttributes: true,
 };

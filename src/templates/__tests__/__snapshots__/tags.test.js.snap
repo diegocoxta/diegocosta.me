@@ -36,6 +36,34 @@ exports[`<TagsTemplate> renders properly 1`] = `
   width: 100%;
 }
 
+.c7 {
+  color: #2F3D4F;
+  box-shadow: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: 36px;
+  margin: 0;
+  font-weight: bold;
+}
+
+.c7:hover,
+.c7:focus {
+  border-bottom: 1px solid #2F3D4F;
+  outline: none;
+}
+
+.c9 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  padding: 0;
+  margin: 0;
+}
+
 .c5 {
   margin: 0 0 60px 0;
   font-weight: 400;
@@ -46,85 +74,50 @@ exports[`<TagsTemplate> renders properly 1`] = `
   margin: 20px 0 0 0;
 }
 
-.c7 {
-  font-size: 36px;
-  margin: 0;
-}
-
 .c8 {
-  color: #2F3D4F;
-  box-shadow: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.c8:hover,
-.c8:focus {
-  border-bottom: 1px solid #2F3D4F;
-  outline: none;
-}
-
-.c10 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  margin-bottom: 0;
-  padding: 0;
-}
-
-.c9 {
   color: #38485D;
   font-size: 18px;
   margin: 5px 0;
 }
 
-.c11 {
+.c10 {
   line-height: 1.5;
 }
 
-.c11 a {
-  color: #E9702D;
+.c10 a {
+  color: #CC433C;
   -webkit-text-decoration: none;
   text-decoration: none;
   border-bottom: 1px solid #EDF0F1;
 }
 
-.c11 a:hover,
-.c11 a:focus {
-  border-bottom: 1px solid #E9702D;
+.c10 a:hover,
+.c10 a:focus {
+  border-bottom: 1px solid #CC433C;
   outline: none;
 }
 
-.c11 blockquote {
-  border-left: 5px solid #E9702D;
+.c10 blockquote {
+  border-left: 5px solid #CC433C;
   padding-left: 20px;
 }
 
-.c11 img {
+.c10 img {
   box-shadow: none !important;
 }
 
-.c11 h3 {
+.c10 h3 {
   font-size: 28px;
 }
 
 .c4 {
-  font-size: 28px;
-  border-bottom: 5px solid #E9702D;
-  padding: 5px;
-  margin: 40px 0 20px 0;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
+  display: inline-block;
+  background: #CC433C;
+  padding: 2px 10px;
+  margin: 0px 10px 30px 0;
+  color: #fff;
+  border-radius: 5px;
+  font-size: 48px;
 }
 
 <body>
@@ -196,32 +189,28 @@ exports[`<TagsTemplate> renders properly 1`] = `
             <header
               class="c6"
             >
-              <h2
+              <a
                 class="c7"
+                data-testid="article-header-title"
+                href="/path-to-article"
               >
-                <a
-                  class="c8"
-                  data-testid="article-header-custom-link"
-                  href="/path-to-article"
-                >
-                  Title 1
-                </a>
-              </h2>
+                Title 1
+              </a>
               <p
-                class="c9"
+                class="c8"
               >
                 Invalid Date
                  
-                 · 5 article.minutes article.ofReading
+                · 5 article.minutes article.ofReading
                  
               </p>
               <ul
-                class="c10"
+                class="c9"
                 data-testid="article-header-tags"
               />
             </header>
             <section
-              class="c11"
+              class="c10"
             >
               Awesome first article
             </section>
@@ -239,32 +228,28 @@ exports[`<TagsTemplate> renders properly 1`] = `
             <header
               class="c6"
             >
-              <h2
+              <a
                 class="c7"
+                data-testid="article-header-title"
+                href="/path-to-article-2"
               >
-                <a
-                  class="c8"
-                  data-testid="article-header-custom-link"
-                  href="/path-to-article-2"
-                >
-                  Title 2
-                </a>
-              </h2>
+                Title 2
+              </a>
               <p
-                class="c9"
+                class="c8"
               >
                 Invalid Date
                  
-                 · 2 article.minutes article.ofReading
+                · 2 article.minutes article.ofReading
                  
               </p>
               <ul
-                class="c10"
+                class="c9"
                 data-testid="article-header-tags"
               />
             </header>
             <section
-              class="c11"
+              class="c10"
             >
               Awesome second article
             </section>

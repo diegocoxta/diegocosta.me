@@ -1,0 +1,93 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Tags /> renders properly 1`] = `
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  padding: 0;
+  margin: 0;
+}
+
+.c1 {
+  list-style: none;
+  padding: 10px 10px 0 0;
+  margin-bottom: 5px;
+}
+
+.c2 {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  box-shadow: none;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: lowercase;
+}
+
+.c2:hover,
+.c2:focus {
+  border-bottom: 1px solid;
+  outline: none;
+}
+
+<body>
+  <div>
+    <ul
+      class="c0"
+      data-testid="article-header-tags"
+    >
+      <li
+        class="c1"
+        data-testid="article-header-tag"
+      >
+        <a
+          class="c2"
+          href="/tags/jest"
+        >
+          #
+          jest
+        </a>
+      </li>
+      <li
+        class="c1"
+        data-testid="article-header-tag"
+      >
+        <a
+          class="c2"
+          href="/tags/testing-library"
+        >
+          #
+          testing-library
+        </a>
+      </li>
+    </ul>
+  </div>
+</body>
+`;
+
+exports[`<Tags /> renders properly without tags 1`] = `
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  padding: 0;
+  margin: 0;
+}
+
+<body>
+  <div>
+    <ul
+      class="c0"
+      data-testid="article-header-tags"
+    />
+  </div>
+</body>
+`;

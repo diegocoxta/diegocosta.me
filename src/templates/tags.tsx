@@ -26,17 +26,8 @@ export default function Tags({ data, pageContext }: TagsTemplateProps): React.Re
       <Metatags title={`${i18n.getTranslationFor('tagsTemplate.titlePrefix')} ${pageContext.tag}`} />
       <Divisor />
       <TagHeader name={pageContext.tag ?? ''} />
-      {articles.edges.map(({ node: { frontmatter, fields, excerpt } }, index) => (
-        <Article
-          key={`article-${index}`}
-          title={frontmatter?.title ?? ''}
-          tags={frontmatter?.tags as string[]}
-          date={frontmatter?.date}
-          url={fields?.slug}
-          language={fields?.language}
-          readingTime={fields?.readingTime?.minutes ?? 0}
-          content={frontmatter?.description || excerpt}
-        />
+      {articles.edges.map(({ node }, index) => (
+        <Article key={`article-${index}`} article={node} />
       ))}
     </Layout>
   );
@@ -59,20 +50,7 @@ export const pageQuery = graphql`
     ) {
       edges {
         node {
-          excerpt
-          fields {
-            slug
-            readingTime {
-              minutes
-            }
-            language
-          }
-          frontmatter {
-            date
-            title
-            tags
-            description
-          }
+          ...ArticleInformation
         }
       }
     }

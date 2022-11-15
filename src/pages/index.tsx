@@ -23,18 +23,8 @@ export default function IndexPage({ data }: IndexPageProps): React.ReactElement 
       <AboutMe content={aboutMe?.html || ''} />
       <Divisor />
       <Search />
-      {articles.edges.map(({ node: { frontmatter, fields, excerpt, html } }, index: number) => (
-        <Article
-          key={`article-${index}`}
-          title={frontmatter?.title ?? ''}
-          date={frontmatter?.date}
-          category={frontmatter?.category}
-          url={fields?.slug}
-          tags={frontmatter?.tags as string[]}
-          readingTime={fields?.readingTime?.minutes ?? 0}
-          language={fields?.language}
-          content={frontmatter?.homepage_full_article ? html : frontmatter?.description || excerpt}
-        />
+      {articles.edges.map(({ node }, index: number) => (
+        <Article key={`article-${index}`} article={node} />
       ))}
     </Layout>
   );
@@ -60,23 +50,7 @@ export const pageQuery = graphql`
     ) {
       edges {
         node {
-          html
-          excerpt
-          fields {
-            slug
-            readingTime {
-              minutes
-            }
-            language
-          }
-          frontmatter {
-            date
-            title
-            description
-            tags
-            homepage_full_article
-            category
-          }
+          ...ArticleInformation
         }
       }
     }

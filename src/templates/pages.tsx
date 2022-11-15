@@ -13,14 +13,13 @@ interface PagesTemplateProps extends PageRendererProps {
 }
 
 export default function PagesTemplate({ data }: PagesTemplateProps): React.ReactElement {
-  const { html, frontmatter, fields } = data.page ?? {};
-  const { title } = frontmatter ?? {};
+  const { page } = data;
 
   return (
     <Layout>
-      <Metatags title={title ?? ''} />
+      <Metatags title={page?.frontmatter?.title ?? ''} />
       <Divisor />
-      <Article language={fields?.language} title={title ?? ''} content={html} showArticleDetails={false} />
+      <Article article={page} showArticleMetaAttributes={false} showFullContent={true} />
     </Layout>
   );
 }
@@ -37,13 +36,7 @@ export const pageQuery = graphql`
       }
     }
     page: markdownRemark(fields: { slug: { eq: $slug }, language: { eq: $language } }) {
-      html
-      fields {
-        language
-      }
-      frontmatter {
-        title
-      }
+      ...ArticleInformation
     }
   }
 `;

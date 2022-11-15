@@ -36,19 +36,20 @@ exports[`<ArticlesTemplate> renders properly 1`] = `
   width: 100%;
 }
 
-.c4 {
-  margin: 0 0 60px 0;
-  font-weight: 400;
-  color: #2F3D4F;
-}
-
-.c5 {
-  margin: 20px 0 0 0;
-}
-
 .c6 {
+  color: #2F3D4F;
+  box-shadow: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
   font-size: 36px;
   margin: 0;
+  font-weight: bold;
+}
+
+.c6:hover,
+.c6:focus {
+  border-bottom: 1px solid #2F3D4F;
+  outline: none;
 }
 
 .c8 {
@@ -59,8 +60,18 @@ exports[`<ArticlesTemplate> renders properly 1`] = `
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  margin-bottom: 0;
   padding: 0;
+  margin: 0;
+}
+
+.c4 {
+  margin: 0 0 60px 0;
+  font-weight: 400;
+  color: #2F3D4F;
+}
+
+.c5 {
+  margin: 20px 0 0 0;
 }
 
 .c7 {
@@ -74,7 +85,7 @@ exports[`<ArticlesTemplate> renders properly 1`] = `
 }
 
 .c9 a {
-  color: #E9702D;
+  color: #CC433C;
   -webkit-text-decoration: none;
   text-decoration: none;
   border-bottom: 1px solid #EDF0F1;
@@ -82,12 +93,12 @@ exports[`<ArticlesTemplate> renders properly 1`] = `
 
 .c9 a:hover,
 .c9 a:focus {
-  border-bottom: 1px solid #E9702D;
+  border-bottom: 1px solid #CC433C;
   outline: none;
 }
 
 .c9 blockquote {
-  border-left: 5px solid #E9702D;
+  border-left: 5px solid #CC433C;
   padding-left: 20px;
 }
 
@@ -157,17 +168,19 @@ exports[`<ArticlesTemplate> renders properly 1`] = `
             <header
               class="c5"
             >
-              <h2
+              <a
                 class="c6"
+                data-testid="article-header-title"
+                href="/path-to-article"
               >
                 Title 1
-              </h2>
+              </a>
               <p
                 class="c7"
               >
                 Invalid Date
                  
-                 · 5 article.minutes article.ofReading
+                · 5 article.minutes article.ofReading
                  
               </p>
               <ul

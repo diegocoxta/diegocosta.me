@@ -4,12 +4,13 @@ import styled from 'styled-components';
 import FixedContainer from '~/components/FixedContainer';
 
 const Content = styled.h1`
-  font-size: 28px;
-  border-bottom: 5px solid ${({ theme }) => theme.accentColor};
-  padding: 5px;
-  margin: 40px 0 20px 0;
-  display: flex;
-  justify-content: space-between;
+  display: inline-block;
+  background: ${({ theme }) => theme.accentColor};
+  padding: 2px 10px;
+  margin: 0px 10px 30px 0;
+  color: #fff;
+  border-radius: 5px;
+  font-size: 48px;
 `;
 
 interface TagHeaderProps {

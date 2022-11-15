@@ -36,6 +36,22 @@ exports[`<PagesTemplate> renders properly 1`] = `
   width: 100%;
 }
 
+.c6 {
+  color: #2F3D4F;
+  box-shadow: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: 36px;
+  margin: 0;
+  font-weight: bold;
+}
+
+.c6:hover,
+.c6:focus {
+  border-bottom: 1px solid #2F3D4F;
+  outline: none;
+}
+
 .c4 {
   margin: 0 0 60px 0;
   font-weight: 400;
@@ -46,17 +62,12 @@ exports[`<PagesTemplate> renders properly 1`] = `
   margin: 20px 0 0 0;
 }
 
-.c6 {
-  font-size: 36px;
-  margin: 0;
-}
-
 .c7 {
   line-height: 1.5;
 }
 
 .c7 a {
-  color: #E9702D;
+  color: #CC433C;
   -webkit-text-decoration: none;
   text-decoration: none;
   border-bottom: 1px solid #EDF0F1;
@@ -64,12 +75,12 @@ exports[`<PagesTemplate> renders properly 1`] = `
 
 .c7 a:hover,
 .c7 a:focus {
-  border-bottom: 1px solid #E9702D;
+  border-bottom: 1px solid #CC433C;
   outline: none;
 }
 
 .c7 blockquote {
-  border-left: 5px solid #E9702D;
+  border-left: 5px solid #CC433C;
   padding-left: 20px;
 }
 
@@ -139,11 +150,13 @@ exports[`<PagesTemplate> renders properly 1`] = `
             <header
               class="c5"
             >
-              <h2
+              <a
                 class="c6"
+                data-testid="article-header-title"
+                href="/path-to-article/"
               >
                 Title 1
-              </h2>
+              </a>
             </header>
             <section
               class="c7"

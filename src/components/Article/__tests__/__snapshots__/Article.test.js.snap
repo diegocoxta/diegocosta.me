@@ -7,6 +7,21 @@ exports[`<Article /> does not render the article details 1`] = `
   padding: 0 20px;
 }
 
+.c3 {
+  box-shadow: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: 36px;
+  margin: 0;
+  font-weight: bold;
+}
+
+.c3:hover,
+.c3:focus {
+  border-bottom: 1px solid undefined;
+  outline: none;
+}
+
 .c1 {
   margin: 0 0 60px 0;
   font-weight: 400;
@@ -14,23 +29,6 @@ exports[`<Article /> does not render the article details 1`] = `
 
 .c2 {
   margin: 20px 0 0 0;
-}
-
-.c3 {
-  font-size: 36px;
-  margin: 0;
-}
-
-.c4 {
-  box-shadow: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.c4:hover,
-.c4:focus {
-  border-bottom: 1px solid;
-  outline: none;
 }
 
 <body>
@@ -46,17 +44,13 @@ exports[`<Article /> does not render the article details 1`] = `
           <header
             class="c2"
           >
-            <h2
+            <a
               class="c3"
+              data-testid="article-header-title"
+              href="/awesome-article"
             >
-              <a
-                class="c4"
-                data-testid="article-header-custom-link"
-                href="/awesome-article"
-              >
-                Awesome Article
-              </a>
-            </h2>
+              Awesome Article
+            </a>
           </header>
         </article>
       </main>
@@ -72,6 +66,32 @@ exports[`<Article /> does not render the article language name 1`] = `
   padding: 0 20px;
 }
 
+.c3 {
+  box-shadow: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: 36px;
+  margin: 0;
+  font-weight: bold;
+}
+
+.c3:hover,
+.c3:focus {
+  outline: none;
+}
+
+.c5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  padding: 0;
+  margin: 0;
+}
+
 .c1 {
   margin: 0 0 60px 0;
   font-weight: 400;
@@ -79,11 +99,6 @@ exports[`<Article /> does not render the article language name 1`] = `
 
 .c2 {
   margin: 20px 0 0 0;
-}
-
-.c3 {
-  font-size: 36px;
-  margin: 0;
 }
 
 .c4 {
@@ -106,6 +121,7 @@ exports[`<Article /> does not render the article language name 1`] = `
           >
             <h2
               class="c3"
+              data-testid="article-header-title"
             >
               Awesome Article
             </h2>
@@ -114,8 +130,12 @@ exports[`<Article /> does not render the article language name 1`] = `
             >
                
                
-               · article.languagePrefix languages.en
+              · article.languagePrefix languages.en
             </p>
+            <ul
+              class="c5"
+              data-testid="article-header-tags"
+            />
           </header>
         </article>
       </main>
@@ -131,6 +151,32 @@ exports[`<Article /> does not render the link 1`] = `
   padding: 0 20px;
 }
 
+.c3 {
+  box-shadow: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: 36px;
+  margin: 0;
+  font-weight: bold;
+}
+
+.c3:hover,
+.c3:focus {
+  outline: none;
+}
+
+.c5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  padding: 0;
+  margin: 0;
+}
+
 .c1 {
   margin: 0 0 60px 0;
   font-weight: 400;
@@ -138,11 +184,6 @@ exports[`<Article /> does not render the link 1`] = `
 
 .c2 {
   margin: 20px 0 0 0;
-}
-
-.c3 {
-  font-size: 36px;
-  margin: 0;
 }
 
 .c4 {
@@ -165,6 +206,7 @@ exports[`<Article /> does not render the link 1`] = `
           >
             <h2
               class="c3"
+              data-testid="article-header-title"
             >
               Awesome Article
             </h2>
@@ -173,10 +215,14 @@ exports[`<Article /> does not render the link 1`] = `
             >
               18/01/2020
                
-               · 5 article.minutes article.ofReading
+              · 5 article.minutes article.ofReading
                
-               · article.languagePrefix languages.en
+              · article.languagePrefix languages.en
             </p>
+            <ul
+              class="c5"
+              data-testid="article-header-tags"
+            />
           </header>
         </article>
       </main>
@@ -192,6 +238,32 @@ exports[`<Article /> does not render the reading time 1`] = `
   padding: 0 20px;
 }
 
+.c3 {
+  box-shadow: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: 36px;
+  margin: 0;
+  font-weight: bold;
+}
+
+.c3:hover,
+.c3:focus {
+  outline: none;
+}
+
+.c5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  padding: 0;
+  margin: 0;
+}
+
 .c1 {
   margin: 0 0 60px 0;
   font-weight: 400;
@@ -199,11 +271,6 @@ exports[`<Article /> does not render the reading time 1`] = `
 
 .c2 {
   margin: 20px 0 0 0;
-}
-
-.c3 {
-  font-size: 36px;
-  margin: 0;
 }
 
 .c4 {
@@ -226,6 +293,7 @@ exports[`<Article /> does not render the reading time 1`] = `
           >
             <h2
               class="c3"
+              data-testid="article-header-title"
             >
               Awesome Article
             </h2>
@@ -235,8 +303,12 @@ exports[`<Article /> does not render the reading time 1`] = `
               18/01/2020
                
                
-               · article.languagePrefix languages.en
+              · article.languagePrefix languages.en
             </p>
+            <ul
+              class="c5"
+              data-testid="article-header-tags"
+            />
           </header>
         </article>
       </main>
@@ -252,6 +324,33 @@ exports[`<Article /> does not render the tags 1`] = `
   padding: 0 20px;
 }
 
+.c3 {
+  box-shadow: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: 36px;
+  margin: 0;
+  font-weight: bold;
+}
+
+.c3:hover,
+.c3:focus {
+  border-bottom: 1px solid undefined;
+  outline: none;
+}
+
+.c5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  padding: 0;
+  margin: 0;
+}
+
 .c1 {
   margin: 0 0 60px 0;
   font-weight: 400;
@@ -261,24 +360,7 @@ exports[`<Article /> does not render the tags 1`] = `
   margin: 20px 0 0 0;
 }
 
-.c3 {
-  font-size: 36px;
-  margin: 0;
-}
-
 .c4 {
-  box-shadow: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.c4:hover,
-.c4:focus {
-  border-bottom: 1px solid;
-  outline: none;
-}
-
-.c5 {
   font-size: 18px;
   margin: 5px 0;
 }
@@ -296,26 +378,26 @@ exports[`<Article /> does not render the tags 1`] = `
           <header
             class="c2"
           >
-            <h2
+            <a
               class="c3"
+              data-testid="article-header-title"
+              href="/awesome-article"
             >
-              <a
-                class="c4"
-                data-testid="article-header-custom-link"
-                href="/awesome-article"
-              >
-                Awesome Article
-              </a>
-            </h2>
+              Awesome Article
+            </a>
             <p
-              class="c5"
+              class="c4"
             >
               20/07/2020
                
-               · 5 article.minutes article.ofReading
+              · 5 article.minutes article.ofReading
                
-               · article.languagePrefix languages.pt
+              · article.languagePrefix languages.pt
             </p>
+            <ul
+              class="c5"
+              data-testid="article-header-tags"
+            />
           </header>
         </article>
       </main>
@@ -331,6 +413,54 @@ exports[`<Article /> renders properly 1`] = `
   padding: 0 20px;
 }
 
+.c3 {
+  box-shadow: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: 36px;
+  margin: 0;
+  font-weight: bold;
+}
+
+.c3:hover,
+.c3:focus {
+  border-bottom: 1px solid undefined;
+  outline: none;
+}
+
+.c5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  padding: 0;
+  margin: 0;
+}
+
+.c6 {
+  list-style: none;
+  padding: 10px 10px 0 0;
+  margin-bottom: 5px;
+}
+
+.c7 {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  box-shadow: none;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: lowercase;
+}
+
+.c7:hover,
+.c7:focus {
+  border-bottom: 1px solid;
+  outline: none;
+}
+
 .c1 {
   margin: 0 0 60px 0;
   font-weight: 400;
@@ -340,57 +470,7 @@ exports[`<Article /> renders properly 1`] = `
   margin: 20px 0 0 0;
 }
 
-.c3 {
-  font-size: 36px;
-  margin: 0;
-}
-
 .c4 {
-  box-shadow: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.c4:hover,
-.c4:focus {
-  border-bottom: 1px solid;
-  outline: none;
-}
-
-.c8 {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  box-shadow: none;
-  font-size: 14px;
-  font-weight: 700;
-  text-transform: lowercase;
-}
-
-.c8:hover,
-.c8:focus {
-  border-bottom: 1px solid;
-  outline: none;
-}
-
-.c6 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  margin-bottom: 0;
-  padding: 0;
-}
-
-.c7 {
-  list-style: none;
-  padding: 0 10px 0 0;
-  margin-bottom: 5px;
-}
-
-.c5 {
   font-size: 18px;
   margin: 5px 0;
 }
@@ -408,36 +488,32 @@ exports[`<Article /> renders properly 1`] = `
           <header
             class="c2"
           >
-            <h2
+            <a
               class="c3"
+              data-testid="article-header-title"
+              href="/awesome-article"
             >
-              <a
-                class="c4"
-                data-testid="article-header-custom-link"
-                href="/awesome-article"
-              >
-                Awesome Article
-              </a>
-            </h2>
+              Awesome Article
+            </a>
             <p
-              class="c5"
+              class="c4"
             >
               18/01/2020
                
-               · 5 article.minutes article.ofReading
+              · 5 article.minutes article.ofReading
                
-               · article.languagePrefix languages.en
+              · article.languagePrefix languages.en
             </p>
             <ul
-              class="c6"
+              class="c5"
               data-testid="article-header-tags"
             >
               <li
-                class="c7"
+                class="c6"
                 data-testid="article-header-tag"
               >
                 <a
-                  class="c8"
+                  class="c7"
                   href="/tags/jest"
                 >
                   #
@@ -445,11 +521,11 @@ exports[`<Article /> renders properly 1`] = `
                 </a>
               </li>
               <li
-                class="c7"
+                class="c6"
                 data-testid="article-header-tag"
               >
                 <a
-                  class="c8"
+                  class="c7"
                   href="/tags/testing-library"
                 >
                   #
@@ -472,6 +548,33 @@ exports[`<Article /> renders properly the body content 1`] = `
   padding: 0 20px;
 }
 
+.c3 {
+  box-shadow: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: 36px;
+  margin: 0;
+  font-weight: bold;
+}
+
+.c3:hover,
+.c3:focus {
+  border-bottom: 1px solid undefined;
+  outline: none;
+}
+
+.c5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  padding: 0;
+  margin: 0;
+}
+
 .c1 {
   margin: 0 0 60px 0;
   font-weight: 400;
@@ -481,24 +584,7 @@ exports[`<Article /> renders properly the body content 1`] = `
   margin: 20px 0 0 0;
 }
 
-.c3 {
-  font-size: 36px;
-  margin: 0;
-}
-
 .c4 {
-  box-shadow: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.c4:hover,
-.c4:focus {
-  border-bottom: 1px solid;
-  outline: none;
-}
-
-.c5 {
   font-size: 18px;
   margin: 5px 0;
 }
@@ -545,26 +631,26 @@ exports[`<Article /> renders properly the body content 1`] = `
           <header
             class="c2"
           >
-            <h2
+            <a
               class="c3"
+              data-testid="article-header-title"
+              href="/awesome-article"
             >
-              <a
-                class="c4"
-                data-testid="article-header-custom-link"
-                href="/awesome-article"
-              >
-                Awesome Article
-              </a>
-            </h2>
+              Awesome Article
+            </a>
             <p
-              class="c5"
+              class="c4"
             >
               18/01/2020
                
-               · 5 article.minutes article.ofReading
+              · 5 article.minutes article.ofReading
                
-               · article.languagePrefix languages.pt
+              · article.languagePrefix languages.pt
             </p>
+            <ul
+              class="c5"
+              data-testid="article-header-tags"
+            />
           </header>
           <section
             class="c6"
@@ -585,6 +671,33 @@ exports[`<Article /> renders properly the description 1`] = `
   padding: 0 20px;
 }
 
+.c3 {
+  box-shadow: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: 36px;
+  margin: 0;
+  font-weight: bold;
+}
+
+.c3:hover,
+.c3:focus {
+  border-bottom: 1px solid undefined;
+  outline: none;
+}
+
+.c5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  padding: 0;
+  margin: 0;
+}
+
 .c1 {
   margin: 0 0 60px 0;
   font-weight: 400;
@@ -594,24 +707,7 @@ exports[`<Article /> renders properly the description 1`] = `
   margin: 20px 0 0 0;
 }
 
-.c3 {
-  font-size: 36px;
-  margin: 0;
-}
-
 .c4 {
-  box-shadow: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.c4:hover,
-.c4:focus {
-  border-bottom: 1px solid;
-  outline: none;
-}
-
-.c5 {
   font-size: 18px;
   margin: 5px 0;
 }
@@ -658,26 +754,26 @@ exports[`<Article /> renders properly the description 1`] = `
           <header
             class="c2"
           >
-            <h2
+            <a
               class="c3"
+              data-testid="article-header-title"
+              href="/awesome-article"
             >
-              <a
-                class="c4"
-                data-testid="article-header-custom-link"
-                href="/awesome-article"
-              >
-                Awesome Article
-              </a>
-            </h2>
+              Awesome Article
+            </a>
             <p
-              class="c5"
+              class="c4"
             >
               18/01/2020
                
-               · 5 article.minutes article.ofReading
+              · 5 article.minutes article.ofReading
                
-               · article.languagePrefix languages.pt
+              · article.languagePrefix languages.pt
             </p>
+            <ul
+              class="c5"
+              data-testid="article-header-tags"
+            />
           </header>
           <section
             class="c6"
@@ -698,6 +794,54 @@ exports[`<Article /> renders the article details 1`] = `
   padding: 0 20px;
 }
 
+.c3 {
+  box-shadow: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: 36px;
+  margin: 0;
+  font-weight: bold;
+}
+
+.c3:hover,
+.c3:focus {
+  border-bottom: 1px solid undefined;
+  outline: none;
+}
+
+.c5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  padding: 0;
+  margin: 0;
+}
+
+.c6 {
+  list-style: none;
+  padding: 10px 10px 0 0;
+  margin-bottom: 5px;
+}
+
+.c7 {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  box-shadow: none;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: lowercase;
+}
+
+.c7:hover,
+.c7:focus {
+  border-bottom: 1px solid;
+  outline: none;
+}
+
 .c1 {
   margin: 0 0 60px 0;
   font-weight: 400;
@@ -707,57 +851,7 @@ exports[`<Article /> renders the article details 1`] = `
   margin: 20px 0 0 0;
 }
 
-.c3 {
-  font-size: 36px;
-  margin: 0;
-}
-
 .c4 {
-  box-shadow: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.c4:hover,
-.c4:focus {
-  border-bottom: 1px solid;
-  outline: none;
-}
-
-.c8 {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  box-shadow: none;
-  font-size: 14px;
-  font-weight: 700;
-  text-transform: lowercase;
-}
-
-.c8:hover,
-.c8:focus {
-  border-bottom: 1px solid;
-  outline: none;
-}
-
-.c6 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  margin-bottom: 0;
-  padding: 0;
-}
-
-.c7 {
-  list-style: none;
-  padding: 0 10px 0 0;
-  margin-bottom: 5px;
-}
-
-.c5 {
   font-size: 18px;
   margin: 5px 0;
 }
@@ -775,36 +869,32 @@ exports[`<Article /> renders the article details 1`] = `
           <header
             class="c2"
           >
-            <h2
+            <a
               class="c3"
+              data-testid="article-header-title"
+              href="/awesome-article"
             >
-              <a
-                class="c4"
-                data-testid="article-header-custom-link"
-                href="/awesome-article"
-              >
-                Awesome Article
-              </a>
-            </h2>
+              Awesome Article
+            </a>
             <p
-              class="c5"
+              class="c4"
             >
               18/01/2020
                
-               · 5 article.minutes article.ofReading
+              · 5 article.minutes article.ofReading
                
-               · article.languagePrefix languages.en
+              · article.languagePrefix languages.en
             </p>
             <ul
-              class="c6"
+              class="c5"
               data-testid="article-header-tags"
             >
               <li
-                class="c7"
+                class="c6"
                 data-testid="article-header-tag"
               >
                 <a
-                  class="c8"
+                  class="c7"
                   href="/tags/jest"
                 >
                   #
@@ -812,11 +902,11 @@ exports[`<Article /> renders the article details 1`] = `
                 </a>
               </li>
               <li
-                class="c7"
+                class="c6"
                 data-testid="article-header-tag"
               >
                 <a
-                  class="c8"
+                  class="c7"
                   href="/tags/testing-library"
                 >
                   #

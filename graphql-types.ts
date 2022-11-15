@@ -422,7 +422,6 @@ export type MarkdownRemarkFrontmatter = {
   description?: Maybe<Scalars['String']>;
   tags?: Maybe<Array<Maybe<Scalars['String']>>>;
   language?: Maybe<Scalars['String']>;
-  category?: Maybe<Scalars['String']>;
   homepage_full_article?: Maybe<Scalars['Boolean']>;
 };
 
@@ -1087,7 +1086,6 @@ export type MarkdownRemarkFrontmatterFilterInput = {
   description?: InputMaybe<StringQueryOperatorInput>;
   tags?: InputMaybe<StringQueryOperatorInput>;
   language?: InputMaybe<StringQueryOperatorInput>;
-  category?: InputMaybe<StringQueryOperatorInput>;
   homepage_full_article?: InputMaybe<BooleanQueryOperatorInput>;
 };
 
@@ -1371,7 +1369,6 @@ export type MarkdownRemarkFrontmatterFieldSelector = {
   description?: InputMaybe<FieldSelectorEnum>;
   tags?: InputMaybe<FieldSelectorEnum>;
   language?: InputMaybe<FieldSelectorEnum>;
-  category?: InputMaybe<FieldSelectorEnum>;
   homepage_full_article?: InputMaybe<FieldSelectorEnum>;
 };
 
@@ -1650,7 +1647,6 @@ export type MarkdownRemarkFrontmatterSortInput = {
   description?: InputMaybe<SortOrderEnum>;
   tags?: InputMaybe<SortOrderEnum>;
   language?: InputMaybe<SortOrderEnum>;
-  category?: InputMaybe<SortOrderEnum>;
   homepage_full_article?: InputMaybe<SortOrderEnum>;
 };
 
@@ -2893,6 +2889,8 @@ export type LocaleGroupConnectionGroupArgs = {
   field: LocaleFieldSelector;
 };
 
+export type ArticleInformationFragment = { html?: string | null, excerpt?: string | null, fields?: { slug?: string | null, language?: string | null, readingTime?: { minutes?: number | null } | null } | null, frontmatter?: { date?: any | null, title?: string | null, description?: string | null, tags?: Array<string | null> | null, homepage_full_article?: boolean | null } | null };
+
 export type FooterComponentQueryVariables = Exact<{ [key: string]: never; }>;
 
 
@@ -2925,7 +2923,7 @@ export type IndexPageQueryVariables = Exact<{
 }>;
 
 
-export type IndexPageQuery = { locales: { edges: Array<{ node: { ns?: string | null, data?: string | null, language?: string | null } }> }, aboutMe?: { html?: string | null } | null, articles: { edges: Array<{ node: { html?: string | null, excerpt?: string | null, fields?: { slug?: string | null, language?: string | null, readingTime?: { minutes?: number | null } | null } | null, frontmatter?: { date?: any | null, title?: string | null, description?: string | null, tags?: Array<string | null> | null, homepage_full_article?: boolean | null, category?: string | null } | null } }> } };
+export type IndexPageQuery = { locales: { edges: Array<{ node: { ns?: string | null, data?: string | null, language?: string | null } }> }, aboutMe?: { html?: string | null } | null, articles: { edges: Array<{ node: { html?: string | null, excerpt?: string | null, fields?: { slug?: string | null, language?: string | null, readingTime?: { minutes?: number | null } | null } | null, frontmatter?: { date?: any | null, title?: string | null, description?: string | null, tags?: Array<string | null> | null, homepage_full_article?: boolean | null } | null } }> } };
 
 export type ArticlesTemplateQueryVariables = Exact<{
   slug: Scalars['String'];
@@ -2933,7 +2931,7 @@ export type ArticlesTemplateQueryVariables = Exact<{
 }>;
 
 
-export type ArticlesTemplateQuery = { locales: { edges: Array<{ node: { ns?: string | null, data?: string | null, language?: string | null } }> }, article?: { html?: string | null, excerpt?: string | null, fields?: { language?: string | null, readingTime?: { minutes?: number | null } | null } | null, frontmatter?: { title?: string | null, date?: any | null, description?: string | null, tags?: Array<string | null> | null, category?: string | null } | null } | null };
+export type ArticlesTemplateQuery = { locales: { edges: Array<{ node: { ns?: string | null, data?: string | null, language?: string | null } }> }, article?: { html?: string | null, excerpt?: string | null, fields?: { slug?: string | null, language?: string | null, readingTime?: { minutes?: number | null } | null } | null, frontmatter?: { date?: any | null, title?: string | null, description?: string | null, tags?: Array<string | null> | null, homepage_full_article?: boolean | null } | null } | null };
 
 export type PagesTemplateQueryVariables = Exact<{
   slug: Scalars['String'];
@@ -2941,7 +2939,7 @@ export type PagesTemplateQueryVariables = Exact<{
 }>;
 
 
-export type PagesTemplateQuery = { locales: { edges: Array<{ node: { ns?: string | null, data?: string | null, language?: string | null } }> }, page?: { html?: string | null, fields?: { language?: string | null } | null, frontmatter?: { title?: string | null } | null } | null };
+export type PagesTemplateQuery = { locales: { edges: Array<{ node: { ns?: string | null, data?: string | null, language?: string | null } }> }, page?: { html?: string | null, excerpt?: string | null, fields?: { slug?: string | null, language?: string | null, readingTime?: { minutes?: number | null } | null } | null, frontmatter?: { date?: any | null, title?: string | null, description?: string | null, tags?: Array<string | null> | null, homepage_full_article?: boolean | null } | null } | null };
 
 export type TagsTemplateQueryVariables = Exact<{
   tag?: InputMaybe<Scalars['String']>;
@@ -2949,7 +2947,7 @@ export type TagsTemplateQueryVariables = Exact<{
 }>;
 
 
-export type TagsTemplateQuery = { locales: { edges: Array<{ node: { ns?: string | null, data?: string | null, language?: string | null } }> }, articles: { edges: Array<{ node: { excerpt?: string | null, fields?: { slug?: string | null, language?: string | null, readingTime?: { minutes?: number | null } | null } | null, frontmatter?: { date?: any | null, title?: string | null, tags?: Array<string | null> | null, description?: string | null } | null } }> } };
+export type TagsTemplateQuery = { locales: { edges: Array<{ node: { ns?: string | null, data?: string | null, language?: string | null } }> }, articles: { edges: Array<{ node: { html?: string | null, excerpt?: string | null, fields?: { slug?: string | null, language?: string | null, readingTime?: { minutes?: number | null } | null } | null, frontmatter?: { date?: any | null, title?: string | null, description?: string | null, tags?: Array<string | null> | null, homepage_full_article?: boolean | null } | null } }> } };
 
 export type GatsbyCreatePageQueryVariables = Exact<{ [key: string]: never; }>;
 
