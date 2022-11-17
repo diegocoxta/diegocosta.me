@@ -29,7 +29,7 @@ exports[`<ArticlesTemplate> renders properly 1`] = `
 }
 
 .c3 {
-  background: linear-gradient(90deg,#EDF0F1 20px,transparent 1%) center, linear-gradient(#EDF0F1 20px,transparent 1%) center, #2F3D4F;
+  background: linear-gradient(90deg,#ffffff 20px,transparent 1%) center, linear-gradient(#ffffff 20px,transparent 1%) center, #2F3D4F;
   background-size: 22px 22px;
   height: 120px;
   margin: 40px 0;
@@ -88,7 +88,7 @@ exports[`<ArticlesTemplate> renders properly 1`] = `
   color: #CC433C;
   -webkit-text-decoration: none;
   text-decoration: none;
-  border-bottom: 1px solid #EDF0F1;
+  border-bottom: 1px solid #ffffff;
 }
 
 .c9 a:hover,
