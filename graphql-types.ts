@@ -284,6 +284,7 @@ export type SiteSiteMetadata = {
   repository?: Maybe<Scalars['String']>;
   image?: Maybe<Scalars['String']>;
   googleAnalyticsKey?: Maybe<Scalars['String']>;
+  avatar?: Maybe<Scalars['String']>;
 };
 
 export type SiteFunction = Node & {
@@ -1971,6 +1972,7 @@ export type SiteSiteMetadataFilterInput = {
   repository?: InputMaybe<StringQueryOperatorInput>;
   image?: InputMaybe<StringQueryOperatorInput>;
   googleAnalyticsKey?: InputMaybe<StringQueryOperatorInput>;
+  avatar?: InputMaybe<StringQueryOperatorInput>;
 };
 
 export type SiteConnection = {
@@ -2044,6 +2046,7 @@ export type SiteSiteMetadataFieldSelector = {
   repository?: InputMaybe<FieldSelectorEnum>;
   image?: InputMaybe<FieldSelectorEnum>;
   googleAnalyticsKey?: InputMaybe<FieldSelectorEnum>;
+  avatar?: InputMaybe<FieldSelectorEnum>;
 };
 
 export type SiteGroupConnection = {
@@ -2129,6 +2132,7 @@ export type SiteSiteMetadataSortInput = {
   repository?: InputMaybe<SortOrderEnum>;
   image?: InputMaybe<SortOrderEnum>;
   googleAnalyticsKey?: InputMaybe<SortOrderEnum>;
+  avatar?: InputMaybe<SortOrderEnum>;
 };
 
 export type SiteFunctionConnection = {
@@ -2899,7 +2903,7 @@ export type FooterComponentQuery = { site?: { siteMetadata?: { repository?: stri
 export type HeaderComponentQueryVariables = Exact<{ [key: string]: never; }>;
 
 
-export type HeaderComponentQuery = { site?: { siteMetadata?: { author?: string | null } | null } | null };
+export type HeaderComponentQuery = { site?: { siteMetadata?: { author?: string | null, avatar?: string | null } | null } | null };
 
 export type MetatagsComponentQueryVariables = Exact<{ [key: string]: never; }>;
 

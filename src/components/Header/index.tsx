@@ -6,7 +6,7 @@ import Header from './Header';
 export default (): React.ReactElement => {
   const {
     site: {
-      siteMetadata: { author },
+      siteMetadata: { author, avatar },
     },
   } = useStaticQuery(
     graphql`
@@ -14,11 +14,12 @@ export default (): React.ReactElement => {
         site {
           siteMetadata {
             author
+            avatar
           }
         }
       }
     `
   );
 
-  return <Header author={author} />;
+  return <Header author={author} avatar={avatar} />;
 };
