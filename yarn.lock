@@ -1161,9 +1161,9 @@
     gatsby-core-utils "^4.2.0"
 
 "@gatsbyjs/reach-router@^2.0.0-v2.0":
-  version "2.0.0-v2.0.3"
-  resolved "https://registry.yarnpkg.com/@gatsbyjs/reach-router/-/reach-router-2.0.0-v2.0.3.tgz#41efa1dfa7d7fbce1129168ac2147deef75c7b49"
-  integrity sha512-lwLzwN0ICUywgm7s+EB09GahnvpETD/EIgE9nrZdzGPfPum7bO0icJHYBiXmdOb5UDIskYP+ROQnCtB86VFHnQ==
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/@gatsbyjs/reach-router/-/reach-router-2.0.0.tgz#de8520ef719c5bf849beb1f43f57b7dd3c7db5b1"
+  integrity sha512-n5nifEBtQCo4Wc/ErBvFEGyX5y8dKPSERre3pmuizkJl9J4l0M0bhu6aMc4uOXhG66UR4jgVDjN2Q2I2FSrVkw==
   dependencies:
     invariant "^2.2.4"
     prop-types "^15.8.1"
@@ -4098,9 +4098,9 @@ caniuse-api@^3.0.0:
     lodash.uniq "^4.5.0"
 
 caniuse-lite@^1.0.0, caniuse-lite@^1.0.30001400, caniuse-lite@^1.0.30001426:
-  version "1.0.30001434"
-  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001434.tgz#ec1ec1cfb0a93a34a0600d37903853030520a4e5"
-  integrity sha512-aOBHrLmTQw//WFa2rcF1If9fa3ypkC1wzqqiKHgfdrXTWcU8C4gKVZT77eQAPWN1APys3+uQ0Df07rKauXGEYA==
+  version "1.0.30001435"
+  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001435.tgz#502c93dbd2f493bee73a408fe98e98fb1dad10b2"
+  integrity sha512-kdCkUTjR+v4YAJelyiDTqiu82BDr4W4CP5sgTA0ZBmqn30XfS2ZghPLMowik9TPhS+psWJiUNxsqLyurDbmutA==
 
 capital-case@^1.0.4:
   version "1.0.4"
@@ -9780,9 +9780,9 @@ no-case@^3.0.4:
     tslib "^2.0.3"
 
 node-abi@^3.3.0:
-  version "3.28.0"
-  resolved "https://registry.yarnpkg.com/node-abi/-/node-abi-3.28.0.tgz#b0df8b317e1c4f2f323756c5fc8ffccc5bca4718"
-  integrity sha512-fRlDb4I0eLcQeUvGq7IY3xHrSb0c9ummdvDSYWfT9+LKP+3jCKw/tKoqaM7r1BAoiAC6GtwyjaGnOz6B3OtF+A==
+  version "3.30.0"
+  resolved "https://registry.yarnpkg.com/node-abi/-/node-abi-3.30.0.tgz#d84687ad5d24ca81cdfa912a36f2c5c19b137359"
+  integrity sha512-qWO5l3SCqbwQavymOmtTVuCWZE23++S+rxyoHjXqUmPyzRcaoI4lA2gO55/drddGnedAyjA7sk76SfQ5lfUMnw==
   dependencies:
     semver "^7.3.5"
 
