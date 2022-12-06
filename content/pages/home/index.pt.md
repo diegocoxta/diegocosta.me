@@ -8,7 +8,8 @@ Atualmente no Nubank, eu estou trabalhando para simplificar o relacionamento de 
 
 Você pode encontrar mais sobre mim aqui:
 
-- [Linkedin](https://linkedin.com/in/diegoscosta)
-- [Github](https://github.com/diegocosta)
+- [Linkedin](https://linkedin.com/in/diegocoxta)
+- [Github](https://github.com/diegocoxta)
+- [Twitter](https://twitter.com/diegocoxta)
 - [Talks](/pt/tags/talks)
 - [E-mail](mailto:diego@diegocosta.me)
