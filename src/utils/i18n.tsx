@@ -1,10 +1,6 @@
 import React from 'react';
-import {
-  useTranslation,
-  useI18next,
-  Link as Reacti18nextLink,
-  Helmet as Reacti18nextHelmet,
-} from 'gatsby-plugin-react-i18next';
+import { useTranslation, useI18next, Link as Reacti18nextLink } from 'gatsby-plugin-react-i18next';
+import { Helmet as ReactHelmet } from 'react-helmet';
 
 export function usei18n() {
   const { t } = useTranslation();
@@ -36,5 +32,5 @@ export function Link(props: any) {
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 export function Helmet(props: any) {
-  return <Reacti18nextHelmet {...props} />;
+  return <ReactHelmet {...props} />;
 }
