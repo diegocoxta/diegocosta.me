@@ -31,7 +31,7 @@
     "gatsby-source-filesystem": "5.2.0",
     "gatsby-transformer-remark": "6.2.0",
     "gatsby-transformer-sharp": "5.2.0",
-    "i18next": "22.3.0",
+    "i18next": "22.4.3",
     "lodash.kebabcase": "^4.1.1",
     "prismjs": "^1.29.0",
     "react": "^18.2.0",
