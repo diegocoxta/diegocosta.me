@@ -9,8 +9,8 @@ Currently at Nubank, I am working to simplify our users' relationship with their
 You can hear more about me here:
 
 - [Linkedin](https://linkedin.com/in/diegocoxta)
-- [Github](https://github.com/diegocoxta)
 - [Twitter](https://twitter.com/diegocoxta)
 - [Mastodon](https://mastodon.social/@diegocoxta)
-- [Talks](/pt/tags/talks)
+- [Talks](/en/tags/talks)
 - [E-mail](mailto:diego@diegocosta.me)
+- [+](/en/+)
