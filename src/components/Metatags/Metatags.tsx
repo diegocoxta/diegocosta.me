@@ -12,6 +12,20 @@ export default function Metatags(props: MetatagsProps): React.ReactElement {
   return (
     <Helmet
       title={props.title}
+      link={[
+        {
+          rel: 'me',
+          href: 'https://bolha.us/@diegocoxta',
+        },
+        {
+          rel: 'me',
+          href: 'https://mastodon.social/@diegocoxta',
+        },
+        {
+          rel: 'me',
+          href: 'https://ursal.zone/@diegocoxta',
+        },
+      ]}
       meta={[
         {
           name: 'description',
