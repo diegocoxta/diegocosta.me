@@ -4630,16 +4630,16 @@ core-js-compat@3.9.0:
     semver "7.0.0"
 
 core-js-compat@^3.25.1:
-  version "3.26.1"
-  resolved "https://registry.yarnpkg.com/core-js-compat/-/core-js-compat-3.26.1.tgz#0e710b09ebf689d719545ac36e49041850f943df"
-  integrity sha512-622/KzTudvXCDLRw70iHW4KKs1aGpcRcowGWyYJr2DEBfRrd6hNJybxSWJFuZYD4ma86xhrwDDHxmDaIq4EA8A==
+  version "3.27.0"
+  resolved "https://registry.yarnpkg.com/core-js-compat/-/core-js-compat-3.27.0.tgz#e2c58a89df6432a5f36f3fa34097e9e83e709fb6"
+  integrity sha512-spN2H4E/wocMML7XtbKuqttHHM+zbF3bAdl9mT4/iyFaF33bowQGjxiWNWyvUJGH9F+hTgnhWziiLtwu3oC/Qg==
   dependencies:
     browserslist "^4.21.4"
 
 core-js-pure@^3.23.3, core-js-pure@^3.25.1:
-  version "3.26.1"
-  resolved "https://registry.yarnpkg.com/core-js-pure/-/core-js-pure-3.26.1.tgz#653f4d7130c427820dcecd3168b594e8bb095a33"
-  integrity sha512-VVXcDpp/xJ21KdULRq/lXdLzQAtX7+37LzpyfFM973il0tWSsDEoyzG38G14AjTpK9VTfiNM9jnFauq/CpaWGQ==
+  version "3.27.0"
+  resolved "https://registry.yarnpkg.com/core-js-pure/-/core-js-pure-3.27.0.tgz#091dce4799a5aad4cfde930ea747b0a1962388c5"
+  integrity sha512-fJml7FM6v1HI3Gkg5/Ifc/7Y2qXcJxaDwSROeZGAZfNykSTvUk94WT55TYzJ2lFHK0voSr/d4nOVChLuNCWNpA==
 
 core-js@^2.4.0:
   version "2.6.12"
@@ -4647,9 +4647,9 @@ core-js@^2.4.0:
   integrity sha512-Kb2wC0fvsWfQrgk8HU5lW6U/Lcs8+9aaYcy4ZFc6DDlo4nZ7n70dEgE5rtR0oG6ufKDUnrwfWL1mXR5ljDatrQ==
 
 core-js@^3.22.3:
-  version "3.26.1"
-  resolved "https://registry.yarnpkg.com/core-js/-/core-js-3.26.1.tgz#7a9816dabd9ee846c1c0fe0e8fcad68f3709134e"
-  integrity sha512-21491RRQVzUn0GGM9Z1Jrpr6PNPxPi+Za8OM9q4tksTSnlbXXGKK1nXNg/QvwFYettXvSX6zWKCtHHfjN4puyA==
+  version "3.27.0"
+  resolved "https://registry.yarnpkg.com/core-js/-/core-js-3.27.0.tgz#a343bc614f29d9dcffa7616e65e10f9001cdd332"
+  integrity sha512-wY6cKosevs430KRkHUIsvepDXHGjlXOZO3hYXNyqpD6JvB0X28aXyv0t1Y1vZMwE7SoKmtfa6IASHCPN52FwBQ==
 
 core-util-is@~1.0.0:
   version "1.0.3"
@@ -7312,9 +7312,9 @@ graphql-compose@^9.0.10, graphql-compose@^9.0.9:
     graphql-type-json "0.3.2"
 
 graphql-http@^1.7.0:
-  version "1.9.0"
-  resolved "https://registry.yarnpkg.com/graphql-http/-/graphql-http-1.9.0.tgz#fdde6c1a4d7f32bcaed25f6a573c03b22c07ac76"
-  integrity sha512-MMwhHK24BRzf/AODYnT7eu3eCFHzoj1LBeB/8j+pFuhk539bnYQLP8Z/ey92PEgAbbL28lml7uZXbbCDYHVM1A==
+  version "1.10.0"
+  resolved "https://registry.yarnpkg.com/graphql-http/-/graphql-http-1.10.0.tgz#18a08b6c06163561b48a024c90b9f23197df912c"
+  integrity sha512-hPAVhru5W6EIrRgwaWJ9aD0PFcedZvjL0T+2CxW8QVaEU97HSkJKCtj4KeFreqc/Y3As7XnCE4JII+NYFV67vg==
 
 graphql-sse@^1.0.1:
   version "1.3.2"
