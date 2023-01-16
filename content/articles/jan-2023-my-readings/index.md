@@ -1,4 +1,4 @@
-# My readings from January 2023
+# My readings for January 2023
 
 ## Books
 - The Communist Manifesto by Friedrich Engels and Karl Marx
