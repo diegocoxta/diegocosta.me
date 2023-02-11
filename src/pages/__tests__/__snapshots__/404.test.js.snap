@@ -79,6 +79,36 @@ exports[`<NotFoundPage> renders properly 1`] = `
   margin: 5px 0;
 }
 
+.c9 {
+  line-height: 1.5;
+}
+
+.c9 a {
+  color: #CC433C;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  border-bottom: 1px solid #ffffff;
+}
+
+.c9 a:hover,
+.c9 a:focus {
+  border-bottom: 1px solid #CC433C;
+  outline: none;
+}
+
+.c9 blockquote {
+  border-left: 5px solid #CC433C;
+  padding-left: 20px;
+}
+
+.c9 img {
+  box-shadow: none !important;
+}
+
+.c9 h3 {
+  font-size: 28px;
+}
+
 <body>
   <div>
     <section
@@ -140,7 +170,9 @@ exports[`<NotFoundPage> renders properly 1`] = `
               <h2
                 class="c6"
                 data-testid="article-header-title"
-              />
+              >
+                404page.title
+              </h2>
               <p
                 class="c7"
               >
@@ -152,6 +184,11 @@ exports[`<NotFoundPage> renders properly 1`] = `
                 data-testid="article-header-tags"
               />
             </header>
+            <section
+              class="c9"
+            >
+              404page.message
+            </section>
           </article>
         </main>
       </section>

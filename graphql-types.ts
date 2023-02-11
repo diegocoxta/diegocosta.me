@@ -2903,7 +2903,7 @@ export type FooterComponentQuery = { site?: { siteMetadata?: { repository?: stri
 export type HeaderComponentQueryVariables = Exact<{ [key: string]: never; }>;
 
 
-export type HeaderComponentQuery = { site?: { siteMetadata?: { author?: string | null, avatar?: string | null } | null } | null };
+export type HeaderComponentQuery = { site?: { siteMetadata?: { author?: string | null } | null } | null };
 
 export type MetatagsComponentQueryVariables = Exact<{ [key: string]: never; }>;
 

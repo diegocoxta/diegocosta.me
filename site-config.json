@@ -4,12 +4,8 @@
   "description": "Engenheiro de software e Engineering Manager apaixonado por construir produtos que impactem a vida das pessoas.",
   "siteUrl": "https://diegocosta.me",
   "defaultLanguage": "en",
-  "languages": [
-    "pt",
-    "en"
-  ],
+  "languages": ["pt", "en"],
   "repository": "https://github.com/diegocosta/diegocosta.me",
   "image": "https://repository-images.githubusercontent.com/278878641/3756a080-d995-11ea-9b9f-f91a4448af98",
-  "googleAnalyticsKey": "UA-53539968-4",
-  "avatar": "https://pbs.twimg.com/profile_images/1600168933851648001/p5pPKdSB_400x400.jpg"
+  "googleAnalyticsKey": "UA-53539968-4"
 }
