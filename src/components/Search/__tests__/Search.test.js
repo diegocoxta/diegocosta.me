@@ -78,9 +78,18 @@ describe('<Search />', () => {
     expect(_MOCKED_COMBOBOX.getMenuProps).toHaveBeenCalledTimes(1);
     expect(_MOCKED_COMBOBOX.getItemProps).toHaveBeenCalledTimes(3);
 
-    expect(_MOCKED_COMBOBOX.getItemProps).toHaveBeenNthCalledWith(1, { index: 0, item: _MOCKED_ARTICLES[0] });
-    expect(_MOCKED_COMBOBOX.getItemProps).toHaveBeenNthCalledWith(2, { index: 1, item: _MOCKED_ARTICLES[1] });
-    expect(_MOCKED_COMBOBOX.getItemProps).toHaveBeenNthCalledWith(3, { index: 2, item: _MOCKED_ARTICLES[2] });
+    expect(_MOCKED_COMBOBOX.getItemProps).toHaveBeenNthCalledWith(1, {
+      index: 0,
+      item: _MOCKED_ARTICLES[0],
+    });
+    expect(_MOCKED_COMBOBOX.getItemProps).toHaveBeenNthCalledWith(2, {
+      index: 1,
+      item: _MOCKED_ARTICLES[1],
+    });
+    expect(_MOCKED_COMBOBOX.getItemProps).toHaveBeenNthCalledWith(3, {
+      index: 2,
+      item: _MOCKED_ARTICLES[2],
+    });
 
     expect(baseElement).toMatchSnapshot();
   });

@@ -8,7 +8,7 @@ type Props = Partial<Pick<MetatagsProps, 'title' | 'description' | 'image'>>;
 export default (props: Props): React.ReactElement => {
   const {
     site: {
-      siteMetadata: { title, description, author, image },
+      siteMetadata: { title, description, author, image, metatagLinks },
     },
   } = useStaticQuery(
     graphql`
@@ -19,6 +19,10 @@ export default (props: Props): React.ReactElement => {
             description
             author
             image
+            metatagLinks {
+              rel
+              href
+            }
           }
         }
       }
@@ -29,5 +33,7 @@ export default (props: Props): React.ReactElement => {
   const metaTitle = props.title ? `${props.title} - ${title}` : title;
   const metaImage = props.image || image;
 
-  return <Metatags title={metaTitle} description={metaDescription} author={author} image={metaImage} />;
+  return (
+    <Metatags links={metatagLinks} title={metaTitle} description={metaDescription} author={author} image={metaImage} />
+  );
 };

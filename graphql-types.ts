@@ -284,7 +284,12 @@ export type SiteSiteMetadata = {
   repository?: Maybe<Scalars['String']>;
   image?: Maybe<Scalars['String']>;
   googleAnalyticsKey?: Maybe<Scalars['String']>;
-  avatar?: Maybe<Scalars['String']>;
+  metatagLinks?: Maybe<Array<Maybe<SiteSiteMetadataMetatagLinks>>>;
+};
+
+export type SiteSiteMetadataMetatagLinks = {
+  rel?: Maybe<Scalars['String']>;
+  href?: Maybe<Scalars['String']>;
 };
 
 export type SiteFunction = Node & {
@@ -1972,7 +1977,16 @@ export type SiteSiteMetadataFilterInput = {
   repository?: InputMaybe<StringQueryOperatorInput>;
   image?: InputMaybe<StringQueryOperatorInput>;
   googleAnalyticsKey?: InputMaybe<StringQueryOperatorInput>;
-  avatar?: InputMaybe<StringQueryOperatorInput>;
+  metatagLinks?: InputMaybe<SiteSiteMetadataMetatagLinksFilterListInput>;
+};
+
+export type SiteSiteMetadataMetatagLinksFilterListInput = {
+  elemMatch?: InputMaybe<SiteSiteMetadataMetatagLinksFilterInput>;
+};
+
+export type SiteSiteMetadataMetatagLinksFilterInput = {
+  rel?: InputMaybe<StringQueryOperatorInput>;
+  href?: InputMaybe<StringQueryOperatorInput>;
 };
 
 export type SiteConnection = {
@@ -2046,7 +2060,12 @@ export type SiteSiteMetadataFieldSelector = {
   repository?: InputMaybe<FieldSelectorEnum>;
   image?: InputMaybe<FieldSelectorEnum>;
   googleAnalyticsKey?: InputMaybe<FieldSelectorEnum>;
-  avatar?: InputMaybe<FieldSelectorEnum>;
+  metatagLinks?: InputMaybe<SiteSiteMetadataMetatagLinksFieldSelector>;
+};
+
+export type SiteSiteMetadataMetatagLinksFieldSelector = {
+  rel?: InputMaybe<FieldSelectorEnum>;
+  href?: InputMaybe<FieldSelectorEnum>;
 };
 
 export type SiteGroupConnection = {
@@ -2132,7 +2151,12 @@ export type SiteSiteMetadataSortInput = {
   repository?: InputMaybe<SortOrderEnum>;
   image?: InputMaybe<SortOrderEnum>;
   googleAnalyticsKey?: InputMaybe<SortOrderEnum>;
-  avatar?: InputMaybe<SortOrderEnum>;
+  metatagLinks?: InputMaybe<SiteSiteMetadataMetatagLinksSortInput>;
+};
+
+export type SiteSiteMetadataMetatagLinksSortInput = {
+  rel?: InputMaybe<SortOrderEnum>;
+  href?: InputMaybe<SortOrderEnum>;
 };
 
 export type SiteFunctionConnection = {
@@ -2908,7 +2932,7 @@ export type HeaderComponentQuery = { site?: { siteMetadata?: { author?: string |
 export type MetatagsComponentQueryVariables = Exact<{ [key: string]: never; }>;
 
 
-export type MetatagsComponentQuery = { site?: { siteMetadata?: { title?: string | null, description?: string | null, author?: string | null, image?: string | null } | null } | null };
+export type MetatagsComponentQuery = { site?: { siteMetadata?: { title?: string | null, description?: string | null, author?: string | null, image?: string | null, metatagLinks?: Array<{ rel?: string | null, href?: string | null } | null> | null } | null } | null };
 
 export type SearchComponentQueryVariables = Exact<{ [key: string]: never; }>;
 

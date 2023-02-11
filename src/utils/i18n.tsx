@@ -22,7 +22,12 @@ export function usei18n() {
     return context.originalPath;
   }
 
-  return { getTranslationFor, getCurrentLanguage, getAllLanguages, getOriginalPath };
+  return {
+    getTranslationFor,
+    getCurrentLanguage,
+    getAllLanguages,
+    getOriginalPath,
+  };
 }
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
