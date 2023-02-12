@@ -24,10 +24,10 @@ const colors = {
   MIDNIGHTBLUE: '#2F3D4F',
   WETASPHALT: '#38485D',
   SILVER: '#BEC3C7',
-  BLACK: '#0C0D0E',
+  BLACK: '#0E1116',
   REVOLUTION: '#CC433C',
 };
 
-export const accent = colors.REVOLUTION;
+export const accent = colors.LIME;
 
 export default colors;

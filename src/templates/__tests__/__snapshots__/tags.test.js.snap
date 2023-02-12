@@ -85,7 +85,7 @@ exports[`<TagsTemplate> renders properly 1`] = `
 }
 
 .c10 a {
-  color: #CC433C;
+  color: #AAC13D;
   -webkit-text-decoration: none;
   text-decoration: none;
   border-bottom: 1px solid #ffffff;
@@ -93,12 +93,12 @@ exports[`<TagsTemplate> renders properly 1`] = `
 
 .c10 a:hover,
 .c10 a:focus {
-  border-bottom: 1px solid #CC433C;
+  border-bottom: 1px solid #AAC13D;
   outline: none;
 }
 
 .c10 blockquote {
-  border-left: 5px solid #CC433C;
+  border-left: 5px solid #AAC13D;
   padding-left: 20px;
 }
 
@@ -112,7 +112,7 @@ exports[`<TagsTemplate> renders properly 1`] = `
 
 .c4 {
   display: inline-block;
-  background: #CC433C;
+  background: #AAC13D;
   padding: 2px 10px;
   margin: 0px 10px 30px 0;
   color: #fff;

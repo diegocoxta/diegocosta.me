@@ -85,7 +85,7 @@ exports[`<ArticlesTemplate> renders properly 1`] = `
 }
 
 .c9 a {
-  color: #CC433C;
+  color: #AAC13D;
   -webkit-text-decoration: none;
   text-decoration: none;
   border-bottom: 1px solid #ffffff;
@@ -93,12 +93,12 @@ exports[`<ArticlesTemplate> renders properly 1`] = `
 
 .c9 a:hover,
 .c9 a:focus {
-  border-bottom: 1px solid #CC433C;
+  border-bottom: 1px solid #AAC13D;
   outline: none;
 }
 
 .c9 blockquote {
-  border-left: 5px solid #CC433C;
+  border-left: 5px solid #AAC13D;
   padding-left: 20px;
 }
 
