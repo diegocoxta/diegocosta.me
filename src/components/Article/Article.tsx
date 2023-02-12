@@ -102,13 +102,11 @@ export default function Article(props: ArticleProps): React.ReactElement {
     return `· ${languagePrefix} ${languageName}`;
   };
 
-  const talkLabel = props.tags?.includes('Talks') ? 'Talk' : undefined;
-
   return (
     <FixedContainer>
       <Container data-testid="article-item">
         <Header>
-          <Title title={props.title} url={props.url} label={talkLabel} />
+          <Title title={props.title} url={props.url} />
           {props.showArticleMetaAttributes && (
             <>
               <MetaAttributes>

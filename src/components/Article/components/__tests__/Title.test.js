@@ -10,12 +10,4 @@ describe('<Title />', () => {
     expect(getByText('Hello World')).toBeTruthy();
     expect(baseElement).toMatchSnapshot();
   });
-
-  it('renders label properly', () => {
-    const { baseElement, getByTestId, getByText } = render(<Title title="Hello World" label="News" />);
-    expect(getByTestId('article-header-label')).toBeTruthy();
-    expect(getByText('Hello World')).toBeTruthy();
-    expect(getByText('News')).toBeTruthy();
-    expect(baseElement).toMatchSnapshot();
-  });
 });

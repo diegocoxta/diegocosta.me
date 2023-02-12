@@ -20,24 +20,14 @@ const Container = styled(Link).attrs((props) => ({
   }
 `;
 
-const Label = styled.span`
-  background: ${({ theme }) => theme.accentColor};
-  padding: 2px 10px;
-  margin: 0px 10px 0 0;
-  color: #ffffff;
-  border-radius: 5px;
-`;
-
 export interface TitleProps {
   title: string;
   url?: string | null;
-  label?: string | null;
 }
 
 export default function Title(props: TitleProps) {
   return (
     <Container to={props.url} data-testid="article-header-title">
-      {props.label && <Label data-testid="article-header-label">{props.label}</Label>}
       {props.title}
     </Container>
   );
