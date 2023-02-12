@@ -4,13 +4,13 @@ date: '2023-02-11T09:12:03.284Z'
 description: After postponing for a long time I decided to migrate all my repositories from Gitlab to Github. How easy should this task be?
 tags: ['gitlab', 'github', 'vcs', 'terminal', 'til']
 language: en
---- 
+---
 
-Since GitHub announced that teams and users would be able to use unlimited private repositories, I thought about migrating my old projects archived on Gitlab and centralizing all my projects on Github. After postponing for a long time I decided to do this migration this Saturday night. *(the best use of my free time? maybe)*
+Since GitHub announced that teams and users would be able to use unlimited private repositories, I thought about migrating my old projects archived on Gitlab and centralizing all my projects on Github. After postponing for a long time I decided to do this migration this Saturday night. _(the best use of my free time? maybe)_
 
 The first issue I faced is the migration tool provided by GitHub only imports one repository at a time and it always asks for my GitLab password to complete the migration. I had 100 or more repositories, it would take a long time to complete.
 
-So, thinking about how to make the most of my night, I decided to dive deep into GitLab and GitHub's public APIs, run this migration in 5 minutes, and now, explain how you can do that too. 
+So, thinking about how to make the most of my night, I decided to dive deep into GitLab and GitHub's public APIs, run this migration in 5 minutes, and now, explain how you can do that too.
 
 **Migrating all your repositories from Gitlab to Github.**
 
@@ -23,7 +23,7 @@ USER_ID=""
 PRIVATE_TOKEN=""
 
 for repo in $(curl -s https://gitlab.com/api/v4/users/$USER_ID/projects\?private_token\=$PRIVATE_TOKEN\&per_page\=999 | jq -r ".[].ssh_url_to_repo"); do
-  git clone $repo; 
+  git clone $repo;
 done
 ```
 
@@ -33,9 +33,8 @@ The last step is to create the repositories on GitHub and upload all the content
 
 To do this, you will use the official [GitHub CLI](https://cli.github.com/). After downloading and logging in using `gh auth login`, you can use `gh repo create` to complete the job.
 
-
 ```sh
-for project in */; do 
+for project in */; do
   if [ -d "$project" ]; then
     cd $project;
     gh repo create ${project:0:-1} --source=. --private --push --remote=upstream
@@ -48,14 +47,14 @@ This command will map all folders (Now you know why it was important to create a
 
 Job done! **And we can now delete all Gitlab projects programmatically (optional).**
 
-*TIP: For delete repositories your Private Token needs `write_repository` scope*
+_TIP: For delete repositories your Private Token needs `write_repository` scope_
 
 ```sh
 USER_ID=""
 PRIVATE_TOKEN=""
 
-for repo in $(curl -s https://gitlab.com/api/v4/users/$USER_ID/projects\?private_token\=$PRIVATE_TOKEN\&per_page\=999 | jq -r ".[].id"); do 
-  curl -X DELETE https://gitlab.com/api/v4/projects/$repo\?private_token\=$PRIVATE_TOKEN; 
+for repo in $(curl -s https://gitlab.com/api/v4/users/$USER_ID/projects\?private_token\=$PRIVATE_TOKEN\&per_page\=999 | jq -r ".[].id"); do
+  curl -X DELETE https://gitlab.com/api/v4/projects/$repo\?private_token\=$PRIVATE_TOKEN;
 done
 ```
 
