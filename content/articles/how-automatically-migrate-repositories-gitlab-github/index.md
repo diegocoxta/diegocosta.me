@@ -6,7 +6,7 @@ tags: ['gitlab', 'github', 'vcs', 'terminal', 'til']
 language: en
 ---
 
-Since GitHub announced that teams and users would be able to use unlimited private repositories I thought about migrating my old projects archived on Gitlab and centralizing all my projects on Github. After postponing for a long time I decided to do this migration this Saturday night. _(the best use of my free time? maybe)_
+Since GitHub announced that teams and users would be able to use unlimited private repositories I've been thinking about migrating my old projects archived on Gitlab and centralizing all my projects on Github. After postponing for a long time I decided to do this migration this Saturday night. _(the best use of my free time? maybe)_
 
 The first issue I faced is the migration tool provided by GitHub only imports one repository at a time and it always asks for my GitLab password to complete the migration. I had 100 or more repositories, it would take a long time to complete.
 
