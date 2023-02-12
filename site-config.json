@@ -11,15 +11,7 @@
   "metatagLinks": [
     {
       "rel": "me",
-      "href": "https: //bolha.us/@diegocoxta"
-    },
-    {
-      "rel": "me",
       "href": "https: //mastodon.social/@diegocoxta"
-    },
-    {
-      "rel": "me",
-      "href": "https: //ursal.zone/@diegocoxta"
     }
   ]
 }
