@@ -21,7 +21,7 @@ exports[`<PagesTemplate> renders properly 1`] = `
 
 .c2 {
   margin: 0 5px;
-  color: #2F3D4F;
+  color: #EDF0F1;
   font-weight: 700;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -29,7 +29,7 @@ exports[`<PagesTemplate> renders properly 1`] = `
 }
 
 .c3 {
-  background: linear-gradient(90deg,#ffffff 20px,transparent 1%) center, linear-gradient(#ffffff 20px,transparent 1%) center, #2F3D4F;
+  background: linear-gradient(90deg,#0E1116 20px,transparent 1%) center, linear-gradient(#0E1116 20px,transparent 1%) center, #EDF0F1;
   background-size: 22px 22px;
   height: 120px;
   margin: 40px 0;
@@ -37,7 +37,7 @@ exports[`<PagesTemplate> renders properly 1`] = `
 }
 
 .c6 {
-  color: #2F3D4F;
+  color: #EDF0F1;
   box-shadow: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -48,14 +48,14 @@ exports[`<PagesTemplate> renders properly 1`] = `
 
 .c6:hover,
 .c6:focus {
-  border-bottom: 1px solid #2F3D4F;
+  border-bottom: 1px solid #EDF0F1;
   outline: none;
 }
 
 .c4 {
   margin: 0 0 60px 0;
   font-weight: 400;
-  color: #2F3D4F;
+  color: #EDF0F1;
 }
 
 .c5 {
@@ -70,7 +70,7 @@ exports[`<PagesTemplate> renders properly 1`] = `
   color: #AAC13D;
   -webkit-text-decoration: none;
   text-decoration: none;
-  border-bottom: 1px solid #ffffff;
+  border-bottom: 1px solid #0E1116;
 }
 
 .c7 a:hover,

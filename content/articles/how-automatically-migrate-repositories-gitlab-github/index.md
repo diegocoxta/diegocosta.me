@@ -37,8 +37,8 @@ To do this, you will use the official [GitHub CLI](https://cli.github.com/). Aft
 for project in */; do
   if [ -d "$project" ]; then
     cd $project;
-    gh repo create ${project:0:-1} --source=. --private --push --remote=upstream
-    cd ..
+    gh repo create ${project:0:-1} --source=. --private --push --remote=upstream;
+    cd ..;
   fi
 done
 ```
@@ -61,3 +61,5 @@ done
 This command will send a delete request for every project that you have.
 
 So, do you know a simpler way to do this job? Send me a tip on [Twitter](https://twitter.com/diegocoxta), I'd love to know.
+
+_This article was also published in [Dev Community](https://dev.to/diegocoxta/how-to-automatically-migrate-all-your-repositories-from-gitlab-to-github-40mn) and [Medium](https://medium.com/@diegocoxta/how-to-automatically-migrate-all-your-repositories-from-gitlab-to-github-5665bab2e44)_

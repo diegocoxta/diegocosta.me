@@ -36,4 +36,4 @@ O que 2021 reserva para mim ainda é incerto, mas sobre uma coisa eu posso falar
 
 Apesar de um ano caótico no mundo, eu só tenho a agradecer a tudo que 2020 me proporcionou. Ao menos, profissionalmente.
 
-_Este artigo também publicado no [Linkedin](https://www.linkedin.com/pulse/minha-retrospectiva-profissional-de-2020-diego-costa/)._
+_Este artigo também foi publicado no [Linkedin](https://www.linkedin.com/pulse/minha-retrospectiva-profissional-de-2020-diego-costa/)._

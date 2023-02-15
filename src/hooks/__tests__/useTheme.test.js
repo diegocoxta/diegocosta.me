@@ -6,12 +6,6 @@ describe('useTheme', () => {
   it('returns the correct properties', async () => {
     const { result } = renderHook(() => useTheme());
 
-    expect(result.current[0]).toBe('light');
-
-    act(() => {
-      result.current[1]();
-    });
-
     expect(result.current[0]).toBe('dark');
 
     act(() => {
@@ -19,5 +13,11 @@ describe('useTheme', () => {
     });
 
     expect(result.current[0]).toBe('light');
+
+    act(() => {
+      result.current[1]();
+    });
+
+    expect(result.current[0]).toBe('dark');
   });
 });
