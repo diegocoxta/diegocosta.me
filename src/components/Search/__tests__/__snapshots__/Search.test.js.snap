@@ -13,62 +13,66 @@ exports[`<Search /> renders properly 1`] = `
 }
 
 .c2 {
-  -webkit-transition: opacity 0.2s;
-  transition: opacity 0.2s;
   width: 100%;
-  padding: 20px;
-  outline: none;
-  font-size: 18px;
-  line-height: 18px;
+  padding: 0 0 0 20px;
+  font-size: 26px;
   border-radius: 50px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   box-sizing: border-box;
-  border: 1px solid;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
-.c2 {
-  -webkit-transition: opacity 0.2s;
-  transition: opacity 0.2s;
+.c3 {
   width: 100%;
   padding: 20px;
+  background: transparent;
   outline: none;
-  font-size: 18px;
-  line-height: 18px;
   border-radius: 50px;
-  box-sizing: border-box;
-  border: 1px solid;
-}
-
-.c2 {
-  -webkit-transition: opacity 0.2s;
-  transition: opacity 0.2s;
-  width: 100%;
-  padding: 20px;
-  outline: none;
   font-size: 18px;
-  line-height: 18px;
-  border-radius: 50px;
-  box-sizing: border-box;
-  border: 1px solid;
-}
-
-.c2 {
-  -webkit-transition: opacity 0.2s;
-  transition: opacity 0.2s;
-  width: 100%;
-  padding: 20px;
-  outline: none;
-  font-size: 18px;
-  line-height: 18px;
-  border-radius: 50px;
-  box-sizing: border-box;
   border: 1px solid;
 }
 
 .c3 {
-  visibility: hidden;
+  width: 100%;
+  padding: 20px;
+  background: transparent;
+  outline: none;
+  border-radius: 50px;
+  font-size: 18px;
+  border: 1px solid;
+}
+
+.c3 {
+  width: 100%;
+  padding: 20px;
+  background: transparent;
+  outline: none;
+  border-radius: 50px;
+  font-size: 18px;
+  border: 1px solid;
+}
+
+.c3 {
+  width: 100%;
+  padding: 20px;
+  background: transparent;
+  outline: none;
+  border-radius: 50px;
+  font-size: 18px;
+  border: 1px solid;
 }
 
 .c4 {
+  visibility: hidden;
+}
+
+.c5 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -80,26 +84,26 @@ exports[`<Search /> renders properly 1`] = `
   box-shadow: 0 3px 8px 0 rgba(0,0,0,0.1);
 }
 
-.c5 {
+.c6 {
   display: block;
   -webkit-text-decoration: none;
   text-decoration: none;
   padding: 20px;
 }
 
-.c5:hover {
+.c6:hover {
   -webkit-text-decoration: none;
   text-decoration: none;
   background: rgba(255,255,255,0.1);
 }
 
-.c6 {
+.c7 {
   font-size: 16px;
   margin: 0 0 5px;
   font-weight: 600;
 }
 
-.c7 {
+.c8 {
   font-size: 14px;
   margin: 0%;
 }
@@ -113,70 +117,87 @@ exports[`<Search /> renders properly 1`] = `
         <div
           class="c1"
         >
-          <input
-            autocomplete="off"
+          <div
             class="c2"
-            placeholder="search.searchForPosts"
-            type="text"
-          />
+          >
+            <svg
+              fill="currentColor"
+              height="1em"
+              stroke="currentColor"
+              stroke-width="0"
+              viewBox="0 0 16 16"
+              width="1em"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"
+              />
+            </svg>
+            <input
+              autocomplete="off"
+              class="c3"
+              placeholder="search.searchForPosts"
+              type="text"
+            />
+          </div>
           <label
-            class="c3"
+            class="c4"
           >
             search.searchForPosts
           </label>
           <div
-            class="c4"
+            class="c5"
             data-testid="search-results"
           >
             <a
-              class="c5"
+              class="c6"
               data-testid="search-results-link"
               href="/como-migrar-para-o-windows-8-1/"
             >
               <h3
-                class="c6"
+                class="c7"
                 data-testid="search-results-title"
               >
                 Como migrar para o Windows 8.1 a partir de uma nova instalação do Windows 8
               </h3>
               <p
-                class="c7"
+                class="c8"
                 data-testid="search-results-description"
               >
                 Quem já precisou formatar um PC e acabou caindo no Windows 8 sabe como é uma dor de cabeça realizar o upgrade para o Windows 8.1.
               </p>
             </a>
             <a
-              class="c5"
+              class="c6"
               data-testid="search-results-link"
               href="/enviando-aplicacao-heroku-windows/"
             >
               <h3
-                class="c6"
+                class="c7"
                 data-testid="search-results-title"
               >
                 Enviando sua aplicação para o Heroku no Windows
               </h3>
               <p
-                class="c7"
+                class="c8"
                 data-testid="search-results-description"
               >
                 Quem nunca precisou colocar aquela aplicação em produção para testar ou até mesmo compartilhar com colegas e ficou impedido por não ter um servidor bom para uso gratuito?
               </p>
             </a>
             <a
-              class="c5"
+              class="c6"
               data-testid="search-results-link"
               href="/atualizando-programas-cask-homebrew-macos/"
             >
               <h3
-                class="c6"
+                class="c7"
                 data-testid="search-results-title"
               >
                 Atualizando todos seus casks via Homebrew no macOS
               </h3>
               <p
-                class="c7"
+                class="c8"
                 data-testid="search-results-description"
               >
                 Uma dica simples para forçar a atualização de todos seus casks via HomeBrew
@@ -203,62 +224,66 @@ exports[`<Search /> renders properly with results closed 1`] = `
 }
 
 .c2 {
-  -webkit-transition: opacity 0.2s;
-  transition: opacity 0.2s;
   width: 100%;
-  padding: 20px;
-  outline: none;
-  font-size: 18px;
-  line-height: 18px;
+  padding: 0 0 0 20px;
+  font-size: 26px;
   border-radius: 50px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   box-sizing: border-box;
-  border: 1px solid;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
-.c2 {
-  -webkit-transition: opacity 0.2s;
-  transition: opacity 0.2s;
+.c3 {
   width: 100%;
   padding: 20px;
+  background: transparent;
   outline: none;
-  font-size: 18px;
-  line-height: 18px;
   border-radius: 50px;
-  box-sizing: border-box;
-  border: 1px solid;
-}
-
-.c2 {
-  -webkit-transition: opacity 0.2s;
-  transition: opacity 0.2s;
-  width: 100%;
-  padding: 20px;
-  outline: none;
   font-size: 18px;
-  line-height: 18px;
-  border-radius: 50px;
-  box-sizing: border-box;
-  border: 1px solid;
-}
-
-.c2 {
-  -webkit-transition: opacity 0.2s;
-  transition: opacity 0.2s;
-  width: 100%;
-  padding: 20px;
-  outline: none;
-  font-size: 18px;
-  line-height: 18px;
-  border-radius: 50px;
-  box-sizing: border-box;
   border: 1px solid;
 }
 
 .c3 {
-  visibility: hidden;
+  width: 100%;
+  padding: 20px;
+  background: transparent;
+  outline: none;
+  border-radius: 50px;
+  font-size: 18px;
+  border: 1px solid;
+}
+
+.c3 {
+  width: 100%;
+  padding: 20px;
+  background: transparent;
+  outline: none;
+  border-radius: 50px;
+  font-size: 18px;
+  border: 1px solid;
+}
+
+.c3 {
+  width: 100%;
+  padding: 20px;
+  background: transparent;
+  outline: none;
+  border-radius: 50px;
+  font-size: 18px;
+  border: 1px solid;
 }
 
 .c4 {
+  visibility: hidden;
+}
+
+.c5 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -279,19 +304,36 @@ exports[`<Search /> renders properly with results closed 1`] = `
         <div
           class="c1"
         >
-          <input
-            autocomplete="off"
+          <div
             class="c2"
-            placeholder="search.searchForPosts"
-            type="text"
-          />
+          >
+            <svg
+              fill="currentColor"
+              height="1em"
+              stroke="currentColor"
+              stroke-width="0"
+              viewBox="0 0 16 16"
+              width="1em"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"
+              />
+            </svg>
+            <input
+              autocomplete="off"
+              class="c3"
+              placeholder="search.searchForPosts"
+              type="text"
+            />
+          </div>
           <label
-            class="c3"
+            class="c4"
           >
             search.searchForPosts
           </label>
           <div
-            class="c4"
+            class="c5"
             data-testid="search-results"
           />
         </div>
