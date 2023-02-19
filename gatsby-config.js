@@ -126,7 +126,23 @@ module.exports = {
                 ) {
                   edges {
                     node {
-                      ...ArticleInformation
+                      html
+                      excerpt
+                      fields {
+                        slug
+                        readingTime {
+                          minutes
+                        }
+                        language
+                      }
+                      frontmatter {
+                        date
+                        title
+                        description
+                        tags
+                        homepage_view_full_article
+                        status
+                      }
                     }
                   }
                 }
