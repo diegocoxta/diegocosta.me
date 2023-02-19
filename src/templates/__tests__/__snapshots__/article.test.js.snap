@@ -181,7 +181,7 @@ exports[`<ArticlesTemplate> renders properly 1`] = `
                 Invalid Date
                  
                 · 5 article.minutes article.ofReading
-                 
+                 · 
               </p>
               <ul
                 class="c8"

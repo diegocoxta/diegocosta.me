@@ -269,7 +269,7 @@ exports[`<IndexPage> renders properly 1`] = `
                 16/01/2021
                  
                 · 5 article.minutes article.ofReading
-                 
+                 · 
               </p>
               <ul
                 class="c9"
@@ -308,7 +308,7 @@ exports[`<IndexPage> renders properly 1`] = `
                 18/01/2020
                  
                 · 2 article.minutes article.ofReading
-                 
+                 · 
               </p>
               <ul
                 class="c9"

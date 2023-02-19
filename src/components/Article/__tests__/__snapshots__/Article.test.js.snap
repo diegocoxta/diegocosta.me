@@ -129,8 +129,8 @@ exports[`<Article /> does not render the article language name 1`] = `
               class="c4"
             >
                
-               
-              · article.languagePrefix languages.en
+               · 
+              article.languagePrefix languages.en
             </p>
             <ul
               class="c5"
@@ -216,8 +216,8 @@ exports[`<Article /> does not render the link 1`] = `
               18/01/2020
                
               · 5 article.minutes article.ofReading
-               
-              · article.languagePrefix languages.en
+               · 
+              article.languagePrefix languages.en
             </p>
             <ul
               class="c5"
@@ -302,8 +302,8 @@ exports[`<Article /> does not render the reading time 1`] = `
             >
               18/01/2020
                
-               
-              · article.languagePrefix languages.en
+               · 
+              article.languagePrefix languages.en
             </p>
             <ul
               class="c5"
@@ -391,8 +391,8 @@ exports[`<Article /> does not render the tags 1`] = `
               20/07/2020
                
               · 5 article.minutes article.ofReading
-               
-              · article.languagePrefix languages.pt
+               · 
+              article.languagePrefix languages.pt
             </p>
             <ul
               class="c5"
@@ -501,8 +501,8 @@ exports[`<Article /> renders properly 1`] = `
               18/01/2020
                
               · 5 article.minutes article.ofReading
-               
-              · article.languagePrefix languages.en
+               · 
+              article.languagePrefix languages.en
             </p>
             <ul
               class="c5"
@@ -644,8 +644,8 @@ exports[`<Article /> renders properly the body content 1`] = `
               18/01/2020
                
               · 5 article.minutes article.ofReading
-               
-              · article.languagePrefix languages.pt
+               · 
+              article.languagePrefix languages.pt
             </p>
             <ul
               class="c5"
@@ -767,8 +767,8 @@ exports[`<Article /> renders properly the description 1`] = `
               18/01/2020
                
               · 5 article.minutes article.ofReading
-               
-              · article.languagePrefix languages.pt
+               · 
+              article.languagePrefix languages.pt
             </p>
             <ul
               class="c5"
@@ -882,8 +882,8 @@ exports[`<Article /> renders the article details 1`] = `
               18/01/2020
                
               · 5 article.minutes article.ofReading
-               
-              · article.languagePrefix languages.en
+               · 
+              article.languagePrefix languages.en
             </p>
             <ul
               class="c5"

@@ -69,7 +69,7 @@ describe('<Search />', () => {
     _MOCKED_ARTICLES.map((article, index) => {
       expect(getAllByTestId('search-results-title')[index].textContent).toBe(article.item.frontmatter.title);
       expect(getAllByTestId('search-results-description')[index].textContent).toBe(
-        article.item.frontmatter.description
+        ` · ${article.item.frontmatter.description}`
       );
       expect(getAllByTestId('search-results-link')[index].href).toContain(article.item.fields.slug);
     });

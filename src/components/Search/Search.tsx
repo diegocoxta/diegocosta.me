@@ -4,7 +4,7 @@ import { UseComboboxReturnValue } from 'downshift';
 import Fuse from 'fuse.js';
 import { BsSearch } from 'react-icons/bs';
 
-import { usei18n, Link } from '~/utils/i18n';
+import { usei18n, Link, getContentLanguage } from '~/utils/i18n';
 import FixedContainer from '~/components/FixedContainer';
 
 import { SearchComponentQuery } from '~/../graphql-types';
@@ -114,6 +114,7 @@ export default function Search({ articles, combobox }: SearchProps): React.React
                   {article.item.frontmatter?.title ?? ''}
                 </ResultItemTitle>
                 <ResultItemDescription data-testid="search-results-description">
+                  {getContentLanguage(i18n, article?.item?.fields?.language)} ·{' '}
                   {article.item.frontmatter?.description ?? ''}
                 </ResultItemDescription>
               </ResultLink>

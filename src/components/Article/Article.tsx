@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import { usei18n } from '~/utils/i18n';
+import { usei18n, getContentLanguage } from '~/utils/i18n';
 
 import FixedContainer from '~/components/FixedContainer';
 
@@ -91,17 +91,6 @@ export default function Article(props: ArticleProps): React.ReactElement {
       day: '2-digit',
     });
 
-  const language = () => {
-    if (!props.language) {
-      return;
-    }
-
-    const languagePrefix = i18n.getTranslationFor('article.languagePrefix');
-    const languageName = i18n.getTranslationFor(`languages.${props.language}`);
-
-    return `· ${languagePrefix} ${languageName}`;
-  };
-
   return (
     <FixedContainer>
       <Container data-testid="article-item">
@@ -110,7 +99,7 @@ export default function Article(props: ArticleProps): React.ReactElement {
           {props.showMetaAttributes && (
             <>
               <MetaAttributes>
-                {date} {getReadingTime()} {language()}
+                {date} {getReadingTime()} · {getContentLanguage(i18n, props.language)}
               </MetaAttributes>
               <Tags tags={props.tags} />
             </>
