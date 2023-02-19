@@ -36,13 +36,7 @@ export default function Tags({ data, pageContext }: TagsTemplateProps): React.Re
 export const pageQuery = graphql`
   query TagsTemplate($tag: String, $language: String!) {
     locales: allLocale(filter: { language: { eq: $language } }) {
-      edges {
-        node {
-          ns
-          data
-          language
-        }
-      }
+      ...LanguageInformation
     }
     articles: allMarkdownRemark(
       sort: { frontmatter: { date: DESC } }

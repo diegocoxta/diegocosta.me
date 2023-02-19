@@ -33,20 +33,14 @@ export default function IndexPage({ data }: IndexPageProps): React.ReactElement 
 export const pageQuery = graphql`
   query IndexPage($language: String!) {
     locales: allLocale(filter: { language: { eq: $language } }) {
-      edges {
-        node {
-          ns
-          data
-          language
-        }
-      }
+      ...LanguageInformation
     }
     aboutMe: markdownRemark(fields: { slug: { eq: "/home/" }, language: { eq: $language } }) {
       html
     }
     articles: allMarkdownRemark(
       sort: { frontmatter: { date: DESC } }
-      filter: { fields: { collection: { eq: "articles" } } }
+      filter: { fields: { collection: { eq: "articles" } }, frontmatter: { status: { eq: "published" } } }
     ) {
       edges {
         node {

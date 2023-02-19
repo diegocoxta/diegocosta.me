@@ -24,13 +24,7 @@ export default function NotFoundPage(): React.ReactElement {
 export const pageQuery = graphql`
   query PageNotFoundQuery($language: String!) {
     locales: allLocale(filter: { language: { eq: $language } }) {
-      edges {
-        node {
-          ns
-          data
-          language
-        }
-      }
+      ...LanguageInformation
     }
   }
 `;

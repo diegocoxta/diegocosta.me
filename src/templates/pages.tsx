@@ -27,13 +27,7 @@ export default function PagesTemplate({ data }: PagesTemplateProps): React.React
 export const pageQuery = graphql`
   query PagesTemplate($slug: String!, $language: String!) {
     locales: allLocale(filter: { language: { eq: $language } }) {
-      edges {
-        node {
-          ns
-          data
-          language
-        }
-      }
+      ...LanguageInformation
     }
     page: markdownRemark(fields: { slug: { eq: $slug }, language: { eq: $language } }) {
       ...ArticleInformation
