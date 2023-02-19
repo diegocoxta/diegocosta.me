@@ -19,7 +19,7 @@ export default function ArticlesTemplate({ data }: ArticlesTemplateProps): React
     <Layout>
       <Metatags title={article?.frontmatter?.title ?? ''} />
       <Divisor />
-      <Article article={article} showFullContent={true} />
+      <Article article={article} showBodyContent={true} />
     </Layout>
   );
 }

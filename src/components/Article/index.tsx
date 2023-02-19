@@ -7,15 +7,13 @@ import Article from './Article';
 
 interface Props {
   article?: ArticleInformationFragment | null;
-  showArticleMetaAttributes?: boolean;
-  showFullContent?: boolean;
+  showMetaAttributes?: boolean;
+  showBodyContent?: boolean;
 }
 
 export default (props: Props): React.ReactElement => {
-  const { showArticleMetaAttributes, showFullContent, article } = props;
+  const { showMetaAttributes, showBodyContent, article } = props;
   const { frontmatter, fields, html, excerpt } = article ?? {};
-
-  const shoudShowFullContent = frontmatter?.homepage_view_full_article || showFullContent;
 
   return (
     <Article
@@ -25,8 +23,8 @@ export default (props: Props): React.ReactElement => {
       tags={frontmatter?.tags as string[]}
       readingTime={fields?.readingTime?.minutes ?? 0}
       language={fields?.language}
-      showArticleMetaAttributes={showArticleMetaAttributes}
-      content={shoudShowFullContent ? html : frontmatter?.description || excerpt}
+      showMetaAttributes={showMetaAttributes}
+      content={showBodyContent ? html : frontmatter?.description || excerpt}
     />
   );
 };

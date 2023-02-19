@@ -100,7 +100,7 @@ describe('<Article />', () => {
         language="en"
         date="2020-01-18T22:12:03.284Z"
         tags={['jest', 'testing-library']}
-        showArticleMetaAttributes={false}
+        showMetaAttributes={false}
       />
     );
 

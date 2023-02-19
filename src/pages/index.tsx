@@ -24,7 +24,11 @@ export default function IndexPage({ data }: IndexPageProps): React.ReactElement 
       <Divisor />
       <Search />
       {articles.edges.map(({ node }, index: number) => (
-        <Article key={`article-${index}`} article={node} />
+        <Article
+          key={`article-${index}`}
+          article={node}
+          showBodyContent={!!node.frontmatter?.homepage_view_full_article}
+        />
       ))}
     </Layout>
   );

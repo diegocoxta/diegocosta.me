@@ -40,7 +40,7 @@ export const pageQuery = graphql`
     }
     articles: allMarkdownRemark(
       sort: { frontmatter: { date: DESC } }
-      filter: { frontmatter: { tags: { in: [$tag] } } }
+      filter: { frontmatter: { tags: { in: [$tag] }, status: { eq: "published" } } }
     ) {
       edges {
         node {

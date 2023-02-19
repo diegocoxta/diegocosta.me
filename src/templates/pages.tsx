@@ -19,7 +19,7 @@ export default function PagesTemplate({ data }: PagesTemplateProps): React.React
     <Layout>
       <Metatags title={page?.frontmatter?.title ?? ''} />
       <Divisor />
-      <Article article={page} showArticleMetaAttributes={false} showFullContent={true} />
+      <Article article={page} showMetaAttributes={false} showBodyContent={true} />
     </Layout>
   );
 }

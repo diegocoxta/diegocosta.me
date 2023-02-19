@@ -59,7 +59,7 @@ export type ArticleProps = TitleProps &
     language?: string | null;
     date?: string;
     content?: string | null;
-    showArticleMetaAttributes?: boolean;
+    showMetaAttributes?: boolean;
   };
 
 export default function Article(props: ArticleProps): React.ReactElement {
@@ -107,7 +107,7 @@ export default function Article(props: ArticleProps): React.ReactElement {
       <Container data-testid="article-item">
         <Header>
           <Title title={props.title} url={props.url} />
-          {props.showArticleMetaAttributes && (
+          {props.showMetaAttributes && (
             <>
               <MetaAttributes>
                 {date} {getReadingTime()} {language()}
@@ -123,5 +123,5 @@ export default function Article(props: ArticleProps): React.ReactElement {
 }
 
 Article.defaultProps = {
-  showArticleMetaAttributes: true,
+  showMetaAttributes: true,
 };
