@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { UseComboboxReturnValue } from 'downshift';
 import Fuse from 'fuse.js';
+import { BsSearch } from 'react-icons/bs';
 
 import { usei18n, Link } from '~/utils/i18n';
 import FixedContainer from '~/components/FixedContainer';
@@ -13,17 +14,26 @@ const Content = styled.div`
   margin: 40px 0 20px;
 `;
 
-const Input = styled.input`
-  transition: opacity 0.2s;
+const Input = styled.div`
+  width: 100%;
+  padding: 0 0 0 20px;
+  background: ${({ theme }) => theme.textColor};
+  color: ${({ theme }) => theme.backgroundColor};
+  font-size: 26px;
+  border-radius: 50px;
+  display: flex;
+  box-sizing: border-box;
+  align-items: center;
+`;
+
+const InputField = styled.input`
   width: 100%;
   padding: 20px;
-  background: ${({ theme }) => theme.textColor};
+  background: transparent;
   outline: none;
+  border-radius: 50px;
   color: ${({ theme }) => theme.backgroundColor};
   font-size: 18px;
-  line-height: 18px;
-  border-radius: 50px;
-  box-sizing: border-box;
   border: 1px solid ${({ theme }) => theme.textColor};
 
   ::placeholder {
@@ -84,7 +94,10 @@ export default function Search({ articles, combobox }: SearchProps): React.React
   return (
     <FixedContainer>
       <Content>
-        <Input type="text" placeholder={placeholder} autoComplete="off" {...combobox.getInputProps()} />
+        <Input>
+          <BsSearch />
+          <InputField type="text" placeholder={placeholder} autoComplete="off" {...combobox.getInputProps()} />
+        </Input>
         <Label {...combobox.getLabelProps()}>{placeholder}</Label>
         <Results {...combobox.getMenuProps()} data-testid="search-results">
           {combobox.isOpen &&
