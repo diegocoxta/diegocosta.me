@@ -114,7 +114,7 @@ module.exports = {
                   date: edge.node.frontmatter.date,
                   url: site.siteMetadata.siteUrl + edge.node.fields.slug,
                   guid: site.siteMetadata.siteUrl + edge.node.fields.slug,
-                  custom_elements: [{ 'content:encoded': edge.node.excerpt }],
+                  custom_elements: [{ 'content:encoded': edge.node.html }],
                 });
               });
             },
@@ -122,16 +122,11 @@ module.exports = {
               query GatsbyPluginFeedArticles {
                 articles: allMarkdownRemark(
                   sort: { order: DESC, fields: [frontmatter___date] },
-                  filter: { fields: { collection: { eq: "articles" } } }
+                  filter: { fields: { collection: { eq: "articles" } }, frontmatter: { status: { eq: "published" } } }
                 ) {
                   edges {
                     node {
-                      excerpt
-                      fields { slug }
-                      frontmatter {
-                        title
-                        date
-                      }
+                      ...ArticleInformation
                     }
                   }
                 }
