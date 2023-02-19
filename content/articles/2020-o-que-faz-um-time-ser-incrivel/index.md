@@ -4,6 +4,7 @@ description: Apresentação tendo como base os ensinamentos do Project Aristotle
 date: '2020-06-01T22:12:03.284Z'
 tags: ['Team Building', 'Talks']
 language: pt
+status: draft
 ---
 
 Apresentação tendo como base os ensinamentos do Project Aristotle

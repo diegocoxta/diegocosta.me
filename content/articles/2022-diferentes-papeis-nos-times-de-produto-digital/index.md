@@ -3,8 +3,9 @@ title: Diferentes papeis nos times de produto digital no NuLab Meetup 4
 description:
 date: '2022-05-25T22:12:03.284Z'
 tags: ['Management', 'Produtos', 'Gestão', 'Talks']
-homepage_full_article: true
+homepage_view_full_article: true
 language: pt
+status: published
 ---
 
 Confira o bate-papo que participei pela NuLab Salvador do Nubank falando sobre papéis e responsabilidades dentro de um time de produto digital.

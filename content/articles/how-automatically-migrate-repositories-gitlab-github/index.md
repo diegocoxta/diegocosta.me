@@ -4,6 +4,7 @@ date: '2023-02-11T09:12:03.284Z'
 description: After postponing for a long time I decided to migrate all my repositories from Gitlab to Github. How easy should this task be?
 tags: ['gitlab', 'github', 'vcs', 'terminal', 'til']
 language: en
+status: published
 ---
 
 Since GitHub announced that teams and users would be able to use unlimited private repositories I've been thinking about migrating my old projects archived on Gitlab and centralizing all my projects on Github. After postponing for a long time I decided to do this migration this Saturday night. _(is it the best use of my free time? maybe)_

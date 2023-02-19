@@ -4,6 +4,7 @@ date: '2015-11-26T22:12:03.284Z'
 description: Quem nunca precisou colocar aquela aplicação em produção para testar ou até mesmo compartilhar com colegas e ficou impedido por não ter um servidor bom para uso gratuito?
 tags: ['Heroku', 'Windows', 'Deploy']
 language: pt
+status: published
 ---
 
 Quem nunca precisou colocar aquela aplicação em produção para testar ou até mesmo compartilhar com colegas e ficou impedido por não ter um servidor bom para uso gratuito?

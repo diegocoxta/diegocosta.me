@@ -15,7 +15,7 @@ export default (props: Props): React.ReactElement => {
   const { showArticleMetaAttributes, showFullContent, article } = props;
   const { frontmatter, fields, html, excerpt } = article ?? {};
 
-  const shoudShowFullContent = frontmatter?.homepage_full_article || showFullContent;
+  const shoudShowFullContent = frontmatter?.homepage_view_full_article || showFullContent;
 
   return (
     <Article
@@ -47,7 +47,8 @@ export const query = graphql`
       title
       description
       tags
-      homepage_full_article
+      homepage_view_full_article
+      status
     }
   }
 `;

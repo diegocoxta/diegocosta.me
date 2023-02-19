@@ -4,6 +4,7 @@ description: Apresentação sobre disfunções em times com base no livro 'Os 5 
 date: '2020-06-01T22:12:03.284Z'
 tags: ['Team Building', 'Talks', 'Books']
 language: pt
+status: draft
 ---
 
 Apresentação sobre disfunções em times com base no livro 'Os 5 desafios das equipes' de Patrick Lencioni

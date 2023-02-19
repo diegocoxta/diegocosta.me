@@ -4,6 +4,7 @@ date: '2019-01-12T22:12:03.284Z'
 description: Isso é tudo que você precisa fazer para ter um blog com deploy automatizado sem custos com o Github.
 tags: ['Static Web Sites', 'Github', 'Deploy', 'Gatsby']
 language: pt
+status: published
 ---
 
 Uma das minhas metas de 2020 é conseguir manter um blog e tomada essa decisão comecei a projetar como ele seria publicado. Avaliei [static generators](/tags/static-web-sites), WordPress, Medium e outras plataformas _plug-and-play_ mas nenhuma me dava a liberdade para customizar como um bom desenvolvedor gosta, não restou dúvidas, usar um gerador estático como o [Gatsby](https://www.gatsbyjs.org/) era a escolha mais inteligente para um desenvolvedor React.

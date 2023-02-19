@@ -4,6 +4,7 @@ description: Palestra para meetup ReactSSA abordando uma breve introdução sobr
 date: '2018-04-10T22:12:03.284Z'
 tags: ['React', 'React-Native', 'Talks']
 language: pt
+status: published
 ---
 
 Palestra para meetup ReactSSA abordando uma breve introdução sobre React e React Native em parceria com o @lucianomlima
