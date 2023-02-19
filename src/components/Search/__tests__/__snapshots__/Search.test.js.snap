@@ -13,59 +13,55 @@ exports[`<Search /> renders properly 1`] = `
 }
 
 .c2 {
-  -webkit-transition: box-shadow 0.2s;
-  transition: box-shadow 0.2s;
+  -webkit-transition: opacity 0.2s;
+  transition: opacity 0.2s;
   width: 100%;
   padding: 20px;
   outline: none;
   font-size: 18px;
   line-height: 18px;
-  border-radius: 4px;
+  border-radius: 50px;
   box-sizing: border-box;
   border: 1px solid;
 }
 
 .c2 {
-  -webkit-transition: box-shadow 0.2s;
-  transition: box-shadow 0.2s;
+  -webkit-transition: opacity 0.2s;
+  transition: opacity 0.2s;
   width: 100%;
   padding: 20px;
   outline: none;
   font-size: 18px;
   line-height: 18px;
-  border-radius: 4px;
+  border-radius: 50px;
   box-sizing: border-box;
   border: 1px solid;
 }
 
 .c2 {
-  -webkit-transition: box-shadow 0.2s;
-  transition: box-shadow 0.2s;
+  -webkit-transition: opacity 0.2s;
+  transition: opacity 0.2s;
   width: 100%;
   padding: 20px;
   outline: none;
   font-size: 18px;
   line-height: 18px;
-  border-radius: 4px;
+  border-radius: 50px;
   box-sizing: border-box;
   border: 1px solid;
 }
 
 .c2 {
-  -webkit-transition: box-shadow 0.2s;
-  transition: box-shadow 0.2s;
+  -webkit-transition: opacity 0.2s;
+  transition: opacity 0.2s;
   width: 100%;
   padding: 20px;
   outline: none;
   font-size: 18px;
   line-height: 18px;
-  border-radius: 4px;
+  border-radius: 50px;
   box-sizing: border-box;
   border: 1px solid;
-}
-
-.c2:focus {
-  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
 }
 
 .c3 {
@@ -73,10 +69,6 @@ exports[`<Search /> renders properly 1`] = `
 }
 
 .c4 {
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: calc(20px + 21px + 18px);
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -84,8 +76,7 @@ exports[`<Search /> renders properly 1`] = `
   cursor: text;
   color: black;
   z-index: 4;
-  border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 10px;
+  border-radius: 10px;
   box-shadow: 0 3px 8px 0 rgba(0,0,0,0.1);
 }
 
@@ -105,7 +96,7 @@ exports[`<Search /> renders properly 1`] = `
 .c6 {
   font-size: 16px;
   margin: 0 0 5px;
-  font-weight: 400;
+  font-weight: 600;
 }
 
 .c7 {
@@ -212,59 +203,55 @@ exports[`<Search /> renders properly with results closed 1`] = `
 }
 
 .c2 {
-  -webkit-transition: box-shadow 0.2s;
-  transition: box-shadow 0.2s;
+  -webkit-transition: opacity 0.2s;
+  transition: opacity 0.2s;
   width: 100%;
   padding: 20px;
   outline: none;
   font-size: 18px;
   line-height: 18px;
-  border-radius: 4px;
+  border-radius: 50px;
   box-sizing: border-box;
   border: 1px solid;
 }
 
 .c2 {
-  -webkit-transition: box-shadow 0.2s;
-  transition: box-shadow 0.2s;
+  -webkit-transition: opacity 0.2s;
+  transition: opacity 0.2s;
   width: 100%;
   padding: 20px;
   outline: none;
   font-size: 18px;
   line-height: 18px;
-  border-radius: 4px;
+  border-radius: 50px;
   box-sizing: border-box;
   border: 1px solid;
 }
 
 .c2 {
-  -webkit-transition: box-shadow 0.2s;
-  transition: box-shadow 0.2s;
+  -webkit-transition: opacity 0.2s;
+  transition: opacity 0.2s;
   width: 100%;
   padding: 20px;
   outline: none;
   font-size: 18px;
   line-height: 18px;
-  border-radius: 4px;
+  border-radius: 50px;
   box-sizing: border-box;
   border: 1px solid;
 }
 
 .c2 {
-  -webkit-transition: box-shadow 0.2s;
-  transition: box-shadow 0.2s;
+  -webkit-transition: opacity 0.2s;
+  transition: opacity 0.2s;
   width: 100%;
   padding: 20px;
   outline: none;
   font-size: 18px;
   line-height: 18px;
-  border-radius: 4px;
+  border-radius: 50px;
   box-sizing: border-box;
   border: 1px solid;
-}
-
-.c2:focus {
-  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
 }
 
 .c3 {
@@ -272,10 +259,6 @@ exports[`<Search /> renders properly with results closed 1`] = `
 }
 
 .c4 {
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: calc(20px + 21px + 18px);
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -283,8 +266,7 @@ exports[`<Search /> renders properly with results closed 1`] = `
   cursor: text;
   color: black;
   z-index: 4;
-  border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 10px;
+  border-radius: 10px;
   box-shadow: 0 3px 8px 0 rgba(0,0,0,0.1);
 }
 

@@ -14,30 +14,20 @@ const Content = styled.div`
 `;
 
 const Input = styled.input`
-  transition: box-shadow 0.2s;
+  transition: opacity 0.2s;
   width: 100%;
   padding: 20px;
-  background: ${({ theme }) => theme.searchBackgroundColor};
+  background: ${({ theme }) => theme.textColor};
   outline: none;
-  color: ${({ theme }) => theme.titleColor};
+  color: ${({ theme }) => theme.backgroundColor};
   font-size: 18px;
   line-height: 18px;
-  border-radius: 4px;
+  border-radius: 50px;
   box-sizing: border-box;
-  border: 1px solid ${({ theme }) => theme.searchResultsBackgroundColor};
-
-  :focus {
-    background-color: ${({ theme }) => theme.searchResultsBackgroundColor};
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-    color: ${({ theme }) => theme.titleColor};
-  }
+  border: 1px solid ${({ theme }) => theme.textColor};
 
   ::placeholder {
-    color: ${({ theme }) => theme.subtitleColor};
-  }
-
-  :focus::placeholder {
-    color: ${({ theme }) => theme.subtitleColor};
+    color: ${({ theme }) => theme.backgroundColor};
   }
 `;
 
@@ -46,17 +36,12 @@ const Label = styled.label`
 `;
 
 const Results = styled.div`
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: calc(20px + 21px + 18px);
   align-items: center;
   cursor: text;
-  background: ${({ theme }) => theme.searchResultsBackgroundColor};
+  background: ${({ theme }) => theme.textColor};
   color: black;
   z-index: 4;
-  border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 10px;
+  border-radius: 10px;
   box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.1);
 `;
 
@@ -72,14 +57,14 @@ const ResultLink = styled(Link)<{ highlighted: boolean }>`
 `;
 
 const ResultItemTitle = styled.h3`
-  color: ${({ theme }) => theme.titleColor};
+  color: ${({ theme }) => theme.backgroundColor};
   font-size: 16px;
   margin: 0 0 5px;
-  font-weight: 400;
+  font-weight: 600;
 `;
 
 const ResultItemDescription = styled.p`
-  color: ${({ theme }) => theme.subtitleColor};
+  color: ${({ theme }) => theme.backgroundColor};
   font-size: 14px;
   margin: 0%;
 `;
