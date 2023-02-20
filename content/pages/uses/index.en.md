@@ -36,7 +36,6 @@ Graphics: AMD Radeon Pro 5500M 4 GB / Intel UHD Graphics 630 1536 MB
 - **Photography**: [Canon EOS Rebel T7](https://www.usa.canon.com/shop/p/eos-rebel-t7-ef-s-18-55mm-f-3-5-5-6-is-ii?color=Black&type=New) with [EF 50mm f/1.8 STM](https://www.usa.canon.com/shop/p/ef-50mm-f-1-8-stm?color=Black&type=New) and [EF 75-300mm f/4-5.6 III](https://www.usa.canon.com/shop/p/ef-75-300mm-f-4-5-6-iii?color=Black&type=New) lens.
 - **Desk**: [Husky Standing Desk](https://www.kabum.com.br/produto/135439/mesa-office-husky-technologies-900-oak-branco-e-madeira-natural-regulagem-de-altura-automatica-memorizacao-4-usuarios-anti-esmagamento-htct000) with custom top.
 
-
 ## Apps and Tools
 
 - Visual Studio Code with [Jetbrains Mono](https://www.jetbrains.com/lp/mono/) and other good extensions: [Auto Close Tag](https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-close-tag), [Auto Rename Tag](https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-rename-tag), [Color Highlight](https://marketplace.visualstudio.com/items?itemName=naumovs.color-highlight), [Dart](https://marketplace.visualstudio.com/items?itemName=Dart-Code.dart-code), [DotENV](https://marketplace.visualstudio.com/items?itemName=mikestead.dotenv), [EditorConfig for VS Code](https://marketplace.visualstudio.com/items?itemName=EditorConfig.EditorConfig), [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint), [file-icons](https://marketplace.visualstudio.com/items?itemName=file-icons.file-icons), [Flutter](https://marketplace.visualstudio.com/items?itemName=Dart-Code.flutter), [GraphQL: Language Feature Support](https://marketplace.visualstudio.com/items?itemName=GraphQL.vscode-graphql), [GraphQL: Syntax Highlighting](https://marketplace.visualstudio.com/items?itemName=GraphQL.vscode-graphql-syntax), [PlantUML](https://marketplace.visualstudio.com/items?itemName=jebbs.plantuml), [Polacode](https://marketplace.visualstudio.com/items?itemName=pnp.polacode), [Rainbow CSV](https://marketplace.visualstudio.com/items?itemName=mechatroner.rainbow-csv), [YAML](https://marketplace.visualstudio.com/items?itemName=redhat.vscode-yaml).
@@ -48,4 +47,3 @@ Graphics: AMD Radeon Pro 5500M 4 GB / Intel UHD Graphics 630 1536 MB
 - [Transmission](https://transmissionbt.com/) to download torrent files.
 - Google Chrome as main browser.
 - [Figma](https://www.figma.com/) for prototyping.
-

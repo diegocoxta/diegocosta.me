@@ -27,6 +27,7 @@ const Input = styled.div`
 `;
 
 const InputField = styled.input`
+  transition: opacity 0.3s linear;
   width: 100%;
   padding: 20px;
   background: transparent;
@@ -35,9 +36,14 @@ const InputField = styled.input`
   color: ${({ theme }) => theme.backgroundColor};
   font-size: 18px;
   border: 1px solid ${({ theme }) => theme.textColor};
+  opacity: 0.7;
 
   ::placeholder {
     color: ${({ theme }) => theme.backgroundColor};
+  }
+
+  :focus {
+    opacity: 1;
   }
 `;
 

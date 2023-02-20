@@ -21,7 +21,6 @@ Apresentação sobre disfunções em times com base no livro 'Os 5 desafios das 
   allowfullscreen
 ></iframe>
 
-
 ### Anotações
 
 > Slide 4: Tudo começa com a falta de confiança entre os membros do time. isso vem da falta de vontade de cada um de se mostrar vulnerável dentro do grupo. Os membros da equipe que não se abrem com os outro sobre seus erros e fraquezas impossibilitam a criação de uma base de confiança.

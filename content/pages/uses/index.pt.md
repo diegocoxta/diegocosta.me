@@ -1,6 +1,6 @@
 ---
 title: As coisas que eu uso
-description: A página onde eu compartilho as ferramentas que deixam minha vida mais fácil. 
+description: A página onde eu compartilho as ferramentas que deixam minha vida mais fácil.
 ---
 
 **Last update**: Feb 2023
@@ -35,7 +35,6 @@ Gráficos: AMD Radeon Pro 5500M 4 GB / Intel UHD Graphics 630 1536 MB
 - **Vídeogame**: [Sony Playstation 4 Pro](https://www.playstation.com/en-us/ps4/ps4-pro/)
 - **Fotografia**: [Canon EOS Rebel T7](https://www.usa.canon.com/shop/p/eos-rebel-t7-ef-s-18-55mm-f-3-5-5-6-is-ii?color=Black&type=New) with [EF 50mm f/1.8 STM](https://www.usa.canon.com/shop/p/ef-50mm-f-1-8-stm?color=Black&type=New) and [EF 75-300mm f/4-5.6 III](https://www.usa.canon.com/shop/p/ef-75-300mm-f-4-5-6-iii?color=Black&type=New) lens.
 - **Desk**: [Husky Standing Desk](https://www.kabum.com.br/produto/135439/mesa-office-husky-technologies-900-oak-branco-e-madeira-natural-regulagem-de-altura-automatica-memorizacao-4-usuarios-anti-esmagamento-htct000) com tampo customizado.
-
 
 ## Aplicativos e Ferramentas
 

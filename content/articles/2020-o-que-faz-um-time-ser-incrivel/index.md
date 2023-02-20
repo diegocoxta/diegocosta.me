@@ -64,7 +64,6 @@ A história do Projeto Aristóteles começa seis anos atrás, quando o Google �
 
 Os pesquisadores começaram revendo meio século de estudos acadêmicos, em que observaram a evolução do trabalho em equipe. A partir disso, analisaram a composição dos grupos dentro do Google.
 
-
 ### Referências
 
 - https://qulture.rocks/blog/projeto-aristoteles-times-incriveis/
