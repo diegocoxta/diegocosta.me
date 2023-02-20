@@ -5,11 +5,11 @@ description: A página onde eu compartilho as ferramentas que deixam minha vida 
 
 **Last update**: Feb 2023
 
-> Bem vindo a minha página `/uses`. Aqui é onde eu compartilho as ferramentas que deixam minha vida mais fácil. Essa página foi inspirada por Wes Bos e a comunidade em [uses.tech](https://uses.tech)
+Bem vindo a minha página `/uses`. Aqui é onde eu compartilho as ferramentas que deixam minha vida mais fácil. Essa página foi inspirada por Wes Bos e a comunidade em [uses.tech](https://uses.tech)
 
 ![My desk setup](header.jpg)
 
-## Área de Trabalho
+## Hardware
 
 **Computador Pessoal**  
 MacBook Pro (13-inch, 2017, Two Thunderbolt 3 ports)  
@@ -40,7 +40,7 @@ Gráficos: AMD Radeon Pro 5500M 4 GB / Intel UHD Graphics 630 1536 MB
 
 ## Aplicativos e Ferramentas
 
-- Visual Studio Code com [Jetbrains Mono](https://www.jetbrains.com/lp/mono/) e outras boas extensões: [Auto Close Tag](https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-close-tag), [Auto Rename Tag](https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-rename-tag), [Color Highlight](https://marketplace.visualstudio.com/items?itemName=naumovs.color-highlight), [Dart](https://marketplace.visualstudio.com/items?itemName=Dart-Code.dart-code), [DotENV](https://marketplace.visualstudio.com/items?itemName=mikestead.dotenv), [EditorConfig for VS Code](https://marketplace.visualstudio.com/items?itemName=EditorConfig.EditorConfig), [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint), [file-icons](https://marketplace.visualstudio.com/items?itemName=file-icons.file-icons), [Flutter](https://marketplace.visualstudio.com/items?itemName=Dart-Code.flutter), [GraphQL: Language Feature Support](https://marketplace.visualstudio.com/items?itemName=GraphQL.vscode-graphql), [GraphQL: Syntax Highlighting](https://marketplace.visualstudio.com/items?itemName=GraphQL.vscode-graphql-syntax), [PlantUML](https://marketplace.visualstudio.com/items?itemName=jebbs.plantuml), [Polacode](https://marketplace.visualstudio.com/items?itemName=pnp.polacode), [Rainbow CSV](https://marketplace.visualstudio.com/items?itemName=mechatroner.rainbow-csv), [YAML](https://marketplace.visualstudio.com/items?itemName=redhat.vscode-yaml).
+- Visual Studio Code com [Jetbrains Mono](https://www.jetbrains.com/lp/mono/) e outras boas extensões: [Auto Close Tag](https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-close-tag), [Auto Rename Tag](https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-rename-tag), [Color Highlight](https://marketplace.visualstudio.com/items?itemName=naumovs.color-highlight), [Dart](https://marketplace.visualstudio.com/items?itemName=Dart-Code.dart-code), [DotENV](https://marketplace.visualstudio.com/items?itemName=mikestead.dotenv), [EditorConfig for VS Code](https://marketplace.visualstudio.com/items?itemName=EditorConfig.EditorConfig), [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint), [file-icons](https://marketplace.visualstudio.com/items?itemName=file-icons.file-icons), [Flutter](https://marketplace.visualstudio.com/items?itemName=Dart-Code.flutter), [GraphQL: Language Feature Support](https://marketplace.visualstudio.com/items?itemName=GraphQL.vscode-graphql), [GraphQL: Syntax Highlighting](https://marketplace.visualstudio.com/items?itemName=GraphQL.vscode-graphql-syntax), [PlantUML](https://marketplace.visualstudio.com/items?itemName=jebbs.plantuml), [Polacode](https://marketplace.visualstudio.com/items?itemName=pnp.polacode), [Rainbow CSV](https://marketplace.visualstudio.com/items?itemName=mechatroner.rainbow-csv) e [YAML](https://marketplace.visualstudio.com/items?itemName=redhat.vscode-yaml).
 - Terminal do MacOS com [Oh My Zsh](https://ohmyz.sh/).
 - 1Password para gerenciar minhas senhas e 2FA.
 - [PixelSnap](https://getpixelsnap.com/) para medir qualquer coisa em minha tela.
