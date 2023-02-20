@@ -55,6 +55,7 @@ const Results = styled.div`
   z-index: 4;
   border-radius: 10px;
   box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.1);
+  margin: 20px 0 0 0;
 `;
 
 const ResultLink = styled(Link)<{ highlighted: boolean }>`
