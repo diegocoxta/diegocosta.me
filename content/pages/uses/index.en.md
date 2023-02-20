@@ -7,6 +7,8 @@ description: The page where I share the tools that make my life easier.
 
 > Welcome to my `/uses` page where I share the tools that make my life easier. This page was inspired by Wes Bos and the community at [uses.tech](https://uses.tech)
 
+![My desk setup](header.jpg)
+
 ## Hardware
 
 **Personal Computer**  

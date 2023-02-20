@@ -7,6 +7,8 @@ description: A página onde eu compartilho as ferramentas que deixam minha vida 
 
 > Bem vindo a minha página `/uses`. Aqui é onde eu compartilho as ferramentas que deixam minha vida mais fácil. Essa página foi inspirada por Wes Bos e a comunidade em [uses.tech](https://uses.tech)
 
+![My desk setup](header.jpg)
+
 ## Área de Trabalho
 
 **Computador Pessoal**  
