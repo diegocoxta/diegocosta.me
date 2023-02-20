@@ -11,7 +11,7 @@ import { SearchComponentQuery } from '~/../graphql-types';
 
 const Content = styled.div`
   position: relative;
-  margin: 40px 0 20px;
+  margin: 40px 0;
 `;
 
 const Input = styled.div`
@@ -45,10 +45,6 @@ const InputField = styled.input`
   :focus {
     opacity: 1;
   }
-`;
-
-const Label = styled.label`
-  visibility: hidden;
 `;
 
 const Results = styled.div`
@@ -104,7 +100,6 @@ export default function Search({ articles, combobox }: SearchProps): React.React
           <BsSearch />
           <InputField type="text" placeholder={placeholder} autoComplete="off" {...combobox.getInputProps()} />
         </Input>
-        <Label {...combobox.getLabelProps()}>{placeholder}</Label>
         <Results {...combobox.getMenuProps()} data-testid="search-results">
           {combobox.isOpen &&
             articles &&

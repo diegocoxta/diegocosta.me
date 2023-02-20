@@ -9,7 +9,7 @@ exports[`<Search /> renders properly 1`] = `
 
 .c1 {
   position: relative;
-  margin: 40px 0 20px;
+  margin: 40px 0;
 }
 
 .c2 {
@@ -58,10 +58,6 @@ exports[`<Search /> renders properly 1`] = `
 }
 
 .c4 {
-  visibility: hidden;
-}
-
-.c5 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -73,26 +69,26 @@ exports[`<Search /> renders properly 1`] = `
   box-shadow: 0 3px 8px 0 rgba(0,0,0,0.1);
 }
 
-.c6 {
+.c5 {
   display: block;
   -webkit-text-decoration: none;
   text-decoration: none;
   padding: 20px;
 }
 
-.c6:hover {
+.c5:hover {
   -webkit-text-decoration: none;
   text-decoration: none;
   background: rgba(255,255,255,0.1);
 }
 
-.c7 {
+.c6 {
   font-size: 16px;
   margin: 0 0 5px;
   font-weight: 600;
 }
 
-.c8 {
+.c7 {
   font-size: 14px;
   margin: 0%;
 }
@@ -129,28 +125,23 @@ exports[`<Search /> renders properly 1`] = `
               type="text"
             />
           </div>
-          <label
-            class="c4"
-          >
-            search.searchForPosts
-          </label>
           <div
-            class="c5"
+            class="c4"
             data-testid="search-results"
           >
             <a
-              class="c6"
+              class="c5"
               data-testid="search-results-link"
               href="/como-migrar-para-o-windows-8-1/"
             >
               <h3
-                class="c7"
+                class="c6"
                 data-testid="search-results-title"
               >
                 Como migrar para o Windows 8.1 a partir de uma nova instalação do Windows 8
               </h3>
               <p
-                class="c8"
+                class="c7"
                 data-testid="search-results-description"
               >
                  ·
@@ -159,18 +150,18 @@ exports[`<Search /> renders properly 1`] = `
               </p>
             </a>
             <a
-              class="c6"
+              class="c5"
               data-testid="search-results-link"
               href="/enviando-aplicacao-heroku-windows/"
             >
               <h3
-                class="c7"
+                class="c6"
                 data-testid="search-results-title"
               >
                 Enviando sua aplicação para o Heroku no Windows
               </h3>
               <p
-                class="c8"
+                class="c7"
                 data-testid="search-results-description"
               >
                  ·
@@ -179,18 +170,18 @@ exports[`<Search /> renders properly 1`] = `
               </p>
             </a>
             <a
-              class="c6"
+              class="c5"
               data-testid="search-results-link"
               href="/atualizando-programas-cask-homebrew-macos/"
             >
               <h3
-                class="c7"
+                class="c6"
                 data-testid="search-results-title"
               >
                 Atualizando todos seus casks via Homebrew no macOS
               </h3>
               <p
-                class="c8"
+                class="c7"
                 data-testid="search-results-description"
               >
                  ·
@@ -215,7 +206,7 @@ exports[`<Search /> renders properly with results closed 1`] = `
 
 .c1 {
   position: relative;
-  margin: 40px 0 20px;
+  margin: 40px 0;
 }
 
 .c2 {
@@ -264,10 +255,6 @@ exports[`<Search /> renders properly with results closed 1`] = `
 }
 
 .c4 {
-  visibility: hidden;
-}
-
-.c5 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -311,13 +298,8 @@ exports[`<Search /> renders properly with results closed 1`] = `
               type="text"
             />
           </div>
-          <label
-            class="c4"
-          >
-            search.searchForPosts
-          </label>
           <div
-            class="c5"
+            class="c4"
             data-testid="search-results"
           />
         </div>
