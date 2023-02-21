@@ -144,6 +144,15 @@ exports[`<IndexPage> renders properly 1`] = `
   font-size: 28px;
 }
 
+.c10 table.uses-table {
+  width: 100%;
+  margin: 40px 0;
+}
+
+.c10 table.uses-table td {
+  text-align: center;
+}
+
 .c4 {
   background: linear-gradient(90deg,#0E1116 20px,transparent 1%) center, linear-gradient(#0E1116 20px,transparent 1%) center, #EDF0F1;
   background-size: 22px 22px;

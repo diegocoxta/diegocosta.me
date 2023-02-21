@@ -110,6 +110,15 @@ exports[`<ArticlesTemplate> renders properly 1`] = `
   font-size: 28px;
 }
 
+.c9 table.uses-table {
+  width: 100%;
+  margin: 40px 0;
+}
+
+.c9 table.uses-table td {
+  text-align: center;
+}
+
 <body>
   <div>
     <section

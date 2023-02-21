@@ -92,6 +92,15 @@ exports[`<PagesTemplate> renders properly 1`] = `
   font-size: 28px;
 }
 
+.c7 table.uses-table {
+  width: 100%;
+  margin: 40px 0;
+}
+
+.c7 table.uses-table td {
+  text-align: center;
+}
+
 <body>
   <div>
     <section

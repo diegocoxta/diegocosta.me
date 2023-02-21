@@ -273,6 +273,7 @@ export type SiteSiteMetadata = {
   title?: Maybe<Scalars['String']>;
   description?: Maybe<Scalars['String']>;
   author?: Maybe<Scalars['String']>;
+  avatar?: Maybe<Scalars['String']>;
   siteUrl?: Maybe<Scalars['String']>;
   defaultLanguage?: Maybe<Scalars['String']>;
   languages?: Maybe<Array<Maybe<Scalars['String']>>>;
@@ -1965,6 +1966,7 @@ export type SiteSiteMetadataFilterInput = {
   title?: InputMaybe<StringQueryOperatorInput>;
   description?: InputMaybe<StringQueryOperatorInput>;
   author?: InputMaybe<StringQueryOperatorInput>;
+  avatar?: InputMaybe<StringQueryOperatorInput>;
   siteUrl?: InputMaybe<StringQueryOperatorInput>;
   defaultLanguage?: InputMaybe<StringQueryOperatorInput>;
   languages?: InputMaybe<StringQueryOperatorInput>;
@@ -2043,6 +2045,7 @@ export type SiteSiteMetadataFieldSelector = {
   title?: InputMaybe<FieldSelectorEnum>;
   description?: InputMaybe<FieldSelectorEnum>;
   author?: InputMaybe<FieldSelectorEnum>;
+  avatar?: InputMaybe<FieldSelectorEnum>;
   siteUrl?: InputMaybe<FieldSelectorEnum>;
   defaultLanguage?: InputMaybe<FieldSelectorEnum>;
   languages?: InputMaybe<FieldSelectorEnum>;
@@ -2124,6 +2127,7 @@ export type SiteSiteMetadataSortInput = {
   title?: InputMaybe<SortOrderEnum>;
   description?: InputMaybe<SortOrderEnum>;
   author?: InputMaybe<SortOrderEnum>;
+  avatar?: InputMaybe<SortOrderEnum>;
   siteUrl?: InputMaybe<SortOrderEnum>;
   defaultLanguage?: InputMaybe<SortOrderEnum>;
   languages?: InputMaybe<SortOrderEnum>;

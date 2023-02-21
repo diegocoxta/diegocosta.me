@@ -110,6 +110,15 @@ exports[`<TagsTemplate> renders properly 1`] = `
   font-size: 28px;
 }
 
+.c10 table.uses-table {
+  width: 100%;
+  margin: 40px 0;
+}
+
+.c10 table.uses-table td {
+  text-align: center;
+}
+
 .c4 {
   display: inline-block;
   background: #AAC13D;

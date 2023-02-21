@@ -618,6 +618,15 @@ exports[`<Article /> renders properly the body content 1`] = `
   font-size: 28px;
 }
 
+.c6 table.uses-table {
+  width: 100%;
+  margin: 40px 0;
+}
+
+.c6 table.uses-table td {
+  text-align: center;
+}
+
 <body>
   <div>
     <section
@@ -739,6 +748,15 @@ exports[`<Article /> renders properly the description 1`] = `
 
 .c6 h3 {
   font-size: 28px;
+}
+
+.c6 table.uses-table {
+  width: 100%;
+  margin: 40px 0;
+}
+
+.c6 table.uses-table td {
+  text-align: center;
 }
 
 <body>

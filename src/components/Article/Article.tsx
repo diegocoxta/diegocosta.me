@@ -51,6 +51,15 @@ export const Content = styled.section`
   h3 {
     font-size: 28px;
   }
+
+  table.uses-table {
+    width: 100%;
+    margin: 40px 0;
+
+    td {
+      text-align: center;
+    }
+  }
 `;
 
 export type ArticleProps = TitleProps &
