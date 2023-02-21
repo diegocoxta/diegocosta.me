@@ -7,21 +7,29 @@ description: The page where I share the tools that make my life easier.
 
 Welcome to my `/uses` page where I share the tools that make my life easier. This page was inspired by Wes Bos and the community at [uses.tech](https://uses.tech)
 
-![My desk setup](header.jpg)
 
-## Hardware
+## Devices
 
-**Personal Computer**  
-MacBook Pro (13-inch, 2017, Two Thunderbolt 3 ports)  
-Processor: 2,3 GHz Dual-Core Intel Core i5  
-Memory: 8 GB 2133 MHz LPDDR3  
-Graphics: Intel Iris Plus Graphics 640 1536 MB
-
-**Work Computer**  
-MacBook Pro (16-inch, 2019)  
-Processor: 2,3 GHz 8-Core Intel Core i9  
-Memory: 16 GB 2667 MHz DDR4  
-Graphics: AMD Radeon Pro 5500M 4 GB / Intel UHD Graphics 630 1536 MB
+<table class="uses-table">
+  <tr>
+    <td>
+      <img src="mbp13.png" alt="" /> <br />
+      <strong>Personal Computer</strong> <br />
+      MacBook Pro (13-inch, 2017) <br />
+      2,3 GHz Dual-Core Intel Core i5 <br />
+      8 GB 2133 MHz LPDDR3 <br />
+      Intel Iris Plus Graphics 640 1536 MB
+    </td>
+    <td>
+      <img src="mbp16.png" alt="" /> <br />
+      <strong>Work Computer</strong> <br />
+      MacBook Pro (16-inch, 2019) <br />
+      2,3 GHz 8-Core Intel Core i9 <br />
+      16 GB 2667 MHz DDR4 <br />
+      AMD Radeon Pro 5500M 4 GB
+    </td>
+  </tr>
+</table>
 
 **Peripherals and Accessories**
 
@@ -40,12 +48,17 @@ Graphics: AMD Radeon Pro 5500M 4 GB / Intel UHD Graphics 630 1536 MB
 
 ## Apps and Tools
 
+![My desktop](myapps.png)
+
+I maintain a clean suite of apps installed on my personal computer.
+
 - Visual Studio Code with [Jetbrains Mono](https://www.jetbrains.com/lp/mono/) and other good extensions: [Auto Close Tag](https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-close-tag), [Auto Rename Tag](https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-rename-tag), [Color Highlight](https://marketplace.visualstudio.com/items?itemName=naumovs.color-highlight), [Dart](https://marketplace.visualstudio.com/items?itemName=Dart-Code.dart-code), [DotENV](https://marketplace.visualstudio.com/items?itemName=mikestead.dotenv), [EditorConfig for VS Code](https://marketplace.visualstudio.com/items?itemName=EditorConfig.EditorConfig), [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint), [file-icons](https://marketplace.visualstudio.com/items?itemName=file-icons.file-icons), [Flutter](https://marketplace.visualstudio.com/items?itemName=Dart-Code.flutter), [GraphQL: Language Feature Support](https://marketplace.visualstudio.com/items?itemName=GraphQL.vscode-graphql), [GraphQL: Syntax Highlighting](https://marketplace.visualstudio.com/items?itemName=GraphQL.vscode-graphql-syntax), [PlantUML](https://marketplace.visualstudio.com/items?itemName=jebbs.plantuml), [Polacode](https://marketplace.visualstudio.com/items?itemName=pnp.polacode), [Rainbow CSV](https://marketplace.visualstudio.com/items?itemName=mechatroner.rainbow-csv), and [YAML](https://marketplace.visualstudio.com/items?itemName=redhat.vscode-yaml).
 - MacOS' Terminal with [Oh My Zsh](https://ohmyz.sh/).
 - 1Password to manage my credentials and 2FA.
-- [PixelSnap](https://getpixelsnap.com/) to measure anything on my screen.
 - [Numi](https://numi.app/) is my favorite calculator, beautiful and powerful.
 - [Homebrew](https://brew.sh) to manage all my software on macOS.
 - [Transmission](https://transmissionbt.com/) to download torrent files.
 - Google Chrome as main browser.
 - [Figma](https://www.figma.com/) for prototyping.
+- [VLC](https://www.videolan.org/) to watch local files.
+- [Stremio](https://www.stremio.com/) to find magnet links to stream on VLC.
