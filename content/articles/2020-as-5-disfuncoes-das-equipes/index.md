@@ -10,7 +10,7 @@ status: draft
 Apresentação sobre disfunções em times com base no livro 'Os 5 desafios das equipes' de Patrick Lencioni
 
 <iframe
-  src="https://slides.com/diegocosta/5-disfuncoes-equipes/embed"
+  src="https://slides.com/diegocoxta/5-disfuncoes-equipes/embed"
   width="100%"
   height="420"
   title="As 5 disfunções ​das equipes"
