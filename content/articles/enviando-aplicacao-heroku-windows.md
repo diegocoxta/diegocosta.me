@@ -11,7 +11,7 @@ Quem nunca precisou colocar aquela aplicação em produção para testar ou até
 
 Bom, seus problemas acabaram…
 
-![Foto do personagem do casseta e planeta](01.png)
+![Foto do personagem do casseta e planeta](assets/enviando-aplicacao-heroku-windows-01.png)
 
 O **[Heroku](http://heroku.com/)** é um serviço de Cloud da Salesforce.com que permite subir aplicações, pagando apenas pelo que usar, e o melhor é que o plano inicial é gratuito e te dá acesso a banco de dados. Nele é possível rodar sua aplicação em Ruby, PHP, Node.js, Python, Java, Scala ou Clojure e o processo de deploy é muito simples e sem burocracia.
 
@@ -23,7 +23,7 @@ Para começar é bastante simples, primeiro você precisa acessar o **[site da f
 
 Atenção, caso você não utilize GIT e SSH é obrigatório escolher a opção Custom Installation e marcar o box para Git and SSH.
 
-![Next, Next, Install](02.png)
+![Next, Next, Install](assets/enviando-aplicacao-heroku-windows-02.png)
 
 <center>Next, Next, Install</center>
 
@@ -128,7 +128,6 @@ Sendo que _SEU-USUÁRIO_ é o nome do seu diretório em \_C:\Users\_
 
 Por fim, clique em OK, OK e OK.
 
-![Criando uma variável de ambiente no Windows
-](03.png)
+![Criando uma variável de ambiente no Windows](assets/enviando-aplicacao-heroku-windows-03.png)
 
 <center>Criando uma variável de ambiente no Windows</center>
