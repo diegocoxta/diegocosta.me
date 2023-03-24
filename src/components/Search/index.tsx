@@ -8,16 +8,16 @@ import Search, { ArticleProps } from './Search';
 export default (): React.ReactElement => {
   const data = useStaticQuery(graphql`
     query SearchComponent {
-      articles: allMarkdownRemark {
+      articles: allMarkdownRemark(filter: { fields: { slug: { regex: "/^((?!/index-).)*$/" } } }) {
         nodes {
           id
           fields {
             slug
-            language
           }
           frontmatter {
             title
             description
+            language
           }
         }
       }

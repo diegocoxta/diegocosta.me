@@ -2,7 +2,7 @@
 
 exports[`<TagsTemplate> renders properly 1`] = `
 .c0 {
-  max-width: 800px;
+  max-width: 960px;
   margin: 0 auto;
   padding: 0 20px;
 }
@@ -212,6 +212,7 @@ exports[`<TagsTemplate> renders properly 1`] = `
                  
                 · 5 article.minutes article.ofReading
                  · 
+                article.languagePrefix languages.en
               </p>
               <ul
                 class="c9"
@@ -251,6 +252,7 @@ exports[`<TagsTemplate> renders properly 1`] = `
                  
                 · 2 article.minutes article.ofReading
                  · 
+                article.languagePrefix languages.pt
               </p>
               <ul
                 class="c9"

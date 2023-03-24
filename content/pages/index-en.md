@@ -1,5 +1,6 @@
 ---
 title: Home Page
+language: en
 ---
 
 I'm an engineering manager who loves the intersection of computers and people, I spend my days trying to help tech teams deliver their max potential.

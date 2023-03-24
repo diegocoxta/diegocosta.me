@@ -109,14 +109,14 @@ export default function Search({ articles, combobox }: SearchProps): React.React
                 key={article.item.id}
                 data-testid="search-results-link"
                 to={article?.item?.fields?.slug}
-                language={article?.item?.fields?.language}
+                language={article.item.frontmatter?.language}
                 {...combobox.getItemProps({ index, item: article })}
               >
                 <ResultItemTitle data-testid="search-results-title">
                   {article.item.frontmatter?.title ?? ''}
                 </ResultItemTitle>
                 <ResultItemDescription data-testid="search-results-description">
-                  {getContentLanguage(i18n, article?.item?.fields?.language)} ·{' '}
+                  {getContentLanguage(i18n, article.item.frontmatter?.language)} ·{' '}
                   {article.item.frontmatter?.description ?? ''}
                 </ResultItemDescription>
               </ResultLink>

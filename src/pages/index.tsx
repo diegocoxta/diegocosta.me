@@ -39,12 +39,12 @@ export const pageQuery = graphql`
     locales: allLocale(filter: { language: { eq: $language } }) {
       ...LanguageInformation
     }
-    aboutMe: markdownRemark(fields: { slug: { eq: "/home/" }, language: { eq: $language } }) {
+    aboutMe: markdownRemark(fields: { slug: { regex: "/^/index-/" } }, frontmatter: { language: { eq: $language } }) {
       html
     }
     articles: allMarkdownRemark(
       sort: { frontmatter: { date: DESC } }
-      filter: { fields: { collection: { eq: "articles" } }, frontmatter: { status: { eq: "published" } } }
+      filter: { fields: { collection: { eq: "articles" } }, frontmatter: { status: { ne: "draft" } } }
     ) {
       edges {
         node {

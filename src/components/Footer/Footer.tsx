@@ -54,7 +54,13 @@ export default function Footer(props: FooterProps): React.ReactElement {
         </Label>
         <Link href="https://gatsbyjs.org">gatsby</Link>
         <Label> • </Label>
-        {props.repository && <Link href={props.repository}>{i18n.getTranslationFor('footer.sourceCode')}</Link>}
+        {props.repository && (
+          <>
+            <Link href={props.repository}>{i18n.getTranslationFor('footer.sourceCode')}</Link>
+            <Label> • </Label>
+          </>
+        )}
+        <Link href="/rss.xml">feed</Link>
       </Content>
     </FixedContainer>
   );

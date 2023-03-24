@@ -1,4 +1,5 @@
-const siteMetadata = require('./site-config.json');
+const package = require('./package.json');
+const siteMetadata = package['site-metadata'];
 
 module.exports = {
   siteMetadata,
@@ -37,6 +38,13 @@ module.exports = {
       options: {
         path: `${__dirname}/content/pages`,
         name: 'pages',
+      },
+    },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        path: `${__dirname}/content/assets`,
+        name: 'assets',
       },
     },
     {
@@ -122,7 +130,7 @@ module.exports = {
               query GatsbyPluginFeedArticles {
                 articles: allMarkdownRemark(
                   sort: { order: DESC, fields: [frontmatter___date] },
-                  filter: { fields: { collection: { eq: "articles" } }, frontmatter: { status: { eq: "published" } } }
+                  filter: { fields: { collection: { eq: "articles" }}, frontmatter: { status: { ne: "draft" }} }
                 ) {
                   edges {
                     node {
@@ -133,7 +141,6 @@ module.exports = {
                         readingTime {
                           minutes
                         }
-                        language
                       }
                       frontmatter {
                         date
@@ -142,6 +149,7 @@ module.exports = {
                         tags
                         homepage_view_full_article
                         status
+                        language
                       }
                     }
                   }
