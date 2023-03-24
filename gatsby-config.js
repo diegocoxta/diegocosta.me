@@ -130,7 +130,7 @@ module.exports = {
               query GatsbyPluginFeedArticles {
                 articles: allMarkdownRemark(
                   sort: { order: DESC, fields: [frontmatter___date] },
-                  filter: { fields: { collection: { eq: "articles" }, frontmatter: { status: { ne: "draft" } } }
+                  filter: { fields: { collection: { eq: "articles" }}, frontmatter: { status: { ne: "draft" }} }
                 ) {
                   edges {
                     node {
