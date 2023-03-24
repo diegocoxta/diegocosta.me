@@ -13,11 +13,11 @@ export default (): React.ReactElement => {
           id
           fields {
             slug
-            language
           }
           frontmatter {
             title
             description
+            language
           }
         }
       }

@@ -1,5 +1,4 @@
 const { createFilePath } = require('gatsby-source-filesystem');
-const { getNodeLangCode, getSlugWithoutFile } = require('./utils');
 
 module.exports = async ({ node, actions, getNode }) => {
   if (node.internal.type === 'MarkdownRemark') {
@@ -7,19 +6,13 @@ module.exports = async ({ node, actions, getNode }) => {
 
     actions.createNodeField({
       name: 'slug',
-      value: getSlugWithoutFile(createFilePath({ node, getNode })),
+      value: createFilePath({ node, getNode }),
       node,
     });
 
     actions.createNodeField({
       name: 'collection',
       value: sourceInstanceName,
-      node,
-    });
-
-    actions.createNodeField({
-      name: 'language',
-      value: getNodeLangCode(node.fileAbsolutePath, node.frontmatter.language),
       node,
     });
   }

@@ -29,7 +29,7 @@ export const pageQuery = graphql`
     locales: allLocale(filter: { language: { eq: $language } }) {
       ...LanguageInformation
     }
-    page: markdownRemark(fields: { slug: { eq: $slug }, language: { eq: $language } }) {
+    page: markdownRemark(fields: { slug: { eq: $slug } }) {
       ...ArticleInformation
     }
   }
