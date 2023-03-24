@@ -42,7 +42,7 @@ module.exports = async ({ graphql, actions, reporter }) => {
     const { collection } = content.node.fields;
     const { slug } = content.node.fields;
 
-    if (slug !== '/') {
+    if (slug !== '/home/') {
       actions.createPage({
         path: slug,
         component: path.resolve(`./src/templates/${collection}.tsx`),

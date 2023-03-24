@@ -2,7 +2,7 @@
 
 exports[`<Article /> does not render the article details 1`] = `
 .c0 {
-  max-width: 800px;
+  max-width: 960px;
   margin: 0 auto;
   padding: 0 20px;
 }
@@ -61,7 +61,7 @@ exports[`<Article /> does not render the article details 1`] = `
 
 exports[`<Article /> does not render the article language name 1`] = `
 .c0 {
-  max-width: 800px;
+  max-width: 960px;
   margin: 0 auto;
   padding: 0 20px;
 }
@@ -146,7 +146,7 @@ exports[`<Article /> does not render the article language name 1`] = `
 
 exports[`<Article /> does not render the link 1`] = `
 .c0 {
-  max-width: 800px;
+  max-width: 960px;
   margin: 0 auto;
   padding: 0 20px;
 }
@@ -233,7 +233,7 @@ exports[`<Article /> does not render the link 1`] = `
 
 exports[`<Article /> does not render the reading time 1`] = `
 .c0 {
-  max-width: 800px;
+  max-width: 960px;
   margin: 0 auto;
   padding: 0 20px;
 }
@@ -319,7 +319,7 @@ exports[`<Article /> does not render the reading time 1`] = `
 
 exports[`<Article /> does not render the tags 1`] = `
 .c0 {
-  max-width: 800px;
+  max-width: 960px;
   margin: 0 auto;
   padding: 0 20px;
 }
@@ -408,7 +408,7 @@ exports[`<Article /> does not render the tags 1`] = `
 
 exports[`<Article /> renders properly 1`] = `
 .c0 {
-  max-width: 800px;
+  max-width: 960px;
   margin: 0 auto;
   padding: 0 20px;
 }
@@ -543,7 +543,7 @@ exports[`<Article /> renders properly 1`] = `
 
 exports[`<Article /> renders properly the body content 1`] = `
 .c0 {
-  max-width: 800px;
+  max-width: 960px;
   margin: 0 auto;
   padding: 0 20px;
 }
@@ -675,7 +675,7 @@ exports[`<Article /> renders properly the body content 1`] = `
 
 exports[`<Article /> renders properly the description 1`] = `
 .c0 {
-  max-width: 800px;
+  max-width: 960px;
   margin: 0 auto;
   padding: 0 20px;
 }
@@ -807,7 +807,7 @@ exports[`<Article /> renders properly the description 1`] = `
 
 exports[`<Article /> renders the article details 1`] = `
 .c0 {
-  max-width: 800px;
+  max-width: 960px;
   margin: 0 auto;
   padding: 0 20px;
 }

@@ -2,7 +2,7 @@
 
 exports[`<Header /> does not render the last name 1`] = `
 .c0 {
-  max-width: 800px;
+  max-width: 960px;
   margin: 0 auto;
   padding: 0 20px;
 }
@@ -110,7 +110,7 @@ exports[`<Header /> does not render the last name 1`] = `
 
 exports[`<Header /> renders properly 1`] = `
 .c0 {
-  max-width: 800px;
+  max-width: 960px;
   margin: 0 auto;
   padding: 0 20px;
 }

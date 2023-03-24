@@ -2,7 +2,7 @@
 
 exports[`<Search /> renders properly 1`] = `
 .c0 {
-  max-width: 800px;
+  max-width: 960px;
   margin: 0 auto;
   padding: 0 20px;
 }
@@ -200,7 +200,7 @@ exports[`<Search /> renders properly 1`] = `
 
 exports[`<Search /> renders properly with results closed 1`] = `
 .c0 {
-  max-width: 800px;
+  max-width: 960px;
   margin: 0 auto;
   padding: 0 20px;
 }
