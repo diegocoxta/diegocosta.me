@@ -12,7 +12,7 @@ Welcome to my `/uses` page where I share the tools that make my life easier. Thi
 <table class="uses-table">
   <tr>
     <td>
-      <img src="mbp13.png" alt="" /> <br />
+      <img src="../assets/uses-mbp13.png" alt="" /> <br />
       <strong>Personal Computer</strong> <br />
       MacBook Pro (13-inch, 2017) <br />
       2,3 GHz Dual-Core Intel Core i5 <br />
@@ -20,7 +20,7 @@ Welcome to my `/uses` page where I share the tools that make my life easier. Thi
       Intel Iris Plus Graphics 640 1536 MB
     </td>
     <td>
-      <img src="mbp16.png" alt="" /> <br />
+      <img src="../assets/uses-mbp16.png" alt="" /> <br />
       <strong>Work Computer</strong> <br />
       MacBook Pro (16-inch, 2019) <br />
       2,3 GHz 8-Core Intel Core i9 <br />
@@ -47,7 +47,7 @@ Welcome to my `/uses` page where I share the tools that make my life easier. Thi
 
 ## Apps and Tools
 
-![My desktop](myapps.png)
+![My desktop](../assets/uses-myapps.png)
 
 I maintain a clean suite of apps installed on my personal computer.
 
