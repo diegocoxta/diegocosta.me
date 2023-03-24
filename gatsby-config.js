@@ -141,7 +141,6 @@ module.exports = {
                         readingTime {
                           minutes
                         }
-                        language
                       }
                       frontmatter {
                         date
@@ -150,6 +149,7 @@ module.exports = {
                         tags
                         homepage_view_full_article
                         status
+                        language
                       }
                     }
                   }
