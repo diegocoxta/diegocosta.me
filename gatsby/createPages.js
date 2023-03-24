@@ -4,7 +4,10 @@ const kebabCase = require('lodash.kebabcase');
 module.exports = async ({ graphql, actions, reporter }) => {
   const result = await graphql(`
     query GatsbyCreatePage {
-      content: allMarkdownRemark(sort: { frontmatter: { date: DESC } }) {
+      content: allMarkdownRemark(
+        sort: { frontmatter: { date: DESC } }
+        filter: { fields: { slug: { regex: "/^((?!/index-).)*$/" } } }
+      ) {
         edges {
           node {
             fields {
@@ -42,13 +45,11 @@ module.exports = async ({ graphql, actions, reporter }) => {
     const { collection } = content.node.fields;
     const { slug } = content.node.fields;
 
-    if (slug !== '/home/') {
-      actions.createPage({
-        path: slug,
-        component: path.resolve(`./src/templates/${collection}.tsx`),
-        context: { slug },
-      });
-    }
+    actions.createPage({
+      path: slug,
+      component: path.resolve(`./src/templates/${collection}.tsx`),
+      context: { slug },
+    });
   });
 
   // Create Tags Page
