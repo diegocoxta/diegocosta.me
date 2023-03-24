@@ -68,6 +68,14 @@ exports[`<Footer /> renders properly 1`] = `
           >
              • 
           </span>
+          <a
+            class="c3"
+            href="/rss.xml"
+            rel="noopener"
+            target="_blank"
+          >
+            feed
+          </a>
         </footer>
       </main>
     </section>
@@ -150,6 +158,19 @@ exports[`<Footer /> renders the repository url if defined 1`] = `
             target="_blank"
           >
             footer.sourceCode
+          </a>
+          <span
+            class="c2"
+          >
+             • 
+          </span>
+          <a
+            class="c3"
+            href="/rss.xml"
+            rel="noopener"
+            target="_blank"
+          >
+            feed
           </a>
         </footer>
       </main>
