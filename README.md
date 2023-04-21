@@ -10,7 +10,7 @@ My personal blog powered by gatsby, typescript and styled-components.
 - Supports contents with multiple languages using i18next (see folder [/content](/content)).
 - Dark mode using styled-components themes.
 - Search engine with [fuse.js](https://fusejs.io/)
-- ~~Hosted on Github Pages with [Github Actions](.github/workflows/blog.yml).~~ It's now hosted on Vercel.
+- ~~Hosted on Github Pages with [Github Actions](.github/workflows/blog.yml).~~ It is hosted on Vercel now.
 
 ## :clipboard: Requirements
 
