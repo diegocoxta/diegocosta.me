@@ -3,11 +3,11 @@ title: Home Page
 language: en
 ---
 
-I am an engineering manager who loves the intersection of computers and people. I spend my days helping tech teams achieve their maximum potential.
+I'm an engineering manager who loves the intersection of computers and people. I spend my days helping tech teams reach their maximum potential.
 
-Currently, at Nubank, I am working to simplify our users' relationship with their financial lives by providing a simple yet powerful mobile experience.
+My areas of expertise include engineering leadership, people management, software engineering, and D&I. I'm currently working as an Engineering Manager at Nubank, and I'm always happy to talk about tech or people management.
 
-You can find more about me here:
+If you'd like to learn more about me, check out the links below!
 
 - [Linkedin](https://linkedin.com/in/diegocoxta)
 - [Github](https://github.com/diegocoxta)
