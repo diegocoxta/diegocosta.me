@@ -3,9 +3,9 @@ title: Home Page
 language: en
 ---
 
-I'm an engineering manager who loves the intersection of computers and people. I spend my days helping tech teams reach their maximum potential.
+I'm a Engineering Manager passionate about the intersection between technology and people. My goal is to help technology teams achieve their full potential.
 
-My areas of expertise include engineering leadership, people management, software engineering, and D&I. I'm currently working as an Engineering Manager at Nubank, and I'm always happy to talk about tech or people management.
+My areas of expertise include engineering leadership, people management, software engineering, and inclusion and diversity. Currently, I'm in the position of Engineering Manager at Nubank and I'm always willing to share my ideas and experiences on these topics.
 
 If you'd like to learn more about me, check out the links below!
 
