@@ -5,7 +5,7 @@ language: en
 
 I'm a Engineering Manager passionate about the intersection between technology and people. My goal is to help technology teams achieve their full potential.
 
-My areas of expertise include engineering leadership, people management, software engineering, and inclusion and diversity. Currently, I'm in the position of Engineering Manager at Nubank and I'm always willing to share my ideas and experiences on these topics.
+I have a great interest in engineering leadership, people management, software engineering, as well as inclusion and diversity. Currently, I am an Engineering Manager at Nubank and I am always open to sharing my ideas and experiences on these topics.
 
 If you'd like to learn more about me, check out the links below!
 
