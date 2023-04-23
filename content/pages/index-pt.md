@@ -5,7 +5,7 @@ language: pt
 
 Sou um Gerente de Engenharia apaixonado pela intersecção entre tecnologia e pessoas. Meu objetivo é ajudar equipes de tecnologia a alcançar todo o seu potencial.
 
-Minhas especialidades incluem liderança em engenharia, gerenciamento de pessoas, engenharia de software e inclusão e diversidade. Atualmente, estou na posição de Gerente de Engenharia na Nubank e estou sempre disposto a compartilhar minhas ideias e experiências sobre esses tópicos.
+Tenho grande interesse em liderança em engenharia, gerenciamento de pessoas, engenharia de software, além de inclusão e diversidade. Atualmente, sou Gerente de Engenharia na Nubank e estou sempre aberto a compartilhar minhas ideias e experiências sobre esses temas.
 
 Se você quiser saber mais sobre mim, confira os links abaixo!
 
