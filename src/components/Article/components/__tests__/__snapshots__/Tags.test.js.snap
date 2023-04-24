@@ -15,7 +15,7 @@ exports[`<Tags /> renders properly 1`] = `
 
 .c1 {
   list-style: none;
-  padding: 10px 10px 0 0;
+  padding: 0px 10px 10px 0;
   margin-bottom: 5px;
 }
 
@@ -23,7 +23,7 @@ exports[`<Tags /> renders properly 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   box-shadow: none;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 700;
   text-transform: lowercase;
 }

@@ -15,7 +15,7 @@ const LanguageLink = styled(Link)`
   color: ${({ theme }) => theme.textColor};
   font-weight: 700;
   text-decoration: none;
-  font-size: 20px;
+  font-size: 22px;
 `;
 
 export default function LanguageSwitcher() {

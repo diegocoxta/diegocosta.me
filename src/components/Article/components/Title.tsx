@@ -11,7 +11,7 @@ const Container = styled(Link).attrs((props) => ({
   text-decoration: none;
   font-size: 36px;
   margin: 0;
-  font-weight: bold;
+  font-weight: 700;
 
   :hover,
   :focus {

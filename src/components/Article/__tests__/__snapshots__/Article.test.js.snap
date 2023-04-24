@@ -13,7 +13,7 @@ exports[`<Article /> does not render the article details 1`] = `
   text-decoration: none;
   font-size: 36px;
   margin: 0;
-  font-weight: bold;
+  font-weight: 700;
 }
 
 .c3:hover,
@@ -72,7 +72,7 @@ exports[`<Article /> does not render the article language name 1`] = `
   text-decoration: none;
   font-size: 36px;
   margin: 0;
-  font-weight: bold;
+  font-weight: 700;
 }
 
 .c3:hover,
@@ -102,8 +102,8 @@ exports[`<Article /> does not render the article language name 1`] = `
 }
 
 .c4 {
-  font-size: 18px;
-  margin: 5px 0;
+  font-size: 19px;
+  margin: 10px 0;
 }
 
 <body>
@@ -157,7 +157,7 @@ exports[`<Article /> does not render the link 1`] = `
   text-decoration: none;
   font-size: 36px;
   margin: 0;
-  font-weight: bold;
+  font-weight: 700;
 }
 
 .c3:hover,
@@ -187,8 +187,8 @@ exports[`<Article /> does not render the link 1`] = `
 }
 
 .c4 {
-  font-size: 18px;
-  margin: 5px 0;
+  font-size: 19px;
+  margin: 10px 0;
 }
 
 <body>
@@ -244,7 +244,7 @@ exports[`<Article /> does not render the reading time 1`] = `
   text-decoration: none;
   font-size: 36px;
   margin: 0;
-  font-weight: bold;
+  font-weight: 700;
 }
 
 .c3:hover,
@@ -274,8 +274,8 @@ exports[`<Article /> does not render the reading time 1`] = `
 }
 
 .c4 {
-  font-size: 18px;
-  margin: 5px 0;
+  font-size: 19px;
+  margin: 10px 0;
 }
 
 <body>
@@ -330,7 +330,7 @@ exports[`<Article /> does not render the tags 1`] = `
   text-decoration: none;
   font-size: 36px;
   margin: 0;
-  font-weight: bold;
+  font-weight: 700;
 }
 
 .c3:hover,
@@ -361,8 +361,8 @@ exports[`<Article /> does not render the tags 1`] = `
 }
 
 .c4 {
-  font-size: 18px;
-  margin: 5px 0;
+  font-size: 19px;
+  margin: 10px 0;
 }
 
 <body>
@@ -419,7 +419,7 @@ exports[`<Article /> renders properly 1`] = `
   text-decoration: none;
   font-size: 36px;
   margin: 0;
-  font-weight: bold;
+  font-weight: 700;
 }
 
 .c3:hover,
@@ -442,7 +442,7 @@ exports[`<Article /> renders properly 1`] = `
 
 .c6 {
   list-style: none;
-  padding: 10px 10px 0 0;
+  padding: 0px 10px 10px 0;
   margin-bottom: 5px;
 }
 
@@ -450,7 +450,7 @@ exports[`<Article /> renders properly 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   box-shadow: none;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 700;
   text-transform: lowercase;
 }
@@ -471,8 +471,8 @@ exports[`<Article /> renders properly 1`] = `
 }
 
 .c4 {
-  font-size: 18px;
-  margin: 5px 0;
+  font-size: 19px;
+  margin: 10px 0;
 }
 
 <body>
@@ -554,7 +554,7 @@ exports[`<Article /> renders properly the body content 1`] = `
   text-decoration: none;
   font-size: 36px;
   margin: 0;
-  font-weight: bold;
+  font-weight: 700;
 }
 
 .c3:hover,
@@ -585,12 +585,13 @@ exports[`<Article /> renders properly the body content 1`] = `
 }
 
 .c4 {
-  font-size: 18px;
-  margin: 5px 0;
+  font-size: 19px;
+  margin: 10px 0;
 }
 
 .c6 {
   line-height: 1.5;
+  font-size: 19px;
 }
 
 .c6 a {
@@ -686,7 +687,7 @@ exports[`<Article /> renders properly the description 1`] = `
   text-decoration: none;
   font-size: 36px;
   margin: 0;
-  font-weight: bold;
+  font-weight: 700;
 }
 
 .c3:hover,
@@ -717,12 +718,13 @@ exports[`<Article /> renders properly the description 1`] = `
 }
 
 .c4 {
-  font-size: 18px;
-  margin: 5px 0;
+  font-size: 19px;
+  margin: 10px 0;
 }
 
 .c6 {
   line-height: 1.5;
+  font-size: 19px;
 }
 
 .c6 a {
@@ -818,7 +820,7 @@ exports[`<Article /> renders the article details 1`] = `
   text-decoration: none;
   font-size: 36px;
   margin: 0;
-  font-weight: bold;
+  font-weight: 700;
 }
 
 .c3:hover,
@@ -841,7 +843,7 @@ exports[`<Article /> renders the article details 1`] = `
 
 .c6 {
   list-style: none;
-  padding: 10px 10px 0 0;
+  padding: 0px 10px 10px 0;
   margin-bottom: 5px;
 }
 
@@ -849,7 +851,7 @@ exports[`<Article /> renders the article details 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   box-shadow: none;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 700;
   text-transform: lowercase;
 }
@@ -870,8 +872,8 @@ exports[`<Article /> renders the article details 1`] = `
 }
 
 .c4 {
-  font-size: 18px;
-  margin: 5px 0;
+  font-size: 19px;
+  margin: 10px 0;
 }
 
 <body>

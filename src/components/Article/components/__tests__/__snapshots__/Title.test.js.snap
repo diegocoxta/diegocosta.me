@@ -7,7 +7,7 @@ exports[`<Title /> renders properly 1`] = `
   text-decoration: none;
   font-size: 36px;
   margin: 0;
-  font-weight: bold;
+  font-weight: 700;
 }
 
 .c0:hover,

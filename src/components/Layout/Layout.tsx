@@ -13,7 +13,7 @@ type CustomTheme = typeof dark;
 const GlobalStyle = createGlobalStyle<{ theme: CustomTheme }>`
   body {
     background: ${({ theme }) => theme.backgroundColor};
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Source Sans Pro', sans-serif;
     color: ${({ theme }) => theme.textColor};
     margin: 0;
     padding: 0;
