@@ -101,6 +101,7 @@ exports[`<ArticlesTemplate> renders properly 1`] = `
 .c9 blockquote {
   border-left: 5px solid #AAC13D;
   padding-left: 20px;
+  margin-left: 0;
 }
 
 .c9 img {

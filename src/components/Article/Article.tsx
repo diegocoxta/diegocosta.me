@@ -43,6 +43,7 @@ export const Content = styled.section`
   blockquote {
     border-left: 5px solid ${({ theme }) => theme.accentColor};
     padding-left: 20px;
+    margin-left: 0;
   }
 
   img {
