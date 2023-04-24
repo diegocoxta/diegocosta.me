@@ -24,7 +24,7 @@ exports[`<LanguageSwitcher /> renders properly 1`] = `
   font-weight: 700;
   -webkit-text-decoration: none;
   text-decoration: none;
-  font-size: 20px;
+  font-size: 22px;
 }
 
 <body>

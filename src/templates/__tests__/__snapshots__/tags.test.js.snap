@@ -25,7 +25,7 @@ exports[`<TagsTemplate> renders properly 1`] = `
   font-weight: 700;
   -webkit-text-decoration: none;
   text-decoration: none;
-  font-size: 20px;
+  font-size: 22px;
 }
 
 .c3 {
@@ -43,7 +43,7 @@ exports[`<TagsTemplate> renders properly 1`] = `
   text-decoration: none;
   font-size: 36px;
   margin: 0;
-  font-weight: bold;
+  font-weight: 700;
 }
 
 .c7:hover,
@@ -76,12 +76,13 @@ exports[`<TagsTemplate> renders properly 1`] = `
 
 .c8 {
   color: #BEC3C7;
-  font-size: 18px;
-  margin: 5px 0;
+  font-size: 19px;
+  margin: 10px 0;
 }
 
 .c10 {
   line-height: 1.5;
+  font-size: 19px;
 }
 
 .c10 a {

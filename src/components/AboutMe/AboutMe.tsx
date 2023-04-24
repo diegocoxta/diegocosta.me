@@ -4,18 +4,10 @@ import styled from 'styled-components';
 import FixedContainer from '~/components/FixedContainer';
 
 const Content = styled.div`
-  @media (min-width: 760px) {
-    padding-bottom: 40px;
-  }
-
   p {
-    font-size: 18px;
+    font-size: 24px;
     line-height: 1.4;
     color: ${({ theme }) => theme.textColor};
-
-    @media (min-width: 760px) {
-      font-size: 24px;
-    }
   }
 
   ul {
@@ -29,12 +21,12 @@ const Content = styled.div`
 
   li {
     list-style: none;
-    font-size: 18px;
-    font-weight: 900;
+    font-size: 24px;
+    font-weight: 700;
     margin: 0 24px 5px 0;
 
     @media (min-width: 760px) {
-      font-size: 20px;
+      font-size: 22px;
       margin: 0 24px 0 0;
     }
 
@@ -50,10 +42,10 @@ const Content = styled.div`
         display: block;
         color: ${({ theme }) => theme.backgroundColor};
         font-size: 38px;
-        line-height: 0.2;
+        line-height: 0.5;
 
         @media (min-width: 760px) {
-          line-height: 0.3;
+          line-height: 0.4;
         }
       }
 

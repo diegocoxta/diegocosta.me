@@ -13,14 +13,14 @@ const TagList = styled.ul`
 
 const TagItem = styled.li`
   list-style: none;
-  padding: 10px 10px 0 0;
+  padding: 0px 10px 10px 0;
   margin-bottom: 5px;
 `;
 
 const TagLink = styled(Link)`
   text-decoration: none;
   box-shadow: none;
-  font-size: 14px;
+  font-size: 16px;
   color: ${({ theme }) => theme.accentColor};
   font-weight: 700;
   text-transform: lowercase;

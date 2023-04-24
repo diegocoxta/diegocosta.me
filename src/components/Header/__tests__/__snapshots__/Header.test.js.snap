@@ -71,7 +71,7 @@ exports[`<Header /> does not render the last name 1`] = `
 
 @media (min-width:760px) {
   .c3 {
-    font-size: 100px;
+    font-size: 110px;
   }
 }
 
@@ -179,7 +179,7 @@ exports[`<Header /> renders properly 1`] = `
 
 @media (min-width:760px) {
   .c3 {
-    font-size: 100px;
+    font-size: 110px;
   }
 }
 

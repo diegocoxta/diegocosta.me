@@ -73,7 +73,7 @@ const ResultItemTitle = styled.h3`
   color: ${({ theme }) => theme.backgroundColor};
   font-size: 16px;
   margin: 0 0 5px;
-  font-weight: 600;
+  font-weight: 700;
 `;
 
 const ResultItemDescription = styled.p`

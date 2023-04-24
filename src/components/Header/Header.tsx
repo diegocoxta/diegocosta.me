@@ -24,7 +24,7 @@ const Name = styled.h1`
   margin: 0;
 
   @media (min-width: 760px) {
-    font-size: 100px;
+    font-size: 110px;
   }
 `;
 
