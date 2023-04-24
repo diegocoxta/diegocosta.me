@@ -21,7 +21,7 @@ exports[`<ArticlesTemplate> renders properly 1`] = `
 
 .c2 {
   margin: 0 5px;
-  color: #EDF0F1;
+  color: #2F3D4F;
   font-weight: 700;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -29,7 +29,7 @@ exports[`<ArticlesTemplate> renders properly 1`] = `
 }
 
 .c3 {
-  background: linear-gradient(90deg,#0E1116 20px,transparent 1%) center, linear-gradient(#0E1116 20px,transparent 1%) center, #EDF0F1;
+  background: linear-gradient(90deg,#ffffff 20px,transparent 1%) center, linear-gradient(#ffffff 20px,transparent 1%) center, #2F3D4F;
   background-size: 22px 22px;
   height: 120px;
   margin: 40px 0;
@@ -37,7 +37,7 @@ exports[`<ArticlesTemplate> renders properly 1`] = `
 }
 
 .c6 {
-  color: #EDF0F1;
+  color: #2F3D4F;
   box-shadow: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -48,7 +48,7 @@ exports[`<ArticlesTemplate> renders properly 1`] = `
 
 .c6:hover,
 .c6:focus {
-  border-bottom: 1px solid #EDF0F1;
+  border-bottom: 1px solid #2F3D4F;
   outline: none;
 }
 
@@ -67,7 +67,7 @@ exports[`<ArticlesTemplate> renders properly 1`] = `
 .c4 {
   margin: 0 0 60px 0;
   font-weight: 400;
-  color: #EDF0F1;
+  color: #2F3D4F;
 }
 
 .c5 {
@@ -75,7 +75,7 @@ exports[`<ArticlesTemplate> renders properly 1`] = `
 }
 
 .c7 {
-  color: #BEC3C7;
+  color: #38485D;
   font-size: 19px;
   margin: 10px 0;
 }
@@ -89,7 +89,7 @@ exports[`<ArticlesTemplate> renders properly 1`] = `
   color: #AAC13D;
   -webkit-text-decoration: none;
   text-decoration: none;
-  border-bottom: 1px solid #0E1116;
+  border-bottom: 1px solid #ffffff;
 }
 
 .c9 a:hover,
