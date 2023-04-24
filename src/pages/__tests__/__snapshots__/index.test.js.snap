@@ -28,49 +28,7 @@ exports[`<IndexPage> renders properly 1`] = `
   font-size: 22px;
 }
 
-.c3 p {
-  font-size: 24px;
-  line-height: 1.4;
-  color: #2F3D4F;
-}
-
-.c3 ul {
-  margin: 0;
-  padding: 0;
-}
-
-.c3 li {
-  list-style: none;
-  font-size: 24px;
-  font-weight: 700;
-  margin: 0 24px 5px 0;
-}
-
-.c3 li a {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  color: #2F3D4F;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  padding: 0;
-  text-transform: uppercase;
-}
-
-.c3 li a:after {
-  content: '.';
-  display: block;
-  color: #ffffff;
-  font-size: 38px;
-  line-height: 0.5;
-}
-
-.c3 li a:hover:after {
-  color: #2F3D4F;
-}
-
-.c7 {
+.c6 {
   color: #2F3D4F;
   box-shadow: none;
   -webkit-text-decoration: none;
@@ -80,13 +38,13 @@ exports[`<IndexPage> renders properly 1`] = `
   font-weight: 700;
 }
 
-.c7:hover,
-.c7:focus {
+.c6:hover,
+.c6:focus {
   border-bottom: 1px solid #2F3D4F;
   outline: none;
 }
 
-.c9 {
+.c8 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -98,91 +56,69 @@ exports[`<IndexPage> renders properly 1`] = `
   margin: 0;
 }
 
-.c5 {
+.c4 {
   margin: 0 0 60px 0;
   font-weight: 400;
   color: #2F3D4F;
 }
 
-.c6 {
+.c5 {
   margin: 20px 0 0 0;
 }
 
-.c8 {
+.c7 {
   color: #38485D;
   font-size: 19px;
   margin: 10px 0;
 }
 
-.c10 {
+.c9 {
   line-height: 1.5;
   font-size: 19px;
 }
 
-.c10 a {
+.c9 a {
   color: #AAC13D;
   -webkit-text-decoration: none;
   text-decoration: none;
   border-bottom: 1px solid #ffffff;
 }
 
-.c10 a:hover,
-.c10 a:focus {
+.c9 a:hover,
+.c9 a:focus {
   border-bottom: 1px solid #AAC13D;
   outline: none;
 }
 
-.c10 blockquote {
+.c9 blockquote {
   border-left: 5px solid #AAC13D;
   padding-left: 20px;
   margin-left: 0;
 }
 
-.c10 img {
+.c9 img {
   box-shadow: none !important;
 }
 
-.c10 h3 {
+.c9 h3 {
   font-size: 28px;
 }
 
-.c10 table.uses-table {
+.c9 table.uses-table {
   width: 100%;
   margin: 40px 0;
 }
 
-.c10 table.uses-table td {
+.c9 table.uses-table td {
   text-align: center;
 }
 
-.c4 {
+.c3 {
   background: linear-gradient(90deg,#ffffff 20px,transparent 1%) center, linear-gradient(#ffffff 20px,transparent 1%) center, #2F3D4F;
   background-size: 22px 22px;
   height: 120px;
   margin: 40px 0;
   width: 100%;
-}
-
-@media (min-width:760px) {
-  .c3 ul {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-  }
-}
-
-@media (min-width:760px) {
-  .c3 li {
-    font-size: 22px;
-    margin: 0 24px 0 0;
-  }
-}
-
-@media (min-width:760px) {
-  .c3 li a:after {
-    line-height: 0.4;
-  }
 }
 
 <body>
@@ -229,17 +165,11 @@ exports[`<IndexPage> renders properly 1`] = `
       <p>
         Metatags
       </p>
-      <section
-        class="c0"
-      >
-        <main>
-          <div
-            class="c3"
-          />
-        </main>
-      </section>
+      <p>
+        AboutMe
+      </p>
       <div
-        class="c4"
+        class="c3"
       />
       <p>
         Search
@@ -249,21 +179,21 @@ exports[`<IndexPage> renders properly 1`] = `
       >
         <main>
           <article
-            class="c5"
+            class="c4"
             data-testid="article-item"
           >
             <header
-              class="c6"
+              class="c5"
             >
               <a
-                class="c7"
+                class="c6"
                 data-testid="article-header-title"
                 href="/path-to-article"
               >
                 Title 1
               </a>
               <p
-                class="c8"
+                class="c7"
               >
                 16/01/2021
                  
@@ -271,12 +201,12 @@ exports[`<IndexPage> renders properly 1`] = `
                  · 
               </p>
               <ul
-                class="c9"
+                class="c8"
                 data-testid="article-header-tags"
               />
             </header>
             <section
-              class="c10"
+              class="c9"
             >
               Awesome first article
             </section>
@@ -288,21 +218,21 @@ exports[`<IndexPage> renders properly 1`] = `
       >
         <main>
           <article
-            class="c5"
+            class="c4"
             data-testid="article-item"
           >
             <header
-              class="c6"
+              class="c5"
             >
               <a
-                class="c7"
+                class="c6"
                 data-testid="article-header-title"
                 href="/path-to-article-2"
               >
                 Title 2
               </a>
               <p
-                class="c8"
+                class="c7"
               >
                 18/01/2020
                  
@@ -310,12 +240,12 @@ exports[`<IndexPage> renders properly 1`] = `
                  · 
               </p>
               <ul
-                class="c9"
+                class="c8"
                 data-testid="article-header-tags"
               />
             </header>
             <section
-              class="c10"
+              class="c9"
             >
               Awesome second article
             </section>

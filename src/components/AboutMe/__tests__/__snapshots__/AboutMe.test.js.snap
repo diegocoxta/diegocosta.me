@@ -7,24 +7,53 @@ exports[`<AboutMe /> renders properly 1`] = `
   padding: 0 20px;
 }
 
-.c1 p {
+.c1 {
   font-size: 24px;
   line-height: 1.4;
 }
 
-.c1 ul {
+<body>
+  <div>
+    <section
+      class="c0"
+    >
+      <main>
+        <p
+          class="c1"
+        >
+          You can hear more about here:
+        </p>
+      </main>
+    </section>
+  </div>
+</body>
+`;
+
+exports[`<AboutMe /> renders the navigation properly 1`] = `
+.c0 {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.c1 {
+  font-size: 24px;
+  line-height: 1.4;
+}
+
+.c2 {
   margin: 0;
   padding: 0;
 }
 
-.c1 li {
+.c3 {
   list-style: none;
   font-size: 24px;
   font-weight: 700;
   margin: 0 24px 5px 0;
 }
 
-.c1 li a {
+.c4 {
   -webkit-text-decoration: none;
   text-decoration: none;
   display: -webkit-box;
@@ -35,7 +64,7 @@ exports[`<AboutMe /> renders properly 1`] = `
   text-transform: uppercase;
 }
 
-.c1 li a:after {
+.c4:after {
   content: '.';
   display: block;
   font-size: 38px;
@@ -43,7 +72,7 @@ exports[`<AboutMe /> renders properly 1`] = `
 }
 
 @media (min-width:760px) {
-  .c1 ul {
+  .c2 {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -52,14 +81,14 @@ exports[`<AboutMe /> renders properly 1`] = `
 }
 
 @media (min-width:760px) {
-  .c1 li {
+  .c3 {
     font-size: 22px;
     margin: 0 24px 0 0;
   }
 }
 
 @media (min-width:760px) {
-  .c1 li a:after {
+  .c4:after {
     line-height: 0.4;
   }
 }
@@ -70,11 +99,34 @@ exports[`<AboutMe /> renders properly 1`] = `
       class="c0"
     >
       <main>
-        <div
+        <p
           class="c1"
         >
           You can hear more about here:
-        </div>
+        </p>
+        <ul
+          class="c2"
+          data-testid="about-me-navigation-list"
+        >
+          <li
+            class="c3"
+            data-testid="about-me-navigation-item"
+          >
+            <a
+              class="c4"
+              href=""
+            />
+          </li>
+          <li
+            class="c3"
+            data-testid="about-me-navigation-item"
+          >
+            <a
+              class="c4"
+              href=""
+            />
+          </li>
+        </ul>
       </main>
     </section>
   </div>
