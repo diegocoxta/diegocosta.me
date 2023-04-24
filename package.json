@@ -32,6 +32,7 @@
     "gatsby-transformer-remark": "6.9.0",
     "gatsby-transformer-sharp": "5.9.0",
     "i18next": "22.4.15",
+    "kbar": "^0.1.0-beta.40",
     "lodash.kebabcase": "^4.1.1",
     "prismjs": "^1.29.0",
     "react": "^18.2.0",
@@ -101,26 +102,6 @@
       "yarn lint",
       "yarn stylelint",
       "yarn prettier"
-    ]
-  },
-  "site-metadata": {
-    "title": "Diego Costa - Software Engineer, Engineering Manager",
-    "author": "Diego Costa",
-    "description": "Engenheiro de software e Engineering Manager apaixonado por construir produtos que impactem a vida das pessoas.",
-    "siteUrl": "https://diegocosta.me",
-    "defaultLanguage": "en",
-    "languages": [
-      "pt",
-      "en"
-    ],
-    "repository": "https://github.com/diegocosta/diegocosta.me",
-    "image": "https://repository-images.githubusercontent.com/278878641/3756a080-d995-11ea-9b9f-f91a4448af98",
-    "googleAnalyticsKey": "UA-53539968-4",
-    "metatagLinks": [
-      {
-        "rel": "me",
-        "href": "https: //mastodon.social/@diegocoxta"
-      }
     ]
   }
 }
