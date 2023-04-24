@@ -2,16 +2,7 @@ import React from 'react';
 import * as BsIcon from 'react-icons/bs';
 import { IconBaseProps } from 'react-icons/lib';
 import styled from 'styled-components';
-import {
-  KBarAnimator,
-  KBarProvider,
-  KBarPortal,
-  useMatches,
-  KBarPositioner,
-  KBarSearch,
-  KBarResults,
-  Action,
-} from 'kbar';
+import { KBarAnimator, KBarPortal, useMatches, KBarPositioner, KBarSearch, KBarResults, useKBar } from 'kbar';
 
 const Container = styled.div``;
 
@@ -110,7 +101,7 @@ const GroupName = styled.div`
   color: ${({ theme }) => theme.textColor};
 `;
 
-const Item = styled.div`
+const Label = styled.div`
   display: flex;
   gap: 8px;
   align-items: center;
@@ -131,59 +122,48 @@ const ShortcutIcon = styled.kbd`
   font-size: 14px;
 `;
 
-interface CommanderProps {
-  actions: Action[];
-}
-
-function Results() {
+export default function Commander(): React.ReactElement {
+  const { query } = useKBar();
   const { results } = useMatches();
 
   return (
-    <KBarResults
-      items={results}
-      onRender={({ item, active }) => {
-        if (typeof item === 'string') {
-          return <GroupName>{item}</GroupName>;
-        }
-
-        return (
-          <ResultItem active={active}>
-            <Item>
-              {typeof item.icon === 'string' && <Icon name={item.icon} />}
-              {item.name}
-            </Item>
-
-            {item.shortcut && (
-              <Shortcut aria-hidden>
-                {item.shortcut.map((shortcut: string) => (
-                  <ShortcutIcon key={shortcut}>{shortcut}</ShortcutIcon>
-                ))}
-              </Shortcut>
-            )}
-          </ResultItem>
-        );
-      }}
-    />
-  );
-}
-
-export default function Commander(props: CommanderProps): React.ReactElement {
-  return (
     <Container>
-      <Button>
+      <Button onClick={() => query.toggle()}>
         <Icon name="BsCommand" props={{ size: 28 }} />
       </Button>
 
-      <KBarProvider actions={props.actions}>
-        <KBarPortal>
-          <Positioner>
-            <Animator>
-              <Search placeholder="Type a command or search…" />
-              <Results />
-            </Animator>
-          </Positioner>
-        </KBarPortal>
-      </KBarProvider>
+      <KBarPortal>
+        <Positioner>
+          <Animator>
+            <Search placeholder="Type a command or search…" />
+            <KBarResults
+              items={results}
+              onRender={({ item, active }) => {
+                if (typeof item === 'string') {
+                  return <GroupName>{item}</GroupName>;
+                }
+
+                return (
+                  <ResultItem active={active}>
+                    <Label>
+                      {typeof item.icon === 'string' && <Icon name={item.icon} />}
+                      {item.name}
+                    </Label>
+
+                    {item.shortcut && (
+                      <Shortcut aria-hidden>
+                        {item.shortcut.map((shortcut: string) => (
+                          <ShortcutIcon key={shortcut}>{shortcut}</ShortcutIcon>
+                        ))}
+                      </Shortcut>
+                    )}
+                  </ResultItem>
+                );
+              }}
+            />
+          </Animator>
+        </Positioner>
+      </KBarPortal>
     </Container>
   );
 }

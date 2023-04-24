@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 import { ThemeContext } from 'styled-components';
+import { KBarProvider } from 'kbar';
 
 import { CommanderQueryQuery } from '~/../graphql-types';
 import { usei18n } from '~/utils/i18n';
@@ -146,5 +147,9 @@ export default (): React.ReactElement => {
     },
   ];
 
-  return <Commander actions={actions} />;
+  return (
+    <KBarProvider actions={actions}>
+      <Commander />
+    </KBarProvider>
+  );
 };
