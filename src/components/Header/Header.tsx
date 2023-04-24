@@ -4,6 +4,7 @@ import styled from 'styled-components';
 import { Link } from '~/utils/i18n';
 import FixedContainer from '~/components/FixedContainer';
 import ThemeSwitcher from '~/components/ThemeSwitcher';
+import Commander from '~/components/Commander';
 
 const Content = styled.header`
   margin: 16px 0 40px 0;
@@ -68,6 +69,7 @@ export default function Header(props: HeaderProps): React.ReactElement {
         </StyledLink>
         <Options>
           <ThemeSwitcher />
+          <Commander />
         </Options>
       </Content>
     </FixedContainer>
