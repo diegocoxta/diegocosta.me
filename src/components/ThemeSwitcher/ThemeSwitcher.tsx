@@ -14,7 +14,7 @@ const Container = styled.button<{ enabled: boolean }>`
   display: flex;
   justify-content: ${({ enabled }) => (enabled ? 'flex-start' : 'flex-end')};
   transition: all 1s linear;
-  margin: 10px 0 0 20px;
+  margin: 0 20px;
   cursor: pointer;
 
   :focus {

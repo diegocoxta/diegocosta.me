@@ -18,7 +18,7 @@ exports[`<ThemeSwitcher /> renders properly 1`] = `
   justify-content: flex-end;
   -webkit-transition: all 1s linear;
   transition: all 1s linear;
-  margin: 10px 0 0 20px;
+  margin: 0 20px;
   cursor: pointer;
 }
 
