@@ -25,11 +25,11 @@ exports[`<IndexPage> renders properly 1`] = `
   font-weight: 700;
   -webkit-text-decoration: none;
   text-decoration: none;
-  font-size: 20px;
+  font-size: 22px;
 }
 
 .c3 p {
-  font-size: 18px;
+  font-size: 24px;
   line-height: 1.4;
   color: #EDF0F1;
 }
@@ -41,8 +41,8 @@ exports[`<IndexPage> renders properly 1`] = `
 
 .c3 li {
   list-style: none;
-  font-size: 18px;
-  font-weight: 900;
+  font-size: 24px;
+  font-weight: 700;
   margin: 0 24px 5px 0;
 }
 
@@ -63,7 +63,7 @@ exports[`<IndexPage> renders properly 1`] = `
   display: block;
   color: #0E1116;
   font-size: 38px;
-  line-height: 0.2;
+  line-height: 0.5;
 }
 
 .c3 li a:hover:after {
@@ -77,7 +77,7 @@ exports[`<IndexPage> renders properly 1`] = `
   text-decoration: none;
   font-size: 36px;
   margin: 0;
-  font-weight: bold;
+  font-weight: 700;
 }
 
 .c7:hover,
@@ -110,12 +110,13 @@ exports[`<IndexPage> renders properly 1`] = `
 
 .c8 {
   color: #BEC3C7;
-  font-size: 18px;
-  margin: 5px 0;
+  font-size: 19px;
+  margin: 10px 0;
 }
 
 .c10 {
   line-height: 1.5;
+  font-size: 19px;
 }
 
 .c10 a {
@@ -162,18 +163,6 @@ exports[`<IndexPage> renders properly 1`] = `
 }
 
 @media (min-width:760px) {
-  .c3 {
-    padding-bottom: 40px;
-  }
-}
-
-@media (min-width:760px) {
-  .c3 p {
-    font-size: 24px;
-  }
-}
-
-@media (min-width:760px) {
   .c3 ul {
     display: -webkit-box;
     display: -webkit-flex;
@@ -184,14 +173,14 @@ exports[`<IndexPage> renders properly 1`] = `
 
 @media (min-width:760px) {
   .c3 li {
-    font-size: 20px;
+    font-size: 22px;
     margin: 0 24px 0 0;
   }
 }
 
 @media (min-width:760px) {
   .c3 li a:after {
-    line-height: 0.3;
+    line-height: 0.4;
   }
 }
 

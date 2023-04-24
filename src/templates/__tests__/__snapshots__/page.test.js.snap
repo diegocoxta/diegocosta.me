@@ -25,7 +25,7 @@ exports[`<PagesTemplate> renders properly 1`] = `
   font-weight: 700;
   -webkit-text-decoration: none;
   text-decoration: none;
-  font-size: 20px;
+  font-size: 22px;
 }
 
 .c3 {
@@ -43,7 +43,7 @@ exports[`<PagesTemplate> renders properly 1`] = `
   text-decoration: none;
   font-size: 36px;
   margin: 0;
-  font-weight: bold;
+  font-weight: 700;
 }
 
 .c6:hover,
@@ -64,6 +64,7 @@ exports[`<PagesTemplate> renders properly 1`] = `
 
 .c7 {
   line-height: 1.5;
+  font-size: 19px;
 }
 
 .c7 a {

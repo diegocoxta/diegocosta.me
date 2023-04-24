@@ -20,12 +20,13 @@ const Header = styled.header`
 
 const MetaAttributes = styled.p`
   color: ${({ theme }) => theme.subtitleColor};
-  font-size: 18px;
-  margin: 5px 0;
+  font-size: 19px;
+  margin: 10px 0;
 `;
 
 export const Content = styled.section`
   line-height: 1.5;
+  font-size: 19px;
 
   a {
     color: ${({ theme }) => theme.accentColor};
