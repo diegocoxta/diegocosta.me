@@ -21,7 +21,7 @@ exports[`<Layout /> renders properly 1`] = `
 
 .c2 {
   margin: 0 5px;
-  color: #EDF0F1;
+  color: #2F3D4F;
   font-weight: 700;
   -webkit-text-decoration: none;
   text-decoration: none;

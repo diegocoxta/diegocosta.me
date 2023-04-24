@@ -609,6 +609,7 @@ exports[`<Article /> renders properly the body content 1`] = `
 .c6 blockquote {
   border-left: 5px solid;
   padding-left: 20px;
+  margin-left: 0;
 }
 
 .c6 img {
@@ -742,6 +743,7 @@ exports[`<Article /> renders properly the description 1`] = `
 .c6 blockquote {
   border-left: 5px solid;
   padding-left: 20px;
+  margin-left: 0;
 }
 
 .c6 img {

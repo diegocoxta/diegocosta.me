@@ -427,9 +427,9 @@ export type MarkdownRemarkFrontmatter = {
   date?: Maybe<Scalars['Date']>;
   description?: Maybe<Scalars['String']>;
   tags?: Maybe<Array<Maybe<Scalars['String']>>>;
+  homepage_view_full_article?: Maybe<Scalars['Boolean']>;
   language?: Maybe<Scalars['String']>;
   status?: Maybe<Scalars['String']>;
-  homepage_view_full_article?: Maybe<Scalars['Boolean']>;
 };
 
 
@@ -1091,9 +1091,9 @@ export type MarkdownRemarkFrontmatterFilterInput = {
   date?: InputMaybe<DateQueryOperatorInput>;
   description?: InputMaybe<StringQueryOperatorInput>;
   tags?: InputMaybe<StringQueryOperatorInput>;
+  homepage_view_full_article?: InputMaybe<BooleanQueryOperatorInput>;
   language?: InputMaybe<StringQueryOperatorInput>;
   status?: InputMaybe<StringQueryOperatorInput>;
-  homepage_view_full_article?: InputMaybe<BooleanQueryOperatorInput>;
 };
 
 export type BooleanQueryOperatorInput = {
@@ -1374,9 +1374,9 @@ export type MarkdownRemarkFrontmatterFieldSelector = {
   date?: InputMaybe<FieldSelectorEnum>;
   description?: InputMaybe<FieldSelectorEnum>;
   tags?: InputMaybe<FieldSelectorEnum>;
+  homepage_view_full_article?: InputMaybe<FieldSelectorEnum>;
   language?: InputMaybe<FieldSelectorEnum>;
   status?: InputMaybe<FieldSelectorEnum>;
-  homepage_view_full_article?: InputMaybe<FieldSelectorEnum>;
 };
 
 export type MarkdownRemarkFieldsFieldSelector = {
@@ -1652,9 +1652,9 @@ export type MarkdownRemarkFrontmatterSortInput = {
   date?: InputMaybe<SortOrderEnum>;
   description?: InputMaybe<SortOrderEnum>;
   tags?: InputMaybe<SortOrderEnum>;
+  homepage_view_full_article?: InputMaybe<SortOrderEnum>;
   language?: InputMaybe<SortOrderEnum>;
   status?: InputMaybe<SortOrderEnum>;
-  homepage_view_full_article?: InputMaybe<SortOrderEnum>;
 };
 
 export type MarkdownRemarkFieldsSortInput = {
