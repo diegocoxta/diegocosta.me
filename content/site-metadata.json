@@ -25,27 +25,33 @@
     "primary": [
       {
         "label": "Linkedin",
-        "url": "https://linkedin.com/in/diegocoxta"
+        "url": "https://linkedin.com/in/diegocoxta",
+        "icon": "BsLinkedin"
       },
       {
         "label": "Github",
-        "url": "https://github.com/diegocoxta"
+        "url": "https://github.com/diegocoxta",
+        "icon": "BsGithub"
       },
       {
         "label": "Twitter",
-        "url": "https://twitter.com/diegocoxta"
+        "url": "https://twitter.com/diegocoxta",
+        "icon": "BsTwitter"
       },
       {
         "label": "Mastodon",
-        "url": "https://mastodon.social/@diegocoxta"
+        "url": "https://mastodon.social/@diegocoxta",
+        "icon": "BsMastodon"
       },
       {
         "label": "Talks",
-        "url": "/en/tags/talks"
+        "url": "/en/tags/talks",
+        "icon": "BsFillChatFill"
       },
       {
         "label": "E-mail",
-        "url": "mailto:diego@diegocosta.me"
+        "url": "mailto:diego@diegocosta.me",
+        "icon": "BsEnvelopeAtFill"
       }
     ]
   }

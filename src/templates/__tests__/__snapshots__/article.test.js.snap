@@ -98,6 +98,13 @@ exports[`<ArticlesTemplate> renders properly 1`] = `
   outline: none;
 }
 
+.c9 code {
+  background: #AAC13D40;
+  padding: 2px 6px;
+  border-radius: 10px;
+  font-size: 16px;
+}
+
 .c9 blockquote {
   border-left: 5px solid #AAC13D;
   padding-left: 20px;

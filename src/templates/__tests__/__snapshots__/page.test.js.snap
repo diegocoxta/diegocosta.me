@@ -80,6 +80,13 @@ exports[`<PagesTemplate> renders properly 1`] = `
   outline: none;
 }
 
+.c7 code {
+  background: #AAC13D40;
+  padding: 2px 6px;
+  border-radius: 10px;
+  font-size: 16px;
+}
+
 .c7 blockquote {
   border-left: 5px solid #AAC13D;
   padding-left: 20px;

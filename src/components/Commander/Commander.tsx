@@ -1,7 +1,17 @@
 import React from 'react';
-import { BsCommand } from 'react-icons/bs';
+import * as BsIcon from 'react-icons/bs';
+import { IconBaseProps } from 'react-icons/lib';
 import styled from 'styled-components';
-import { KBarAnimator, KBarProvider, KBarPortal, useMatches, KBarPositioner, KBarSearch, KBarResults } from 'kbar';
+import {
+  KBarAnimator,
+  KBarProvider,
+  KBarPortal,
+  useMatches,
+  KBarPositioner,
+  KBarSearch,
+  KBarResults,
+  Action,
+} from 'kbar';
 
 const Container = styled.div``;
 
@@ -21,29 +31,18 @@ const Button = styled.div`
   }
 `;
 
-const Kbd = styled.kbd`
-  background: rgba(255, 255, 255, 0.1);
-  color: pink;
-  padding: 4px 8px;
-  text-transform: uppercase;
-`;
+interface IconProps {
+  name: string;
+  props?: IconBaseProps;
+}
 
-const Shortcut = styled.div`
-  display: grid;
-  grid-auto-flow: column;
-  gap: 4px;
-`;
+export function Icon({ name, props }: IconProps): JSX.Element {
+  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+  // @ts-ignore
+  const ElementIcon = BsIcon[name];
 
-const Action = styled.div`
-  display: flex;
-  gap: 8px;
-  align-items: center;
-`;
-
-const ActionRow = styled.div`
-  display: flex;
-  flex-direction: column;
-`;
+  return <ElementIcon {...props} />;
+}
 
 const Positioner = styled(KBarPositioner)`
   position: fixed;
@@ -53,32 +52,19 @@ const Positioner = styled(KBarPositioner)`
   width: 100%;
   inset: 0px;
   padding: 14vh 16px 16px;
-  background: rgba(0, 0, 0, 0.8);
+  background: ${({ theme }) => `${theme.textColor}CC`};
   box-sizing: border-box;
-`;
-
-const Search = styled(KBarSearch)`
-  padding: 12px 16px;
-  font-size: 16px;
-  width: 100%;
-  box-sizing: border-box;
-  outline: none;
-  border: none;
-  margin: 0;
-  background: $command;
-  color: $primary;
 `;
 
 const Animator = styled(KBarAnimator)`
-  background-color: #1a1c1e;
+  background-color: ${({ theme }) => theme.backgroundColor};
   max-width: 600px;
   width: 100%;
-  color: yellow;
+  color: ${({ theme }) => theme.textColor};
   border-radius: 8px;
   overflow: hidden;
 
   @supports ((-webkit-backdrop-filter: none) or (backdrop-filter: none)):  {
-    background-color: $command;
     backdrop-filter: saturate(300%) blur(25px);
   }
 
@@ -94,69 +80,98 @@ const Animator = styled(KBarAnimator)`
   }
 `;
 
-const GroupName = styled.div`
-  padding: 8px 16px;
-  font-size: 10px;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  background: red;
+const Search = styled(KBarSearch)`
+  padding: 12px 16px;
+  font-size: 16px;
+  width: 100%;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  margin: 0;
+  background: ${({ theme }) => theme.backgroundColor};
+  color: ${({ theme }) => theme.textColor};
 `;
 
-const getResultStyle = (active: boolean) => {
-  return {
-    padding: '12px 16px',
-    background: active ? 'rgba(255, 255, 255, 0.1)' : '$command',
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'space-between',
-    margin: 0,
-    cursor: 'pointer',
-    color: active ? '$primary' : '$secondary',
-  };
-};
+const ResultItem = styled.div<{ active: boolean }>`
+  padding: 12px 16px;
+  background-color: ${({ active, theme }) => (active ? `${theme.textColor}1A` : 'transparent')};
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0;
+  cursor: pointer;
+`;
+
+const GroupName = styled.div`
+  padding: 8px 16px;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: ${({ theme }) => theme.textColor};
+`;
+
+const Item = styled.div`
+  display: flex;
+  gap: 8px;
+  align-items: center;
+`;
+
+const Shortcut = styled.div`
+  display: grid;
+  grid-auto-flow: column;
+  gap: 4px;
+`;
+
+const ShortcutIcon = styled.kbd`
+  background: ${({ theme }) => `${theme.textColor}1A`};
+  color: ${({ theme }) => theme.textColor};
+  padding: 4px 8px;
+  text-transform: uppercase;
+  border-radius: 5px;
+  font-size: 14px;
+`;
 
 interface CommanderProps {
-  actions: [];
+  actions: Action[];
 }
 
-function RenderResults() {
+function Results() {
   const { results } = useMatches();
 
   return (
     <KBarResults
       items={results}
-      onRender={({ item, active }) =>
-        typeof item === 'string' ? <GroupName>{item}</GroupName> : <ResultItem action={item} active={active} />
-      }
+      onRender={({ item, active }) => {
+        if (typeof item === 'string') {
+          return <GroupName>{item}</GroupName>;
+        }
+
+        return (
+          <ResultItem active={active}>
+            <Item>
+              {typeof item.icon === 'string' && <Icon name={item.icon} />}
+              {item.name}
+            </Item>
+
+            {item.shortcut && (
+              <Shortcut aria-hidden>
+                {item.shortcut.map((shortcut: string) => (
+                  <ShortcutIcon key={shortcut}>{shortcut}</ShortcutIcon>
+                ))}
+              </Shortcut>
+            )}
+          </ResultItem>
+        );
+      }}
     />
   );
 }
-
-const ResultItem = React.forwardRef(({ action, active }, ref) => {
-  return (
-    <div ref={ref} style={getResultStyle(active)}>
-      <Action>
-        {action.icon && action.icon}
-        <ActionRow>
-          <span>{action.name}</span>
-        </ActionRow>
-      </Action>
-      {action.shortcut?.length ? (
-        <Shortcut aria-hidden>
-          {action.shortcut.map((shortcut) => (
-            <Kbd key={shortcut}>{shortcut}</Kbd>
-          ))}
-        </Shortcut>
-      ) : null}
-    </div>
-  );
-});
 
 export default function Commander(props: CommanderProps): React.ReactElement {
   return (
     <Container>
       <Button>
-        <BsCommand size={28} />
+        <Icon name="BsCommand" props={{ size: 28 }} />
       </Button>
 
       <KBarProvider actions={props.actions}>
@@ -164,7 +179,7 @@ export default function Commander(props: CommanderProps): React.ReactElement {
           <Positioner>
             <Animator>
               <Search placeholder="Type a command or search…" />
-              <RenderResults />
+              <Results />
             </Animator>
           </Positioner>
         </KBarPortal>

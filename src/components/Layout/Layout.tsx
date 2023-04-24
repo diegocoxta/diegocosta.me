@@ -25,12 +25,12 @@ export interface LayoutProps {
 }
 
 export default function Layout(props: LayoutProps): React.ReactElement {
-  const [theme, themeToggler] = useTheme();
+  const [theme, themeToggler, setMode] = useTheme();
 
   const themeMode = theme === 'light' ? light : dark;
 
   return (
-    <ThemeContext.Provider value={{ ...themeMode, theme, themeToggler }}>
+    <ThemeContext.Provider value={{ ...themeMode, theme, themeToggler, setMode }}>
       <GlobalStyle />
       <LanguageSwitcher />
       <Header />

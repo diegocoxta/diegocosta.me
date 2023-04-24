@@ -4,6 +4,7 @@ import { render } from '@testing-library/react';
 import Header from '../Header';
 
 jest.mock('../../ThemeSwitcher', () => () => <p>ThemeSwitcher</p>);
+jest.mock('../../Commander', () => () => <p>Commander</p>);
 
 describe('<Header />', () => {
   it('renders properly', () => {

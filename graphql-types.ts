@@ -306,6 +306,7 @@ export type SiteSiteMetadataNavigation = {
 export type SiteSiteMetadataNavigationPrimary = {
   label?: Maybe<Scalars['String']>;
   url?: Maybe<Scalars['String']>;
+  icon?: Maybe<Scalars['String']>;
 };
 
 export type SiteFunction = Node & {
@@ -2023,6 +2024,7 @@ export type SiteSiteMetadataNavigationPrimaryFilterListInput = {
 export type SiteSiteMetadataNavigationPrimaryFilterInput = {
   label?: InputMaybe<StringQueryOperatorInput>;
   url?: InputMaybe<StringQueryOperatorInput>;
+  icon?: InputMaybe<StringQueryOperatorInput>;
 };
 
 export type SiteConnection = {
@@ -2118,6 +2120,7 @@ export type SiteSiteMetadataNavigationFieldSelector = {
 export type SiteSiteMetadataNavigationPrimaryFieldSelector = {
   label?: InputMaybe<FieldSelectorEnum>;
   url?: InputMaybe<FieldSelectorEnum>;
+  icon?: InputMaybe<FieldSelectorEnum>;
 };
 
 export type SiteGroupConnection = {
@@ -2225,6 +2228,7 @@ export type SiteSiteMetadataNavigationSortInput = {
 export type SiteSiteMetadataNavigationPrimarySortInput = {
   label?: InputMaybe<SortOrderEnum>;
   url?: InputMaybe<SortOrderEnum>;
+  icon?: InputMaybe<SortOrderEnum>;
 };
 
 export type SiteFunctionConnection = {
@@ -2991,6 +2995,11 @@ export type AboutMeComponentQueryVariables = Exact<{ [key: string]: never; }>;
 export type AboutMeComponentQuery = { site?: { siteMetadata?: { aboutMe?: { pt?: string | null, en?: string | null } | null, navigation?: { primary?: Array<{ label?: string | null, url?: string | null } | null> | null } | null } | null } | null };
 
 export type ArticleInformationFragment = { html?: string | null, excerpt?: string | null, fields?: { slug?: string | null, readingTime?: { minutes?: number | null } | null } | null, frontmatter?: { date?: any | null, title?: string | null, description?: string | null, tags?: Array<string | null> | null, homepage_view_full_article?: boolean | null, status?: string | null, language?: string | null } | null };
+
+export type CommanderQueryQueryVariables = Exact<{ [key: string]: never; }>;
+
+
+export type CommanderQueryQuery = { site?: { siteMetadata?: { repository?: string | null, navigation?: { primary?: Array<{ label?: string | null, url?: string | null, icon?: string | null } | null> | null } | null } | null } | null, pages: { nodes: Array<{ frontmatter?: { title?: string | null } | null, fields?: { slug?: string | null } | null }> } };
 
 export type FooterComponentQueryVariables = Exact<{ [key: string]: never; }>;
 

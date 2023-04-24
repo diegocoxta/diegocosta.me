@@ -606,6 +606,13 @@ exports[`<Article /> renders properly the body content 1`] = `
   outline: none;
 }
 
+.c6 code {
+  background: 40;
+  padding: 2px 6px;
+  border-radius: 10px;
+  font-size: 16px;
+}
+
 .c6 blockquote {
   border-left: 5px solid;
   padding-left: 20px;
@@ -738,6 +745,13 @@ exports[`<Article /> renders properly the description 1`] = `
 .c6 a:focus {
   border-bottom: 1px solid;
   outline: none;
+}
+
+.c6 code {
+  background: 40;
+  padding: 2px 6px;
+  border-radius: 10px;
+  font-size: 16px;
 }
 
 .c6 blockquote {
