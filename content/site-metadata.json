@@ -1,0 +1,50 @@
+{
+  "title": "Diego Costa - Software Engineer, Engineering Manager",
+  "author": "Diego Costa",
+  "description": "Engenheiro de software e Engineering Manager apaixonado por construir produtos que impactem a vida das pessoas.",
+  "siteUrl": "https://diegocosta.me",
+  "defaultLanguage": "en",
+  "languages": ["pt", "en"],
+  "repository": "https://github.com/diegocosta/diegocosta.me",
+  "image": "https://repository-images.githubusercontent.com/278878641/3756a080-d995-11ea-9b9f-f91a4448af98",
+  "googleAnalyticsKey": "UA-53539968-4",
+  "metatagLinks": [
+    {
+      "rel": "me",
+      "href": "https: //mastodon.social/@diegocoxta"
+    }
+  ],
+  "aboutMe": {
+    "en": "I’m a Engineering Manager passionate about the intersection between technology and people. My goal is to help technology teams achieve their full potential.\nI have a great interest in engineering leadership, people management, software engineering, as well as inclusion and diversity. Currently, I am an Engineering Manager at Nubank and I am always open to sharing my ideas and experiences on these topics.\nIf you’d like to learn more about me, check out the links below!",
+    "pt": "Sou um Gerente de Engenharia apaixonado pela intersecção entre tecnologia e pessoas. Meu objetivo é ajudar equipes de tecnologia a alcançar todo o seu potencial.\nTenho grande interesse em liderança em engenharia, gerenciamento de pessoas, engenharia de software, além de inclusão e diversidade. Atualmente, sou Gerente de Engenharia na Nubank e estou sempre aberto a compartilhar minhas ideias e experiências sobre esses temas.\nSe você quiser saber mais sobre mim, confira os links abaixo!"
+  },
+  "navigation": {
+    "socialNetworks": [
+      {
+        "label": "Linkedin",
+        "url": "https://linkedin.com/in/diegocoxta",
+        "icon": "BsLinkedin"
+      },
+      {
+        "label": "Github",
+        "url": "https://github.com/diegocoxta",
+        "icon": "BsGithub"
+      },
+      {
+        "label": "Twitter",
+        "url": "https://twitter.com/diegocoxta",
+        "icon": "BsTwitter"
+      },
+      {
+        "label": "Mastodon",
+        "url": "https://mastodon.social/@diegocoxta",
+        "icon": "BsMastodon"
+      },
+      {
+        "label": "E-mail",
+        "url": "mailto:diego@diegocosta.me",
+        "icon": "BsEnvelopeAtFill"
+      }
+    ]
+  }
+}

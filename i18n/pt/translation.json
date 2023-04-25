@@ -1,7 +1,6 @@
 {
   "languages.pt": "Português",
   "languages.en": "Inglês",
-  "languages.es": "Espanhol",
   "article.lessThan1Minute": "Menos de 1 minuto",
   "article.minutes": "minutos",
   "article.ofReading": "de leitura",
@@ -16,5 +15,16 @@
   "tagsTemplate.titlePrefix": "Publicações sobre",
   "translationMissingAlert.title": "Desculpe, essa página não está disponível em Português.",
   "translationMissingAlert.subtitle": "Mas você pode encontrar em",
-  "translationMissingAlert.separator": "e"
+  "translationMissingAlert.separator": "e",
+  "commander.item.pages": "Páginas",
+  "commander.item.socialNetworks": "Entrar em Contato",
+  "commander.item.preferences": "Preferências",
+  "commander.item.home": "Página Inicial",
+  "commander.item.theme": "Tema",
+  "commander.item.themeLight": "Claro",
+  "commander.item.themeDark": "Escuro",
+  "commander.item.language": "Idioma",
+  "commander.item.sourceCode": "Código Fonte",
+  "commander.item.rss": "RSS",
+  "commander.placeholder": "Digite um comando ou procure..."
 }

@@ -7,7 +7,7 @@ import FixedContainer from '~/components/FixedContainer';
 const List = styled.div`
   display: flex;
   margin: 40px 0 0 0;
-  justify-content: flex-end;
+  justify-content: flex-start;
 `;
 
 const LanguageLink = styled(Link)`

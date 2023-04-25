@@ -285,11 +285,28 @@ export type SiteSiteMetadata = {
   image?: Maybe<Scalars['String']>;
   googleAnalyticsKey?: Maybe<Scalars['String']>;
   metatagLinks?: Maybe<Array<Maybe<SiteSiteMetadataMetatagLinks>>>;
+  aboutMe?: Maybe<SiteSiteMetadataAboutMe>;
+  navigation?: Maybe<SiteSiteMetadataNavigation>;
 };
 
 export type SiteSiteMetadataMetatagLinks = {
   rel?: Maybe<Scalars['String']>;
   href?: Maybe<Scalars['String']>;
+};
+
+export type SiteSiteMetadataAboutMe = {
+  en?: Maybe<Scalars['String']>;
+  pt?: Maybe<Scalars['String']>;
+};
+
+export type SiteSiteMetadataNavigation = {
+  socialNetworks?: Maybe<Array<Maybe<SiteSiteMetadataNavigationSocialNetworks>>>;
+};
+
+export type SiteSiteMetadataNavigationSocialNetworks = {
+  label?: Maybe<Scalars['String']>;
+  url?: Maybe<Scalars['String']>;
+  icon?: Maybe<Scalars['String']>;
 };
 
 export type SiteFunction = Node & {
@@ -427,9 +444,9 @@ export type MarkdownRemarkFrontmatter = {
   date?: Maybe<Scalars['Date']>;
   description?: Maybe<Scalars['String']>;
   tags?: Maybe<Array<Maybe<Scalars['String']>>>;
-  homepage_view_full_article?: Maybe<Scalars['Boolean']>;
   language?: Maybe<Scalars['String']>;
   status?: Maybe<Scalars['String']>;
+  homepage_view_full_article?: Maybe<Scalars['Boolean']>;
 };
 
 
@@ -1091,9 +1108,9 @@ export type MarkdownRemarkFrontmatterFilterInput = {
   date?: InputMaybe<DateQueryOperatorInput>;
   description?: InputMaybe<StringQueryOperatorInput>;
   tags?: InputMaybe<StringQueryOperatorInput>;
-  homepage_view_full_article?: InputMaybe<BooleanQueryOperatorInput>;
   language?: InputMaybe<StringQueryOperatorInput>;
   status?: InputMaybe<StringQueryOperatorInput>;
+  homepage_view_full_article?: InputMaybe<BooleanQueryOperatorInput>;
 };
 
 export type BooleanQueryOperatorInput = {
@@ -1374,9 +1391,9 @@ export type MarkdownRemarkFrontmatterFieldSelector = {
   date?: InputMaybe<FieldSelectorEnum>;
   description?: InputMaybe<FieldSelectorEnum>;
   tags?: InputMaybe<FieldSelectorEnum>;
-  homepage_view_full_article?: InputMaybe<FieldSelectorEnum>;
   language?: InputMaybe<FieldSelectorEnum>;
   status?: InputMaybe<FieldSelectorEnum>;
+  homepage_view_full_article?: InputMaybe<FieldSelectorEnum>;
 };
 
 export type MarkdownRemarkFieldsFieldSelector = {
@@ -1652,9 +1669,9 @@ export type MarkdownRemarkFrontmatterSortInput = {
   date?: InputMaybe<SortOrderEnum>;
   description?: InputMaybe<SortOrderEnum>;
   tags?: InputMaybe<SortOrderEnum>;
-  homepage_view_full_article?: InputMaybe<SortOrderEnum>;
   language?: InputMaybe<SortOrderEnum>;
   status?: InputMaybe<SortOrderEnum>;
+  homepage_view_full_article?: InputMaybe<SortOrderEnum>;
 };
 
 export type MarkdownRemarkFieldsSortInput = {
@@ -1978,6 +1995,8 @@ export type SiteSiteMetadataFilterInput = {
   image?: InputMaybe<StringQueryOperatorInput>;
   googleAnalyticsKey?: InputMaybe<StringQueryOperatorInput>;
   metatagLinks?: InputMaybe<SiteSiteMetadataMetatagLinksFilterListInput>;
+  aboutMe?: InputMaybe<SiteSiteMetadataAboutMeFilterInput>;
+  navigation?: InputMaybe<SiteSiteMetadataNavigationFilterInput>;
 };
 
 export type SiteSiteMetadataMetatagLinksFilterListInput = {
@@ -1987,6 +2006,25 @@ export type SiteSiteMetadataMetatagLinksFilterListInput = {
 export type SiteSiteMetadataMetatagLinksFilterInput = {
   rel?: InputMaybe<StringQueryOperatorInput>;
   href?: InputMaybe<StringQueryOperatorInput>;
+};
+
+export type SiteSiteMetadataAboutMeFilterInput = {
+  en?: InputMaybe<StringQueryOperatorInput>;
+  pt?: InputMaybe<StringQueryOperatorInput>;
+};
+
+export type SiteSiteMetadataNavigationFilterInput = {
+  socialNetworks?: InputMaybe<SiteSiteMetadataNavigationSocialNetworksFilterListInput>;
+};
+
+export type SiteSiteMetadataNavigationSocialNetworksFilterListInput = {
+  elemMatch?: InputMaybe<SiteSiteMetadataNavigationSocialNetworksFilterInput>;
+};
+
+export type SiteSiteMetadataNavigationSocialNetworksFilterInput = {
+  label?: InputMaybe<StringQueryOperatorInput>;
+  url?: InputMaybe<StringQueryOperatorInput>;
+  icon?: InputMaybe<StringQueryOperatorInput>;
 };
 
 export type SiteConnection = {
@@ -2061,11 +2099,28 @@ export type SiteSiteMetadataFieldSelector = {
   image?: InputMaybe<FieldSelectorEnum>;
   googleAnalyticsKey?: InputMaybe<FieldSelectorEnum>;
   metatagLinks?: InputMaybe<SiteSiteMetadataMetatagLinksFieldSelector>;
+  aboutMe?: InputMaybe<SiteSiteMetadataAboutMeFieldSelector>;
+  navigation?: InputMaybe<SiteSiteMetadataNavigationFieldSelector>;
 };
 
 export type SiteSiteMetadataMetatagLinksFieldSelector = {
   rel?: InputMaybe<FieldSelectorEnum>;
   href?: InputMaybe<FieldSelectorEnum>;
+};
+
+export type SiteSiteMetadataAboutMeFieldSelector = {
+  en?: InputMaybe<FieldSelectorEnum>;
+  pt?: InputMaybe<FieldSelectorEnum>;
+};
+
+export type SiteSiteMetadataNavigationFieldSelector = {
+  socialNetworks?: InputMaybe<SiteSiteMetadataNavigationSocialNetworksFieldSelector>;
+};
+
+export type SiteSiteMetadataNavigationSocialNetworksFieldSelector = {
+  label?: InputMaybe<FieldSelectorEnum>;
+  url?: InputMaybe<FieldSelectorEnum>;
+  icon?: InputMaybe<FieldSelectorEnum>;
 };
 
 export type SiteGroupConnection = {
@@ -2152,11 +2207,28 @@ export type SiteSiteMetadataSortInput = {
   image?: InputMaybe<SortOrderEnum>;
   googleAnalyticsKey?: InputMaybe<SortOrderEnum>;
   metatagLinks?: InputMaybe<SiteSiteMetadataMetatagLinksSortInput>;
+  aboutMe?: InputMaybe<SiteSiteMetadataAboutMeSortInput>;
+  navigation?: InputMaybe<SiteSiteMetadataNavigationSortInput>;
 };
 
 export type SiteSiteMetadataMetatagLinksSortInput = {
   rel?: InputMaybe<SortOrderEnum>;
   href?: InputMaybe<SortOrderEnum>;
+};
+
+export type SiteSiteMetadataAboutMeSortInput = {
+  en?: InputMaybe<SortOrderEnum>;
+  pt?: InputMaybe<SortOrderEnum>;
+};
+
+export type SiteSiteMetadataNavigationSortInput = {
+  socialNetworks?: InputMaybe<SiteSiteMetadataNavigationSocialNetworksSortInput>;
+};
+
+export type SiteSiteMetadataNavigationSocialNetworksSortInput = {
+  label?: InputMaybe<SortOrderEnum>;
+  url?: InputMaybe<SortOrderEnum>;
+  icon?: InputMaybe<SortOrderEnum>;
 };
 
 export type SiteFunctionConnection = {
@@ -2917,7 +2989,17 @@ export type LocaleGroupConnectionGroupArgs = {
   field: LocaleFieldSelector;
 };
 
+export type AboutMeComponentQueryVariables = Exact<{ [key: string]: never; }>;
+
+
+export type AboutMeComponentQuery = { site?: { siteMetadata?: { aboutMe?: { pt?: string | null, en?: string | null } | null, navigation?: { socialNetworks?: Array<{ label?: string | null, url?: string | null } | null> | null } | null } | null } | null };
+
 export type ArticleInformationFragment = { html?: string | null, excerpt?: string | null, fields?: { slug?: string | null, readingTime?: { minutes?: number | null } | null } | null, frontmatter?: { date?: any | null, title?: string | null, description?: string | null, tags?: Array<string | null> | null, homepage_view_full_article?: boolean | null, status?: string | null, language?: string | null } | null };
+
+export type CommanderQueryQueryVariables = Exact<{ [key: string]: never; }>;
+
+
+export type CommanderQueryQuery = { site?: { siteMetadata?: { repository?: string | null, navigation?: { socialNetworks?: Array<{ label?: string | null, url?: string | null, icon?: string | null } | null> | null } | null } | null } | null, pages: { nodes: Array<{ frontmatter?: { title?: string | null } | null, fields?: { slug?: string | null } | null }> } };
 
 export type FooterComponentQueryVariables = Exact<{ [key: string]: never; }>;
 
@@ -2953,7 +3035,7 @@ export type IndexPageQueryVariables = Exact<{
 }>;
 
 
-export type IndexPageQuery = { locales: { edges: Array<{ node: { ns?: string | null, data?: string | null, language?: string | null } }> }, aboutMe?: { html?: string | null } | null, articles: { edges: Array<{ node: { html?: string | null, excerpt?: string | null, fields?: { slug?: string | null, readingTime?: { minutes?: number | null } | null } | null, frontmatter?: { date?: any | null, title?: string | null, description?: string | null, tags?: Array<string | null> | null, homepage_view_full_article?: boolean | null, status?: string | null, language?: string | null } | null } }> } };
+export type IndexPageQuery = { locales: { edges: Array<{ node: { ns?: string | null, data?: string | null, language?: string | null } }> }, articles: { edges: Array<{ node: { html?: string | null, excerpt?: string | null, fields?: { slug?: string | null, readingTime?: { minutes?: number | null } | null } | null, frontmatter?: { date?: any | null, title?: string | null, description?: string | null, tags?: Array<string | null> | null, homepage_view_full_article?: boolean | null, status?: string | null, language?: string | null } | null } }> } };
 
 export type ArticlesTemplateQueryVariables = Exact<{
   slug: Scalars['String'];

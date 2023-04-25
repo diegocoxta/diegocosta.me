@@ -24,17 +24,16 @@ Welcome to my `/uses` page that list all my tools, hardware, and software! As a 
 - **Editor**: Visual Studio Code with [Jetbrains Mono](https://www.jetbrains.com/lp/mono/) font, [Shades of Purple](https://marketplace.visualstudio.com/items?itemName=ahmadawais.shades-of-purple) theme and several helpful extensions, including [Auto Close Tag](https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-close-tag), [Auto Rename Tag](https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-rename-tag), [Color Highlight](https://marketplace.visualstudio.com/items?itemName=naumovs.color-highlight), [Dart](https://marketplace.visualstudio.com/items?itemName=Dart-Code.dart-code), [DotENV](https://marketplace.visualstudio.com/items?itemName=mikestead.dotenv), [EditorConfig for VS Code](https://marketplace.visualstudio.com/items?itemName=EditorConfig.EditorConfig), [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint), [file-icons](https://marketplace.visualstudio.com/items?itemName=file-icons.file-icons), [Flutter](https://marketplace.visualstudio.com/items?itemName=Dart-Code.flutter), [GraphQL: Language Feature Support](https://marketplace.visualstudio.com/items?itemName=GraphQL.vscode-graphql), [GraphQL: Syntax Highlighting](https://marketplace.visualstudio.com/items?itemName=GraphQL.vscode-graphql-syntax), [PlantUML](https://marketplace.visualstudio.com/items?itemName=jebbs.plantuml), [Polacode](https://marketplace.visualstudio.com/items?itemName=pnp.polacode), [Rainbow CSV](https://marketplace.visualstudio.com/items?itemName=mechatroner.rainbow-csv), and [YAML](https://marketplace.visualstudio.com/items?itemName=redhat.vscode-yaml).
 - **Terminal**: Native macOS Terminal with Oh My Zsh.
 - **Stack**: JavaScript, TypeScript, React, React Native, Gatsby, NodeJS, MySQL, and MongoDB.
-- **Hosting**: Vercel, Github Pages, and Digital Ocean.
-- **Version Control**: Github.
 
 ## ⚙️ Software and Services
 
-- **Google Chrome**: My main browser is equipped with Adblock Plus and Privacy Badger.
 - **Google Drive**: I use a 2TB storage plan to backup and sync all my files.
 - **Google Domains**: Currently I use it to register my domains, but I previously used Namecheap.
 - **Google Workspaces**: Unfortunately, I pay for it to set up custom domains for my Gmail account.
-- **MongoDB Atlas**: I use it to host my MongoDB databases. It is my primary choice for creating new personal projects.
-- **Docker**: I use it to keep my machine clean without installing all the development tools I need for work.
+- **MongoDB Atlas**: I work with it to host my MongoDB databases. It is my primary choice for creating new personal projects.
+- **Docker**: I'm using it to keep my machine clean without installing all the development tools I need for work.
+- **Vercel**: I work with Vercel as my primary hosting service for my personal projects, including this blog.
+- **Github**: Github is my primary version control system. I use it to host my code, mainly as private repositories. I also use it to host GitHub Pages and create pipelines using GitHub Actions to deploy anything.
 - **ChatGPT**: I use ChatGPT to help me with anything. My primary use is as an English grammar checker, as English is not my primary language. Previously, I used Grammarly.
 - **Obsidian**: I'm trying to use Obsidian as my primary note-taking solution. I'm using it with the Git extension to keep my notes safe on my GitHub account. Previously, I used Notion.
 - **Yousician**: I'm using Yousician to learn how to play bass! It's very fun and easy to understand. I love gamification tools like this.
@@ -61,5 +60,6 @@ Welcome to my `/uses` page that list all my tools, hardware, and software! As a 
 ### 🎮 Gaming
 
 - **Console**: Sony Playstation 4 Pro.
+- **Currently playing**: Hogwarts Legacy, but I don't support J.K. Rowling's views.
 
 > This page was inspired by Wes Bos and the community at [uses.tech](https://uses.tech)

@@ -40,6 +40,13 @@ export const Content = styled.section`
     }
   }
 
+  code {
+    background: ${({ theme }) => theme.accentColor}40;
+    padding: 2px 6px;
+    border-radius: 10px;
+    font-size: 16px;
+  }
+
   blockquote {
     border-left: 5px solid ${({ theme }) => theme.accentColor};
     padding-left: 20px;

@@ -100,6 +100,9 @@ exports[`<Header /> does not render the last name 1`] = `
             <p>
               ThemeSwitcher
             </p>
+            <p>
+              Commander
+            </p>
           </div>
         </header>
       </main>
@@ -214,6 +217,9 @@ exports[`<Header /> renders properly 1`] = `
           >
             <p>
               ThemeSwitcher
+            </p>
+            <p>
+              Commander
             </p>
           </div>
         </header>

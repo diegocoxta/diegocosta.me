@@ -15,12 +15,12 @@ interface IndexPageProps extends PageRendererProps {
 }
 
 export default function IndexPage({ data }: IndexPageProps): React.ReactElement {
-  const { articles, aboutMe } = data;
+  const { articles } = data;
 
   return (
     <Layout>
       <Metatags />
-      <AboutMe content={aboutMe?.html || ''} />
+      <AboutMe />
       <Divisor />
       <Search />
       {articles.edges.map(({ node }, index: number) => (
@@ -38,9 +38,6 @@ export const pageQuery = graphql`
   query IndexPage($language: String!) {
     locales: allLocale(filter: { language: { eq: $language } }) {
       ...LanguageInformation
-    }
-    aboutMe: markdownRemark(fields: { slug: { regex: "/^/index-/" } }, frontmatter: { language: { eq: $language } }) {
-      html
     }
     articles: allMarkdownRemark(
       sort: { frontmatter: { date: DESC } }

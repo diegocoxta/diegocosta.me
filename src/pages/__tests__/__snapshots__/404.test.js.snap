@@ -13,10 +13,10 @@ exports[`<NotFoundPage> renders properly 1`] = `
   display: -ms-flexbox;
   display: flex;
   margin: 40px 0 0 0;
-  -webkit-box-pack: end;
-  -webkit-justify-content: flex-end;
-  -ms-flex-pack: end;
-  justify-content: flex-end;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
 }
 
 .c2 {
@@ -95,6 +95,13 @@ exports[`<NotFoundPage> renders properly 1`] = `
 .c9 a:focus {
   border-bottom: 1px solid #AAC13D;
   outline: none;
+}
+
+.c9 code {
+  background: #AAC13D40;
+  padding: 2px 6px;
+  border-radius: 10px;
+  font-size: 16px;
 }
 
 .c9 blockquote {

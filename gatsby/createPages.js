@@ -4,10 +4,7 @@ const kebabCase = require('lodash.kebabcase');
 module.exports = async ({ graphql, actions, reporter }) => {
   const result = await graphql(`
     query GatsbyCreatePage {
-      content: allMarkdownRemark(
-        sort: { frontmatter: { date: DESC } }
-        filter: { fields: { slug: { regex: "/^((?!/index-).)*$/" } } }
-      ) {
+      content: allMarkdownRemark(sort: { frontmatter: { date: DESC } }) {
         edges {
           node {
             fields {
