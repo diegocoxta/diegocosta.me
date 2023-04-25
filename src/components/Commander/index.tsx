@@ -17,11 +17,6 @@ export default (): React.ReactElement => {
       site {
         siteMetadata {
           repository
-          getInTouch {
-            label
-            url
-            icon
-          }
           features {
             showCommandBarNavigation
           }
@@ -56,14 +51,6 @@ export default (): React.ReactElement => {
     parent: p.fields?.collection === 'articles' ? 'articles' : undefined,
   }));
 
-  const getInTouch = data.site?.siteMetadata?.getInTouch?.map((p) => ({
-    id: `page-${p?.url}`,
-    name: p?.label as string,
-    section: i18n.getTranslationFor('commander.item.getInTouch'),
-    perform: () => window.open(p?.url as string, '_blank'),
-    icon: p?.icon,
-  })) as [];
-
   const actions = [
     {
       id: 'home',
@@ -81,7 +68,6 @@ export default (): React.ReactElement => {
       icon: 'BsNewspaper',
     },
     ...pages,
-    ...getInTouch,
     {
       id: 'theme',
       name: i18n.getTranslationFor('commander.item.theme'),

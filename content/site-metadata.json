@@ -3,7 +3,10 @@
   "repository": "https://github.com/diegocosta/diegocosta.me",
   "languages": {
     "default": "en",
-    "list": ["pt", "en"]
+    "list": [
+      "pt",
+      "en"
+    ]
   },
   "metatags": {
     "title": "Diego Costa - Software Engineer, Engineering Manager",
@@ -18,29 +21,24 @@
   "getInTouch": [
     {
       "label": "Linkedin",
-      "url": "https://linkedin.com/in/diegocoxta",
-      "icon": "BsLinkedin"
+      "url": "https://linkedin.com/in/diegocoxta"
     },
     {
       "label": "Github",
-      "url": "https://github.com/diegocoxta",
-      "icon": "BsGithub"
+      "url": "https://github.com/diegocoxta"
     },
     {
       "label": "Twitter",
-      "url": "https://twitter.com/diegocoxta",
-      "icon": "BsTwitter"
+      "url": "https://twitter.com/diegocoxta"
     },
     {
       "label": "Mastodon",
       "url": "https://mastodon.social/@diegocoxta",
-      "icon": "BsMastodon",
       "rel": "me"
     },
     {
       "label": "E-mail",
-      "url": "mailto:diego@diegocosta.me",
-      "icon": "BsEnvelopeAtFill"
+      "url": "mailto:diego@diegocosta.me"
     }
   ],
   "googleAnalyticsKey": "UA-53539968-4",
