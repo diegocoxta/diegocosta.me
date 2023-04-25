@@ -27,7 +27,7 @@ export default (): React.ReactElement => {
           }
         }
       }
-      pages: allMarkdownRemark {
+      pages: allMarkdownRemark(filter: { frontmatter: { status: { ne: "draft" } } }) {
         nodes {
           frontmatter {
             title
