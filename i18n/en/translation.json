@@ -20,12 +20,12 @@
   "commander.item.socialNetworks": "Get In Touch",
   "commander.item.preferences": "Preferences",
   "commander.item.home": "Home",
-  "commander.item.theme": "Theme",
+  "commander.item.theme": "Change Theme",
   "commander.item.themeLight": "Light",
   "commander.item.themeDark": "Dark",
-  "commander.item.language": "Language",
-  "commander.item.sourceCode": "Source Code",
-  "commander.item.rss": "RSS",
+  "commander.item.language": "Change Language",
+  "commander.item.sourceCode": "View Source Code",
+  "commander.item.rss": "View RSS",
   "commander.item.articles": "Articles",
   "commander.placeholder": "Type a command or search…"
 }

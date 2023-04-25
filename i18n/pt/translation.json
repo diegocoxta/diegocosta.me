@@ -20,12 +20,12 @@
   "commander.item.socialNetworks": "Entrar em Contato",
   "commander.item.preferences": "Preferências",
   "commander.item.home": "Página Inicial",
-  "commander.item.theme": "Tema",
+  "commander.item.theme": "Trocar Tema",
   "commander.item.themeLight": "Claro",
   "commander.item.themeDark": "Escuro",
-  "commander.item.language": "Idioma",
-  "commander.item.sourceCode": "Código Fonte",
-  "commander.item.rss": "RSS",
+  "commander.item.language": "Trocar Idioma",
+  "commander.item.sourceCode": "Ver Código Fonte",
+  "commander.item.rss": "Ver RSS",
   "commander.item.articles": "Artigos",
   "commander.placeholder": "Digite um comando ou procure..."
 }
