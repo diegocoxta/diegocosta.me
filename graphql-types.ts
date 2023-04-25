@@ -287,6 +287,7 @@ export type SiteSiteMetadata = {
   metatagLinks?: Maybe<Array<Maybe<SiteSiteMetadataMetatagLinks>>>;
   aboutMe?: Maybe<SiteSiteMetadataAboutMe>;
   navigation?: Maybe<SiteSiteMetadataNavigation>;
+  features?: Maybe<SiteSiteMetadataFeatures>;
 };
 
 export type SiteSiteMetadataMetatagLinks = {
@@ -307,6 +308,11 @@ export type SiteSiteMetadataNavigationSocialNetworks = {
   label?: Maybe<Scalars['String']>;
   url?: Maybe<Scalars['String']>;
   icon?: Maybe<Scalars['String']>;
+};
+
+export type SiteSiteMetadataFeatures = {
+  show_article_search_on_homepage?: Maybe<Scalars['Boolean']>;
+  show_command_bar_navigation?: Maybe<Scalars['Boolean']>;
 };
 
 export type SiteFunction = Node & {
@@ -1997,6 +2003,7 @@ export type SiteSiteMetadataFilterInput = {
   metatagLinks?: InputMaybe<SiteSiteMetadataMetatagLinksFilterListInput>;
   aboutMe?: InputMaybe<SiteSiteMetadataAboutMeFilterInput>;
   navigation?: InputMaybe<SiteSiteMetadataNavigationFilterInput>;
+  features?: InputMaybe<SiteSiteMetadataFeaturesFilterInput>;
 };
 
 export type SiteSiteMetadataMetatagLinksFilterListInput = {
@@ -2025,6 +2032,11 @@ export type SiteSiteMetadataNavigationSocialNetworksFilterInput = {
   label?: InputMaybe<StringQueryOperatorInput>;
   url?: InputMaybe<StringQueryOperatorInput>;
   icon?: InputMaybe<StringQueryOperatorInput>;
+};
+
+export type SiteSiteMetadataFeaturesFilterInput = {
+  show_article_search_on_homepage?: InputMaybe<BooleanQueryOperatorInput>;
+  show_command_bar_navigation?: InputMaybe<BooleanQueryOperatorInput>;
 };
 
 export type SiteConnection = {
@@ -2101,6 +2113,7 @@ export type SiteSiteMetadataFieldSelector = {
   metatagLinks?: InputMaybe<SiteSiteMetadataMetatagLinksFieldSelector>;
   aboutMe?: InputMaybe<SiteSiteMetadataAboutMeFieldSelector>;
   navigation?: InputMaybe<SiteSiteMetadataNavigationFieldSelector>;
+  features?: InputMaybe<SiteSiteMetadataFeaturesFieldSelector>;
 };
 
 export type SiteSiteMetadataMetatagLinksFieldSelector = {
@@ -2121,6 +2134,11 @@ export type SiteSiteMetadataNavigationSocialNetworksFieldSelector = {
   label?: InputMaybe<FieldSelectorEnum>;
   url?: InputMaybe<FieldSelectorEnum>;
   icon?: InputMaybe<FieldSelectorEnum>;
+};
+
+export type SiteSiteMetadataFeaturesFieldSelector = {
+  show_article_search_on_homepage?: InputMaybe<FieldSelectorEnum>;
+  show_command_bar_navigation?: InputMaybe<FieldSelectorEnum>;
 };
 
 export type SiteGroupConnection = {
@@ -2209,6 +2227,7 @@ export type SiteSiteMetadataSortInput = {
   metatagLinks?: InputMaybe<SiteSiteMetadataMetatagLinksSortInput>;
   aboutMe?: InputMaybe<SiteSiteMetadataAboutMeSortInput>;
   navigation?: InputMaybe<SiteSiteMetadataNavigationSortInput>;
+  features?: InputMaybe<SiteSiteMetadataFeaturesSortInput>;
 };
 
 export type SiteSiteMetadataMetatagLinksSortInput = {
@@ -2229,6 +2248,11 @@ export type SiteSiteMetadataNavigationSocialNetworksSortInput = {
   label?: InputMaybe<SortOrderEnum>;
   url?: InputMaybe<SortOrderEnum>;
   icon?: InputMaybe<SortOrderEnum>;
+};
+
+export type SiteSiteMetadataFeaturesSortInput = {
+  show_article_search_on_homepage?: InputMaybe<SortOrderEnum>;
+  show_command_bar_navigation?: InputMaybe<SortOrderEnum>;
 };
 
 export type SiteFunctionConnection = {
@@ -2999,7 +3023,7 @@ export type ArticleInformationFragment = { html?: string | null, excerpt?: strin
 export type CommanderQueryQueryVariables = Exact<{ [key: string]: never; }>;
 
 
-export type CommanderQueryQuery = { site?: { siteMetadata?: { repository?: string | null, navigation?: { socialNetworks?: Array<{ label?: string | null, url?: string | null, icon?: string | null } | null> | null } | null } | null } | null, pages: { nodes: Array<{ frontmatter?: { title?: string | null } | null, fields?: { slug?: string | null } | null }> } };
+export type CommanderQueryQuery = { site?: { siteMetadata?: { repository?: string | null, navigation?: { socialNetworks?: Array<{ label?: string | null, url?: string | null, icon?: string | null } | null> | null } | null, features?: { show_command_bar_navigation?: boolean | null } | null } | null } | null, pages: { nodes: Array<{ frontmatter?: { title?: string | null } | null, fields?: { slug?: string | null, collection?: string | null } | null }> } };
 
 export type FooterComponentQueryVariables = Exact<{ [key: string]: never; }>;
 
@@ -3021,7 +3045,7 @@ export type MetatagsComponentQuery = { site?: { siteMetadata?: { title?: string 
 export type SearchComponentQueryVariables = Exact<{ [key: string]: never; }>;
 
 
-export type SearchComponentQuery = { articles: { nodes: Array<{ id: string, fields?: { slug?: string | null } | null, frontmatter?: { title?: string | null, description?: string | null, language?: string | null } | null }> } };
+export type SearchComponentQuery = { site?: { siteMetadata?: { features?: { show_article_search_on_homepage?: boolean | null } | null } | null } | null, articles: { nodes: Array<{ id: string, fields?: { slug?: string | null } | null, frontmatter?: { title?: string | null, description?: string | null, language?: string | null } | null }> } };
 
 export type PageNotFoundQueryQueryVariables = Exact<{
   language: Scalars['String'];

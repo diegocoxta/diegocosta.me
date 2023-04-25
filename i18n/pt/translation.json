@@ -26,5 +26,6 @@
   "commander.item.language": "Idioma",
   "commander.item.sourceCode": "Código Fonte",
   "commander.item.rss": "RSS",
+  "commander.item.articles": "Artigos",
   "commander.placeholder": "Digite um comando ou procure..."
 }

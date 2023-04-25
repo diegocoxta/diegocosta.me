@@ -8,6 +8,13 @@ import Search, { ArticleProps } from './Search';
 export default (): React.ReactElement => {
   const data = useStaticQuery(graphql`
     query SearchComponent {
+      site {
+        siteMetadata {
+          features {
+            show_article_search_on_homepage
+          }
+        }
+      }
       articles: allMarkdownRemark {
         nodes {
           id
@@ -23,6 +30,10 @@ export default (): React.ReactElement => {
       }
     }
   `);
+
+  if (!data.site?.siteMetadata?.features?.show_article_search_on_homepage) {
+    return <></>;
+  }
 
   const items = data.articles.nodes;
 

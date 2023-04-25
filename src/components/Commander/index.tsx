@@ -24,20 +24,28 @@ export default (): React.ReactElement => {
               icon
             }
           }
+          features {
+            show_command_bar_navigation
+          }
         }
       }
-      pages: allMarkdownRemark(filter: { fields: { collection: { eq: "pages" } } }) {
+      pages: allMarkdownRemark {
         nodes {
           frontmatter {
             title
           }
           fields {
             slug
+            collection
           }
         }
       }
     }
   `);
+
+  if (!data.site?.siteMetadata?.features?.show_command_bar_navigation) {
+    return <></>;
+  }
 
   const currentLanguagePrefix = i18n.getCurrentLanguage();
 
@@ -47,6 +55,7 @@ export default (): React.ReactElement => {
     section: i18n.getTranslationFor('commander.item.pages'),
     perform: () => (window.location.href = `/${currentLanguagePrefix}${p.fields?.slug}`),
     icon: 'BsFillFileEarmarkFill',
+    parent: p.fields?.collection === 'articles' ? 'articles' : undefined,
   }));
 
   const primaryNavigation = data.site?.siteMetadata?.navigation?.socialNetworks?.map((p) => ({
@@ -65,6 +74,13 @@ export default (): React.ReactElement => {
       section: i18n.getTranslationFor('commander.item.pages'),
       perform: () => (window.location.href = `/${currentLanguagePrefix}`),
       icon: 'BsFillHouseFill',
+    },
+    {
+      id: 'articles',
+      name: i18n.getTranslationFor('commander.item.articles'),
+      shortcut: ['g', 'a'],
+      section: i18n.getTranslationFor('commander.item.pages'),
+      icon: 'BsNewspaper',
     },
     ...pages,
     ...primaryNavigation,
