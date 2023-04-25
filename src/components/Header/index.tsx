@@ -6,14 +6,18 @@ import Header from './Header';
 export default (): React.ReactElement => {
   const {
     site: {
-      siteMetadata: { author },
+      siteMetadata: {
+        metatags: { author },
+      },
     },
   } = useStaticQuery(
     graphql`
       query HeaderComponent {
         site {
           siteMetadata {
-            author
+            metatags {
+              author
+            }
           }
         }
       }

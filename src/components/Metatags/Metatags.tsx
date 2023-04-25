@@ -6,19 +6,12 @@ export interface MetatagsProps {
   description: string;
   author: string;
   image: string;
-  links?: [
-    {
-      rel: string;
-      href: string;
-    }
-  ];
 }
 
 export default function Metatags(props: MetatagsProps): React.ReactElement {
   return (
     <Helmet
       title={props.title}
-      link={props.links}
       meta={[
         {
           name: 'description',

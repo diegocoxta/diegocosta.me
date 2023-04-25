@@ -57,8 +57,8 @@ module.exports = {
       resolve: 'gatsby-plugin-react-i18next',
       options: {
         localeJsonSourceName: 'locale', // name given to 'gatsby-source-filesystem' plugin.
-        languages: siteMetadata.languages,
-        defaultLanguage: siteMetadata.defaultLanguage,
+        languages: siteMetadata.languages.list,
+        defaultLanguage: siteMetadata.languages.default,
         siteUrl: siteMetadata.siteUrl,
         generateDefaultLanguagePage: true,
         redirect: false,
@@ -104,10 +104,7 @@ module.exports = {
           query GatsbyPluginFeedSiteMetadata {
             site {
               siteMetadata {
-                title
-                description
                 siteUrl
-                site_url: siteUrl
               }
             }
           }
@@ -156,7 +153,7 @@ module.exports = {
               }
             `,
             output: '/rss.xml',
-            title: siteMetadata.title,
+            title: siteMetadata.metatags.title,
           },
         ],
       },
@@ -164,8 +161,8 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-manifest',
       options: {
-        name: siteMetadata.title,
-        short_name: siteMetadata.author,
+        name: siteMetadata.metatags.title,
+        short_name: siteMetadata.metatags.author,
         start_url: siteMetadata.siteUrl,
         display: 'minimal-ui',
         icon: 'static/icon.png',

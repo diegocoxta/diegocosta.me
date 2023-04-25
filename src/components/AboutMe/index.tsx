@@ -9,25 +9,21 @@ export default (): React.ReactElement => {
 
   const {
     site: {
-      siteMetadata: {
-        aboutMe,
-        navigation: { socialNetworks },
-      },
+      siteMetadata: { bio, getInTouch },
     },
   } = useStaticQuery(
     graphql`
       query AboutMeComponent {
         site {
           siteMetadata {
-            aboutMe {
+            bio {
               pt
               en
             }
-            navigation {
-              socialNetworks {
-                label
-                url
-              }
+            getInTouch {
+              label
+              url
+              rel
             }
           }
         }
@@ -37,5 +33,5 @@ export default (): React.ReactElement => {
 
   const currentLanguage = i18n.getCurrentLanguage();
 
-  return <AboutMe description={aboutMe[currentLanguage]} navigation={socialNetworks} />;
+  return <AboutMe description={bio[currentLanguage]} navigation={getInTouch} />;
 };

@@ -11,7 +11,7 @@ export default (): React.ReactElement => {
       site {
         siteMetadata {
           features {
-            show_article_search_on_homepage
+            showArticleSearchOnHomepage
           }
         }
       }
@@ -31,7 +31,7 @@ export default (): React.ReactElement => {
     }
   `);
 
-  if (!data.site?.siteMetadata?.features?.show_article_search_on_homepage) {
+  if (!data.site?.siteMetadata?.features?.showArticleSearchOnHomepage) {
     return <></>;
   }
 

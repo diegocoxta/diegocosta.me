@@ -17,15 +17,13 @@ export default (): React.ReactElement => {
       site {
         siteMetadata {
           repository
-          navigation {
-            socialNetworks {
-              label
-              url
-              icon
-            }
+          getInTouch {
+            label
+            url
+            icon
           }
           features {
-            show_command_bar_navigation
+            showCommandBarNavigation
           }
         }
       }
@@ -43,7 +41,7 @@ export default (): React.ReactElement => {
     }
   `);
 
-  if (!data.site?.siteMetadata?.features?.show_command_bar_navigation) {
+  if (!data.site?.siteMetadata?.features?.showCommandBarNavigation) {
     return <></>;
   }
 
@@ -58,10 +56,10 @@ export default (): React.ReactElement => {
     parent: p.fields?.collection === 'articles' ? 'articles' : undefined,
   }));
 
-  const primaryNavigation = data.site?.siteMetadata?.navigation?.socialNetworks?.map((p) => ({
+  const getInTouch = data.site?.siteMetadata?.getInTouch?.map((p) => ({
     id: `page-${p?.url}`,
     name: p?.label as string,
-    section: i18n.getTranslationFor('commander.item.socialNetworks'),
+    section: i18n.getTranslationFor('commander.item.getInTouch'),
     perform: () => window.open(p?.url as string, '_blank'),
     icon: p?.icon,
   })) as [];
@@ -83,7 +81,7 @@ export default (): React.ReactElement => {
       icon: 'BsNewspaper',
     },
     ...pages,
-    ...primaryNavigation,
+    ...getInTouch,
     {
       id: 'theme',
       name: i18n.getTranslationFor('commander.item.theme'),

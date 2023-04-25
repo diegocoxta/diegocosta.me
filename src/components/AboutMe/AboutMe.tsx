@@ -60,6 +60,7 @@ interface AboutMeProps {
     {
       label: string;
       url: string;
+      rel?: string;
     }
   ];
 }
@@ -74,7 +75,9 @@ export default function AboutMe(props: AboutMeProps): JSX.Element {
         <Navigation data-testid="about-me-navigation-list">
           {props.navigation.map((nav, index) => (
             <NavigationItem key={`nav-${index}`} data-testid="about-me-navigation-item">
-              <NavigationLink href={nav.url}>{nav.label}</NavigationLink>
+              <NavigationLink href={nav.url} rel={nav.rel}>
+                {nav.label}
+              </NavigationLink>
             </NavigationItem>
           ))}
         </Navigation>

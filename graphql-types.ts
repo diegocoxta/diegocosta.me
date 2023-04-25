@@ -277,42 +277,43 @@ export type SiteBuildTimeArgs = {
 export type SiteSiteMetadata = {
   title?: Maybe<Scalars['String']>;
   description?: Maybe<Scalars['String']>;
-  author?: Maybe<Scalars['String']>;
   siteUrl?: Maybe<Scalars['String']>;
-  defaultLanguage?: Maybe<Scalars['String']>;
-  languages?: Maybe<Array<Maybe<Scalars['String']>>>;
   repository?: Maybe<Scalars['String']>;
-  image?: Maybe<Scalars['String']>;
+  languages?: Maybe<SiteSiteMetadataLanguages>;
+  metatags?: Maybe<SiteSiteMetadataMetatags>;
+  bio?: Maybe<SiteSiteMetadataBio>;
+  getInTouch?: Maybe<Array<Maybe<SiteSiteMetadataGetInTouch>>>;
   googleAnalyticsKey?: Maybe<Scalars['String']>;
-  metatagLinks?: Maybe<Array<Maybe<SiteSiteMetadataMetatagLinks>>>;
-  aboutMe?: Maybe<SiteSiteMetadataAboutMe>;
-  navigation?: Maybe<SiteSiteMetadataNavigation>;
   features?: Maybe<SiteSiteMetadataFeatures>;
 };
 
-export type SiteSiteMetadataMetatagLinks = {
-  rel?: Maybe<Scalars['String']>;
-  href?: Maybe<Scalars['String']>;
+export type SiteSiteMetadataLanguages = {
+  default?: Maybe<Scalars['String']>;
+  list?: Maybe<Array<Maybe<Scalars['String']>>>;
 };
 
-export type SiteSiteMetadataAboutMe = {
+export type SiteSiteMetadataMetatags = {
+  title?: Maybe<Scalars['String']>;
+  description?: Maybe<Scalars['String']>;
+  author?: Maybe<Scalars['String']>;
+  image?: Maybe<Scalars['String']>;
+};
+
+export type SiteSiteMetadataBio = {
   en?: Maybe<Scalars['String']>;
   pt?: Maybe<Scalars['String']>;
 };
 
-export type SiteSiteMetadataNavigation = {
-  socialNetworks?: Maybe<Array<Maybe<SiteSiteMetadataNavigationSocialNetworks>>>;
-};
-
-export type SiteSiteMetadataNavigationSocialNetworks = {
+export type SiteSiteMetadataGetInTouch = {
   label?: Maybe<Scalars['String']>;
   url?: Maybe<Scalars['String']>;
   icon?: Maybe<Scalars['String']>;
+  rel?: Maybe<Scalars['String']>;
 };
 
 export type SiteSiteMetadataFeatures = {
-  show_article_search_on_homepage?: Maybe<Scalars['Boolean']>;
-  show_command_bar_navigation?: Maybe<Scalars['Boolean']>;
+  showArticleSearchOnHomepage?: Maybe<Scalars['Boolean']>;
+  showCommandBarNavigation?: Maybe<Scalars['Boolean']>;
 };
 
 export type SiteFunction = Node & {
@@ -1993,50 +1994,47 @@ export type DirectorySortInput = {
 export type SiteSiteMetadataFilterInput = {
   title?: InputMaybe<StringQueryOperatorInput>;
   description?: InputMaybe<StringQueryOperatorInput>;
-  author?: InputMaybe<StringQueryOperatorInput>;
   siteUrl?: InputMaybe<StringQueryOperatorInput>;
-  defaultLanguage?: InputMaybe<StringQueryOperatorInput>;
-  languages?: InputMaybe<StringQueryOperatorInput>;
   repository?: InputMaybe<StringQueryOperatorInput>;
-  image?: InputMaybe<StringQueryOperatorInput>;
+  languages?: InputMaybe<SiteSiteMetadataLanguagesFilterInput>;
+  metatags?: InputMaybe<SiteSiteMetadataMetatagsFilterInput>;
+  bio?: InputMaybe<SiteSiteMetadataBioFilterInput>;
+  getInTouch?: InputMaybe<SiteSiteMetadataGetInTouchFilterListInput>;
   googleAnalyticsKey?: InputMaybe<StringQueryOperatorInput>;
-  metatagLinks?: InputMaybe<SiteSiteMetadataMetatagLinksFilterListInput>;
-  aboutMe?: InputMaybe<SiteSiteMetadataAboutMeFilterInput>;
-  navigation?: InputMaybe<SiteSiteMetadataNavigationFilterInput>;
   features?: InputMaybe<SiteSiteMetadataFeaturesFilterInput>;
 };
 
-export type SiteSiteMetadataMetatagLinksFilterListInput = {
-  elemMatch?: InputMaybe<SiteSiteMetadataMetatagLinksFilterInput>;
+export type SiteSiteMetadataLanguagesFilterInput = {
+  default?: InputMaybe<StringQueryOperatorInput>;
+  list?: InputMaybe<StringQueryOperatorInput>;
 };
 
-export type SiteSiteMetadataMetatagLinksFilterInput = {
-  rel?: InputMaybe<StringQueryOperatorInput>;
-  href?: InputMaybe<StringQueryOperatorInput>;
+export type SiteSiteMetadataMetatagsFilterInput = {
+  title?: InputMaybe<StringQueryOperatorInput>;
+  description?: InputMaybe<StringQueryOperatorInput>;
+  author?: InputMaybe<StringQueryOperatorInput>;
+  image?: InputMaybe<StringQueryOperatorInput>;
 };
 
-export type SiteSiteMetadataAboutMeFilterInput = {
+export type SiteSiteMetadataBioFilterInput = {
   en?: InputMaybe<StringQueryOperatorInput>;
   pt?: InputMaybe<StringQueryOperatorInput>;
 };
 
-export type SiteSiteMetadataNavigationFilterInput = {
-  socialNetworks?: InputMaybe<SiteSiteMetadataNavigationSocialNetworksFilterListInput>;
+export type SiteSiteMetadataGetInTouchFilterListInput = {
+  elemMatch?: InputMaybe<SiteSiteMetadataGetInTouchFilterInput>;
 };
 
-export type SiteSiteMetadataNavigationSocialNetworksFilterListInput = {
-  elemMatch?: InputMaybe<SiteSiteMetadataNavigationSocialNetworksFilterInput>;
-};
-
-export type SiteSiteMetadataNavigationSocialNetworksFilterInput = {
+export type SiteSiteMetadataGetInTouchFilterInput = {
   label?: InputMaybe<StringQueryOperatorInput>;
   url?: InputMaybe<StringQueryOperatorInput>;
   icon?: InputMaybe<StringQueryOperatorInput>;
+  rel?: InputMaybe<StringQueryOperatorInput>;
 };
 
 export type SiteSiteMetadataFeaturesFilterInput = {
-  show_article_search_on_homepage?: InputMaybe<BooleanQueryOperatorInput>;
-  show_command_bar_navigation?: InputMaybe<BooleanQueryOperatorInput>;
+  showArticleSearchOnHomepage?: InputMaybe<BooleanQueryOperatorInput>;
+  showCommandBarNavigation?: InputMaybe<BooleanQueryOperatorInput>;
 };
 
 export type SiteConnection = {
@@ -2103,42 +2101,43 @@ export type SiteFieldSelector = {
 export type SiteSiteMetadataFieldSelector = {
   title?: InputMaybe<FieldSelectorEnum>;
   description?: InputMaybe<FieldSelectorEnum>;
-  author?: InputMaybe<FieldSelectorEnum>;
   siteUrl?: InputMaybe<FieldSelectorEnum>;
-  defaultLanguage?: InputMaybe<FieldSelectorEnum>;
-  languages?: InputMaybe<FieldSelectorEnum>;
   repository?: InputMaybe<FieldSelectorEnum>;
-  image?: InputMaybe<FieldSelectorEnum>;
+  languages?: InputMaybe<SiteSiteMetadataLanguagesFieldSelector>;
+  metatags?: InputMaybe<SiteSiteMetadataMetatagsFieldSelector>;
+  bio?: InputMaybe<SiteSiteMetadataBioFieldSelector>;
+  getInTouch?: InputMaybe<SiteSiteMetadataGetInTouchFieldSelector>;
   googleAnalyticsKey?: InputMaybe<FieldSelectorEnum>;
-  metatagLinks?: InputMaybe<SiteSiteMetadataMetatagLinksFieldSelector>;
-  aboutMe?: InputMaybe<SiteSiteMetadataAboutMeFieldSelector>;
-  navigation?: InputMaybe<SiteSiteMetadataNavigationFieldSelector>;
   features?: InputMaybe<SiteSiteMetadataFeaturesFieldSelector>;
 };
 
-export type SiteSiteMetadataMetatagLinksFieldSelector = {
-  rel?: InputMaybe<FieldSelectorEnum>;
-  href?: InputMaybe<FieldSelectorEnum>;
+export type SiteSiteMetadataLanguagesFieldSelector = {
+  default?: InputMaybe<FieldSelectorEnum>;
+  list?: InputMaybe<FieldSelectorEnum>;
 };
 
-export type SiteSiteMetadataAboutMeFieldSelector = {
+export type SiteSiteMetadataMetatagsFieldSelector = {
+  title?: InputMaybe<FieldSelectorEnum>;
+  description?: InputMaybe<FieldSelectorEnum>;
+  author?: InputMaybe<FieldSelectorEnum>;
+  image?: InputMaybe<FieldSelectorEnum>;
+};
+
+export type SiteSiteMetadataBioFieldSelector = {
   en?: InputMaybe<FieldSelectorEnum>;
   pt?: InputMaybe<FieldSelectorEnum>;
 };
 
-export type SiteSiteMetadataNavigationFieldSelector = {
-  socialNetworks?: InputMaybe<SiteSiteMetadataNavigationSocialNetworksFieldSelector>;
-};
-
-export type SiteSiteMetadataNavigationSocialNetworksFieldSelector = {
+export type SiteSiteMetadataGetInTouchFieldSelector = {
   label?: InputMaybe<FieldSelectorEnum>;
   url?: InputMaybe<FieldSelectorEnum>;
   icon?: InputMaybe<FieldSelectorEnum>;
+  rel?: InputMaybe<FieldSelectorEnum>;
 };
 
 export type SiteSiteMetadataFeaturesFieldSelector = {
-  show_article_search_on_homepage?: InputMaybe<FieldSelectorEnum>;
-  show_command_bar_navigation?: InputMaybe<FieldSelectorEnum>;
+  showArticleSearchOnHomepage?: InputMaybe<FieldSelectorEnum>;
+  showCommandBarNavigation?: InputMaybe<FieldSelectorEnum>;
 };
 
 export type SiteGroupConnection = {
@@ -2217,42 +2216,43 @@ export type SiteSortInput = {
 export type SiteSiteMetadataSortInput = {
   title?: InputMaybe<SortOrderEnum>;
   description?: InputMaybe<SortOrderEnum>;
-  author?: InputMaybe<SortOrderEnum>;
   siteUrl?: InputMaybe<SortOrderEnum>;
-  defaultLanguage?: InputMaybe<SortOrderEnum>;
-  languages?: InputMaybe<SortOrderEnum>;
   repository?: InputMaybe<SortOrderEnum>;
-  image?: InputMaybe<SortOrderEnum>;
+  languages?: InputMaybe<SiteSiteMetadataLanguagesSortInput>;
+  metatags?: InputMaybe<SiteSiteMetadataMetatagsSortInput>;
+  bio?: InputMaybe<SiteSiteMetadataBioSortInput>;
+  getInTouch?: InputMaybe<SiteSiteMetadataGetInTouchSortInput>;
   googleAnalyticsKey?: InputMaybe<SortOrderEnum>;
-  metatagLinks?: InputMaybe<SiteSiteMetadataMetatagLinksSortInput>;
-  aboutMe?: InputMaybe<SiteSiteMetadataAboutMeSortInput>;
-  navigation?: InputMaybe<SiteSiteMetadataNavigationSortInput>;
   features?: InputMaybe<SiteSiteMetadataFeaturesSortInput>;
 };
 
-export type SiteSiteMetadataMetatagLinksSortInput = {
-  rel?: InputMaybe<SortOrderEnum>;
-  href?: InputMaybe<SortOrderEnum>;
+export type SiteSiteMetadataLanguagesSortInput = {
+  default?: InputMaybe<SortOrderEnum>;
+  list?: InputMaybe<SortOrderEnum>;
 };
 
-export type SiteSiteMetadataAboutMeSortInput = {
+export type SiteSiteMetadataMetatagsSortInput = {
+  title?: InputMaybe<SortOrderEnum>;
+  description?: InputMaybe<SortOrderEnum>;
+  author?: InputMaybe<SortOrderEnum>;
+  image?: InputMaybe<SortOrderEnum>;
+};
+
+export type SiteSiteMetadataBioSortInput = {
   en?: InputMaybe<SortOrderEnum>;
   pt?: InputMaybe<SortOrderEnum>;
 };
 
-export type SiteSiteMetadataNavigationSortInput = {
-  socialNetworks?: InputMaybe<SiteSiteMetadataNavigationSocialNetworksSortInput>;
-};
-
-export type SiteSiteMetadataNavigationSocialNetworksSortInput = {
+export type SiteSiteMetadataGetInTouchSortInput = {
   label?: InputMaybe<SortOrderEnum>;
   url?: InputMaybe<SortOrderEnum>;
   icon?: InputMaybe<SortOrderEnum>;
+  rel?: InputMaybe<SortOrderEnum>;
 };
 
 export type SiteSiteMetadataFeaturesSortInput = {
-  show_article_search_on_homepage?: InputMaybe<SortOrderEnum>;
-  show_command_bar_navigation?: InputMaybe<SortOrderEnum>;
+  showArticleSearchOnHomepage?: InputMaybe<SortOrderEnum>;
+  showCommandBarNavigation?: InputMaybe<SortOrderEnum>;
 };
 
 export type SiteFunctionConnection = {
@@ -3016,14 +3016,14 @@ export type LocaleGroupConnectionGroupArgs = {
 export type AboutMeComponentQueryVariables = Exact<{ [key: string]: never; }>;
 
 
-export type AboutMeComponentQuery = { site?: { siteMetadata?: { aboutMe?: { pt?: string | null, en?: string | null } | null, navigation?: { socialNetworks?: Array<{ label?: string | null, url?: string | null } | null> | null } | null } | null } | null };
+export type AboutMeComponentQuery = { site?: { siteMetadata?: { bio?: { pt?: string | null, en?: string | null } | null, getInTouch?: Array<{ label?: string | null, url?: string | null, rel?: string | null } | null> | null } | null } | null };
 
 export type ArticleInformationFragment = { html?: string | null, excerpt?: string | null, fields?: { slug?: string | null, readingTime?: { minutes?: number | null } | null } | null, frontmatter?: { date?: any | null, title?: string | null, description?: string | null, tags?: Array<string | null> | null, homepage_view_full_article?: boolean | null, status?: string | null, language?: string | null } | null };
 
 export type CommanderQueryQueryVariables = Exact<{ [key: string]: never; }>;
 
 
-export type CommanderQueryQuery = { site?: { siteMetadata?: { repository?: string | null, navigation?: { socialNetworks?: Array<{ label?: string | null, url?: string | null, icon?: string | null } | null> | null } | null, features?: { show_command_bar_navigation?: boolean | null } | null } | null } | null, pages: { nodes: Array<{ frontmatter?: { title?: string | null } | null, fields?: { slug?: string | null, collection?: string | null } | null }> } };
+export type CommanderQueryQuery = { site?: { siteMetadata?: { repository?: string | null, getInTouch?: Array<{ label?: string | null, url?: string | null, icon?: string | null } | null> | null, features?: { showCommandBarNavigation?: boolean | null } | null } | null } | null, pages: { nodes: Array<{ frontmatter?: { title?: string | null } | null, fields?: { slug?: string | null, collection?: string | null } | null }> } };
 
 export type FooterComponentQueryVariables = Exact<{ [key: string]: never; }>;
 
@@ -3033,19 +3033,19 @@ export type FooterComponentQuery = { site?: { siteMetadata?: { repository?: stri
 export type HeaderComponentQueryVariables = Exact<{ [key: string]: never; }>;
 
 
-export type HeaderComponentQuery = { site?: { siteMetadata?: { author?: string | null } | null } | null };
+export type HeaderComponentQuery = { site?: { siteMetadata?: { metatags?: { author?: string | null } | null } | null } | null };
 
 export type LanguageInformationFragment = { edges: Array<{ node: { ns?: string | null, data?: string | null, language?: string | null } }> };
 
 export type MetatagsComponentQueryVariables = Exact<{ [key: string]: never; }>;
 
 
-export type MetatagsComponentQuery = { site?: { siteMetadata?: { title?: string | null, description?: string | null, author?: string | null, image?: string | null, metatagLinks?: Array<{ rel?: string | null, href?: string | null } | null> | null } | null } | null };
+export type MetatagsComponentQuery = { site?: { siteMetadata?: { metatags?: { title?: string | null, description?: string | null, author?: string | null, image?: string | null } | null } | null } | null };
 
 export type SearchComponentQueryVariables = Exact<{ [key: string]: never; }>;
 
 
-export type SearchComponentQuery = { site?: { siteMetadata?: { features?: { show_article_search_on_homepage?: boolean | null } | null } | null } | null, articles: { nodes: Array<{ id: string, fields?: { slug?: string | null } | null, frontmatter?: { title?: string | null, description?: string | null, language?: string | null } | null }> } };
+export type SearchComponentQuery = { site?: { siteMetadata?: { features?: { showArticleSearchOnHomepage?: boolean | null } | null } | null } | null, articles: { nodes: Array<{ id: string, fields?: { slug?: string | null } | null, frontmatter?: { title?: string | null, description?: string | null, language?: string | null } | null }> } };
 
 export type PageNotFoundQueryQueryVariables = Exact<{
   language: Scalars['String'];
