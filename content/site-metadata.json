@@ -43,7 +43,7 @@
   ],
   "googleAnalyticsKey": "UA-53539968-4",
   "features": {
-    "showArticleSearchOnHomepage": false,
+    "showArticleSearchOnHomepage": true,
     "showCommandBarNavigation": true
   }
 }
