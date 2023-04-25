@@ -4,7 +4,10 @@
   "description": "Engenheiro de software e Engineering Manager apaixonado por construir produtos que impactem a vida das pessoas.",
   "siteUrl": "https://diegocosta.me",
   "defaultLanguage": "en",
-  "languages": ["pt", "en"],
+  "languages": [
+    "pt",
+    "en"
+  ],
   "repository": "https://github.com/diegocosta/diegocosta.me",
   "image": "https://repository-images.githubusercontent.com/278878641/3756a080-d995-11ea-9b9f-f91a4448af98",
   "googleAnalyticsKey": "UA-53539968-4",
@@ -19,7 +22,7 @@
     "pt": "Sou um Gerente de Engenharia apaixonado pela intersecção entre tecnologia e pessoas. Meu objetivo é ajudar equipes de tecnologia a alcançar todo o seu potencial.\nTenho grande interesse em liderança em engenharia, gerenciamento de pessoas, engenharia de software, além de inclusão e diversidade. Atualmente, sou Gerente de Engenharia na Nubank e estou sempre aberto a compartilhar minhas ideias e experiências sobre esses temas.\nSe você quiser saber mais sobre mim, confira os links abaixo!"
   },
   "navigation": {
-    "primary": [
+    "socialNetworks": [
       {
         "label": "Linkedin",
         "url": "https://linkedin.com/in/diegocoxta",
@@ -39,11 +42,6 @@
         "label": "Mastodon",
         "url": "https://mastodon.social/@diegocoxta",
         "icon": "BsMastodon"
-      },
-      {
-        "label": "Talks",
-        "url": "/en/tags/talks",
-        "icon": "BsFillChatFill"
       },
       {
         "label": "E-mail",

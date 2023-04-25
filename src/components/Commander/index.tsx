@@ -18,7 +18,7 @@ export default (): React.ReactElement => {
         siteMetadata {
           repository
           navigation {
-            primary {
+            socialNetworks {
               label
               url
               icon
@@ -39,22 +39,20 @@ export default (): React.ReactElement => {
     }
   `);
 
+  const currentLanguagePrefix = i18n.getCurrentLanguage();
+
   const pages = data.pages.nodes.map((p) => ({
     id: `page-${p.fields?.slug}`,
     name: p.frontmatter?.title as string,
-    shortcut: undefined,
-    keywords: p.fields?.slug as string,
-    section: 'Pages',
-    perform: () => (window.location.href = p.fields?.slug as string),
+    section: i18n.getTranslationFor('commander.item.pages'),
+    perform: () => (window.location.href = `/${currentLanguagePrefix}${p.fields?.slug}`),
     icon: 'BsFillFileEarmarkFill',
   }));
 
-  const primaryNavigation = data.site?.siteMetadata?.navigation?.primary?.map((p) => ({
+  const primaryNavigation = data.site?.siteMetadata?.navigation?.socialNetworks?.map((p) => ({
     id: `page-${p?.url}`,
     name: p?.label as string,
-    shortcut: undefined,
-    keywords: p?.url as string,
-    section: 'Follow',
+    section: i18n.getTranslationFor('commander.item.socialNetworks'),
     perform: () => window.open(p?.url as string, '_blank'),
     icon: p?.icon,
   })) as [];
@@ -62,94 +60,85 @@ export default (): React.ReactElement => {
   const actions = [
     {
       id: 'home',
-      name: 'Home',
+      name: i18n.getTranslationFor('commander.item.home'),
       shortcut: ['g', 'h'],
-      keywords: 'go-home',
-      section: 'Pages',
-      perform: () => (window.location.href = '/'),
+      section: i18n.getTranslationFor('commander.item.pages'),
+      perform: () => (window.location.href = `/${currentLanguagePrefix}`),
       icon: 'BsFillHouseFill',
     },
     ...pages,
     ...primaryNavigation,
     {
       id: 'theme',
-      name: 'Theme',
+      name: i18n.getTranslationFor('commander.item.theme'),
       shortcut: ['g', 't'],
-      keywords: 'interface color dark light',
-      section: 'Preferences',
+      section: i18n.getTranslationFor('commander.item.preferences'),
       icon: 'BsBrushFill',
     },
     {
       id: 'theme-light',
-      name: `Light`,
+      name: i18n.getTranslationFor('commander.item.themeLight'),
       shortcut: ['g', 't', 'l'],
-      keywords: 'switch theme light',
-      section: 'Theme',
+      section: i18n.getTranslationFor('commander.item.theme'),
       parent: 'theme',
       perform: () => themeContext?.setMode('light'),
       icon: 'BsSun',
     },
     {
       id: 'theme-dark',
-      name: `Dark`,
+      name: i18n.getTranslationFor('commander.item.themeDark'),
       shortcut: ['g', 't', 'd'],
-      keywords: 'switch theme dark',
-      section: 'Theme',
+      section: i18n.getTranslationFor('commander.item.theme'),
       parent: 'theme',
       perform: () => themeContext?.setMode('dark'),
       icon: 'BsMoon',
     },
     {
       id: 'language',
-      name: 'Language',
+      name: i18n.getTranslationFor('commander.item.language'),
       shortcut: ['g', 'l'],
-      keywords: 'interface language ',
-      section: 'Preferences',
+      section: i18n.getTranslationFor('commander.item.preferences'),
       icon: 'BsTranslate',
     },
     {
       id: 'language-english',
-      name: `English`,
+      name: i18n.getTranslationFor('languages.en'),
       shortcut: ['g', 'l', 'e'],
-      keywords: 'switch language english',
-      section: 'Language',
+      section: i18n.getTranslationFor('commander.item.language'),
       parent: 'language',
       perform: () => (window.location.href = '/en'),
       icon: 'BsTranslate',
     },
     {
       id: 'language-portuguese',
-      name: `Português`,
+      name: i18n.getTranslationFor('languages.pt'),
       shortcut: ['g', 'l', 'p'],
-      keywords: 'switch language portugues',
-      section: 'Language',
+      section: i18n.getTranslationFor('commander.item.language'),
       parent: 'language',
       perform: () => (window.location.href = '/pt'),
       icon: 'BsTranslate',
     },
     {
-      id: 'source',
-      name: 'View Source',
-      shortcut: ['g', 's'],
-      keywords: 'view-source',
-      section: 'Preferences',
-      perform: () => window.open(data.site?.siteMetadata?.repository as string, '_blank'),
-      icon: 'BsCodeSlash',
-    },
-    {
       id: 'rss',
-      name: 'Subscribe to RSS',
+      name: i18n.getTranslationFor('commander.item.rss'),
       shortcut: ['g', 'r'],
-      keywords: 'view-rss',
-      section: 'Preferences',
+      section: i18n.getTranslationFor('commander.item.preferences'),
       perform: () => window.open('/rss.xml', '_blank'),
       icon: 'BsRssFill',
+    },
+    {
+      id: 'source',
+      name: i18n.getTranslationFor('commander.item.sourceCode'),
+      shortcut: ['g', 's'],
+      section: i18n.getTranslationFor('commander.item.preferences'),
+      perform: () => window.open(data.site?.siteMetadata?.repository as string, '_blank'),
+      icon: 'BsCodeSlash',
     },
   ];
 
   return (
     <KBarProvider actions={actions}>
-      <Commander />
+      <Commander placeholder={i18n.getTranslationFor('commander.placeholder')} />
     </KBarProvider>
   );
 };

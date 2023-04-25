@@ -6,7 +6,9 @@ import { KBarAnimator, KBarPortal, useMatches, KBarPositioner, KBarSearch, KBarR
 
 const Container = styled.div``;
 
-const Button = styled.div`
+const Button = styled.button`
+  background: transparent;
+  border: 0px;
   padding: 5px;
   border-radius: 50px;
   width: 40px;
@@ -16,8 +18,13 @@ const Button = styled.div`
   align-items: center;
   color: ${({ theme }) => theme.textColor};
   transition: background 0.3s linear;
+  cursor: pointer;
 
-  &:hover {
+  :focus {
+    outline: none;
+  }
+
+  :hover {
     background: ${({ theme }) => `${theme.textColor}1A`};
   }
 `;
@@ -122,7 +129,11 @@ const ShortcutIcon = styled.kbd`
   font-size: 14px;
 `;
 
-export default function Commander(): React.ReactElement {
+interface CommanderProps {
+  placeholder: string;
+}
+
+export default function Commander(props: CommanderProps): React.ReactElement {
   const { query } = useKBar();
   const { results } = useMatches();
 
@@ -135,7 +146,7 @@ export default function Commander(): React.ReactElement {
       <KBarPortal>
         <Positioner>
           <Animator>
-            <Search placeholder="Type a command or search…" />
+            <Search defaultPlaceholder={props.placeholder} />
             <KBarResults
               items={results}
               onRender={({ item, active }) => {

@@ -300,10 +300,10 @@ export type SiteSiteMetadataAboutMe = {
 };
 
 export type SiteSiteMetadataNavigation = {
-  primary?: Maybe<Array<Maybe<SiteSiteMetadataNavigationPrimary>>>;
+  socialNetworks?: Maybe<Array<Maybe<SiteSiteMetadataNavigationSocialNetworks>>>;
 };
 
-export type SiteSiteMetadataNavigationPrimary = {
+export type SiteSiteMetadataNavigationSocialNetworks = {
   label?: Maybe<Scalars['String']>;
   url?: Maybe<Scalars['String']>;
   icon?: Maybe<Scalars['String']>;
@@ -2014,14 +2014,14 @@ export type SiteSiteMetadataAboutMeFilterInput = {
 };
 
 export type SiteSiteMetadataNavigationFilterInput = {
-  primary?: InputMaybe<SiteSiteMetadataNavigationPrimaryFilterListInput>;
+  socialNetworks?: InputMaybe<SiteSiteMetadataNavigationSocialNetworksFilterListInput>;
 };
 
-export type SiteSiteMetadataNavigationPrimaryFilterListInput = {
-  elemMatch?: InputMaybe<SiteSiteMetadataNavigationPrimaryFilterInput>;
+export type SiteSiteMetadataNavigationSocialNetworksFilterListInput = {
+  elemMatch?: InputMaybe<SiteSiteMetadataNavigationSocialNetworksFilterInput>;
 };
 
-export type SiteSiteMetadataNavigationPrimaryFilterInput = {
+export type SiteSiteMetadataNavigationSocialNetworksFilterInput = {
   label?: InputMaybe<StringQueryOperatorInput>;
   url?: InputMaybe<StringQueryOperatorInput>;
   icon?: InputMaybe<StringQueryOperatorInput>;
@@ -2114,10 +2114,10 @@ export type SiteSiteMetadataAboutMeFieldSelector = {
 };
 
 export type SiteSiteMetadataNavigationFieldSelector = {
-  primary?: InputMaybe<SiteSiteMetadataNavigationPrimaryFieldSelector>;
+  socialNetworks?: InputMaybe<SiteSiteMetadataNavigationSocialNetworksFieldSelector>;
 };
 
-export type SiteSiteMetadataNavigationPrimaryFieldSelector = {
+export type SiteSiteMetadataNavigationSocialNetworksFieldSelector = {
   label?: InputMaybe<FieldSelectorEnum>;
   url?: InputMaybe<FieldSelectorEnum>;
   icon?: InputMaybe<FieldSelectorEnum>;
@@ -2222,10 +2222,10 @@ export type SiteSiteMetadataAboutMeSortInput = {
 };
 
 export type SiteSiteMetadataNavigationSortInput = {
-  primary?: InputMaybe<SiteSiteMetadataNavigationPrimarySortInput>;
+  socialNetworks?: InputMaybe<SiteSiteMetadataNavigationSocialNetworksSortInput>;
 };
 
-export type SiteSiteMetadataNavigationPrimarySortInput = {
+export type SiteSiteMetadataNavigationSocialNetworksSortInput = {
   label?: InputMaybe<SortOrderEnum>;
   url?: InputMaybe<SortOrderEnum>;
   icon?: InputMaybe<SortOrderEnum>;
@@ -2992,14 +2992,14 @@ export type LocaleGroupConnectionGroupArgs = {
 export type AboutMeComponentQueryVariables = Exact<{ [key: string]: never; }>;
 
 
-export type AboutMeComponentQuery = { site?: { siteMetadata?: { aboutMe?: { pt?: string | null, en?: string | null } | null, navigation?: { primary?: Array<{ label?: string | null, url?: string | null } | null> | null } | null } | null } | null };
+export type AboutMeComponentQuery = { site?: { siteMetadata?: { aboutMe?: { pt?: string | null, en?: string | null } | null, navigation?: { socialNetworks?: Array<{ label?: string | null, url?: string | null } | null> | null } | null } | null } | null };
 
 export type ArticleInformationFragment = { html?: string | null, excerpt?: string | null, fields?: { slug?: string | null, readingTime?: { minutes?: number | null } | null } | null, frontmatter?: { date?: any | null, title?: string | null, description?: string | null, tags?: Array<string | null> | null, homepage_view_full_article?: boolean | null, status?: string | null, language?: string | null } | null };
 
 export type CommanderQueryQueryVariables = Exact<{ [key: string]: never; }>;
 
 
-export type CommanderQueryQuery = { site?: { siteMetadata?: { repository?: string | null, navigation?: { primary?: Array<{ label?: string | null, url?: string | null, icon?: string | null } | null> | null } | null } | null } | null, pages: { nodes: Array<{ frontmatter?: { title?: string | null } | null, fields?: { slug?: string | null } | null }> } };
+export type CommanderQueryQuery = { site?: { siteMetadata?: { repository?: string | null, navigation?: { socialNetworks?: Array<{ label?: string | null, url?: string | null, icon?: string | null } | null> | null } | null } | null } | null, pages: { nodes: Array<{ frontmatter?: { title?: string | null } | null, fields?: { slug?: string | null } | null }> } };
 
 export type FooterComponentQueryVariables = Exact<{ [key: string]: never; }>;
 

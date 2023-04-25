@@ -1,7 +1,6 @@
 {
   "languages.pt": "Portuguese",
   "languages.en": "English",
-  "languages.es": "Spanish",
   "article.lessThan1Minute": "Less than 1 minute",
   "article.minutes": "minutes",
   "article.ofReading": "of reading",
@@ -16,5 +15,16 @@
   "tagsTemplate.titlePrefix": "Posts about",
   "translationMissingAlert.title": "Sorry, this page is not available in English.",
   "translationMissingAlert.subtitle": "But you can find it in",
-  "translationMissingAlert.separator": "and"
+  "translationMissingAlert.separator": "and",
+  "commander.item.pages": "Pages",
+  "commander.item.socialNetworks": "Get In Touch",
+  "commander.item.preferences": "Preferences",
+  "commander.item.home": "Home",
+  "commander.item.theme": "Theme",
+  "commander.item.themeLight": "Light",
+  "commander.item.themeDark": "Dark",
+  "commander.item.language": "Language",
+  "commander.item.sourceCode": "Source Code",
+  "commander.item.rss": "RSS",
+  "commander.placeholder": "Type a command or search…"
 }

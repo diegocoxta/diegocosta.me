@@ -11,7 +11,7 @@ export default (): React.ReactElement => {
     site: {
       siteMetadata: {
         aboutMe,
-        navigation: { primary },
+        navigation: { socialNetworks },
       },
     },
   } = useStaticQuery(
@@ -24,7 +24,7 @@ export default (): React.ReactElement => {
               en
             }
             navigation {
-              primary {
+              socialNetworks {
                 label
                 url
               }
@@ -37,5 +37,5 @@ export default (): React.ReactElement => {
 
   const currentLanguage = i18n.getCurrentLanguage();
 
-  return <AboutMe description={aboutMe[currentLanguage]} navigation={primary} />;
+  return <AboutMe description={aboutMe[currentLanguage]} navigation={socialNetworks} />;
 };
