@@ -29,12 +29,7 @@ const Button = styled.button`
   }
 `;
 
-interface IconProps {
-  name: string;
-  props?: IconBaseProps;
-}
-
-export function Icon({ name, props }: IconProps): JSX.Element {
+export function Icon({ name, props }: { name: string; props?: IconBaseProps }): JSX.Element {
   // eslint-disable-next-line @typescript-eslint/ban-ts-comment
   // @ts-ignore
   const ElementIcon = BsIcon[name];
@@ -61,6 +56,7 @@ const Animator = styled(KBarAnimator)`
   color: ${({ theme }) => theme.textColor};
   border-radius: 8px;
   overflow: hidden;
+  padding: 16px;
 
   @supports ((-webkit-backdrop-filter: none) or (backdrop-filter: none)):  {
     backdrop-filter: saturate(300%) blur(25px);
@@ -79,7 +75,7 @@ const Animator = styled(KBarAnimator)`
 `;
 
 const Search = styled(KBarSearch)`
-  padding: 12px 16px;
+  padding: 12px 0;
   font-size: 16px;
   width: 100%;
   box-sizing: border-box;
@@ -90,7 +86,15 @@ const Search = styled(KBarSearch)`
   color: ${({ theme }) => theme.textColor};
 `;
 
-const ResultItem = styled.div<{ active: boolean }>`
+const GroupName = styled.div`
+  padding: 8px 0;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: ${({ theme }) => theme.textColor};
+`;
+
+const Item = styled.div<{ active?: boolean }>`
   padding: 12px 16px;
   background-color: ${({ active, theme }) => (active ? `${theme.textColor}1A` : 'transparent')};
   display: flex;
@@ -98,20 +102,17 @@ const ResultItem = styled.div<{ active: boolean }>`
   justify-content: space-between;
   margin: 0;
   cursor: pointer;
-`;
-
-const GroupName = styled.div`
-  padding: 8px 16px;
-  font-size: 12px;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  color: ${({ theme }) => theme.textColor};
+  border-radius: 5px;
 `;
 
 const Label = styled.div`
-  display: flex;
+  flex: 3 0 0;
   gap: 8px;
   align-items: center;
+
+  svg {
+    margin-right: 10px;
+  }
 `;
 
 const Shortcut = styled.div`
@@ -146,7 +147,12 @@ export default function Commander(props: CommanderProps): React.ReactElement {
       <KBarPortal>
         <Positioner>
           <Animator>
-            <Search defaultPlaceholder={props.placeholder} />
+            <Item>
+              <Search defaultPlaceholder={props.placeholder} />
+              <Shortcut aria-hidden>
+                <ShortcutIcon>esc</ShortcutIcon>
+              </Shortcut>
+            </Item>
             <KBarResults
               items={results}
               onRender={({ item, active }) => {
@@ -155,9 +161,9 @@ export default function Commander(props: CommanderProps): React.ReactElement {
                 }
 
                 return (
-                  <ResultItem active={active}>
+                  <Item active={active}>
                     <Label>
-                      {typeof item.icon === 'string' && <Icon name={item.icon} />}
+                      {typeof item.icon === 'string' && <Icon name={item.icon} props={{ size: 16 }} />}
                       {item.name}
                     </Label>
 
@@ -168,7 +174,7 @@ export default function Commander(props: CommanderProps): React.ReactElement {
                         ))}
                       </Shortcut>
                     )}
-                  </ResultItem>
+                  </Item>
                 );
               }}
             />

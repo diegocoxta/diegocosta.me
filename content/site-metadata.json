@@ -3,10 +3,7 @@
   "repository": "https://github.com/diegocosta/diegocosta.me",
   "languages": {
     "default": "en",
-    "list": [
-      "pt",
-      "en"
-    ]
+    "list": ["pt", "en"]
   },
   "metatags": {
     "title": "Diego Costa - Software Engineer, Engineering Manager",
