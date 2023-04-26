@@ -307,7 +307,6 @@ export type SiteSiteMetadataBio = {
 export type SiteSiteMetadataGetInTouch = {
   label?: Maybe<Scalars['String']>;
   url?: Maybe<Scalars['String']>;
-  icon?: Maybe<Scalars['String']>;
   rel?: Maybe<Scalars['String']>;
 };
 
@@ -2028,7 +2027,6 @@ export type SiteSiteMetadataGetInTouchFilterListInput = {
 export type SiteSiteMetadataGetInTouchFilterInput = {
   label?: InputMaybe<StringQueryOperatorInput>;
   url?: InputMaybe<StringQueryOperatorInput>;
-  icon?: InputMaybe<StringQueryOperatorInput>;
   rel?: InputMaybe<StringQueryOperatorInput>;
 };
 
@@ -2131,7 +2129,6 @@ export type SiteSiteMetadataBioFieldSelector = {
 export type SiteSiteMetadataGetInTouchFieldSelector = {
   label?: InputMaybe<FieldSelectorEnum>;
   url?: InputMaybe<FieldSelectorEnum>;
-  icon?: InputMaybe<FieldSelectorEnum>;
   rel?: InputMaybe<FieldSelectorEnum>;
 };
 
@@ -2246,7 +2243,6 @@ export type SiteSiteMetadataBioSortInput = {
 export type SiteSiteMetadataGetInTouchSortInput = {
   label?: InputMaybe<SortOrderEnum>;
   url?: InputMaybe<SortOrderEnum>;
-  icon?: InputMaybe<SortOrderEnum>;
   rel?: InputMaybe<SortOrderEnum>;
 };
 
@@ -3023,7 +3019,7 @@ export type ArticleInformationFragment = { html?: string | null, excerpt?: strin
 export type CommanderQueryQueryVariables = Exact<{ [key: string]: never; }>;
 
 
-export type CommanderQueryQuery = { site?: { siteMetadata?: { repository?: string | null, getInTouch?: Array<{ label?: string | null, url?: string | null, icon?: string | null } | null> | null, features?: { showCommandBarNavigation?: boolean | null } | null } | null } | null, pages: { nodes: Array<{ frontmatter?: { title?: string | null } | null, fields?: { slug?: string | null, collection?: string | null } | null }> } };
+export type CommanderQueryQuery = { site?: { siteMetadata?: { repository?: string | null, features?: { showCommandBarNavigation?: boolean | null } | null } | null } | null, pages: { nodes: Array<{ frontmatter?: { title?: string | null } | null, fields?: { slug?: string | null, collection?: string | null } | null }> } };
 
 export type FooterComponentQueryVariables = Exact<{ [key: string]: never; }>;
 
