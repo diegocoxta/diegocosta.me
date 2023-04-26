@@ -81,7 +81,7 @@ const Search = styled(KBarSearch)`
   box-sizing: border-box;
   outline: none;
   border: none;
-  margin: 0;
+  margin: 0 0 0 10px;
   background: ${({ theme }) => theme.backgroundColor};
   color: ${({ theme }) => theme.textColor};
 `;
@@ -106,12 +106,12 @@ const Item = styled.div<{ active?: boolean }>`
 `;
 
 const Label = styled.div`
-  flex: 3 0 0;
-  gap: 8px;
+  display: flex;
   align-items: center;
+  gap: 8px;
 
   svg {
-    margin-right: 10px;
+    flex-shrink: 0;
   }
 `;
 
@@ -148,6 +148,7 @@ export default function Commander(props: CommanderProps): React.ReactElement {
         <Positioner>
           <Animator>
             <Item>
+              <Icon name="BsSearch" />
               <Search defaultPlaceholder={props.placeholder} />
               <Shortcut aria-hidden>
                 <ShortcutIcon>esc</ShortcutIcon>
@@ -163,7 +164,7 @@ export default function Commander(props: CommanderProps): React.ReactElement {
                 return (
                   <Item active={active}>
                     <Label>
-                      {typeof item.icon === 'string' && <Icon name={item.icon} props={{ size: 16 }} />}
+                      {typeof item.icon === 'string' && <Icon name={item.icon} />}
                       {item.name}
                     </Label>
 
