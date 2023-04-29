@@ -27,7 +27,7 @@ Welcome to my `/uses` page that list all my tools, hardware, and software! As a 
 - **Stack**: JavaScript, TypeScript, React, React Native, Gatsby, NodeJS, MySQL, and MongoDB.
 
 ## ⚙️ Software and Services
-
+- **Coverify.**: My own [web app](https://coverify.diegocosta.me) to create Spotify-inspired covers for my personal playlists completely free and has no annoying ads to interrupt my creative flow.
 - **Google Drive**: I use a 2TB storage plan to backup and sync all my files.
 - **Google Domains**: Currently I use it to register my domains, but I previously used Namecheap.
 - **Google Workspaces**: Unfortunately, I pay for it to set up custom domains for my Gmail account.
