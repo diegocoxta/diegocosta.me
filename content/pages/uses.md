@@ -14,7 +14,7 @@ Welcome to my `/uses` page that list all my tools, hardware, and software! As a 
 - **Professional Laptop**: MacBook Pro 16" Intel Core i9, 16GB RAM, 512 GB SSD.
 - **Keyboard**: Logitech MX Keys Wireless Keyboard.
 - **Mouse**: Logitech MX Master 2s.
-- **Monitor**: Dell 27' 4k USB-C Monitor p2721q.
+- **Monitor**: Dell 27" 4k USB-C Monitor p2721q.
 - **Webcam**: Logitech C920S Pro HD Webcam.
 - **Laptop Stand**: Rain Design mStand Laptop Stand and Twelve South BookArc.
 - **Audio**: Samsung Galaxy Buds2 Pro Graphite and Razer Kraken X.
