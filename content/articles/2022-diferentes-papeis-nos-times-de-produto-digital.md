@@ -5,7 +5,6 @@ date: '2022-05-25T22:12:03.284Z'
 tags: ['Management', 'Produtos', 'Gestão', 'Talks']
 language: pt
 status: published
-homepage_view_full_article: true
 ---
 
 Confira o bate-papo que participei pela NuLab Salvador do Nubank falando sobre papéis e responsabilidades dentro de um time de produto digital.
