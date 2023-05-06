@@ -6600,7 +6600,7 @@ gatsby-plugin-eslint@^4.0.4:
   dependencies:
     webpack-merge "^5.8.0"
 
-gatsby-plugin-feed@5.9.0:
+gatsby-plugin-feed@^5.9.0:
   version "5.9.0"
   resolved "https://registry.yarnpkg.com/gatsby-plugin-feed/-/gatsby-plugin-feed-5.9.0.tgz#004a6c6bf360f31032fb207f83eaeb515820c38b"
   integrity sha512-7m3aJAgCNkCpPlPOjvTIU++gM8LaQ3vzQqfGGu+5BZUULt2R3+n0DOJlge8RuAkEKBSAe97JEb6Q3xaBTJPxQg==
@@ -6613,7 +6613,7 @@ gatsby-plugin-feed@5.9.0:
     lodash.merge "^4.6.2"
     rss "^1.2.2"
 
-gatsby-plugin-google-analytics@5.9.0:
+gatsby-plugin-google-analytics@^5.9.0:
   version "5.9.0"
   resolved "https://registry.yarnpkg.com/gatsby-plugin-google-analytics/-/gatsby-plugin-google-analytics-5.9.0.tgz#617679f1722d56d6a83a8eecf502cd2ea5090c75"
   integrity sha512-1jHBEveDRtgh/QzbhHdgMa1PT43gxCf/r4NIhjIL1DB7BGi4ssBL67SOXXF1anPS4WlqoAEHbhavHLgdrNtc/w==
@@ -6666,7 +6666,7 @@ gatsby-plugin-image@3.9.0:
     objectFitPolyfill "^2.3.5"
     prop-types "^15.8.1"
 
-gatsby-plugin-manifest@5.9.0:
+gatsby-plugin-manifest@^5.9.0:
   version "5.9.0"
   resolved "https://registry.yarnpkg.com/gatsby-plugin-manifest/-/gatsby-plugin-manifest-5.9.0.tgz#0d181c86e840400f93b263d2dcbbf486f6d5388c"
   integrity sha512-6BrS5WprI+MJM4JsoJ30Z5cuKzICFlohpXiUMO2Xc+p2bzl+hgeIb06nm4lP52gNAPOVyLQDZDqB0PKRNYVe/w==
@@ -6725,7 +6725,7 @@ gatsby-plugin-react-i18next@3.0.1:
     outdent "^0.8.0"
     path-to-regexp "^6.2.1"
 
-gatsby-plugin-sharp@5.9.0:
+gatsby-plugin-sharp@^5.9.0:
   version "5.9.0"
   resolved "https://registry.yarnpkg.com/gatsby-plugin-sharp/-/gatsby-plugin-sharp-5.9.0.tgz#72b97bb27a4d4c936621a0c7f1eda77f4715b4da"
   integrity sha512-RXiRmuAwRZf7uqzoqBoG+7qbWWXCuf359Td+yKBLC7M+ktsfw9FMfivS6PpY6v+XmEztO8so1n+Sx+nOU5FScw==
@@ -6760,7 +6760,7 @@ gatsby-plugin-styled-components@6.9.0:
   dependencies:
     "@babel/runtime" "^7.20.13"
 
-gatsby-plugin-typescript@5.9.0, gatsby-plugin-typescript@^5.9.0:
+gatsby-plugin-typescript@^5.9.0:
   version "5.9.0"
   resolved "https://registry.yarnpkg.com/gatsby-plugin-typescript/-/gatsby-plugin-typescript-5.9.0.tgz#2906da588df5144cdc6d0afb6cdb4c41929afabd"
   integrity sha512-dvdLKwadAwpg7rd3kffupC6yqCpzJ+lTAxkCp6BUY11jyCItPZwDqP+wh0xUk/ilA6ZoyG1hJEfxkX4SIkuWIA==
@@ -6877,7 +6877,7 @@ gatsby-sharp@^1.9.0:
     "@types/sharp" "^0.31.1"
     sharp "^0.31.3"
 
-gatsby-source-filesystem@5.9.0:
+gatsby-source-filesystem@^5.9.0:
   version "5.9.0"
   resolved "https://registry.yarnpkg.com/gatsby-source-filesystem/-/gatsby-source-filesystem-5.9.0.tgz#63c40912df347e1edb341715ffa6596050f06fcb"
   integrity sha512-1DANeWOzkmAcstduQIjk0rLlijDlvVKwUvMTt/Mwj/HdESh+mQXjM9dlDRF3eZwZ2HJ9jiq5eZvfm8Yj67m1+A==
@@ -6938,7 +6938,7 @@ gatsby-transformer-remark@6.9.0:
     unist-util-select "^3.0.4"
     unist-util-visit "^2.0.3"
 
-gatsby-transformer-sharp@5.9.0:
+gatsby-transformer-sharp@^5.9.0:
   version "5.9.0"
   resolved "https://registry.yarnpkg.com/gatsby-transformer-sharp/-/gatsby-transformer-sharp-5.9.0.tgz#5d63ce75fed511497262769711c1201ca2c32605"
   integrity sha512-kA1KTWxV9gcnwCW7r9JSdibGjK4XjnGQgVup05WDGRWw+oAZjW/aZGvHXhGfl1DhyL9t9DinJvoUpdSkk2jdNg==
@@ -6962,7 +6962,7 @@ gatsby-worker@^2.9.0:
     fs-extra "^11.1.1"
     signal-exit "^3.0.7"
 
-gatsby@5.9.0:
+gatsby@^5.9.0:
   version "5.9.0"
   resolved "https://registry.yarnpkg.com/gatsby/-/gatsby-5.9.0.tgz#79fca9e8ac71fa49a2186ddc1fb9063ceb2858ad"
   integrity sha512-XjKwjlscSgOZqqXCY1+Y3VX9+AyMBZMGer2xt6BxpXAz+uEHomdiVpToncka5BlrxgDYkDmx83yIBZKN9uAwiw==
