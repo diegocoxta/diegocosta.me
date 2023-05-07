@@ -1,18 +1,12 @@
 import React from 'react';
-import { graphql, PageRendererProps } from 'gatsby';
+import { graphql, PageProps } from 'gatsby';
 
 import Layout from '~/components/Layout';
 import Divisor from '~/components/Divisor';
 import Metatags from '~/components/Metatags';
 import Article from '~/components/Article';
 
-import { PagesTemplateQuery } from '~/../graphql-types';
-
-interface PagesTemplateProps extends PageRendererProps {
-  data: PagesTemplateQuery;
-}
-
-export default function PagesTemplate({ data }: PagesTemplateProps): React.ReactElement {
+export default function PagesTemplate({ data }: PageProps<Queries.PagesTemplateQuery>): React.ReactElement {
   const { page } = data;
 
   return (
