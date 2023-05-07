@@ -2,14 +2,10 @@ const siteMetadata = require('./content/site-metadata.json');
 
 module.exports = {
   siteMetadata,
+  graphqlTypegen: {
+    typesOutputPath: 'gatsby-types.d.ts',
+  },
   plugins: [
-    {
-      resolve: 'gatsby-plugin-graphql-codegen',
-      options: {
-        codegen: true,
-        documentPaths: ['./src/**/*.{ts,tsx,js,jsx}', './gatsby/**/*.{ts,tsx,js,jsx}'],
-      },
-    },
     'gatsby-plugin-styled-components',
     {
       resolve: 'gatsby-plugin-google-fonts',

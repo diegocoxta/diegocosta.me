@@ -1,18 +1,12 @@
 import React from 'react';
-import { graphql, PageRendererProps } from 'gatsby';
+import { graphql, PageProps } from 'gatsby';
 
 import Layout from '~/components/Layout';
 import Divisor from '~/components/Divisor';
 import Metatags from '~/components/Metatags';
 import Article from '~/components/Article';
 
-import { ArticlesTemplateQuery } from '~/../graphql-types';
-
-interface ArticlesTemplateProps extends PageRendererProps {
-  data: ArticlesTemplateQuery;
-}
-
-export default function ArticlesTemplate({ data }: ArticlesTemplateProps): React.ReactElement {
+export default function ArticlesTemplate({ data }: PageProps<Queries.ArticlesTemplateQuery>): React.ReactElement {
   const { article } = data;
 
   return (

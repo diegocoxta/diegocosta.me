@@ -75,7 +75,7 @@ export type ArticleProps = TitleProps &
   TagsProps & {
     readingTime?: number;
     language?: string | null;
-    date?: string;
+    date?: string | null;
     content?: string | null;
     showMetaAttributes?: boolean;
   };

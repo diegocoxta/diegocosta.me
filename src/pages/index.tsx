@@ -1,5 +1,5 @@
 import React from 'react';
-import { graphql, PageRendererProps } from 'gatsby';
+import { graphql, PageProps } from 'gatsby';
 
 import Layout from '~/components/Layout';
 import Metatags from '~/components/Metatags';
@@ -8,13 +8,7 @@ import Search from '~/components/Search';
 import Article from '~/components/Article';
 import Divisor from '~/components/Divisor';
 
-import { IndexPageQuery } from '~/../graphql-types';
-
-interface IndexPageProps extends PageRendererProps {
-  data: IndexPageQuery;
-}
-
-export default function IndexPage({ data }: IndexPageProps): React.ReactElement {
+export default function IndexPage({ data }: PageProps<Queries.IndexPageQuery>): React.ReactElement {
   const { articles } = data;
 
   return (

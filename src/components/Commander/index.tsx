@@ -3,7 +3,6 @@ import { useStaticQuery, graphql } from 'gatsby';
 import { ThemeContext } from 'styled-components';
 import { KBarProvider } from 'kbar';
 
-import { CommanderQueryQuery } from '~/../graphql-types';
 import { usei18n } from '~/utils/i18n';
 
 import Commander from './Commander';
@@ -12,7 +11,7 @@ export default (): React.ReactElement => {
   const i18n = usei18n();
   const themeContext = useContext(ThemeContext);
 
-  const data: CommanderQueryQuery = useStaticQuery(graphql`
+  const data: Queries.CommanderQueryQuery = useStaticQuery(graphql`
     query CommanderQuery {
       site {
         siteMetadata {

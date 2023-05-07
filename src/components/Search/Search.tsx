@@ -7,8 +7,6 @@ import { BsSearch } from 'react-icons/bs';
 import { usei18n, Link, getContentLanguage } from '~/utils/i18n';
 import FixedContainer from '~/components/FixedContainer';
 
-import { SearchComponentQuery } from '~/../graphql-types';
-
 const Content = styled.div`
   position: relative;
   margin: 40px 0;
@@ -82,7 +80,7 @@ const ResultItemDescription = styled.p`
   margin: 0%;
 `;
 
-export type ArticleProps = SearchComponentQuery['articles']['nodes'][0];
+export type ArticleProps = Queries.SearchComponentQuery['articles']['nodes'][0];
 
 interface SearchProps {
   combobox: UseComboboxReturnValue<Fuse.FuseResult<ArticleProps>>;
