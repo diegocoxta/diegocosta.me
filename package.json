@@ -60,12 +60,11 @@
     "babel-preset-gatsby": "3.9.0",
     "eslint": "8.39.0",
     "eslint-config-prettier": "^8.8.0",
-    "eslint-webpack-plugin": "^4.0.1",
     "eslint-plugin-import": "^2.27.5",
     "eslint-plugin-jest": "27.2.1",
     "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-react": "7.32.2",
-    "gatsby-plugin-graphql-codegen": "^3.1.1",
+    "eslint-webpack-plugin": "^4.0.1",
     "husky": "8.0.3",
     "identity-obj-proxy": "^3.0.0",
     "jest": "29.5.0",
@@ -104,9 +103,6 @@
     ]
   },
   "overrides": {
-    "gatsby-plugin-graphql-codegen": {
-      "graphql": "^16.6.0"
-    },
     "gatsby-remark-highlight-code": {
       "@deckdeckgo/highlight-code": "^4.4.0"
     },

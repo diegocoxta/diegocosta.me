@@ -1,12 +1,10 @@
 import React from 'react';
 import { graphql } from 'gatsby';
 
-import { ArticleInformationFragment } from '~/../graphql-types';
-
 import Article from './Article';
 
 interface Props {
-  article?: ArticleInformationFragment | null;
+  article?: Queries.ArticleInformationFragment | null;
   showMetaAttributes?: boolean;
   showBodyContent?: boolean;
 }

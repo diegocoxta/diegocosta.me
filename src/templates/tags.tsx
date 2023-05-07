@@ -1,5 +1,5 @@
 import React from 'react';
-import { graphql, PageRendererProps } from 'gatsby';
+import { graphql, PageProps } from 'gatsby';
 
 import { usei18n } from '~/utils/i18n';
 
@@ -9,14 +9,10 @@ import Metatags from '~/components/Metatags';
 import Article from '~/components/Article';
 import TagHeader from '~/components/TagHeader';
 
-import { TagsTemplateQuery, TagsTemplateQueryVariables } from '~/../graphql-types';
-
-interface TagsTemplateProps extends PageRendererProps {
-  pageContext: TagsTemplateQueryVariables;
-  data: TagsTemplateQuery;
-}
-
-export default function Tags({ data, pageContext }: TagsTemplateProps): React.ReactElement {
+export default function Tags({
+  data,
+  pageContext,
+}: PageProps<Queries.TagsTemplateQuery, Queries.TagsTemplateQueryVariables>): React.ReactElement {
   const { articles } = data;
 
   const i18n = usei18n();
