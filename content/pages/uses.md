@@ -57,6 +57,7 @@ Welcome to my `/uses` page that list all my tools, hardware, and software! As a 
 ## 🎸 Jam
 
 - **Bass**: Fender Squier Affinity Series Precision Bass PJ, color black.
+- **Guitar**: Tagima Strato TG-540, color black.
 - **Amp**: Fender Rumble 15 and Fender Mustang Micro.
 
 ### 🎮 Gaming
