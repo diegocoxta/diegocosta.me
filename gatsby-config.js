@@ -7,6 +7,10 @@ module.exports = {
   },
   plugins: [
     'gatsby-plugin-styled-components',
+    'gatsby-plugin-react-helmet',
+    'gatsby-remark-images',
+    'gatsby-transformer-sharp',
+    'gatsby-plugin-sharp',
     {
       resolve: 'gatsby-plugin-google-fonts',
       options: {
@@ -45,14 +49,14 @@ module.exports = {
     {
       resolve: 'gatsby-source-filesystem',
       options: {
-        path: `${__dirname}/i18n`,
-        name: 'locale',
+        path: `${__dirname}/content/locales`,
+        name: 'locales',
       },
     },
     {
       resolve: 'gatsby-plugin-react-i18next',
       options: {
-        localeJsonSourceName: 'locale', // name given to 'gatsby-source-filesystem' plugin.
+        localeJsonSourceName: 'locales',
         languages: siteMetadata.languages.list,
         defaultLanguage: siteMetadata.languages.default,
         siteUrl: siteMetadata.siteUrl,
@@ -64,7 +68,6 @@ module.exports = {
         },
       },
     },
-    'gatsby-remark-images',
     {
       resolve: 'gatsby-transformer-remark',
       options: {
@@ -85,86 +88,11 @@ module.exports = {
         ],
       },
     },
-    'gatsby-transformer-sharp',
-    'gatsby-plugin-sharp',
     {
       resolve: 'gatsby-plugin-google-analytics',
       options: {
         trackingId: siteMetadata.googleAnalyticsKey,
       },
     },
-    {
-      resolve: 'gatsby-plugin-feed',
-      options: {
-        query: `
-          query GatsbyPluginFeedSiteMetadata {
-            site {
-              siteMetadata {
-                siteUrl
-              }
-            }
-          }
-        `,
-        feeds: [
-          {
-            serialize: ({ query: { site, articles } }) => {
-              return articles.edges.map((edge) => {
-                return Object.assign({}, edge.node.frontmatter, {
-                  description: edge.node.excerpt,
-                  date: edge.node.frontmatter.date,
-                  url: site.siteMetadata.siteUrl + edge.node.fields.slug,
-                  guid: site.siteMetadata.siteUrl + edge.node.fields.slug,
-                  custom_elements: [{ 'content:encoded': edge.node.html }],
-                });
-              });
-            },
-            query: `
-              query GatsbyPluginFeedArticles {
-                articles: allMarkdownRemark(
-                  sort: { order: DESC, fields: [frontmatter___date] },
-                  filter: { fields: { collection: { eq: "articles" }}, frontmatter: { status: { ne: "draft" }} }
-                ) {
-                  edges {
-                    node {
-                      html
-                      excerpt
-                      fields {
-                        slug
-                        readingTime {
-                          minutes
-                        }
-                      }
-                      frontmatter {
-                        date
-                        title
-                        description
-                        tags
-                        homepage_view_full_article
-                        status
-                        language
-                      }
-                    }
-                  }
-                }
-              }
-            `,
-            output: '/rss.xml',
-            title: siteMetadata.metatags.title,
-          },
-        ],
-      },
-    },
-    {
-      resolve: 'gatsby-plugin-manifest',
-      options: {
-        name: siteMetadata.metatags.title,
-        short_name: siteMetadata.metatags.author,
-        start_url: siteMetadata.siteUrl,
-        display: 'minimal-ui',
-        icon: 'static/icon.png',
-      },
-    },
-    'gatsby-plugin-react-helmet',
-    'gatsby-plugin-sitemap',
   ],
 };

@@ -40,7 +40,6 @@
   ],
   "googleAnalyticsKey": "UA-53539968-4",
   "features": {
-    "showArticleSearchOnHomepage": false,
     "showCommandBarNavigation": true
   }
 }

@@ -2672,22 +2672,18 @@ declare namespace Queries {
   };
 
   type SiteSiteMetadataFeatures = {
-    readonly showArticleSearchOnHomepage: Maybe<Scalars['Boolean']>;
     readonly showCommandBarNavigation: Maybe<Scalars['Boolean']>;
   };
 
   type SiteSiteMetadataFeaturesFieldSelector = {
-    readonly showArticleSearchOnHomepage: InputMaybe<FieldSelectorEnum>;
     readonly showCommandBarNavigation: InputMaybe<FieldSelectorEnum>;
   };
 
   type SiteSiteMetadataFeaturesFilterInput = {
-    readonly showArticleSearchOnHomepage: InputMaybe<BooleanQueryOperatorInput>;
     readonly showCommandBarNavigation: InputMaybe<BooleanQueryOperatorInput>;
   };
 
   type SiteSiteMetadataFeaturesSortInput = {
-    readonly showArticleSearchOnHomepage: InputMaybe<SortOrderEnum>;
     readonly showCommandBarNavigation: InputMaybe<SortOrderEnum>;
   };
 
@@ -2846,25 +2842,11 @@ declare namespace Queries {
     readonly quality: InputMaybe<Scalars['Int']>;
   };
 
-  type AboutMeComponentQueryVariables = Exact<{ [key: string]: never }>;
-
-  type AboutMeComponentQuery = {
-    readonly site: {
-      readonly siteMetadata: {
-        readonly bio: { readonly pt: string | null; readonly en: string | null } | null;
-        readonly getInTouch: ReadonlyArray<{
-          readonly label: string | null;
-          readonly url: string | null;
-          readonly rel: string | null;
-        } | null> | null;
-      } | null;
-    } | null;
-  };
-
   type ArticleInformationFragment = {
     readonly html: string | null;
     readonly excerpt: string | null;
     readonly fields: {
+      readonly collection: string | null;
       readonly slug: string | null;
       readonly readingTime: { readonly minutes: number | null } | null;
     } | null;
@@ -2876,36 +2858,6 @@ declare namespace Queries {
       readonly homepage_view_full_article: boolean | null;
       readonly status: string | null;
       readonly language: string | null;
-    } | null;
-  };
-
-  type ArticlesTemplateQueryVariables = Exact<{
-    slug: Scalars['String'];
-    language: Scalars['String'];
-  }>;
-
-  type ArticlesTemplateQuery = {
-    readonly locales: {
-      readonly edges: ReadonlyArray<{
-        readonly node: { readonly ns: string | null; readonly data: string | null; readonly language: string | null };
-      }>;
-    };
-    readonly article: {
-      readonly html: string | null;
-      readonly excerpt: string | null;
-      readonly fields: {
-        readonly slug: string | null;
-        readonly readingTime: { readonly minutes: number | null } | null;
-      } | null;
-      readonly frontmatter: {
-        readonly date: string | null;
-        readonly title: string | null;
-        readonly description: string | null;
-        readonly tags: ReadonlyArray<string | null> | null;
-        readonly homepage_view_full_article: boolean | null;
-        readonly status: string | null;
-        readonly language: string | null;
-      } | null;
     } | null;
   };
 
@@ -3042,7 +2994,15 @@ declare namespace Queries {
 
   type HeaderComponentQuery = {
     readonly site: {
-      readonly siteMetadata: { readonly metatags: { readonly author: string | null } | null } | null;
+      readonly siteMetadata: {
+        readonly metatags: { readonly author: string | null } | null;
+        readonly bio: { readonly pt: string | null; readonly en: string | null } | null;
+        readonly getInTouch: ReadonlyArray<{
+          readonly label: string | null;
+          readonly url: string | null;
+          readonly rel: string | null;
+        } | null> | null;
+      } | null;
     } | null;
   };
 
@@ -3056,12 +3016,13 @@ declare namespace Queries {
         readonly node: { readonly ns: string | null; readonly data: string | null; readonly language: string | null };
       }>;
     };
-    readonly articles: {
+    readonly list: {
       readonly edges: ReadonlyArray<{
         readonly node: {
           readonly html: string | null;
           readonly excerpt: string | null;
           readonly fields: {
+            readonly collection: string | null;
             readonly slug: string | null;
             readonly readingTime: { readonly minutes: number | null } | null;
           } | null;
@@ -3112,21 +3073,22 @@ declare namespace Queries {
     };
   };
 
-  type PagesTemplateQueryVariables = Exact<{
+  type SingleTemplateQueryVariables = Exact<{
     slug: Scalars['String'];
     language: Scalars['String'];
   }>;
 
-  type PagesTemplateQuery = {
+  type SingleTemplateQuery = {
     readonly locales: {
       readonly edges: ReadonlyArray<{
         readonly node: { readonly ns: string | null; readonly data: string | null; readonly language: string | null };
       }>;
     };
-    readonly page: {
+    readonly content: {
       readonly html: string | null;
       readonly excerpt: string | null;
       readonly fields: {
+        readonly collection: string | null;
         readonly slug: string | null;
         readonly readingTime: { readonly minutes: number | null } | null;
       } | null;
@@ -3142,27 +3104,6 @@ declare namespace Queries {
     } | null;
   };
 
-  type SearchComponentQueryVariables = Exact<{ [key: string]: never }>;
-
-  type SearchComponentQuery = {
-    readonly site: {
-      readonly siteMetadata: {
-        readonly features: { readonly showArticleSearchOnHomepage: boolean | null } | null;
-      } | null;
-    } | null;
-    readonly articles: {
-      readonly nodes: ReadonlyArray<{
-        readonly id: string;
-        readonly fields: { readonly slug: string | null } | null;
-        readonly frontmatter: {
-          readonly title: string | null;
-          readonly description: string | null;
-          readonly language: string | null;
-        } | null;
-      }>;
-    };
-  };
-
   type TagsTemplateQueryVariables = Exact<{
     tag: InputMaybe<Scalars['String']>;
     language: Scalars['String'];
@@ -3174,12 +3115,13 @@ declare namespace Queries {
         readonly node: { readonly ns: string | null; readonly data: string | null; readonly language: string | null };
       }>;
     };
-    readonly articles: {
+    readonly list: {
       readonly edges: ReadonlyArray<{
         readonly node: {
           readonly html: string | null;
           readonly excerpt: string | null;
           readonly fields: {
+            readonly collection: string | null;
             readonly slug: string | null;
             readonly readingTime: { readonly minutes: number | null } | null;
           } | null;

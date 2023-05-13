@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import styled, { ThemeContext } from 'styled-components';
 import { BsMoon, BsSun } from 'react-icons/bs';
 
-import { usei18n } from '~/utils/i18n';
+import { useLocale } from '~/hooks/useLocale';
 
 const Container = styled.button<{ enabled: boolean }>`
   background: transparent;
@@ -37,11 +37,11 @@ export default function ThemeSwitcher(): React.ReactElement {
   const themeContext = useContext(ThemeContext);
   const isDarkMode = themeContext?.theme === 'dark';
 
-  const i18n = usei18n();
+  const locale = useLocale();
 
   return (
     <Container
-      aria-label={i18n.getTranslationFor('themeSwitcher.toggle')}
+      aria-label={locale.getTranslationFor('themeSwitcher.toggle')}
       enabled={isDarkMode}
       onClick={themeContext?.themeToggler}
     >

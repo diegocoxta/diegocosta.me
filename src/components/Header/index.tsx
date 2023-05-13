@@ -7,6 +7,8 @@ export default (): React.ReactElement => {
   const {
     site: {
       siteMetadata: {
+        bio,
+        getInTouch,
         metatags: { author },
       },
     },
@@ -18,11 +20,20 @@ export default (): React.ReactElement => {
             metatags {
               author
             }
+            bio {
+              pt
+              en
+            }
+            getInTouch {
+              label
+              url
+              rel
+            }
           }
         }
       }
     `
   );
 
-  return <Header author={author} />;
+  return <Header author={author} description={bio} navigation={getInTouch} />;
 };

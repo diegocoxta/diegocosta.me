@@ -13,6 +13,7 @@ describe('<Article />', () => {
         language="en"
         date="2020-01-18T22:12:03.284Z"
         tags={['jest', 'testing-library']}
+        kind="articles"
       />
     );
     expect(getByText('Awesome Article')).toBeTruthy();
@@ -51,7 +52,7 @@ describe('<Article />', () => {
 
   it('does not render the reading time', () => {
     const { baseElement, getByText, queryByText } = render(
-      <Article title="Awesome Article" language="en" date="2020-01-18T22:12:03.284Z" />
+      <Article title="Awesome Article" language="en" date="2020-01-18T22:12:03.284Z" kind="articles" />
     );
 
     expect(
@@ -79,6 +80,7 @@ describe('<Article />', () => {
         language="en"
         date="2020-01-18T22:12:03.284Z"
         tags={['jest', 'testing-library']}
+        kind="articles"
       />
     );
 
@@ -100,7 +102,6 @@ describe('<Article />', () => {
         language="en"
         date="2020-01-18T22:12:03.284Z"
         tags={['jest', 'testing-library']}
-        showMetaAttributes={false}
       />
     );
 

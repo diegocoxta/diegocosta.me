@@ -2,15 +2,15 @@ import React from 'react';
 import { render } from '@testing-library/react';
 
 jest.mock('../../components/Header', () => () => <p>Header</p>);
-jest.mock('../../components/Footer', () => () => <p>Footer</p>);
 jest.mock('../../components/Metatags', () => () => <p>Metatags</p>);
+jest.mock('../../components/Footer', () => () => <p>Footer</p>);
 
 import TagsTemplate from '../tags';
 
 describe('<TagsTemplate>', () => {
   it('renders properly', () => {
     const data = {
-      articles: {
+      list: {
         totalCount: 2,
         edges: [
           {
@@ -53,13 +53,10 @@ describe('<TagsTemplate>', () => {
       },
     };
 
-    const { baseElement, getAllByTestId, getByText } = render(
-      <TagsTemplate data={data} pageContext={{ tag: 'Tech Stuff' }} />
-    );
-    expect(getAllByTestId('article-item').length).toEqual(data.articles.totalCount);
+    const { baseElement, getAllByTestId, getByText } = render(<TagsTemplate data={data} />);
+    expect(getAllByTestId('article-item').length).toEqual(data.list.totalCount);
     expect(getByText('Awesome second article')).toBeTruthy();
     expect(getByText('Awesome first article')).toBeTruthy();
-    expect(getByText(`Tech Stuff`)).toBeTruthy();
     expect(baseElement).toMatchSnapshot();
   });
 });

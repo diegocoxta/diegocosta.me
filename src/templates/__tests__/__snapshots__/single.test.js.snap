@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<TagsTemplate> renders properly 1`] = `
+exports[`<SingleTemplate> renders properly 1`] = `
 .c4 {
   color: #2F3D4F;
   box-shadow: none;
@@ -117,7 +117,7 @@ exports[`<TagsTemplate> renders properly 1`] = `
           <a
             class="c4"
             data-testid="article-header-title"
-            href="/path-to-article"
+            href="/path-to-article/"
           >
             Title 1
           </a>
@@ -125,28 +125,7 @@ exports[`<TagsTemplate> renders properly 1`] = `
         <section
           class="c5"
         >
-          Awesome first article
-        </section>
-      </article>
-      <article
-        class="c2"
-        data-testid="article-item"
-      >
-        <header
-          class="c3"
-        >
-          <a
-            class="c4"
-            data-testid="article-header-title"
-            href="/path-to-article-2"
-          >
-            Title 2
-          </a>
-        </header>
-        <section
-          class="c5"
-        >
-          Awesome second article
+          Post content
         </section>
       </article>
       <p>

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Helmet } from '~/utils/i18n';
+import { Helmet } from '~/hooks/useLocale';
 
 export interface MetatagsProps {
   title: string;

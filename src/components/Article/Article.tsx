@@ -1,9 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import { usei18n, getContentLanguage } from '~/utils/i18n';
-
-import FixedContainer from '~/components/FixedContainer';
+import { useLocale, getContentLanguage } from '~/hooks/useLocale';
 
 import Title, { TitleProps } from './components/Title';
 import Tags, { TagsProps } from './components/Tags';
@@ -71,28 +69,30 @@ export const Content = styled.section`
   }
 `;
 
+type Nullable<T> = T | null;
+
 export type ArticleProps = TitleProps &
   TagsProps & {
     readingTime?: number;
-    language?: string | null;
-    date?: string | null;
-    content?: string | null;
-    showMetaAttributes?: boolean;
+    language?: Nullable<string>;
+    date?: Nullable<string>;
+    content?: Nullable<string>;
+    kind?: Nullable<string>;
   };
 
 export default function Article(props: ArticleProps): React.ReactElement {
-  const i18n = usei18n();
+  const locale = useLocale();
 
-  const pageLanguage = i18n.getCurrentLanguage();
+  const pageLanguage = locale.getCurrentLanguage();
 
   const getReadingTime = () => {
     if (!props.readingTime) {
       return undefined;
     }
 
-    const lessThan1Minute = i18n.getTranslationFor('article.lessThan1Minute');
-    const ofReading = i18n.getTranslationFor('article.ofReading');
-    const minutes = i18n.getTranslationFor('article.minutes');
+    const lessThan1Minute = locale.getTranslationFor('article.lessThan1Minute');
+    const ofReading = locale.getTranslationFor('article.ofReading');
+    const minutes = locale.getTranslationFor('article.minutes');
 
     if (props.readingTime < 1) {
       return `· ${lessThan1Minute} ${ofReading}`;
@@ -110,25 +110,19 @@ export default function Article(props: ArticleProps): React.ReactElement {
     });
 
   return (
-    <FixedContainer>
-      <Container data-testid="article-item">
-        <Header>
-          <Title title={props.title} url={props.url} />
-          {props.showMetaAttributes && (
-            <>
-              <MetaAttributes>
-                {date} {getReadingTime()} · {getContentLanguage(i18n, props.language)}
-              </MetaAttributes>
-              <Tags tags={props.tags} />
-            </>
-          )}
-        </Header>
-        {props.content && <Content dangerouslySetInnerHTML={{ __html: props.content }} />}
-      </Container>
-    </FixedContainer>
+    <Container data-testid="article-item">
+      <Header>
+        <Title title={props.title} url={props.url} />
+        {props.kind === 'articles' && (
+          <>
+            <MetaAttributes>
+              {date} {getReadingTime()} · {getContentLanguage(locale, props.language)}
+            </MetaAttributes>
+            <Tags tags={props.tags} />
+          </>
+        )}
+      </Header>
+      {props.content && <Content dangerouslySetInnerHTML={{ __html: props.content }} />}
+    </Container>
   );
 }
-
-Article.defaultProps = {
-  showMetaAttributes: true,
-};

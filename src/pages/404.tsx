@@ -1,24 +1,14 @@
 import React from 'react';
 import { graphql } from 'gatsby';
 
-import { usei18n } from '~/utils/i18n';
-import Layout from '~/components/Layout';
-import Divisor from '~/components/Divisor';
-import Metatags from '~/components/Metatags';
-import Article from '~/components/Article/Article';
+import { useLocale } from '~/hooks/useLocale';
 
 export default function NotFoundPage(): React.ReactElement {
-  const i18n = usei18n();
-  const title = i18n.getTranslationFor('404page.title');
-  const content = i18n.getTranslationFor('404page.message');
+  const locale = useLocale();
+  const title = locale.getTranslationFor('404page.title');
+  const content = locale.getTranslationFor('404page.message');
 
-  return (
-    <Layout>
-      <Metatags title={title} />
-      <Divisor />
-      <Article title={title} content={content} />
-    </Layout>
-  );
+  return <>Page Not Found</>;
 }
 
 export const pageQuery = graphql`

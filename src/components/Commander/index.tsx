@@ -3,12 +3,12 @@ import { useStaticQuery, graphql } from 'gatsby';
 import { ThemeContext } from 'styled-components';
 import { KBarProvider } from 'kbar';
 
-import { usei18n } from '~/utils/i18n';
+import { useLocale } from '~/hooks/useLocale';
 
 import Commander from './Commander';
 
 export default (): React.ReactElement => {
-  const i18n = usei18n();
+  const locale = useLocale();
   const themeContext = useContext(ThemeContext);
 
   const data: Queries.CommanderQueryQuery = useStaticQuery(graphql`
@@ -39,12 +39,12 @@ export default (): React.ReactElement => {
     return <></>;
   }
 
-  const currentLanguagePrefix = i18n.getCurrentLanguage();
+  const currentLanguagePrefix = locale.getCurrentLanguage();
 
   const pages = data.pages.nodes.map((p) => ({
     id: `page-${p.fields?.slug}`,
     name: p.frontmatter?.title as string,
-    section: i18n.getTranslationFor('commander.pages'),
+    section: locale.getTranslationFor('commander.pages'),
     perform: () => (window.location.href = `/${currentLanguagePrefix}${p.fields?.slug}`),
     icon: 'BsFillFileEarmarkFill',
     parent: p.fields?.collection === 'articles' ? 'articles' : undefined,
@@ -53,83 +53,75 @@ export default (): React.ReactElement => {
   const actions = [
     {
       id: 'home',
-      name: i18n.getTranslationFor('commander.home'),
+      name: locale.getTranslationFor('commander.home'),
       shortcut: ['g', 'h'],
-      section: i18n.getTranslationFor('commander.pages'),
+      section: locale.getTranslationFor('commander.pages'),
       perform: () => (window.location.href = `/${currentLanguagePrefix}`),
       icon: 'BsFillHouseFill',
     },
     {
       id: 'articles',
-      name: i18n.getTranslationFor('commander.articles'),
+      name: locale.getTranslationFor('commander.articles'),
       shortcut: ['g', 'a'],
-      section: i18n.getTranslationFor('commander.pages'),
+      section: locale.getTranslationFor('commander.pages'),
       icon: 'BsNewspaper',
     },
     ...pages,
     {
       id: 'theme',
-      name: i18n.getTranslationFor('commander.theme'),
+      name: locale.getTranslationFor('commander.theme'),
       shortcut: ['g', 't'],
-      section: i18n.getTranslationFor('commander.preferences'),
+      section: locale.getTranslationFor('commander.preferences'),
       icon: 'BsBrushFill',
     },
     {
       id: 'theme-light',
-      name: i18n.getTranslationFor('commander.themeLight'),
+      name: locale.getTranslationFor('commander.themeLight'),
       shortcut: ['g', 't', 'l'],
-      section: i18n.getTranslationFor('commander.theme'),
+      section: locale.getTranslationFor('commander.theme'),
       parent: 'theme',
       perform: () => themeContext?.setMode('light'),
       icon: 'BsSun',
     },
     {
       id: 'theme-dark',
-      name: i18n.getTranslationFor('commander.themeDark'),
+      name: locale.getTranslationFor('commander.themeDark'),
       shortcut: ['g', 't', 'd'],
-      section: i18n.getTranslationFor('commander.theme'),
+      section: locale.getTranslationFor('commander.theme'),
       parent: 'theme',
       perform: () => themeContext?.setMode('dark'),
       icon: 'BsMoon',
     },
     {
       id: 'language',
-      name: i18n.getTranslationFor('commander.language'),
+      name: locale.getTranslationFor('commander.language'),
       shortcut: ['g', 'l'],
-      section: i18n.getTranslationFor('commander.preferences'),
+      section: locale.getTranslationFor('commander.preferences'),
       icon: 'BsTranslate',
     },
     {
       id: 'language-english',
-      name: i18n.getTranslationFor('languages.en'),
+      name: locale.getTranslationFor('languages.en'),
       shortcut: ['g', 'l', 'e'],
-      section: i18n.getTranslationFor('commander.language'),
+      section: locale.getTranslationFor('commander.language'),
       parent: 'language',
       perform: () => (window.location.href = '/en'),
       icon: 'BsTranslate',
     },
     {
       id: 'language-portuguese',
-      name: i18n.getTranslationFor('languages.pt'),
+      name: locale.getTranslationFor('languages.pt'),
       shortcut: ['g', 'l', 'p'],
-      section: i18n.getTranslationFor('commander.language'),
+      section: locale.getTranslationFor('commander.language'),
       parent: 'language',
       perform: () => (window.location.href = '/pt'),
       icon: 'BsTranslate',
     },
     {
-      id: 'rss',
-      name: i18n.getTranslationFor('commander.rss'),
-      shortcut: ['g', 'r'],
-      section: i18n.getTranslationFor('commander.tools'),
-      perform: () => window.open('/rss.xml', '_blank'),
-      icon: 'BsRssFill',
-    },
-    {
       id: 'source',
-      name: i18n.getTranslationFor('commander.sourceCode'),
+      name: locale.getTranslationFor('commander.sourceCode'),
       shortcut: ['g', 's'],
-      section: i18n.getTranslationFor('commander.tools'),
+      section: locale.getTranslationFor('commander.tools'),
       perform: () => window.open(data.site?.siteMetadata?.repository as string, '_blank'),
       icon: 'BsCodeSlash',
     },
@@ -137,7 +129,7 @@ export default (): React.ReactElement => {
 
   return (
     <KBarProvider actions={actions}>
-      <Commander placeholder={i18n.getTranslationFor('commander.placeholder')} />
+      <Commander placeholder={locale.getTranslationFor('commander.placeholder')} />
     </KBarProvider>
   );
 };

@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import kebabCase from 'lodash.kebabcase';
 
-import { Link } from '~/utils/i18n';
+import { Link } from '~/hooks/useLocale';
 
 const TagList = styled.ul`
   display: flex;

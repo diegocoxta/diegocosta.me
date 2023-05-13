@@ -2,12 +2,6 @@
 
 exports[`<Header /> does not render the last name 1`] = `
 .c0 {
-  max-width: 960px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
-
-.c1 {
   margin: 16px 0 40px 0;
   display: -webkit-box;
   display: -webkit-flex;
@@ -23,14 +17,14 @@ exports[`<Header /> does not render the last name 1`] = `
   align-items: center;
 }
 
-.c3 {
+.c2 {
   font-size: 15vw;
   font-weight: 700;
   text-transform: lowercase;
   margin: 0;
 }
 
-.c2 {
+.c1 {
   -webkit-text-decoration: none;
   text-decoration: none;
   box-shadow: none;
@@ -44,11 +38,11 @@ exports[`<Header /> does not render the last name 1`] = `
   align-items: center;
 }
 
-.c2:focus {
+.c1:focus {
   outline: none;
 }
 
-.c4 {
+.c3 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -64,61 +58,52 @@ exports[`<Header /> does not render the last name 1`] = `
 }
 
 @media (min-width:760px) {
-  .c1 {
+  .c0 {
     margin: 40px 0 40px 0;
   }
 }
 
 @media (min-width:760px) {
-  .c3 {
+  .c2 {
     font-size: 110px;
   }
 }
 
 <body>
   <div>
-    <section
+    <p>
+      LanguageSwitcher
+    </p>
+    <header
       class="c0"
     >
-      <main>
-        <header
-          class="c1"
+      <a
+        class="c1"
+        href="/"
+      >
+        <h1
+          class="c2"
         >
-          <a
-            class="c2"
-            href="/"
-          >
-            <h1
-              class="c3"
-            >
-              John
-            </h1>
-          </a>
-          <div
-            class="c4"
-          >
-            <p>
-              ThemeSwitcher
-            </p>
-            <p>
-              Commander
-            </p>
-          </div>
-        </header>
-      </main>
-    </section>
+          John
+        </h1>
+      </a>
+      <div
+        class="c3"
+      >
+        <p>
+          ThemeSwitcher
+        </p>
+        <p>
+          Commander
+        </p>
+      </div>
+    </header>
   </div>
 </body>
 `;
 
 exports[`<Header /> renders properly 1`] = `
 .c0 {
-  max-width: 960px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
-
-.c1 {
   margin: 16px 0 40px 0;
   display: -webkit-box;
   display: -webkit-flex;
@@ -134,14 +119,14 @@ exports[`<Header /> renders properly 1`] = `
   align-items: center;
 }
 
-.c3 {
+.c2 {
   font-size: 15vw;
   font-weight: 700;
   text-transform: lowercase;
   margin: 0;
 }
 
-.c2 {
+.c1 {
   -webkit-text-decoration: none;
   text-decoration: none;
   box-shadow: none;
@@ -155,11 +140,11 @@ exports[`<Header /> renders properly 1`] = `
   align-items: center;
 }
 
-.c2:focus {
+.c1:focus {
   outline: none;
 }
 
-.c4 {
+.c3 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -175,56 +160,237 @@ exports[`<Header /> renders properly 1`] = `
 }
 
 @media (min-width:760px) {
-  .c1 {
+  .c0 {
     margin: 40px 0 40px 0;
   }
 }
 
 @media (min-width:760px) {
-  .c3 {
+  .c2 {
     font-size: 110px;
   }
 }
 
 <body>
   <div>
-    <section
+    <p>
+      LanguageSwitcher
+    </p>
+    <header
       class="c0"
     >
-      <main>
-        <header
-          class="c1"
+      <a
+        class="c1"
+        href="/"
+      >
+        <h1
+          class="c2"
         >
-          <a
-            class="c2"
-            href="/"
+          John
+          <span
+            class=""
+            data-testid="header-lastname"
           >
-            <h1
-              class="c3"
-            >
-              John
-              <span
-                class=""
-                data-testid="header-lastname"
-              >
-                D
-                .
-              </span>
-            </h1>
-          </a>
-          <div
-            class="c4"
+            D
+            .
+          </span>
+        </h1>
+      </a>
+      <div
+        class="c3"
+      >
+        <p>
+          ThemeSwitcher
+        </p>
+        <p>
+          Commander
+        </p>
+      </div>
+    </header>
+  </div>
+</body>
+`;
+
+exports[`<Header /> renders the navigation properly 1`] = `
+.c0 {
+  margin: 16px 0 40px 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c2 {
+  font-size: 15vw;
+  font-weight: 700;
+  text-transform: lowercase;
+  margin: 0;
+}
+
+.c1 {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  box-shadow: none;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c1:focus {
+  outline: none;
+}
+
+.c3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c4 {
+  margin: 0;
+  padding: 0;
+}
+
+.c5 {
+  list-style: none;
+  font-size: 24px;
+  font-weight: 700;
+  margin: 0 24px 5px 0;
+}
+
+.c6 {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0;
+  text-transform: uppercase;
+}
+
+.c6:after {
+  content: '.';
+  display: block;
+  font-size: 38px;
+  line-height: 0.5;
+}
+
+@media (min-width:760px) {
+  .c0 {
+    margin: 40px 0 40px 0;
+  }
+}
+
+@media (min-width:760px) {
+  .c2 {
+    font-size: 110px;
+  }
+}
+
+@media (min-width:760px) {
+  .c4 {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+@media (min-width:760px) {
+  .c5 {
+    font-size: 22px;
+    margin: 0 24px 0 0;
+  }
+}
+
+@media (min-width:760px) {
+  .c6:after {
+    line-height: 0.4;
+  }
+}
+
+<body>
+  <div>
+    <p>
+      LanguageSwitcher
+    </p>
+    <header
+      class="c0"
+    >
+      <a
+        class="c1"
+        href="/"
+      >
+        <h1
+          class="c2"
+        >
+          John
+          <span
+            class=""
+            data-testid="header-lastname"
           >
-            <p>
-              ThemeSwitcher
-            </p>
-            <p>
-              Commander
-            </p>
-          </div>
-        </header>
-      </main>
-    </section>
+            D
+            .
+          </span>
+        </h1>
+      </a>
+      <div
+        class="c3"
+      >
+        <p>
+          ThemeSwitcher
+        </p>
+        <p>
+          Commander
+        </p>
+      </div>
+    </header>
+    <ul
+      class="c4"
+      data-testid="about-me-navigation-list"
+    >
+      <li
+        class="c5"
+        data-testid="about-me-navigation-item"
+      >
+        <a
+          class="c6"
+          href=""
+        />
+      </li>
+      <li
+        class="c5"
+        data-testid="about-me-navigation-item"
+      >
+        <a
+          class="c6"
+          href=""
+        />
+      </li>
+    </ul>
   </div>
 </body>
 `;

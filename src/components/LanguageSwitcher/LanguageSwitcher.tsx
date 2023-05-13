@@ -1,8 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { usei18n, Link } from '~/utils/i18n';
-
-import FixedContainer from '~/components/FixedContainer';
+import { useLocale, Link } from '~/hooks/useLocale';
 
 const List = styled.div`
   display: flex;
@@ -19,25 +17,23 @@ const LanguageLink = styled(Link)`
 `;
 
 export default function LanguageSwitcher() {
-  const i18n = usei18n();
+  const locale = useLocale();
 
   return (
-    <FixedContainer>
-      <List>
-        {i18n.getAllLanguages().map((language: string) => (
-          <LanguageLink
-            aria-label={`${i18n.getTranslationFor('languageswitcher.toggle')} ${i18n.getTranslationFor(
-              `languages.${language}`
-            )}`}
-            key={`footer-languages-${language}`}
-            to={i18n.getOriginalPath()}
-            language={language}
-          >
-            {i18n.getCurrentLanguage() === language && '/'}
-            {language}
-          </LanguageLink>
-        ))}
-      </List>
-    </FixedContainer>
+    <List>
+      {locale.getAllLanguages().map((language: string) => (
+        <LanguageLink
+          aria-label={`${locale.getTranslationFor('languageswitcher.toggle')} ${locale.getTranslationFor(
+            `languages.${language}`
+          )}`}
+          key={`footer-languages-${language}`}
+          to={locale.getOriginalPath()}
+          language={language}
+        >
+          {locale.getCurrentLanguage() === language && '/'}
+          {language}
+        </LanguageLink>
+      ))}
+    </List>
   );
 }

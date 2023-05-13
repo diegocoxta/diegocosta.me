@@ -1,39 +1,13 @@
-import React from 'react';
-import { graphql, PageProps } from 'gatsby';
+import { graphql } from 'gatsby';
 
-import Layout from '~/components/Layout';
-import Metatags from '~/components/Metatags';
-import AboutMe from '~/components/AboutMe';
-import Search from '~/components/Search';
-import Article from '~/components/Article';
-import Divisor from '~/components/Divisor';
-
-export default function IndexPage({ data }: PageProps<Queries.IndexPageQuery>): React.ReactElement {
-  const { articles } = data;
-
-  return (
-    <Layout>
-      <Metatags />
-      <AboutMe />
-      <Divisor />
-      <Search />
-      {articles.edges.map(({ node }, index: number) => (
-        <Article
-          key={`article-${index}`}
-          article={node}
-          showBodyContent={!!node.frontmatter?.homepage_view_full_article}
-        />
-      ))}
-    </Layout>
-  );
-}
+export { default } from '~/components/Page';
 
 export const pageQuery = graphql`
   query IndexPage($language: String!) {
     locales: allLocale(filter: { language: { eq: $language } }) {
       ...LanguageInformation
     }
-    articles: allMarkdownRemark(
+    list: allMarkdownRemark(
       sort: { frontmatter: { date: DESC } }
       filter: { fields: { collection: { eq: "articles" } }, frontmatter: { status: { ne: "draft" } } }
     ) {
