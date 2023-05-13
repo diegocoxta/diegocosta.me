@@ -1,0 +1,57 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<LanguageSwitcher /> renders properly 1`] = `
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 40px 0 0 0;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+}
+
+.c1 {
+  margin: 0 5px;
+  font-weight: 700;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: 22px;
+}
+
+<body>
+  <div>
+    <div
+      class="c0"
+    >
+      <a
+        aria-label="languageswitcher.toggle languages.pt"
+        class="c1"
+        href="/about-us"
+        language="pt"
+      >
+        /
+        pt
+      </a>
+      <a
+        aria-label="languageswitcher.toggle languages.en"
+        class="c1"
+        href="/about-us"
+        language="en"
+      >
+        en
+      </a>
+      <a
+        aria-label="languageswitcher.toggle languages.es"
+        class="c1"
+        href="/about-us"
+        language="es"
+      >
+        es
+      </a>
+    </div>
+  </div>
+</body>
+`;

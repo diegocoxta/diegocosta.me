@@ -1,12 +1,19 @@
 import React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 
-import Header from './Header';
+import Header, { HeaderProps } from './Header';
 
-export default (): React.ReactElement => {
+interface Props {
+  page: HeaderProps['page'];
+  fullHeader: boolean;
+}
+
+export default (props: Props): React.ReactElement => {
   const {
     site: {
       siteMetadata: {
+        bio,
+        getInTouch,
         metatags: { author },
       },
     },
@@ -18,11 +25,22 @@ export default (): React.ReactElement => {
             metatags {
               author
             }
+            bio {
+              pt
+              en
+            }
+            getInTouch {
+              label
+              url
+              rel
+            }
           }
         }
       }
     `
   );
 
-  return <Header author={author} />;
+  return (
+    <Header author={author} description={bio} navigation={getInTouch} page={props.page} fullHeader={props.fullHeader} />
+  );
 };

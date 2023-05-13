@@ -6,14 +6,14 @@ import Footer from './Footer';
 export default (): React.ReactElement => {
   const {
     site: {
-      siteMetadata: { repository },
+      siteMetadata: { sourceCode },
     },
   } = useStaticQuery(
     graphql`
       query FooterComponent {
         site {
           siteMetadata {
-            repository
+            sourceCode
           }
         }
       }
@@ -22,5 +22,5 @@ export default (): React.ReactElement => {
 
   const year = new Date().getFullYear();
 
-  return <Footer repository={repository} year={year} />;
+  return <Footer sourceCode={sourceCode} year={year} />;
 };

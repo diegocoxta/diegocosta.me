@@ -1,12 +1,50 @@
-const siteMetadata = require('./content/site-metadata.json');
-
 module.exports = {
-  siteMetadata,
+  siteMetadata: {
+    sourceCode: 'https://github.com/diegocosta/diegocosta.me',
+    metatags: {
+      title: 'Diego Costa - Software Engineer, Engineering Manager',
+      description:
+        'Engenheiro de software e Engineering Manager apaixonado por construir produtos que impactem a vida das pessoas.',
+      author: 'Diego Costa',
+      image: 'https://repository-images.githubusercontent.com/278878641/3756a080-d995-11ea-9b9f-f91a4448af98',
+    },
+    bio: {
+      en: 'I’m a Engineering Manager passionate about the intersection between technology and people. My goal is to help technology teams achieve their full potential.\nI have a great interest in engineering leadership, people management, software engineering, as well as inclusion and diversity. Currently, I am an Engineering Manager at Nubank and I am always open to sharing my ideas and experiences on these topics.\nIf you’d like to learn more about me, check out the links below!',
+      pt: 'Sou um Gerente de Engenharia apaixonado pela intersecção entre tecnologia e pessoas. Meu objetivo é ajudar equipes de tecnologia a alcançar todo o seu potencial.\nTenho grande interesse em liderança em engenharia, gerenciamento de pessoas, engenharia de software, além de inclusão e diversidade. Atualmente, sou Gerente de Engenharia na Nubank e estou sempre aberto a compartilhar minhas ideias e experiências sobre esses temas.\nSe você quiser saber mais sobre mim, confira os links abaixo!',
+    },
+    getInTouch: [
+      {
+        label: 'Linkedin',
+        url: 'https://linkedin.com/in/diegocoxta',
+      },
+      {
+        label: 'Github',
+        url: 'https://github.com/diegocoxta',
+      },
+      {
+        label: 'Twitter',
+        url: 'https://twitter.com/diegocoxta',
+      },
+      {
+        label: 'Mastodon',
+        url: 'https://mastodon.social/@diegocoxta',
+        rel: 'me',
+      },
+      {
+        label: 'E-mail',
+        url: 'mailto:diego@diegocosta.me',
+      },
+    ],
+  },
   graphqlTypegen: {
     typesOutputPath: 'gatsby-types.d.ts',
   },
   plugins: [
     'gatsby-plugin-styled-components',
+    'gatsby-plugin-react-helmet',
+    'gatsby-remark-images',
+    'gatsby-transformer-sharp',
+    'gatsby-plugin-sharp',
     {
       resolve: 'gatsby-plugin-google-fonts',
       options: {
@@ -45,17 +83,16 @@ module.exports = {
     {
       resolve: 'gatsby-source-filesystem',
       options: {
-        path: `${__dirname}/i18n`,
-        name: 'locale',
+        path: `${__dirname}/content/locales`,
+        name: 'locales',
       },
     },
     {
       resolve: 'gatsby-plugin-react-i18next',
       options: {
-        localeJsonSourceName: 'locale', // name given to 'gatsby-source-filesystem' plugin.
-        languages: siteMetadata.languages.list,
-        defaultLanguage: siteMetadata.languages.default,
-        siteUrl: siteMetadata.siteUrl,
+        localeJsonSourceName: 'locales',
+        languages: ['pt', 'en'],
+        defaultLanguage: 'en',
         generateDefaultLanguagePage: true,
         redirect: false,
         i18nextOptions: {
@@ -64,7 +101,6 @@ module.exports = {
         },
       },
     },
-    'gatsby-remark-images',
     {
       resolve: 'gatsby-transformer-remark',
       options: {
@@ -85,86 +121,11 @@ module.exports = {
         ],
       },
     },
-    'gatsby-transformer-sharp',
-    'gatsby-plugin-sharp',
     {
       resolve: 'gatsby-plugin-google-analytics',
       options: {
-        trackingId: siteMetadata.googleAnalyticsKey,
+        trackingId: 'UA-53539968-4',
       },
     },
-    {
-      resolve: 'gatsby-plugin-feed',
-      options: {
-        query: `
-          query GatsbyPluginFeedSiteMetadata {
-            site {
-              siteMetadata {
-                siteUrl
-              }
-            }
-          }
-        `,
-        feeds: [
-          {
-            serialize: ({ query: { site, articles } }) => {
-              return articles.edges.map((edge) => {
-                return Object.assign({}, edge.node.frontmatter, {
-                  description: edge.node.excerpt,
-                  date: edge.node.frontmatter.date,
-                  url: site.siteMetadata.siteUrl + edge.node.fields.slug,
-                  guid: site.siteMetadata.siteUrl + edge.node.fields.slug,
-                  custom_elements: [{ 'content:encoded': edge.node.html }],
-                });
-              });
-            },
-            query: `
-              query GatsbyPluginFeedArticles {
-                articles: allMarkdownRemark(
-                  sort: { order: DESC, fields: [frontmatter___date] },
-                  filter: { fields: { collection: { eq: "articles" }}, frontmatter: { status: { ne: "draft" }} }
-                ) {
-                  edges {
-                    node {
-                      html
-                      excerpt
-                      fields {
-                        slug
-                        readingTime {
-                          minutes
-                        }
-                      }
-                      frontmatter {
-                        date
-                        title
-                        description
-                        tags
-                        homepage_view_full_article
-                        status
-                        language
-                      }
-                    }
-                  }
-                }
-              }
-            `,
-            output: '/rss.xml',
-            title: siteMetadata.metatags.title,
-          },
-        ],
-      },
-    },
-    {
-      resolve: 'gatsby-plugin-manifest',
-      options: {
-        name: siteMetadata.metatags.title,
-        short_name: siteMetadata.metatags.author,
-        start_url: siteMetadata.siteUrl,
-        display: 'minimal-ui',
-        icon: 'static/icon.png',
-      },
-    },
-    'gatsby-plugin-react-helmet',
-    'gatsby-plugin-sitemap',
   ],
 };

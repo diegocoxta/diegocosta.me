@@ -1,8 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import { usei18n } from '~/utils/i18n';
-import FixedContainer from '~/components/FixedContainer';
+import { useLocale } from '~/hooks/useLocale';
 
 const Content = styled.footer`
   margin-bottom: 50px;
@@ -40,28 +39,22 @@ const Link = styled.a.attrs({
 
 interface FooterProps {
   year: number;
-  repository?: string;
+  sourceCode?: string;
 }
 
 export default function Footer(props: FooterProps): React.ReactElement {
-  const i18n = usei18n();
+  const locale = useLocale();
 
   return (
-    <FixedContainer>
+    <>
       <Content>
         <Label>
-          CC-BY {props.year}, {i18n.getTranslationFor('footer.builtWith')}{' '}
+          CC-BY {props.year}, {locale.getTranslationFor('footer.builtWith')}{' '}
         </Label>
         <Link href="https://gatsbyjs.org">gatsby</Link>
         <Label> • </Label>
-        {props.repository && (
-          <>
-            <Link href={props.repository}>{i18n.getTranslationFor('footer.sourceCode')}</Link>
-            <Label> • </Label>
-          </>
-        )}
-        <Link href="/rss.xml">feed</Link>
+        {props.sourceCode && <Link href={props.sourceCode}>{locale.getTranslationFor('footer.sourceCode')}</Link>}
       </Content>
-    </FixedContainer>
+    </>
   );
 }

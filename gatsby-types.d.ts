@@ -2641,13 +2641,9 @@ declare namespace Queries {
   type SiteSiteMetadata = {
     readonly bio: Maybe<SiteSiteMetadataBio>;
     readonly description: Maybe<Scalars['String']>;
-    readonly features: Maybe<SiteSiteMetadataFeatures>;
     readonly getInTouch: Maybe<ReadonlyArray<Maybe<SiteSiteMetadataGetInTouch>>>;
-    readonly googleAnalyticsKey: Maybe<Scalars['String']>;
-    readonly languages: Maybe<SiteSiteMetadataLanguages>;
     readonly metatags: Maybe<SiteSiteMetadataMetatags>;
-    readonly repository: Maybe<Scalars['String']>;
-    readonly siteUrl: Maybe<Scalars['String']>;
+    readonly sourceCode: Maybe<Scalars['String']>;
     readonly title: Maybe<Scalars['String']>;
   };
 
@@ -2671,49 +2667,21 @@ declare namespace Queries {
     readonly pt: InputMaybe<SortOrderEnum>;
   };
 
-  type SiteSiteMetadataFeatures = {
-    readonly showArticleSearchOnHomepage: Maybe<Scalars['Boolean']>;
-    readonly showCommandBarNavigation: Maybe<Scalars['Boolean']>;
-  };
-
-  type SiteSiteMetadataFeaturesFieldSelector = {
-    readonly showArticleSearchOnHomepage: InputMaybe<FieldSelectorEnum>;
-    readonly showCommandBarNavigation: InputMaybe<FieldSelectorEnum>;
-  };
-
-  type SiteSiteMetadataFeaturesFilterInput = {
-    readonly showArticleSearchOnHomepage: InputMaybe<BooleanQueryOperatorInput>;
-    readonly showCommandBarNavigation: InputMaybe<BooleanQueryOperatorInput>;
-  };
-
-  type SiteSiteMetadataFeaturesSortInput = {
-    readonly showArticleSearchOnHomepage: InputMaybe<SortOrderEnum>;
-    readonly showCommandBarNavigation: InputMaybe<SortOrderEnum>;
-  };
-
   type SiteSiteMetadataFieldSelector = {
     readonly bio: InputMaybe<SiteSiteMetadataBioFieldSelector>;
     readonly description: InputMaybe<FieldSelectorEnum>;
-    readonly features: InputMaybe<SiteSiteMetadataFeaturesFieldSelector>;
     readonly getInTouch: InputMaybe<SiteSiteMetadataGetInTouchFieldSelector>;
-    readonly googleAnalyticsKey: InputMaybe<FieldSelectorEnum>;
-    readonly languages: InputMaybe<SiteSiteMetadataLanguagesFieldSelector>;
     readonly metatags: InputMaybe<SiteSiteMetadataMetatagsFieldSelector>;
-    readonly repository: InputMaybe<FieldSelectorEnum>;
-    readonly siteUrl: InputMaybe<FieldSelectorEnum>;
+    readonly sourceCode: InputMaybe<FieldSelectorEnum>;
     readonly title: InputMaybe<FieldSelectorEnum>;
   };
 
   type SiteSiteMetadataFilterInput = {
     readonly bio: InputMaybe<SiteSiteMetadataBioFilterInput>;
     readonly description: InputMaybe<StringQueryOperatorInput>;
-    readonly features: InputMaybe<SiteSiteMetadataFeaturesFilterInput>;
     readonly getInTouch: InputMaybe<SiteSiteMetadataGetInTouchFilterListInput>;
-    readonly googleAnalyticsKey: InputMaybe<StringQueryOperatorInput>;
-    readonly languages: InputMaybe<SiteSiteMetadataLanguagesFilterInput>;
     readonly metatags: InputMaybe<SiteSiteMetadataMetatagsFilterInput>;
-    readonly repository: InputMaybe<StringQueryOperatorInput>;
-    readonly siteUrl: InputMaybe<StringQueryOperatorInput>;
+    readonly sourceCode: InputMaybe<StringQueryOperatorInput>;
     readonly title: InputMaybe<StringQueryOperatorInput>;
   };
 
@@ -2743,26 +2711,6 @@ declare namespace Queries {
     readonly label: InputMaybe<SortOrderEnum>;
     readonly rel: InputMaybe<SortOrderEnum>;
     readonly url: InputMaybe<SortOrderEnum>;
-  };
-
-  type SiteSiteMetadataLanguages = {
-    readonly default: Maybe<Scalars['String']>;
-    readonly list: Maybe<ReadonlyArray<Maybe<Scalars['String']>>>;
-  };
-
-  type SiteSiteMetadataLanguagesFieldSelector = {
-    readonly default: InputMaybe<FieldSelectorEnum>;
-    readonly list: InputMaybe<FieldSelectorEnum>;
-  };
-
-  type SiteSiteMetadataLanguagesFilterInput = {
-    readonly default: InputMaybe<StringQueryOperatorInput>;
-    readonly list: InputMaybe<StringQueryOperatorInput>;
-  };
-
-  type SiteSiteMetadataLanguagesSortInput = {
-    readonly default: InputMaybe<SortOrderEnum>;
-    readonly list: InputMaybe<SortOrderEnum>;
   };
 
   type SiteSiteMetadataMetatags = {
@@ -2796,13 +2744,9 @@ declare namespace Queries {
   type SiteSiteMetadataSortInput = {
     readonly bio: InputMaybe<SiteSiteMetadataBioSortInput>;
     readonly description: InputMaybe<SortOrderEnum>;
-    readonly features: InputMaybe<SiteSiteMetadataFeaturesSortInput>;
     readonly getInTouch: InputMaybe<SiteSiteMetadataGetInTouchSortInput>;
-    readonly googleAnalyticsKey: InputMaybe<SortOrderEnum>;
-    readonly languages: InputMaybe<SiteSiteMetadataLanguagesSortInput>;
     readonly metatags: InputMaybe<SiteSiteMetadataMetatagsSortInput>;
-    readonly repository: InputMaybe<SortOrderEnum>;
-    readonly siteUrl: InputMaybe<SortOrderEnum>;
+    readonly sourceCode: InputMaybe<SortOrderEnum>;
     readonly title: InputMaybe<SortOrderEnum>;
   };
 
@@ -2846,25 +2790,11 @@ declare namespace Queries {
     readonly quality: InputMaybe<Scalars['Int']>;
   };
 
-  type AboutMeComponentQueryVariables = Exact<{ [key: string]: never }>;
-
-  type AboutMeComponentQuery = {
-    readonly site: {
-      readonly siteMetadata: {
-        readonly bio: { readonly pt: string | null; readonly en: string | null } | null;
-        readonly getInTouch: ReadonlyArray<{
-          readonly label: string | null;
-          readonly url: string | null;
-          readonly rel: string | null;
-        } | null> | null;
-      } | null;
-    } | null;
-  };
-
   type ArticleInformationFragment = {
     readonly html: string | null;
     readonly excerpt: string | null;
     readonly fields: {
+      readonly collection: string | null;
       readonly slug: string | null;
       readonly readingTime: { readonly minutes: number | null } | null;
     } | null;
@@ -2879,57 +2809,10 @@ declare namespace Queries {
     } | null;
   };
 
-  type ArticlesTemplateQueryVariables = Exact<{
-    slug: Scalars['String'];
-    language: Scalars['String'];
-  }>;
-
-  type ArticlesTemplateQuery = {
-    readonly locales: {
-      readonly edges: ReadonlyArray<{
-        readonly node: { readonly ns: string | null; readonly data: string | null; readonly language: string | null };
-      }>;
-    };
-    readonly article: {
-      readonly html: string | null;
-      readonly excerpt: string | null;
-      readonly fields: {
-        readonly slug: string | null;
-        readonly readingTime: { readonly minutes: number | null } | null;
-      } | null;
-      readonly frontmatter: {
-        readonly date: string | null;
-        readonly title: string | null;
-        readonly description: string | null;
-        readonly tags: ReadonlyArray<string | null> | null;
-        readonly homepage_view_full_article: boolean | null;
-        readonly status: string | null;
-        readonly language: string | null;
-      } | null;
-    } | null;
-  };
-
-  type CommanderQueryQueryVariables = Exact<{ [key: string]: never }>;
-
-  type CommanderQueryQuery = {
-    readonly site: {
-      readonly siteMetadata: {
-        readonly repository: string | null;
-        readonly features: { readonly showCommandBarNavigation: boolean | null } | null;
-      } | null;
-    } | null;
-    readonly pages: {
-      readonly nodes: ReadonlyArray<{
-        readonly frontmatter: { readonly title: string | null } | null;
-        readonly fields: { readonly slug: string | null; readonly collection: string | null } | null;
-      }>;
-    };
-  };
-
   type FooterComponentQueryVariables = Exact<{ [key: string]: never }>;
 
   type FooterComponentQuery = {
-    readonly site: { readonly siteMetadata: { readonly repository: string | null } | null } | null;
+    readonly site: { readonly siteMetadata: { readonly sourceCode: string | null } | null } | null;
   };
 
   type GatsbyImageSharpFixedFragment = {
@@ -3042,7 +2925,15 @@ declare namespace Queries {
 
   type HeaderComponentQuery = {
     readonly site: {
-      readonly siteMetadata: { readonly metatags: { readonly author: string | null } | null } | null;
+      readonly siteMetadata: {
+        readonly metatags: { readonly author: string | null } | null;
+        readonly bio: { readonly pt: string | null; readonly en: string | null } | null;
+        readonly getInTouch: ReadonlyArray<{
+          readonly label: string | null;
+          readonly url: string | null;
+          readonly rel: string | null;
+        } | null> | null;
+      } | null;
     } | null;
   };
 
@@ -3056,12 +2947,13 @@ declare namespace Queries {
         readonly node: { readonly ns: string | null; readonly data: string | null; readonly language: string | null };
       }>;
     };
-    readonly articles: {
+    readonly list: {
       readonly edges: ReadonlyArray<{
         readonly node: {
           readonly html: string | null;
           readonly excerpt: string | null;
           readonly fields: {
+            readonly collection: string | null;
             readonly slug: string | null;
             readonly readingTime: { readonly minutes: number | null } | null;
           } | null;
@@ -3100,11 +2992,23 @@ declare namespace Queries {
     } | null;
   };
 
-  type PageNotFoundQueryQueryVariables = Exact<{
+  type NavigationQueryVariables = Exact<{ [key: string]: never }>;
+
+  type NavigationQuery = {
+    readonly site: { readonly siteMetadata: { readonly sourceCode: string | null } | null } | null;
+    readonly pages: {
+      readonly nodes: ReadonlyArray<{
+        readonly frontmatter: { readonly title: string | null } | null;
+        readonly fields: { readonly slug: string | null; readonly collection: string | null } | null;
+      }>;
+    };
+  };
+
+  type PageNotFoundQueryVariables = Exact<{
     language: Scalars['String'];
   }>;
 
-  type PageNotFoundQueryQuery = {
+  type PageNotFoundQuery = {
     readonly locales: {
       readonly edges: ReadonlyArray<{
         readonly node: { readonly ns: string | null; readonly data: string | null; readonly language: string | null };
@@ -3112,21 +3016,22 @@ declare namespace Queries {
     };
   };
 
-  type PagesTemplateQueryVariables = Exact<{
+  type SingleTemplateQueryVariables = Exact<{
     slug: Scalars['String'];
     language: Scalars['String'];
   }>;
 
-  type PagesTemplateQuery = {
+  type SingleTemplateQuery = {
     readonly locales: {
       readonly edges: ReadonlyArray<{
         readonly node: { readonly ns: string | null; readonly data: string | null; readonly language: string | null };
       }>;
     };
-    readonly page: {
+    readonly content: {
       readonly html: string | null;
       readonly excerpt: string | null;
       readonly fields: {
+        readonly collection: string | null;
         readonly slug: string | null;
         readonly readingTime: { readonly minutes: number | null } | null;
       } | null;
@@ -3142,27 +3047,6 @@ declare namespace Queries {
     } | null;
   };
 
-  type SearchComponentQueryVariables = Exact<{ [key: string]: never }>;
-
-  type SearchComponentQuery = {
-    readonly site: {
-      readonly siteMetadata: {
-        readonly features: { readonly showArticleSearchOnHomepage: boolean | null } | null;
-      } | null;
-    } | null;
-    readonly articles: {
-      readonly nodes: ReadonlyArray<{
-        readonly id: string;
-        readonly fields: { readonly slug: string | null } | null;
-        readonly frontmatter: {
-          readonly title: string | null;
-          readonly description: string | null;
-          readonly language: string | null;
-        } | null;
-      }>;
-    };
-  };
-
   type TagsTemplateQueryVariables = Exact<{
     tag: InputMaybe<Scalars['String']>;
     language: Scalars['String'];
@@ -3174,12 +3058,13 @@ declare namespace Queries {
         readonly node: { readonly ns: string | null; readonly data: string | null; readonly language: string | null };
       }>;
     };
-    readonly articles: {
+    readonly list: {
       readonly edges: ReadonlyArray<{
         readonly node: {
           readonly html: string | null;
           readonly excerpt: string | null;
           readonly fields: {
+            readonly collection: string | null;
             readonly slug: string | null;
             readonly readingTime: { readonly minutes: number | null } | null;
           } | null;

@@ -1,34 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<IndexPage> renders properly 1`] = `
-.c0 {
-  max-width: 960px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
-
-.c1 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  margin: 40px 0 0 0;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-}
-
-.c2 {
-  margin: 0 5px;
-  color: #2F3D4F;
-  font-weight: 700;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  font-size: 22px;
-}
-
-.c6 {
+.c4 {
   color: #2F3D4F;
   box-shadow: none;
   -webkit-text-decoration: none;
@@ -38,89 +11,78 @@ exports[`<IndexPage> renders properly 1`] = `
   font-weight: 700;
 }
 
-.c6:hover,
-.c6:focus {
+.c4:hover,
+.c4:focus {
   border-bottom: 1px solid #2F3D4F;
   outline: none;
 }
 
-.c8 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  padding: 0;
-  margin: 0;
-}
-
-.c4 {
+.c2 {
   margin: 0 0 60px 0;
   font-weight: 400;
   color: #2F3D4F;
 }
 
-.c5 {
+.c3 {
   margin: 20px 0 0 0;
 }
 
-.c7 {
-  color: #38485D;
-  font-size: 19px;
-  margin: 10px 0;
-}
-
-.c9 {
+.c5 {
   line-height: 1.5;
   font-size: 19px;
+  margin-top: 10px;
 }
 
-.c9 a {
+.c5 a {
   color: #AAC13D;
   -webkit-text-decoration: none;
   text-decoration: none;
   border-bottom: 1px solid #ffffff;
 }
 
-.c9 a:hover,
-.c9 a:focus {
+.c5 a:hover,
+.c5 a:focus {
   border-bottom: 1px solid #AAC13D;
   outline: none;
 }
 
-.c9 code {
+.c5 code {
   background: #AAC13D40;
   padding: 2px 6px;
   border-radius: 10px;
   font-size: 16px;
 }
 
-.c9 blockquote {
+.c5 blockquote {
   border-left: 5px solid #AAC13D;
   padding-left: 20px;
   margin-left: 0;
 }
 
-.c9 img {
+.c5 img {
   box-shadow: none !important;
 }
 
-.c9 h3 {
+.c5 h3 {
   font-size: 28px;
 }
 
-.c9 table.uses-table {
+.c5 table.uses-table {
   width: 100%;
   margin: 40px 0;
 }
 
-.c9 table.uses-table td {
+.c5 table.uses-table td {
   text-align: center;
 }
 
-.c3 {
+.c0 {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.c1 {
   background: linear-gradient(90deg,#ffffff 20px,transparent 1%) center, linear-gradient(#ffffff 20px,transparent 1%) center, #2F3D4F;
   background-size: 22px 22px;
   height: 120px;
@@ -133,136 +95,62 @@ exports[`<IndexPage> renders properly 1`] = `
     <section
       class="c0"
     >
-      <main>
-        <div
-          class="c1"
+      <p>
+        Header
+      </p>
+    </section>
+    <div
+      class="c1"
+    />
+    <section
+      class="c0"
+    >
+      <article
+        class="c2"
+        data-testid="article-item"
+      >
+        <header
+          class="c3"
         >
           <a
-            aria-label="languageswitcher.toggle languages.pt"
-            class="c2"
-            href="/about-us"
-            language="pt"
+            class="c4"
+            data-testid="article-header-title"
+            href="/path-to-article"
           >
-            /
-            pt
+            Title 1
           </a>
+        </header>
+        <section
+          class="c5"
+        >
+          Awesome first article
+        </section>
+      </article>
+      <article
+        class="c2"
+        data-testid="article-item"
+      >
+        <header
+          class="c3"
+        >
           <a
-            aria-label="languageswitcher.toggle languages.en"
-            class="c2"
-            href="/about-us"
-            language="en"
+            class="c4"
+            data-testid="article-header-title"
+            href="/path-to-article-2"
           >
-            en
+            Title 2
           </a>
-          <a
-            aria-label="languageswitcher.toggle languages.es"
-            class="c2"
-            href="/about-us"
-            language="es"
-          >
-            es
-          </a>
-        </div>
-      </main>
+        </header>
+        <section
+          class="c5"
+        >
+          Awesome second article
+        </section>
+      </article>
+      <p>
+        Footer
+      </p>
     </section>
-    <p>
-      Header
-    </p>
-    <main>
-      <p>
-        Metatags
-      </p>
-      <p>
-        AboutMe
-      </p>
-      <div
-        class="c3"
-      />
-      <p>
-        Search
-      </p>
-      <section
-        class="c0"
-      >
-        <main>
-          <article
-            class="c4"
-            data-testid="article-item"
-          >
-            <header
-              class="c5"
-            >
-              <a
-                class="c6"
-                data-testid="article-header-title"
-                href="/path-to-article"
-              >
-                Title 1
-              </a>
-              <p
-                class="c7"
-              >
-                16/01/2021
-                 
-                · 5 article.minutes article.ofReading
-                 · 
-              </p>
-              <ul
-                class="c8"
-                data-testid="article-header-tags"
-              />
-            </header>
-            <section
-              class="c9"
-            >
-              Awesome first article
-            </section>
-          </article>
-        </main>
-      </section>
-      <section
-        class="c0"
-      >
-        <main>
-          <article
-            class="c4"
-            data-testid="article-item"
-          >
-            <header
-              class="c5"
-            >
-              <a
-                class="c6"
-                data-testid="article-header-title"
-                href="/path-to-article-2"
-              >
-                Title 2
-              </a>
-              <p
-                class="c7"
-              >
-                18/01/2020
-                 
-                · 2 article.minutes article.ofReading
-                 · 
-              </p>
-              <ul
-                class="c8"
-                data-testid="article-header-tags"
-              />
-            </header>
-            <section
-              class="c9"
-            >
-              Awesome second article
-            </section>
-          </article>
-        </main>
-      </section>
-    </main>
-    <p>
-      Footer
-    </p>
   </div>
 </body>
 `;

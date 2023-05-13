@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<NotFoundPage> renders properly 1`] = `
+exports[`<SingleTemplate> renders properly 1`] = `
 .c4 {
   color: #2F3D4F;
   box-shadow: none;
@@ -13,6 +13,7 @@ exports[`<NotFoundPage> renders properly 1`] = `
 
 .c4:hover,
 .c4:focus {
+  border-bottom: 1px solid #2F3D4F;
   outline: none;
 }
 
@@ -111,17 +112,18 @@ exports[`<NotFoundPage> renders properly 1`] = `
         <header
           class="c3"
         >
-          <h2
+          <a
             class="c4"
             data-testid="article-header-title"
+            href="/path-to-article/"
           >
-            404page.title
-          </h2>
+            Title 1
+          </a>
         </header>
         <section
           class="c5"
         >
-          404page.message
+          Post content
         </section>
       </article>
       <p>

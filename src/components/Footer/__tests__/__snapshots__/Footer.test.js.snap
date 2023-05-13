@@ -2,179 +2,134 @@
 
 exports[`<Footer /> renders properly 1`] = `
 .c0 {
-  max-width: 960px;
-  margin: 0 auto;
-  padding: 0 20px;
+  margin-bottom: 50px;
+}
+
+.c0 nav {
+  margin-bottom: 50px;
 }
 
 .c1 {
-  margin-bottom: 50px;
-}
-
-.c1 nav {
-  margin-bottom: 50px;
-}
-
-.c2 {
   line-height: 1.5;
 }
 
-.c3 {
+.c2 {
   -webkit-text-decoration: none;
   text-decoration: none;
   box-shadow: none;
 }
 
-.c3:hover,
-.c3:focus {
+.c2:hover,
+.c2:focus {
   border-bottom: 1px solid;
   outline: none;
 }
 
 @media (min-width:760px) {
-  .c1 nav {
+  .c0 nav {
     margin-bottom: 0;
   }
 }
 
 <body>
   <div>
-    <section
+    <footer
       class="c0"
     >
-      <main>
-        <footer
-          class="c1"
-        >
-          <span
-            class="c2"
-          >
-            CC-BY 
-            2020
-            , 
-            footer.builtWith
-             
-          </span>
-          <a
-            class="c3"
-            href="https://gatsbyjs.org"
-            rel="noopener"
-            target="_blank"
-          >
-            gatsby
-          </a>
-          <span
-            class="c2"
-          >
-             • 
-          </span>
-          <a
-            class="c3"
-            href="/rss.xml"
-            rel="noopener"
-            target="_blank"
-          >
-            feed
-          </a>
-        </footer>
-      </main>
-    </section>
+      <span
+        class="c1"
+      >
+        CC-BY 
+        2020
+        , 
+        footer.builtWith
+         
+      </span>
+      <a
+        class="c2"
+        href="https://gatsbyjs.org"
+        rel="noopener"
+        target="_blank"
+      >
+        gatsby
+      </a>
+      <span
+        class="c1"
+      >
+         • 
+      </span>
+    </footer>
   </div>
 </body>
 `;
 
-exports[`<Footer /> renders the repository url if defined 1`] = `
+exports[`<Footer /> renders the sourceCode url if defined 1`] = `
 .c0 {
-  max-width: 960px;
-  margin: 0 auto;
-  padding: 0 20px;
+  margin-bottom: 50px;
+}
+
+.c0 nav {
+  margin-bottom: 50px;
 }
 
 .c1 {
-  margin-bottom: 50px;
-}
-
-.c1 nav {
-  margin-bottom: 50px;
-}
-
-.c2 {
   line-height: 1.5;
 }
 
-.c3 {
+.c2 {
   -webkit-text-decoration: none;
   text-decoration: none;
   box-shadow: none;
 }
 
-.c3:hover,
-.c3:focus {
+.c2:hover,
+.c2:focus {
   border-bottom: 1px solid;
   outline: none;
 }
 
 @media (min-width:760px) {
-  .c1 nav {
+  .c0 nav {
     margin-bottom: 0;
   }
 }
 
 <body>
   <div>
-    <section
+    <footer
       class="c0"
     >
-      <main>
-        <footer
-          class="c1"
-        >
-          <span
-            class="c2"
-          >
-            CC-BY 
-            2020
-            , 
-            footer.builtWith
-             
-          </span>
-          <a
-            class="c3"
-            href="https://gatsbyjs.org"
-            rel="noopener"
-            target="_blank"
-          >
-            gatsby
-          </a>
-          <span
-            class="c2"
-          >
-             • 
-          </span>
-          <a
-            class="c3"
-            href="https://github.com/diegocosta/diegocosta.com.br"
-            rel="noopener"
-            target="_blank"
-          >
-            footer.sourceCode
-          </a>
-          <span
-            class="c2"
-          >
-             • 
-          </span>
-          <a
-            class="c3"
-            href="/rss.xml"
-            rel="noopener"
-            target="_blank"
-          >
-            feed
-          </a>
-        </footer>
-      </main>
-    </section>
+      <span
+        class="c1"
+      >
+        CC-BY 
+        2020
+        , 
+        footer.builtWith
+         
+      </span>
+      <a
+        class="c2"
+        href="https://gatsbyjs.org"
+        rel="noopener"
+        target="_blank"
+      >
+        gatsby
+      </a>
+      <span
+        class="c1"
+      >
+         • 
+      </span>
+      <a
+        class="c2"
+        href="https://github.com/diegocoxta/diegocosta.me"
+        rel="noopener"
+        target="_blank"
+      >
+        footer.sourceCode
+      </a>
+    </footer>
   </div>
 </body>
 `;

@@ -1,10 +1,12 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import { Link } from '~/utils/i18n';
-import FixedContainer from '~/components/FixedContainer';
-import ThemeSwitcher from '~/components/ThemeSwitcher';
-import Commander from '~/components/Commander';
+import Metatags, { Props as MetatagsProps } from './components/Metatags';
+import LanguageSwitcher from './components/LanguageSwitcher';
+import ThemeSwitcher from './components/ThemeSwitcher';
+import Navigation from './components/Navigation';
+
+import { Link, useLocale } from '~/hooks/useLocale';
 
 const Content = styled.header`
   margin: 16px 0 40px 0;
@@ -50,16 +52,82 @@ const Options = styled.div`
   align-items: center;
 `;
 
-interface HeaderProps {
+const Paragraph = styled.p`
+  font-size: 24px;
+  line-height: 1.4;
+  color: ${({ theme }) => theme.textColor};
+`;
+
+const NavigationList = styled.ul`
+  margin: 0;
+  padding: 0;
+
+  @media (min-width: 760px) {
+    display: flex;
+  }
+`;
+
+const NavigationItem = styled.li`
+  list-style: none;
+  font-size: 24px;
+  font-weight: 700;
+  margin: 0 24px 5px 0;
+
+  @media (min-width: 760px) {
+    font-size: 22px;
+    margin: 0 24px 0 0;
+  }
+`;
+
+const NavigationLink = styled.a`
+  text-decoration: none;
+  color: ${({ theme }) => theme.textColor};
+  display: flex;
+  padding: 0;
+  text-transform: uppercase;
+
+  :after {
+    content: '.';
+    display: block;
+    color: ${({ theme }) => theme.backgroundColor};
+    font-size: 38px;
+    line-height: 0.5;
+
+    @media (min-width: 760px) {
+      line-height: 0.4;
+    }
+  }
+
+  :hover:after {
+    color: ${({ theme }) => theme.textColor};
+  }
+`;
+
+export interface HeaderProps {
   author: string;
+  page?: MetatagsProps;
+  description?: { [key: string]: string };
+  navigation?: [
+    {
+      label: string;
+      url: string;
+      rel?: string;
+    }
+  ];
+  fullHeader: boolean;
 }
 
 export default function Header(props: HeaderProps): React.ReactElement {
-  const { author } = props;
-  const [name, lastname] = author.split(' ');
+  const locale = useLocale();
+  const currentLanguage = locale.getCurrentLanguage();
+
+  const [name, lastname] = props.author.split(' ');
+  const description = props.description && props.description[currentLanguage];
 
   return (
-    <FixedContainer>
+    <>
+      <Metatags {...props.page} />
+      <LanguageSwitcher />
       <Content>
         <StyledLink to="/">
           <Name>
@@ -69,9 +137,27 @@ export default function Header(props: HeaderProps): React.ReactElement {
         </StyledLink>
         <Options>
           <ThemeSwitcher />
-          <Commander />
+          <Navigation />
         </Options>
       </Content>
-    </FixedContainer>
+      {props.fullHeader && (
+        <>
+          {description?.split('\n').map((p: string) => (
+            <Paragraph key={p} dangerouslySetInnerHTML={{ __html: p }} />
+          ))}
+          {props.navigation && (
+            <NavigationList data-testid="about-me-navigation-list">
+              {props.navigation.map((nav, index) => (
+                <NavigationItem key={`nav-${index}`} data-testid="about-me-navigation-item">
+                  <NavigationLink href={nav.url} rel={nav.rel}>
+                    {nav.label}
+                  </NavigationLink>
+                </NavigationItem>
+              ))}
+            </NavigationList>
+          )}
+        </>
+      )}
+    </>
   );
 }

@@ -5,24 +5,23 @@ import Article from './Article';
 
 interface Props {
   article?: Queries.ArticleInformationFragment | null;
-  showMetaAttributes?: boolean;
-  showBodyContent?: boolean;
+  showContent?: boolean | null;
 }
 
 export default (props: Props): React.ReactElement => {
-  const { showMetaAttributes, showBodyContent, article } = props;
+  const { article, showContent } = props;
   const { frontmatter, fields, html, excerpt } = article ?? {};
 
   return (
     <Article
+      kind={fields?.collection}
       title={frontmatter?.title ?? ''}
       date={frontmatter?.date}
       url={fields?.slug}
       tags={frontmatter?.tags as string[]}
       readingTime={fields?.readingTime?.minutes ?? 0}
       language={frontmatter?.language}
-      showMetaAttributes={showMetaAttributes}
-      content={showBodyContent ? html : frontmatter?.description || excerpt}
+      content={showContent ? html : frontmatter?.description || excerpt}
     />
   );
 };
@@ -32,6 +31,7 @@ export const query = graphql`
     html
     excerpt
     fields {
+      collection
       slug
       readingTime {
         minutes
