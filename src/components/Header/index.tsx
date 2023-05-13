@@ -1,9 +1,13 @@
 import React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 
-import Header from './Header';
+import Header, { HeaderProps } from './Header';
 
-export default (): React.ReactElement => {
+interface Props {
+  page: HeaderProps['page'];
+}
+
+export default (props: Props): React.ReactElement => {
   const {
     site: {
       siteMetadata: {
@@ -35,5 +39,5 @@ export default (): React.ReactElement => {
     `
   );
 
-  return <Header author={author} description={bio} navigation={getInTouch} />;
+  return <Header author={author} description={bio} navigation={getInTouch} page={props.page} />;
 };
