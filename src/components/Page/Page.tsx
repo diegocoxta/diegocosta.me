@@ -3,6 +3,7 @@ import { PageProps } from 'gatsby';
 import styled, { createGlobalStyle, ThemeContext } from 'styled-components';
 
 import { useTheme, ThemeScheme, themeLight, themeDark } from '~/hooks/useTheme';
+import { useLocale } from '~/hooks/useLocale';
 
 import Article from '~/components/Article';
 import Header from '~/components/Header';
@@ -41,13 +42,16 @@ interface PageContentProps {
 
 export default function Page(props: PageProps<PageContentProps>): React.ReactElement {
   const [theme, themeToggler, setMode] = useTheme();
-
+  const locale = useLocale();
   const themeMode = theme === 'light' ? themeLight : themeDark;
 
   const { data } = props;
+  const content = data?.content;
+  const list = data?.list;
 
-  const isSinglePage = data.content !== undefined;
-  const articles = isSinglePage ? [{ node: data.content }] : data.list?.edges;
+  const isSinglePage = content !== undefined;
+  const isNotFound = content === undefined && list === undefined;
+  const articles = isSinglePage ? [{ node: content }] : list?.edges;
 
   return (
     <ThemeContext.Provider value={{ ...themeMode, theme, themeToggler, setMode }}>
@@ -55,13 +59,34 @@ export default function Page(props: PageProps<PageContentProps>): React.ReactEle
       <Container>
         <Header
           page={{
-            title: data.content?.frontmatter?.title ?? undefined,
-            description: data.content?.frontmatter?.description ?? undefined,
+            title: content?.frontmatter?.title ?? undefined,
+            description: content?.frontmatter?.description ?? undefined,
           }}
+          fullHeader={!isNotFound && !isSinglePage}
         />
       </Container>
       <Divisor />
       <Container>
+        {isNotFound && (
+          <Article
+            key="article-not-found"
+            article={{
+              frontmatter: {
+                title: locale.getTranslationFor('404page.title'),
+                date: null,
+                description: null,
+                language: null,
+                tags: null,
+                status: null,
+                homepage_view_full_article: null,
+              },
+              fields: null,
+              excerpt: null,
+              html: locale.getTranslationFor('404page.message'),
+            }}
+            showContent={true}
+          />
+        )}
         {articles?.map(({ node }, index: number) => (
           <Article
             key={`article-${index}`}

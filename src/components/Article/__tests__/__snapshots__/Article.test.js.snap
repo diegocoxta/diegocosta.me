@@ -288,8 +288,7 @@ exports[`<Article /> renders properly 1`] = `
 
 .c5 {
   list-style: none;
-  padding: 0px 10px 10px 0;
-  margin-bottom: 5px;
+  padding: 0 10px 0 0;
 }
 
 .c6 {
@@ -409,6 +408,7 @@ exports[`<Article /> renders properly the body content 1`] = `
 .c3 {
   line-height: 1.5;
   font-size: 19px;
+  margin-top: 10px;
 }
 
 .c3 a {
@@ -508,6 +508,7 @@ exports[`<Article /> renders properly the description 1`] = `
 .c3 {
   line-height: 1.5;
   font-size: 19px;
+  margin-top: 10px;
 }
 
 .c3 a {
@@ -609,8 +610,7 @@ exports[`<Article /> renders the article details 1`] = `
 
 .c5 {
   list-style: none;
-  padding: 0px 10px 10px 0;
-  margin-bottom: 5px;
+  padding: 0 10px 0 0;
 }
 
 .c6 {

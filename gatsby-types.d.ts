@@ -3004,11 +3004,11 @@ declare namespace Queries {
     };
   };
 
-  type PageNotFoundQueryQueryVariables = Exact<{
+  type PageNotFoundQueryVariables = Exact<{
     language: Scalars['String'];
   }>;
 
-  type PageNotFoundQueryQuery = {
+  type PageNotFoundQuery = {
     readonly locales: {
       readonly edges: ReadonlyArray<{
         readonly node: { readonly ns: string | null; readonly data: string | null; readonly language: string | null };

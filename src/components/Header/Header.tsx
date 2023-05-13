@@ -114,6 +114,7 @@ export interface HeaderProps {
       rel?: string;
     }
   ];
+  fullHeader: boolean;
 }
 
 export default function Header(props: HeaderProps): React.ReactElement {
@@ -139,19 +140,23 @@ export default function Header(props: HeaderProps): React.ReactElement {
           <Navigation />
         </Options>
       </Content>
-      {description?.split('\n').map((p: string) => (
-        <Paragraph key={p} dangerouslySetInnerHTML={{ __html: p }} />
-      ))}
-      {props.navigation && (
-        <NavigationList data-testid="about-me-navigation-list">
-          {props.navigation.map((nav, index) => (
-            <NavigationItem key={`nav-${index}`} data-testid="about-me-navigation-item">
-              <NavigationLink href={nav.url} rel={nav.rel}>
-                {nav.label}
-              </NavigationLink>
-            </NavigationItem>
+      {props.fullHeader && (
+        <>
+          {description?.split('\n').map((p: string) => (
+            <Paragraph key={p} dangerouslySetInnerHTML={{ __html: p }} />
           ))}
-        </NavigationList>
+          {props.navigation && (
+            <NavigationList data-testid="about-me-navigation-list">
+              {props.navigation.map((nav, index) => (
+                <NavigationItem key={`nav-${index}`} data-testid="about-me-navigation-item">
+                  <NavigationLink href={nav.url} rel={nav.rel}>
+                    {nav.label}
+                  </NavigationLink>
+                </NavigationItem>
+              ))}
+            </NavigationList>
+          )}
+        </>
       )}
     </>
   );

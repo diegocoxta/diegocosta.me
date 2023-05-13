@@ -5,6 +5,7 @@ import Header, { HeaderProps } from './Header';
 
 interface Props {
   page: HeaderProps['page'];
+  fullHeader: boolean;
 }
 
 export default (props: Props): React.ReactElement => {
@@ -39,5 +40,7 @@ export default (props: Props): React.ReactElement => {
     `
   );
 
-  return <Header author={author} description={bio} navigation={getInTouch} page={props.page} />;
+  return (
+    <Header author={author} description={bio} navigation={getInTouch} page={props.page} fullHeader={props.fullHeader} />
+  );
 };

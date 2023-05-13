@@ -30,6 +30,7 @@ exports[`<TagsTemplate> renders properly 1`] = `
 .c5 {
   line-height: 1.5;
   font-size: 19px;
+  margin-top: 10px;
 }
 
 .c5 a {

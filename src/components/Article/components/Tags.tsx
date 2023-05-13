@@ -13,8 +13,7 @@ const TagList = styled.ul`
 
 const TagItem = styled.li`
   list-style: none;
-  padding: 0px 10px 10px 0;
-  margin-bottom: 5px;
+  padding: 0 10px 0 0;
 `;
 
 const TagLink = styled(Link)`

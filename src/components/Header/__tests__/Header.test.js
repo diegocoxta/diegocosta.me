@@ -29,6 +29,7 @@ describe('<Header />', () => {
       <Header
         author="John Doe"
         description="You can hear more about here:"
+        fullHeader={true}
         navigation={[
           { label: '', url: '' },
           { label: '', url: '' },

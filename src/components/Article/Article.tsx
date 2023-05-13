@@ -25,6 +25,7 @@ const MetaAttributes = styled.p`
 export const Content = styled.section`
   line-height: 1.5;
   font-size: 19px;
+  margin-top: 10px;
 
   a {
     color: ${({ theme }) => theme.accentColor};
