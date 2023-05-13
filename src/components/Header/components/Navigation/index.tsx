@@ -5,20 +5,17 @@ import { KBarProvider } from 'kbar';
 
 import { useLocale } from '~/hooks/useLocale';
 
-import Commander from './Commander';
+import Commander from './Navigation';
 
 export default (): React.ReactElement => {
   const locale = useLocale();
   const themeContext = useContext(ThemeContext);
 
-  const data: Queries.CommanderQueryQuery = useStaticQuery(graphql`
-    query CommanderQuery {
+  const data: Queries.NavigationQuery = useStaticQuery(graphql`
+    query Navigation {
       site {
         siteMetadata {
           repository
-          features {
-            showCommandBarNavigation
-          }
         }
       }
       pages: allMarkdownRemark(filter: { frontmatter: { status: { ne: "draft" } } }) {
@@ -34,10 +31,6 @@ export default (): React.ReactElement => {
       }
     }
   `);
-
-  if (!data.site?.siteMetadata?.features?.showCommandBarNavigation) {
-    return <></>;
-  }
 
   const currentLanguagePrefix = locale.getCurrentLanguage();
 

@@ -72,6 +72,9 @@ exports[`<Header /> does not render the last name 1`] = `
 <body>
   <div>
     <p>
+      Metatags
+    </p>
+    <p>
       LanguageSwitcher
     </p>
     <header
@@ -94,7 +97,7 @@ exports[`<Header /> does not render the last name 1`] = `
           ThemeSwitcher
         </p>
         <p>
-          Commander
+          Navigation
         </p>
       </div>
     </header>
@@ -174,6 +177,9 @@ exports[`<Header /> renders properly 1`] = `
 <body>
   <div>
     <p>
+      Metatags
+    </p>
+    <p>
       LanguageSwitcher
     </p>
     <header
@@ -203,7 +209,7 @@ exports[`<Header /> renders properly 1`] = `
           ThemeSwitcher
         </p>
         <p>
-          Commander
+          Navigation
         </p>
       </div>
     </header>
@@ -335,6 +341,9 @@ exports[`<Header /> renders the navigation properly 1`] = `
 <body>
   <div>
     <p>
+      Metatags
+    </p>
+    <p>
       LanguageSwitcher
     </p>
     <header
@@ -364,7 +373,7 @@ exports[`<Header /> renders the navigation properly 1`] = `
           ThemeSwitcher
         </p>
         <p>
-          Commander
+          Navigation
         </p>
       </div>
     </header>

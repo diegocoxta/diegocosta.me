@@ -2,7 +2,6 @@ import React from 'react';
 import { render } from '@testing-library/react';
 
 jest.mock('../../components/Header', () => () => <p>Header</p>);
-jest.mock('../../components/Metatags', () => () => <p>Metatags</p>);
 jest.mock('../../components/Footer', () => () => <p>Footer</p>);
 
 import SingleTemplate from '../single';

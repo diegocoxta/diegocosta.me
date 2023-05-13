@@ -3,7 +3,7 @@ import { useStaticQuery, graphql } from 'gatsby';
 
 import Metatags, { MetatagsProps } from './Metatags';
 
-type Props = Partial<Pick<MetatagsProps, 'title' | 'description' | 'image'>>;
+export type Props = Partial<Pick<MetatagsProps, 'title' | 'description' | 'image'>>;
 
 export default (props: Props): React.ReactElement => {
   const {

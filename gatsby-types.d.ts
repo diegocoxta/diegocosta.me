@@ -2861,23 +2861,6 @@ declare namespace Queries {
     } | null;
   };
 
-  type CommanderQueryQueryVariables = Exact<{ [key: string]: never }>;
-
-  type CommanderQueryQuery = {
-    readonly site: {
-      readonly siteMetadata: {
-        readonly repository: string | null;
-        readonly features: { readonly showCommandBarNavigation: boolean | null } | null;
-      } | null;
-    } | null;
-    readonly pages: {
-      readonly nodes: ReadonlyArray<{
-        readonly frontmatter: { readonly title: string | null } | null;
-        readonly fields: { readonly slug: string | null; readonly collection: string | null } | null;
-      }>;
-    };
-  };
-
   type FooterComponentQueryVariables = Exact<{ [key: string]: never }>;
 
   type FooterComponentQuery = {
@@ -3059,6 +3042,18 @@ declare namespace Queries {
         } | null;
       } | null;
     } | null;
+  };
+
+  type NavigationQueryVariables = Exact<{ [key: string]: never }>;
+
+  type NavigationQuery = {
+    readonly site: { readonly siteMetadata: { readonly repository: string | null } | null } | null;
+    readonly pages: {
+      readonly nodes: ReadonlyArray<{
+        readonly frontmatter: { readonly title: string | null } | null;
+        readonly fields: { readonly slug: string | null; readonly collection: string | null } | null;
+      }>;
+    };
   };
 
   type PageNotFoundQueryQueryVariables = Exact<{

@@ -4,7 +4,6 @@ import styled, { createGlobalStyle, ThemeContext } from 'styled-components';
 
 import { useTheme, ThemeScheme, themeLight, themeDark } from '~/hooks/useTheme';
 
-import Metatags from '~/components/Metatags';
 import Article from '~/components/Article';
 import Header from '~/components/Header';
 import Footer from '~/components/Footer';
@@ -54,8 +53,12 @@ export default function Page(props: PageProps<PageContentProps>): React.ReactEle
     <ThemeContext.Provider value={{ ...themeMode, theme, themeToggler, setMode }}>
       <GlobalStyle />
       <Container>
-        <Header />
-        <Metatags title={props.data.content?.frontmatter?.title} />
+        <Header
+          page={{
+            title: data.content?.frontmatter?.title ?? undefined,
+            description: data.content?.frontmatter?.description ?? undefined,
+          }}
+        />
       </Container>
       <Divisor />
       <Container>

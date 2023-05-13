@@ -3,9 +3,10 @@ import { render } from '@testing-library/react';
 
 import Header from '../Header';
 
-jest.mock('../../ThemeSwitcher', () => () => <p>ThemeSwitcher</p>);
-jest.mock('../../LanguageSwitcher', () => () => <p>LanguageSwitcher</p>);
-jest.mock('../../Commander', () => () => <p>Commander</p>);
+jest.mock('../components/ThemeSwitcher', () => () => <p>ThemeSwitcher</p>);
+jest.mock('../components/LanguageSwitcher', () => () => <p>LanguageSwitcher</p>);
+jest.mock('../components/Navigation', () => () => <p>Navigation</p>);
+jest.mock('../components/Metatags', () => () => <p>Metatags</p>);
 
 describe('<Header />', () => {
   it('renders properly', () => {

@@ -1,9 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import ThemeSwitcher from '~/components/ThemeSwitcher';
-import LanguageSwitcher from '~/components/LanguageSwitcher';
-import Commander from '~/components/Commander';
+import Metatags, { Props as MetatagsProps } from './components/Metatags';
+import LanguageSwitcher from './components/LanguageSwitcher';
+import ThemeSwitcher from './components/ThemeSwitcher';
+import Navigation from './components/Navigation';
 
 import { Link, useLocale } from '~/hooks/useLocale';
 
@@ -57,7 +58,7 @@ const Paragraph = styled.p`
   color: ${({ theme }) => theme.textColor};
 `;
 
-const Navigation = styled.ul`
+const NavigationList = styled.ul`
   margin: 0;
   padding: 0;
 
@@ -102,8 +103,9 @@ const NavigationLink = styled.a`
   }
 `;
 
-interface HeaderProps {
+export interface HeaderProps {
   author: string;
+  page?: MetatagsProps;
   description?: { [key: string]: string };
   navigation?: [
     {
@@ -123,6 +125,7 @@ export default function Header(props: HeaderProps): React.ReactElement {
 
   return (
     <>
+      <Metatags {...props.page} />
       <LanguageSwitcher />
       <Content>
         <StyledLink to="/">
@@ -133,14 +136,14 @@ export default function Header(props: HeaderProps): React.ReactElement {
         </StyledLink>
         <Options>
           <ThemeSwitcher />
-          <Commander />
+          <Navigation />
         </Options>
       </Content>
       {description?.split('\n').map((p: string) => (
         <Paragraph key={p} dangerouslySetInnerHTML={{ __html: p }} />
       ))}
       {props.navigation && (
-        <Navigation data-testid="about-me-navigation-list">
+        <NavigationList data-testid="about-me-navigation-list">
           {props.navigation.map((nav, index) => (
             <NavigationItem key={`nav-${index}`} data-testid="about-me-navigation-item">
               <NavigationLink href={nav.url} rel={nav.rel}>
@@ -148,7 +151,7 @@ export default function Header(props: HeaderProps): React.ReactElement {
               </NavigationLink>
             </NavigationItem>
           ))}
-        </Navigation>
+        </NavigationList>
       )}
     </>
   );

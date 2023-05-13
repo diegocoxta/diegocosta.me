@@ -97,9 +97,6 @@ exports[`<SingleTemplate> renders properly 1`] = `
       <p>
         Header
       </p>
-      <p>
-        Metatags
-      </p>
     </section>
     <div
       class="c1"
