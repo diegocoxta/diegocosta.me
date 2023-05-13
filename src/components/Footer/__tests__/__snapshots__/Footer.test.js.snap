@@ -63,7 +63,7 @@ exports[`<Footer /> renders properly 1`] = `
 </body>
 `;
 
-exports[`<Footer /> renders the repository url if defined 1`] = `
+exports[`<Footer /> renders the sourceCode url if defined 1`] = `
 .c0 {
   margin-bottom: 50px;
 }

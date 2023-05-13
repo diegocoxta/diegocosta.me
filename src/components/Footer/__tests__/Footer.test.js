@@ -10,9 +10,9 @@ describe('<Footer />', () => {
     expect(baseElement).toMatchSnapshot();
   });
 
-  it('renders the repository url if defined', () => {
+  it('renders the sourceCode url if defined', () => {
     const { baseElement, getByText } = render(
-      <Footer year={2020} repository="https://github.com/diegocoxta/diegocosta.me" />
+      <Footer year={2020} sourceCode="https://github.com/diegocoxta/diegocosta.me" />
     );
     expect(getByText('footer.sourceCode')).toBeTruthy();
     expect(baseElement).toMatchSnapshot();
