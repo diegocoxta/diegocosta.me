@@ -39,7 +39,7 @@ const Link = styled.a.attrs({
 
 interface FooterProps {
   year: number;
-  repository?: string;
+  sourceCode?: string;
 }
 
 export default function Footer(props: FooterProps): React.ReactElement {
@@ -53,7 +53,7 @@ export default function Footer(props: FooterProps): React.ReactElement {
         </Label>
         <Link href="https://gatsbyjs.org">gatsby</Link>
         <Label> • </Label>
-        {props.repository && <Link href={props.repository}>{locale.getTranslationFor('footer.sourceCode')}</Link>}
+        {props.sourceCode && <Link href={props.sourceCode}>{locale.getTranslationFor('footer.sourceCode')}</Link>}
       </Content>
     </>
   );

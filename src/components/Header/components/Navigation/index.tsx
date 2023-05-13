@@ -15,7 +15,7 @@ export default (): React.ReactElement => {
     query Navigation {
       site {
         siteMetadata {
-          repository
+          sourceCode
         }
       }
       pages: allMarkdownRemark(filter: { frontmatter: { status: { ne: "draft" } } }) {
@@ -115,7 +115,7 @@ export default (): React.ReactElement => {
       name: locale.getTranslationFor('commander.sourceCode'),
       shortcut: ['g', 's'],
       section: locale.getTranslationFor('commander.tools'),
-      perform: () => window.open(data.site?.siteMetadata?.repository as string, '_blank'),
+      perform: () => window.open(data.site?.siteMetadata?.sourceCode as string, '_blank'),
       icon: 'BsCodeSlash',
     },
   ];
