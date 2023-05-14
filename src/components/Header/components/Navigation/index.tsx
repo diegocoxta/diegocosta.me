@@ -18,7 +18,7 @@ export default (): React.ReactElement => {
           sourceCode
         }
       }
-      pages: allMarkdownRemark(filter: { frontmatter: { status: { ne: "draft" }, hide_from_listings: { ne: true } } }) {
+      pages: allMarkdownRemark(filter: { frontmatter: { flags: { nin: ["hide-from-listings", "draft"] } } }) {
         nodes {
           frontmatter {
             title

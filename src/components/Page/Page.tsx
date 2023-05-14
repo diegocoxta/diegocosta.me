@@ -82,10 +82,8 @@ export default function Page(props: PageProps<PageContentProps>): React.ReactEle
                 title: locale.getTranslationFor('404page.title'),
                 date: null,
                 description: null,
-                language: null,
                 tags: null,
-                status: null,
-                homepage_view_full_article: null,
+                flags: [],
               },
               fields: null,
               excerpt: null,
@@ -98,7 +96,7 @@ export default function Page(props: PageProps<PageContentProps>): React.ReactEle
           <Article
             key={`article-${index}`}
             article={node}
-            showContent={isSinglePage || node?.frontmatter?.homepage_view_full_article}
+            showContent={isSinglePage || node?.frontmatter?.flags?.includes('expanded-on-listings')}
           />
         ))}
         <Footer />

@@ -1495,9 +1495,7 @@ declare namespace Queries {
   type MarkdownRemarkFrontmatter = {
     readonly date: Maybe<Scalars['Date']>;
     readonly description: Maybe<Scalars['String']>;
-    readonly hide_from_listings: Maybe<Scalars['Boolean']>;
-    readonly homepage_view_full_article: Maybe<Scalars['Boolean']>;
-    readonly status: Maybe<Scalars['String']>;
+    readonly flags: Maybe<ReadonlyArray<Maybe<Scalars['String']>>>;
     readonly tags: Maybe<ReadonlyArray<Maybe<Scalars['String']>>>;
     readonly title: Maybe<Scalars['String']>;
   };
@@ -1512,9 +1510,7 @@ declare namespace Queries {
   type MarkdownRemarkFrontmatterFieldSelector = {
     readonly date: InputMaybe<FieldSelectorEnum>;
     readonly description: InputMaybe<FieldSelectorEnum>;
-    readonly hide_from_listings: InputMaybe<FieldSelectorEnum>;
-    readonly homepage_view_full_article: InputMaybe<FieldSelectorEnum>;
-    readonly status: InputMaybe<FieldSelectorEnum>;
+    readonly flags: InputMaybe<FieldSelectorEnum>;
     readonly tags: InputMaybe<FieldSelectorEnum>;
     readonly title: InputMaybe<FieldSelectorEnum>;
   };
@@ -1522,9 +1518,7 @@ declare namespace Queries {
   type MarkdownRemarkFrontmatterFilterInput = {
     readonly date: InputMaybe<DateQueryOperatorInput>;
     readonly description: InputMaybe<StringQueryOperatorInput>;
-    readonly hide_from_listings: InputMaybe<BooleanQueryOperatorInput>;
-    readonly homepage_view_full_article: InputMaybe<BooleanQueryOperatorInput>;
-    readonly status: InputMaybe<StringQueryOperatorInput>;
+    readonly flags: InputMaybe<StringQueryOperatorInput>;
     readonly tags: InputMaybe<StringQueryOperatorInput>;
     readonly title: InputMaybe<StringQueryOperatorInput>;
   };
@@ -1532,9 +1526,7 @@ declare namespace Queries {
   type MarkdownRemarkFrontmatterSortInput = {
     readonly date: InputMaybe<SortOrderEnum>;
     readonly description: InputMaybe<SortOrderEnum>;
-    readonly hide_from_listings: InputMaybe<SortOrderEnum>;
-    readonly homepage_view_full_article: InputMaybe<SortOrderEnum>;
-    readonly status: InputMaybe<SortOrderEnum>;
+    readonly flags: InputMaybe<SortOrderEnum>;
     readonly tags: InputMaybe<SortOrderEnum>;
     readonly title: InputMaybe<SortOrderEnum>;
   };
@@ -2808,8 +2800,7 @@ declare namespace Queries {
       readonly title: string | null;
       readonly description: string | null;
       readonly tags: ReadonlyArray<string | null> | null;
-      readonly homepage_view_full_article: boolean | null;
-      readonly status: string | null;
+      readonly flags: ReadonlyArray<string | null> | null;
     } | null;
   };
 
@@ -2967,8 +2958,7 @@ declare namespace Queries {
             readonly title: string | null;
             readonly description: string | null;
             readonly tags: ReadonlyArray<string | null> | null;
-            readonly homepage_view_full_article: boolean | null;
-            readonly status: string | null;
+            readonly flags: ReadonlyArray<string | null> | null;
           } | null;
         };
       }>;
@@ -3051,8 +3041,7 @@ declare namespace Queries {
             readonly title: string | null;
             readonly description: string | null;
             readonly tags: ReadonlyArray<string | null> | null;
-            readonly homepage_view_full_article: boolean | null;
-            readonly status: string | null;
+            readonly flags: ReadonlyArray<string | null> | null;
           } | null;
         };
       }>;
@@ -3086,8 +3075,7 @@ declare namespace Queries {
             readonly title: string | null;
             readonly description: string | null;
             readonly tags: ReadonlyArray<string | null> | null;
-            readonly homepage_view_full_article: boolean | null;
-            readonly status: string | null;
+            readonly flags: ReadonlyArray<string | null> | null;
           } | null;
         };
       }>;
