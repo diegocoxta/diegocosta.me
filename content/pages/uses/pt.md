@@ -1,6 +1,7 @@
 ---
 title: Ferramentas que uso
 description: A página onde compartilho as ferramentas que tornam minha vida mais fácil.
+hide_from_listings: true
 ---
 
 **Última atualização**: Maio de 2023

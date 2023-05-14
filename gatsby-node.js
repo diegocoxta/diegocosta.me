@@ -57,7 +57,10 @@ exports.onCreateNode = async ({ node, actions, getNode }) => {
 exports.createPages = async ({ graphql, actions, reporter }) => {
   const result = await graphql(`
     query GatsbyCreatePage {
-      content: allMarkdownRemark(sort: { frontmatter: { date: DESC } }) {
+      content: allMarkdownRemark(
+        sort: { frontmatter: { date: DESC } }
+        filter: { frontmatter: { status: { ne: "draft" } } }
+      ) {
         edges {
           node {
             fields {
