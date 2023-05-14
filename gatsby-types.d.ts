@@ -2999,7 +2999,11 @@ declare namespace Queries {
     readonly pages: {
       readonly nodes: ReadonlyArray<{
         readonly frontmatter: { readonly title: string | null } | null;
-        readonly fields: { readonly slug: string | null; readonly collection: string | null } | null;
+        readonly fields: {
+          readonly slug: string | null;
+          readonly collection: string | null;
+          readonly language: string | null;
+        } | null;
       }>;
     };
   };
