@@ -38,6 +38,7 @@ exports[`<Article /> does not render the article details 1`] = `
           class="c2"
           data-testid="article-header-title"
           href="/awesome-article"
+          language="en"
         >
           Awesome Article
         </a>
@@ -249,6 +250,7 @@ exports[`<Article /> does not render the tags 1`] = `
           class="c2"
           data-testid="article-header-title"
           href="/awesome-article"
+          language="pt"
         >
           Awesome Article
         </a>
@@ -333,6 +335,7 @@ exports[`<Article /> renders properly 1`] = `
           class="c2"
           data-testid="article-header-title"
           href="/awesome-article"
+          language="en"
         >
           Awesome Article
         </a>
@@ -464,6 +467,7 @@ exports[`<Article /> renders properly the body content 1`] = `
           class="c2"
           data-testid="article-header-title"
           href="/awesome-article"
+          language="pt"
         >
           Awesome Article
         </a>
@@ -564,6 +568,7 @@ exports[`<Article /> renders properly the description 1`] = `
           class="c2"
           data-testid="article-header-title"
           href="/awesome-article"
+          language="pt"
         >
           Awesome Article
         </a>
@@ -653,6 +658,7 @@ exports[`<Article /> renders the article details 1`] = `
           class="c2"
           data-testid="article-header-title"
           href="/awesome-article"
+          language="en"
         >
           Awesome Article
         </a>

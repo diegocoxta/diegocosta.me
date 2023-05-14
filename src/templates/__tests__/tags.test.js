@@ -19,9 +19,9 @@ describe('<TagsTemplate>', () => {
                 date: '30/10/2020',
                 tags: [],
                 description: 'Awesome first article',
-                language: 'en',
               },
               fields: {
+                language: 'en',
                 slug: '/path-to-article',
                 readingTime: {
                   minutes: 5,
@@ -37,10 +37,10 @@ describe('<TagsTemplate>', () => {
                 date: '30/10/2020',
                 tags: [],
                 description: 'Awesome second article',
-                language: 'pt',
               },
               fields: {
                 slug: '/path-to-article-2',
+                language: 'pt',
                 readingTime: {
                   minutes: 2,
                 },

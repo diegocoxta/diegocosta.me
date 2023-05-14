@@ -20,7 +20,7 @@ export default (props: Props): React.ReactElement => {
       url={fields?.slug}
       tags={frontmatter?.tags as string[]}
       readingTime={fields?.readingTime?.minutes ?? 0}
-      language={frontmatter?.language}
+      language={fields?.language}
       content={showContent ? html : frontmatter?.description || excerpt}
     />
   );
@@ -45,7 +45,6 @@ export const query = graphql`
       tags
       homepage_view_full_article
       status
-      language
     }
   }
 `;

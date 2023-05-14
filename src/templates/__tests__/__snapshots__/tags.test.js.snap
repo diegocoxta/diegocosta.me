@@ -116,6 +116,7 @@ exports[`<TagsTemplate> renders properly 1`] = `
             class="c4"
             data-testid="article-header-title"
             href="/path-to-article"
+            language="en"
           >
             Title 1
           </a>
@@ -137,6 +138,7 @@ exports[`<TagsTemplate> renders properly 1`] = `
             class="c4"
             data-testid="article-header-title"
             href="/path-to-article-2"
+            language="pt"
           >
             Title 2
           </a>

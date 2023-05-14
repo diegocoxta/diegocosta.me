@@ -113,7 +113,7 @@ export default function Article(props: ArticleProps): React.ReactElement {
   return (
     <Container data-testid="article-item">
       <Header>
-        <Title title={props.title} url={props.url} />
+        <Title title={props.title} url={props.url} language={props.language} />
         {props.kind === 'articles' && (
           <>
             <MetaAttributes>

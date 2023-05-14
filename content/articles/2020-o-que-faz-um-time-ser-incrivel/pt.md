@@ -3,7 +3,6 @@ title: O que faz um time ser incrível?
 description: Apresentação tendo como base os ensinamentos do Project Aristotle
 date: '2020-06-01T22:12:03.284Z'
 tags: ['team-building', 'talks']
-language: pt
 status: draft
 ---
 

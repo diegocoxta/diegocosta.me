@@ -1496,7 +1496,6 @@ declare namespace Queries {
     readonly date: Maybe<Scalars['Date']>;
     readonly description: Maybe<Scalars['String']>;
     readonly homepage_view_full_article: Maybe<Scalars['Boolean']>;
-    readonly language: Maybe<Scalars['String']>;
     readonly status: Maybe<Scalars['String']>;
     readonly tags: Maybe<ReadonlyArray<Maybe<Scalars['String']>>>;
     readonly title: Maybe<Scalars['String']>;
@@ -1513,7 +1512,6 @@ declare namespace Queries {
     readonly date: InputMaybe<FieldSelectorEnum>;
     readonly description: InputMaybe<FieldSelectorEnum>;
     readonly homepage_view_full_article: InputMaybe<FieldSelectorEnum>;
-    readonly language: InputMaybe<FieldSelectorEnum>;
     readonly status: InputMaybe<FieldSelectorEnum>;
     readonly tags: InputMaybe<FieldSelectorEnum>;
     readonly title: InputMaybe<FieldSelectorEnum>;
@@ -1523,7 +1521,6 @@ declare namespace Queries {
     readonly date: InputMaybe<DateQueryOperatorInput>;
     readonly description: InputMaybe<StringQueryOperatorInput>;
     readonly homepage_view_full_article: InputMaybe<BooleanQueryOperatorInput>;
-    readonly language: InputMaybe<StringQueryOperatorInput>;
     readonly status: InputMaybe<StringQueryOperatorInput>;
     readonly tags: InputMaybe<StringQueryOperatorInput>;
     readonly title: InputMaybe<StringQueryOperatorInput>;
@@ -1533,7 +1530,6 @@ declare namespace Queries {
     readonly date: InputMaybe<SortOrderEnum>;
     readonly description: InputMaybe<SortOrderEnum>;
     readonly homepage_view_full_article: InputMaybe<SortOrderEnum>;
-    readonly language: InputMaybe<SortOrderEnum>;
     readonly status: InputMaybe<SortOrderEnum>;
     readonly tags: InputMaybe<SortOrderEnum>;
     readonly title: InputMaybe<SortOrderEnum>;
@@ -2810,7 +2806,6 @@ declare namespace Queries {
       readonly tags: ReadonlyArray<string | null> | null;
       readonly homepage_view_full_article: boolean | null;
       readonly status: string | null;
-      readonly language: string | null;
     } | null;
   };
 
@@ -2970,7 +2965,6 @@ declare namespace Queries {
             readonly tags: ReadonlyArray<string | null> | null;
             readonly homepage_view_full_article: boolean | null;
             readonly status: string | null;
-            readonly language: string | null;
           } | null;
         };
       }>;
@@ -3051,7 +3045,6 @@ declare namespace Queries {
             readonly tags: ReadonlyArray<string | null> | null;
             readonly homepage_view_full_article: boolean | null;
             readonly status: string | null;
-            readonly language: string | null;
           } | null;
         };
       }>;
@@ -3087,7 +3080,6 @@ declare namespace Queries {
             readonly tags: ReadonlyArray<string | null> | null;
             readonly homepage_view_full_article: boolean | null;
             readonly status: string | null;
-            readonly language: string | null;
           } | null;
         };
       }>;
