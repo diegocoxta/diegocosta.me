@@ -9,7 +9,10 @@ export const pageQuery = graphql`
     }
     list: allMarkdownRemark(
       sort: { frontmatter: { date: DESC } }
-      filter: { fields: { collection: { eq: "articles" } }, frontmatter: { status: { ne: "draft" } } }
+      filter: {
+        fields: { collection: { eq: "articles" } }
+        frontmatter: { status: { ne: "draft" }, hide_from_listings: { ne: true } }
+      }
     ) {
       edges {
         node {

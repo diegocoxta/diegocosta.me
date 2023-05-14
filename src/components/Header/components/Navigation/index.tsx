@@ -18,7 +18,7 @@ export default (): React.ReactElement => {
           sourceCode
         }
       }
-      pages: allMarkdownRemark(filter: { frontmatter: { status: { ne: "draft" } } }) {
+      pages: allMarkdownRemark(filter: { frontmatter: { status: { ne: "draft" }, hide_from_listings: { ne: true } } }) {
         nodes {
           frontmatter {
             title
@@ -32,8 +32,6 @@ export default (): React.ReactElement => {
       }
     }
   `);
-
-  console.log({ data });
 
   const currentLanguagePrefix = locale.getCurrentLanguage();
 
