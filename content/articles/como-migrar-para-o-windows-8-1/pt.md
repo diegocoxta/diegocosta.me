@@ -2,14 +2,14 @@
 title: Como migrar para o Windows 8.1 a partir de uma nova instalação do Windows 8
 date: '2015-11-20T22:12:03.284Z'
 description: Quem já precisou formatar um PC e acabou caindo no Windows 8 sabe como é uma dor de cabeça realizar o upgrade para o Windows 8.1.
-tags: ['Windows']
+tags: ['windows']
 language: pt
 status: published
 ---
 
 Quem já precisou formatar um PC e acabou caindo no Windows 8 sabe como é uma dor de cabeça realizar o upgrade para o Windows 8.1. Para me auxiliar nessa tarefa em um futuro não muito distante e até mesmo ajudar pessoas que apresentem o mesmo problema criei este pequeno guia.
 
-![Foto do chapolin colorado](../assets/como-migrar-para-o-windows-8-1-01.png)
+![Foto do chapolin colorado](./como-migrar-para-o-windows-8-1-01.png)
 
 <center><em>Siga-me os bons!</em></center>
 
@@ -19,7 +19,7 @@ O Update Diagnostic é uma ferramenta desenvolvida pela Microsoft que promete so
 
 Após o download você deve seguir o processo básico de instalação de programas no Windows: Avançar, Avançar, Concluir. Recomendo a reinicialização do computador, só para garantir que todas as modificações foram efetivadas.
 
-![Foto do Windows Update Diagnostic](../assets/como-migrar-para-o-windows-8-1-02.png)
+![Foto do Windows Update Diagnostic](./como-migrar-para-o-windows-8-1-02.png)
 
 ## 2. Instale as atualizações necessárias para ter acesso a nova versão do Windows.
 
@@ -33,7 +33,7 @@ Caso ainda não consiga realizar downloads no Windows Update, baixe as atualiza�
 
 Depois de realizar esses passos você já deve ter acesso ao Windows 8.1 na Windows Store e vai conseguir realizar a instalação sem grandes transtornos.
 
-![Foto do Download do Windows 8.1 na Windows Store](../assets/como-migrar-para-o-windows-8-1-03.jpeg)
+![Foto do Download do Windows 8.1 na Windows Store](./como-migrar-para-o-windows-8-1-03.jpeg)
 
 <center><em>Yay!</em></center>
 

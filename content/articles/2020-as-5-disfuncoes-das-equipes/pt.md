@@ -2,7 +2,7 @@
 title: As 5 disfunções das equipes
 description: Apresentação sobre disfunções em times com base no livro 'Os 5 desafios das equipes' de Patrick Lencioni
 date: '2020-06-01T22:12:03.284Z'
-tags: ['Team Building', 'Talks', 'Books']
+tags: ['team-building', 'talks', 'books']
 language: pt
 status: draft
 ---

@@ -2,7 +2,7 @@
 title: Minha retrospectiva profissional de 2020
 date: '2021-01-09T09:12:03.284Z'
 description: Flagrei-me pensando o quão insano 2020 foi para mim na vida profissional e resolvi escrever esse resumo.
-tags: ['Carreira', 'Retrospectiva']
+tags: ['carreira', 'retrospectiva']
 language: pt
 status: published
 ---

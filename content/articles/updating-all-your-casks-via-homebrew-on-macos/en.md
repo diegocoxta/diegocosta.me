@@ -2,7 +2,7 @@
 title: Updating all your casks via Homebrew on macOS
 date: '2020-01-18T23:12:03.284Z'
 description: A simple way to force an update to your applications installed via Homebrew.
-tags: ['Terminal', 'MacOS', 'Homebrew', 'Caskroom', 'til', 'english']
+tags: ['terminal', 'macos', 'homebrew', 'caskroom', 'til', 'english']
 language: en
 status: published
 homepage_view_full_article: true
