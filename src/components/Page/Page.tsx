@@ -42,28 +42,35 @@ interface PageContentProps {
 
 export default function Page(props: PageProps<PageContentProps>): React.ReactElement {
   const [theme, themeToggler, setMode] = useTheme();
-  const locale = useLocale();
   const themeMode = theme === 'light' ? themeLight : themeDark;
 
+  const locale = useLocale();
+  const currentLanguage = locale.getCurrentLanguage();
+
   const { data } = props;
-  const content = data?.content;
-  const list = data?.list;
+  const content = data?.content?.edges;
+  const list = data?.list?.edges;
 
   const isSinglePage = content !== undefined;
   const isNotFound = content === undefined && list === undefined;
-  const articles = isSinglePage ? [{ node: content }] : list?.edges;
+  let articles = isSinglePage ? content : list;
+
+  if (isSinglePage && articles !== undefined && articles.length > 1) {
+    articles = articles.filter((i) => i.node.fields?.language === currentLanguage);
+  }
+
+  const pageHeader = isSinglePage
+    ? {
+        title: articles?.[0]?.node.frontmatter?.title ?? undefined,
+        description: articles?.[0]?.node.frontmatter?.description ?? undefined,
+      }
+    : undefined;
 
   return (
     <ThemeContext.Provider value={{ ...themeMode, theme, themeToggler, setMode }}>
       <GlobalStyle />
       <Container>
-        <Header
-          page={{
-            title: content?.frontmatter?.title ?? undefined,
-            description: content?.frontmatter?.description ?? undefined,
-          }}
-          fullHeader={!isNotFound && !isSinglePage}
-        />
+        <Header page={pageHeader} fullHeader={!isNotFound && !isSinglePage} />
       </Container>
       <Divisor />
       <Container>

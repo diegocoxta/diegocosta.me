@@ -2,8 +2,7 @@
 title: Atualizando todos seus casks via Homebrew no macOS
 date: '2020-01-18T22:12:03.284Z'
 description: Uma dica simples para forçar a atualização de todos seus casks via HomeBrew
-tags: ['Terminal', 'MacOS', 'Homebrew', 'Caskroom', 'til']
-language: pt
+tags: ['terminal', 'macos', 'homebrew', 'caskroom', 'til']
 status: published
 ---
 

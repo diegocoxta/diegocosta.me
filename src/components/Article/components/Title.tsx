@@ -23,11 +23,12 @@ const Container = styled(Link).attrs((props) => ({
 export interface TitleProps {
   title: string;
   url?: string | null;
+  language?: string | null;
 }
 
 export default function Title(props: TitleProps) {
   return (
-    <Container to={props.url} data-testid="article-header-title">
+    <Container to={props.url} data-testid="article-header-title" language={props.language}>
       {props.title}
     </Container>
   );

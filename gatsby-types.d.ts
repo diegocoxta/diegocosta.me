@@ -1415,18 +1415,21 @@ declare namespace Queries {
 
   type MarkdownRemarkFields = {
     readonly collection: Maybe<Scalars['String']>;
+    readonly language: Maybe<Scalars['String']>;
     readonly readingTime: Maybe<MarkdownRemarkFieldsReadingTime>;
     readonly slug: Maybe<Scalars['String']>;
   };
 
   type MarkdownRemarkFieldsFieldSelector = {
     readonly collection: InputMaybe<FieldSelectorEnum>;
+    readonly language: InputMaybe<FieldSelectorEnum>;
     readonly readingTime: InputMaybe<MarkdownRemarkFieldsReadingTimeFieldSelector>;
     readonly slug: InputMaybe<FieldSelectorEnum>;
   };
 
   type MarkdownRemarkFieldsFilterInput = {
     readonly collection: InputMaybe<StringQueryOperatorInput>;
+    readonly language: InputMaybe<StringQueryOperatorInput>;
     readonly readingTime: InputMaybe<MarkdownRemarkFieldsReadingTimeFilterInput>;
     readonly slug: InputMaybe<StringQueryOperatorInput>;
   };
@@ -1461,6 +1464,7 @@ declare namespace Queries {
 
   type MarkdownRemarkFieldsSortInput = {
     readonly collection: InputMaybe<SortOrderEnum>;
+    readonly language: InputMaybe<SortOrderEnum>;
     readonly readingTime: InputMaybe<MarkdownRemarkFieldsReadingTimeSortInput>;
     readonly slug: InputMaybe<SortOrderEnum>;
   };
@@ -1492,7 +1496,6 @@ declare namespace Queries {
     readonly date: Maybe<Scalars['Date']>;
     readonly description: Maybe<Scalars['String']>;
     readonly homepage_view_full_article: Maybe<Scalars['Boolean']>;
-    readonly language: Maybe<Scalars['String']>;
     readonly status: Maybe<Scalars['String']>;
     readonly tags: Maybe<ReadonlyArray<Maybe<Scalars['String']>>>;
     readonly title: Maybe<Scalars['String']>;
@@ -1509,7 +1512,6 @@ declare namespace Queries {
     readonly date: InputMaybe<FieldSelectorEnum>;
     readonly description: InputMaybe<FieldSelectorEnum>;
     readonly homepage_view_full_article: InputMaybe<FieldSelectorEnum>;
-    readonly language: InputMaybe<FieldSelectorEnum>;
     readonly status: InputMaybe<FieldSelectorEnum>;
     readonly tags: InputMaybe<FieldSelectorEnum>;
     readonly title: InputMaybe<FieldSelectorEnum>;
@@ -1519,7 +1521,6 @@ declare namespace Queries {
     readonly date: InputMaybe<DateQueryOperatorInput>;
     readonly description: InputMaybe<StringQueryOperatorInput>;
     readonly homepage_view_full_article: InputMaybe<BooleanQueryOperatorInput>;
-    readonly language: InputMaybe<StringQueryOperatorInput>;
     readonly status: InputMaybe<StringQueryOperatorInput>;
     readonly tags: InputMaybe<StringQueryOperatorInput>;
     readonly title: InputMaybe<StringQueryOperatorInput>;
@@ -1529,7 +1530,6 @@ declare namespace Queries {
     readonly date: InputMaybe<SortOrderEnum>;
     readonly description: InputMaybe<SortOrderEnum>;
     readonly homepage_view_full_article: InputMaybe<SortOrderEnum>;
-    readonly language: InputMaybe<SortOrderEnum>;
     readonly status: InputMaybe<SortOrderEnum>;
     readonly tags: InputMaybe<SortOrderEnum>;
     readonly title: InputMaybe<SortOrderEnum>;
@@ -2796,6 +2796,7 @@ declare namespace Queries {
     readonly fields: {
       readonly collection: string | null;
       readonly slug: string | null;
+      readonly language: string | null;
       readonly readingTime: { readonly minutes: number | null } | null;
     } | null;
     readonly frontmatter: {
@@ -2805,7 +2806,6 @@ declare namespace Queries {
       readonly tags: ReadonlyArray<string | null> | null;
       readonly homepage_view_full_article: boolean | null;
       readonly status: string | null;
-      readonly language: string | null;
     } | null;
   };
 
@@ -2955,6 +2955,7 @@ declare namespace Queries {
           readonly fields: {
             readonly collection: string | null;
             readonly slug: string | null;
+            readonly language: string | null;
             readonly readingTime: { readonly minutes: number | null } | null;
           } | null;
           readonly frontmatter: {
@@ -2964,7 +2965,6 @@ declare namespace Queries {
             readonly tags: ReadonlyArray<string | null> | null;
             readonly homepage_view_full_article: boolean | null;
             readonly status: string | null;
-            readonly language: string | null;
           } | null;
         };
       }>;
@@ -2999,7 +2999,11 @@ declare namespace Queries {
     readonly pages: {
       readonly nodes: ReadonlyArray<{
         readonly frontmatter: { readonly title: string | null } | null;
-        readonly fields: { readonly slug: string | null; readonly collection: string | null } | null;
+        readonly fields: {
+          readonly slug: string | null;
+          readonly collection: string | null;
+          readonly language: string | null;
+        } | null;
       }>;
     };
   };
@@ -3028,23 +3032,27 @@ declare namespace Queries {
       }>;
     };
     readonly content: {
-      readonly html: string | null;
-      readonly excerpt: string | null;
-      readonly fields: {
-        readonly collection: string | null;
-        readonly slug: string | null;
-        readonly readingTime: { readonly minutes: number | null } | null;
-      } | null;
-      readonly frontmatter: {
-        readonly date: string | null;
-        readonly title: string | null;
-        readonly description: string | null;
-        readonly tags: ReadonlyArray<string | null> | null;
-        readonly homepage_view_full_article: boolean | null;
-        readonly status: string | null;
-        readonly language: string | null;
-      } | null;
-    } | null;
+      readonly edges: ReadonlyArray<{
+        readonly node: {
+          readonly html: string | null;
+          readonly excerpt: string | null;
+          readonly fields: {
+            readonly collection: string | null;
+            readonly slug: string | null;
+            readonly language: string | null;
+            readonly readingTime: { readonly minutes: number | null } | null;
+          } | null;
+          readonly frontmatter: {
+            readonly date: string | null;
+            readonly title: string | null;
+            readonly description: string | null;
+            readonly tags: ReadonlyArray<string | null> | null;
+            readonly homepage_view_full_article: boolean | null;
+            readonly status: string | null;
+          } | null;
+        };
+      }>;
+    };
   };
 
   type TagsTemplateQueryVariables = Exact<{
@@ -3066,6 +3074,7 @@ declare namespace Queries {
           readonly fields: {
             readonly collection: string | null;
             readonly slug: string | null;
+            readonly language: string | null;
             readonly readingTime: { readonly minutes: number | null } | null;
           } | null;
           readonly frontmatter: {
@@ -3075,7 +3084,6 @@ declare namespace Queries {
             readonly tags: ReadonlyArray<string | null> | null;
             readonly homepage_view_full_article: boolean | null;
             readonly status: string | null;
-            readonly language: string | null;
           } | null;
         };
       }>;

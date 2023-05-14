@@ -26,21 +26,34 @@ export default (): React.ReactElement => {
           fields {
             slug
             collection
+            language
           }
         }
       }
     }
   `);
 
+  console.log({ data });
+
   const currentLanguagePrefix = locale.getCurrentLanguage();
 
   const pages = data.pages.nodes.map((p) => ({
-    id: `page-${p.fields?.slug}`,
+    id: `page-${p.fields?.slug}-${p.fields?.language}`,
     name: p.frontmatter?.title as string,
     section: locale.getTranslationFor('commander.pages'),
-    perform: () => (window.location.href = `/${currentLanguagePrefix}${p.fields?.slug}`),
+    perform: () => (window.location.href = `/${p.fields?.language}${p.fields?.slug}`),
     icon: 'BsFillFileEarmarkFill',
     parent: p.fields?.collection === 'articles' ? 'articles' : undefined,
+  }));
+
+  const languages = locale.getAllLanguages().map((language: string) => ({
+    icon: 'BsTranslate',
+    id: `language-${language}`,
+    shortcut: ['g', 'l', language[0]],
+    section: locale.getTranslationFor('commander.language'),
+    parent: 'language',
+    perform: () => (window.location.href = `/${language}`),
+    name: locale.getTranslationFor(`languages.${language}`),
   }));
 
   const actions = [
@@ -92,24 +105,7 @@ export default (): React.ReactElement => {
       section: locale.getTranslationFor('commander.preferences'),
       icon: 'BsTranslate',
     },
-    {
-      id: 'language-english',
-      name: locale.getTranslationFor('languages.en'),
-      shortcut: ['g', 'l', 'e'],
-      section: locale.getTranslationFor('commander.language'),
-      parent: 'language',
-      perform: () => (window.location.href = '/en'),
-      icon: 'BsTranslate',
-    },
-    {
-      id: 'language-portuguese',
-      name: locale.getTranslationFor('languages.pt'),
-      shortcut: ['g', 'l', 'p'],
-      section: locale.getTranslationFor('commander.language'),
-      parent: 'language',
-      perform: () => (window.location.href = '/pt'),
-      icon: 'BsTranslate',
-    },
+    ...languages,
     {
       id: 'source',
       name: locale.getTranslationFor('commander.sourceCode'),

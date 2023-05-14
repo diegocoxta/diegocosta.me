@@ -15,13 +15,19 @@ describe('<SingleTemplate>', () => {
       },
       data: {
         content: {
-          frontmatter: {
-            title: 'Title 1',
-          },
-          fields: {
-            slug: '/path-to-article/',
-          },
-          html: 'Post content',
+          edges: [
+            {
+              node: {
+                frontmatter: {
+                  title: 'Title 1',
+                },
+                fields: {
+                  slug: '/path-to-article/',
+                },
+                html: 'Post content',
+              },
+            },
+          ],
         },
       },
     };

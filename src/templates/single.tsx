@@ -7,8 +7,12 @@ export const pageQuery = graphql`
     locales: allLocale(filter: { language: { eq: $language } }) {
       ...LanguageInformation
     }
-    content: markdownRemark(fields: { slug: { eq: $slug } }) {
-      ...ArticleInformation
+    content: allMarkdownRemark(filter: { fields: { slug: { eq: $slug } } }) {
+      edges {
+        node {
+          ...ArticleInformation
+        }
+      }
     }
   }
 `;

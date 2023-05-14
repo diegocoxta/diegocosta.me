@@ -7,7 +7,7 @@
     "@deckdeckgo/highlight-code": "^4.4.0",
     "downshift": "7.6.0",
     "fuse.js": "^6.6.2",
-    "gatsby": "^5.9.0",
+    "gatsby": "^5.9.1",
     "gatsby-plugin-eslint": "^4.0.4",
     "gatsby-plugin-google-analytics": "^5.9.0",
     "gatsby-plugin-google-fonts": "^1.0.1",
@@ -20,7 +20,6 @@
     "gatsby-remark-copy-linked-files": "6.9.0",
     "gatsby-remark-highlight-code": "^3.3.0",
     "gatsby-remark-images": "7.9.0",
-    "gatsby-remark-reading-time": "^1.1.0",
     "gatsby-remark-responsive-iframe": "6.9.0",
     "gatsby-remark-smartypants": "6.9.0",
     "gatsby-source-filesystem": "^5.9.0",
@@ -34,6 +33,7 @@
     "react-helmet": "^6.1.0",
     "react-i18next": "12.2.2",
     "react-icons": "^4.8.0",
+    "reading-time": "^1.5.0",
     "styled-components": "^5.3.10"
   },
   "devDependencies": {
@@ -41,7 +41,7 @@
     "@testing-library/jest-dom": "5.16.5",
     "@testing-library/react": "^14.0.0",
     "@types/lodash.kebabcase": "^4.1.7",
-    "@types/node": "20.1.1",
+    "@types/node": "20.1.4",
     "@types/react": "18.2.6",
     "@types/react-dom": "^18.2.3",
     "@types/react-helmet": "^6.1.6",
@@ -85,7 +85,7 @@
     "test": "jest",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
-    "stylelint": "stylelint src",
+    "stylelint": "stylelint src --fix",
     "prepare": "husky install"
   },
   "lint-staged": {
@@ -98,9 +98,6 @@
   "overrides": {
     "gatsby-remark-highlight-code": {
       "@deckdeckgo/highlight-code": "^4.4.0"
-    },
-    "gatsby-remark-reading-time": {
-      "gatsby": "^5.9.0"
     }
   }
 }

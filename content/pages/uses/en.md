@@ -1,7 +1,6 @@
 ---
 title: Tools I Use
 description: The page where I share the tools that make my life easier.
-language: en
 ---
 
 **Last update**: May 2023
@@ -20,7 +19,7 @@ Welcome to my `/uses` page that list all my tools, hardware, and software! As a 
 - **Audio**: Samsung Galaxy Buds2 Pro Graphite and Razer Kraken X.
 - **Desk**: Husky Standing Desk with custom top.
 
-## 🧑🏾‍💻 Coding
+## 🧑🏾‍💻 Programming
 
 - **Editor**: Visual Studio Code with [Jetbrains Mono](https://www.jetbrains.com/lp/mono/) font, [Shades of Purple](https://marketplace.visualstudio.com/items?itemName=ahmadawais.shades-of-purple) theme and several helpful extensions, including [Auto Close Tag](https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-close-tag), [Auto Rename Tag](https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-rename-tag), [Color Highlight](https://marketplace.visualstudio.com/items?itemName=naumovs.color-highlight), [Dart](https://marketplace.visualstudio.com/items?itemName=Dart-Code.dart-code), [DotENV](https://marketplace.visualstudio.com/items?itemName=mikestead.dotenv), [EditorConfig for VS Code](https://marketplace.visualstudio.com/items?itemName=EditorConfig.EditorConfig), [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint), [file-icons](https://marketplace.visualstudio.com/items?itemName=file-icons.file-icons), [Flutter](https://marketplace.visualstudio.com/items?itemName=Dart-Code.flutter), [GraphQL: Language Feature Support](https://marketplace.visualstudio.com/items?itemName=GraphQL.vscode-graphql), [GraphQL: Syntax Highlighting](https://marketplace.visualstudio.com/items?itemName=GraphQL.vscode-graphql-syntax), [PlantUML](https://marketplace.visualstudio.com/items?itemName=jebbs.plantuml), [Polacode](https://marketplace.visualstudio.com/items?itemName=pnp.polacode), [Rainbow CSV](https://marketplace.visualstudio.com/items?itemName=mechatroner.rainbow-csv), and [YAML](https://marketplace.visualstudio.com/items?itemName=redhat.vscode-yaml).
 - **Terminal**: Native macOS Terminal with Oh My Zsh.

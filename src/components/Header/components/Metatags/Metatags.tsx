@@ -1,6 +1,6 @@
 import React from 'react';
-
-import { Helmet } from '~/hooks/useLocale';
+import { Helmet } from 'react-helmet';
+import { useLocale } from '~/hooks/useLocale';
 
 export interface MetatagsProps {
   title: string;
@@ -10,6 +10,8 @@ export interface MetatagsProps {
 }
 
 export default function Metatags(props: MetatagsProps): React.ReactElement {
+  const locale = useLocale();
+
   return (
     <Helmet
       title={props.title}
@@ -51,6 +53,7 @@ export default function Metatags(props: MetatagsProps): React.ReactElement {
           content: props.description,
         },
       ]}
+      htmlAttributes={{ lang: locale.getCurrentLanguage() }}
     />
   );
 }

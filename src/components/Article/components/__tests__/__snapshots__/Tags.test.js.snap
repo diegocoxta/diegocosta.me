@@ -47,8 +47,7 @@ exports[`<Tags /> renders properly 1`] = `
           class="c2"
           href="/tags/jest"
         >
-          #
-          jest
+          #jest
         </a>
       </li>
       <li
@@ -59,8 +58,7 @@ exports[`<Tags /> renders properly 1`] = `
           class="c2"
           href="/tags/testing-library"
         >
-          #
-          testing-library
+          #testing-library
         </a>
       </li>
     </ul>
