@@ -357,8 +357,7 @@ exports[`<Article /> renders properly 1`] = `
               class="c6"
               href="/tags/jest"
             >
-              #
-              jest
+              #jest
             </a>
           </li>
           <li
@@ -369,8 +368,7 @@ exports[`<Article /> renders properly 1`] = `
               class="c6"
               href="/tags/testing-library"
             >
-              #
-              testing-library
+              #testing-library
             </a>
           </li>
         </ul>
@@ -679,8 +677,7 @@ exports[`<Article /> renders the article details 1`] = `
               class="c6"
               href="/tags/jest"
             >
-              #
-              jest
+              #jest
             </a>
           </li>
           <li
@@ -691,8 +688,7 @@ exports[`<Article /> renders the article details 1`] = `
               class="c6"
               href="/tags/testing-library"
             >
-              #
-              testing-library
+              #testing-library
             </a>
           </li>
         </ul>

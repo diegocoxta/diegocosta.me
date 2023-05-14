@@ -33,6 +33,7 @@ export const query = graphql`
     fields {
       collection
       slug
+      language
       readingTime {
         minutes
       }

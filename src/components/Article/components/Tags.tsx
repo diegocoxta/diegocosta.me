@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-import kebabCase from 'lodash.kebabcase';
 
 import { Link } from '~/hooks/useLocale';
 
@@ -40,7 +39,7 @@ export default function Tags(props: TagsProps) {
     <TagList data-testid="article-header-tags">
       {props.tags?.map((tag: string, index: number) => (
         <TagItem key={`${index}-${tag}`} data-testid="article-header-tag">
-          <TagLink to={`/tags/${kebabCase(tag ?? '')}`}>#{kebabCase(tag ?? '')}</TagLink>
+          <TagLink to={`/tags/${tag}`}>{`#${tag}`}</TagLink>
         </TagItem>
       ))}
     </TagList>

@@ -5,7 +5,7 @@ import Tags from '../Tags';
 
 describe('<Tags />', () => {
   it('renders properly', () => {
-    const { baseElement, getByTestId, getAllByTestId, getByText } = render(<Tags tags={['jest', 'testing library']} />);
+    const { baseElement, getByTestId, getAllByTestId, getByText } = render(<Tags tags={['jest', 'testing-library']} />);
     expect(getByTestId('article-header-tags')).toBeTruthy();
     expect(getAllByTestId('article-header-tag').length).toEqual(2);
     expect(getByText('#testing-library')).toBeTruthy();

@@ -1415,18 +1415,21 @@ declare namespace Queries {
 
   type MarkdownRemarkFields = {
     readonly collection: Maybe<Scalars['String']>;
+    readonly language: Maybe<Scalars['String']>;
     readonly readingTime: Maybe<MarkdownRemarkFieldsReadingTime>;
     readonly slug: Maybe<Scalars['String']>;
   };
 
   type MarkdownRemarkFieldsFieldSelector = {
     readonly collection: InputMaybe<FieldSelectorEnum>;
+    readonly language: InputMaybe<FieldSelectorEnum>;
     readonly readingTime: InputMaybe<MarkdownRemarkFieldsReadingTimeFieldSelector>;
     readonly slug: InputMaybe<FieldSelectorEnum>;
   };
 
   type MarkdownRemarkFieldsFilterInput = {
     readonly collection: InputMaybe<StringQueryOperatorInput>;
+    readonly language: InputMaybe<StringQueryOperatorInput>;
     readonly readingTime: InputMaybe<MarkdownRemarkFieldsReadingTimeFilterInput>;
     readonly slug: InputMaybe<StringQueryOperatorInput>;
   };
@@ -1461,6 +1464,7 @@ declare namespace Queries {
 
   type MarkdownRemarkFieldsSortInput = {
     readonly collection: InputMaybe<SortOrderEnum>;
+    readonly language: InputMaybe<SortOrderEnum>;
     readonly readingTime: InputMaybe<MarkdownRemarkFieldsReadingTimeSortInput>;
     readonly slug: InputMaybe<SortOrderEnum>;
   };
@@ -2796,6 +2800,7 @@ declare namespace Queries {
     readonly fields: {
       readonly collection: string | null;
       readonly slug: string | null;
+      readonly language: string | null;
       readonly readingTime: { readonly minutes: number | null } | null;
     } | null;
     readonly frontmatter: {
@@ -2955,6 +2960,7 @@ declare namespace Queries {
           readonly fields: {
             readonly collection: string | null;
             readonly slug: string | null;
+            readonly language: string | null;
             readonly readingTime: { readonly minutes: number | null } | null;
           } | null;
           readonly frontmatter: {
@@ -3028,23 +3034,28 @@ declare namespace Queries {
       }>;
     };
     readonly content: {
-      readonly html: string | null;
-      readonly excerpt: string | null;
-      readonly fields: {
-        readonly collection: string | null;
-        readonly slug: string | null;
-        readonly readingTime: { readonly minutes: number | null } | null;
-      } | null;
-      readonly frontmatter: {
-        readonly date: string | null;
-        readonly title: string | null;
-        readonly description: string | null;
-        readonly tags: ReadonlyArray<string | null> | null;
-        readonly homepage_view_full_article: boolean | null;
-        readonly status: string | null;
-        readonly language: string | null;
-      } | null;
-    } | null;
+      readonly edges: ReadonlyArray<{
+        readonly node: {
+          readonly html: string | null;
+          readonly excerpt: string | null;
+          readonly fields: {
+            readonly collection: string | null;
+            readonly slug: string | null;
+            readonly language: string | null;
+            readonly readingTime: { readonly minutes: number | null } | null;
+          } | null;
+          readonly frontmatter: {
+            readonly date: string | null;
+            readonly title: string | null;
+            readonly description: string | null;
+            readonly tags: ReadonlyArray<string | null> | null;
+            readonly homepage_view_full_article: boolean | null;
+            readonly status: string | null;
+            readonly language: string | null;
+          } | null;
+        };
+      }>;
+    };
   };
 
   type TagsTemplateQueryVariables = Exact<{
@@ -3066,6 +3077,7 @@ declare namespace Queries {
           readonly fields: {
             readonly collection: string | null;
             readonly slug: string | null;
+            readonly language: string | null;
             readonly readingTime: { readonly minutes: number | null } | null;
           } | null;
           readonly frontmatter: {

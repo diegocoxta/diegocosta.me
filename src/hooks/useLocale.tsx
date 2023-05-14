@@ -1,6 +1,5 @@
 import React from 'react';
 import * as i18Next from 'gatsby-plugin-react-i18next';
-import { Helmet as ReactHelmet } from 'react-helmet';
 
 type useLocaleHook = {
   getTranslationFor: (key: string) => string;
@@ -51,9 +50,4 @@ export function getContentLanguage(locale: useLocaleHook, langkey?: string | nul
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 export function Link(props: any) {
   return <i18Next.Link {...props} />;
-}
-
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-export function Helmet(props: any) {
-  return <ReactHelmet {...props} />;
 }

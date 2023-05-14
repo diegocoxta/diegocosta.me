@@ -1,6 +1,18 @@
 const { resolve } = require('path');
-const kebabCase = require('lodash.kebabcase');
 const { createFilePath } = require('gatsby-source-filesystem');
+const readingTime = require('reading-time');
+
+const getNodeLangCode = function (fileAbsolutePath, defaultLang = 'en') {
+  const filename = fileAbsolutePath.split('/').pop();
+
+  return filename.split('.md')?.[0] ?? defaultLang;
+};
+
+const getSlugWithoutFile = function (slug) {
+  const parts = slug.split('/').filter((segment) => segment !== '');
+
+  return `/${parts?.[0]}/`;
+};
 
 exports.onCreateWebpackConfig = ({ actions }) => {
   actions.setWebpackConfig({
@@ -18,7 +30,13 @@ exports.onCreateNode = async ({ node, actions, getNode }) => {
 
     actions.createNodeField({
       name: 'slug',
-      value: createFilePath({ node, getNode }),
+      value: getSlugWithoutFile(createFilePath({ node, getNode })),
+      node,
+    });
+
+    actions.createNodeField({
+      name: 'language',
+      value: getNodeLangCode(node.fileAbsolutePath),
       node,
     });
 
@@ -26,6 +44,12 @@ exports.onCreateNode = async ({ node, actions, getNode }) => {
       name: 'collection',
       value: sourceInstanceName,
       node,
+    });
+
+    actions.createNodeField({
+      node,
+      name: 'readingTime',
+      value: readingTime(node.rawMarkdownBody),
     });
   }
 };
@@ -80,7 +104,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   // Create Tags Page
   tags.forEach((tag) => {
     actions.createPage({
-      path: `/tags/${kebabCase(tag.fieldValue)}/`,
+      path: `/tags/${tag.fieldValue}/`,
       component: resolve('./src/templates/tags.tsx'),
       context: { tag: tag.fieldValue },
     });

@@ -4,7 +4,7 @@ import { useStaticQuery, graphql } from 'gatsby';
 import Header, { HeaderProps } from './Header';
 
 interface Props {
-  page: HeaderProps['page'];
+  page?: HeaderProps['page'];
   fullHeader: boolean;
 }
 

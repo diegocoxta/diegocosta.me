@@ -76,14 +76,7 @@ module.exports = {
     {
       resolve: 'gatsby-source-filesystem',
       options: {
-        path: `${__dirname}/content/assets`,
-        name: 'assets',
-      },
-    },
-    {
-      resolve: 'gatsby-source-filesystem',
-      options: {
-        path: `${__dirname}/content/locales`,
+        path: `${__dirname}/locales`,
         name: 'locales',
       },
     },
@@ -93,6 +86,7 @@ module.exports = {
         localeJsonSourceName: 'locales',
         languages: ['pt', 'en'],
         defaultLanguage: 'en',
+        siteUrl: 'https://diegocosta.me',
         generateDefaultLanguagePage: true,
         redirect: false,
         i18nextOptions: {
@@ -116,7 +110,6 @@ module.exports = {
           'gatsby-remark-copy-linked-files',
           'gatsby-remark-smartypants',
           'gatsby-remark-highlight-code',
-          'gatsby-remark-reading-time',
           'gatsby-remark-responsive-iframe',
         ],
       },
