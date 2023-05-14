@@ -10,8 +10,8 @@ export const pageQuery = graphql`
     list: allMarkdownRemark(
       sort: { frontmatter: { date: DESC } }
       filter: {
+        frontmatter: { flags: { nin: ["hide-from-listings", "draft"] } }
         fields: { collection: { eq: "articles" } }
-        frontmatter: { status: { ne: "draft" }, hide_from_listings: { ne: true } }
       }
     ) {
       edges {

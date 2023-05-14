@@ -43,8 +43,7 @@ export const query = graphql`
       title
       description
       tags
-      homepage_view_full_article
-      status
+      flags
     }
   }
 `;

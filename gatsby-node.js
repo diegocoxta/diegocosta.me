@@ -59,19 +59,12 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     query GatsbyCreatePage {
       content: allMarkdownRemark(
         sort: { frontmatter: { date: DESC } }
-        filter: { frontmatter: { status: { ne: "draft" } } }
+        filter: { frontmatter: { flags: { nin: ["draft"] } } }
       ) {
         edges {
           node {
             fields {
               slug
-              collection
-            }
-            internal {
-              type
-            }
-            frontmatter {
-              title
             }
           }
         }
