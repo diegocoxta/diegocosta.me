@@ -25,6 +25,7 @@
     "gatsby-source-filesystem": "^5.9.0",
     "gatsby-transformer-remark": "6.9.0",
     "gatsby-transformer-sharp": "^5.9.0",
+    "gatsby-transformer-yaml": "^5.9.0",
     "i18next": "22.4.15",
     "kbar": "^0.1.0-beta.40",
     "lodash.kebabcase": "^4.1.1",

@@ -1,0 +1,123 @@
+basics:
+  summary: |
+    I'm a Engineering Manager passionate about the intersection between technology and people. My goal is to help technology teams achieve their full potential.
+
+    I have a great interest in engineering leadership, people management, software engineering, as well as inclusion and diversity. Currently, I am an Engineering Manager at Nubank and I am always open to sharing my ideas and experiences on these topics.
+
+    I have extensive experience in JavaScript-based technologies such as React, React Native, Gatsby, GraphQpL, and Node, but I'm always looking to learn new things. Currently, I'm studying Clojure and its ecosystem, distributed systems concepts, improving my English, and learning to play bass.
+
+work:
+  - company: Nubank
+    position: Engineering Manager
+    startDate: 2023-02
+    summary: |
+      In Progress
+
+  - company: Nubank
+    position: Tech Manager
+    startDate: 2021-02
+    endDate: 2023-01
+    summary: |
+      As the technical manager of the team, I led the redesign of the app homepage to allow for the expansion and addition of new products without compromising the user experience, which contributed to delivering excellent service to our base of 70 million customers. You can find this work in the attached media.
+
+      My main responsibilities included people management, with a focus on individual development, conflict management, guidance on performance and expectations, as well as conducting bi-annual performance evaluations to ensure employee growth or create performance recovery plans when necessary. Additionally, I was responsible for building and dividing teams, promoting a culture of feedback and psychological safety, conducting individual and group meetings, and continuously improving team processes. I also made important choices in software architecture to ensure delivery quality and actively participated in the recruitment process and diversity campaigns.
+
+  - company: Suno Research
+    position: Mobile Developer Consultant
+    startDate: 2020-07
+    endDate: 2020-12
+    summary:
+      I was invited by Suno Research to develop the company's first mobile application. I worked closely with the product team to gather requirements, detail the roadmap and backlog. In addition, I was responsible for defining the technologies to be used, guiding two junior engineers through code reviews and mentoring, setting up accounts on the Apple Store and Google Play, and building the entire CI/CD process. Although it was a challenging project due to the tight deadline, we launched a complete application in less than 6 months with audio streaming, daily updated recommended investment portfolios, and PDF report reading capabilities.
+
+      I opted to use a technology stack with React Native, Styled Components, Typescript, and Apollo Client for GraphQL requests. These technologies were chosen for their ability to simplify integration for other engineers interested in mobile application development, as well as to reduce hiring costs.
+
+  - company: Sanar
+    position: Tech Manager
+    startDate: 2018-07
+    endDate: 2020-12
+    summary: |
+      As a Tech Manager or Tech Lead, I led multifunctional teams and supported other teams in the frontend area. I developed the frontend architecture for all products and applications, creating a white-label and monorepo platform that can be easily replicated to build new products with small configuration adjustments. Additionally, I led diversity and inclusion initiatives in the technology hiring process and promoted internal and external training programs.
+
+      During my last year at Sanar, I led the complete overhaul of the SanarFlix streaming service application, actively participating in the development of a user-friendly interface and utilizing updated technologies. The result was an application that became an internal reference and a basis for other projects in the company.
+    highlights:
+      - Acted as Tech Manager responsible for the development of the SanarFlix application and corresponding web platform, using technologies such as React Native, Styled Components, and Apollo Client.
+      - Developed features such as video streaming, quizzes, and in-app purchases, as well as support for Chromecast streaming and single sign-on using AWS Cognito.
+      - Defined the monorepo and CI/CD strategy for the project, as well as the component architecture for the platform, implementing a white-label system.
+      - Contributed to the development of Sanar Residência Médica's first application, with features such as Spaced Repetition and user classification.
+
+  - company: Sanar
+    position: Senior Software Engineer
+    startDate: 2018-03
+    endDate: 2020-07
+    summary: |
+      I started at Sanar as a Software Engineer, tasked with building new products and introducing the company to the world of mobile apps using React Native. With a challenging deadline and a lean team, I successfully delivered a free app to help medical students prepare for their residency exam. This project was very challenging, as we had to create an updated question bank and ensure a good user experience and gamification of the platform using the spaced repetition technique. In no time, the app became one of the top ten educational apps in the major stores and started a new business area that became the company's flagship.
+
+      Furthermore, I became a reference in frontend and guided several teams and products on appropriate technologies and methodologies. I led the overhaul of all streaming portals using React and GraphQL and was responsible for hiring and retaining entire frontend teams.
+
+      In addition to React, React Native, and GraphQL, I had the opportunity to work with Laravel, NodeJS, MongoDB, and Typescript. I also occasionally used jQuery and PHP in legacy projects.
+
+  - company: ConvergenceWorks
+    position: Software Developer
+    startDate: 2015-11
+    endDate: 2018-03
+    summary: |
+      At Convergence Works, a company specialized in developing news portals in the North and Northeast regions of Brazil, I worked as a Full Stack developer. My responsibilities included creating componentized websites, developing themes and plugins for WordPress, and implementing new features in CMS for managing application content. Additionally, I led a team of interns, providing daily guidance and management while contributing to the improvement of their professional skills.
+
+      In this role, I utilized various technologies, including PHP with the Symfony and Twig frameworks, as well as WordPress for theme and plugin development. I also worked with JavaScript, using the JQuery, React, React Native, and Sencha Touch libraries, and used CSS, HTML, and the Foundation framework for Sites and Emails.
+
+  - company: Level131
+    position: Software Developer
+    startDate: 2015-07
+    endDate: 2015-10
+    summary: |
+      During my time at Level 131 agency, I participated in the development of several websites and landing pages with a focus on usability, accessibility, and performance. As a full-stack developer, I was responsible for building the frontend of the sites and also for the WordPress version. Additionally, I had the opportunity to create WordPress plugins and use the PHP CodeIgniter framework to develop specific CMS.
+
+      The technologies I used in this position included PHP, with the CodeIgniter framework, MySQL, and WordPress for the development of themes and plugins. Additionally, I used JavaScript, jQuery, CSS, HTML, and Bootstrap.
+
+education:
+  - institution: UNIFACS - Universidade Salvador
+    area: MBA Information Technology Management, Computer Science
+    startDate: 2021-01
+    endDate: 2022-01
+    score: 9,73
+
+  - institution: UNIFACS - Universidade Salvador
+    area: Analysis and Systems Development, Computer Science
+    startDate: 2019-01
+    endDate: 2021-07
+    score: 8,63
+
+  - institution: UNEB - Universidade do Estado da Bahia
+    area: Information Systems, Computer Science
+    startDate: 2015-01
+    endDate: 2017-01
+    score: 8,5
+
+languages:
+  - language: Portuguese
+    description: Fluent, Native Speaker
+
+  - language: English
+    description: Intermediate, B1
+
+references:
+  - name: Alex Feire
+    url: https://www.linkedin.com/in/alex-freire
+    reference: |
+      Diego was my first techinichal lead during my journey at Sanar. He played a crucial role during my early software development stages, coaching me and helping to expose my qualities. As my lead Ive never felt helpless, he is the kind of guy that stick with every member team member and leave no one behind.
+
+  - name: Almerindo Rehem
+    url: https://www.linkedin.com/in/almerindo-rehem-b2574013
+    reference: |
+      Diego quickly earned my admiration as a professional. In addition to his innate leadership, he possessed an excellent team spirit and was able to make everyone feel comfortable in high-pressure, complex projects with tight deadlines.
+
+      His results were consistently positive with quick deliveries and without micromanagement.
+
+      Diego had a high level of technical expertise and was always very humble.
+
+      It was an honor to have worked with Diego, even though we were on different teams, I always noticed his contributions.
+
+  - name: Luis Carneiro Leão
+    url: https://www.linkedin.com/in/carneiroleao
+    reference: |
+      Inspirador pro time, alinhado com as estratégias do negócio, e sempre dando espaço e destaque para necessidades do usuário. Esse líder ajuda a me desenvolver exponencialmente enquanto Product designer, promovendo refinamentos constantes e ajudando o time a enxergar como a tecnologia pode ter maior impacto na vida das pessoas.

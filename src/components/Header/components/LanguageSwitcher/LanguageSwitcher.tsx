@@ -23,8 +23,8 @@ export default function LanguageSwitcher() {
     <List>
       {locale.getAllLanguages().map((language: string) => (
         <LanguageLink
-          aria-label={`${locale.getTranslationFor('languageswitcher.toggle')} ${locale.getTranslationFor(
-            `languages.${language}`
+          aria-label={`${locale.getTranslationFor('Change the language to', 'header')} ${locale.getTranslationFor(
+            language
           )}`}
           key={`footer-languages-${language}`}
           to={locale.getOriginalPath()}

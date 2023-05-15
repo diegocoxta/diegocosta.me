@@ -2,7 +2,7 @@ import React from 'react';
 import * as i18Next from 'gatsby-plugin-react-i18next';
 
 type useLocaleHook = {
-  getTranslationFor: (key: string) => string;
+  getTranslationFor: (key: string, ns?: string) => string;
   getCurrentLanguage: () => string;
   getAllLanguages: () => string[];
   getOriginalPath: () => string;
@@ -12,8 +12,8 @@ export function useLocale(): useLocaleHook {
   const { t } = i18Next.useTranslation();
   const context = i18Next.useI18next();
 
-  function getTranslationFor(key: string) {
-    return t(key);
+  function getTranslationFor(key: string, ns = 'common') {
+    return t(key, { ns });
   }
 
   function getCurrentLanguage() {
@@ -41,8 +41,8 @@ export function getContentLanguage(locale: useLocaleHook, langkey?: string | nul
     return;
   }
 
-  const languagePrefix = locale.getTranslationFor('article.languagePrefix');
-  const languageName = locale.getTranslationFor(`languages.${langkey}`);
+  const languagePrefix = locale.getTranslationFor('In');
+  const languageName = locale.getTranslationFor(langkey);
 
   return `${languagePrefix} ${languageName}`;
 }

@@ -200,7 +200,7 @@ exports[`<Article /> does not render the reading time 1`] = `
           18/01/2020
            
            · 
-          article.languagePrefix languages.en
+          In en
         </p>
         <ul
           class="c4"
@@ -344,9 +344,9 @@ exports[`<Article /> renders properly 1`] = `
         >
           18/01/2020
            
-          · 5 article.minutes article.ofReading
+          · 5 minutes of reading
            · 
-          article.languagePrefix languages.en
+          In en
         </p>
         <ul
           class="c4"
@@ -667,9 +667,9 @@ exports[`<Article /> renders the article details 1`] = `
         >
           18/01/2020
            
-          · 5 article.minutes article.ofReading
+          · 5 minutes of reading
            · 
-          article.languagePrefix languages.en
+          In en
         </p>
         <ul
           class="c4"

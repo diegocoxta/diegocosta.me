@@ -49,11 +49,11 @@ export default function Footer(props: FooterProps): React.ReactElement {
     <>
       <Content>
         <Label>
-          CC-BY {props.year}, {locale.getTranslationFor('footer.builtWith')}{' '}
+          CC-BY {props.year}, {locale.getTranslationFor('built with', 'footer')}{' '}
         </Label>
         <Link href="https://gatsbyjs.org">gatsby</Link>
         <Label> • </Label>
-        {props.sourceCode && <Link href={props.sourceCode}>{locale.getTranslationFor('footer.sourceCode')}</Link>}
+        {props.sourceCode && <Link href={props.sourceCode}>{locale.getTranslationFor('source code', 'footer')}</Link>}
       </Content>
     </>
   );

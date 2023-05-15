@@ -27,7 +27,7 @@ exports[`<LanguageSwitcher /> renders properly 1`] = `
       class="c0"
     >
       <a
-        aria-label="languageswitcher.toggle languages.pt"
+        aria-label="Change the language to pt"
         class="c1"
         href="/about-us"
         language="pt"
@@ -36,7 +36,7 @@ exports[`<LanguageSwitcher /> renders properly 1`] = `
         pt
       </a>
       <a
-        aria-label="languageswitcher.toggle languages.en"
+        aria-label="Change the language to en"
         class="c1"
         href="/about-us"
         language="en"
@@ -44,7 +44,7 @@ exports[`<LanguageSwitcher /> renders properly 1`] = `
         en
       </a>
       <a
-        aria-label="languageswitcher.toggle languages.es"
+        aria-label="Change the language to es"
         class="c1"
         href="/about-us"
         language="es"

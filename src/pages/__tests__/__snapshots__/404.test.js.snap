@@ -115,13 +115,13 @@ exports[`<NotFoundPage> renders properly 1`] = `
             class="c4"
             data-testid="article-header-title"
           >
-            404page.title
+            Ops! Page not found!
           </h2>
         </header>
         <section
           class="c5"
         >
-          404page.message
+          I'm sorry, but the page you're looking for cannot be found. Please check the URL or try navigating through the menu of my website. If the issue persists, please contact me.
         </section>
       </article>
       <p>

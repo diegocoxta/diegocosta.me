@@ -17,9 +17,7 @@ describe('<Article />', () => {
       />
     );
     expect(getByText('Awesome Article')).toBeTruthy();
-    expect(
-      getByText('18/01/2020 · 5 article.minutes article.ofReading · article.languagePrefix languages.en')
-    ).toBeTruthy();
+    expect(getByText('18/01/2020 · 5 minutes of reading · In en')).toBeTruthy();
     expect(getByTestId('article-header-title').href).toBe('http://localhost/awesome-article');
     expect(getByTestId('article-header-tags')).toBeTruthy();
     expect(getAllByTestId('article-header-tag').length).toEqual(2);
@@ -55,19 +53,15 @@ describe('<Article />', () => {
       <Article title="Awesome Article" language="en" date="2020-01-18T22:12:03.284Z" kind="articles" />
     );
 
-    expect(
-      queryByText('18/01/2020 · 5 article.minutes article.ofReading · article.languagePrefix languages.en')
-    ).toBeFalsy();
-    expect(getByText('18/01/2020 · article.languagePrefix languages.en')).toBeTruthy();
+    expect(queryByText('18/01/2020 · 5 minutes of reading · In en')).toBeFalsy();
+    expect(getByText('18/01/2020 · In en')).toBeTruthy();
     expect(baseElement).toMatchSnapshot();
   });
 
   it('does not render the article language name', () => {
     const { baseElement, queryByText } = render(<Article title="Awesome Article" language="en" />);
 
-    expect(
-      queryByText('18/01/2020 · 5 article.minutes article.ofReading · article.languagePrefix languages.en')
-    ).toBeFalsy();
+    expect(queryByText('18/01/2020 · 5 minutes of reading · In en')).toBeFalsy();
     expect(baseElement).toMatchSnapshot();
   });
 
@@ -84,9 +78,7 @@ describe('<Article />', () => {
       />
     );
 
-    expect(
-      getByText('18/01/2020 · 5 article.minutes article.ofReading · article.languagePrefix languages.en')
-    ).toBeTruthy();
+    expect(getByText('18/01/2020 · 5 minutes of reading · In en')).toBeTruthy();
     expect(getByTestId('article-header-tags')).toBeTruthy();
     expect(getAllByTestId('article-header-tag').length).toEqual(2);
 
@@ -105,9 +97,7 @@ describe('<Article />', () => {
       />
     );
 
-    expect(
-      queryByText('18/01/2020 · 5 article.minutes article.ofReading · article.languagePrefix languages.en')
-    ).toBeFalsy();
+    expect(queryByText('18/01/2020 · 5 minutes of reading · In en')).toBeFalsy();
     expect(queryAllByTestId('article-header-tag').length).toEqual(0);
 
     expect(baseElement).toMatchSnapshot();

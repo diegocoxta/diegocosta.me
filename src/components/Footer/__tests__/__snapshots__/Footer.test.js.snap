@@ -42,7 +42,7 @@ exports[`<Footer /> renders properly 1`] = `
         CC-BY 
         2020
         , 
-        footer.builtWith
+        built with
          
       </span>
       <a
@@ -105,7 +105,7 @@ exports[`<Footer /> renders the sourceCode url if defined 1`] = `
         CC-BY 
         2020
         , 
-        footer.builtWith
+        built with
          
       </span>
       <a
@@ -127,7 +127,7 @@ exports[`<Footer /> renders the sourceCode url if defined 1`] = `
         rel="noopener"
         target="_blank"
       >
-        footer.sourceCode
+        source code
       </a>
     </footer>
   </div>

@@ -79,7 +79,7 @@ export default function Page(props: PageProps<PageContentProps>): React.ReactEle
             key="article-not-found"
             article={{
               frontmatter: {
-                title: locale.getTranslationFor('404page.title'),
+                title: locale.getTranslationFor('Ops! Page not found!', 'page'),
                 date: null,
                 description: null,
                 tags: null,
@@ -87,7 +87,10 @@ export default function Page(props: PageProps<PageContentProps>): React.ReactEle
               },
               fields: null,
               excerpt: null,
-              html: locale.getTranslationFor('404page.message'),
+              html: locale.getTranslationFor(
+                "I'm sorry, but the page you're looking for cannot be found. Please check the URL or try navigating through the menu of my website. If the issue persists, please contact me.",
+                'page'
+              ),
             }}
             showContent={true}
           />

@@ -3,6 +3,7 @@ import * as BsIcon from 'react-icons/bs';
 import { IconBaseProps } from 'react-icons/lib';
 import styled from 'styled-components';
 import { KBarAnimator, KBarPortal, useMatches, KBarPositioner, KBarSearch, KBarResults, useKBar } from 'kbar';
+import { useLocale } from '~/hooks/useLocale';
 
 const Container = styled.div``;
 
@@ -137,10 +138,11 @@ interface NavigationProps {
 export default function Navigation(props: NavigationProps): React.ReactElement {
   const { query } = useKBar();
   const { results } = useMatches();
+  const locale = useLocale();
 
   return (
     <Container>
-      <Button onClick={() => query.toggle()}>
+      <Button aria-label={locale.getTranslationFor('Open navigation menu', 'header')} onClick={() => query.toggle()}>
         <Icon name="BsCommand" props={{ size: 28 }} />
       </Button>
 

@@ -38,7 +38,7 @@ export default (): React.ReactElement => {
   const pages = data.pages.nodes.map((p) => ({
     id: `page-${p.fields?.slug}-${p.fields?.language}`,
     name: p.frontmatter?.title as string,
-    section: locale.getTranslationFor('commander.pages'),
+    section: locale.getTranslationFor('Pages', 'header'),
     perform: () => (window.location.href = `/${p.fields?.language}${p.fields?.slug}`),
     icon: 'BsFillFileEarmarkFill',
     parent: p.fields?.collection === 'articles' ? 'articles' : undefined,
@@ -48,67 +48,67 @@ export default (): React.ReactElement => {
     icon: 'BsTranslate',
     id: `language-${language}`,
     shortcut: ['g', 'l', language[0]],
-    section: locale.getTranslationFor('commander.language'),
+    section: locale.getTranslationFor('Language', 'header'),
     parent: 'language',
     perform: () => (window.location.href = `/${language}`),
-    name: locale.getTranslationFor(`languages.${language}`),
+    name: locale.getTranslationFor(language, 'common'),
   }));
 
   const actions = [
     {
       id: 'home',
-      name: locale.getTranslationFor('commander.home'),
+      name: locale.getTranslationFor('Home', 'header'),
       shortcut: ['g', 'h'],
-      section: locale.getTranslationFor('commander.pages'),
+      section: locale.getTranslationFor('Pages', 'header'),
       perform: () => (window.location.href = `/${currentLanguagePrefix}`),
       icon: 'BsFillHouseFill',
     },
     {
       id: 'articles',
-      name: locale.getTranslationFor('commander.articles'),
+      name: locale.getTranslationFor('Articles', 'header'),
       shortcut: ['g', 'a'],
-      section: locale.getTranslationFor('commander.pages'),
+      section: locale.getTranslationFor('Pages', 'header'),
       icon: 'BsNewspaper',
     },
     ...pages,
     {
       id: 'theme',
-      name: locale.getTranslationFor('commander.theme'),
+      name: locale.getTranslationFor('Theme', 'header'),
       shortcut: ['g', 't'],
-      section: locale.getTranslationFor('commander.preferences'),
+      section: locale.getTranslationFor('Preferences', 'header'),
       icon: 'BsBrushFill',
     },
     {
       id: 'theme-light',
-      name: locale.getTranslationFor('commander.themeLight'),
+      name: locale.getTranslationFor('Light', 'header'),
       shortcut: ['g', 't', 'l'],
-      section: locale.getTranslationFor('commander.theme'),
+      section: locale.getTranslationFor('Theme', 'header'),
       parent: 'theme',
       perform: () => themeContext?.setMode('light'),
       icon: 'BsSun',
     },
     {
       id: 'theme-dark',
-      name: locale.getTranslationFor('commander.themeDark'),
+      name: locale.getTranslationFor('Dark', 'header'),
       shortcut: ['g', 't', 'd'],
-      section: locale.getTranslationFor('commander.theme'),
+      section: locale.getTranslationFor('Theme', 'header'),
       parent: 'theme',
       perform: () => themeContext?.setMode('dark'),
       icon: 'BsMoon',
     },
     {
       id: 'language',
-      name: locale.getTranslationFor('commander.language'),
+      name: locale.getTranslationFor('Language', 'header'),
       shortcut: ['g', 'l'],
-      section: locale.getTranslationFor('commander.preferences'),
+      section: locale.getTranslationFor('Preferences', 'header'),
       icon: 'BsTranslate',
     },
     ...languages,
     {
       id: 'source',
-      name: locale.getTranslationFor('commander.sourceCode'),
+      name: locale.getTranslationFor('Source Code', 'header'),
       shortcut: ['g', 's'],
-      section: locale.getTranslationFor('commander.tools'),
+      section: locale.getTranslationFor('Tools', 'header'),
       perform: () => window.open(data.site?.siteMetadata?.sourceCode as string, '_blank'),
       icon: 'BsCodeSlash',
     },
@@ -116,7 +116,7 @@ export default (): React.ReactElement => {
 
   return (
     <KBarProvider actions={actions}>
-      <Commander placeholder={locale.getTranslationFor('commander.placeholder')} />
+      <Commander placeholder={locale.getTranslationFor('Type a command or search…', 'header')} />
     </KBarProvider>
   );
 };

@@ -91,9 +91,9 @@ export default function Article(props: ArticleProps): React.ReactElement {
       return undefined;
     }
 
-    const lessThan1Minute = locale.getTranslationFor('article.lessThan1Minute');
-    const ofReading = locale.getTranslationFor('article.ofReading');
-    const minutes = locale.getTranslationFor('article.minutes');
+    const lessThan1Minute = locale.getTranslationFor('Less than 1 minute', 'article');
+    const ofReading = locale.getTranslationFor('of reading', 'article');
+    const minutes = locale.getTranslationFor('minutes', 'article');
 
     if (props.readingTime < 1) {
       return `· ${lessThan1Minute} ${ofReading}`;

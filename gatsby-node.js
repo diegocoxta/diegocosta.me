@@ -3,9 +3,10 @@ const { createFilePath } = require('gatsby-source-filesystem');
 const readingTime = require('reading-time');
 
 const getNodeLangCode = function (fileAbsolutePath, defaultLang = 'en') {
-  const filename = fileAbsolutePath.split('/').pop();
+  let filename = fileAbsolutePath.split('/').pop();
+  filename = filename.split('.');
 
-  return filename.split('.md')?.[0] ?? defaultLang;
+  return filename[0] ?? defaultLang;
 };
 
 const getSlugWithoutFile = function (slug) {
@@ -50,6 +51,16 @@ exports.onCreateNode = async ({ node, actions, getNode }) => {
       node,
       name: 'readingTime',
       value: readingTime(node.rawMarkdownBody),
+    });
+  }
+
+  if (node.internal.type === 'ResumeYaml') {
+    const { absolutePath } = getNode(node.parent);
+
+    actions.createNodeField({
+      name: 'language',
+      value: getNodeLangCode(absolutePath),
+      node,
     });
   }
 };

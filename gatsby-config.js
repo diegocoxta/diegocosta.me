@@ -45,6 +45,7 @@ module.exports = {
     'gatsby-remark-images',
     'gatsby-transformer-sharp',
     'gatsby-plugin-sharp',
+    'gatsby-transformer-yaml',
     {
       resolve: 'gatsby-plugin-google-fonts',
       options: {
@@ -78,6 +79,13 @@ module.exports = {
       options: {
         path: `${__dirname}/src/locales`,
         name: 'locales',
+      },
+    },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        path: `${__dirname}/content/resume`,
+        name: 'resume',
       },
     },
     {

@@ -41,7 +41,7 @@ export default function ThemeSwitcher(): React.ReactElement {
 
   return (
     <Container
-      aria-label={locale.getTranslationFor('themeSwitcher.toggle')}
+      aria-label={locale.getTranslationFor('Change color scheme', 'header')}
       enabled={isDarkMode}
       onClick={themeContext?.themeToggler}
     >
