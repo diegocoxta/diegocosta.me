@@ -3,15 +3,15 @@ import { render } from '@testing-library/react';
 
 import Header from '../Header';
 
-jest.mock('../components/ThemeSwitcher', () => () => <p>ThemeSwitcher</p>);
-jest.mock('../components/LanguageSwitcher', () => () => <p>LanguageSwitcher</p>);
-jest.mock('../components/Navigation', () => () => <p>Navigation</p>);
-jest.mock('../components/Metatags', () => () => <p>Metatags</p>);
+jest.mock('../../ThemeSwitcher', () => () => <p>ThemeSwitcher</p>);
+jest.mock('../../LanguageSwitcher', () => () => <p>LanguageSwitcher</p>);
+jest.mock('../../Navigation', () => () => <p>Navigation</p>);
+jest.mock('../../Metatags', () => () => <p>Metatags</p>);
 
 describe('<Header />', () => {
   it('renders properly', () => {
     const { baseElement, getByTestId, getByText } = render(
-      <Header author="John Doe" description={{ en: 'You can hear more about here:' }} />
+      <Header author="John Doe" aboutMe={{ en: 'You can hear more about here:' }} />
     );
     expect(getByTestId('header-lastname')).toBeTruthy();
     expect(getByText('John')).toBeTruthy();
@@ -28,8 +28,8 @@ describe('<Header />', () => {
     const { baseElement, getByTestId, queryAllByTestId, getAllByTestId, getByText } = render(
       <Header
         author="John Doe"
-        description="You can hear more about here:"
-        fullHeader={true}
+        aboutMe="You can hear more about here:"
+        showAboutMe={true}
         navigation={[
           { label: '', url: '' },
           { label: '', url: '' },

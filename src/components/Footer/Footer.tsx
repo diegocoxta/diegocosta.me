@@ -5,16 +5,6 @@ import { useLocale } from '~/hooks/useLocale';
 
 const Content = styled.footer`
   margin-bottom: 50px;
-
-  nav {
-    margin-bottom: 50px;
-  }
-
-  @media (min-width: 760px) {
-    nav {
-      margin-bottom: 0;
-    }
-  }
 `;
 
 const Label = styled.span`
@@ -46,15 +36,17 @@ export default function Footer(props: FooterProps): React.ReactElement {
   const locale = useLocale();
 
   return (
-    <>
-      <Content>
-        <Label>
-          CC-BY {props.year}, {locale.getTranslationFor('built with', 'footer')}{' '}
-        </Label>
-        <Link href="https://gatsbyjs.org">gatsby</Link>
-        <Label> • </Label>
-        {props.sourceCode && <Link href={props.sourceCode}>{locale.getTranslationFor('source code', 'footer')}</Link>}
-      </Content>
-    </>
+    <Content>
+      <Label>
+        CC-BY {props.year}, {locale.getTranslationFor('built with', 'footer')}{' '}
+      </Label>
+      <Link href="https://gatsbyjs.org">gatsby</Link>
+      {props.sourceCode && (
+        <>
+          <Label> • </Label>
+          <Link href={props.sourceCode}>{`${locale.getTranslationFor('source code', 'footer')}`}</Link>
+        </>
+      )}
+    </Content>
   );
 }

@@ -9,7 +9,7 @@ import IndexPage from '../index';
 describe('<IndexPage>', () => {
   it('renders properly', () => {
     const data = {
-      list: {
+      content: {
         edges: [
           {
             node: {

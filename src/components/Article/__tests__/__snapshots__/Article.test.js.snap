@@ -1,6 +1,15 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Article /> does not render the article details 1`] = `
+.c0 {
+  margin: 0 0 60px 0;
+  font-weight: 400;
+}
+
+.c1 {
+  margin: 20px 0 0 0;
+}
+
 .c2 {
   box-shadow: none;
   -webkit-text-decoration: none;
@@ -14,15 +23,6 @@ exports[`<Article /> does not render the article details 1`] = `
 .c2:focus {
   border-bottom: 1px solid undefined;
   outline: none;
-}
-
-.c0 {
-  margin: 0 0 60px 0;
-  font-weight: 400;
-}
-
-.c1 {
-  margin: 20px 0 0 0;
 }
 
 <body>
@@ -49,6 +49,15 @@ exports[`<Article /> does not render the article details 1`] = `
 `;
 
 exports[`<Article /> does not render the article language name 1`] = `
+.c0 {
+  margin: 0 0 60px 0;
+  font-weight: 400;
+}
+
+.c1 {
+  margin: 20px 0 0 0;
+}
+
 .c2 {
   box-shadow: none;
   -webkit-text-decoration: none;
@@ -61,15 +70,6 @@ exports[`<Article /> does not render the article language name 1`] = `
 .c2:hover,
 .c2:focus {
   outline: none;
-}
-
-.c0 {
-  margin: 0 0 60px 0;
-  font-weight: 400;
-}
-
-.c1 {
-  margin: 20px 0 0 0;
 }
 
 <body>
@@ -94,6 +94,15 @@ exports[`<Article /> does not render the article language name 1`] = `
 `;
 
 exports[`<Article /> does not render the link 1`] = `
+.c0 {
+  margin: 0 0 60px 0;
+  font-weight: 400;
+}
+
+.c1 {
+  margin: 20px 0 0 0;
+}
+
 .c2 {
   box-shadow: none;
   -webkit-text-decoration: none;
@@ -106,15 +115,6 @@ exports[`<Article /> does not render the link 1`] = `
 .c2:hover,
 .c2:focus {
   outline: none;
-}
-
-.c0 {
-  margin: 0 0 60px 0;
-  font-weight: 400;
-}
-
-.c1 {
-  margin: 20px 0 0 0;
 }
 
 <body>
@@ -139,6 +139,15 @@ exports[`<Article /> does not render the link 1`] = `
 `;
 
 exports[`<Article /> does not render the reading time 1`] = `
+.c0 {
+  margin: 0 0 60px 0;
+  font-weight: 400;
+}
+
+.c1 {
+  margin: 20px 0 0 0;
+}
+
 .c2 {
   box-shadow: none;
   -webkit-text-decoration: none;
@@ -151,27 +160,6 @@ exports[`<Article /> does not render the reading time 1`] = `
 .c2:hover,
 .c2:focus {
   outline: none;
-}
-
-.c4 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  padding: 0;
-  margin: 0;
-}
-
-.c0 {
-  margin: 0 0 60px 0;
-  font-weight: 400;
-}
-
-.c1 {
-  margin: 20px 0 0 0;
 }
 
 .c3 {
@@ -202,10 +190,6 @@ exports[`<Article /> does not render the reading time 1`] = `
            · 
           In en
         </p>
-        <ul
-          class="c4"
-          data-testid="article-header-tags"
-        />
       </header>
     </article>
   </div>
@@ -213,6 +197,15 @@ exports[`<Article /> does not render the reading time 1`] = `
 `;
 
 exports[`<Article /> does not render the tags 1`] = `
+.c0 {
+  margin: 0 0 60px 0;
+  font-weight: 400;
+}
+
+.c1 {
+  margin: 20px 0 0 0;
+}
+
 .c2 {
   box-shadow: none;
   -webkit-text-decoration: none;
@@ -226,15 +219,6 @@ exports[`<Article /> does not render the tags 1`] = `
 .c2:focus {
   border-bottom: 1px solid undefined;
   outline: none;
-}
-
-.c0 {
-  margin: 0 0 60px 0;
-  font-weight: 400;
-}
-
-.c1 {
-  margin: 20px 0 0 0;
 }
 
 <body>
@@ -261,6 +245,15 @@ exports[`<Article /> does not render the tags 1`] = `
 `;
 
 exports[`<Article /> renders properly 1`] = `
+.c0 {
+  margin: 0 0 60px 0;
+  font-weight: 400;
+}
+
+.c1 {
+  margin: 20px 0 0 0;
+}
+
 .c2 {
   box-shadow: none;
   -webkit-text-decoration: none;
@@ -274,6 +267,11 @@ exports[`<Article /> renders properly 1`] = `
 .c2:focus {
   border-bottom: 1px solid undefined;
   outline: none;
+}
+
+.c3 {
+  font-size: 19px;
+  margin: 10px 0;
 }
 
 .c4 {
@@ -306,20 +304,6 @@ exports[`<Article /> renders properly 1`] = `
 .c6:focus {
   border-bottom: 1px solid;
   outline: none;
-}
-
-.c0 {
-  margin: 0 0 60px 0;
-  font-weight: 400;
-}
-
-.c1 {
-  margin: 20px 0 0 0;
-}
-
-.c3 {
-  font-size: 19px;
-  margin: 10px 0;
 }
 
 <body>
@@ -382,6 +366,15 @@ exports[`<Article /> renders properly 1`] = `
 `;
 
 exports[`<Article /> renders properly the body content 1`] = `
+.c0 {
+  margin: 0 0 60px 0;
+  font-weight: 400;
+}
+
+.c1 {
+  margin: 20px 0 0 0;
+}
+
 .c2 {
   box-shadow: none;
   -webkit-text-decoration: none;
@@ -395,15 +388,6 @@ exports[`<Article /> renders properly the body content 1`] = `
 .c2:focus {
   border-bottom: 1px solid undefined;
   outline: none;
-}
-
-.c0 {
-  margin: 0 0 60px 0;
-  font-weight: 400;
-}
-
-.c1 {
-  margin: 20px 0 0 0;
 }
 
 .c3 {
@@ -483,6 +467,15 @@ exports[`<Article /> renders properly the body content 1`] = `
 `;
 
 exports[`<Article /> renders properly the description 1`] = `
+.c0 {
+  margin: 0 0 60px 0;
+  font-weight: 400;
+}
+
+.c1 {
+  margin: 20px 0 0 0;
+}
+
 .c2 {
   box-shadow: none;
   -webkit-text-decoration: none;
@@ -496,15 +489,6 @@ exports[`<Article /> renders properly the description 1`] = `
 .c2:focus {
   border-bottom: 1px solid undefined;
   outline: none;
-}
-
-.c0 {
-  margin: 0 0 60px 0;
-  font-weight: 400;
-}
-
-.c1 {
-  margin: 20px 0 0 0;
 }
 
 .c3 {
@@ -584,6 +568,15 @@ exports[`<Article /> renders properly the description 1`] = `
 `;
 
 exports[`<Article /> renders the article details 1`] = `
+.c0 {
+  margin: 0 0 60px 0;
+  font-weight: 400;
+}
+
+.c1 {
+  margin: 20px 0 0 0;
+}
+
 .c2 {
   box-shadow: none;
   -webkit-text-decoration: none;
@@ -597,6 +590,11 @@ exports[`<Article /> renders the article details 1`] = `
 .c2:focus {
   border-bottom: 1px solid undefined;
   outline: none;
+}
+
+.c3 {
+  font-size: 19px;
+  margin: 10px 0;
 }
 
 .c4 {
@@ -629,20 +627,6 @@ exports[`<Article /> renders the article details 1`] = `
 .c6:focus {
   border-bottom: 1px solid;
   outline: none;
-}
-
-.c0 {
-  margin: 0 0 60px 0;
-  font-weight: 400;
-}
-
-.c1 {
-  margin: 20px 0 0 0;
-}
-
-.c3 {
-  font-size: 19px;
-  margin: 10px 0;
 }
 
 <body>

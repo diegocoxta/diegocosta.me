@@ -21,11 +21,13 @@ describe('<Article />', () => {
     expect(getByTestId('article-header-title').href).toBe('http://localhost/awesome-article');
     expect(getByTestId('article-header-tags')).toBeTruthy();
     expect(getAllByTestId('article-header-tag').length).toEqual(2);
+    expect(getByText('#testing-library')).toBeTruthy();
+    expect(getByText('#jest')).toBeTruthy();
     expect(baseElement).toMatchSnapshot();
   });
 
   it('does not render the tags', () => {
-    const { baseElement, queryAllByTestId } = render(
+    const { baseElement, queryAllByTestId, queryByTestId } = render(
       <Article
         title="Awesome Article"
         url="/awesome-article"
@@ -36,6 +38,7 @@ describe('<Article />', () => {
     );
 
     expect(queryAllByTestId('article-header-tag').length).toEqual(0);
+    expect(queryByTestId('article-header-tags')).toBeFalsy();
     expect(baseElement).toMatchSnapshot();
   });
 

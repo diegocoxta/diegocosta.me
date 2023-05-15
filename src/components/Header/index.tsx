@@ -4,15 +4,15 @@ import { useStaticQuery, graphql } from 'gatsby';
 import Header, { HeaderProps } from './Header';
 
 interface Props {
-  page?: HeaderProps['page'];
-  fullHeader: boolean;
+  metatags?: HeaderProps['metatags'];
+  showAboutMe?: boolean;
 }
 
 export default (props: Props): React.ReactElement => {
   const {
     site: {
       siteMetadata: {
-        bio,
+        aboutMe,
         getInTouch,
         metatags: { author },
       },
@@ -25,7 +25,7 @@ export default (props: Props): React.ReactElement => {
             metatags {
               author
             }
-            bio {
+            aboutMe {
               pt
               en
             }
@@ -41,6 +41,12 @@ export default (props: Props): React.ReactElement => {
   );
 
   return (
-    <Header author={author} description={bio} navigation={getInTouch} page={props.page} fullHeader={props.fullHeader} />
+    <Header
+      author={author}
+      aboutMe={aboutMe}
+      navigation={getInTouch}
+      metatags={props.metatags}
+      showAboutMe={props.showAboutMe}
+    />
   );
 };

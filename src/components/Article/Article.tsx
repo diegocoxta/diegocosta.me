@@ -1,10 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import { useLocale, getContentLanguage } from '~/hooks/useLocale';
-
-import Title, { TitleProps } from './components/Title';
-import Tags, { TagsProps } from './components/Tags';
+import { useLocale, getContentLanguage, Link } from '~/hooks/useLocale';
 
 const Container = styled.article`
   margin: 0 0 60px 0;
@@ -16,10 +13,54 @@ const Header = styled.header`
   margin: 20px 0 0 0;
 `;
 
+const Title = styled(Link).attrs((props) => ({
+  as: props.to ? Link : 'h2',
+}))`
+  color: ${({ theme }) => theme.titleColor};
+  box-shadow: none;
+  text-decoration: none;
+  font-size: 36px;
+  margin: 0;
+  font-weight: 700;
+
+  :hover,
+  :focus {
+    border-bottom: ${({ theme, to }) => to && `1px solid ${theme.titleColor}`};
+    outline: none;
+  }
+`;
+
 const MetaAttributes = styled.p`
   color: ${({ theme }) => theme.subtitleColor};
   font-size: 19px;
   margin: 10px 0;
+`;
+
+const TagList = styled.ul`
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+  margin: 0;
+`;
+
+const TagItem = styled.li`
+  list-style: none;
+  padding: 0 10px 0 0;
+`;
+
+const TagLink = styled(Link)`
+  text-decoration: none;
+  box-shadow: none;
+  font-size: 16px;
+  color: ${({ theme }) => theme.accentColor};
+  font-weight: 700;
+  text-transform: lowercase;
+
+  :hover,
+  :focus {
+    border-bottom: 1px solid ${({ theme }) => theme.accentColor};
+    outline: none;
+  }
 `;
 
 export const Content = styled.section`
@@ -72,14 +113,16 @@ export const Content = styled.section`
 
 type Nullable<T> = T | null;
 
-export type ArticleProps = TitleProps &
-  TagsProps & {
-    readingTime?: number;
-    language?: Nullable<string>;
-    date?: Nullable<string>;
-    content?: Nullable<string>;
-    kind?: Nullable<string>;
-  };
+interface ArticleProps {
+  title: string;
+  url?: Nullable<string>;
+  language?: Nullable<string>;
+  tags?: Nullable<string[]>;
+  readingTime?: Nullable<number>;
+  date?: Nullable<string>;
+  content?: Nullable<string>;
+  kind?: Nullable<string>;
+}
 
 export default function Article(props: ArticleProps): React.ReactElement {
   const locale = useLocale();
@@ -113,13 +156,23 @@ export default function Article(props: ArticleProps): React.ReactElement {
   return (
     <Container data-testid="article-item">
       <Header>
-        <Title title={props.title} url={props.url} language={props.language} />
+        <Title to={props.url} data-testid="article-header-title" language={props.language}>
+          {props.title}
+        </Title>
         {props.kind === 'articles' && (
           <>
             <MetaAttributes>
               {date} {getReadingTime()} · {getContentLanguage(locale, props.language)}
             </MetaAttributes>
-            <Tags tags={props.tags} />
+            {props.tags && (
+              <TagList data-testid="article-header-tags">
+                {props.tags?.map((tag: string, index: number) => (
+                  <TagItem key={`${index}-${tag}`} data-testid="article-header-tag">
+                    <TagLink to={`/tags/${tag}`}>{`#${tag}`}</TagLink>
+                  </TagItem>
+                ))}
+              </TagList>
+            )}
           </>
         )}
       </Header>

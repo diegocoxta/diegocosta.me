@@ -9,7 +9,7 @@ import TagsTemplate from '../tags';
 describe('<TagsTemplate>', () => {
   it('renders properly', () => {
     const data = {
-      list: {
+      content: {
         totalCount: 2,
         edges: [
           {
@@ -40,7 +40,7 @@ describe('<TagsTemplate>', () => {
               },
               fields: {
                 slug: '/path-to-article-2',
-                language: 'pt',
+                language: 'en',
                 readingTime: {
                   minutes: 2,
                 },
@@ -53,7 +53,7 @@ describe('<TagsTemplate>', () => {
     };
 
     const { baseElement, getAllByTestId, getByText } = render(<TagsTemplate data={data} />);
-    expect(getAllByTestId('article-item').length).toEqual(data.list.totalCount);
+    expect(getAllByTestId('article-item').length).toEqual(data.content.totalCount);
     expect(getByText('Awesome second article')).toBeTruthy();
     expect(getByText('Awesome first article')).toBeTruthy();
     expect(baseElement).toMatchSnapshot();

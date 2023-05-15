@@ -1,7 +1,7 @@
 import React from 'react';
 import { graphql } from 'gatsby';
 
-export default function (props) {
+export default function (props: unknown) {
   console.log({ props });
   return <p>Oi</p>;
 }

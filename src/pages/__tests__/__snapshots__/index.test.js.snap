@@ -1,6 +1,30 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<IndexPage> renders properly 1`] = `
+.c0 {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.c1 {
+  background: linear-gradient(90deg,#ffffff 20px,transparent 1%) center, linear-gradient(#ffffff 20px,transparent 1%) center, #2F3D4F;
+  background-size: 22px 22px;
+  height: 120px;
+  margin: 40px 0;
+  width: 100%;
+}
+
+.c2 {
+  margin: 0 0 60px 0;
+  font-weight: 400;
+  color: #2F3D4F;
+}
+
+.c3 {
+  margin: 20px 0 0 0;
+}
+
 .c4 {
   color: #2F3D4F;
   box-shadow: none;
@@ -15,16 +39,6 @@ exports[`<IndexPage> renders properly 1`] = `
 .c4:focus {
   border-bottom: 1px solid #2F3D4F;
   outline: none;
-}
-
-.c2 {
-  margin: 0 0 60px 0;
-  font-weight: 400;
-  color: #2F3D4F;
-}
-
-.c3 {
-  margin: 20px 0 0 0;
 }
 
 .c5 {
@@ -74,20 +88,6 @@ exports[`<IndexPage> renders properly 1`] = `
 
 .c5 table.uses-table td {
   text-align: center;
-}
-
-.c0 {
-  max-width: 960px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
-
-.c1 {
-  background: linear-gradient(90deg,#ffffff 20px,transparent 1%) center, linear-gradient(#ffffff 20px,transparent 1%) center, #2F3D4F;
-  background-size: 22px 22px;
-  height: 120px;
-  margin: 40px 0;
-  width: 100%;
 }
 
 <body>

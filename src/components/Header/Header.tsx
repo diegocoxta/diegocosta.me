@@ -1,10 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import Metatags, { Props as MetatagsProps } from './components/Metatags';
-import LanguageSwitcher from './components/LanguageSwitcher';
-import ThemeSwitcher from './components/ThemeSwitcher';
-import Navigation from './components/Navigation';
+import Metatags, { Props as MetatagsProps } from '~/components/Metatags';
+import LanguageSwitcher from '~/components/LanguageSwitcher';
+import ThemeSwitcher from '~/components/ThemeSwitcher';
+import Navigation from '~/components/Navigation';
 
 import { Link, useLocale } from '~/hooks/useLocale';
 
@@ -105,8 +105,8 @@ const NavigationLink = styled.a`
 
 export interface HeaderProps {
   author: string;
-  page?: MetatagsProps;
-  description?: { [key: string]: string };
+  metatags?: MetatagsProps;
+  aboutMe?: { [key: string]: string };
   navigation?: [
     {
       label: string;
@@ -114,7 +114,7 @@ export interface HeaderProps {
       rel?: string;
     }
   ];
-  fullHeader: boolean;
+  showAboutMe?: boolean;
 }
 
 export default function Header(props: HeaderProps): React.ReactElement {
@@ -122,11 +122,11 @@ export default function Header(props: HeaderProps): React.ReactElement {
   const currentLanguage = locale.getCurrentLanguage();
 
   const [name, lastname] = props.author.split(' ');
-  const description = props.description && props.description[currentLanguage];
+  const aboutMe = props.aboutMe && props.aboutMe[currentLanguage];
 
   return (
     <>
-      <Metatags {...props.page} />
+      <Metatags {...props.metatags} />
       <LanguageSwitcher />
       <Content>
         <StyledLink to="/">
@@ -140,9 +140,9 @@ export default function Header(props: HeaderProps): React.ReactElement {
           <Navigation />
         </Options>
       </Content>
-      {props.fullHeader && (
+      {props.showAboutMe && (
         <>
-          {description?.split('\n').map((p: string) => (
+          {aboutMe?.split('\n').map((p: string) => (
             <Paragraph key={p} dangerouslySetInnerHTML={{ __html: p }} />
           ))}
           {props.navigation && (

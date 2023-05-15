@@ -2989,7 +2989,7 @@ declare namespace Queries {
   };
 
   type SiteSiteMetadata = {
-    readonly bio: Maybe<SiteSiteMetadataBio>;
+    readonly aboutMe: Maybe<SiteSiteMetadataAboutMe>;
     readonly description: Maybe<Scalars['String']>;
     readonly getInTouch: Maybe<ReadonlyArray<Maybe<SiteSiteMetadataGetInTouch>>>;
     readonly metatags: Maybe<SiteSiteMetadataMetatags>;
@@ -2997,28 +2997,28 @@ declare namespace Queries {
     readonly title: Maybe<Scalars['String']>;
   };
 
-  type SiteSiteMetadataBio = {
+  type SiteSiteMetadataAboutMe = {
     readonly en: Maybe<Scalars['String']>;
     readonly pt: Maybe<Scalars['String']>;
   };
 
-  type SiteSiteMetadataBioFieldSelector = {
+  type SiteSiteMetadataAboutMeFieldSelector = {
     readonly en: InputMaybe<FieldSelectorEnum>;
     readonly pt: InputMaybe<FieldSelectorEnum>;
   };
 
-  type SiteSiteMetadataBioFilterInput = {
+  type SiteSiteMetadataAboutMeFilterInput = {
     readonly en: InputMaybe<StringQueryOperatorInput>;
     readonly pt: InputMaybe<StringQueryOperatorInput>;
   };
 
-  type SiteSiteMetadataBioSortInput = {
+  type SiteSiteMetadataAboutMeSortInput = {
     readonly en: InputMaybe<SortOrderEnum>;
     readonly pt: InputMaybe<SortOrderEnum>;
   };
 
   type SiteSiteMetadataFieldSelector = {
-    readonly bio: InputMaybe<SiteSiteMetadataBioFieldSelector>;
+    readonly aboutMe: InputMaybe<SiteSiteMetadataAboutMeFieldSelector>;
     readonly description: InputMaybe<FieldSelectorEnum>;
     readonly getInTouch: InputMaybe<SiteSiteMetadataGetInTouchFieldSelector>;
     readonly metatags: InputMaybe<SiteSiteMetadataMetatagsFieldSelector>;
@@ -3027,7 +3027,7 @@ declare namespace Queries {
   };
 
   type SiteSiteMetadataFilterInput = {
-    readonly bio: InputMaybe<SiteSiteMetadataBioFilterInput>;
+    readonly aboutMe: InputMaybe<SiteSiteMetadataAboutMeFilterInput>;
     readonly description: InputMaybe<StringQueryOperatorInput>;
     readonly getInTouch: InputMaybe<SiteSiteMetadataGetInTouchFilterListInput>;
     readonly metatags: InputMaybe<SiteSiteMetadataMetatagsFilterInput>;
@@ -3092,7 +3092,7 @@ declare namespace Queries {
   };
 
   type SiteSiteMetadataSortInput = {
-    readonly bio: InputMaybe<SiteSiteMetadataBioSortInput>;
+    readonly aboutMe: InputMaybe<SiteSiteMetadataAboutMeSortInput>;
     readonly description: InputMaybe<SortOrderEnum>;
     readonly getInTouch: InputMaybe<SiteSiteMetadataGetInTouchSortInput>;
     readonly metatags: InputMaybe<SiteSiteMetadataMetatagsSortInput>;
@@ -3276,7 +3276,7 @@ declare namespace Queries {
     readonly site: {
       readonly siteMetadata: {
         readonly metatags: { readonly author: string | null } | null;
-        readonly bio: { readonly pt: string | null; readonly en: string | null } | null;
+        readonly aboutMe: { readonly pt: string | null; readonly en: string | null } | null;
         readonly getInTouch: ReadonlyArray<{
           readonly label: string | null;
           readonly url: string | null;
@@ -3296,7 +3296,7 @@ declare namespace Queries {
         readonly node: { readonly ns: string | null; readonly data: string | null; readonly language: string | null };
       }>;
     };
-    readonly list: {
+    readonly content: {
       readonly edges: ReadonlyArray<{
         readonly node: {
           readonly html: string | null;
@@ -3455,7 +3455,7 @@ declare namespace Queries {
         readonly node: { readonly ns: string | null; readonly data: string | null; readonly language: string | null };
       }>;
     };
-    readonly list: {
+    readonly content: {
       readonly edges: ReadonlyArray<{
         readonly node: {
           readonly html: string | null;

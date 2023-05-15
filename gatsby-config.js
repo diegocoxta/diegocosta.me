@@ -8,7 +8,7 @@ module.exports = {
       author: 'Diego Costa',
       image: 'https://repository-images.githubusercontent.com/278878641/3756a080-d995-11ea-9b9f-f91a4448af98',
     },
-    bio: {
+    aboutMe: {
       en: 'I’m a Engineering Manager passionate about the intersection between technology and people. My goal is to help technology teams achieve their full potential.\nI have a great interest in engineering leadership, people management, software engineering, as well as inclusion and diversity. Currently, I am an Engineering Manager at Nubank and I am always open to sharing my ideas and experiences on these topics.\nIf you’d like to learn more about me, check out the links below!',
       pt: 'Sou um Gerente de Engenharia apaixonado pela intersecção entre tecnologia e pessoas. Meu objetivo é ajudar equipes de tecnologia a alcançar todo o seu potencial.\nTenho grande interesse em liderança em engenharia, gerenciamento de pessoas, engenharia de software, além de inclusão e diversidade. Atualmente, sou Gerente de Engenharia na Nubank e estou sempre aberto a compartilhar minhas ideias e experiências sobre esses temas.\nSe você quiser saber mais sobre mim, confira os links abaixo!',
     },
