@@ -47,11 +47,11 @@ export const themeDark: ThemeScheme = {
 };
 
 export const themeLight: ThemeScheme = {
+  ...themeDark,
   titleColor: colors.MIDNIGHTBLUE,
   subtitleColor: colors.WETASPHALT,
   textColor: colors.MIDNIGHTBLUE,
   backgroundColor: '#ffffff',
-  accentColor: colors.LIME,
 };
 
 export const useTheme = (): [string, () => void, (color: 'light' | 'dark') => void] => {

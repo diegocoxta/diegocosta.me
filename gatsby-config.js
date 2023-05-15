@@ -76,7 +76,7 @@ module.exports = {
     {
       resolve: 'gatsby-source-filesystem',
       options: {
-        path: `${__dirname}/content/locales`,
+        path: `${__dirname}/src/locales`,
         name: 'locales',
       },
     },
