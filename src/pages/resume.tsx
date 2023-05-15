@@ -1,9 +1,27 @@
 import React from 'react';
-import { graphql } from 'gatsby';
+import { PageProps, graphql } from 'gatsby';
 
-export default function (props: unknown) {
-  console.log({ props });
-  return <p>Oi</p>;
+import Layout from '~/components/Layout';
+import Resume from '~/components/Resume';
+
+import { useLocale } from '~/hooks/useLocale';
+
+export default function (props: PageProps<Queries.ResumePageQuery>) {
+  const locale = useLocale();
+
+  let { edges } = props.data.resume;
+
+  if (edges.length > 1) {
+    edges = edges.filter((i) => i.node.fields?.language === locale.getCurrentLanguage());
+  }
+
+  const content = edges[0].node;
+
+  return (
+    <Layout showAboutMe>
+      <Resume {...content} />
+    </Layout>
+  );
 }
 
 export const pageQuery = graphql`
@@ -14,8 +32,8 @@ export const pageQuery = graphql`
     resume: allResumeYaml {
       edges {
         node {
-          basics {
-            summary
+          fields {
+            language
           }
           work {
             company

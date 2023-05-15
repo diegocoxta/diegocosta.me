@@ -3381,7 +3381,7 @@ declare namespace Queries {
     readonly resume: {
       readonly edges: ReadonlyArray<{
         readonly node: {
-          readonly basics: { readonly summary: string | null } | null;
+          readonly fields: { readonly language: string | null } | null;
           readonly work: ReadonlyArray<{
             readonly company: string | null;
             readonly position: string | null;
