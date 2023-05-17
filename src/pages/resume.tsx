@@ -15,11 +15,9 @@ export default function (props: PageProps<Queries.ResumePageQuery>) {
     edges = edges.filter((i) => i.node.fields?.language === locale.getCurrentLanguage());
   }
 
-  const content = edges[0].node;
-
   return (
-    <Layout showAboutMe>
-      <Resume {...content} />
+    <Layout>
+      <Resume {...edges[0].node} />
     </Layout>
   );
 }
@@ -35,12 +33,16 @@ export const pageQuery = graphql`
           fields {
             language
           }
+          basics {
+            summary
+          }
           work {
             company
             position
             startDate
             endDate
             summary
+            highlights
           }
           education {
             institution

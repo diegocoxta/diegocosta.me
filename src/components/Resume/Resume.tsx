@@ -1,29 +1,32 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import { useLocale, getContentLanguage, Link } from '~/hooks/useLocale';
+import ReadMore from './components/ReadMore';
+import TimelineItem from './components/TimelineEntry';
 
-const Container = styled.article`
+const Container = styled.div`
   margin: 0 0 60px 0;
   font-weight: 400;
   color: ${({ theme }) => theme.textColor};
+  display: flex;
+  justify-content: space-between;
 `;
 
-const Title = styled(Link).attrs((props) => ({
-  as: props.to ? Link : 'h2',
-}))`
+const Content = styled.div`
+  width: 60%;
+`;
+
+const Sidebar = styled.div`
+  width: 30%;
+`;
+
+const Title = styled.h2`
   color: ${({ theme }) => theme.titleColor};
   box-shadow: none;
   text-decoration: none;
   font-size: 36px;
   margin: 0;
   font-weight: 700;
-
-  :hover,
-  :focus {
-    border-bottom: ${({ theme, to }) => to && `1px solid ${theme.titleColor}`};
-    outline: none;
-  }
 `;
 
 export const Paragraph = styled.p`
@@ -32,50 +35,68 @@ export const Paragraph = styled.p`
   margin-top: 10px;
 `;
 
+const Quote = styled.blockquote`
+  border-left: 5px solid ${({ theme }) => theme.accentColor};
+  padding-left: 20px;
+  margin-left: 0;
+`;
+
+const Timeline = styled.ul`
+  max-width: 95%;
+  list-style: none;
+  padding: 0px;
+`;
+
 export default function Resume(props: Queries.ResumePageQuery['resume']['edges'][0]['node']) {
   return (
     <Container>
-      <Title>Work</Title>
-      {props.work?.map((work, index) => (
-        <div key={`work-${index}`}>
-          <h3>
-            {work?.position} @ {work?.company}
-          </h3>
-          <Paragraph>
-            {work?.startDate} - {work?.endDate}
-          </Paragraph>
-          {work?.summary?.split('\n').map((summary, index) => (
-            <Paragraph key={`summary-${index}`}>{summary}</Paragraph>
+      <Content>
+        <Title>Work Experience</Title>
+        <Timeline>
+          {props.work?.map((work) => {
+            const interval = `${work?.startDate} - ${work?.endDate ? work.endDate : 'now'}`;
+            const title = `${work?.position} @ ${work?.company}`;
+
+            return (
+              <TimelineItem key={interval} title={title} interval={interval}>
+                <ReadMore shortAt={300}>{work?.summary ?? ''}</ReadMore>
+              </TimelineItem>
+            );
+          })}
+        </Timeline>
+
+        <Title>References</Title>
+        <p>These are a collection of Recommendations I`ve received, from amazing people, in my career.</p>
+        {props.references?.map((reference, index) => (
+          <Quote key={`education-${index}`}>
+            {reference?.reference?.split('\n').map((reference, index) => (
+              <p key={`reference-${index}`}>{reference}</p>
+            ))}
+            <h3>by {reference?.name}</h3>
+          </Quote>
+        ))}
+      </Content>
+
+      <Sidebar>
+        <Title>Education History</Title>
+        <Timeline>
+          {props.education?.map((education) => (
+            <TimelineItem
+              key={education?.area}
+              title={education?.area ?? ''}
+              subtitle={education?.institution ?? ''}
+              interval={`${education?.startDate} - ${education?.endDate}`}
+            />
           ))}
-        </div>
-      ))}
-      <Title>Education</Title>
-      {props.education?.map((education, index) => (
-        <div key={`education-${index}`}>
-          <h3>
-            {education?.area} @ {education?.institution}
-          </h3>
-          <Paragraph>
-            {education?.startDate} - {education?.endDate}
-          </Paragraph>
-          <Paragraph>{education?.score}</Paragraph>
-        </div>
-      ))}
-      <Title>Languages</Title>
-      {props.languages?.map((language, index) => (
-        <li key={`languages-${index}`}>
-          {language?.language} - {language?.description}
-        </li>
-      ))}
-      <Title>References</Title>
-      {props.references?.map((reference, index) => (
-        <div key={`education-${index}`}>
-          <h3>by {reference?.name}</h3>
-          {reference?.reference?.split('\n').map((reference, index) => (
-            <p key={`reference-${index}`}>{reference}</p>
-          ))}
-        </div>
-      ))}
+        </Timeline>
+
+        <Title>Languages</Title>
+        {props.languages?.map((language, index) => (
+          <li key={`languages-${index}`}>
+            {language?.language} - {language?.description}
+          </li>
+        ))}
+      </Sidebar>
     </Container>
   );
 }

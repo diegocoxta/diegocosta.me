@@ -3382,12 +3382,14 @@ declare namespace Queries {
       readonly edges: ReadonlyArray<{
         readonly node: {
           readonly fields: { readonly language: string | null } | null;
+          readonly basics: { readonly summary: string | null } | null;
           readonly work: ReadonlyArray<{
             readonly company: string | null;
             readonly position: string | null;
             readonly startDate: string | null;
             readonly endDate: string | null;
             readonly summary: string | null;
+            readonly highlights: ReadonlyArray<string | null> | null;
           } | null> | null;
           readonly education: ReadonlyArray<{
             readonly institution: string | null;
