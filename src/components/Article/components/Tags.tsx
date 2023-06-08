@@ -23,8 +23,8 @@ const TagLink = styled(Link)`
   font-weight: 700;
   text-transform: lowercase;
 
-  :hover,
-  :focus {
+  &:hover,
+  &:focus {
     border-bottom: 1px solid ${({ theme }) => theme.accentColor};
     outline: none;
   }

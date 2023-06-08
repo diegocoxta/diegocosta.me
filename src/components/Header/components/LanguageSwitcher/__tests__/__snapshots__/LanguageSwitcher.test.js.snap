@@ -2,21 +2,14 @@
 
 exports[`<LanguageSwitcher /> renders properly 1`] = `
 .c0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
   margin: 40px 0 0 0;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
   justify-content: flex-start;
 }
 
 .c1 {
   margin: 0 5px;
   font-weight: 700;
-  -webkit-text-decoration: none;
   text-decoration: none;
   font-size: 22px;
 }

@@ -4,7 +4,6 @@ exports[`<TagsTemplate> renders properly 1`] = `
 .c4 {
   color: #2F3D4F;
   box-shadow: none;
-  -webkit-text-decoration: none;
   text-decoration: none;
   font-size: 36px;
   margin: 0;
@@ -35,7 +34,6 @@ exports[`<TagsTemplate> renders properly 1`] = `
 
 .c5 a {
   color: #AAC13D;
-  -webkit-text-decoration: none;
   text-decoration: none;
   border-bottom: 1px solid #ffffff;
 }
@@ -60,7 +58,7 @@ exports[`<TagsTemplate> renders properly 1`] = `
 }
 
 .c5 img {
-  box-shadow: none !important;
+  box-shadow: none!important;
 }
 
 .c5 h3 {
@@ -83,7 +81,7 @@ exports[`<TagsTemplate> renders properly 1`] = `
 }
 
 .c1 {
-  background: linear-gradient(90deg,#ffffff 20px,transparent 1%) center, linear-gradient(#ffffff 20px,transparent 1%) center, #2F3D4F;
+  background: linear-gradient(90deg, #ffffff 20px, transparent 1%) center,linear-gradient(#ffffff 20px, transparent 1%) center,#2F3D4F;
   background-size: 22px 22px;
   height: 120px;
   margin: 40px 0;

@@ -3,17 +3,8 @@
 exports[`<Header /> does not render the last name 1`] = `
 .c0 {
   margin: 16px 0 40px 0;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
   justify-content: space-between;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
 }
 
@@ -25,16 +16,9 @@ exports[`<Header /> does not render the last name 1`] = `
 }
 
 .c1 {
-  -webkit-text-decoration: none;
   text-decoration: none;
   box-shadow: none;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
 }
 
@@ -43,27 +27,18 @@ exports[`<Header /> does not render the last name 1`] = `
 }
 
 .c3 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
   justify-content: space-between;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
 }
 
-@media (min-width:760px) {
+@media (min-width: 760px) {
   .c0 {
     margin: 40px 0 40px 0;
   }
 }
 
-@media (min-width:760px) {
+@media (min-width: 760px) {
   .c2 {
     font-size: 110px;
   }
@@ -108,17 +83,8 @@ exports[`<Header /> does not render the last name 1`] = `
 exports[`<Header /> renders properly 1`] = `
 .c0 {
   margin: 16px 0 40px 0;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
   justify-content: space-between;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
 }
 
@@ -130,16 +96,9 @@ exports[`<Header /> renders properly 1`] = `
 }
 
 .c1 {
-  -webkit-text-decoration: none;
   text-decoration: none;
   box-shadow: none;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
 }
 
@@ -148,27 +107,18 @@ exports[`<Header /> renders properly 1`] = `
 }
 
 .c3 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
   justify-content: space-between;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
 }
 
-@media (min-width:760px) {
+@media (min-width: 760px) {
   .c0 {
     margin: 40px 0 40px 0;
   }
 }
 
-@media (min-width:760px) {
+@media (min-width: 760px) {
   .c2 {
     font-size: 110px;
   }
@@ -220,17 +170,8 @@ exports[`<Header /> renders properly 1`] = `
 exports[`<Header /> renders the navigation properly 1`] = `
 .c0 {
   margin: 16px 0 40px 0;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
   justify-content: space-between;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
 }
 
@@ -242,16 +183,9 @@ exports[`<Header /> renders the navigation properly 1`] = `
 }
 
 .c1 {
-  -webkit-text-decoration: none;
   text-decoration: none;
   box-shadow: none;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
 }
 
@@ -260,17 +194,8 @@ exports[`<Header /> renders the navigation properly 1`] = `
 }
 
 .c3 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
   justify-content: space-between;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
 }
 
@@ -287,11 +212,7 @@ exports[`<Header /> renders the navigation properly 1`] = `
 }
 
 .c6 {
-  -webkit-text-decoration: none;
   text-decoration: none;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
   padding: 0;
   text-transform: uppercase;
@@ -304,35 +225,32 @@ exports[`<Header /> renders the navigation properly 1`] = `
   line-height: 0.5;
 }
 
-@media (min-width:760px) {
+@media (min-width: 760px) {
   .c0 {
     margin: 40px 0 40px 0;
   }
 }
 
-@media (min-width:760px) {
+@media (min-width: 760px) {
   .c2 {
     font-size: 110px;
   }
 }
 
-@media (min-width:760px) {
+@media (min-width: 760px) {
   .c4 {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
     display: flex;
   }
 }
 
-@media (min-width:760px) {
+@media (min-width: 760px) {
   .c5 {
     font-size: 22px;
     margin: 0 24px 0 0;
   }
 }
 
-@media (min-width:760px) {
+@media (min-width: 760px) {
   .c6:after {
     line-height: 0.4;
   }

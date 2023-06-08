@@ -3,7 +3,6 @@
 exports[`<Article /> does not render the article details 1`] = `
 .c2 {
   box-shadow: none;
-  -webkit-text-decoration: none;
   text-decoration: none;
   font-size: 36px;
   margin: 0;
@@ -51,7 +50,6 @@ exports[`<Article /> does not render the article details 1`] = `
 exports[`<Article /> does not render the article language name 1`] = `
 .c2 {
   box-shadow: none;
-  -webkit-text-decoration: none;
   text-decoration: none;
   font-size: 36px;
   margin: 0;
@@ -96,7 +94,6 @@ exports[`<Article /> does not render the article language name 1`] = `
 exports[`<Article /> does not render the link 1`] = `
 .c2 {
   box-shadow: none;
-  -webkit-text-decoration: none;
   text-decoration: none;
   font-size: 36px;
   margin: 0;
@@ -141,7 +138,6 @@ exports[`<Article /> does not render the link 1`] = `
 exports[`<Article /> does not render the reading time 1`] = `
 .c2 {
   box-shadow: none;
-  -webkit-text-decoration: none;
   text-decoration: none;
   font-size: 36px;
   margin: 0;
@@ -154,12 +150,7 @@ exports[`<Article /> does not render the reading time 1`] = `
 }
 
 .c4 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   padding: 0;
   margin: 0;
@@ -215,7 +206,6 @@ exports[`<Article /> does not render the reading time 1`] = `
 exports[`<Article /> does not render the tags 1`] = `
 .c2 {
   box-shadow: none;
-  -webkit-text-decoration: none;
   text-decoration: none;
   font-size: 36px;
   margin: 0;
@@ -263,7 +253,6 @@ exports[`<Article /> does not render the tags 1`] = `
 exports[`<Article /> renders properly 1`] = `
 .c2 {
   box-shadow: none;
-  -webkit-text-decoration: none;
   text-decoration: none;
   font-size: 36px;
   margin: 0;
@@ -277,12 +266,7 @@ exports[`<Article /> renders properly 1`] = `
 }
 
 .c4 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   padding: 0;
   margin: 0;
@@ -294,7 +278,6 @@ exports[`<Article /> renders properly 1`] = `
 }
 
 .c6 {
-  -webkit-text-decoration: none;
   text-decoration: none;
   box-shadow: none;
   font-size: 16px;
@@ -384,7 +367,6 @@ exports[`<Article /> renders properly 1`] = `
 exports[`<Article /> renders properly the body content 1`] = `
 .c2 {
   box-shadow: none;
-  -webkit-text-decoration: none;
   text-decoration: none;
   font-size: 36px;
   margin: 0;
@@ -413,7 +395,6 @@ exports[`<Article /> renders properly the body content 1`] = `
 }
 
 .c3 a {
-  -webkit-text-decoration: none;
   text-decoration: none;
   border-bottom: 1px solid;
 }
@@ -438,7 +419,7 @@ exports[`<Article /> renders properly the body content 1`] = `
 }
 
 .c3 img {
-  box-shadow: none !important;
+  box-shadow: none!important;
 }
 
 .c3 h3 {
@@ -485,7 +466,6 @@ exports[`<Article /> renders properly the body content 1`] = `
 exports[`<Article /> renders properly the description 1`] = `
 .c2 {
   box-shadow: none;
-  -webkit-text-decoration: none;
   text-decoration: none;
   font-size: 36px;
   margin: 0;
@@ -514,7 +494,6 @@ exports[`<Article /> renders properly the description 1`] = `
 }
 
 .c3 a {
-  -webkit-text-decoration: none;
   text-decoration: none;
   border-bottom: 1px solid;
 }
@@ -539,7 +518,7 @@ exports[`<Article /> renders properly the description 1`] = `
 }
 
 .c3 img {
-  box-shadow: none !important;
+  box-shadow: none!important;
 }
 
 .c3 h3 {
@@ -586,7 +565,6 @@ exports[`<Article /> renders properly the description 1`] = `
 exports[`<Article /> renders the article details 1`] = `
 .c2 {
   box-shadow: none;
-  -webkit-text-decoration: none;
   text-decoration: none;
   font-size: 36px;
   margin: 0;
@@ -600,12 +578,7 @@ exports[`<Article /> renders the article details 1`] = `
 }
 
 .c4 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   padding: 0;
   margin: 0;
@@ -617,7 +590,6 @@ exports[`<Article /> renders the article details 1`] = `
 }
 
 .c6 {
-  -webkit-text-decoration: none;
   text-decoration: none;
   box-shadow: none;
   font-size: 16px;

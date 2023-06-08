@@ -30,8 +30,8 @@ const Link = styled.a.attrs({
   text-decoration: none;
   box-shadow: none;
 
-  :hover,
-  :focus {
+  &:hover,
+  &:focus {
     border-bottom: 1px solid ${({ theme }) => theme.accentColor};
     outline: none;
   }

@@ -41,7 +41,7 @@ const StyledLink = styled(Link)`
   display: flex;
   align-items: center;
 
-  :focus {
+  &:focus {
     outline: none;
   }
 `;
@@ -86,7 +86,7 @@ const NavigationLink = styled.a`
   padding: 0;
   text-transform: uppercase;
 
-  :after {
+  &:after {
     content: '.';
     display: block;
     color: ${({ theme }) => theme.backgroundColor};
@@ -98,7 +98,7 @@ const NavigationLink = styled.a`
     }
   }
 
-  :hover:after {
+  &:hover:after {
     color: ${({ theme }) => theme.textColor};
   }
 `;

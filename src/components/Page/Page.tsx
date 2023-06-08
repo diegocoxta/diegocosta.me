@@ -2,14 +2,14 @@ import React from 'react';
 import { PageProps } from 'gatsby';
 import styled, { createGlobalStyle, ThemeContext } from 'styled-components';
 
-import { useTheme, ThemeScheme, themeLight, themeDark } from '~/hooks/useTheme';
+import { useTheme, themeLight, themeDark } from '~/hooks/useTheme';
 import { useLocale } from '~/hooks/useLocale';
 
 import Article from '~/components/Article';
 import Header from '~/components/Header';
 import Footer from '~/components/Footer';
 
-const GlobalStyle = createGlobalStyle<{ theme: ThemeScheme }>`
+const GlobalStyle = createGlobalStyle`
   body {
     background: ${({ theme }) => theme.backgroundColor};
     font-family: 'Source Sans Pro', sans-serif;

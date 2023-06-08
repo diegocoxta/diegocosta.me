@@ -3,7 +3,6 @@
 exports[`<Title /> renders properly 1`] = `
 .c0 {
   box-shadow: none;
-  -webkit-text-decoration: none;
   text-decoration: none;
   font-size: 36px;
   margin: 0;

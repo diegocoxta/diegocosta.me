@@ -20,11 +20,11 @@ const Button = styled.button`
   transition: background 0.3s linear;
   cursor: pointer;
 
-  :focus {
+  &:focus {
     outline: none;
   }
 
-  :hover {
+  &:hover {
     background: ${({ theme }) => `${theme.textColor}1A`};
   }
 `;

@@ -32,8 +32,8 @@ export const Content = styled.section`
     text-decoration: none;
     border-bottom: 1px solid ${({ theme }) => theme.backgroundColor};
 
-    :hover,
-    :focus {
+    &:hover,
+    &:focus {
       border-bottom: 1px solid ${({ theme }) => theme.accentColor};
       outline: none;
     }

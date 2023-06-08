@@ -13,8 +13,8 @@ const Container = styled(Link).attrs((props) => ({
   margin: 0;
   font-weight: 700;
 
-  :hover,
-  :focus {
+  &:hover,
+  &:focus {
     border-bottom: ${({ theme, to }) => to && `1px solid ${theme.titleColor}`};
     outline: none;
   }
@@ -28,7 +28,7 @@ export interface TitleProps {
 
 export default function Title(props: TitleProps) {
   return (
-    <Container to={props.url} data-testid="article-header-title" language={props.language}>
+    <Container to={props.url} data-testid="article-header-title" language={props.url ? props.language : undefined}>
       {props.title}
     </Container>
   );

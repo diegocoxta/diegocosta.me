@@ -4,7 +4,7 @@ import { BsMoon, BsSun } from 'react-icons/bs';
 
 import { useLocale } from '~/hooks/useLocale';
 
-const Container = styled.button<{ enabled: boolean }>`
+const Container = styled.button<{ $enabled?: boolean }>`
   background: transparent;
   border: 2px solid ${({ theme }) => theme.accentColor};
   border-radius: 18px;
@@ -12,12 +12,12 @@ const Container = styled.button<{ enabled: boolean }>`
   width: 50px;
   padding: 0px;
   display: flex;
-  justify-content: ${({ enabled }) => (enabled ? 'flex-start' : 'flex-end')};
+  justify-content: ${({ $enabled }) => ($enabled ? 'flex-start' : 'flex-end')};
   transition: all 1s linear;
   margin: 0 20px;
   cursor: pointer;
 
-  :focus {
+  &:focus {
     outline: none;
   }
 `;
@@ -42,7 +42,7 @@ export default function ThemeSwitcher(): React.ReactElement {
   return (
     <Container
       aria-label={locale.getTranslationFor('themeSwitcher.toggle')}
-      enabled={isDarkMode}
+      $enabled={isDarkMode}
       onClick={themeContext?.themeToggler}
     >
       <Indicator>{isDarkMode ? <BsMoon /> : <BsSun />}</Indicator>
