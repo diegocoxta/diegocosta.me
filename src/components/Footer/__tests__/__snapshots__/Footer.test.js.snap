@@ -40,22 +40,20 @@ exports[`<Footer /> renders properly 1`] = `
       >
         CC-BY 
         2020
+         
         , 
         footer.builtWith
          
-      </span>
-      <a
-        class="c2"
-        href="https://gatsbyjs.org"
-        rel="noopener"
-        target="_blank"
-      >
-        gatsby
-      </a>
-      <span
-        class="c1"
-      >
-         • 
+        <a
+          class="c2"
+          href="https://gatsbyjs.org"
+          rel="noopener"
+          target="_blank"
+        >
+          gatsby
+        </a>
+         •
+         
       </span>
     </footer>
   </div>
@@ -102,31 +100,29 @@ exports[`<Footer /> renders the sourceCode url if defined 1`] = `
       >
         CC-BY 
         2020
+         
         , 
         footer.builtWith
          
+        <a
+          class="c2"
+          href="https://gatsbyjs.org"
+          rel="noopener"
+          target="_blank"
+        >
+          gatsby
+        </a>
+         •
+         
+        <a
+          class="c2"
+          href="https://github.com/diegocoxta/diegocosta.me"
+          rel="noopener"
+          target="_blank"
+        >
+          footer.sourceCode
+        </a>
       </span>
-      <a
-        class="c2"
-        href="https://gatsbyjs.org"
-        rel="noopener"
-        target="_blank"
-      >
-        gatsby
-      </a>
-      <span
-        class="c1"
-      >
-         • 
-      </span>
-      <a
-        class="c2"
-        href="https://github.com/diegocoxta/diegocosta.me"
-        rel="noopener"
-        target="_blank"
-      >
-        footer.sourceCode
-      </a>
     </footer>
   </div>
 </body>

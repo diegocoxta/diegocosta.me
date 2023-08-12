@@ -122,6 +122,13 @@ exports[`<NotFoundPage> renders properly 1`] = `
           404page.message
         </section>
       </article>
+    </section>
+    <div
+      class="c1"
+    />
+    <section
+      class="c0"
+    >
       <p>
         Footer
       </p>

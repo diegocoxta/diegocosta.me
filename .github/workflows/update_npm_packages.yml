@@ -18,7 +18,7 @@ jobs:
         id: current-time
         with:
           format: YYYYMMDD
-          timezone: "America/Sao_Paulo"
+          timezone: 'America/Sao_Paulo'
       - name: Get outdated dependencies
         id: outdated_dependencies
         run: |

@@ -124,6 +124,13 @@ exports[`<SingleTemplate> renders properly 1`] = `
           Post content
         </section>
       </article>
+    </section>
+    <div
+      class="c1"
+    />
+    <section
+      class="c0"
+    >
       <p>
         Footer
       </p>

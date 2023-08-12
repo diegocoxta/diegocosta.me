@@ -147,6 +147,13 @@ exports[`<TagsTemplate> renders properly 1`] = `
           Awesome second article
         </section>
       </article>
+    </section>
+    <div
+      class="c1"
+    />
+    <section
+      class="c0"
+    >
       <p>
         Footer
       </p>
