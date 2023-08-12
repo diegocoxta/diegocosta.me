@@ -112,7 +112,7 @@ export interface HeaderProps {
       label: string;
       url: string;
       rel?: string;
-    }
+    },
   ];
   fullHeader: boolean;
 }
@@ -142,9 +142,7 @@ export default function Header(props: HeaderProps): React.ReactElement {
       </Content>
       {props.fullHeader && (
         <>
-          {description?.split('\n').map((p: string) => (
-            <Paragraph key={p} dangerouslySetInnerHTML={{ __html: p }} />
-          ))}
+          {description?.split('\n').map((p: string) => <Paragraph key={p} dangerouslySetInnerHTML={{ __html: p }} />)}
           {props.navigation && (
             <NavigationList data-testid="about-me-navigation-list">
               {props.navigation.map((nav, index) => (

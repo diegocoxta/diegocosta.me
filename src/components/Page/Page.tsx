@@ -26,7 +26,8 @@ const Container = styled.section`
 `;
 
 const Divisor = styled.div`
-  background: linear-gradient(90deg, ${({ theme }) => theme.backgroundColor} 20px, transparent 1%) center,
+  background:
+    linear-gradient(90deg, ${({ theme }) => theme.backgroundColor} 20px, transparent 1%) center,
     linear-gradient(${({ theme }) => theme.backgroundColor} 20px, transparent 1%) center,
     ${({ theme }) => theme.textColor};
   background-size: 22px 22px;
@@ -99,6 +100,9 @@ export default function Page(props: PageProps<PageContentProps>): React.ReactEle
             showContent={isSinglePage || node?.frontmatter?.flags?.includes('expanded-on-listings')}
           />
         ))}
+      </Container>
+      <Divisor />
+      <Container>
         <Footer />
       </Container>
     </ThemeContext.Provider>

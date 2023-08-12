@@ -12,22 +12,20 @@ export default (props: Props): React.ReactElement => {
         metatags: { title, description, author, image },
       },
     },
-  } = useStaticQuery(
-    graphql`
-      query MetatagsComponent {
-        site {
-          siteMetadata {
-            metatags {
-              title
-              description
-              author
-              image
-            }
+  } = useStaticQuery(graphql`
+    query MetatagsComponent {
+      site {
+        siteMetadata {
+          metatags {
+            title
+            description
+            author
+            image
           }
         }
       }
-    `
-  );
+    }
+  `);
 
   const metaDescription = props.description || description;
   const metaTitle = props.title ? `${props.title} - ${title}` : title;

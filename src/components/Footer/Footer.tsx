@@ -40,6 +40,7 @@ const Link = styled.a.attrs({
 interface FooterProps {
   year: number;
   sourceCode?: string;
+  author?: string;
 }
 
 export default function Footer(props: FooterProps): React.ReactElement {
@@ -49,11 +50,10 @@ export default function Footer(props: FooterProps): React.ReactElement {
     <>
       <Content>
         <Label>
-          CC-BY {props.year}, {locale.getTranslationFor('footer.builtWith')}{' '}
+          CC-BY {props.year} {props.author}, {locale.getTranslationFor('footer.builtWith')}{' '}
+          <Link href="https://gatsbyjs.org">gatsby</Link> •{' '}
+          {props.sourceCode && <Link href={props.sourceCode}>{locale.getTranslationFor('footer.sourceCode')}</Link>}
         </Label>
-        <Link href="https://gatsbyjs.org">gatsby</Link>
-        <Label> • </Label>
-        {props.sourceCode && <Link href={props.sourceCode}>{locale.getTranslationFor('footer.sourceCode')}</Link>}
       </Content>
     </>
   );

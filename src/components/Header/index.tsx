@@ -17,28 +17,26 @@ export default (props: Props): React.ReactElement => {
         metatags: { author },
       },
     },
-  } = useStaticQuery(
-    graphql`
-      query HeaderComponent {
-        site {
-          siteMetadata {
-            metatags {
-              author
-            }
-            bio {
-              pt
-              en
-            }
-            getInTouch {
-              label
-              url
-              rel
-            }
+  } = useStaticQuery(graphql`
+    query HeaderComponent {
+      site {
+        siteMetadata {
+          metatags {
+            author
+          }
+          bio {
+            pt
+            en
+          }
+          getInTouch {
+            label
+            url
+            rel
           }
         }
       }
-    `
-  );
+    }
+  `);
 
   return (
     <Header author={author} description={bio} navigation={getInTouch} page={props.page} fullHeader={props.fullHeader} />
