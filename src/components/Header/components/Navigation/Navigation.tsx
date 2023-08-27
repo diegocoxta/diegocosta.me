@@ -45,7 +45,7 @@ const Positioner = styled(KBarPositioner)`
   width: 100%;
   inset: 0px;
   padding: 14vh 16px 16px;
-  background: ${({ theme }) => `${theme.textColor}CC`};
+  background: #2f3d4fcc;
   box-sizing: border-box;
 `;
 

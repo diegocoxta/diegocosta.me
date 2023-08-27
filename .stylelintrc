@@ -1,16 +1,9 @@
 {
   "customSyntax": "postcss",
-  "extends": [
-    "stylelint-config-recommended"
-  ],
+  "extends": ["stylelint-config-recommended"],
   "overrides": [
     {
-      "files": [
-        "**/*.js",
-        "**/*.ts",
-        "**/*.tsx",
-        "**/*.snap"
-      ],
+      "files": ["**/*.js", "**/*.ts", "**/*.tsx", "**/*.snap"],
       "customSyntax": "postcss-jsx"
     }
   ],
@@ -21,31 +14,20 @@
     "property-no-unknown": [
       true,
       {
-        "ignoreProperties": [
-          "/^shadow-/",
-          "/^margin-/",
-          "/^padding-/"
-        ]
+        "ignoreProperties": ["/^shadow-/", "/^margin-/", "/^padding-/"]
       }
     ],
     "comment-empty-line-before": [
       "always",
       {
-        "ignore": [
-          "stylelint-commands",
-          "after-comment"
-        ]
+        "ignore": ["stylelint-commands", "after-comment"]
       }
     ],
     "rule-empty-line-before": [
       "always",
       {
-        "except": [
-          "first-nested"
-        ],
-        "ignore": [
-          "after-comment"
-        ]
+        "except": ["first-nested"],
+        "ignore": ["after-comment"]
       }
     ]
   }
