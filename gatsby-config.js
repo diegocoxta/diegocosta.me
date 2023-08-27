@@ -22,10 +22,6 @@ module.exports = {
         url: 'https://github.com/diegocoxta',
       },
       {
-        label: 'Twitter',
-        url: 'https://twitter.com/diegocoxta',
-      },
-      {
         label: 'Mastodon',
         url: 'https://mastodon.social/@diegocoxta',
         rel: 'me',
