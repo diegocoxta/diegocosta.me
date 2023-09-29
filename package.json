@@ -5,7 +5,7 @@
   "author": "Diego Costa <diego@diegocosta.me>",
   "dependencies": {
     "@deckdeckgo/highlight-code": "^4.4.0",
-    "downshift": "8.2.1",
+    "downshift": "8.2.2",
     "fuse.js": "^6.6.2",
     "gatsby": "^5.12.5",
     "gatsby-plugin-eslint": "^4.0.4",
@@ -65,7 +65,7 @@
     "jest-environment-jsdom": "29.7.0",
     "jest-styled-components": "7.1.1",
     "lint-staged": "^14.0.1",
-    "postcss": "^8.4.30",
+    "postcss": "^8.4.31",
     "postcss-jsx": "^0.36.4",
     "postcss-syntax": "^0.36.2",
     "prettier": "3.0.3",
