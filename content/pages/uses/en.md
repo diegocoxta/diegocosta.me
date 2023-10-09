@@ -16,7 +16,7 @@ Welcome to my `/uses` page that list all my tools, hardware, and software! As a 
 - **Monitor**: Dell 27" 4k USB-C Monitor p2721q.
 - **Webcam**: Logitech C920S Pro HD Webcam.
 - **Laptop Stand**: Rain Design mStand Laptop Stand and Twelve South BookArc.
-- **Audio**: Apple Airpods 3rd Generation, Edifier W820NB Plus, and Razer Kraken X.
+- **Audio**: Apple AirPods 3rd Generation with MagSafe case, Edifier W820NB Plus, and Razer Kraken X.
 - **Desk**: Husky Standing Desk with custom top.
 
 ## 🧑🏾‍💻 Programming
@@ -28,8 +28,8 @@ Welcome to my `/uses` page that list all my tools, hardware, and software! As a 
 ## ⚙️ Software and Services
 
 - **Coverify.**: My own [web app](https://coverify.diegocosta.me) to create Spotify-inspired covers for my personal playlists completely free and has no annoying ads to interrupt my creative flow.
-- **iCloud**: 
-- **Google One**: I use a 200GB storage plan to backup and sync all my files.
+- **iCloud**: I use a 200GB storage plan to backup my files and work mail with custom domain.
+- **Google One**: I use a 200GB storage plan as a secondary backup layer.
 - **Google Domains**: Currently I use it to register my domains, but I previously used Namecheap.
 - **MongoDB Atlas**: I work with it to host my MongoDB databases. It is my primary choice for creating new personal projects.
 - **Docker**: I'm using it to keep my machine clean without installing all the development tools I need for work.
