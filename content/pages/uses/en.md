@@ -3,7 +3,7 @@ title: Tools I Use
 description: The page where I share the tools that make my life easier.
 ---
 
-**Last update**: May 2023
+**Last update**: Oct 2023
 
 Welcome to my `/uses` page that list all my tools, hardware, and software! As a tech enthusiast and professional, I'm constantly on the lookout for the best gear and apps to make my life easier and more productive. This page is my curated collection of the tools I use on a daily basis, sorted by category for easy browsing.
 
@@ -31,8 +31,6 @@ Welcome to my `/uses` page that list all my tools, hardware, and software! As a 
 - **iCloud**: I use a 200GB storage plan to backup my files and work mail with custom domain.
 - **Google One**: I use a 200GB storage plan as a secondary backup layer.
 - **Google Domains**: Currently I use it to register my domains, but I previously used Namecheap.
-- **MongoDB Atlas**: I work with it to host my MongoDB databases. It is my primary choice for creating new personal projects.
-- **Docker**: I'm using it to keep my machine clean without installing all the development tools I need for work.
 - **Vercel**: I work with Vercel as my primary hosting service for my personal projects, including this blog.
 - **Github**: Github is my primary version control system. I use it to host my code, mainly as private repositories. I also use it to host GitHub Pages and create pipelines using GitHub Actions to deploy anything.
 - **ChatGPT**: I use ChatGPT to help me with anything. My primary use is as an English grammar checker, as English is not my primary language. Previously, I used Grammarly.

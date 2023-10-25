@@ -5,7 +5,7 @@ flags:
   - hide-from-listings
 ---
 
-**Última atualização**: Maio de 2023
+**Última atualização**: Outubro de 2023
 
 Bem-vindo à minha página `/uses` que lista todas as minhas ferramentas, hardware e software! Como entusiasta e profissional de tecnologia, estou constantemente em busca dos melhores equipamentos e aplicativos para tornar minha vida mais fácil e produtiva. Esta página é minha coleção selecionada das ferramentas que uso diariamente, organizadas por categoria para facilitar a navegação.
 
@@ -33,8 +33,6 @@ Bem-vindo à minha página `/uses` que lista todas as minhas ferramentas, hardwa
 - **iCloud**: Eu uso um plano de armazenamento de 200GB para fazer backup dos meus arquivos e como e-mail de trabalho com domínio customizado.
 - **Google One**: Eu uso um plano de armazenamento de 200GB como camada de backup secundário.
 - **Google Domains**: Atualmente uso-o para registrar domínios, mas anteriormente usava o Namecheap.
-- **MongoDB Atlas**: Eu o uso para hospedar bancos de dados MongoDB. É minha escolha principal para criar novos projetos pessoais.
-- **Docker**: Eu o uso para manter minha máquina limpa sem instalar todas as ferramentas de desenvolvimento que preciso para o trabalho.
 - **Vercel**: Eu trabalho com a Vercel como serviço de hospedagem principal para meus projetos pessoais, incluindo este blog.
 - **Github**: Github é meu sistema de controle de versão principal. Eu o uso para armazenar meus códigos, principalmente em forma de repositórios privados. Também o uso para hospedar GitHub Pages e criar pipelines usando GitHub Actions.
 - **ChatGPT**: Eu uso o ChatGPT para me ajudar com qualquer coisa. Meu uso principal é como um verificador de gramática em inglês, já que o inglês não é minha língua materna. Anteriormente, eu usava o Grammarly.
