@@ -27,6 +27,10 @@ module.exports = {
         rel: 'me',
       },
       {
+        label: '(X) Twitter',
+        url: 'https://x.com/diegocoxta',
+      },
+      {
         label: 'E-mail',
         url: 'mailto:diego@diegocosta.me',
       },
