@@ -27,7 +27,7 @@ module.exports = {
         rel: 'me',
       },
       {
-        label: '(X) Twitter',
+        label: 'X/Twitter',
         url: 'https://x.com/diegocoxta',
       },
       {
