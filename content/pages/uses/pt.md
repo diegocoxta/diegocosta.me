@@ -11,7 +11,7 @@ Bem-vindo à minha página `/uses` que lista todas as minhas ferramentas, hardwa
 
 ## 💻 Equipamentos
 
-- **Laptop Pessoal**: MacBook Pro 13" Intel Core i5, 8GB RAM, 256 GB SSD.
+- **Laptop Pessoal**: MacBook Air 13" Meia-noite Apple M2, 8GB RAM, 256 GB SSD.
 - **Laptop Profissional**: MacBook Pro 14" M1 Pro, 16GB RAM, 1TB SSD.
 - **Teclado**: Logitech MX Keys Wireless Keyboard.
 - **Mouse**: Logitech MX Master 2s.
@@ -36,7 +36,6 @@ Bem-vindo à minha página `/uses` que lista todas as minhas ferramentas, hardwa
 - **Vercel**: Eu trabalho com a Vercel como serviço de hospedagem principal para meus projetos pessoais, incluindo este blog.
 - **Github**: Github é meu sistema de controle de versão principal. Eu o uso para armazenar meus códigos, principalmente em forma de repositórios privados. Também o uso para hospedar GitHub Pages e criar pipelines usando GitHub Actions.
 - **ChatGPT**: Eu uso o ChatGPT para me ajudar com qualquer coisa. Meu uso principal é como um verificador de gramática em inglês, já que o inglês não é minha língua materna. Anteriormente, eu usava o Grammarly.
-- **Yousician**: Estou usando o Yousician para aprender a tocar baixo! É muito divertido e fácil de entender. Eu adoro ferramentas de gamificação como essa.
 - **Stremio**: Estou usando o Stremio para assistir a filmes que não consigo encontrar em nenhum serviço de streaming. Eu realmente tento não usar conteúdo pirata; Eu assino todos os serviços de streaming que conheço. No entanto, às vezes apenas o bom e velho torrent pode me ajudar com filmes mais antigos ou difíceis de encontrar.
 
 ## 📱 Mobile
