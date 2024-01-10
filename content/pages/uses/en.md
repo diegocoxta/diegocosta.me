@@ -9,7 +9,7 @@ Welcome to my `/uses` page that list all my tools, hardware, and software! As a 
 
 ## 💻 Hardware
 
-- **Personal Laptop**: MacBook Pro 13" Intel Core i5, 8GB RAM, 256 GB SSD.
+- **Personal Laptop**: MacBook Air 13" Midnight Apple M2, 8GB RAM, 256 GB SSD.
 - **Professional Laptop**: MacBook Pro 14" M1 Pro, 16GB RAM, 1TB SSD.
 - **Keyboard**: Logitech MX Keys Wireless Keyboard.
 - **Mouse**: Logitech MX Master 2s.
@@ -34,7 +34,6 @@ Welcome to my `/uses` page that list all my tools, hardware, and software! As a 
 - **Vercel**: I work with Vercel as my primary hosting service for my personal projects, including this blog.
 - **Github**: Github is my primary version control system. I use it to host my code, mainly as private repositories. I also use it to host GitHub Pages and create pipelines using GitHub Actions to deploy anything.
 - **ChatGPT**: I use ChatGPT to help me with anything. My primary use is as an English grammar checker, as English is not my primary language. Previously, I used Grammarly.
-- **Yousician**: I'm using Yousician to learn how to play bass! It's very fun and easy to understand. I love gamification tools like this.
 - **Stremio**: I'm using Stremio to watch movies that I cannot find on any streaming service. I really try not to use pirated content; I subscribe to every streaming service I know. However, sometimes only the good old torrent can help me with older or harder-to-find movies.
 
 ## 📱 Mobile
