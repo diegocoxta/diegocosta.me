@@ -147,7 +147,7 @@ export default function Header(props: HeaderProps): React.ReactElement {
             <NavigationList data-testid="about-me-navigation-list">
               {props.navigation.map((nav, index) => (
                 <NavigationItem key={`nav-${index}`} data-testid="about-me-navigation-item">
-                  <NavigationLink href={nav.url} rel={nav.rel}>
+                  <NavigationLink href={nav.url} rel={nav.rel} target="_blank">
                     {nav.label}
                   </NavigationLink>
                 </NavigationItem>
