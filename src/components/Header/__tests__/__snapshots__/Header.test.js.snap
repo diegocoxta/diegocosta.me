@@ -306,6 +306,7 @@ exports[`<Header /> renders the navigation properly 1`] = `
         <a
           class="c6"
           href=""
+          target="_blank"
         />
       </li>
       <li
@@ -315,6 +316,7 @@ exports[`<Header /> renders the navigation properly 1`] = `
         <a
           class="c6"
           href=""
+          target="_blank"
         />
       </li>
     </ul>
