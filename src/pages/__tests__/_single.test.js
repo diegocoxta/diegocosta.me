@@ -4,7 +4,7 @@ import { render } from '@testing-library/react';
 jest.mock('../../components/Header', () => () => <p>Header</p>);
 jest.mock('../../components/Footer', () => () => <p>Footer</p>);
 
-import SingleTemplate from '../single';
+import SingleTemplate from '../_single';
 
 describe('<SingleTemplate>', () => {
   it('renders properly', () => {

@@ -1,6 +1,6 @@
 import { graphql } from 'gatsby';
 
-export { default } from '~/components/Page';
+export { default } from '~/templates/Blog';
 
 export const pageQuery = graphql`
   query TagsTemplate($tag: String, $language: String!) {

@@ -4,7 +4,7 @@ import { render } from '@testing-library/react';
 jest.mock('../../components/Header', () => () => <p>Header</p>);
 jest.mock('../../components/Footer', () => () => <p>Footer</p>);
 
-import TagsTemplate from '../tags';
+import TagsTemplate from '../_tags';
 
 describe('<TagsTemplate>', () => {
   it('renders properly', () => {

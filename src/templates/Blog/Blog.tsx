@@ -36,12 +36,12 @@ const Divisor = styled.div`
   width: 100%;
 `;
 
-interface PageContentProps {
+interface BlogProps {
   content?: Queries.SingleTemplateQuery['content'];
   list?: Queries.IndexPageQuery['list'];
 }
 
-export default function Page(props: PageProps<PageContentProps>): React.ReactElement {
+export default function Blog(props: PageProps<BlogProps>): React.ReactElement {
   const [theme, themeToggler, setMode] = useTheme();
   const themeMode = theme === 'light' ? themeLight : themeDark;
 

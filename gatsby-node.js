@@ -54,6 +54,14 @@ exports.onCreateNode = async ({ node, actions, getNode }) => {
   }
 };
 
+exports.onCreatePage = ({ page, actions }) => {
+  if (page.path.startsWith('/_')) {
+    console.log(`⚠️ Ignored page ${page.path}`);
+    const { deletePage } = actions;
+    deletePage(page);
+  }
+};
+
 exports.createPages = async ({ graphql, actions, reporter }) => {
   const result = await graphql(`
     query GatsbyCreatePage {
@@ -92,7 +100,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
 
     actions.createPage({
       path: slug,
-      component: resolve('./src/templates/single.tsx'),
+      component: resolve('./src/pages/_single.tsx'),
       context: { slug },
     });
   });
@@ -101,7 +109,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   tags.forEach((tag) => {
     actions.createPage({
       path: `/tags/${tag.fieldValue}/`,
-      component: resolve('./src/templates/tags.tsx'),
+      component: resolve('./src/pages/_tags.tsx'),
       context: { tag: tag.fieldValue },
     });
   });
