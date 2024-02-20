@@ -33,26 +33,26 @@ exports[`<SingleTemplate> renders properly 1`] = `
 }
 
 .c5 a {
-  color: #AAC13D;
+  color: #D3BF9C;
   text-decoration: none;
   border-bottom: 1px solid #ffffff;
 }
 
 .c5 a:hover,
 .c5 a:focus {
-  border-bottom: 1px solid #AAC13D;
+  border-bottom: 1px solid #D3BF9C;
   outline: none;
 }
 
 .c5 code {
-  background: #AAC13D40;
+  background: #D3BF9C40;
   padding: 2px 6px;
   border-radius: 10px;
   font-size: 16px;
 }
 
 .c5 blockquote {
-  border-left: 5px solid #AAC13D;
+  border-left: 5px solid #D3BF9C;
   padding-left: 20px;
   margin-left: 0;
 }

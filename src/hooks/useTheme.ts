@@ -28,6 +28,7 @@ const colors = {
   SILVER: '#BEC3C7',
   BLACK: '#0E1116',
   REVOLUTION: '#CC433C',
+  BEIGE: '#D3BF9C',
 };
 
 export type ThemeScheme = {
@@ -43,7 +44,7 @@ export const themeDark: ThemeScheme = {
   subtitleColor: colors.SILVER,
   textColor: colors.CLOUDS,
   backgroundColor: colors.BLACK,
-  accentColor: colors.LIME,
+  accentColor: colors.BEIGE,
 };
 
 export const themeLight: ThemeScheme = {

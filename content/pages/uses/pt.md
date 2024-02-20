@@ -48,7 +48,7 @@ Bem-vindo à minha página `/uses` que lista todas as minhas ferramentas, hardwa
 ## 📷 Fotografia
 
 - **Câmera DLSR**: Canon EOS Rebel T7.
-- **Lentes**: EF-S 18-55mm f/3.5-5.6 IS STM e,  EF 75-300mm f/4-5.6 III.
+- **Lentes**: EF-S 18-55mm f/3.5-5.6 IS STM e, EF 75-300mm f/4-5.6 III.
 - **Câmera instantânea**: Fujifilm Instax Mini 11 branca.
 
 ## 🎸 Jam
