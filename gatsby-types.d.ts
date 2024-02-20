@@ -2904,6 +2904,7 @@ type SiteSiteMetadataGetInTouchSortInput = {
 
 type SiteSiteMetadataMetatags = {
   readonly author: Maybe<Scalars['String']>;
+  readonly avatar: Maybe<Scalars['String']>;
   readonly description: Maybe<Scalars['String']>;
   readonly image: Maybe<Scalars['String']>;
   readonly title: Maybe<Scalars['String']>;
@@ -2911,6 +2912,7 @@ type SiteSiteMetadataMetatags = {
 
 type SiteSiteMetadataMetatagsFieldSelector = {
   readonly author: InputMaybe<FieldSelectorEnum>;
+  readonly avatar: InputMaybe<FieldSelectorEnum>;
   readonly description: InputMaybe<FieldSelectorEnum>;
   readonly image: InputMaybe<FieldSelectorEnum>;
   readonly title: InputMaybe<FieldSelectorEnum>;
@@ -2918,6 +2920,7 @@ type SiteSiteMetadataMetatagsFieldSelector = {
 
 type SiteSiteMetadataMetatagsFilterInput = {
   readonly author: InputMaybe<StringQueryOperatorInput>;
+  readonly avatar: InputMaybe<StringQueryOperatorInput>;
   readonly description: InputMaybe<StringQueryOperatorInput>;
   readonly image: InputMaybe<StringQueryOperatorInput>;
   readonly title: InputMaybe<StringQueryOperatorInput>;
@@ -2925,6 +2928,7 @@ type SiteSiteMetadataMetatagsFilterInput = {
 
 type SiteSiteMetadataMetatagsSortInput = {
   readonly author: InputMaybe<SortOrderEnum>;
+  readonly avatar: InputMaybe<SortOrderEnum>;
   readonly description: InputMaybe<SortOrderEnum>;
   readonly image: InputMaybe<SortOrderEnum>;
   readonly title: InputMaybe<SortOrderEnum>;
@@ -3027,6 +3031,11 @@ type IndexPageQueryVariables = Exact<{
 type IndexPageQuery = { readonly locales: { readonly edges: ReadonlyArray<{ readonly node: { readonly ns: string | null, readonly data: string | null, readonly language: string | null } }> }, readonly list: { readonly edges: ReadonlyArray<{ readonly node: { readonly html: string | null, readonly excerpt: string | null, readonly fields: { readonly collection: string | null, readonly slug: string | null, readonly language: string | null, readonly readingTime: { readonly minutes: number | null } | null } | null, readonly frontmatter: { readonly date: string | null, readonly title: string | null, readonly description: string | null, readonly tags: ReadonlyArray<string | null> | null, readonly flags: ReadonlyArray<string | null> | null } | null } }> } };
 
 type LanguageInformationFragment = { readonly edges: ReadonlyArray<{ readonly node: { readonly ns: string | null, readonly data: string | null, readonly language: string | null } }> };
+
+type LinksTemplateQueryQueryVariables = Exact<{ [key: string]: never; }>;
+
+
+type LinksTemplateQueryQuery = { readonly site: { readonly siteMetadata: { readonly metatags: { readonly author: string | null, readonly description: string | null, readonly avatar: string | null } | null } | null } | null };
 
 type MetatagsComponentQueryVariables = Exact<{ [key: string]: never; }>;
 

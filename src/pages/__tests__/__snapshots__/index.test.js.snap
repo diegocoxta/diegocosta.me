@@ -74,18 +74,18 @@ exports[`<IndexPage> renders properly 1`] = `
   text-align: center;
 }
 
-.c0 {
-  max-width: 960px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
-
 .c1 {
   background: linear-gradient(90deg, #ffffff 20px, transparent 1%) center,linear-gradient(#ffffff 20px, transparent 1%) center,#2F3D4F;
   background-size: 22px 22px;
   height: 120px;
   margin: 40px 0;
   width: 100%;
+}
+
+.c0 {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
 <body>

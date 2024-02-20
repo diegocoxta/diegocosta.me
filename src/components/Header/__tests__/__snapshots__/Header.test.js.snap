@@ -1,20 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Header /> does not render the last name 1`] = `
-.c0 {
-  margin: 16px 0 40px 0;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.c2 {
-  font-size: 15vw;
-  font-weight: 700;
-  text-transform: lowercase;
-  margin: 0;
-}
-
 .c1 {
   text-decoration: none;
   box-shadow: none;
@@ -26,6 +12,20 @@ exports[`<Header /> does not render the last name 1`] = `
   outline: none;
 }
 
+.c2 {
+  font-size: 15vw;
+  font-weight: 700;
+  text-transform: lowercase;
+  margin: 0;
+}
+
+.c0 {
+  margin: 16px 0 40px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .c3 {
   display: flex;
   justify-content: space-between;
@@ -33,14 +33,14 @@ exports[`<Header /> does not render the last name 1`] = `
 }
 
 @media (min-width: 760px) {
-  .c0 {
-    margin: 40px 0 40px 0;
+  .c2 {
+    font-size: 110px;
   }
 }
 
 @media (min-width: 760px) {
-  .c2 {
-    font-size: 110px;
+  .c0 {
+    margin: 40px 0 40px 0;
   }
 }
 
@@ -81,20 +81,6 @@ exports[`<Header /> does not render the last name 1`] = `
 `;
 
 exports[`<Header /> renders properly 1`] = `
-.c0 {
-  margin: 16px 0 40px 0;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.c2 {
-  font-size: 15vw;
-  font-weight: 700;
-  text-transform: lowercase;
-  margin: 0;
-}
-
 .c1 {
   text-decoration: none;
   box-shadow: none;
@@ -106,6 +92,20 @@ exports[`<Header /> renders properly 1`] = `
   outline: none;
 }
 
+.c2 {
+  font-size: 15vw;
+  font-weight: 700;
+  text-transform: lowercase;
+  margin: 0;
+}
+
+.c0 {
+  margin: 16px 0 40px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .c3 {
   display: flex;
   justify-content: space-between;
@@ -113,14 +113,14 @@ exports[`<Header /> renders properly 1`] = `
 }
 
 @media (min-width: 760px) {
-  .c0 {
-    margin: 40px 0 40px 0;
+  .c2 {
+    font-size: 110px;
   }
 }
 
 @media (min-width: 760px) {
-  .c2 {
-    font-size: 110px;
+  .c0 {
+    margin: 40px 0 40px 0;
   }
 }
 
@@ -168,20 +168,6 @@ exports[`<Header /> renders properly 1`] = `
 `;
 
 exports[`<Header /> renders the navigation properly 1`] = `
-.c0 {
-  margin: 16px 0 40px 0;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.c2 {
-  font-size: 15vw;
-  font-weight: 700;
-  text-transform: lowercase;
-  margin: 0;
-}
-
 .c1 {
   text-decoration: none;
   box-shadow: none;
@@ -191,6 +177,20 @@ exports[`<Header /> renders the navigation properly 1`] = `
 
 .c1:focus {
   outline: none;
+}
+
+.c2 {
+  font-size: 15vw;
+  font-weight: 700;
+  text-transform: lowercase;
+  margin: 0;
+}
+
+.c0 {
+  margin: 16px 0 40px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .c3 {
@@ -226,14 +226,14 @@ exports[`<Header /> renders the navigation properly 1`] = `
 }
 
 @media (min-width: 760px) {
-  .c0 {
-    margin: 40px 0 40px 0;
+  .c2 {
+    font-size: 110px;
   }
 }
 
 @media (min-width: 760px) {
-  .c2 {
-    font-size: 110px;
+  .c0 {
+    margin: 40px 0 40px 0;
   }
 }
 

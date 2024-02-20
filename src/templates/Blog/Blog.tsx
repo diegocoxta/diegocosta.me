@@ -1,39 +1,19 @@
 import React from 'react';
 import { PageProps } from 'gatsby';
-import styled, { createGlobalStyle, ThemeContext } from 'styled-components';
+import styled from 'styled-components';
 
-import { useTheme, themeLight, themeDark } from '~/hooks/useTheme';
 import { useLocale } from '~/hooks/useLocale';
 
 import Article from '~/components/Article';
 import Header from '~/components/Header';
 import Footer from '~/components/Footer';
-
-const GlobalStyle = createGlobalStyle`
-  body {
-    background: ${({ theme }) => theme.backgroundColor};
-    font-family: 'Source Sans Pro', sans-serif;
-    color: ${({ theme }) => theme.textColor};
-    margin: 0;
-    padding: 0;
-  }
-`;
+import ThemeProvider, { GlobalStyle } from '~/components/ThemeProvider';
+import DottedDivisor from '~/components/DottedDivisor';
 
 const Container = styled.section`
   max-width: 960px;
   margin: 0 auto;
   padding: 0 20px;
-`;
-
-const Divisor = styled.div`
-  background:
-    linear-gradient(90deg, ${({ theme }) => theme.backgroundColor} 20px, transparent 1%) center,
-    linear-gradient(${({ theme }) => theme.backgroundColor} 20px, transparent 1%) center,
-    ${({ theme }) => theme.textColor};
-  background-size: 22px 22px;
-  height: 120px;
-  margin: 40px 0;
-  width: 100%;
 `;
 
 interface BlogProps {
@@ -42,9 +22,6 @@ interface BlogProps {
 }
 
 export default function Blog(props: PageProps<BlogProps>): React.ReactElement {
-  const [theme, themeToggler, setMode] = useTheme();
-  const themeMode = theme === 'light' ? themeLight : themeDark;
-
   const locale = useLocale();
   const currentLanguage = locale.getCurrentLanguage();
 
@@ -68,12 +45,12 @@ export default function Blog(props: PageProps<BlogProps>): React.ReactElement {
     : undefined;
 
   return (
-    <ThemeContext.Provider value={{ ...themeMode, theme, themeToggler, setMode }}>
+    <ThemeProvider>
       <GlobalStyle />
       <Container>
         <Header page={pageHeader} fullHeader={!isNotFound && !isSinglePage} />
       </Container>
-      <Divisor />
+      <DottedDivisor />
       <Container>
         {isNotFound && (
           <Article
@@ -101,10 +78,10 @@ export default function Blog(props: PageProps<BlogProps>): React.ReactElement {
           />
         ))}
       </Container>
-      <Divisor />
+      <DottedDivisor />
       <Container>
         <Footer />
       </Container>
-    </ThemeContext.Provider>
+    </ThemeProvider>
   );
 }

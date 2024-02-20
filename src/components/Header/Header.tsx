@@ -6,7 +6,9 @@ import LanguageSwitcher from './components/LanguageSwitcher';
 import ThemeSwitcher from './components/ThemeSwitcher';
 import Navigation from './components/Navigation';
 
-import { Link, useLocale } from '~/hooks/useLocale';
+import { useLocale } from '~/hooks/useLocale';
+
+import BrandName from '~/components/BrandName';
 
 const Content = styled.header`
   margin: 16px 0 40px 0;
@@ -16,33 +18,6 @@ const Content = styled.header`
 
   @media (min-width: 760px) {
     margin: 40px 0 40px 0;
-  }
-`;
-
-const Name = styled.h1`
-  font-size: 15vw;
-  color: ${({ theme }) => theme.titleColor};
-  font-weight: 700;
-  text-transform: lowercase;
-  margin: 0;
-
-  @media (min-width: 760px) {
-    font-size: 110px;
-  }
-`;
-
-const LastName = styled.span`
-  color: ${({ theme }) => theme.accentColor};
-`;
-
-const StyledLink = styled(Link)`
-  text-decoration: none;
-  box-shadow: none;
-  display: flex;
-  align-items: center;
-
-  &:focus {
-    outline: none;
   }
 `;
 
@@ -121,7 +96,6 @@ export default function Header(props: HeaderProps): React.ReactElement {
   const locale = useLocale();
   const currentLanguage = locale.getCurrentLanguage();
 
-  const [name, lastname] = props.author.split(' ');
   const description = props.description && props.description[currentLanguage];
 
   return (
@@ -129,12 +103,7 @@ export default function Header(props: HeaderProps): React.ReactElement {
       <Metatags {...props.page} />
       <LanguageSwitcher />
       <Content>
-        <StyledLink to="/">
-          <Name>
-            {name}
-            {lastname && <LastName data-testid="header-lastname">{lastname[0]}.</LastName>}
-          </Name>
-        </StyledLink>
+        <BrandName author={props.author} size="large" href="/" />
         <Options>
           <ThemeSwitcher />
           <Navigation />
