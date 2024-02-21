@@ -52,7 +52,7 @@ const Label = styled.p`
 
 export default function Links(): React.ReactElement {
   const {
-    size: {
+    site: {
       siteMetadata: {
         sourceCode,
         metatags: { title, author, avatar, description, banner },
