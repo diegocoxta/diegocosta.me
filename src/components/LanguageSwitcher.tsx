@@ -1,8 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
+import { graphql } from 'gatsby';
+
 import { useLocale, Link } from '~/hooks/useLocale';
 
-const List = styled.div`
+const Container = styled.div`
   display: flex;
   margin: 40px 0 0 0;
   justify-content: flex-start;
@@ -16,11 +18,23 @@ const LanguageLink = styled(Link)`
   font-size: 22px;
 `;
 
+export const query = graphql`
+  fragment LanguageInformation on LocaleConnection {
+    edges {
+      node {
+        ns
+        data
+        language
+      }
+    }
+  }
+`;
+
 export default function LanguageSwitcher() {
   const locale = useLocale();
 
   return (
-    <List>
+    <Container>
       {locale.getAllLanguages().map((language: string) => (
         <LanguageLink
           aria-label={`${locale.getTranslationFor('languageswitcher.toggle')} ${locale.getTranslationFor(
@@ -34,6 +48,6 @@ export default function LanguageSwitcher() {
           {language}
         </LanguageLink>
       ))}
-    </List>
+    </Container>
   );
 }

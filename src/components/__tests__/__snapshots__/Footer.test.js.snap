@@ -39,7 +39,7 @@ exports[`<Footer /> renders properly 1`] = `
         class="c1"
       >
         CC-BY 
-        2020
+        2024
          
         , 
         footer.builtWith
@@ -99,7 +99,7 @@ exports[`<Footer /> renders the sourceCode url if defined 1`] = `
         class="c1"
       >
         CC-BY 
-        2020
+        2024
          
         , 
         footer.builtWith

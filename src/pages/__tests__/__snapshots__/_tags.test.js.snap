@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<TagsTemplate> renders properly 1`] = `
-.c4 {
+.c14 {
   color: #2F3D4F;
   box-shadow: none;
   text-decoration: none;
@@ -10,76 +10,165 @@ exports[`<TagsTemplate> renders properly 1`] = `
   font-weight: 700;
 }
 
-.c4:hover,
-.c4:focus {
+.c14:hover,
+.c14:focus {
   border-bottom: 1px solid #2F3D4F;
   outline: none;
 }
 
-.c2 {
+.c12 {
   margin: 0 0 60px 0;
   font-weight: 400;
   color: #2F3D4F;
 }
 
-.c3 {
+.c13 {
   margin: 20px 0 0 0;
 }
 
-.c5 {
+.c15 {
   line-height: 1.5;
   font-size: 19px;
   margin-top: 10px;
 }
 
-.c5 a {
+.c15 a {
   color: #D3BF9C;
   text-decoration: none;
   border-bottom: 1px solid #ffffff;
 }
 
-.c5 a:hover,
-.c5 a:focus {
+.c15 a:hover,
+.c15 a:focus {
   border-bottom: 1px solid #D3BF9C;
   outline: none;
 }
 
-.c5 code {
+.c15 code {
   background: #D3BF9C40;
   padding: 2px 6px;
   border-radius: 10px;
   font-size: 16px;
 }
 
-.c5 blockquote {
+.c15 blockquote {
   border-left: 5px solid #D3BF9C;
   padding-left: 20px;
   margin-left: 0;
 }
 
-.c5 img {
+.c15 img {
   box-shadow: none!important;
 }
 
-.c5 h3 {
+.c15 h3 {
   font-size: 28px;
 }
 
-.c5 table.uses-table {
+.c15 table.uses-table {
   width: 100%;
   margin: 40px 0;
 }
 
-.c5 table.uses-table td {
+.c15 table.uses-table td {
   text-align: center;
 }
 
-.c1 {
+.c11 {
   background: linear-gradient(90deg, #ffffff 20px, transparent 1%) center,linear-gradient(#ffffff 20px, transparent 1%) center,#2F3D4F;
   background-size: 22px 22px;
   height: 120px;
   margin: 40px 0;
   width: 100%;
+}
+
+.c1 {
+  display: flex;
+  margin: 40px 0 0 0;
+  justify-content: flex-start;
+}
+
+.c2 {
+  margin: 0 5px;
+  color: #2F3D4F;
+  font-weight: 700;
+  text-decoration: none;
+  font-size: 22px;
+}
+
+.c8 {
+  background: transparent;
+  border: 2px solid #D3BF9C;
+  border-radius: 18px;
+  height: 34px;
+  width: 50px;
+  padding: 0px;
+  display: flex;
+  justify-content: flex-end;
+  transition: all 1s linear;
+  margin: 0 20px;
+  cursor: pointer;
+}
+
+.c8:focus {
+  outline: none;
+}
+
+.c9 {
+  height: 30px;
+  width: 30px;
+  background: #D3BF9C;
+  border-radius: 20px;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.c4 {
+  text-decoration: none;
+  box-shadow: none;
+  display: flex;
+  align-items: center;
+}
+
+.c4:focus {
+  outline: none;
+}
+
+.c5 {
+  font-size: 15vw;
+  color: #2F3D4F;
+  font-weight: 700;
+  text-transform: lowercase;
+  margin: 0;
+}
+
+.c6 {
+  color: #D3BF9C;
+}
+
+.c10 {
+  background: transparent;
+  border: 0px;
+  padding: 5px;
+  border-radius: 50px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #2F3D4F;
+  transition: background 0.3s linear;
+  cursor: pointer;
+}
+
+.c10:focus {
+  outline: none;
+}
+
+.c10:hover {
+  background: #2F3D4F1A;
 }
 
 .c0 {
@@ -88,30 +177,149 @@ exports[`<TagsTemplate> renders properly 1`] = `
   padding: 0 20px;
 }
 
+.c3 {
+  margin: 16px 0 40px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.c7 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media (min-width: 760px) {
+  .c5 {
+    font-size: 110px;
+  }
+}
+
+@media (min-width: 760px) {
+  .c3 {
+    margin: 40px 0 40px 0;
+  }
+}
+
 <body>
   <div>
     <section
       class="c0"
     >
-      <p>
-        Header
-      </p>
+      <div
+        class="c1"
+      >
+        <a
+          aria-label="languageswitcher.toggle languages.pt"
+          class="c2"
+          href="/about-us"
+          language="pt"
+        >
+          /
+          pt
+        </a>
+        <a
+          aria-label="languageswitcher.toggle languages.en"
+          class="c2"
+          href="/about-us"
+          language="en"
+        >
+          en
+        </a>
+        <a
+          aria-label="languageswitcher.toggle languages.es"
+          class="c2"
+          href="/about-us"
+          language="es"
+        >
+          es
+        </a>
+      </div>
+      <header
+        class="c3"
+      >
+        <a
+          class="c4"
+          href="/"
+        >
+          <h1
+            class="c5"
+          >
+            Diego
+            <span
+              class="c6"
+              data-testid="header-lastname"
+            >
+              C
+              .
+            </span>
+          </h1>
+        </a>
+        <div
+          class="c7"
+        >
+          <button
+            aria-label="themeSwitcher.toggle"
+            class="c8"
+          >
+            <div
+              class="c9"
+            >
+              <svg
+                fill="currentColor"
+                height="1em"
+                stroke="currentColor"
+                stroke-width="0"
+                viewBox="0 0 16 16"
+                width="1em"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M8 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6zm0 1a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"
+                />
+              </svg>
+            </div>
+          </button>
+          <div
+            class=""
+          >
+            <button
+              class="c10"
+            >
+              <svg
+                fill="currentColor"
+                height="28"
+                stroke="currentColor"
+                stroke-width="0"
+                viewBox="0 0 16 16"
+                width="28"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M3.5 2A1.5 1.5 0 0 1 5 3.5V5H3.5a1.5 1.5 0 1 1 0-3zM6 5V3.5A2.5 2.5 0 1 0 3.5 6H5v4H3.5A2.5 2.5 0 1 0 6 12.5V11h4v1.5a2.5 2.5 0 1 0 2.5-2.5H11V6h1.5A2.5 2.5 0 1 0 10 3.5V5H6zm4 1v4H6V6h4zm1-1V3.5A1.5 1.5 0 1 1 12.5 5H11zm0 6h1.5a1.5 1.5 0 1 1-1.5 1.5V11zm-6 0v1.5A1.5 1.5 0 1 1 3.5 11H5z"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </header>
     </section>
     <div
-      class="c1"
+      class="c11"
     />
     <section
       class="c0"
     >
       <article
-        class="c2"
+        class="c12"
         data-testid="article-item"
       >
         <header
-          class="c3"
+          class="c13"
         >
           <a
-            class="c4"
+            class="c14"
             data-testid="article-header-title"
             href="/path-to-article"
             language="en"
@@ -120,20 +328,20 @@ exports[`<TagsTemplate> renders properly 1`] = `
           </a>
         </header>
         <section
-          class="c5"
+          class="c15"
         >
           Awesome first article
         </section>
       </article>
       <article
-        class="c2"
+        class="c12"
         data-testid="article-item"
       >
         <header
-          class="c3"
+          class="c13"
         >
           <a
-            class="c4"
+            class="c14"
             data-testid="article-header-title"
             href="/path-to-article-2"
             language="pt"
@@ -142,14 +350,14 @@ exports[`<TagsTemplate> renders properly 1`] = `
           </a>
         </header>
         <section
-          class="c5"
+          class="c15"
         >
           Awesome second article
         </section>
       </article>
     </section>
     <div
-      class="c1"
+      class="c11"
     />
     <section
       class="c0"

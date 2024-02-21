@@ -1,12 +1,20 @@
 import React from 'react';
 import { render } from '@testing-library/react';
 
-jest.mock('../../components/Header', () => () => <p>Header</p>);
-jest.mock('../../components/Footer', () => () => <p>Footer</p>);
-
+import { useStaticQuery, mockUseStaticQuery } from '../../__mocks__/useStaticQuery';
 import SingleTemplate from '../_single';
 
+jest.mock('../../components/Footer', () => () => <p>Footer</p>);
+
 describe('<SingleTemplate>', () => {
+  beforeEach(() => {
+    useStaticQuery.mockImplementation(() => mockUseStaticQuery);
+  });
+
+  afterEach(() => {
+    jest.restoreAllMocks();
+  });
+
   it('renders properly', () => {
     const props = {
       pageContext: {

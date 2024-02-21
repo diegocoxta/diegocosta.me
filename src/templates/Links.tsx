@@ -2,8 +2,11 @@ import React from 'react';
 import styled from 'styled-components';
 
 import Footer from '~/components/Footer';
-import BrandName from '~/components/BrandName';
+import Logo from '~/components/Logo';
 import ThemeProvider, { GlobalStyle } from '~/components/ThemeProvider';
+import { graphql, useStaticQuery } from 'gatsby';
+import Metatags from '~/components/Metatags';
+import Divisor from '~/components/Divisor';
 
 const Container = styled.section`
   max-width: 660px;
@@ -47,20 +50,40 @@ const Label = styled.p`
   margin: auto 10px;
 `;
 
-export interface LinksProps {
-  author: string;
-  avatar: string;
-  description: string;
-}
+export default function Links(): React.ReactElement {
+  const {
+    size: {
+      siteMetadata: {
+        sourceCode,
+        metatags: { title, author, avatar, description, banner },
+      },
+    },
+  } = useStaticQuery(graphql`
+    query LinksTemplateQuery {
+      site {
+        siteMetadata {
+          sourceCode
+          metatags {
+            title
+            author
+            avatar
+            description
+            banner
+          }
+        }
+      }
+    }
+  `);
 
-export default function Links(props: LinksProps): React.ReactElement {
   return (
     <ThemeProvider>
       <GlobalStyle />
+      <Metatags author={author} banner={banner} title={title} description={description} />
       <Container>
-        <Avatar src={props.avatar} />
-        <BrandName author={props.author} size="small" href="/" />
+        <Avatar src={avatar} />
+        <Logo author={author} size="small" />
       </Container>
+      <Divisor />
       <Container>
         <GroupTitle>Featured Links</GroupTitle>
         {[0, 0, 0, 0, 0].map((i, index) => (
@@ -77,9 +100,11 @@ export default function Links(props: LinksProps): React.ReactElement {
             <Label>My Website</Label>
           </ExternalLink>
         ))}
+      </Container>
 
-        <p>Content</p>
-        <Footer />
+      <Divisor />
+      <Container>
+        <Footer sourceCode={sourceCode} author={author} />
       </Container>
     </ThemeProvider>
   );

@@ -1,12 +1,13 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
+
 import { useLocale } from '~/hooks/useLocale';
 
 export interface MetatagsProps {
   title: string;
   description: string;
-  author: string;
-  image: string;
+  author?: string;
+  banner: string;
 }
 
 export default function Metatags(props: MetatagsProps): React.ReactElement {
@@ -30,7 +31,7 @@ export default function Metatags(props: MetatagsProps): React.ReactElement {
         },
         {
           property: 'og:image',
-          content: props.image,
+          content: props.banner,
         },
         {
           property: 'og:type',

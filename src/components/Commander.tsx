@@ -130,11 +130,11 @@ const ShortcutIcon = styled.kbd`
   font-size: 14px;
 `;
 
-interface NavigationProps {
+interface CommanderProps {
   placeholder: string;
 }
 
-export default function Navigation(props: NavigationProps): React.ReactElement {
+export default function Commander(props: CommanderProps): React.ReactElement {
   const { query } = useKBar();
   const { results } = useMatches();
 

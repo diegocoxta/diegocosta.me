@@ -6,7 +6,7 @@ module.exports = {
       description:
         'Engenheiro de software e Engineering Manager apaixonado por construir produtos que impactem a vida das pessoas.',
       author: 'Diego Costa',
-      image: 'https://repository-images.githubusercontent.com/278878641/3756a080-d995-11ea-9b9f-f91a4448af98',
+      banner: 'https://repository-images.githubusercontent.com/278878641/3756a080-d995-11ea-9b9f-f91a4448af98',
       avatar: 'https://avatars.githubusercontent.com/u/3134422?v=4',
     },
     bio: {

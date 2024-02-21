@@ -2905,32 +2905,32 @@ type SiteSiteMetadataGetInTouchSortInput = {
 type SiteSiteMetadataMetatags = {
   readonly author: Maybe<Scalars['String']>;
   readonly avatar: Maybe<Scalars['String']>;
+  readonly banner: Maybe<Scalars['String']>;
   readonly description: Maybe<Scalars['String']>;
-  readonly image: Maybe<Scalars['String']>;
   readonly title: Maybe<Scalars['String']>;
 };
 
 type SiteSiteMetadataMetatagsFieldSelector = {
   readonly author: InputMaybe<FieldSelectorEnum>;
   readonly avatar: InputMaybe<FieldSelectorEnum>;
+  readonly banner: InputMaybe<FieldSelectorEnum>;
   readonly description: InputMaybe<FieldSelectorEnum>;
-  readonly image: InputMaybe<FieldSelectorEnum>;
   readonly title: InputMaybe<FieldSelectorEnum>;
 };
 
 type SiteSiteMetadataMetatagsFilterInput = {
   readonly author: InputMaybe<StringQueryOperatorInput>;
   readonly avatar: InputMaybe<StringQueryOperatorInput>;
+  readonly banner: InputMaybe<StringQueryOperatorInput>;
   readonly description: InputMaybe<StringQueryOperatorInput>;
-  readonly image: InputMaybe<StringQueryOperatorInput>;
   readonly title: InputMaybe<StringQueryOperatorInput>;
 };
 
 type SiteSiteMetadataMetatagsSortInput = {
   readonly author: InputMaybe<SortOrderEnum>;
   readonly avatar: InputMaybe<SortOrderEnum>;
+  readonly banner: InputMaybe<SortOrderEnum>;
   readonly description: InputMaybe<SortOrderEnum>;
-  readonly image: InputMaybe<SortOrderEnum>;
   readonly title: InputMaybe<SortOrderEnum>;
 };
 
@@ -2987,10 +2987,10 @@ type WebPOptions = {
 
 type ArticleInformationFragment = { readonly html: string | null, readonly excerpt: string | null, readonly fields: { readonly collection: string | null, readonly slug: string | null, readonly language: string | null, readonly readingTime: { readonly minutes: number | null } | null } | null, readonly frontmatter: { readonly date: string | null, readonly title: string | null, readonly description: string | null, readonly tags: ReadonlyArray<string | null> | null, readonly flags: ReadonlyArray<string | null> | null } | null };
 
-type FooterComponentQueryVariables = Exact<{ [key: string]: never; }>;
+type BlogTemplateQueryQueryVariables = Exact<{ [key: string]: never; }>;
 
 
-type FooterComponentQuery = { readonly site: { readonly siteMetadata: { readonly sourceCode: string | null, readonly metatags: { readonly author: string | null } | null } | null } | null };
+type BlogTemplateQueryQuery = { readonly site: { readonly siteMetadata: { readonly sourceCode: string | null, readonly metatags: { readonly author: string | null, readonly description: string | null, readonly banner: string | null, readonly title: string | null } | null, readonly bio: { readonly pt: string | null, readonly en: string | null } | null, readonly getInTouch: ReadonlyArray<{ readonly label: string | null, readonly url: string | null, readonly rel: string | null } | null> | null } | null } | null, readonly pages: { readonly nodes: ReadonlyArray<{ readonly frontmatter: { readonly title: string | null } | null, readonly fields: { readonly slug: string | null, readonly collection: string | null, readonly language: string | null } | null }> } };
 
 type GatsbyImageSharpFixedFragment = { readonly base64: string | null, readonly width: number, readonly height: number, readonly src: string, readonly srcSet: string };
 
@@ -3018,11 +3018,6 @@ type GatsbyImageSharpFluid_withWebp_tracedSVGFragment = { readonly tracedSVG: st
 
 type GatsbyImageSharpFluidLimitPresentationSizeFragment = { readonly maxHeight: number, readonly maxWidth: number };
 
-type HeaderComponentQueryVariables = Exact<{ [key: string]: never; }>;
-
-
-type HeaderComponentQuery = { readonly site: { readonly siteMetadata: { readonly metatags: { readonly author: string | null } | null, readonly bio: { readonly pt: string | null, readonly en: string | null } | null, readonly getInTouch: ReadonlyArray<{ readonly label: string | null, readonly url: string | null, readonly rel: string | null } | null> | null } | null } | null };
-
 type IndexPageQueryVariables = Exact<{
   language: Scalars['String'];
 }>;
@@ -3032,20 +3027,17 @@ type IndexPageQuery = { readonly locales: { readonly edges: ReadonlyArray<{ read
 
 type LanguageInformationFragment = { readonly edges: ReadonlyArray<{ readonly node: { readonly ns: string | null, readonly data: string | null, readonly language: string | null } }> };
 
+type LinksPageQueryVariables = Exact<{
+  language: Scalars['String'];
+}>;
+
+
+type LinksPageQuery = { readonly locales: { readonly edges: ReadonlyArray<{ readonly node: { readonly ns: string | null, readonly data: string | null, readonly language: string | null } }> } };
+
 type LinksTemplateQueryQueryVariables = Exact<{ [key: string]: never; }>;
 
 
-type LinksTemplateQueryQuery = { readonly site: { readonly siteMetadata: { readonly metatags: { readonly author: string | null, readonly description: string | null, readonly avatar: string | null } | null } | null } | null };
-
-type MetatagsComponentQueryVariables = Exact<{ [key: string]: never; }>;
-
-
-type MetatagsComponentQuery = { readonly site: { readonly siteMetadata: { readonly metatags: { readonly title: string | null, readonly description: string | null, readonly author: string | null, readonly image: string | null } | null } | null } | null };
-
-type NavigationQueryVariables = Exact<{ [key: string]: never; }>;
-
-
-type NavigationQuery = { readonly site: { readonly siteMetadata: { readonly sourceCode: string | null } | null } | null, readonly pages: { readonly nodes: ReadonlyArray<{ readonly frontmatter: { readonly title: string | null } | null, readonly fields: { readonly slug: string | null, readonly collection: string | null, readonly language: string | null } | null }> } };
+type LinksTemplateQueryQuery = { readonly site: { readonly siteMetadata: { readonly sourceCode: string | null, readonly metatags: { readonly title: string | null, readonly author: string | null, readonly avatar: string | null, readonly description: string | null, readonly banner: string | null } | null } | null } | null };
 
 type PageNotFoundQueryVariables = Exact<{
   language: Scalars['String'];

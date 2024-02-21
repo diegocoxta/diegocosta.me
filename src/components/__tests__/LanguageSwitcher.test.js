@@ -1,7 +1,7 @@
 import React from 'react';
 import { render } from '@testing-library/react';
 
-import LanguageSwitcher from '../LanguageSwitcher';
+import LanguageSwitcher from '~/components/LanguageSwitcher';
 
 describe('<LanguageSwitcher />', () => {
   it('renders properly', () => {

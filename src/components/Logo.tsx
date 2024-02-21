@@ -5,7 +5,7 @@ import { Link } from '~/hooks/useLocale';
 
 export interface BrandNameProps {
   author: string;
-  href?: string;
+  href: string;
   size: 'small' | 'large';
 }
 
@@ -51,4 +51,5 @@ export default function BrandName(props: BrandNameProps) {
 
 BrandName.defaultProps = {
   size: 'large',
+  href: '/',
 };
