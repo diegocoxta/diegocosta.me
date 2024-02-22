@@ -210,26 +210,26 @@ export function Blog(props: PageProps<BlogProps>): React.ReactElement {
         {isNotFound && (
           <Article
             key="article-not-found"
-            article={{
-              frontmatter: {
-                title: locale.getTranslationFor('404page.title'),
-                date: null,
-                description: null,
-                tags: null,
-                flags: [],
-              },
-              fields: null,
-              excerpt: null,
-              html: locale.getTranslationFor('404page.message'),
-            }}
+            title={locale.getTranslationFor('404page.title')}
+            content={locale.getTranslationFor('404page.message')}
             showContent={true}
           />
         )}
         {articles?.map(({ node }, index: number) => (
           <Article
             key={`article-${index}`}
-            article={node}
-            showContent={isSinglePage || node?.frontmatter?.flags?.includes('expanded-on-listings')}
+            kind={node.fields?.collection}
+            title={node.frontmatter?.title ?? ''}
+            date={node.frontmatter?.date}
+            url={node.fields?.slug}
+            tags={node.frontmatter?.tags as string[]}
+            readingTime={node.fields?.readingTime?.minutes ?? 0}
+            language={node.fields?.language}
+            content={
+              isSinglePage || node?.frontmatter?.flags?.includes('expanded-on-listings')
+                ? node.html
+                : node.frontmatter?.description || node.excerpt
+            }
           />
         ))}
       </Container>
