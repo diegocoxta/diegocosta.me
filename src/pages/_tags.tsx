@@ -3,7 +3,7 @@ import { graphql } from 'gatsby';
 export { default } from '@app/templates/Blog';
 
 export const pageQuery = graphql`
-  query TagsTemplate($tag: String, $language: String!) {
+  query TagsTemplatePage($tag: String, $language: String!) {
     locales: allLocale(filter: { language: { eq: $language } }) {
       ...LanguageInformation
     }

@@ -6,7 +6,7 @@ export default async function (_: VercelRequest, response: VercelResponse) {
     const message = 'You need to set LETTERBOXD_RSS env variable to use this resource.';
     console.error(message);
 
-    return response.status(200).json({ message });
+    return response.status(500).json({ message });
   }
 
   const parser = new Parser();
