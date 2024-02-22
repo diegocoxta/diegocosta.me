@@ -3039,28 +3039,28 @@ type LinksTemplateQueryQueryVariables = Exact<{ [key: string]: never; }>;
 
 type LinksTemplateQueryQuery = { readonly site: { readonly siteMetadata: { readonly sourceCode: string | null, readonly metatags: { readonly title: string | null, readonly author: string | null, readonly avatar: string | null, readonly description: string | null, readonly banner: string | null } | null } | null } | null };
 
-type PageNotFoundQueryVariables = Exact<{
+type NotFoundPageQueryVariables = Exact<{
   language: Scalars['String'];
 }>;
 
 
-type PageNotFoundQuery = { readonly locales: { readonly edges: ReadonlyArray<{ readonly node: { readonly ns: string | null, readonly data: string | null, readonly language: string | null } }> } };
+type NotFoundPageQuery = { readonly locales: { readonly edges: ReadonlyArray<{ readonly node: { readonly ns: string | null, readonly data: string | null, readonly language: string | null } }> } };
 
-type SingleTemplateQueryVariables = Exact<{
+type SingleTemplatePageQueryVariables = Exact<{
   slug: Scalars['String'];
   language: Scalars['String'];
 }>;
 
 
-type SingleTemplateQuery = { readonly locales: { readonly edges: ReadonlyArray<{ readonly node: { readonly ns: string | null, readonly data: string | null, readonly language: string | null } }> }, readonly content: { readonly edges: ReadonlyArray<{ readonly node: { readonly html: string | null, readonly excerpt: string | null, readonly fields: { readonly collection: string | null, readonly slug: string | null, readonly language: string | null, readonly readingTime: { readonly minutes: number | null } | null } | null, readonly frontmatter: { readonly date: string | null, readonly title: string | null, readonly description: string | null, readonly tags: ReadonlyArray<string | null> | null, readonly flags: ReadonlyArray<string | null> | null } | null } }> } };
+type SingleTemplatePageQuery = { readonly locales: { readonly edges: ReadonlyArray<{ readonly node: { readonly ns: string | null, readonly data: string | null, readonly language: string | null } }> }, readonly content: { readonly edges: ReadonlyArray<{ readonly node: { readonly html: string | null, readonly excerpt: string | null, readonly fields: { readonly collection: string | null, readonly slug: string | null, readonly language: string | null, readonly readingTime: { readonly minutes: number | null } | null } | null, readonly frontmatter: { readonly date: string | null, readonly title: string | null, readonly description: string | null, readonly tags: ReadonlyArray<string | null> | null, readonly flags: ReadonlyArray<string | null> | null } | null } }> } };
 
-type TagsTemplateQueryVariables = Exact<{
+type TagsTemplatePageQueryVariables = Exact<{
   tag: InputMaybe<Scalars['String']>;
   language: Scalars['String'];
 }>;
 
 
-type TagsTemplateQuery = { readonly locales: { readonly edges: ReadonlyArray<{ readonly node: { readonly ns: string | null, readonly data: string | null, readonly language: string | null } }> }, readonly list: { readonly edges: ReadonlyArray<{ readonly node: { readonly html: string | null, readonly excerpt: string | null, readonly fields: { readonly collection: string | null, readonly slug: string | null, readonly language: string | null, readonly readingTime: { readonly minutes: number | null } | null } | null, readonly frontmatter: { readonly date: string | null, readonly title: string | null, readonly description: string | null, readonly tags: ReadonlyArray<string | null> | null, readonly flags: ReadonlyArray<string | null> | null } | null } }> } };
+type TagsTemplatePageQuery = { readonly locales: { readonly edges: ReadonlyArray<{ readonly node: { readonly ns: string | null, readonly data: string | null, readonly language: string | null } }> }, readonly list: { readonly edges: ReadonlyArray<{ readonly node: { readonly html: string | null, readonly excerpt: string | null, readonly fields: { readonly collection: string | null, readonly slug: string | null, readonly language: string | null, readonly readingTime: { readonly minutes: number | null } | null } | null, readonly frontmatter: { readonly date: string | null, readonly title: string | null, readonly description: string | null, readonly tags: ReadonlyArray<string | null> | null, readonly flags: ReadonlyArray<string | null> | null } | null } }> } };
 
 
 }
