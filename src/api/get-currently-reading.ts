@@ -1,7 +1,7 @@
-import type { VercelRequest, VercelResponse } from '@vercel/node';
+import { GatsbyFunctionRequest, GatsbyFunctionResponse } from 'gatsby';
 import Parser from 'rss-parser';
 
-export default async function (_: VercelRequest, response: VercelResponse) {
+export default async function (_: GatsbyFunctionRequest, response: GatsbyFunctionResponse) {
   if (!process.env.GOODREADS_CURRENTLY_READING_SHELF_RSS) {
     const message = 'You need to set GOODREADS_CURRENTLY_READING_SHELF_RSS env variable to use this resource.';
     console.error(message);

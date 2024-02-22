@@ -2,7 +2,7 @@ import { graphql } from 'gatsby';
 
 export { default } from '@app/templates/Blog';
 
-export const pageQuery = graphql`
+export const query = graphql`
   query SingleTemplatePage($slug: String!, $language: String!) {
     locales: allLocale(filter: { language: { eq: $language } }) {
       ...LanguageInformation

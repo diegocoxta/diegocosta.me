@@ -193,7 +193,7 @@ export function Blog(props: PageProps<BlogProps>): React.ReactElement {
         description={description || articles?.[0]?.node.frontmatter?.description}
       />
       <Container>
-        {!isNotFound && <LanguageSwitcher />}
+        <LanguageSwitcher />
         <Header>
           <Logo author={author} size="large" />
           <HeaderNavBar>
