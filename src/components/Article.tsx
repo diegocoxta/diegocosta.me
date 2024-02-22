@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { graphql } from 'gatsby';
 
-import { useLocale, getContentLanguage, Link } from '~/components/LanguageSwitcher';
+import { useLocale, getContentLanguage, Link } from '@app/components/LanguageSwitcher';
 
 const Container = styled.article`
   margin: 0 0 60px 0;

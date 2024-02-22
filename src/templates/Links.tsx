@@ -1,12 +1,12 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import Footer from '~/components/Footer';
-import Logo from '~/components/Logo';
-import { ThemeProvider, GlobalStyle } from '~/components/ThemeSwitcher';
+import Footer from '@app/components/Footer';
+import Logo from '@app/components/Logo';
+import { ThemeProvider, GlobalStyle } from '@app/components/ThemeSwitcher';
 import { graphql, useStaticQuery } from 'gatsby';
-import Metatags from '~/components/Metatags';
-import Divisor from '~/components/Divisor';
+import Metatags from '@app/components/Metatags';
+import Divisor from '@app/components/Divisor';
 
 const Container = styled.section`
   max-width: 660px;

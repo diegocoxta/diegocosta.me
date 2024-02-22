@@ -2,7 +2,7 @@ import React, { useContext, useState, useEffect } from 'react';
 import styled, { ThemeContext, createGlobalStyle } from 'styled-components';
 import { BsMoon, BsSun } from 'react-icons/bs';
 
-import { useLocale } from '~/components/LanguageSwitcher';
+import { useLocale } from '@app/components/LanguageSwitcher';
 
 const Container = styled.button<{ $enabled?: boolean }>`
   background: transparent;

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
 
-import { useLocale } from '~/components/LanguageSwitcher';
+import { useLocale } from '@app/components/LanguageSwitcher';
 
 export interface MetatagsProps {
   title: string;

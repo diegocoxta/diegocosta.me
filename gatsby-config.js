@@ -1,3 +1,7 @@
+require('dotenv').config({
+  path: '.env',
+});
+
 module.exports = {
   siteMetadata: {
     sourceCode: 'https://github.com/diegocosta/diegocosta.me',

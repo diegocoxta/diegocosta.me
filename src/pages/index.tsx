@@ -1,6 +1,6 @@
 import { graphql } from 'gatsby';
 
-export { default } from '~/templates/Blog';
+export { default } from '@app/templates/Blog';
 
 export const pageQuery = graphql`
   query IndexPage($language: String!) {

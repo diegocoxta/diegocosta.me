@@ -1,6 +1,6 @@
 import { graphql } from 'gatsby';
 
-export { default } from '~/templates/Links';
+export { default } from '@app/templates/Links';
 
 export const pageQuery = graphql`
   query LinksPage($language: String!) {

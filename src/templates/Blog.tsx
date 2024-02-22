@@ -3,15 +3,15 @@ import { PageProps, useStaticQuery, graphql } from 'gatsby';
 import styled, { ThemeContext } from 'styled-components';
 import { KBarProvider } from 'kbar';
 
-import Article from '~/components/Article';
-import Footer from '~/components/Footer';
-import DottedDivisor from '~/components/Divisor';
-import Metatags from '~/components/Metatags';
-import LanguageSwitcher, { useLocale } from '~/components/LanguageSwitcher';
-import ThemeSwitcher, { ThemeProvider, GlobalStyle } from '~/components/ThemeSwitcher';
-import Logo from '~/components/Logo';
-import AboutMe from '~/components/AboutMe';
-import Commander from '~/components/Commander';
+import Article from '@app/components/Article';
+import Footer from '@app/components/Footer';
+import DottedDivisor from '@app/components/Divisor';
+import Metatags from '@app/components/Metatags';
+import LanguageSwitcher, { useLocale } from '@app/components/LanguageSwitcher';
+import ThemeSwitcher, { ThemeProvider, GlobalStyle } from '@app/components/ThemeSwitcher';
+import Logo from '@app/components/Logo';
+import AboutMe from '@app/components/AboutMe';
+import Commander from '@app/components/Commander';
 
 const Container = styled.section`
   max-width: 960px;

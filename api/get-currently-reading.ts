@@ -2,10 +2,15 @@ import type { VercelRequest, VercelResponse } from '@vercel/node';
 import Parser from 'rss-parser';
 
 export default async function (_: VercelRequest, response: VercelResponse) {
+  if (!process.env.GOODREADS_RSS) {
+    const message = 'You need to set GOODREADS_RSS env variable to use this resource.';
+    console.error(message);
+
+    return response.status(200).json({ message });
+  }
+
   const parser = new Parser();
-  const feed = await parser.parseURL(
-    'https://www.goodreads.com/review/list_rss/38757922?key=GREoInDkWGpnD1xKT_4HCeieuQ65yghCmQYJNOGv6Ody2J5J&shelf=currently-reading'
-  );
+  const feed = await parser.parseURL(process.env.GOODREADS_RSS);
 
   const message =
     feed.items.length <= 0
