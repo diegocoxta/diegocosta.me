@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import { useLocale, getContentLanguage } from '~/hooks/useLocale';
+import { useLocale, getContentLanguage } from '~/components/LanguageSwitcher';
 
 import Title, { TitleProps } from './components/Title';
 import Tags, { TagsProps } from './components/Tags';

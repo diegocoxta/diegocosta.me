@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import { useLocale } from '~/hooks/useLocale';
+import { useLocale } from '~/components/LanguageSwitcher';
 
 const Paragraph = styled.p`
   font-size: 24px;

@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 import Footer from '~/components/Footer';
 import Logo from '~/components/Logo';
-import ThemeProvider, { GlobalStyle } from '~/components/ThemeProvider';
+import { ThemeProvider, GlobalStyle } from '~/components/ThemeSwitcher';
 import { graphql, useStaticQuery } from 'gatsby';
 import Metatags from '~/components/Metatags';
 import Divisor from '~/components/Divisor';

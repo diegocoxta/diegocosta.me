@@ -1,6 +1,20 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<TagsTemplate> renders properly 1`] = `
+.c1 {
+  display: flex;
+  margin: 40px 0 0 0;
+  justify-content: flex-start;
+}
+
+.c2 {
+  margin: 0 5px;
+  color: #2F3D4F;
+  font-weight: 700;
+  text-decoration: none;
+  font-size: 22px;
+}
+
 .c14 {
   color: #2F3D4F;
   box-shadow: none;
@@ -80,20 +94,6 @@ exports[`<TagsTemplate> renders properly 1`] = `
   height: 120px;
   margin: 40px 0;
   width: 100%;
-}
-
-.c1 {
-  display: flex;
-  margin: 40px 0 0 0;
-  justify-content: flex-start;
-}
-
-.c2 {
-  margin: 0 5px;
-  color: #2F3D4F;
-  font-weight: 700;
-  text-decoration: none;
-  font-size: 22px;
 }
 
 .c8 {

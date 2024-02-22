@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import { Link } from '~/hooks/useLocale';
+import { Link } from '~/components/LanguageSwitcher';
 
 const Container = styled(Link).attrs((props) => ({
   as: props.to ? Link : 'h2',

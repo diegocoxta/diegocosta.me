@@ -1,0 +1,256 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Links> renders properly 1`] = `
+.c2 {
+  text-decoration: none;
+  box-shadow: none;
+  display: flex;
+  align-items: center;
+}
+
+.c2:focus {
+  outline: none;
+}
+
+.c3 {
+  font-size: 6vw;
+  color: #2F3D4F;
+  font-weight: 700;
+  text-transform: lowercase;
+  margin: 0;
+}
+
+.c4 {
+  color: #D3BF9C;
+}
+
+.c5 {
+  background: linear-gradient(90deg, #ffffff 20px, transparent 1%) center,linear-gradient(#ffffff 20px, transparent 1%) center,#2F3D4F;
+  background-size: 22px 22px;
+  height: 120px;
+  margin: 40px 0;
+  width: 100%;
+}
+
+.c0 {
+  max-width: 660px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.c1 {
+  width: 90px;
+  height: 90px;
+}
+
+.c6 {
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.c7 {
+  border: 1px solid #d4d4d8;
+  padding: 5px;
+  border-radius: 100px;
+  display: block;
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 20px;
+}
+
+.c8 {
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+  background-color: #D3BF9C;
+}
+
+.c9 {
+  margin: auto 10px;
+}
+
+@media (min-width: 760px) {
+  .c3 {
+    font-size: 40px;
+  }
+}
+
+<body>
+  <div>
+    <section
+      class="c0"
+    >
+      <img
+        class="c1"
+      />
+      <a
+        class="c2"
+        href="/"
+      >
+        <h1
+          class="c3"
+        >
+          Diego
+          <span
+            class="c4"
+            data-testid="header-lastname"
+          >
+            C
+            .
+          </span>
+        </h1>
+      </a>
+    </section>
+    <div
+      class="c5"
+    />
+    <section
+      class="c0"
+    >
+      <h2
+        class="c6"
+      >
+        Featured Links
+      </h2>
+      <a
+        class="c7"
+      >
+        <div
+          class="c8"
+        />
+        <p
+          class="c9"
+        >
+          My Website
+        </p>
+      </a>
+      <a
+        class="c7"
+      >
+        <div
+          class="c8"
+        />
+        <p
+          class="c9"
+        >
+          My Website
+        </p>
+      </a>
+      <a
+        class="c7"
+      >
+        <div
+          class="c8"
+        />
+        <p
+          class="c9"
+        >
+          My Website
+        </p>
+      </a>
+      <a
+        class="c7"
+      >
+        <div
+          class="c8"
+        />
+        <p
+          class="c9"
+        >
+          My Website
+        </p>
+      </a>
+      <a
+        class="c7"
+      >
+        <div
+          class="c8"
+        />
+        <p
+          class="c9"
+        >
+          My Website
+        </p>
+      </a>
+      <h2
+        class="c6"
+      >
+        Other Links
+      </h2>
+      <a
+        class="c7"
+      >
+        <div
+          class="c8"
+        />
+        <p
+          class="c9"
+        >
+          My Website
+        </p>
+      </a>
+      <a
+        class="c7"
+      >
+        <div
+          class="c8"
+        />
+        <p
+          class="c9"
+        >
+          My Website
+        </p>
+      </a>
+      <a
+        class="c7"
+      >
+        <div
+          class="c8"
+        />
+        <p
+          class="c9"
+        >
+          My Website
+        </p>
+      </a>
+      <a
+        class="c7"
+      >
+        <div
+          class="c8"
+        />
+        <p
+          class="c9"
+        >
+          My Website
+        </p>
+      </a>
+      <a
+        class="c7"
+      >
+        <div
+          class="c8"
+        />
+        <p
+          class="c9"
+        >
+          My Website
+        </p>
+      </a>
+    </section>
+    <div
+      class="c5"
+    />
+    <section
+      class="c0"
+    >
+      <p>
+        Footer
+      </p>
+    </section>
+  </div>
+</body>
+`;

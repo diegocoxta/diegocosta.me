@@ -3,15 +3,12 @@ import { PageProps, useStaticQuery, graphql } from 'gatsby';
 import styled, { ThemeContext } from 'styled-components';
 import { KBarProvider } from 'kbar';
 
-import { useLocale } from '~/hooks/useLocale';
-
 import Article from '~/components/Article';
 import Footer from '~/components/Footer';
-import ThemeProvider, { GlobalStyle } from '~/components/ThemeProvider';
 import DottedDivisor from '~/components/Divisor';
 import Metatags from '~/components/Metatags';
-import LanguageSwitcher from '~/components/LanguageSwitcher';
-import ThemeSwitcher from '~/components/ThemeSwitcher';
+import LanguageSwitcher, { useLocale } from '~/components/LanguageSwitcher';
+import ThemeSwitcher, { ThemeProvider, GlobalStyle } from '~/components/ThemeSwitcher';
 import Logo from '~/components/Logo';
 import AboutMe from '~/components/AboutMe';
 import Commander from '~/components/Commander';
@@ -46,7 +43,7 @@ interface BlogProps {
   author?: string;
 }
 
-export default function Blog(props: PageProps<BlogProps>): React.ReactElement {
+export function Blog(props: PageProps<BlogProps>): React.ReactElement {
   const {
     site: {
       siteMetadata: {
@@ -187,7 +184,7 @@ export default function Blog(props: PageProps<BlogProps>): React.ReactElement {
   ];
 
   return (
-    <ThemeProvider>
+    <>
       <GlobalStyle />
       <Metatags
         author={author}
@@ -240,6 +237,14 @@ export default function Blog(props: PageProps<BlogProps>): React.ReactElement {
       <Container>
         <Footer sourceCode={sourceCode} author={author} />
       </Container>
+    </>
+  );
+}
+
+export default function (props: PageProps<BlogProps>) {
+  return (
+    <ThemeProvider>
+      <Blog {...props} />
     </ThemeProvider>
   );
 }
