@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { PageProps, useStaticQuery, graphql } from 'gatsby';
+import { PageProps, useStaticQuery, graphql, navigate } from 'gatsby';
 import styled, { ThemeContext } from 'styled-components';
 import { KBarProvider } from 'kbar';
 
@@ -102,7 +102,7 @@ export function Blog(props: PageProps<BlogProps>): React.ReactElement {
       name: 'Home',
       shortcut: ['g', 'h'],
       section: 'Pages',
-      perform: () => (window.location.href = '/'),
+      perform: () => navigate('/'),
       icon: 'BsFillHouseFill',
     },
     {
@@ -116,7 +116,7 @@ export function Blog(props: PageProps<BlogProps>): React.ReactElement {
       id: `page-${p.fields?.slug}`,
       name: p.frontmatter?.title as string,
       section: 'Pages',
-      perform: () => (window.location.href = `/${p.fields?.slug}`),
+      perform: () => navigate(p.fields?.slug ?? ''),
       icon: 'BsFillFileEarmarkFill',
       parent: p.fields?.collection === 'articles' ? 'articles' : undefined,
     })),

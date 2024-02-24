@@ -154,7 +154,7 @@ export default function Article(props: ArticleProps): React.ReactElement {
         {props.kind === 'articles' && (
           <>
             <MetaAttributes>
-              {date} {getReadingTime()} · in {props.language}
+              {date} {getReadingTime()} · In {props.language}
             </MetaAttributes>
             <TagList data-testid="article-header-tags">
               {props.tags?.map((tag: string, index: number) => (

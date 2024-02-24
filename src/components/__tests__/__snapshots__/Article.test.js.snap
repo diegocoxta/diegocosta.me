@@ -214,7 +214,7 @@ exports[`<Article /> renders properly 1`] = `
           01/18/2020
            
           · 5 minutes of reading
-           · in 
+           · In 
           en
         </p>
         <ul
@@ -523,7 +523,7 @@ exports[`<Article /> renders the article details 1`] = `
           01/18/2020
            
           · 5 minutes of reading
-           · in 
+           · In 
           en
         </p>
         <ul
