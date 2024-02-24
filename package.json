@@ -5,7 +5,6 @@
   "author": "Diego Costa <diego@diegocosta.me>",
   "dependencies": {
     "@deckdeckgo/highlight-code": "^4.4.0",
-    "@vercel/node": "^3.0.20",
     "downshift": "8.3.1",
     "fuse.js": "^7.0.0",
     "gatsby": "^5.13.3",
