@@ -1,7 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-
-import { Link } from '@app/components/LanguageSwitcher';
+import { Link } from 'gatsby';
 
 export interface BrandNameProps {
   author: string;

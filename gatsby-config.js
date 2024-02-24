@@ -13,10 +13,7 @@ module.exports = {
       banner: 'https://repository-images.githubusercontent.com/278878641/3756a080-d995-11ea-9b9f-f91a4448af98',
       avatar: 'https://avatars.githubusercontent.com/u/3134422?v=4',
     },
-    bio: {
-      en: 'I’m a Engineering Manager passionate about the intersection between technology and people. My goal is to help technology teams achieve their full potential.\nI have a great interest in engineering leadership, people management, software engineering, as well as inclusion and diversity. Currently, I am an Engineering Manager at Nubank and I am always open to sharing my ideas and experiences on these topics.\nIf you’d like to learn more about me, check out the links below!',
-      pt: 'Sou um Gerente de Engenharia apaixonado pela intersecção entre tecnologia e pessoas. Meu objetivo é ajudar equipes de tecnologia a alcançar todo o seu potencial.\nTenho grande interesse em liderança em engenharia, gerenciamento de pessoas, engenharia de software, além de inclusão e diversidade. Atualmente, sou Gerente de Engenharia na Nubank e estou sempre aberto a compartilhar minhas ideias e experiências sobre esses temas.\nSe você quiser saber mais sobre mim, confira os links abaixo!',
-    },
+    bio: 'I’m a Engineering Manager passionate about the intersection between technology and people. My goal is to help technology teams achieve their full potential.\nI have a great interest in engineering leadership, people management, software engineering, as well as inclusion and diversity. Currently, I am an Engineering Manager at Nubank and I am always open to sharing my ideas and experiences on these topics.\nIf you’d like to learn more about me, check out the links below!',
     getInTouch: [
       {
         label: 'Linkedin',
@@ -76,28 +73,6 @@ module.exports = {
       options: {
         path: `${__dirname}/content/pages`,
         name: 'pages',
-      },
-    },
-    {
-      resolve: 'gatsby-source-filesystem',
-      options: {
-        path: `${__dirname}/src/locales`,
-        name: 'locales',
-      },
-    },
-    {
-      resolve: 'gatsby-plugin-react-i18next',
-      options: {
-        localeJsonSourceName: 'locales',
-        languages: ['pt', 'en'],
-        defaultLanguage: 'en',
-        siteUrl: 'https://diegocosta.me',
-        generateDefaultLanguagePage: true,
-        redirect: false,
-        i18nextOptions: {
-          keySeparator: false,
-          nsSeparator: false,
-        },
       },
     },
     {

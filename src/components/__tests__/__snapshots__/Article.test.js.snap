@@ -37,54 +37,9 @@ exports[`<Article /> does not render the article details 1`] = `
           class="c2"
           data-testid="article-header-title"
           href="/awesome-article"
-          language="en"
         >
           Awesome Article
         </a>
-      </header>
-    </article>
-  </div>
-</body>
-`;
-
-exports[`<Article /> does not render the article language name 1`] = `
-.c0 {
-  margin: 0 0 60px 0;
-  font-weight: 400;
-}
-
-.c1 {
-  margin: 20px 0 0 0;
-}
-
-.c2 {
-  box-shadow: none;
-  text-decoration: none;
-  font-size: 36px;
-  margin: 0;
-  font-weight: 700;
-}
-
-.c2:hover,
-.c2:focus {
-  outline: none;
-}
-
-<body>
-  <div>
-    <article
-      class="c0"
-      data-testid="article-item"
-    >
-      <header
-        class="c1"
-      >
-        <h2
-          class="c2"
-          data-testid="article-header-title"
-        >
-          Awesome Article
-        </h2>
       </header>
     </article>
   </div>
@@ -126,77 +81,10 @@ exports[`<Article /> does not render the link 1`] = `
         <h2
           class="c2"
           data-testid="article-header-title"
+          to=""
         >
           Awesome Article
         </h2>
-      </header>
-    </article>
-  </div>
-</body>
-`;
-
-exports[`<Article /> does not render the reading time 1`] = `
-.c0 {
-  margin: 0 0 60px 0;
-  font-weight: 400;
-}
-
-.c1 {
-  margin: 20px 0 0 0;
-}
-
-.c3 {
-  font-size: 19px;
-  margin: 10px 0;
-}
-
-.c4 {
-  display: flex;
-  flex-wrap: wrap;
-  padding: 0;
-  margin: 0;
-}
-
-.c2 {
-  box-shadow: none;
-  text-decoration: none;
-  font-size: 36px;
-  margin: 0;
-  font-weight: 700;
-}
-
-.c2:hover,
-.c2:focus {
-  outline: none;
-}
-
-<body>
-  <div>
-    <article
-      class="c0"
-      data-testid="article-item"
-    >
-      <header
-        class="c1"
-      >
-        <h2
-          class="c2"
-          data-testid="article-header-title"
-        >
-          Awesome Article
-        </h2>
-        <p
-          class="c3"
-        >
-          18/01/2020
-           
-           · 
-          article.languagePrefix languages.en
-        </p>
-        <ul
-          class="c4"
-          data-testid="article-header-tags"
-        />
       </header>
     </article>
   </div>
@@ -240,7 +128,6 @@ exports[`<Article /> does not render the tags 1`] = `
           class="c2"
           data-testid="article-header-title"
           href="/awesome-article"
-          language="pt"
         >
           Awesome Article
         </a>
@@ -318,18 +205,17 @@ exports[`<Article /> renders properly 1`] = `
           class="c2"
           data-testid="article-header-title"
           href="/awesome-article"
-          language="en"
         >
           Awesome Article
         </a>
         <p
           class="c3"
         >
-          18/01/2020
+          01/18/2020
            
-          · 5 article.minutes article.ofReading
-           · 
-          article.languagePrefix languages.en
+          · 5 minutes of reading
+           · in 
+          en
         </p>
         <ul
           class="c4"
@@ -448,7 +334,6 @@ exports[`<Article /> renders properly the body content 1`] = `
           class="c2"
           data-testid="article-header-title"
           href="/awesome-article"
-          language="pt"
         >
           Awesome Article
         </a>
@@ -547,7 +432,6 @@ exports[`<Article /> renders properly the description 1`] = `
           class="c2"
           data-testid="article-header-title"
           href="/awesome-article"
-          language="pt"
         >
           Awesome Article
         </a>
@@ -630,18 +514,17 @@ exports[`<Article /> renders the article details 1`] = `
           class="c2"
           data-testid="article-header-title"
           href="/awesome-article"
-          language="en"
         >
           Awesome Article
         </a>
         <p
           class="c3"
         >
-          18/01/2020
+          01/18/2020
            
-          · 5 article.minutes article.ofReading
-           · 
-          article.languagePrefix languages.en
+          · 5 minutes of reading
+           · in 
+          en
         </p>
         <ul
           class="c4"

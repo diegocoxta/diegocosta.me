@@ -7,6 +7,7 @@ tags:
   - produtos
   - gestao
   - talks
+language: Portuguese
 flags:
   - expanded-on-listings
 ---

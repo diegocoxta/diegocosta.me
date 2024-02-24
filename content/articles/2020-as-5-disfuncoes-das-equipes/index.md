@@ -6,8 +6,8 @@ tags:
   - team-building
   - talks
   - books
-flags:
-  - draft
+published: false
+language: Portuguese
 ---
 
 Apresentação sobre disfunções em times com base no livro 'Os 5 desafios das equipes' de Patrick Lencioni

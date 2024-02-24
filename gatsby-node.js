@@ -2,24 +2,11 @@ const { resolve } = require('path');
 const { createFilePath } = require('gatsby-source-filesystem');
 const readingTime = require('reading-time');
 
-const getNodeLangCode = function (fileAbsolutePath, defaultLang = 'en') {
-  const filename = fileAbsolutePath.split('/').pop();
-
-  return filename.split('.md')?.[0] ?? defaultLang;
-};
-
-const getSlugWithoutFile = function (slug) {
-  const parts = slug.split('/').filter((segment) => segment !== '');
-
-  return `/${parts?.[0]}/`;
-};
-
 exports.onCreateWebpackConfig = ({ actions }) => {
   actions.setWebpackConfig({
     resolve: {
       alias: {
-        '@app': resolve(__dirname, 'src'),
-        '@api': resolve(__dirname, 'api'),
+        '~': resolve(__dirname, 'src'),
       },
     },
   });
@@ -31,13 +18,7 @@ exports.onCreateNode = async ({ node, actions, getNode }) => {
 
     actions.createNodeField({
       name: 'slug',
-      value: getSlugWithoutFile(createFilePath({ node, getNode })),
-      node,
-    });
-
-    actions.createNodeField({
-      name: 'language',
-      value: getNodeLangCode(node.fileAbsolutePath),
+      value: createFilePath({ node, getNode }),
       node,
     });
 

@@ -5,8 +5,8 @@ date: 2020-06-01T22:12:03.284Z
 tags:
   - team-building
   - talks
-flags:
-  - draft
+published: false
+language: Portuguese
 ---
 
 Apresentação tendo como base os ensinamentos do Project Aristotle

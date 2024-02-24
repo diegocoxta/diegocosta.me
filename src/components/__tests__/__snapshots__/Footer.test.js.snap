@@ -41,9 +41,7 @@ exports[`<Footer /> renders properly 1`] = `
         CC-BY 
         2024
          
-        , 
-        footer.builtWith
-         
+        , built with
         <a
           class="c2"
           href="https://gatsbyjs.org"
@@ -101,9 +99,7 @@ exports[`<Footer /> renders the sourceCode url if defined 1`] = `
         CC-BY 
         2024
          
-        , 
-        footer.builtWith
-         
+        , built with
         <a
           class="c2"
           href="https://gatsbyjs.org"
@@ -120,7 +116,7 @@ exports[`<Footer /> renders the sourceCode url if defined 1`] = `
           rel="noopener"
           target="_blank"
         >
-          footer.sourceCode
+          source code
         </a>
       </span>
     </footer>

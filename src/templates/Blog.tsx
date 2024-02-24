@@ -3,15 +3,14 @@ import { PageProps, useStaticQuery, graphql } from 'gatsby';
 import styled, { ThemeContext } from 'styled-components';
 import { KBarProvider } from 'kbar';
 
-import Article from '@app/components/Article';
-import Footer from '@app/components/Footer';
-import DottedDivisor from '@app/components/Divisor';
-import Metatags from '@app/components/Metatags';
-import LanguageSwitcher, { useLocale } from '@app/components/LanguageSwitcher';
-import ThemeSwitcher, { ThemeProvider, GlobalStyle } from '@app/components/ThemeSwitcher';
-import Logo from '@app/components/Logo';
-import AboutMe from '@app/components/AboutMe';
-import Commander from '@app/components/Commander';
+import Article from '~/components/Article';
+import Footer from '~/components/Footer';
+import DottedDivisor from '~/components/Divisor';
+import Metatags from '~/components/Metatags';
+import ThemeSwitcher, { ThemeProvider, GlobalStyle } from '~/components/ThemeSwitcher';
+import Logo from '~/components/Logo';
+import AboutMe from '~/components/AboutMe';
+import Commander from '~/components/Commander';
 
 const Container = styled.section`
   max-width: 960px;
@@ -65,10 +64,7 @@ export function Blog(props: PageProps<BlogProps>): React.ReactElement {
             banner
             title
           }
-          bio {
-            pt
-            en
-          }
+          bio
           getInTouch {
             label
             url
@@ -84,7 +80,6 @@ export function Blog(props: PageProps<BlogProps>): React.ReactElement {
           fields {
             slug
             collection
-            language
           }
         }
       }
@@ -92,9 +87,6 @@ export function Blog(props: PageProps<BlogProps>): React.ReactElement {
   `);
 
   const themeContext = useContext(ThemeContext);
-  const locale = useLocale();
-
-  const currentLanguage = locale.getCurrentLanguage();
 
   const { data } = props;
   const content = data?.content?.edges;
@@ -102,82 +94,62 @@ export function Blog(props: PageProps<BlogProps>): React.ReactElement {
 
   const isSinglePage = content !== undefined;
   const isNotFound = content === undefined && list === undefined;
-  let articles = isSinglePage ? content : list;
-
-  if (isSinglePage && articles !== undefined && articles.length > 1) {
-    articles = articles.filter((i) => i.node.fields?.language === currentLanguage);
-  }
+  const articles = isSinglePage ? content : list;
 
   const actions = [
     {
       id: 'home',
-      name: locale.getTranslationFor('commander.home'),
+      name: 'Home',
       shortcut: ['g', 'h'],
-      section: locale.getTranslationFor('commander.pages'),
-      perform: () => (window.location.href = `/${locale.getCurrentLanguage()}`),
+      section: 'Pages',
+      perform: () => (window.location.href = '/'),
       icon: 'BsFillHouseFill',
     },
     {
       id: 'articles',
-      name: locale.getTranslationFor('commander.articles'),
+      name: 'Articles',
       shortcut: ['g', 'a'],
-      section: locale.getTranslationFor('commander.pages'),
+      section: 'Pages',
       icon: 'BsNewspaper',
     },
     ...pages.nodes.map((p: Queries.BlogTemplateQueryQuery['pages']['nodes'][0]) => ({
-      id: `page-${p.fields?.slug}-${p.fields?.language}`,
+      id: `page-${p.fields?.slug}`,
       name: p.frontmatter?.title as string,
-      section: locale.getTranslationFor('commander.pages'),
-      perform: () => (window.location.href = `/${p.fields?.language}${p.fields?.slug}`),
+      section: 'Pages',
+      perform: () => (window.location.href = `/${p.fields?.slug}`),
       icon: 'BsFillFileEarmarkFill',
       parent: p.fields?.collection === 'articles' ? 'articles' : undefined,
     })),
     {
       id: 'theme',
-      name: locale.getTranslationFor('commander.theme'),
+      name: 'Appearance',
       shortcut: ['g', 't'],
-      section: locale.getTranslationFor('commander.preferences'),
+      section: 'Preferences',
       icon: 'BsBrushFill',
     },
     {
       id: 'theme-light',
-      name: locale.getTranslationFor('commander.themeLight'),
+      name: 'Light',
       shortcut: ['g', 't', 'l'],
-      section: locale.getTranslationFor('commander.theme'),
+      section: 'Appearance',
       parent: 'theme',
       perform: () => themeContext?.setMode('light'),
       icon: 'BsSun',
     },
     {
       id: 'theme-dark',
-      name: locale.getTranslationFor('commander.themeDark'),
+      name: 'Dark',
       shortcut: ['g', 't', 'd'],
-      section: locale.getTranslationFor('commander.theme'),
+      section: 'Appearance',
       parent: 'theme',
       perform: () => themeContext?.setMode('dark'),
       icon: 'BsMoon',
     },
     {
-      id: 'language',
-      name: locale.getTranslationFor('commander.language'),
-      shortcut: ['g', 'l'],
-      section: locale.getTranslationFor('commander.preferences'),
-      icon: 'BsTranslate',
-    },
-    ...locale.getAllLanguages().map((language: string) => ({
-      icon: 'BsTranslate',
-      id: `language-${language}`,
-      shortcut: ['g', 'l', language[0]],
-      section: locale.getTranslationFor('commander.language'),
-      parent: 'language',
-      perform: () => (window.location.href = `/${language}`),
-      name: locale.getTranslationFor(`languages.${language}`),
-    })),
-    {
       id: 'source',
-      name: locale.getTranslationFor('commander.sourceCode'),
+      name: 'Source Code',
       shortcut: ['g', 's'],
-      section: locale.getTranslationFor('commander.tools'),
+      section: 'Tools',
       perform: () => window.open(sourceCode as string, '_blank'),
       icon: 'BsCodeSlash',
     },
@@ -193,13 +165,12 @@ export function Blog(props: PageProps<BlogProps>): React.ReactElement {
         description={description || articles?.[0]?.node.frontmatter?.description}
       />
       <Container>
-        <LanguageSwitcher />
         <Header>
           <Logo author={author} size="large" />
           <HeaderNavBar>
             <ThemeSwitcher />
             <KBarProvider actions={actions}>
-              <Commander placeholder={locale.getTranslationFor('commander.placeholder')} />
+              <Commander placeholder="Type a command or search…" />
             </KBarProvider>
           </HeaderNavBar>
         </Header>
@@ -210,8 +181,8 @@ export function Blog(props: PageProps<BlogProps>): React.ReactElement {
         {isNotFound && (
           <Article
             key="article-not-found"
-            title={locale.getTranslationFor('404page.title')}
-            content={locale.getTranslationFor('404page.message')}
+            title="Ops! Page not found!"
+            content="I'm sorry, but the page you're looking for cannot be found. Please check the URL or try navigating through the menu of my website. If the issue persists, please contact me."
             showContent={true}
           />
         )}
@@ -221,10 +192,10 @@ export function Blog(props: PageProps<BlogProps>): React.ReactElement {
             kind={node.fields?.collection}
             title={node.frontmatter?.title ?? ''}
             date={node.frontmatter?.date}
+            language={node.frontmatter?.language}
             url={node.fields?.slug}
             tags={node.frontmatter?.tags as string[]}
             readingTime={node.fields?.readingTime?.minutes ?? 0}
-            language={node.fields?.language}
             content={
               isSinglePage || node?.frontmatter?.flags?.includes('expanded-on-listings')
                 ? node.html

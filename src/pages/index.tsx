@@ -1,12 +1,9 @@
 import { graphql } from 'gatsby';
 
-export { default } from '@app/templates/Blog';
+export { default } from '~/templates/Blog';
 
 export const query = graphql`
-  query IndexPage($language: String!) {
-    locales: allLocale(filter: { language: { eq: $language } }) {
-      ...LanguageInformation
-    }
+  query IndexPage {
     list: allMarkdownRemark(
       sort: { frontmatter: { date: DESC } }
       filter: {

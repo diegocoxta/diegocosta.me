@@ -1,6 +1,7 @@
 ---
 title: Tools I Use
 description: The page where I share the tools that make my life easier.
+language: English
 ---
 
 **Last update**: Oct 2023

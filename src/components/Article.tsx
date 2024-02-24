@@ -1,8 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { graphql } from 'gatsby';
-
-import { useLocale, getContentLanguage, Link } from '@app/components/LanguageSwitcher';
+import { graphql, Link } from 'gatsby';
 
 const Container = styled.article`
   margin: 0 0 60px 0;
@@ -116,8 +114,8 @@ type Nullable<T> = T | null;
 
 export type ArticleProps = {
   readingTime?: number;
-  language?: Nullable<string>;
   date?: Nullable<string>;
+  language?: Nullable<string>;
   content?: Nullable<string>;
   kind?: Nullable<string>;
   tags?: string[] | null;
@@ -127,29 +125,21 @@ export type ArticleProps = {
 };
 
 export default function Article(props: ArticleProps): React.ReactElement {
-  const locale = useLocale();
-
-  const pageLanguage = locale.getCurrentLanguage();
-
   const getReadingTime = () => {
     if (!props.readingTime) {
       return undefined;
     }
 
-    const lessThan1Minute = locale.getTranslationFor('article.lessThan1Minute');
-    const ofReading = locale.getTranslationFor('article.ofReading');
-    const minutes = locale.getTranslationFor('article.minutes');
-
     if (props.readingTime < 1) {
-      return `· ${lessThan1Minute} ${ofReading}`;
+      return `· Less than 1 minute of reading`;
     }
 
-    return `· ${props.readingTime?.toFixed()} ${minutes} ${ofReading}`;
+    return `· ${props.readingTime?.toFixed()} minutes of reading`;
   };
 
   const date =
     props.date &&
-    new Date(props.date).toLocaleDateString(pageLanguage, {
+    new Date(props.date).toLocaleDateString('en-us', {
       year: 'numeric',
       month: '2-digit',
       day: '2-digit',
@@ -158,13 +148,13 @@ export default function Article(props: ArticleProps): React.ReactElement {
   return (
     <Container data-testid="article-item">
       <Header>
-        <Title to={props.url} data-testid="article-header-title" language={props.url ? props.language : undefined}>
+        <Title to={props.url ?? ''} data-testid="article-header-title">
           {props.title}
         </Title>
         {props.kind === 'articles' && (
           <>
             <MetaAttributes>
-              {date} {getReadingTime()} · {getContentLanguage(locale, props.language)}
+              {date} {getReadingTime()} · in {props.language}
             </MetaAttributes>
             <TagList data-testid="article-header-tags">
               {props.tags?.map((tag: string, index: number) => (
@@ -188,7 +178,6 @@ export const query = graphql`
     fields {
       collection
       slug
-      language
       readingTime {
         minutes
       }
@@ -199,6 +188,7 @@ export const query = graphql`
       description
       tags
       flags
+      language
     }
   }
 `;

@@ -1,8 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import { useLocale } from '@app/components/LanguageSwitcher';
-
 const Container = styled.footer`
   margin-bottom: 50px;
 
@@ -43,15 +41,14 @@ interface FooterProps {
 }
 
 export default function Footer(props: FooterProps): React.ReactElement {
-  const locale = useLocale();
   const year = new Date().getFullYear();
 
   return (
     <Container>
       <Label>
-        CC-BY {year} {props.author}, {locale.getTranslationFor('footer.builtWith')}{' '}
+        CC-BY {year} {props.author}, built with
         <Link href="https://gatsbyjs.org">gatsby</Link> •{' '}
-        {props.sourceCode && <Link href={props.sourceCode}>{locale.getTranslationFor('footer.sourceCode')}</Link>}
+        {props.sourceCode && <Link href={props.sourceCode}>source code</Link>}
       </Label>
     </Container>
   );

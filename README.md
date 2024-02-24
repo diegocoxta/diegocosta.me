@@ -7,7 +7,6 @@ My personal blog powered by gatsby, typescript and styled-components.
 - Build with Gatsby w/ TypeScript.
 - Testing with Jest and Testing Library.
 - With ESLint, Prettier, stylelint, Husky, lint-staged and [much more](package.json).
-- Supports contents with multiple languages using i18next (see folder [/content](/content)).
 - Dark mode using styled-components themes.
 
 ## :clipboard: Requirements

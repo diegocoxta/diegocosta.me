@@ -6,6 +6,7 @@ tags:
   - heroku
   - windows
   - deploy
+language: Portuguese
 ---
 
 Quem nunca precisou colocar aquela aplicação em produção para testar ou até mesmo compartilhar com colegas e ficou impedido por não ter um servidor bom para uso gratuito?

@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import { useLocale } from '@app/components/LanguageSwitcher';
+const Container = styled.div``;
 
 const Paragraph = styled.p`
   font-size: 24px;
@@ -9,7 +9,7 @@ const Paragraph = styled.p`
   color: ${({ theme }) => theme.textColor};
 `;
 
-const NavigationList = styled.ul`
+const Navigation = styled.ul`
   margin: 0;
   padding: 0;
 
@@ -55,7 +55,7 @@ const NavigationLink = styled.a`
 `;
 
 export interface AboutMeProps {
-  bio?: { [key: string]: string };
+  bio?: string;
   navigation?: [
     {
       label: string;
@@ -66,16 +66,11 @@ export interface AboutMeProps {
 }
 
 export default function AboutMe(props: AboutMeProps) {
-  const locale = useLocale();
-  const currentLanguage = locale.getCurrentLanguage();
-
-  const description = props.bio && props.bio[currentLanguage];
-
   return (
-    <>
-      {description?.split('\n').map((p: string) => <Paragraph key={p} dangerouslySetInnerHTML={{ __html: p }} />)}
+    <Container>
+      {props.bio?.split('\n').map((p: string) => <Paragraph key={p} dangerouslySetInnerHTML={{ __html: p }} />)}
       {props.navigation && (
-        <NavigationList data-testid="about-me-navigation-list">
+        <Navigation data-testid="about-me-navigation">
           {props.navigation.map((nav, index) => (
             <NavigationItem key={`nav-${index}`} data-testid="about-me-navigation-item">
               <NavigationLink href={nav.url} rel={nav.rel} target="_blank">
@@ -83,8 +78,8 @@ export default function AboutMe(props: AboutMeProps) {
               </NavigationLink>
             </NavigationItem>
           ))}
-        </NavigationList>
+        </Navigation>
       )}
-    </>
+    </Container>
   );
 }

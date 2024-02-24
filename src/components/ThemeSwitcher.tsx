@@ -2,8 +2,6 @@ import React, { useContext, useState, useEffect } from 'react';
 import styled, { ThemeContext, createGlobalStyle } from 'styled-components';
 import { BsMoon, BsSun } from 'react-icons/bs';
 
-import { useLocale } from '@app/components/LanguageSwitcher';
-
 const Container = styled.button<{ $enabled?: boolean }>`
   background: transparent;
   border: 2px solid ${({ theme }) => theme.accentColor};
@@ -137,14 +135,8 @@ export default function ThemeSwitcher(): React.ReactElement {
   const themeContext = useContext(ThemeContext);
   const isDarkMode = themeContext?.theme === 'dark';
 
-  const locale = useLocale();
-
   return (
-    <Container
-      aria-label={locale.getTranslationFor('themeSwitcher.toggle')}
-      $enabled={isDarkMode}
-      onClick={themeContext?.themeToggler}
-    >
+    <Container aria-label="Change color scheme" $enabled={isDarkMode} onClick={themeContext?.themeToggler}>
       <Indicator>{isDarkMode ? <BsMoon /> : <BsSun />}</Indicator>
     </Container>
   );
