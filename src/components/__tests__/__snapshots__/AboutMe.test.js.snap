@@ -1,5 +1,15 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`<AboutMe /> do not render bio and socialLinks if not defined 1`] = `
+<body>
+  <div>
+    <div
+      class=""
+    />
+  </div>
+</body>
+`;
+
 exports[`<AboutMe /> renders properly 1`] = `
 .c0 {
   font-size: 24px;

@@ -24,8 +24,8 @@ describe('<AboutMe />', () => {
   });
 
   it('do not render bio and socialLinks if not defined', () => {
-    const { baseElement, queryAllByTestId } = render(<AboutMe />);
-    expect(queryAllByTestId('about-me-bio')).toBeFalsy();
+    const { baseElement, queryAllByTestId, queryByTestId } = render(<AboutMe />);
+    expect(queryByTestId('about-me-bio')).toBeFalsy();
     expect(queryAllByTestId('about-me-sociallinks-item').length).toBe(0);
     expect(baseElement).toMatchSnapshot();
   });

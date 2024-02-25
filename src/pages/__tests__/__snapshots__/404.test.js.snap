@@ -197,6 +197,7 @@ exports[`<NotFoundPage> renders properly 1`] = `
       >
         <a
           class="c2"
+          data-testid="logo-link"
           href="/"
         >
           <h1
@@ -205,7 +206,7 @@ exports[`<NotFoundPage> renders properly 1`] = `
             Diego
             <span
               class="c4"
-              data-testid="header-lastname"
+              data-testid="logo-lastname"
             >
               C
               .

@@ -81,7 +81,7 @@ export default function Links(): React.ReactElement {
       <Metatags author={author} banner={banner} title={title} description={description} />
       <Container>
         <Avatar src={avatar} />
-        <Logo author={author} size="small" />
+        <Logo name={author} size="small" />
       </Container>
       <Divisor />
       <Container>

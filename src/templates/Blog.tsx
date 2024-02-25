@@ -104,13 +104,13 @@ export function Blog(props: PageProps<BlogProps>): React.ReactElement {
       />
       <Container>
         <Header>
-          <Logo author={author} size="large" />
+          <Logo name={author} size="large" />
           <HeaderNavBar>
             <ThemeSwitcher />
             <Navigation sourceCode={sourceCode} pages={pages} />
           </HeaderNavBar>
         </Header>
-        {!isNotFound && !isSinglePage && <AboutMe bio={bio} navigation={getInTouch} />}
+        {!isNotFound && !isSinglePage && <AboutMe bio={bio} socialLinks={getInTouch} />}
       </Container>
       <DottedDivisor />
       <Container>

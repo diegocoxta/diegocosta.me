@@ -2,9 +2,9 @@ import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'gatsby';
 
-export interface BrandNameProps {
-  author: string;
-  href: string;
+export interface LogoProps {
+  name: string;
+  to: string;
   size: 'small' | 'large';
 }
 
@@ -19,7 +19,7 @@ const Container = styled(Link)`
   }
 `;
 
-const Name = styled.h1<{ size: BrandNameProps['size'] }>`
+const Name = styled.h1<{ size: LogoProps['size'] }>`
   font-size: ${(props) => (props.size === 'large' ? '15vw' : '6vw')};
   color: ${({ theme }) => theme.titleColor};
   font-weight: 700;
@@ -35,20 +35,20 @@ const LastName = styled.span`
   color: ${({ theme }) => theme.accentColor};
 `;
 
-export default function BrandName(props: BrandNameProps) {
-  const [name, lastname] = props.author.split(' ');
+export default function Logo(props: LogoProps) {
+  const [name, lastname] = props.name.split(' ');
 
   return (
-    <Container to={props.href}>
+    <Container to={props.to} data-testid="logo-link">
       <Name size={props.size}>
         {name}
-        {lastname && <LastName data-testid="header-lastname">{lastname[0]}.</LastName>}
+        {lastname && <LastName data-testid="logo-lastname">{lastname[0]}.</LastName>}
       </Name>
     </Container>
   );
 }
 
-BrandName.defaultProps = {
+Logo.defaultProps = {
   size: 'large',
-  href: '/',
+  to: '/',
 };
