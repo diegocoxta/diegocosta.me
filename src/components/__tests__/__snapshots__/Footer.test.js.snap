@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<Footer /> renders properly 1`] = `
+exports[`<Footer /> do not render the sourceCode url and author if not defined 1`] = `
 .c0 {
   margin-bottom: 50px;
 }
@@ -11,6 +11,8 @@ exports[`<Footer /> renders properly 1`] = `
 
 .c1 {
   line-height: 1.5;
+  margin: 0;
+  padding: 0;
 }
 
 .c2 {
@@ -35,12 +37,13 @@ exports[`<Footer /> renders properly 1`] = `
     <footer
       class="c0"
     >
-      <span
+      <p
         class="c1"
       >
         CC-BY 
         2024
          
+        <span />
         , built with
         <a
           class="c2"
@@ -52,7 +55,70 @@ exports[`<Footer /> renders properly 1`] = `
         </a>
          •
          
-      </span>
+      </p>
+    </footer>
+  </div>
+</body>
+`;
+
+exports[`<Footer /> renders properly 1`] = `
+.c0 {
+  margin-bottom: 50px;
+}
+
+.c0 nav {
+  margin-bottom: 50px;
+}
+
+.c1 {
+  line-height: 1.5;
+  margin: 0;
+  padding: 0;
+}
+
+.c2 {
+  text-decoration: none;
+  box-shadow: none;
+}
+
+.c2:hover,
+.c2:focus {
+  border-bottom: 1px solid;
+  outline: none;
+}
+
+@media (min-width: 760px) {
+  .c0 nav {
+    margin-bottom: 0;
+  }
+}
+
+<body>
+  <div>
+    <footer
+      class="c0"
+    >
+      <p
+        class="c1"
+      >
+        CC-BY 
+        2024
+         
+        <span>
+          diegocoxta
+        </span>
+        , built with
+        <a
+          class="c2"
+          href="https://gatsbyjs.org"
+          rel="noopener"
+          target="_blank"
+        >
+          gatsby
+        </a>
+         •
+         
+      </p>
     </footer>
   </div>
 </body>
@@ -69,6 +135,8 @@ exports[`<Footer /> renders the sourceCode url if defined 1`] = `
 
 .c1 {
   line-height: 1.5;
+  margin: 0;
+  padding: 0;
 }
 
 .c2 {
@@ -93,12 +161,15 @@ exports[`<Footer /> renders the sourceCode url if defined 1`] = `
     <footer
       class="c0"
     >
-      <span
+      <p
         class="c1"
       >
         CC-BY 
         2024
          
+        <span>
+          @diegocoxta
+        </span>
         , built with
         <a
           class="c2"
@@ -112,13 +183,14 @@ exports[`<Footer /> renders the sourceCode url if defined 1`] = `
          
         <a
           class="c2"
+          data-testid="footer-source-code"
           href="https://github.com/diegocoxta/diegocosta.me"
           rel="noopener"
           target="_blank"
         >
           source code
         </a>
-      </span>
+      </p>
     </footer>
   </div>
 </body>

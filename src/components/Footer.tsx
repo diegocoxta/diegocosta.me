@@ -15,9 +15,11 @@ const Container = styled.footer`
   }
 `;
 
-const Label = styled.span`
+const Label = styled.p`
   color: ${({ theme }) => theme.textColor};
   line-height: 1.5;
+  margin: 0;
+  padding: 0;
 `;
 
 const Link = styled.a.attrs({
@@ -37,7 +39,7 @@ const Link = styled.a.attrs({
 
 interface FooterProps {
   sourceCode?: string;
-  author?: string;
+  author: string;
 }
 
 export default function Footer(props: FooterProps): React.ReactElement {
@@ -46,9 +48,13 @@ export default function Footer(props: FooterProps): React.ReactElement {
   return (
     <Container>
       <Label>
-        CC-BY {year} {props.author}, built with
+        CC-BY {year} <span>{props.author}</span>, built with
         <Link href="https://gatsbyjs.org">gatsby</Link> •{' '}
-        {props.sourceCode && <Link href={props.sourceCode}>source code</Link>}
+        {props.sourceCode && (
+          <Link href={props.sourceCode} data-testid="footer-source-code">
+            source code
+          </Link>
+        )}
       </Label>
     </Container>
   );

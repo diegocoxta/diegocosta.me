@@ -9,7 +9,7 @@ const Paragraph = styled.p`
   color: ${({ theme }) => theme.textColor};
 `;
 
-const Navigation = styled.ul`
+const Links = styled.ul`
   margin: 0;
   padding: 0;
 
@@ -18,7 +18,7 @@ const Navigation = styled.ul`
   }
 `;
 
-const NavigationItem = styled.li`
+const LinksItem = styled.li`
   list-style: none;
   font-size: 24px;
   font-weight: 700;
@@ -30,7 +30,7 @@ const NavigationItem = styled.li`
   }
 `;
 
-const NavigationLink = styled.a`
+const LinksLink = styled.a`
   text-decoration: none;
   color: ${({ theme }) => theme.textColor};
   display: flex;
@@ -56,7 +56,7 @@ const NavigationLink = styled.a`
 
 export interface AboutMeProps {
   bio?: string;
-  navigation?: [
+  socialLinks?: [
     {
       label: string;
       url: string;
@@ -68,17 +68,19 @@ export interface AboutMeProps {
 export default function AboutMe(props: AboutMeProps) {
   return (
     <Container>
-      {props.bio?.split('\n').map((p: string) => <Paragraph key={p} dangerouslySetInnerHTML={{ __html: p }} />)}
-      {props.navigation && (
-        <Navigation data-testid="about-me-navigation">
-          {props.navigation.map((nav, index) => (
-            <NavigationItem key={`nav-${index}`} data-testid="about-me-navigation-item">
-              <NavigationLink href={nav.url} rel={nav.rel} target="_blank">
+      {props.bio
+        ?.split('\n')
+        .map((p: string) => <Paragraph data-testid="about-me-bio" key={p} dangerouslySetInnerHTML={{ __html: p }} />)}
+      {props.socialLinks && (
+        <Links data-testid="about-me-sociallinks">
+          {props.socialLinks.map((nav, index) => (
+            <LinksItem key={`nav-${index}`} data-testid="about-me-sociallinks-item">
+              <LinksLink href={nav.url} rel={nav.rel} target="_blank">
                 {nav.label}
-              </NavigationLink>
-            </NavigationItem>
+              </LinksLink>
+            </LinksItem>
           ))}
-        </Navigation>
+        </Links>
       )}
     </Container>
   );
