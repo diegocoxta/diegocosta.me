@@ -2,34 +2,15 @@ import React, { useContext, useState, useEffect } from 'react';
 import styled, { ThemeContext, createGlobalStyle } from 'styled-components';
 import { BsMoon, BsSun } from 'react-icons/bs';
 
-const Container = styled.button<{ $enabled?: boolean }>`
-  background: transparent;
-  border: 2px solid ${({ theme }) => theme.accentColor};
-  border-radius: 18px;
-  height: 34px;
-  width: 50px;
-  padding: 0px;
-  display: flex;
-  justify-content: ${({ $enabled }) => ($enabled ? 'flex-start' : 'flex-end')};
-  transition: all 1s linear;
-  margin: 0 20px;
-  cursor: pointer;
+export type ThemeScheme = {
+  titleColor: string;
+  subtitleColor: string;
+  textColor: string;
+  backgroundColor: string;
+  accentColor: string;
+};
 
-  &:focus {
-    outline: none;
-  }
-`;
-
-const Indicator = styled.div`
-  height: 30px;
-  width: 30px;
-  background: ${({ theme }) => theme.accentColor};
-  border-radius: 20px;
-  color: #fff;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-`;
+export type ColorScheme = 'light' | 'dark';
 
 const colors = {
   AMBER: '#E5A53B',
@@ -62,13 +43,44 @@ const colors = {
   BEIGE: '#D3BF9C',
 };
 
-export type ThemeScheme = {
-  titleColor: string;
-  subtitleColor: string;
-  textColor: string;
-  backgroundColor: string;
-  accentColor: string;
-};
+const Container = styled.button<{ $enabled?: boolean }>`
+  background: transparent;
+  border: 2px solid ${({ theme }) => theme.accentColor};
+  border-radius: 18px;
+  height: 34px;
+  width: 50px;
+  padding: 0px;
+  display: flex;
+  justify-content: ${({ $enabled }) => ($enabled ? 'flex-start' : 'flex-end')};
+  transition: all 1s linear;
+  margin: 0 20px;
+  cursor: pointer;
+
+  &:focus {
+    outline: none;
+  }
+`;
+
+const Indicator = styled.div`
+  height: 30px;
+  width: 30px;
+  background: ${({ theme }) => theme.accentColor};
+  border-radius: 20px;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
+
+export const GlobalStyle = createGlobalStyle`
+  body {
+    background: ${({ theme }) => theme.backgroundColor};
+    font-family: 'Source Sans Pro', sans-serif;
+    color: ${({ theme }) => theme.textColor};
+    margin: 0;
+    padding: 0;
+  }
+`;
 
 export const themeDark: ThemeScheme = {
   titleColor: colors.CLOUDS,
@@ -86,28 +98,7 @@ export const themeLight: ThemeScheme = {
   backgroundColor: '#ffffff',
 };
 
-export const GlobalStyle = createGlobalStyle`
-  body {
-    background: ${({ theme }) => theme.backgroundColor};
-    font-family: 'Source Sans Pro', sans-serif;
-    color: ${({ theme }) => theme.textColor};
-    margin: 0;
-    padding: 0;
-  }
-`;
-
-export function ThemeProvider(props: React.PropsWithChildren) {
-  const [theme, themeToggler, setMode] = useTheme();
-  const themeMode = theme === 'light' ? themeLight : themeDark;
-
-  return (
-    <ThemeContext.Provider value={{ ...themeMode, theme, themeToggler, setMode }}>
-      {props.children}
-    </ThemeContext.Provider>
-  );
-}
-
-export const useTheme = (): [string, () => void, (color: 'light' | 'dark') => void] => {
+export const useTheme = (): [string, () => void, (color: ColorScheme) => void] => {
   const defaultTheme = 'light';
   const [theme, setTheme] = useState(defaultTheme);
 
@@ -130,6 +121,17 @@ export const useTheme = (): [string, () => void, (color: 'light' | 'dark') => vo
 
   return [theme, themeToggler, setMode];
 };
+
+export function ThemeProvider(props: React.PropsWithChildren) {
+  const [theme, themeToggler, setMode] = useTheme();
+  const themeMode = theme === 'light' ? themeLight : themeDark;
+
+  return (
+    <ThemeContext.Provider value={{ ...themeMode, theme, themeToggler, setMode }}>
+      {props.children}
+    </ThemeContext.Provider>
+  );
+}
 
 export default function ThemeSwitcher(): React.ReactElement {
   const themeContext = useContext(ThemeContext);

@@ -1,7 +1,7 @@
 import React from 'react';
 import { render } from '@testing-library/react';
 
-import { useStaticQuery, mockUseStaticQuery } from '../../__mocks__/useStaticQuery';
+import { useStaticQuery, mockUseStaticQuery, mockPageQuery } from '~/__mocks__/graphql';
 import SingleTemplate from '../_single';
 
 jest.mock('../../components/Footer', () => () => <p>Footer</p>);
@@ -23,19 +23,7 @@ describe('<SingleTemplate>', () => {
       },
       data: {
         content: {
-          edges: [
-            {
-              node: {
-                frontmatter: {
-                  title: 'Title 1',
-                },
-                fields: {
-                  slug: '/path-to-article/',
-                },
-                html: 'Post content',
-              },
-            },
-          ],
+          edges: [mockPageQuery.list.edges[0]],
         },
       },
     };

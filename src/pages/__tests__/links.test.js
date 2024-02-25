@@ -1,7 +1,7 @@
 import React from 'react';
 import { render } from '@testing-library/react';
 
-import { useStaticQuery, mockUseStaticQuery } from '../../__mocks__/useStaticQuery';
+import { useStaticQuery, mockUseStaticQuery } from '~/__mocks__/graphql';
 import Links from '../links';
 
 jest.mock('../../components/Footer', () => () => <p>Footer</p>);

@@ -1,5 +1,15 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`<ThemeProvider /> renders properly 1`] = `
+<body>
+  <div>
+    <p>
+      child content
+    </p>
+  </div>
+</body>
+`;
+
 exports[`<ThemeSwitcher /> renders properly 1`] = `
 .c0 {
   background: transparent;
