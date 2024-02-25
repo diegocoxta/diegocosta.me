@@ -58,6 +58,7 @@ exports[`<AboutMe /> renders properly 1`] = `
     >
       <p
         class="c0"
+        data-testid="about-me-bio"
       >
         my own bio
       </p>
