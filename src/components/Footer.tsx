@@ -48,8 +48,7 @@ export default function Footer(props: FooterProps): React.ReactElement {
   return (
     <Container>
       <Label>
-        CC-BY {year} <span>{props.author}</span>, built with
-        <Link href="https://gatsbyjs.org">gatsby</Link> •{' '}
+        CC-BY {year} <span>{props.author}</span>, built with <Link href="https://gatsbyjs.org">gatsby</Link> •{' '}
         {props.sourceCode && (
           <Link href={props.sourceCode} data-testid="footer-source-code">
             source code

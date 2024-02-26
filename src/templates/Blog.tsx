@@ -71,7 +71,9 @@ export function Blog(props: PageProps<BlogProps>): React.ReactElement {
           }
         }
       }
-      pages: allMarkdownRemark(filter: { frontmatter: { flags: { nin: ["hide-from-listings", "draft"] } } }) {
+      pages: allMarkdownRemark(
+        filter: { frontmatter: { flags: { nin: ["hide-from-listings", "draft"] }, published: { ne: false } } }
+      ) {
         nodes {
           frontmatter {
             title

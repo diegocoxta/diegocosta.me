@@ -6,7 +6,9 @@ export const query = graphql`
   query TagsTemplatePage($tag: String) {
     list: allMarkdownRemark(
       sort: { frontmatter: { date: DESC } }
-      filter: { frontmatter: { tags: { in: [$tag] }, flags: { nin: ["hide-from-listings", "draft"] } } }
+      filter: {
+        frontmatter: { tags: { in: [$tag] }, flags: { nin: ["hide-from-listings", "draft"] }, published: { ne: false } }
+      }
     ) {
       edges {
         node {

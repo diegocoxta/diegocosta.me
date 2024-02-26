@@ -44,7 +44,7 @@ exports[`<Footer /> do not render the sourceCode url and author if not defined 1
         2024
          
         <span />
-        , built with
+        , built with 
         <a
           class="c2"
           href="https://gatsbyjs.org"
@@ -107,7 +107,7 @@ exports[`<Footer /> renders properly 1`] = `
         <span>
           diegocoxta
         </span>
-        , built with
+        , built with 
         <a
           class="c2"
           href="https://gatsbyjs.org"
@@ -170,7 +170,7 @@ exports[`<Footer /> renders the sourceCode url if defined 1`] = `
         <span>
           @diegocoxta
         </span>
-        , built with
+        , built with 
         <a
           class="c2"
           href="https://gatsbyjs.org"
