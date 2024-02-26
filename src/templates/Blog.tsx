@@ -45,8 +45,9 @@ export function Blog(props: PageProps<BlogProps>): React.ReactElement {
   const {
     site: {
       siteMetadata: {
-        sourceCode,
-        metatags: { title, author, description, banner },
+        repository,
+        name,
+        website: { title, description, header },
         bio,
         getInTouch,
       },
@@ -56,18 +57,17 @@ export function Blog(props: PageProps<BlogProps>): React.ReactElement {
     query BlogTemplateQuery {
       site {
         siteMetadata {
-          sourceCode
-          metatags {
-            author
-            description
-            banner
-            title
-          }
+          repository
+          name
           bio
           getInTouch {
             label
             url
-            rel
+          }
+          website {
+            title
+            description
+            header
           }
         }
       }
@@ -97,17 +97,17 @@ export function Blog(props: PageProps<BlogProps>): React.ReactElement {
     <>
       <GlobalStyle />
       <Metatags
-        author={author}
-        banner={banner}
+        author={name}
+        banner={header}
         title={title || articles?.[0]?.node.frontmatter?.title}
         description={description || articles?.[0]?.node.frontmatter?.description}
       />
       <Container>
         <Header>
-          <Logo name={author} size="large" />
+          <Logo name={name} size="large" />
           <HeaderNavBar>
             <ThemeSwitcher />
-            <Navigation sourceCode={sourceCode} pages={pages} />
+            <Navigation sourceCode={repository} pages={pages} />
           </HeaderNavBar>
         </Header>
         {!isNotFound && !isSinglePage && <AboutMe bio={bio} socialLinks={getInTouch} />}
@@ -142,7 +142,7 @@ export function Blog(props: PageProps<BlogProps>): React.ReactElement {
       </Container>
       <DottedDivisor />
       <Container>
-        <Footer sourceCode={sourceCode} author={author} />
+        <Footer sourceCode={repository} author={name} />
       </Container>
     </>
   );

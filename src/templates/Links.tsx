@@ -54,21 +54,23 @@ export default function Links(): React.ReactElement {
   const {
     site: {
       siteMetadata: {
-        sourceCode,
-        metatags: { title, author, avatar, description, banner },
+        repository,
+        name,
+        avatar,
+        website: { title, description, header },
       },
     },
   } = useStaticQuery(graphql`
     query LinksTemplateQuery {
       site {
         siteMetadata {
-          sourceCode
-          metatags {
+          repository
+          name
+          avatar
+          website {
             title
-            author
-            avatar
             description
-            banner
+            header
           }
         }
       }
@@ -78,10 +80,10 @@ export default function Links(): React.ReactElement {
   return (
     <ThemeProvider>
       <GlobalStyle />
-      <Metatags author={author} banner={banner} title={title} description={description} />
+      <Metatags author={name} banner={header} title={title} description={description} />
       <Container>
         <Avatar src={avatar} />
-        <Logo name={author} size="small" />
+        <Logo name={name} size="small" />
       </Container>
       <Divisor />
       <Container>
@@ -104,7 +106,7 @@ export default function Links(): React.ReactElement {
 
       <Divisor />
       <Container>
-        <Footer sourceCode={sourceCode} author={author} />
+        <Footer sourceCode={repository} author={name} />
       </Container>
     </ThemeProvider>
   );

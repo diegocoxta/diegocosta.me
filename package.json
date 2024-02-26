@@ -3,6 +3,10 @@
   "private": true,
   "version": "0.2.0",
   "author": "Diego Costa <diego@diegocosta.me>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/diegocosta/diegocosta.me.git"
+  },
   "dependencies": {
     "@deckdeckgo/highlight-code": "^4.4.0",
     "downshift": "8.3.1",

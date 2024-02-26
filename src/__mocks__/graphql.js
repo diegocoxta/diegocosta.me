@@ -4,9 +4,9 @@ export const useStaticQuery = jest.spyOn(Gatsby, `useStaticQuery`);
 export const mockUseStaticQuery = {
   site: {
     siteMetadata: {
-      metatags: {
+      name: 'Diego Costa',
+      website: {
         title: 'My Website',
-        author: 'Diego Costa',
       },
     },
   },

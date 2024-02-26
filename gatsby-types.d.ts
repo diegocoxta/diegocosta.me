@@ -2664,47 +2664,50 @@ type SitePluginSortInput = {
 };
 
 type SiteSiteMetadata = {
+  readonly avatar: Maybe<Scalars['String']>;
   readonly bio: Maybe<Scalars['String']>;
   readonly description: Maybe<Scalars['String']>;
   readonly getInTouch: Maybe<ReadonlyArray<Maybe<SiteSiteMetadataGetInTouch>>>;
-  readonly metatags: Maybe<SiteSiteMetadataMetatags>;
-  readonly sourceCode: Maybe<Scalars['String']>;
+  readonly name: Maybe<Scalars['String']>;
+  readonly repository: Maybe<Scalars['String']>;
   readonly title: Maybe<Scalars['String']>;
+  readonly website: Maybe<SiteSiteMetadataWebsite>;
 };
 
 type SiteSiteMetadataFieldSelector = {
+  readonly avatar: InputMaybe<FieldSelectorEnum>;
   readonly bio: InputMaybe<FieldSelectorEnum>;
   readonly description: InputMaybe<FieldSelectorEnum>;
   readonly getInTouch: InputMaybe<SiteSiteMetadataGetInTouchFieldSelector>;
-  readonly metatags: InputMaybe<SiteSiteMetadataMetatagsFieldSelector>;
-  readonly sourceCode: InputMaybe<FieldSelectorEnum>;
+  readonly name: InputMaybe<FieldSelectorEnum>;
+  readonly repository: InputMaybe<FieldSelectorEnum>;
   readonly title: InputMaybe<FieldSelectorEnum>;
+  readonly website: InputMaybe<SiteSiteMetadataWebsiteFieldSelector>;
 };
 
 type SiteSiteMetadataFilterInput = {
+  readonly avatar: InputMaybe<StringQueryOperatorInput>;
   readonly bio: InputMaybe<StringQueryOperatorInput>;
   readonly description: InputMaybe<StringQueryOperatorInput>;
   readonly getInTouch: InputMaybe<SiteSiteMetadataGetInTouchFilterListInput>;
-  readonly metatags: InputMaybe<SiteSiteMetadataMetatagsFilterInput>;
-  readonly sourceCode: InputMaybe<StringQueryOperatorInput>;
+  readonly name: InputMaybe<StringQueryOperatorInput>;
+  readonly repository: InputMaybe<StringQueryOperatorInput>;
   readonly title: InputMaybe<StringQueryOperatorInput>;
+  readonly website: InputMaybe<SiteSiteMetadataWebsiteFilterInput>;
 };
 
 type SiteSiteMetadataGetInTouch = {
   readonly label: Maybe<Scalars['String']>;
-  readonly rel: Maybe<Scalars['String']>;
   readonly url: Maybe<Scalars['String']>;
 };
 
 type SiteSiteMetadataGetInTouchFieldSelector = {
   readonly label: InputMaybe<FieldSelectorEnum>;
-  readonly rel: InputMaybe<FieldSelectorEnum>;
   readonly url: InputMaybe<FieldSelectorEnum>;
 };
 
 type SiteSiteMetadataGetInTouchFilterInput = {
   readonly label: InputMaybe<StringQueryOperatorInput>;
-  readonly rel: InputMaybe<StringQueryOperatorInput>;
   readonly url: InputMaybe<StringQueryOperatorInput>;
 };
 
@@ -2714,48 +2717,41 @@ type SiteSiteMetadataGetInTouchFilterListInput = {
 
 type SiteSiteMetadataGetInTouchSortInput = {
   readonly label: InputMaybe<SortOrderEnum>;
-  readonly rel: InputMaybe<SortOrderEnum>;
   readonly url: InputMaybe<SortOrderEnum>;
 };
 
-type SiteSiteMetadataMetatags = {
-  readonly author: Maybe<Scalars['String']>;
-  readonly avatar: Maybe<Scalars['String']>;
-  readonly banner: Maybe<Scalars['String']>;
-  readonly description: Maybe<Scalars['String']>;
-  readonly title: Maybe<Scalars['String']>;
-};
-
-type SiteSiteMetadataMetatagsFieldSelector = {
-  readonly author: InputMaybe<FieldSelectorEnum>;
-  readonly avatar: InputMaybe<FieldSelectorEnum>;
-  readonly banner: InputMaybe<FieldSelectorEnum>;
-  readonly description: InputMaybe<FieldSelectorEnum>;
-  readonly title: InputMaybe<FieldSelectorEnum>;
-};
-
-type SiteSiteMetadataMetatagsFilterInput = {
-  readonly author: InputMaybe<StringQueryOperatorInput>;
-  readonly avatar: InputMaybe<StringQueryOperatorInput>;
-  readonly banner: InputMaybe<StringQueryOperatorInput>;
-  readonly description: InputMaybe<StringQueryOperatorInput>;
-  readonly title: InputMaybe<StringQueryOperatorInput>;
-};
-
-type SiteSiteMetadataMetatagsSortInput = {
-  readonly author: InputMaybe<SortOrderEnum>;
-  readonly avatar: InputMaybe<SortOrderEnum>;
-  readonly banner: InputMaybe<SortOrderEnum>;
-  readonly description: InputMaybe<SortOrderEnum>;
-  readonly title: InputMaybe<SortOrderEnum>;
-};
-
 type SiteSiteMetadataSortInput = {
+  readonly avatar: InputMaybe<SortOrderEnum>;
   readonly bio: InputMaybe<SortOrderEnum>;
   readonly description: InputMaybe<SortOrderEnum>;
   readonly getInTouch: InputMaybe<SiteSiteMetadataGetInTouchSortInput>;
-  readonly metatags: InputMaybe<SiteSiteMetadataMetatagsSortInput>;
-  readonly sourceCode: InputMaybe<SortOrderEnum>;
+  readonly name: InputMaybe<SortOrderEnum>;
+  readonly repository: InputMaybe<SortOrderEnum>;
+  readonly title: InputMaybe<SortOrderEnum>;
+  readonly website: InputMaybe<SiteSiteMetadataWebsiteSortInput>;
+};
+
+type SiteSiteMetadataWebsite = {
+  readonly description: Maybe<Scalars['String']>;
+  readonly header: Maybe<Scalars['String']>;
+  readonly title: Maybe<Scalars['String']>;
+};
+
+type SiteSiteMetadataWebsiteFieldSelector = {
+  readonly description: InputMaybe<FieldSelectorEnum>;
+  readonly header: InputMaybe<FieldSelectorEnum>;
+  readonly title: InputMaybe<FieldSelectorEnum>;
+};
+
+type SiteSiteMetadataWebsiteFilterInput = {
+  readonly description: InputMaybe<StringQueryOperatorInput>;
+  readonly header: InputMaybe<StringQueryOperatorInput>;
+  readonly title: InputMaybe<StringQueryOperatorInput>;
+};
+
+type SiteSiteMetadataWebsiteSortInput = {
+  readonly description: InputMaybe<SortOrderEnum>;
+  readonly header: InputMaybe<SortOrderEnum>;
   readonly title: InputMaybe<SortOrderEnum>;
 };
 
@@ -2806,7 +2802,7 @@ type ArticleInformationFragment = { readonly html: string | null, readonly excer
 type BlogTemplateQueryQueryVariables = Exact<{ [key: string]: never; }>;
 
 
-type BlogTemplateQueryQuery = { readonly site: { readonly siteMetadata: { readonly sourceCode: string | null, readonly bio: string | null, readonly metatags: { readonly author: string | null, readonly description: string | null, readonly banner: string | null, readonly title: string | null } | null, readonly getInTouch: ReadonlyArray<{ readonly label: string | null, readonly url: string | null, readonly rel: string | null } | null> | null } | null } | null, readonly pages: { readonly nodes: ReadonlyArray<{ readonly frontmatter: { readonly title: string | null } | null, readonly fields: { readonly slug: string | null, readonly collection: string | null } | null }> } };
+type BlogTemplateQueryQuery = { readonly site: { readonly siteMetadata: { readonly repository: string | null, readonly name: string | null, readonly bio: string | null, readonly getInTouch: ReadonlyArray<{ readonly label: string | null, readonly url: string | null } | null> | null, readonly website: { readonly title: string | null, readonly description: string | null, readonly header: string | null } | null } | null } | null, readonly pages: { readonly nodes: ReadonlyArray<{ readonly frontmatter: { readonly title: string | null } | null, readonly fields: { readonly slug: string | null, readonly collection: string | null } | null }> } };
 
 type GatsbyImageSharpFixedFragment = { readonly base64: string | null, readonly width: number, readonly height: number, readonly src: string, readonly srcSet: string };
 
@@ -2842,7 +2838,7 @@ type IndexPageQuery = { readonly list: { readonly edges: ReadonlyArray<{ readonl
 type LinksTemplateQueryQueryVariables = Exact<{ [key: string]: never; }>;
 
 
-type LinksTemplateQueryQuery = { readonly site: { readonly siteMetadata: { readonly sourceCode: string | null, readonly metatags: { readonly title: string | null, readonly author: string | null, readonly avatar: string | null, readonly description: string | null, readonly banner: string | null } | null } | null } | null };
+type LinksTemplateQueryQuery = { readonly site: { readonly siteMetadata: { readonly repository: string | null, readonly name: string | null, readonly avatar: string | null, readonly website: { readonly title: string | null, readonly description: string | null, readonly header: string | null } | null } | null } | null };
 
 type SingleTemplatePageQueryVariables = Exact<{
   slug: Scalars['String'];
