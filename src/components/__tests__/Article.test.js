@@ -5,7 +5,7 @@ import Article from '../Article';
 
 describe('<Article />', () => {
   it('renders properly', () => {
-    const { baseElement, getByTestId, getByText, getAllByTestId } = render(
+    const { baseElement, getByTestId, getByText } = render(
       <Article
         title="Awesome Article"
         url="/awesome-article"
@@ -17,69 +17,7 @@ describe('<Article />', () => {
       />
     );
     expect(getByText('Awesome Article')).toBeTruthy();
-    expect(getByTestId('article-header-title').href).toBe('http://localhost/awesome-article');
-    expect(getByTestId('article-header-tags')).toBeTruthy();
-    expect(getAllByTestId('article-header-tag').length).toEqual(2);
-    expect(baseElement).toMatchSnapshot();
-  });
-
-  it('does not render the tags', () => {
-    const { baseElement, queryAllByTestId } = render(
-      <Article
-        title="Awesome Article"
-        url="/awesome-article"
-        readingTime={5}
-        language="pt"
-        date="2020-07-20T22:12:03.284Z"
-      />
-    );
-
-    expect(queryAllByTestId('article-header-tag').length).toEqual(0);
-    expect(baseElement).toMatchSnapshot();
-  });
-
-  it('does not render the link', () => {
-    const { baseElement, queryByTestId } = render(
-      <Article title="Awesome Article" readingTime={5} language="en" date="2020-01-18T22:12:03.284Z" />
-    );
-
-    expect(queryByTestId('article-header-title')).not.toHaveAttribute('href');
-    expect(baseElement).toMatchSnapshot();
-  });
-
-  it('renders the article details', () => {
-    const { baseElement, getByTestId, getAllByTestId } = render(
-      <Article
-        title="Awesome Article"
-        url="/awesome-article"
-        readingTime={5}
-        language="en"
-        date="2020-01-18T22:12:03.284Z"
-        tags={['jest', 'testing-library']}
-        kind="articles"
-      />
-    );
-
-    expect(getByTestId('article-header-tags')).toBeTruthy();
-    expect(getAllByTestId('article-header-tag').length).toEqual(2);
-
-    expect(baseElement).toMatchSnapshot();
-  });
-
-  it('does not render the article details', () => {
-    const { baseElement, queryAllByTestId } = render(
-      <Article
-        title="Awesome Article"
-        url="/awesome-article"
-        readingTime={5}
-        language="en"
-        date="2020-01-18T22:12:03.284Z"
-        tags={['jest', 'testing-library']}
-      />
-    );
-
-    expect(queryAllByTestId('article-header-tag').length).toEqual(0);
-
+    expect(getByTestId('title').href).toBe('http://localhost/awesome-article');
     expect(baseElement).toMatchSnapshot();
   });
 

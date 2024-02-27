@@ -1,65 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<NotFoundPage> renders properly 1`] = `
-.c10 {
-  margin: 0 0 60px 0;
-  font-weight: 400;
-  color: #2F3D4F;
-}
-
 .c11 {
-  margin: 20px 0 0 0;
-}
-
-.c13 {
-  line-height: 1.5;
-  font-size: 19px;
-  margin-top: 10px;
-}
-
-.c13 a {
-  color: #D3BF9C;
-  text-decoration: none;
-  border-bottom: 1px solid #ffffff;
-}
-
-.c13 a:hover,
-.c13 a:focus {
-  border-bottom: 1px solid #D3BF9C;
-  outline: none;
-}
-
-.c13 code {
-  background: #D3BF9C40;
-  padding: 2px 6px;
-  border-radius: 10px;
-  font-size: 16px;
-}
-
-.c13 blockquote {
-  border-left: 5px solid #D3BF9C;
-  padding-left: 20px;
-  margin-left: 0;
-}
-
-.c13 img {
-  box-shadow: none!important;
-}
-
-.c13 h3 {
-  font-size: 28px;
-}
-
-.c13 table.uses-table {
-  width: 100%;
-  margin: 40px 0;
-}
-
-.c13 table.uses-table td {
-  text-align: center;
-}
-
-.c12 {
   color: #2F3D4F;
   box-shadow: none;
   text-decoration: none;
@@ -68,9 +10,63 @@ exports[`<NotFoundPage> renders properly 1`] = `
   font-weight: 700;
 }
 
-.c12:hover,
-.c12:focus {
+.c11:hover,
+.c11:focus {
   outline: none;
+}
+
+.c12 {
+  line-height: 1.5;
+  font-size: 19px;
+  margin-top: 10px;
+}
+
+.c12 a {
+  color: #D3BF9C;
+  text-decoration: none;
+  border-bottom: 1px solid #ffffff;
+}
+
+.c12 a:hover,
+.c12 a:focus {
+  border-bottom: 1px solid #D3BF9C;
+  outline: none;
+}
+
+.c12 code {
+  background: #D3BF9C40;
+  padding: 2px 6px;
+  border-radius: 10px;
+  font-size: 16px;
+}
+
+.c12 blockquote {
+  border-left: 5px solid #D3BF9C;
+  padding-left: 20px;
+  margin-left: 0;
+}
+
+.c12 img {
+  box-shadow: none!important;
+}
+
+.c12 h3 {
+  font-size: 28px;
+}
+
+.c12 table.uses-table {
+  width: 100%;
+  margin: 40px 0;
+}
+
+.c12 table.uses-table td {
+  text-align: center;
+}
+
+.c10 {
+  margin: 20px 0 60px 0;
+  font-weight: 400;
+  color: #2F3D4F;
 }
 
 .c9 {
@@ -272,19 +268,16 @@ exports[`<NotFoundPage> renders properly 1`] = `
         class="c10"
         data-testid="article-item"
       >
-        <header
+        <h2
           class="c11"
+          data-testid="title"
+          to=""
         >
-          <h2
-            class="c12"
-            data-testid="article-header-title"
-            to=""
-          >
-            Ops! Page not found!
-          </h2>
-        </header>
+          Ops! Page not found!
+        </h2>
         <section
-          class="c13"
+          class="c12"
+          html="I'm sorry, but the page you're looking for cannot be found. Please check the URL or try navigating through the menu of my website. If the issue persists, please contact me."
         >
           I'm sorry, but the page you're looking for cannot be found. Please check the URL or try navigating through the menu of my website. If the issue persists, please contact me.
         </section>

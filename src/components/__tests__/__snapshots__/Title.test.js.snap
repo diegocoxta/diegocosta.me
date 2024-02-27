@@ -1,0 +1,55 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Title /> renders properly 1`] = `
+.c0 {
+  box-shadow: none;
+  text-decoration: none;
+  font-size: 36px;
+  margin: 0;
+  font-weight: 700;
+}
+
+.c0:hover,
+.c0:focus {
+  outline: none;
+}
+
+<body>
+  <div>
+    <h2
+      class="c0"
+      data-testid="title"
+    >
+      My page title
+    </h2>
+  </div>
+</body>
+`;
+
+exports[`<Title /> should render as link 1`] = `
+.c0 {
+  box-shadow: none;
+  text-decoration: none;
+  font-size: 36px;
+  margin: 0;
+  font-weight: 700;
+}
+
+.c0:hover,
+.c0:focus {
+  border-bottom: 1px solid undefined;
+  outline: none;
+}
+
+<body>
+  <div>
+    <a
+      class="c0"
+      data-testid="title"
+      href="https://google.com"
+    >
+      My page title
+    </a>
+  </div>
+</body>
+`;
