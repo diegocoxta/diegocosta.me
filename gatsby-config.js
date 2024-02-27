@@ -15,6 +15,7 @@ module.exports = {
     'gatsby-remark-images',
     'gatsby-transformer-sharp',
     'gatsby-plugin-sharp',
+    'gatsby-plugin-tsconfig-paths',
     {
       resolve: 'gatsby-plugin-google-fonts',
       options: {

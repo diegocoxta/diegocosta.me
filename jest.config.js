@@ -4,8 +4,7 @@ module.exports = {
     '^.+\\.(js|ts|tsx)?$': '<rootDir>/jest-preprocess.js',
   },
   moduleNameMapper: {
-    '@app/(.*)$': '<rootDir>/src/$1',
-    '@content/(.*)$': '<rootDir>/content/$1',
+    '~/(.*)$': '<rootDir>/src/$1',
   },
   testPathIgnorePatterns: ['node_modules', '\\.cache', '<rootDir>.*/public'],
   transformIgnorePatterns: ['node_modules/(?!(gatsby)/)'],

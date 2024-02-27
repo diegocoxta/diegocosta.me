@@ -2,17 +2,6 @@ const { resolve } = require('path');
 const { createFilePath } = require('gatsby-source-filesystem');
 const readingTime = require('reading-time');
 
-exports.onCreateWebpackConfig = ({ actions }) => {
-  actions.setWebpackConfig({
-    resolve: {
-      alias: {
-        '@app': resolve(__dirname, 'src'),
-        '@content': resolve(__dirname, 'content'),
-      },
-    },
-  });
-};
-
 exports.onCreateNode = async ({ node, actions, getNode }) => {
   if (node.internal.type === 'MarkdownRemark') {
     const { sourceInstanceName } = getNode(node.parent);

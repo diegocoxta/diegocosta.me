@@ -2667,6 +2667,7 @@ type SiteSiteMetadata = {
   readonly avatar: Maybe<Scalars['String']>;
   readonly bio: Maybe<Scalars['String']>;
   readonly description: Maybe<Scalars['String']>;
+  readonly feeds: Maybe<SiteSiteMetadataFeeds>;
   readonly getInTouch: Maybe<ReadonlyArray<Maybe<SiteSiteMetadataGetInTouch>>>;
   readonly name: Maybe<Scalars['String']>;
   readonly repository: Maybe<Scalars['String']>;
@@ -2674,10 +2675,31 @@ type SiteSiteMetadata = {
   readonly website: Maybe<SiteSiteMetadataWebsite>;
 };
 
+type SiteSiteMetadataFeeds = {
+  readonly goodreads_currently_reading_shelf: Maybe<Scalars['String']>;
+  readonly letterboxd: Maybe<Scalars['String']>;
+};
+
+type SiteSiteMetadataFeedsFieldSelector = {
+  readonly goodreads_currently_reading_shelf: InputMaybe<FieldSelectorEnum>;
+  readonly letterboxd: InputMaybe<FieldSelectorEnum>;
+};
+
+type SiteSiteMetadataFeedsFilterInput = {
+  readonly goodreads_currently_reading_shelf: InputMaybe<StringQueryOperatorInput>;
+  readonly letterboxd: InputMaybe<StringQueryOperatorInput>;
+};
+
+type SiteSiteMetadataFeedsSortInput = {
+  readonly goodreads_currently_reading_shelf: InputMaybe<SortOrderEnum>;
+  readonly letterboxd: InputMaybe<SortOrderEnum>;
+};
+
 type SiteSiteMetadataFieldSelector = {
   readonly avatar: InputMaybe<FieldSelectorEnum>;
   readonly bio: InputMaybe<FieldSelectorEnum>;
   readonly description: InputMaybe<FieldSelectorEnum>;
+  readonly feeds: InputMaybe<SiteSiteMetadataFeedsFieldSelector>;
   readonly getInTouch: InputMaybe<SiteSiteMetadataGetInTouchFieldSelector>;
   readonly name: InputMaybe<FieldSelectorEnum>;
   readonly repository: InputMaybe<FieldSelectorEnum>;
@@ -2689,6 +2711,7 @@ type SiteSiteMetadataFilterInput = {
   readonly avatar: InputMaybe<StringQueryOperatorInput>;
   readonly bio: InputMaybe<StringQueryOperatorInput>;
   readonly description: InputMaybe<StringQueryOperatorInput>;
+  readonly feeds: InputMaybe<SiteSiteMetadataFeedsFilterInput>;
   readonly getInTouch: InputMaybe<SiteSiteMetadataGetInTouchFilterListInput>;
   readonly name: InputMaybe<StringQueryOperatorInput>;
   readonly repository: InputMaybe<StringQueryOperatorInput>;
@@ -2724,6 +2747,7 @@ type SiteSiteMetadataSortInput = {
   readonly avatar: InputMaybe<SortOrderEnum>;
   readonly bio: InputMaybe<SortOrderEnum>;
   readonly description: InputMaybe<SortOrderEnum>;
+  readonly feeds: InputMaybe<SiteSiteMetadataFeedsSortInput>;
   readonly getInTouch: InputMaybe<SiteSiteMetadataGetInTouchSortInput>;
   readonly name: InputMaybe<SortOrderEnum>;
   readonly repository: InputMaybe<SortOrderEnum>;

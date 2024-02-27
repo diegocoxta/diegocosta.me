@@ -1,1 +1,1 @@
-export { default } from '@app/templates/Blog';
+export { default } from '~/templates/Blog';
