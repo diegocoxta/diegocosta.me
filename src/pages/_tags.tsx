@@ -1,6 +1,6 @@
 import { graphql } from 'gatsby';
 
-export { default } from '~/templates/Blog';
+export { default } from '@app/templates/Blog';
 
 export const query = graphql`
   query TagsTemplatePage($tag: String) {

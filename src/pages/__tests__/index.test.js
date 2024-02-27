@@ -1,7 +1,7 @@
 import React from 'react';
 import { render } from '@testing-library/react';
 
-import { useStaticQuery, mockUseStaticQuery, mockPageQuery } from '~/__mocks__/graphql';
+import { useStaticQuery, mockUseStaticQuery, mockPageQuery } from '@app/__mocks__/graphql';
 import IndexPage from '../index';
 
 jest.mock('../../components/Footer', () => () => <p>Footer</p>);

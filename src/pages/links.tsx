@@ -1,1 +1,1 @@
-export { default } from '~/templates/Links';
+export { default } from '@app/templates/Links';

@@ -2,14 +2,14 @@ import React from 'react';
 import { PageProps, useStaticQuery, graphql } from 'gatsby';
 import styled from 'styled-components';
 
-import Article from '~/components/Article';
-import Footer from '~/components/Footer';
-import DottedDivisor from '~/components/Divisor';
-import Metatags from '~/components/Metatags';
-import ThemeSwitcher, { ThemeProvider, GlobalStyle } from '~/components/ThemeSwitcher';
-import Logo from '~/components/Logo';
-import AboutMe from '~/components/AboutMe';
-import Navigation from '~/components/Navigation';
+import Article from '@app/components/Article';
+import Footer from '@app/components/Footer';
+import DottedDivisor from '@app/components/Divisor';
+import Metatags from '@app/components/Metatags';
+import ThemeSwitcher, { ThemeProvider, GlobalStyle } from '@app/components/ThemeSwitcher';
+import Logo from '@app/components/Logo';
+import AboutMe from '@app/components/AboutMe';
+import Navigation from '@app/components/Navigation';
 
 const Container = styled.section`
   max-width: 960px;

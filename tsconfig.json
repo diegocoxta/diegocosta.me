@@ -12,7 +12,8 @@
     "noUnusedLocals": false,
     "baseUrl": "./",
     "paths": {
-      "~/*": ["src/*"]
+      "@app/*": ["src/*"],
+      "@content/*": ["content/*"]
     },
     "skipLibCheck": true
   },

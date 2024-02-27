@@ -1,8 +1,10 @@
 import { GatsbyFunctionRequest, GatsbyFunctionResponse } from 'gatsby';
 import Parser from 'rss-parser';
 
+import { feeds } from '@content/profile.json';
+
 export default async function (_: GatsbyFunctionRequest, response: GatsbyFunctionResponse) {
-  if (!process.env.GOODREADS_CURRENTLY_READING_SHELF_RSS) {
+  if (!feeds.goodreads_currently_reading_shelf) {
     const message = 'You need to set GOODREADS_CURRENTLY_READING_SHELF_RSS env variable to use this resource.';
     console.error(message);
 
@@ -10,7 +12,7 @@ export default async function (_: GatsbyFunctionRequest, response: GatsbyFunctio
   }
 
   const parser = new Parser();
-  const feed = await parser.parseURL(process.env.GOODREADS_CURRENTLY_READING_SHELF_RSS);
+  const feed = await parser.parseURL(feeds.goodreads_currently_reading_shelf);
 
   const message =
     feed.items.length <= 0
