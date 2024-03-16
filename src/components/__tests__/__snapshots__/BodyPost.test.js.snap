@@ -1,0 +1,61 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<BodyPost /> renders properly 1`] = `
+.c0 {
+  line-height: 1.5;
+  font-size: 19px;
+  margin-top: 10px;
+}
+
+.c0 a {
+  text-decoration: none;
+  border-bottom: 1px solid;
+}
+
+.c0 a:hover,
+.c0 a:focus {
+  border-bottom: 1px solid;
+  outline: none;
+}
+
+.c0 code {
+  background: 40;
+  padding: 2px 6px;
+  border-radius: 10px;
+  font-size: 16px;
+}
+
+.c0 blockquote {
+  border-left: 5px solid;
+  padding-left: 20px;
+  margin-left: 0;
+}
+
+.c0 img {
+  box-shadow: none!important;
+}
+
+.c0 h3 {
+  font-size: 28px;
+}
+
+.c0 table.uses-table {
+  width: 100%;
+  margin: 40px 0;
+}
+
+.c0 table.uses-table td {
+  text-align: center;
+}
+
+<body>
+  <div>
+    <section
+      class="c0"
+      html="My page BodyPost"
+    >
+      My page BodyPost
+    </section>
+  </div>
+</body>
+`;

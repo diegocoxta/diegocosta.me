@@ -1,0 +1,92 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Logo /> do not render the last name if not defined 1`] = `
+.c0 {
+  text-decoration: none;
+  box-shadow: none;
+  display: flex;
+  align-items: center;
+}
+
+.c0:focus {
+  outline: none;
+}
+
+.c1 {
+  font-size: 15vw;
+  font-weight: 700;
+  text-transform: lowercase;
+  margin: 0;
+}
+
+@media (min-width: 760px) {
+  .c1 {
+    font-size: 110px;
+  }
+}
+
+<body>
+  <div>
+    <a
+      class="c0"
+      data-testid="logo-link"
+      href="/"
+    >
+      <h1
+        class="c1"
+      >
+        Diego
+      </h1>
+    </a>
+  </div>
+</body>
+`;
+
+exports[`<Logo /> renders properly 1`] = `
+.c0 {
+  text-decoration: none;
+  box-shadow: none;
+  display: flex;
+  align-items: center;
+}
+
+.c0:focus {
+  outline: none;
+}
+
+.c1 {
+  font-size: 15vw;
+  font-weight: 700;
+  text-transform: lowercase;
+  margin: 0;
+}
+
+@media (min-width: 760px) {
+  .c1 {
+    font-size: 110px;
+  }
+}
+
+<body>
+  <div>
+    <a
+      class="c0"
+      data-testid="logo-link"
+      href="https://github.com/diegocoxta"
+    >
+      <h1
+        class="c1"
+      >
+        Diego
+        <span
+          class=""
+          data-testid="logo-lastname"
+        >
+          C
+          .
+        </span>
+      </h1>
+    </a>
+  </div>
+</body>
+`;

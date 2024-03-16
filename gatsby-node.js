@@ -2,41 +2,13 @@ const { resolve } = require('path');
 const { createFilePath } = require('gatsby-source-filesystem');
 const readingTime = require('reading-time');
 
-const getNodeLangCode = function (fileAbsolutePath, defaultLang = 'en') {
-  const filename = fileAbsolutePath.split('/').pop();
-
-  return filename.split('.md')?.[0] ?? defaultLang;
-};
-
-const getSlugWithoutFile = function (slug) {
-  const parts = slug.split('/').filter((segment) => segment !== '');
-
-  return `/${parts?.[0]}/`;
-};
-
-exports.onCreateWebpackConfig = ({ actions }) => {
-  actions.setWebpackConfig({
-    resolve: {
-      alias: {
-        '~': resolve(__dirname, 'src'),
-      },
-    },
-  });
-};
-
 exports.onCreateNode = async ({ node, actions, getNode }) => {
   if (node.internal.type === 'MarkdownRemark') {
     const { sourceInstanceName } = getNode(node.parent);
 
     actions.createNodeField({
       name: 'slug',
-      value: getSlugWithoutFile(createFilePath({ node, getNode })),
-      node,
-    });
-
-    actions.createNodeField({
-      name: 'language',
-      value: getNodeLangCode(node.fileAbsolutePath),
+      value: createFilePath({ node, getNode }),
       node,
     });
 
@@ -51,6 +23,14 @@ exports.onCreateNode = async ({ node, actions, getNode }) => {
       name: 'readingTime',
       value: readingTime(node.rawMarkdownBody),
     });
+  }
+};
+
+exports.onCreatePage = ({ page, actions }) => {
+  if (page.path.startsWith('/_')) {
+    console.log(`⚠️ Ignored page ${page.path}`);
+    const { deletePage } = actions;
+    deletePage(page);
   }
 };
 
@@ -92,7 +72,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
 
     actions.createPage({
       path: slug,
-      component: resolve('./src/templates/single.tsx'),
+      component: resolve('./src/pages/_single.tsx'),
       context: { slug },
     });
   });
@@ -101,7 +81,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   tags.forEach((tag) => {
     actions.createPage({
       path: `/tags/${tag.fieldValue}/`,
-      component: resolve('./src/templates/tags.tsx'),
+      component: resolve('./src/pages/_tags.tsx'),
       context: { tag: tag.fieldValue },
     });
   });

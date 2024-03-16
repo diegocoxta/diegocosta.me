@@ -2,11 +2,11 @@ import React from 'react';
 import { render } from '@testing-library/react';
 
 import { useStaticQuery, mockUseStaticQuery, mockPageQuery } from '~/__mocks__/graphql';
-import IndexPage from '../index';
+import SingleTemplate from '../_single';
 
 jest.mock('../../components/Footer', () => () => <p>Footer</p>);
 
-describe('<IndexPage>', () => {
+describe('<SingleTemplate>', () => {
   beforeEach(() => {
     useStaticQuery.mockImplementation(() => mockUseStaticQuery);
   });
@@ -16,10 +16,20 @@ describe('<IndexPage>', () => {
   });
 
   it('renders properly', () => {
-    const { baseElement, getAllByTestId, getByText } = render(<IndexPage data={mockPageQuery} />);
-    expect(getAllByTestId('article-item').length).toEqual(2);
-    expect(getByText('Awesome second article')).toBeTruthy();
-    expect(getByText('Awesome first article')).toBeTruthy();
+    const props = {
+      pageContext: {
+        lang: 'pt',
+        slug: '/path-to-article/',
+      },
+      data: {
+        content: {
+          edges: [mockPageQuery.list.edges[0]],
+        },
+      },
+    };
+
+    const { baseElement, getByText } = render(<SingleTemplate {...props} />);
+    expect(getByText('Post content')).toBeTruthy();
     expect(baseElement).toMatchSnapshot();
   });
 });

@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<IndexPage> renders properly 1`] = `
+exports[`<SingleTemplate> renders properly 1`] = `
 .c11 {
   color: #2F3D4F;
   box-shadow: none;
@@ -258,9 +258,6 @@ exports[`<IndexPage> renders properly 1`] = `
           </div>
         </div>
       </header>
-      <div
-        class=""
-      />
     </section>
     <div
       class="c9"
@@ -281,27 +278,9 @@ exports[`<IndexPage> renders properly 1`] = `
         </a>
         <section
           class="c12"
-          html="Awesome first article"
+          html="Post content"
         >
-          Awesome first article
-        </section>
-      </article>
-      <article
-        class="c10"
-        data-testid="article-item"
-      >
-        <a
-          class="c11"
-          data-testid="title"
-          href="/path-to-article-2"
-        >
-          Title 2
-        </a>
-        <section
-          class="c12"
-          html="Awesome second article"
-        >
-          Awesome second article
+          Post content
         </section>
       </article>
     </section>

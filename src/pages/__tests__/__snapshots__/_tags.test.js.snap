@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<IndexPage> renders properly 1`] = `
+exports[`<TagsTemplate> renders properly 1`] = `
 .c11 {
   color: #2F3D4F;
   box-shadow: none;
