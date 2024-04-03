@@ -1456,9 +1456,9 @@ type MarkdownRemarkFilterListInput = {
 type MarkdownRemarkFrontmatter = {
   readonly date: Maybe<Scalars['Date']>;
   readonly description: Maybe<Scalars['String']>;
-  readonly flags: Maybe<ReadonlyArray<Maybe<Scalars['String']>>>;
+  readonly expanded: Maybe<Scalars['Boolean']>;
   readonly language: Maybe<Scalars['String']>;
-  readonly published: Maybe<Scalars['Boolean']>;
+  readonly status: Maybe<Scalars['String']>;
   readonly tags: Maybe<ReadonlyArray<Maybe<Scalars['String']>>>;
   readonly title: Maybe<Scalars['String']>;
 };
@@ -1474,9 +1474,9 @@ type MarkdownRemarkFrontmatter_dateArgs = {
 type MarkdownRemarkFrontmatterFieldSelector = {
   readonly date: InputMaybe<FieldSelectorEnum>;
   readonly description: InputMaybe<FieldSelectorEnum>;
-  readonly flags: InputMaybe<FieldSelectorEnum>;
+  readonly expanded: InputMaybe<FieldSelectorEnum>;
   readonly language: InputMaybe<FieldSelectorEnum>;
-  readonly published: InputMaybe<FieldSelectorEnum>;
+  readonly status: InputMaybe<FieldSelectorEnum>;
   readonly tags: InputMaybe<FieldSelectorEnum>;
   readonly title: InputMaybe<FieldSelectorEnum>;
 };
@@ -1484,9 +1484,9 @@ type MarkdownRemarkFrontmatterFieldSelector = {
 type MarkdownRemarkFrontmatterFilterInput = {
   readonly date: InputMaybe<DateQueryOperatorInput>;
   readonly description: InputMaybe<StringQueryOperatorInput>;
-  readonly flags: InputMaybe<StringQueryOperatorInput>;
+  readonly expanded: InputMaybe<BooleanQueryOperatorInput>;
   readonly language: InputMaybe<StringQueryOperatorInput>;
-  readonly published: InputMaybe<BooleanQueryOperatorInput>;
+  readonly status: InputMaybe<StringQueryOperatorInput>;
   readonly tags: InputMaybe<StringQueryOperatorInput>;
   readonly title: InputMaybe<StringQueryOperatorInput>;
 };
@@ -1494,9 +1494,9 @@ type MarkdownRemarkFrontmatterFilterInput = {
 type MarkdownRemarkFrontmatterSortInput = {
   readonly date: InputMaybe<SortOrderEnum>;
   readonly description: InputMaybe<SortOrderEnum>;
-  readonly flags: InputMaybe<SortOrderEnum>;
+  readonly expanded: InputMaybe<SortOrderEnum>;
   readonly language: InputMaybe<SortOrderEnum>;
-  readonly published: InputMaybe<SortOrderEnum>;
+  readonly status: InputMaybe<SortOrderEnum>;
   readonly tags: InputMaybe<SortOrderEnum>;
   readonly title: InputMaybe<SortOrderEnum>;
 };
@@ -2821,7 +2821,7 @@ type WebPOptions = {
   readonly quality: InputMaybe<Scalars['Int']>;
 };
 
-type ArticleInformationFragment = { readonly html: string | null, readonly excerpt: string | null, readonly fields: { readonly collection: string | null, readonly slug: string | null, readonly readingTime: { readonly minutes: number | null } | null } | null, readonly frontmatter: { readonly date: string | null, readonly title: string | null, readonly description: string | null, readonly tags: ReadonlyArray<string | null> | null, readonly flags: ReadonlyArray<string | null> | null, readonly language: string | null } | null };
+type ArticleInformationFragment = { readonly html: string | null, readonly excerpt: string | null, readonly fields: { readonly collection: string | null, readonly slug: string | null, readonly readingTime: { readonly minutes: number | null } | null } | null, readonly frontmatter: { readonly date: string | null, readonly title: string | null, readonly description: string | null, readonly tags: ReadonlyArray<string | null> | null, readonly status: string | null, readonly expanded: boolean | null, readonly language: string | null } | null };
 
 type BlogTemplateQueryQueryVariables = Exact<{ [key: string]: never; }>;
 
@@ -2857,7 +2857,7 @@ type GatsbyImageSharpFluidLimitPresentationSizeFragment = { readonly maxHeight: 
 type IndexPageQueryVariables = Exact<{ [key: string]: never; }>;
 
 
-type IndexPageQuery = { readonly list: { readonly edges: ReadonlyArray<{ readonly node: { readonly html: string | null, readonly excerpt: string | null, readonly fields: { readonly collection: string | null, readonly slug: string | null, readonly readingTime: { readonly minutes: number | null } | null } | null, readonly frontmatter: { readonly date: string | null, readonly title: string | null, readonly description: string | null, readonly tags: ReadonlyArray<string | null> | null, readonly flags: ReadonlyArray<string | null> | null, readonly language: string | null } | null } }> } };
+type IndexPageQuery = { readonly list: { readonly edges: ReadonlyArray<{ readonly node: { readonly html: string | null, readonly excerpt: string | null, readonly fields: { readonly collection: string | null, readonly slug: string | null, readonly readingTime: { readonly minutes: number | null } | null } | null, readonly frontmatter: { readonly date: string | null, readonly title: string | null, readonly description: string | null, readonly tags: ReadonlyArray<string | null> | null, readonly status: string | null, readonly expanded: boolean | null, readonly language: string | null } | null } }> } };
 
 type LinksTemplateQueryQueryVariables = Exact<{ [key: string]: never; }>;
 
@@ -2869,14 +2869,14 @@ type SingleTemplatePageQueryVariables = Exact<{
 }>;
 
 
-type SingleTemplatePageQuery = { readonly content: { readonly edges: ReadonlyArray<{ readonly node: { readonly html: string | null, readonly excerpt: string | null, readonly fields: { readonly collection: string | null, readonly slug: string | null, readonly readingTime: { readonly minutes: number | null } | null } | null, readonly frontmatter: { readonly date: string | null, readonly title: string | null, readonly description: string | null, readonly tags: ReadonlyArray<string | null> | null, readonly flags: ReadonlyArray<string | null> | null, readonly language: string | null } | null } }> } };
+type SingleTemplatePageQuery = { readonly content: { readonly edges: ReadonlyArray<{ readonly node: { readonly html: string | null, readonly excerpt: string | null, readonly fields: { readonly collection: string | null, readonly slug: string | null, readonly readingTime: { readonly minutes: number | null } | null } | null, readonly frontmatter: { readonly date: string | null, readonly title: string | null, readonly description: string | null, readonly tags: ReadonlyArray<string | null> | null, readonly status: string | null, readonly expanded: boolean | null, readonly language: string | null } | null } }> } };
 
 type TagsTemplatePageQueryVariables = Exact<{
   tag: InputMaybe<Scalars['String']>;
 }>;
 
 
-type TagsTemplatePageQuery = { readonly list: { readonly edges: ReadonlyArray<{ readonly node: { readonly html: string | null, readonly excerpt: string | null, readonly fields: { readonly collection: string | null, readonly slug: string | null, readonly readingTime: { readonly minutes: number | null } | null } | null, readonly frontmatter: { readonly date: string | null, readonly title: string | null, readonly description: string | null, readonly tags: ReadonlyArray<string | null> | null, readonly flags: ReadonlyArray<string | null> | null, readonly language: string | null } | null } }> } };
+type TagsTemplatePageQuery = { readonly list: { readonly edges: ReadonlyArray<{ readonly node: { readonly html: string | null, readonly excerpt: string | null, readonly fields: { readonly collection: string | null, readonly slug: string | null, readonly readingTime: { readonly minutes: number | null } | null } | null, readonly frontmatter: { readonly date: string | null, readonly title: string | null, readonly description: string | null, readonly tags: ReadonlyArray<string | null> | null, readonly status: string | null, readonly expanded: boolean | null, readonly language: string | null } | null } }> } };
 
 
 }

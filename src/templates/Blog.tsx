@@ -71,9 +71,7 @@ export function Blog(props: PageProps<BlogProps>): React.ReactElement {
           }
         }
       }
-      pages: allMarkdownRemark(
-        filter: { frontmatter: { flags: { nin: ["hide-from-listings", "draft"] }, published: { ne: false } } }
-      ) {
+      pages: allMarkdownRemark(filter: { frontmatter: { status: { ne: "draft" } } }) {
         nodes {
           frontmatter {
             title
@@ -135,9 +133,7 @@ export function Blog(props: PageProps<BlogProps>): React.ReactElement {
             tags={node.frontmatter?.tags as string[]}
             readingTime={node.fields?.readingTime?.minutes ?? 0}
             content={
-              isSinglePage || node?.frontmatter?.flags?.includes('expanded-on-listings')
-                ? node.html
-                : node.frontmatter?.description || node.excerpt
+              isSinglePage || node?.frontmatter?.expanded ? node.html : node.frontmatter?.description || node.excerpt
             }
           />
         ))}

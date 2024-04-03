@@ -85,7 +85,8 @@ export const query = graphql`
       title
       description
       tags
-      flags
+      status
+      expanded
       language
     }
   }
