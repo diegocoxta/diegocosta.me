@@ -1,10 +1,16 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<AboutMe /> do not render bio and socialLinks if not defined 1`] = `
+.c0 {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
 <body>
   <div>
-    <div
-      class=""
+    <section
+      class="c0"
     />
   </div>
 </body>
@@ -12,30 +18,36 @@ exports[`<AboutMe /> do not render bio and socialLinks if not defined 1`] = `
 
 exports[`<AboutMe /> renders properly 1`] = `
 .c0 {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.c1 {
   font-size: 24px;
   line-height: 1.4;
 }
 
-.c1 {
+.c2 {
   margin: 0;
   padding: 0;
 }
 
-.c2 {
+.c3 {
   list-style: none;
   font-size: 24px;
   font-weight: 700;
   margin: 0 24px 5px 0;
 }
 
-.c3 {
+.c4 {
   text-decoration: none;
   display: flex;
   padding: 0;
   text-transform: uppercase;
 }
 
-.c3:after {
+.c4:after {
   content: '.';
   display: block;
   font-size: 38px;
@@ -43,45 +55,45 @@ exports[`<AboutMe /> renders properly 1`] = `
 }
 
 @media (min-width: 760px) {
-  .c1 {
+  .c2 {
     display: flex;
   }
 }
 
 @media (min-width: 760px) {
-  .c2 {
+  .c3 {
     font-size: 22px;
     margin: 0 24px 0 0;
   }
 }
 
 @media (min-width: 760px) {
-  .c3:after {
+  .c4:after {
     line-height: 0.4;
   }
 }
 
 <body>
   <div>
-    <div
-      class=""
+    <section
+      class="c0"
     >
       <p
-        class="c0"
+        class="c1"
         data-testid="about-me-bio"
       >
         my own bio
       </p>
       <ul
-        class="c1"
+        class="c2"
         data-testid="about-me-sociallinks"
       >
         <li
-          class="c2"
+          class="c3"
           data-testid="about-me-sociallinks-item"
         >
           <a
-            class="c3"
+            class="c4"
             href="https://github.com/diegocoxta"
             rel="me"
             target="_blank"
@@ -90,11 +102,11 @@ exports[`<AboutMe /> renders properly 1`] = `
           </a>
         </li>
         <li
-          class="c2"
+          class="c3"
           data-testid="about-me-sociallinks-item"
         >
           <a
-            class="c3"
+            class="c4"
             href="https://linkedin.com/in/diegocoxta"
             rel="me"
             target="_blank"
@@ -103,7 +115,7 @@ exports[`<AboutMe /> renders properly 1`] = `
           </a>
         </li>
       </ul>
-    </div>
+    </section>
   </div>
 </body>
 `;

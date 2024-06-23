@@ -2,43 +2,49 @@
 
 exports[`<Footer /> do not render the sourceCode url and author if not defined 1`] = `
 .c0 {
-  margin-bottom: 50px;
-}
-
-.c0 nav {
-  margin-bottom: 50px;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
 .c1 {
+  margin-bottom: 50px;
+}
+
+.c1 nav {
+  margin-bottom: 50px;
+}
+
+.c2 {
   line-height: 1.5;
   margin: 0;
   padding: 0;
 }
 
-.c2 {
+.c3 {
   text-decoration: none;
   box-shadow: none;
 }
 
-.c2:hover,
-.c2:focus {
+.c3:hover,
+.c3:focus {
   border-bottom: 1px solid;
   outline: none;
 }
 
 @media (min-width: 760px) {
-  .c0 nav {
+  .c1 nav {
     margin-bottom: 0;
   }
 }
 
 <body>
   <div>
-    <footer
-      class="c0"
+    <section
+      class="c0 c1"
     >
       <p
-        class="c1"
+        class="c2"
       >
         CC-BY 
         2024
@@ -46,7 +52,7 @@ exports[`<Footer /> do not render the sourceCode url and author if not defined 1
         <span />
         , built with 
         <a
-          class="c2"
+          class="c3"
           href="https://gatsbyjs.org"
           rel="noopener"
           target="_blank"
@@ -56,50 +62,56 @@ exports[`<Footer /> do not render the sourceCode url and author if not defined 1
          •
          
       </p>
-    </footer>
+    </section>
   </div>
 </body>
 `;
 
 exports[`<Footer /> renders properly 1`] = `
 .c0 {
-  margin-bottom: 50px;
-}
-
-.c0 nav {
-  margin-bottom: 50px;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
 .c1 {
+  margin-bottom: 50px;
+}
+
+.c1 nav {
+  margin-bottom: 50px;
+}
+
+.c2 {
   line-height: 1.5;
   margin: 0;
   padding: 0;
 }
 
-.c2 {
+.c3 {
   text-decoration: none;
   box-shadow: none;
 }
 
-.c2:hover,
-.c2:focus {
+.c3:hover,
+.c3:focus {
   border-bottom: 1px solid;
   outline: none;
 }
 
 @media (min-width: 760px) {
-  .c0 nav {
+  .c1 nav {
     margin-bottom: 0;
   }
 }
 
 <body>
   <div>
-    <footer
-      class="c0"
+    <section
+      class="c0 c1"
     >
       <p
-        class="c1"
+        class="c2"
       >
         CC-BY 
         2024
@@ -109,7 +121,7 @@ exports[`<Footer /> renders properly 1`] = `
         </span>
         , built with 
         <a
-          class="c2"
+          class="c3"
           href="https://gatsbyjs.org"
           rel="noopener"
           target="_blank"
@@ -119,50 +131,56 @@ exports[`<Footer /> renders properly 1`] = `
          •
          
       </p>
-    </footer>
+    </section>
   </div>
 </body>
 `;
 
 exports[`<Footer /> renders the sourceCode url if defined 1`] = `
 .c0 {
-  margin-bottom: 50px;
-}
-
-.c0 nav {
-  margin-bottom: 50px;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
 .c1 {
+  margin-bottom: 50px;
+}
+
+.c1 nav {
+  margin-bottom: 50px;
+}
+
+.c2 {
   line-height: 1.5;
   margin: 0;
   padding: 0;
 }
 
-.c2 {
+.c3 {
   text-decoration: none;
   box-shadow: none;
 }
 
-.c2:hover,
-.c2:focus {
+.c3:hover,
+.c3:focus {
   border-bottom: 1px solid;
   outline: none;
 }
 
 @media (min-width: 760px) {
-  .c0 nav {
+  .c1 nav {
     margin-bottom: 0;
   }
 }
 
 <body>
   <div>
-    <footer
-      class="c0"
+    <section
+      class="c0 c1"
     >
       <p
-        class="c1"
+        class="c2"
       >
         CC-BY 
         2024
@@ -172,7 +190,7 @@ exports[`<Footer /> renders the sourceCode url if defined 1`] = `
         </span>
         , built with 
         <a
-          class="c2"
+          class="c3"
           href="https://gatsbyjs.org"
           rel="noopener"
           target="_blank"
@@ -182,7 +200,7 @@ exports[`<Footer /> renders the sourceCode url if defined 1`] = `
          •
          
         <a
-          class="c2"
+          class="c3"
           data-testid="footer-source-code"
           href="https://github.com/diegocoxta/diegocosta.me"
           rel="noopener"
@@ -191,7 +209,7 @@ exports[`<Footer /> renders the sourceCode url if defined 1`] = `
           source code
         </a>
       </p>
-    </footer>
+    </section>
   </div>
 </body>
 `;

@@ -25,7 +25,7 @@ exports[`<IndexPage> renders properly 1`] = `
 .c12 a {
   color: #D3BF9C;
   text-decoration: none;
-  border-bottom: 1px solid #ffffff;
+  border-bottom: 1px solid #FFFFFF;
 }
 
 .c12 a:hover,
@@ -64,47 +64,16 @@ exports[`<IndexPage> renders properly 1`] = `
   text-align: center;
 }
 
+.c0 {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
 .c10 {
-  margin: 20px 0 60px 0;
+  margin: 20px auto 60px auto;
   font-weight: 400;
   color: #2F3D4F;
-}
-
-.c9 {
-  background: linear-gradient(90deg, #ffffff 20px, transparent 1%) center,linear-gradient(#ffffff 20px, transparent 1%) center,#2F3D4F;
-  background-size: 22px 22px;
-  height: 120px;
-  margin: 40px 0;
-  width: 100%;
-}
-
-.c6 {
-  background: transparent;
-  border: 2px solid #D3BF9C;
-  border-radius: 18px;
-  height: 34px;
-  width: 50px;
-  padding: 0px;
-  display: flex;
-  justify-content: flex-end;
-  transition: all 1s linear;
-  margin: 0 20px;
-  cursor: pointer;
-}
-
-.c6:focus {
-  outline: none;
-}
-
-.c7 {
-  height: 30px;
-  width: 30px;
-  background: #D3BF9C;
-  border-radius: 20px;
-  color: #fff;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .c2 {
@@ -153,14 +122,37 @@ exports[`<IndexPage> renders properly 1`] = `
   background: #2F3D4F1A;
 }
 
-.c0 {
-  max-width: 960px;
-  margin: 0 auto;
-  padding: 0 20px;
+.c6 {
+  background: transparent;
+  border: 2px solid #D3BF9C;
+  border-radius: 18px;
+  height: 34px;
+  width: 50px;
+  padding: 0px;
+  display: flex;
+  justify-content: flex-end;
+  transition: all 1s linear;
+  margin: 0 20px;
+  cursor: pointer;
+}
+
+.c6:focus {
+  outline: none;
+}
+
+.c7 {
+  height: 30px;
+  width: 30px;
+  background: #D3BF9C;
+  border-radius: 20px;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .c1 {
-  margin: 16px 0 40px 0;
+  margin: 16px auto 40px auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -172,6 +164,14 @@ exports[`<IndexPage> renders properly 1`] = `
   align-items: center;
 }
 
+.c9 {
+  background: linear-gradient(90deg, #FFFFFF 20px, transparent 1%) center,linear-gradient(#FFFFFF 20px, transparent 1%) center,#2F3D4F;
+  background-size: 22px 22px;
+  height: 120px;
+  margin: 40px 0;
+  width: 100%;
+}
+
 @media (min-width: 760px) {
   .c3 {
     font-size: 110px;
@@ -180,141 +180,122 @@ exports[`<IndexPage> renders properly 1`] = `
 
 @media (min-width: 760px) {
   .c1 {
-    margin: 40px 0 40px 0;
+    margin: 40px auto 40px auto;
   }
 }
 
 <body>
   <div>
     <section
-      class="c0"
+      class="c0 c1"
     >
-      <header
-        class="c1"
+      <a
+        class="c2"
+        data-testid="logo-link"
+        href="/"
       >
-        <a
-          class="c2"
-          data-testid="logo-link"
-          href="/"
+        <h1
+          class="c3"
         >
-          <h1
-            class="c3"
+          Diego
+          <span
+            class="c4"
+            data-testid="logo-lastname"
           >
-            Diego
-            <span
-              class="c4"
-              data-testid="logo-lastname"
-            >
-              C
-              .
-            </span>
-          </h1>
-        </a>
-        <div
-          class="c5"
-        >
-          <button
-            aria-label="Change color scheme"
-            class="c6"
-          >
-            <div
-              class="c7"
-            >
-              <svg
-                fill="currentColor"
-                height="1em"
-                stroke="currentColor"
-                stroke-width="0"
-                viewBox="0 0 16 16"
-                width="1em"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M8 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6zm0 1a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"
-                />
-              </svg>
-            </div>
-          </button>
-          <div
-            class=""
-          >
-            <button
-              class="c8"
-            >
-              <svg
-                fill="currentColor"
-                height="28"
-                stroke="currentColor"
-                stroke-width="0"
-                viewBox="0 0 16 16"
-                width="28"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M3.5 2A1.5 1.5 0 0 1 5 3.5V5H3.5a1.5 1.5 0 1 1 0-3zM6 5V3.5A2.5 2.5 0 1 0 3.5 6H5v4H3.5A2.5 2.5 0 1 0 6 12.5V11h4v1.5a2.5 2.5 0 1 0 2.5-2.5H11V6h1.5A2.5 2.5 0 1 0 10 3.5V5H6zm4 1v4H6V6h4zm1-1V3.5A1.5 1.5 0 1 1 12.5 5H11zm0 6h1.5a1.5 1.5 0 1 1-1.5 1.5V11zm-6 0v1.5A1.5 1.5 0 1 1 3.5 11H5z"
-                />
-              </svg>
-            </button>
-          </div>
-        </div>
-      </header>
+            C
+            .
+          </span>
+        </h1>
+      </a>
       <div
-        class=""
-      />
+        class="c5"
+      >
+        <button
+          aria-label="Change color scheme"
+          class="c6"
+        >
+          <div
+            class="c7"
+          >
+            <svg
+              fill="currentColor"
+              height="1em"
+              stroke="currentColor"
+              stroke-width="0"
+              viewBox="0 0 16 16"
+              width="1em"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M8 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6m0 1a4 4 0 1 0 0-8 4 4 0 0 0 0 8M8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0m0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13m8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5M3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8m10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0m-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0m9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707M4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708"
+              />
+            </svg>
+          </div>
+        </button>
+        <button
+          class="c8"
+        >
+          <svg
+            fill="currentColor"
+            height="28"
+            stroke="currentColor"
+            stroke-width="0"
+            viewBox="0 0 16 16"
+            width="28"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M3.5 2A1.5 1.5 0 0 1 5 3.5V5H3.5a1.5 1.5 0 1 1 0-3M6 5V3.5A2.5 2.5 0 1 0 3.5 6H5v4H3.5A2.5 2.5 0 1 0 6 12.5V11h4v1.5a2.5 2.5 0 1 0 2.5-2.5H11V6h1.5A2.5 2.5 0 1 0 10 3.5V5zm4 1v4H6V6zm1-1V3.5A1.5 1.5 0 1 1 12.5 5zm0 6h1.5a1.5 1.5 0 1 1-1.5 1.5zm-6 0v1.5A1.5 1.5 0 1 1 3.5 11z"
+            />
+          </svg>
+        </button>
+      </div>
     </section>
+    <section
+      class="c0"
+    />
     <div
       class="c9"
     />
     <section
-      class="c0"
+      class="c0 c10"
+      data-testid="article-item"
     >
-      <article
-        class="c10"
-        data-testid="article-item"
+      <a
+        class="c11"
+        data-testid="title"
+        href="/path-to-article"
       >
-        <a
-          class="c11"
-          data-testid="title"
-          href="/path-to-article"
-        >
-          Title 1
-        </a>
-        <section
-          class="c12"
-          html="Awesome first article"
-        >
-          Awesome first article
-        </section>
-      </article>
-      <article
-        class="c10"
-        data-testid="article-item"
+        Title 1
+      </a>
+      <section
+        class="c12"
+        html="Awesome first article"
       >
-        <a
-          class="c11"
-          data-testid="title"
-          href="/path-to-article-2"
-        >
-          Title 2
-        </a>
-        <section
-          class="c12"
-          html="Awesome second article"
-        >
-          Awesome second article
-        </section>
-      </article>
+        Awesome first article
+      </section>
     </section>
-    <div
-      class="c9"
-    />
     <section
-      class="c0"
+      class="c0 c10"
+      data-testid="article-item"
     >
-      <p>
-        Footer
-      </p>
+      <a
+        class="c11"
+        data-testid="title"
+        href="/path-to-article-2"
+      >
+        Title 2
+      </a>
+      <section
+        class="c12"
+        html="Awesome second article"
+      >
+        Awesome second article
+      </section>
     </section>
+    <p>
+      Footer
+    </p>
   </div>
 </body>
 `;

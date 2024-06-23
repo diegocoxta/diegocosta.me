@@ -4,8 +4,8 @@ import { Link } from 'gatsby';
 
 export interface LogoProps {
   name: string;
-  to: string;
-  size: 'small' | 'large';
+  to?: string;
+  size?: 'small' | 'large';
 }
 
 const Container = styled(Link)`
@@ -35,20 +35,15 @@ const LastName = styled.span`
   color: ${({ theme }) => theme.accentColor};
 `;
 
-export default function Logo(props: LogoProps) {
+export default function Logo({ size = 'large', to = '/', ...props }: LogoProps) {
   const [name, lastname] = props.name.split(' ');
 
   return (
-    <Container to={props.to} data-testid="logo-link">
-      <Name size={props.size}>
+    <Container to={to} data-testid="logo-link">
+      <Name size={size}>
         {name}
         {lastname && <LastName data-testid="logo-lastname">{lastname[0]}.</LastName>}
       </Name>
     </Container>
   );
 }
-
-Logo.defaultProps = {
-  size: 'large',
-  to: '/',
-};
