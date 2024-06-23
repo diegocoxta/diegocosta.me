@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<NotFoundPage> renders properly 1`] = `
+exports[`<TagsTemplate> renders properly 1`] = `
 .c11 {
   color: #2F3D4F;
   box-shadow: none;
@@ -12,6 +12,7 @@ exports[`<NotFoundPage> renders properly 1`] = `
 
 .c11:hover,
 .c11:focus {
+  border-bottom: 1px solid #2F3D4F;
   outline: none;
 }
 
@@ -250,6 +251,9 @@ exports[`<NotFoundPage> renders properly 1`] = `
         </button>
       </div>
     </section>
+    <section
+      class="c0"
+    />
     <div
       class="c9"
     />
@@ -257,18 +261,36 @@ exports[`<NotFoundPage> renders properly 1`] = `
       class="c0 c10"
       data-testid="article-item"
     >
-      <h2
+      <a
         class="c11"
         data-testid="title"
-        to=""
+        href="/path-to-article"
       >
-        Ops! Page not found!
-      </h2>
+        Title 1
+      </a>
       <section
         class="c12"
-        html="I'm sorry, but the page you're looking for cannot be found. Please check the URL or try navigating through the menu of my website. If the issue persists, please contact me."
+        html="Awesome first article"
       >
-        I'm sorry, but the page you're looking for cannot be found. Please check the URL or try navigating through the menu of my website. If the issue persists, please contact me.
+        Awesome first article
+      </section>
+    </section>
+    <section
+      class="c0 c10"
+      data-testid="article-item"
+    >
+      <a
+        class="c11"
+        data-testid="title"
+        href="/path-to-article-2"
+      >
+        Title 2
+      </a>
+      <section
+        class="c12"
+        html="Awesome second article"
+      >
+        Awesome second article
       </section>
     </section>
     <p>

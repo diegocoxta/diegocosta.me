@@ -1,0 +1,215 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Footer /> do not render the sourceCode url and author if not defined 1`] = `
+.c0 {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.c1 {
+  margin-bottom: 50px;
+}
+
+.c1 nav {
+  margin-bottom: 50px;
+}
+
+.c2 {
+  line-height: 1.5;
+  margin: 0;
+  padding: 0;
+}
+
+.c3 {
+  text-decoration: none;
+  box-shadow: none;
+}
+
+.c3:hover,
+.c3:focus {
+  border-bottom: 1px solid;
+  outline: none;
+}
+
+@media (min-width: 760px) {
+  .c1 nav {
+    margin-bottom: 0;
+  }
+}
+
+<body>
+  <div>
+    <section
+      class="c0 c1"
+    >
+      <p
+        class="c2"
+      >
+        CC-BY 
+        2024
+         
+        <span />
+        , built with 
+        <a
+          class="c3"
+          href="https://gatsbyjs.org"
+          rel="noopener"
+          target="_blank"
+        >
+          gatsby
+        </a>
+         •
+         
+      </p>
+    </section>
+  </div>
+</body>
+`;
+
+exports[`<Footer /> renders properly 1`] = `
+.c0 {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.c1 {
+  margin-bottom: 50px;
+}
+
+.c1 nav {
+  margin-bottom: 50px;
+}
+
+.c2 {
+  line-height: 1.5;
+  margin: 0;
+  padding: 0;
+}
+
+.c3 {
+  text-decoration: none;
+  box-shadow: none;
+}
+
+.c3:hover,
+.c3:focus {
+  border-bottom: 1px solid;
+  outline: none;
+}
+
+@media (min-width: 760px) {
+  .c1 nav {
+    margin-bottom: 0;
+  }
+}
+
+<body>
+  <div>
+    <section
+      class="c0 c1"
+    >
+      <p
+        class="c2"
+      >
+        CC-BY 
+        2024
+         
+        <span>
+          diegocoxta
+        </span>
+        , built with 
+        <a
+          class="c3"
+          href="https://gatsbyjs.org"
+          rel="noopener"
+          target="_blank"
+        >
+          gatsby
+        </a>
+         •
+         
+      </p>
+    </section>
+  </div>
+</body>
+`;
+
+exports[`<Footer /> renders the sourceCode url if defined 1`] = `
+.c0 {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.c1 {
+  margin-bottom: 50px;
+}
+
+.c1 nav {
+  margin-bottom: 50px;
+}
+
+.c2 {
+  line-height: 1.5;
+  margin: 0;
+  padding: 0;
+}
+
+.c3 {
+  text-decoration: none;
+  box-shadow: none;
+}
+
+.c3:hover,
+.c3:focus {
+  border-bottom: 1px solid;
+  outline: none;
+}
+
+@media (min-width: 760px) {
+  .c1 nav {
+    margin-bottom: 0;
+  }
+}
+
+<body>
+  <div>
+    <section
+      class="c0 c1"
+    >
+      <p
+        class="c2"
+      >
+        CC-BY 
+        2024
+         
+        <span>
+          @diegocoxta
+        </span>
+        , built with 
+        <a
+          class="c3"
+          href="https://gatsbyjs.org"
+          rel="noopener"
+          target="_blank"
+        >
+          gatsby
+        </a>
+         •
+         
+        <a
+          class="c3"
+          data-testid="footer-source-code"
+          href="https://github.com/diegocoxta/diegocosta.me"
+          rel="noopener"
+          target="_blank"
+        >
+          source code
+        </a>
+      </p>
+    </section>
+  </div>
+</body>
+`;

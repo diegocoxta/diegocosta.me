@@ -1,0 +1,306 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Article /> renders properly 1`] = `
+.c2 {
+  box-shadow: none;
+  text-decoration: none;
+  font-size: 36px;
+  margin: 0;
+  font-weight: 700;
+}
+
+.c2:hover,
+.c2:focus {
+  border-bottom: 1px solid undefined;
+  outline: none;
+}
+
+.c4 {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+  margin: 0;
+}
+
+.c5 {
+  list-style: none;
+  padding: 0 10px 0 0;
+}
+
+.c6 {
+  text-decoration: none;
+  box-shadow: none;
+  font-size: 16px;
+  font-weight: 700;
+  text-transform: lowercase;
+}
+
+.c6:hover,
+.c6:focus {
+  border-bottom: 1px solid;
+  outline: none;
+}
+
+.c0 {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.c1 {
+  margin: 20px auto 60px auto;
+  font-weight: 400;
+}
+
+.c3 {
+  font-size: 19px;
+  margin: 10px 0;
+}
+
+<body>
+  <div>
+    <section
+      class="c0 c1"
+      data-testid="article-item"
+    >
+      <a
+        class="c2"
+        data-testid="title"
+        href="/awesome-article"
+      >
+        Awesome Article
+      </a>
+      <p
+        class="c3"
+      >
+        01/18/2020
+         
+        · 5 minutes of reading
+         · In 
+        en
+      </p>
+      <ul
+        class="c4"
+        data-testid="taglist-list"
+      >
+        <li
+          class="c5"
+          data-testid="taglist-item"
+        >
+          <a
+            class="c6"
+            href="/tags/jest"
+          >
+            #jest
+          </a>
+        </li>
+        <li
+          class="c5"
+          data-testid="taglist-item"
+        >
+          <a
+            class="c6"
+            href="/tags/testing-library"
+          >
+            #testing-library
+          </a>
+        </li>
+      </ul>
+    </section>
+  </div>
+</body>
+`;
+
+exports[`<Article /> renders properly the body content 1`] = `
+.c2 {
+  box-shadow: none;
+  text-decoration: none;
+  font-size: 36px;
+  margin: 0;
+  font-weight: 700;
+}
+
+.c2:hover,
+.c2:focus {
+  border-bottom: 1px solid undefined;
+  outline: none;
+}
+
+.c3 {
+  line-height: 1.5;
+  font-size: 19px;
+  margin-top: 10px;
+}
+
+.c3 a {
+  text-decoration: none;
+  border-bottom: 1px solid;
+}
+
+.c3 a:hover,
+.c3 a:focus {
+  border-bottom: 1px solid;
+  outline: none;
+}
+
+.c3 code {
+  background: 40;
+  padding: 2px 6px;
+  border-radius: 10px;
+  font-size: 16px;
+}
+
+.c3 blockquote {
+  border-left: 5px solid;
+  padding-left: 20px;
+  margin-left: 0;
+}
+
+.c3 img {
+  box-shadow: none!important;
+}
+
+.c3 h3 {
+  font-size: 28px;
+}
+
+.c3 table.uses-table {
+  width: 100%;
+  margin: 40px 0;
+}
+
+.c3 table.uses-table td {
+  text-align: center;
+}
+
+.c0 {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.c1 {
+  margin: 20px auto 60px auto;
+  font-weight: 400;
+}
+
+<body>
+  <div>
+    <section
+      class="c0 c1"
+      data-testid="article-item"
+    >
+      <a
+        class="c2"
+        data-testid="title"
+        href="/awesome-article"
+      >
+        Awesome Article
+      </a>
+      <section
+        class="c3"
+        html="Article as a Children"
+      >
+        Article as a Children
+      </section>
+    </section>
+  </div>
+</body>
+`;
+
+exports[`<Article /> renders properly the description 1`] = `
+.c2 {
+  box-shadow: none;
+  text-decoration: none;
+  font-size: 36px;
+  margin: 0;
+  font-weight: 700;
+}
+
+.c2:hover,
+.c2:focus {
+  border-bottom: 1px solid undefined;
+  outline: none;
+}
+
+.c3 {
+  line-height: 1.5;
+  font-size: 19px;
+  margin-top: 10px;
+}
+
+.c3 a {
+  text-decoration: none;
+  border-bottom: 1px solid;
+}
+
+.c3 a:hover,
+.c3 a:focus {
+  border-bottom: 1px solid;
+  outline: none;
+}
+
+.c3 code {
+  background: 40;
+  padding: 2px 6px;
+  border-radius: 10px;
+  font-size: 16px;
+}
+
+.c3 blockquote {
+  border-left: 5px solid;
+  padding-left: 20px;
+  margin-left: 0;
+}
+
+.c3 img {
+  box-shadow: none!important;
+}
+
+.c3 h3 {
+  font-size: 28px;
+}
+
+.c3 table.uses-table {
+  width: 100%;
+  margin: 40px 0;
+}
+
+.c3 table.uses-table td {
+  text-align: center;
+}
+
+.c0 {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.c1 {
+  margin: 20px auto 60px auto;
+  font-weight: 400;
+}
+
+<body>
+  <div>
+    <section
+      class="c0 c1"
+      data-testid="article-item"
+    >
+      <a
+        class="c2"
+        data-testid="title"
+        href="/awesome-article"
+      >
+        Awesome Article
+      </a>
+      <section
+        class="c3"
+        html="Article as a Children"
+      >
+        Article as a Children
+      </section>
+    </section>
+  </div>
+</body>
+`;

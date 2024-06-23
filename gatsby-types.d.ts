@@ -382,15 +382,11 @@ type File = Node & {
   readonly changeTime: Scalars['Date'];
   /** Returns the first child node of type ImageSharp or null if there are no children of given type on this node */
   readonly childImageSharp: Maybe<ImageSharp>;
-  /** Returns the first child node of type Locale or null if there are no children of given type on this node */
-  readonly childLocale: Maybe<Locale>;
   /** Returns the first child node of type MarkdownRemark or null if there are no children of given type on this node */
   readonly childMarkdownRemark: Maybe<MarkdownRemark>;
   readonly children: ReadonlyArray<Node>;
   /** Returns all children nodes filtered by type ImageSharp */
   readonly childrenImageSharp: Maybe<ReadonlyArray<Maybe<ImageSharp>>>;
-  /** Returns all children nodes filtered by type Locale */
-  readonly childrenLocale: Maybe<ReadonlyArray<Maybe<Locale>>>;
   /** Returns all children nodes filtered by type MarkdownRemark */
   readonly childrenMarkdownRemark: Maybe<ReadonlyArray<Maybe<MarkdownRemark>>>;
   readonly ctime: Scalars['Date'];
@@ -536,11 +532,9 @@ type FileFieldSelector = {
   readonly blocks: InputMaybe<FieldSelectorEnum>;
   readonly changeTime: InputMaybe<FieldSelectorEnum>;
   readonly childImageSharp: InputMaybe<ImageSharpFieldSelector>;
-  readonly childLocale: InputMaybe<LocaleFieldSelector>;
   readonly childMarkdownRemark: InputMaybe<MarkdownRemarkFieldSelector>;
   readonly children: InputMaybe<NodeFieldSelector>;
   readonly childrenImageSharp: InputMaybe<ImageSharpFieldSelector>;
-  readonly childrenLocale: InputMaybe<LocaleFieldSelector>;
   readonly childrenMarkdownRemark: InputMaybe<MarkdownRemarkFieldSelector>;
   readonly ctime: InputMaybe<FieldSelectorEnum>;
   readonly ctimeMs: InputMaybe<FieldSelectorEnum>;
@@ -583,11 +577,9 @@ type FileFilterInput = {
   readonly blocks: InputMaybe<IntQueryOperatorInput>;
   readonly changeTime: InputMaybe<DateQueryOperatorInput>;
   readonly childImageSharp: InputMaybe<ImageSharpFilterInput>;
-  readonly childLocale: InputMaybe<LocaleFilterInput>;
   readonly childMarkdownRemark: InputMaybe<MarkdownRemarkFilterInput>;
   readonly children: InputMaybe<NodeFilterListInput>;
   readonly childrenImageSharp: InputMaybe<ImageSharpFilterListInput>;
-  readonly childrenLocale: InputMaybe<LocaleFilterListInput>;
   readonly childrenMarkdownRemark: InputMaybe<MarkdownRemarkFilterListInput>;
   readonly ctime: InputMaybe<DateQueryOperatorInput>;
   readonly ctimeMs: InputMaybe<FloatQueryOperatorInput>;
@@ -671,11 +663,9 @@ type FileSortInput = {
   readonly blocks: InputMaybe<SortOrderEnum>;
   readonly changeTime: InputMaybe<SortOrderEnum>;
   readonly childImageSharp: InputMaybe<ImageSharpSortInput>;
-  readonly childLocale: InputMaybe<LocaleSortInput>;
   readonly childMarkdownRemark: InputMaybe<MarkdownRemarkSortInput>;
   readonly children: InputMaybe<NodeSortInput>;
   readonly childrenImageSharp: InputMaybe<ImageSharpSortInput>;
-  readonly childrenLocale: InputMaybe<LocaleSortInput>;
   readonly childrenMarkdownRemark: InputMaybe<MarkdownRemarkSortInput>;
   readonly ctime: InputMaybe<SortOrderEnum>;
   readonly ctimeMs: InputMaybe<SortOrderEnum>;
@@ -1238,140 +1228,6 @@ type JSONQueryOperatorInput = {
   readonly regex: InputMaybe<Scalars['JSON']>;
 };
 
-type Locale = Node & {
-  readonly children: ReadonlyArray<Node>;
-  readonly data: Maybe<Scalars['String']>;
-  readonly fileAbsolutePath: Maybe<Scalars['String']>;
-  readonly id: Scalars['ID'];
-  readonly internal: Internal;
-  readonly language: Maybe<Scalars['String']>;
-  readonly ns: Maybe<Scalars['String']>;
-  readonly parent: Maybe<Node>;
-};
-
-type LocaleConnection = {
-  readonly distinct: ReadonlyArray<Scalars['String']>;
-  readonly edges: ReadonlyArray<LocaleEdge>;
-  readonly group: ReadonlyArray<LocaleGroupConnection>;
-  readonly max: Maybe<Scalars['Float']>;
-  readonly min: Maybe<Scalars['Float']>;
-  readonly nodes: ReadonlyArray<Locale>;
-  readonly pageInfo: PageInfo;
-  readonly sum: Maybe<Scalars['Float']>;
-  readonly totalCount: Scalars['Int'];
-};
-
-
-type LocaleConnection_distinctArgs = {
-  field: LocaleFieldSelector;
-};
-
-
-type LocaleConnection_groupArgs = {
-  field: LocaleFieldSelector;
-  limit: InputMaybe<Scalars['Int']>;
-  skip: InputMaybe<Scalars['Int']>;
-};
-
-
-type LocaleConnection_maxArgs = {
-  field: LocaleFieldSelector;
-};
-
-
-type LocaleConnection_minArgs = {
-  field: LocaleFieldSelector;
-};
-
-
-type LocaleConnection_sumArgs = {
-  field: LocaleFieldSelector;
-};
-
-type LocaleEdge = {
-  readonly next: Maybe<Locale>;
-  readonly node: Locale;
-  readonly previous: Maybe<Locale>;
-};
-
-type LocaleFieldSelector = {
-  readonly children: InputMaybe<NodeFieldSelector>;
-  readonly data: InputMaybe<FieldSelectorEnum>;
-  readonly fileAbsolutePath: InputMaybe<FieldSelectorEnum>;
-  readonly id: InputMaybe<FieldSelectorEnum>;
-  readonly internal: InputMaybe<InternalFieldSelector>;
-  readonly language: InputMaybe<FieldSelectorEnum>;
-  readonly ns: InputMaybe<FieldSelectorEnum>;
-  readonly parent: InputMaybe<NodeFieldSelector>;
-};
-
-type LocaleFilterInput = {
-  readonly children: InputMaybe<NodeFilterListInput>;
-  readonly data: InputMaybe<StringQueryOperatorInput>;
-  readonly fileAbsolutePath: InputMaybe<StringQueryOperatorInput>;
-  readonly id: InputMaybe<StringQueryOperatorInput>;
-  readonly internal: InputMaybe<InternalFilterInput>;
-  readonly language: InputMaybe<StringQueryOperatorInput>;
-  readonly ns: InputMaybe<StringQueryOperatorInput>;
-  readonly parent: InputMaybe<NodeFilterInput>;
-};
-
-type LocaleFilterListInput = {
-  readonly elemMatch: InputMaybe<LocaleFilterInput>;
-};
-
-type LocaleGroupConnection = {
-  readonly distinct: ReadonlyArray<Scalars['String']>;
-  readonly edges: ReadonlyArray<LocaleEdge>;
-  readonly field: Scalars['String'];
-  readonly fieldValue: Maybe<Scalars['String']>;
-  readonly group: ReadonlyArray<LocaleGroupConnection>;
-  readonly max: Maybe<Scalars['Float']>;
-  readonly min: Maybe<Scalars['Float']>;
-  readonly nodes: ReadonlyArray<Locale>;
-  readonly pageInfo: PageInfo;
-  readonly sum: Maybe<Scalars['Float']>;
-  readonly totalCount: Scalars['Int'];
-};
-
-
-type LocaleGroupConnection_distinctArgs = {
-  field: LocaleFieldSelector;
-};
-
-
-type LocaleGroupConnection_groupArgs = {
-  field: LocaleFieldSelector;
-  limit: InputMaybe<Scalars['Int']>;
-  skip: InputMaybe<Scalars['Int']>;
-};
-
-
-type LocaleGroupConnection_maxArgs = {
-  field: LocaleFieldSelector;
-};
-
-
-type LocaleGroupConnection_minArgs = {
-  field: LocaleFieldSelector;
-};
-
-
-type LocaleGroupConnection_sumArgs = {
-  field: LocaleFieldSelector;
-};
-
-type LocaleSortInput = {
-  readonly children: InputMaybe<NodeSortInput>;
-  readonly data: InputMaybe<SortOrderEnum>;
-  readonly fileAbsolutePath: InputMaybe<SortOrderEnum>;
-  readonly id: InputMaybe<SortOrderEnum>;
-  readonly internal: InputMaybe<InternalSortInput>;
-  readonly language: InputMaybe<SortOrderEnum>;
-  readonly ns: InputMaybe<SortOrderEnum>;
-  readonly parent: InputMaybe<NodeSortInput>;
-};
-
 type MarkdownExcerptFormats =
   | 'HTML'
   | 'MARKDOWN'
@@ -1524,21 +1380,18 @@ type MarkdownRemarkFieldSelector = {
 
 type MarkdownRemarkFields = {
   readonly collection: Maybe<Scalars['String']>;
-  readonly language: Maybe<Scalars['String']>;
   readonly readingTime: Maybe<MarkdownRemarkFieldsReadingTime>;
   readonly slug: Maybe<Scalars['String']>;
 };
 
 type MarkdownRemarkFieldsFieldSelector = {
   readonly collection: InputMaybe<FieldSelectorEnum>;
-  readonly language: InputMaybe<FieldSelectorEnum>;
   readonly readingTime: InputMaybe<MarkdownRemarkFieldsReadingTimeFieldSelector>;
   readonly slug: InputMaybe<FieldSelectorEnum>;
 };
 
 type MarkdownRemarkFieldsFilterInput = {
   readonly collection: InputMaybe<StringQueryOperatorInput>;
-  readonly language: InputMaybe<StringQueryOperatorInput>;
   readonly readingTime: InputMaybe<MarkdownRemarkFieldsReadingTimeFilterInput>;
   readonly slug: InputMaybe<StringQueryOperatorInput>;
 };
@@ -1573,7 +1426,6 @@ type MarkdownRemarkFieldsReadingTimeSortInput = {
 
 type MarkdownRemarkFieldsSortInput = {
   readonly collection: InputMaybe<SortOrderEnum>;
-  readonly language: InputMaybe<SortOrderEnum>;
   readonly readingTime: InputMaybe<MarkdownRemarkFieldsReadingTimeSortInput>;
   readonly slug: InputMaybe<SortOrderEnum>;
 };
@@ -1604,7 +1456,9 @@ type MarkdownRemarkFilterListInput = {
 type MarkdownRemarkFrontmatter = {
   readonly date: Maybe<Scalars['Date']>;
   readonly description: Maybe<Scalars['String']>;
-  readonly flags: Maybe<ReadonlyArray<Maybe<Scalars['String']>>>;
+  readonly expanded: Maybe<Scalars['Boolean']>;
+  readonly language: Maybe<Scalars['String']>;
+  readonly status: Maybe<Scalars['String']>;
   readonly tags: Maybe<ReadonlyArray<Maybe<Scalars['String']>>>;
   readonly title: Maybe<Scalars['String']>;
 };
@@ -1620,7 +1474,9 @@ type MarkdownRemarkFrontmatter_dateArgs = {
 type MarkdownRemarkFrontmatterFieldSelector = {
   readonly date: InputMaybe<FieldSelectorEnum>;
   readonly description: InputMaybe<FieldSelectorEnum>;
-  readonly flags: InputMaybe<FieldSelectorEnum>;
+  readonly expanded: InputMaybe<FieldSelectorEnum>;
+  readonly language: InputMaybe<FieldSelectorEnum>;
+  readonly status: InputMaybe<FieldSelectorEnum>;
   readonly tags: InputMaybe<FieldSelectorEnum>;
   readonly title: InputMaybe<FieldSelectorEnum>;
 };
@@ -1628,7 +1484,9 @@ type MarkdownRemarkFrontmatterFieldSelector = {
 type MarkdownRemarkFrontmatterFilterInput = {
   readonly date: InputMaybe<DateQueryOperatorInput>;
   readonly description: InputMaybe<StringQueryOperatorInput>;
-  readonly flags: InputMaybe<StringQueryOperatorInput>;
+  readonly expanded: InputMaybe<BooleanQueryOperatorInput>;
+  readonly language: InputMaybe<StringQueryOperatorInput>;
+  readonly status: InputMaybe<StringQueryOperatorInput>;
   readonly tags: InputMaybe<StringQueryOperatorInput>;
   readonly title: InputMaybe<StringQueryOperatorInput>;
 };
@@ -1636,7 +1494,9 @@ type MarkdownRemarkFrontmatterFilterInput = {
 type MarkdownRemarkFrontmatterSortInput = {
   readonly date: InputMaybe<SortOrderEnum>;
   readonly description: InputMaybe<SortOrderEnum>;
-  readonly flags: InputMaybe<SortOrderEnum>;
+  readonly expanded: InputMaybe<SortOrderEnum>;
+  readonly language: InputMaybe<SortOrderEnum>;
+  readonly status: InputMaybe<SortOrderEnum>;
   readonly tags: InputMaybe<SortOrderEnum>;
   readonly title: InputMaybe<SortOrderEnum>;
 };
@@ -1797,7 +1657,6 @@ type Query = {
   readonly allDirectory: DirectoryConnection;
   readonly allFile: FileConnection;
   readonly allImageSharp: ImageSharpConnection;
-  readonly allLocale: LocaleConnection;
   readonly allMarkdownRemark: MarkdownRemarkConnection;
   readonly allSite: SiteConnection;
   readonly allSiteBuildMetadata: SiteBuildMetadataConnection;
@@ -1807,7 +1666,6 @@ type Query = {
   readonly directory: Maybe<Directory>;
   readonly file: Maybe<File>;
   readonly imageSharp: Maybe<ImageSharp>;
-  readonly locale: Maybe<Locale>;
   readonly markdownRemark: Maybe<MarkdownRemark>;
   readonly site: Maybe<Site>;
   readonly siteBuildMetadata: Maybe<SiteBuildMetadata>;
@@ -1838,14 +1696,6 @@ type Query_allImageSharpArgs = {
   limit: InputMaybe<Scalars['Int']>;
   skip: InputMaybe<Scalars['Int']>;
   sort: InputMaybe<ReadonlyArray<InputMaybe<ImageSharpSortInput>>>;
-};
-
-
-type Query_allLocaleArgs = {
-  filter: InputMaybe<LocaleFilterInput>;
-  limit: InputMaybe<Scalars['Int']>;
-  skip: InputMaybe<Scalars['Int']>;
-  sort: InputMaybe<ReadonlyArray<InputMaybe<LocaleSortInput>>>;
 };
 
 
@@ -1949,11 +1799,9 @@ type Query_fileArgs = {
   blocks: InputMaybe<IntQueryOperatorInput>;
   changeTime: InputMaybe<DateQueryOperatorInput>;
   childImageSharp: InputMaybe<ImageSharpFilterInput>;
-  childLocale: InputMaybe<LocaleFilterInput>;
   childMarkdownRemark: InputMaybe<MarkdownRemarkFilterInput>;
   children: InputMaybe<NodeFilterListInput>;
   childrenImageSharp: InputMaybe<ImageSharpFilterListInput>;
-  childrenLocale: InputMaybe<LocaleFilterListInput>;
   childrenMarkdownRemark: InputMaybe<MarkdownRemarkFilterListInput>;
   ctime: InputMaybe<DateQueryOperatorInput>;
   ctimeMs: InputMaybe<FloatQueryOperatorInput>;
@@ -1994,18 +1842,6 @@ type Query_imageSharpArgs = {
   original: InputMaybe<ImageSharpOriginalFilterInput>;
   parent: InputMaybe<NodeFilterInput>;
   resize: InputMaybe<ImageSharpResizeFilterInput>;
-};
-
-
-type Query_localeArgs = {
-  children: InputMaybe<NodeFilterListInput>;
-  data: InputMaybe<StringQueryOperatorInput>;
-  fileAbsolutePath: InputMaybe<StringQueryOperatorInput>;
-  id: InputMaybe<StringQueryOperatorInput>;
-  internal: InputMaybe<InternalFilterInput>;
-  language: InputMaybe<StringQueryOperatorInput>;
-  ns: InputMaybe<StringQueryOperatorInput>;
-  parent: InputMaybe<NodeFilterInput>;
 };
 
 
@@ -2828,67 +2664,73 @@ type SitePluginSortInput = {
 };
 
 type SiteSiteMetadata = {
-  readonly bio: Maybe<SiteSiteMetadataBio>;
+  readonly avatar: Maybe<Scalars['String']>;
+  readonly bio: Maybe<Scalars['String']>;
   readonly description: Maybe<Scalars['String']>;
+  readonly feeds: Maybe<SiteSiteMetadataFeeds>;
   readonly getInTouch: Maybe<ReadonlyArray<Maybe<SiteSiteMetadataGetInTouch>>>;
-  readonly metatags: Maybe<SiteSiteMetadataMetatags>;
-  readonly sourceCode: Maybe<Scalars['String']>;
+  readonly name: Maybe<Scalars['String']>;
+  readonly repository: Maybe<Scalars['String']>;
   readonly title: Maybe<Scalars['String']>;
+  readonly website: Maybe<SiteSiteMetadataWebsite>;
 };
 
-type SiteSiteMetadataBio = {
-  readonly en: Maybe<Scalars['String']>;
-  readonly pt: Maybe<Scalars['String']>;
+type SiteSiteMetadataFeeds = {
+  readonly goodreads_currently_reading_shelf: Maybe<Scalars['String']>;
+  readonly letterboxd: Maybe<Scalars['String']>;
 };
 
-type SiteSiteMetadataBioFieldSelector = {
-  readonly en: InputMaybe<FieldSelectorEnum>;
-  readonly pt: InputMaybe<FieldSelectorEnum>;
+type SiteSiteMetadataFeedsFieldSelector = {
+  readonly goodreads_currently_reading_shelf: InputMaybe<FieldSelectorEnum>;
+  readonly letterboxd: InputMaybe<FieldSelectorEnum>;
 };
 
-type SiteSiteMetadataBioFilterInput = {
-  readonly en: InputMaybe<StringQueryOperatorInput>;
-  readonly pt: InputMaybe<StringQueryOperatorInput>;
+type SiteSiteMetadataFeedsFilterInput = {
+  readonly goodreads_currently_reading_shelf: InputMaybe<StringQueryOperatorInput>;
+  readonly letterboxd: InputMaybe<StringQueryOperatorInput>;
 };
 
-type SiteSiteMetadataBioSortInput = {
-  readonly en: InputMaybe<SortOrderEnum>;
-  readonly pt: InputMaybe<SortOrderEnum>;
+type SiteSiteMetadataFeedsSortInput = {
+  readonly goodreads_currently_reading_shelf: InputMaybe<SortOrderEnum>;
+  readonly letterboxd: InputMaybe<SortOrderEnum>;
 };
 
 type SiteSiteMetadataFieldSelector = {
-  readonly bio: InputMaybe<SiteSiteMetadataBioFieldSelector>;
+  readonly avatar: InputMaybe<FieldSelectorEnum>;
+  readonly bio: InputMaybe<FieldSelectorEnum>;
   readonly description: InputMaybe<FieldSelectorEnum>;
+  readonly feeds: InputMaybe<SiteSiteMetadataFeedsFieldSelector>;
   readonly getInTouch: InputMaybe<SiteSiteMetadataGetInTouchFieldSelector>;
-  readonly metatags: InputMaybe<SiteSiteMetadataMetatagsFieldSelector>;
-  readonly sourceCode: InputMaybe<FieldSelectorEnum>;
+  readonly name: InputMaybe<FieldSelectorEnum>;
+  readonly repository: InputMaybe<FieldSelectorEnum>;
   readonly title: InputMaybe<FieldSelectorEnum>;
+  readonly website: InputMaybe<SiteSiteMetadataWebsiteFieldSelector>;
 };
 
 type SiteSiteMetadataFilterInput = {
-  readonly bio: InputMaybe<SiteSiteMetadataBioFilterInput>;
+  readonly avatar: InputMaybe<StringQueryOperatorInput>;
+  readonly bio: InputMaybe<StringQueryOperatorInput>;
   readonly description: InputMaybe<StringQueryOperatorInput>;
+  readonly feeds: InputMaybe<SiteSiteMetadataFeedsFilterInput>;
   readonly getInTouch: InputMaybe<SiteSiteMetadataGetInTouchFilterListInput>;
-  readonly metatags: InputMaybe<SiteSiteMetadataMetatagsFilterInput>;
-  readonly sourceCode: InputMaybe<StringQueryOperatorInput>;
+  readonly name: InputMaybe<StringQueryOperatorInput>;
+  readonly repository: InputMaybe<StringQueryOperatorInput>;
   readonly title: InputMaybe<StringQueryOperatorInput>;
+  readonly website: InputMaybe<SiteSiteMetadataWebsiteFilterInput>;
 };
 
 type SiteSiteMetadataGetInTouch = {
   readonly label: Maybe<Scalars['String']>;
-  readonly rel: Maybe<Scalars['String']>;
   readonly url: Maybe<Scalars['String']>;
 };
 
 type SiteSiteMetadataGetInTouchFieldSelector = {
   readonly label: InputMaybe<FieldSelectorEnum>;
-  readonly rel: InputMaybe<FieldSelectorEnum>;
   readonly url: InputMaybe<FieldSelectorEnum>;
 };
 
 type SiteSiteMetadataGetInTouchFilterInput = {
   readonly label: InputMaybe<StringQueryOperatorInput>;
-  readonly rel: InputMaybe<StringQueryOperatorInput>;
   readonly url: InputMaybe<StringQueryOperatorInput>;
 };
 
@@ -2898,44 +2740,42 @@ type SiteSiteMetadataGetInTouchFilterListInput = {
 
 type SiteSiteMetadataGetInTouchSortInput = {
   readonly label: InputMaybe<SortOrderEnum>;
-  readonly rel: InputMaybe<SortOrderEnum>;
   readonly url: InputMaybe<SortOrderEnum>;
 };
 
-type SiteSiteMetadataMetatags = {
-  readonly author: Maybe<Scalars['String']>;
+type SiteSiteMetadataSortInput = {
+  readonly avatar: InputMaybe<SortOrderEnum>;
+  readonly bio: InputMaybe<SortOrderEnum>;
+  readonly description: InputMaybe<SortOrderEnum>;
+  readonly feeds: InputMaybe<SiteSiteMetadataFeedsSortInput>;
+  readonly getInTouch: InputMaybe<SiteSiteMetadataGetInTouchSortInput>;
+  readonly name: InputMaybe<SortOrderEnum>;
+  readonly repository: InputMaybe<SortOrderEnum>;
+  readonly title: InputMaybe<SortOrderEnum>;
+  readonly website: InputMaybe<SiteSiteMetadataWebsiteSortInput>;
+};
+
+type SiteSiteMetadataWebsite = {
   readonly description: Maybe<Scalars['String']>;
-  readonly image: Maybe<Scalars['String']>;
+  readonly header: Maybe<Scalars['String']>;
   readonly title: Maybe<Scalars['String']>;
 };
 
-type SiteSiteMetadataMetatagsFieldSelector = {
-  readonly author: InputMaybe<FieldSelectorEnum>;
+type SiteSiteMetadataWebsiteFieldSelector = {
   readonly description: InputMaybe<FieldSelectorEnum>;
-  readonly image: InputMaybe<FieldSelectorEnum>;
+  readonly header: InputMaybe<FieldSelectorEnum>;
   readonly title: InputMaybe<FieldSelectorEnum>;
 };
 
-type SiteSiteMetadataMetatagsFilterInput = {
-  readonly author: InputMaybe<StringQueryOperatorInput>;
+type SiteSiteMetadataWebsiteFilterInput = {
   readonly description: InputMaybe<StringQueryOperatorInput>;
-  readonly image: InputMaybe<StringQueryOperatorInput>;
+  readonly header: InputMaybe<StringQueryOperatorInput>;
   readonly title: InputMaybe<StringQueryOperatorInput>;
 };
 
-type SiteSiteMetadataMetatagsSortInput = {
-  readonly author: InputMaybe<SortOrderEnum>;
+type SiteSiteMetadataWebsiteSortInput = {
   readonly description: InputMaybe<SortOrderEnum>;
-  readonly image: InputMaybe<SortOrderEnum>;
-  readonly title: InputMaybe<SortOrderEnum>;
-};
-
-type SiteSiteMetadataSortInput = {
-  readonly bio: InputMaybe<SiteSiteMetadataBioSortInput>;
-  readonly description: InputMaybe<SortOrderEnum>;
-  readonly getInTouch: InputMaybe<SiteSiteMetadataGetInTouchSortInput>;
-  readonly metatags: InputMaybe<SiteSiteMetadataMetatagsSortInput>;
-  readonly sourceCode: InputMaybe<SortOrderEnum>;
+  readonly header: InputMaybe<SortOrderEnum>;
   readonly title: InputMaybe<SortOrderEnum>;
 };
 
@@ -2981,12 +2821,12 @@ type WebPOptions = {
   readonly quality: InputMaybe<Scalars['Int']>;
 };
 
-type ArticleInformationFragment = { readonly html: string | null, readonly excerpt: string | null, readonly fields: { readonly collection: string | null, readonly slug: string | null, readonly language: string | null, readonly readingTime: { readonly minutes: number | null } | null } | null, readonly frontmatter: { readonly date: string | null, readonly title: string | null, readonly description: string | null, readonly tags: ReadonlyArray<string | null> | null, readonly flags: ReadonlyArray<string | null> | null } | null };
+type ArticleInformationFragment = { readonly html: string | null, readonly excerpt: string | null, readonly fields: { readonly collection: string | null, readonly slug: string | null, readonly readingTime: { readonly minutes: number | null } | null } | null, readonly frontmatter: { readonly date: string | null, readonly title: string | null, readonly description: string | null, readonly tags: ReadonlyArray<string | null> | null, readonly status: string | null, readonly expanded: boolean | null, readonly language: string | null } | null };
 
-type FooterComponentQueryVariables = Exact<{ [key: string]: never; }>;
+type BlogTemplateQueryQueryVariables = Exact<{ [key: string]: never; }>;
 
 
-type FooterComponentQuery = { readonly site: { readonly siteMetadata: { readonly sourceCode: string | null, readonly metatags: { readonly author: string | null } | null } | null } | null };
+type BlogTemplateQueryQuery = { readonly site: { readonly siteMetadata: { readonly repository: string | null, readonly name: string | null, readonly bio: string | null, readonly getInTouch: ReadonlyArray<{ readonly label: string | null, readonly url: string | null } | null> | null, readonly website: { readonly title: string | null, readonly description: string | null, readonly header: string | null } | null } | null } | null, readonly pages: { readonly nodes: ReadonlyArray<{ readonly frontmatter: { readonly title: string | null } | null, readonly fields: { readonly slug: string | null, readonly collection: string | null } | null }> } };
 
 type GatsbyImageSharpFixedFragment = { readonly base64: string | null, readonly width: number, readonly height: number, readonly src: string, readonly srcSet: string };
 
@@ -3014,52 +2854,24 @@ type GatsbyImageSharpFluid_withWebp_tracedSVGFragment = { readonly tracedSVG: st
 
 type GatsbyImageSharpFluidLimitPresentationSizeFragment = { readonly maxHeight: number, readonly maxWidth: number };
 
-type HeaderComponentQueryVariables = Exact<{ [key: string]: never; }>;
+type IndexPageQueryVariables = Exact<{ [key: string]: never; }>;
 
 
-type HeaderComponentQuery = { readonly site: { readonly siteMetadata: { readonly metatags: { readonly author: string | null } | null, readonly bio: { readonly pt: string | null, readonly en: string | null } | null, readonly getInTouch: ReadonlyArray<{ readonly label: string | null, readonly url: string | null, readonly rel: string | null } | null> | null } | null } | null };
+type IndexPageQuery = { readonly list: { readonly edges: ReadonlyArray<{ readonly node: { readonly html: string | null, readonly excerpt: string | null, readonly fields: { readonly collection: string | null, readonly slug: string | null, readonly readingTime: { readonly minutes: number | null } | null } | null, readonly frontmatter: { readonly date: string | null, readonly title: string | null, readonly description: string | null, readonly tags: ReadonlyArray<string | null> | null, readonly status: string | null, readonly expanded: boolean | null, readonly language: string | null } | null } }> } };
 
-type IndexPageQueryVariables = Exact<{
-  language: Scalars['String'];
-}>;
-
-
-type IndexPageQuery = { readonly locales: { readonly edges: ReadonlyArray<{ readonly node: { readonly ns: string | null, readonly data: string | null, readonly language: string | null } }> }, readonly list: { readonly edges: ReadonlyArray<{ readonly node: { readonly html: string | null, readonly excerpt: string | null, readonly fields: { readonly collection: string | null, readonly slug: string | null, readonly language: string | null, readonly readingTime: { readonly minutes: number | null } | null } | null, readonly frontmatter: { readonly date: string | null, readonly title: string | null, readonly description: string | null, readonly tags: ReadonlyArray<string | null> | null, readonly flags: ReadonlyArray<string | null> | null } | null } }> } };
-
-type LanguageInformationFragment = { readonly edges: ReadonlyArray<{ readonly node: { readonly ns: string | null, readonly data: string | null, readonly language: string | null } }> };
-
-type MetatagsComponentQueryVariables = Exact<{ [key: string]: never; }>;
-
-
-type MetatagsComponentQuery = { readonly site: { readonly siteMetadata: { readonly metatags: { readonly title: string | null, readonly description: string | null, readonly author: string | null, readonly image: string | null } | null } | null } | null };
-
-type NavigationQueryVariables = Exact<{ [key: string]: never; }>;
-
-
-type NavigationQuery = { readonly site: { readonly siteMetadata: { readonly sourceCode: string | null } | null } | null, readonly pages: { readonly nodes: ReadonlyArray<{ readonly frontmatter: { readonly title: string | null } | null, readonly fields: { readonly slug: string | null, readonly collection: string | null, readonly language: string | null } | null }> } };
-
-type PageNotFoundQueryVariables = Exact<{
-  language: Scalars['String'];
-}>;
-
-
-type PageNotFoundQuery = { readonly locales: { readonly edges: ReadonlyArray<{ readonly node: { readonly ns: string | null, readonly data: string | null, readonly language: string | null } }> } };
-
-type SingleTemplateQueryVariables = Exact<{
+type SingleTemplatePageQueryVariables = Exact<{
   slug: Scalars['String'];
-  language: Scalars['String'];
 }>;
 
 
-type SingleTemplateQuery = { readonly locales: { readonly edges: ReadonlyArray<{ readonly node: { readonly ns: string | null, readonly data: string | null, readonly language: string | null } }> }, readonly content: { readonly edges: ReadonlyArray<{ readonly node: { readonly html: string | null, readonly excerpt: string | null, readonly fields: { readonly collection: string | null, readonly slug: string | null, readonly language: string | null, readonly readingTime: { readonly minutes: number | null } | null } | null, readonly frontmatter: { readonly date: string | null, readonly title: string | null, readonly description: string | null, readonly tags: ReadonlyArray<string | null> | null, readonly flags: ReadonlyArray<string | null> | null } | null } }> } };
+type SingleTemplatePageQuery = { readonly content: { readonly edges: ReadonlyArray<{ readonly node: { readonly html: string | null, readonly excerpt: string | null, readonly fields: { readonly collection: string | null, readonly slug: string | null, readonly readingTime: { readonly minutes: number | null } | null } | null, readonly frontmatter: { readonly date: string | null, readonly title: string | null, readonly description: string | null, readonly tags: ReadonlyArray<string | null> | null, readonly status: string | null, readonly expanded: boolean | null, readonly language: string | null } | null } }> } };
 
-type TagsTemplateQueryVariables = Exact<{
+type TagsTemplatePageQueryVariables = Exact<{
   tag: InputMaybe<Scalars['String']>;
-  language: Scalars['String'];
 }>;
 
 
-type TagsTemplateQuery = { readonly locales: { readonly edges: ReadonlyArray<{ readonly node: { readonly ns: string | null, readonly data: string | null, readonly language: string | null } }> }, readonly list: { readonly edges: ReadonlyArray<{ readonly node: { readonly html: string | null, readonly excerpt: string | null, readonly fields: { readonly collection: string | null, readonly slug: string | null, readonly language: string | null, readonly readingTime: { readonly minutes: number | null } | null } | null, readonly frontmatter: { readonly date: string | null, readonly title: string | null, readonly description: string | null, readonly tags: ReadonlyArray<string | null> | null, readonly flags: ReadonlyArray<string | null> | null } | null } }> } };
+type TagsTemplatePageQuery = { readonly list: { readonly edges: ReadonlyArray<{ readonly node: { readonly html: string | null, readonly excerpt: string | null, readonly fields: { readonly collection: string | null, readonly slug: string | null, readonly readingTime: { readonly minutes: number | null } | null } | null, readonly frontmatter: { readonly date: string | null, readonly title: string | null, readonly description: string | null, readonly tags: ReadonlyArray<string | null> | null, readonly status: string | null, readonly expanded: boolean | null, readonly language: string | null } | null } }> } };
 
 
 }
