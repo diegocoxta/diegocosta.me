@@ -1,20 +1,8 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import * as BsIcon from 'react-icons/bs';
 import { IconBaseProps } from 'react-icons/lib';
-import styled, { ThemeContext } from 'styled-components';
-import {
-  KBarAnimator,
-  KBarPortal,
-  useMatches,
-  KBarPositioner,
-  KBarSearch,
-  KBarResults,
-  useKBar,
-  KBarProvider,
-} from 'kbar';
-import { navigate } from 'gatsby';
-
-const Container = styled.div``;
+import styled from 'styled-components';
+import { KBarAnimator, KBarPortal, useMatches, KBarPositioner, KBarSearch, KBarResults, useKBar } from 'kbar';
 
 const Button = styled.button`
   background: transparent;
@@ -140,12 +128,12 @@ const ShortcutIcon = styled.kbd`
   font-size: 14px;
 `;
 
-export function NavigationModal(): React.ReactElement {
+export default function Navigation(): React.ReactElement {
   const { query } = useKBar();
   const { results } = useMatches();
 
   return (
-    <Container>
+    <>
       <Button onClick={() => query.toggle()}>
         <Icon name="BsCommand" props={{ size: 28 }} />
       </Button>
@@ -188,80 +176,6 @@ export function NavigationModal(): React.ReactElement {
           </Animator>
         </Positioner>
       </KBarPortal>
-    </Container>
-  );
-}
-
-interface NavigationModalProps {
-  sourceCode?: string;
-  pages: Queries.BlogTemplateQueryQuery['pages'];
-}
-
-export default function (props: NavigationModalProps) {
-  const themeContext = useContext(ThemeContext);
-
-  const actions = [
-    {
-      id: 'home',
-      name: 'Home',
-      shortcut: ['g', 'h'],
-      section: 'Pages',
-      perform: () => navigate('/'),
-      icon: 'BsFillHouseFill',
-    },
-    {
-      id: 'articles',
-      name: 'Articles',
-      shortcut: ['g', 'a'],
-      section: 'Pages',
-      icon: 'BsNewspaper',
-    },
-    ...props.pages.nodes.map((p: Queries.BlogTemplateQueryQuery['pages']['nodes'][0]) => ({
-      id: `page-${p.fields?.slug}`,
-      name: p.frontmatter?.title as string,
-      section: 'Pages',
-      perform: () => navigate(p.fields?.slug ?? ''),
-      icon: 'BsFillFileEarmarkFill',
-      parent: p.fields?.collection === 'articles' ? 'articles' : undefined,
-    })),
-    {
-      id: 'theme',
-      name: 'Appearance',
-      shortcut: ['g', 't'],
-      section: 'Preferences',
-      icon: 'BsBrushFill',
-    },
-    {
-      id: 'theme-light',
-      name: 'Light',
-      shortcut: ['g', 't', 'l'],
-      section: 'Appearance',
-      parent: 'theme',
-      perform: () => themeContext?.setMode('light'),
-      icon: 'BsSun',
-    },
-    {
-      id: 'theme-dark',
-      name: 'Dark',
-      shortcut: ['g', 't', 'd'],
-      section: 'Appearance',
-      parent: 'theme',
-      perform: () => themeContext?.setMode('dark'),
-      icon: 'BsMoon',
-    },
-    {
-      id: 'source',
-      name: 'Source Code',
-      shortcut: ['g', 's'],
-      section: 'Tools',
-      perform: () => window.open(props.sourceCode as string, '_blank'),
-      icon: 'BsCodeSlash',
-    },
-  ];
-
-  return (
-    <KBarProvider actions={actions}>
-      <NavigationModal />
-    </KBarProvider>
+    </>
   );
 }

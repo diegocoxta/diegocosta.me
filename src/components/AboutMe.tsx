@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const Container = styled.div``;
+import Container from './Container';
 
 const Paragraph = styled.p`
   font-size: 24px;

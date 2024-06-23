@@ -41,6 +41,7 @@ const colors = {
   BLACK: '#0E1116',
   REVOLUTION: '#CC433C',
   BEIGE: '#D3BF9C',
+  WHITE: '#FFFFFF',
 };
 
 const Container = styled.button<{ $enabled?: boolean }>`
@@ -95,7 +96,7 @@ export const themeLight: ThemeScheme = {
   titleColor: colors.MIDNIGHTBLUE,
   subtitleColor: colors.WETASPHALT,
   textColor: colors.MIDNIGHTBLUE,
-  backgroundColor: '#ffffff',
+  backgroundColor: colors.WHITE,
 };
 
 export const useTheme = (): [string, () => void, (color: ColorScheme) => void] => {

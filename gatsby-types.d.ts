@@ -2859,11 +2859,6 @@ type IndexPageQueryVariables = Exact<{ [key: string]: never; }>;
 
 type IndexPageQuery = { readonly list: { readonly edges: ReadonlyArray<{ readonly node: { readonly html: string | null, readonly excerpt: string | null, readonly fields: { readonly collection: string | null, readonly slug: string | null, readonly readingTime: { readonly minutes: number | null } | null } | null, readonly frontmatter: { readonly date: string | null, readonly title: string | null, readonly description: string | null, readonly tags: ReadonlyArray<string | null> | null, readonly status: string | null, readonly expanded: boolean | null, readonly language: string | null } | null } }> } };
 
-type LinksTemplateQueryQueryVariables = Exact<{ [key: string]: never; }>;
-
-
-type LinksTemplateQueryQuery = { readonly site: { readonly siteMetadata: { readonly repository: string | null, readonly name: string | null, readonly avatar: string | null, readonly website: { readonly title: string | null, readonly description: string | null, readonly header: string | null } | null } | null } | null };
-
 type SingleTemplatePageQueryVariables = Exact<{
   slug: Scalars['String'];
 }>;

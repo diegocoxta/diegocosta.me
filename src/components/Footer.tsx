@@ -1,7 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const Container = styled.footer`
+import BaseContainer from './Container';
+
+const Container = styled(BaseContainer)`
   margin-bottom: 50px;
 
   nav {

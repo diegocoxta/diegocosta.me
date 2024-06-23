@@ -5,9 +5,10 @@ import { graphql } from 'gatsby';
 import Title from './Title';
 import TagList from './TagList';
 import BodyPost from './BodyPost';
+import BaseContainer from './Container';
 
-const Container = styled.article`
-  margin: 20px 0 60px 0;
+const Container = styled(BaseContainer)`
+  margin: 20px auto 60px auto;
   font-weight: 400;
   color: ${({ theme }) => theme.textColor};
 `;
