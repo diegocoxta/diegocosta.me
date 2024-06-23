@@ -8,7 +8,7 @@ tags:
   - gestao
   - talks
 language: Portuguese
-expanded: true 
+expanded: true
 ---
 
 Confira o bate-papo que participei pela NuLab Salvador do Nubank falando sobre papéis e responsabilidades dentro de um time de produto digital.
