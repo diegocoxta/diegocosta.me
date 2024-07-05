@@ -22,26 +22,26 @@ exports[`<NotFoundPage> renders properly 1`] = `
 }
 
 .c12 a {
-  color: #D3BF9C;
+  color: #CC433C;
   text-decoration: none;
   border-bottom: 1px solid #FFFFFF;
 }
 
 .c12 a:hover,
 .c12 a:focus {
-  border-bottom: 1px solid #D3BF9C;
+  border-bottom: 1px solid #CC433C;
   outline: none;
 }
 
 .c12 code {
-  background: #D3BF9C40;
+  background: #CC433C40;
   padding: 2px 6px;
   border-radius: 10px;
   font-size: 16px;
 }
 
 .c12 blockquote {
-  border-left: 5px solid #D3BF9C;
+  border-left: 5px solid #CC433C;
   padding-left: 20px;
   margin-left: 0;
 }
@@ -95,7 +95,7 @@ exports[`<NotFoundPage> renders properly 1`] = `
 }
 
 .c4 {
-  color: #D3BF9C;
+  color: #CC433C;
 }
 
 .c8 {
@@ -123,7 +123,7 @@ exports[`<NotFoundPage> renders properly 1`] = `
 
 .c6 {
   background: transparent;
-  border: 2px solid #D3BF9C;
+  border: 2px solid #CC433C;
   border-radius: 18px;
   height: 34px;
   width: 50px;
@@ -142,7 +142,7 @@ exports[`<NotFoundPage> renders properly 1`] = `
 .c7 {
   height: 30px;
   width: 30px;
-  background: #D3BF9C;
+  background: #CC433C;
   border-radius: 20px;
   color: #fff;
   display: flex;
