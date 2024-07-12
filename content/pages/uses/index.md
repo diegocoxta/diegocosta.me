@@ -8,7 +8,7 @@ language: English
 
 Welcome to my `/uses` page that list all my tools, hardware, and software! As a tech enthusiast and professional, I'm constantly on the lookout for the best gear and apps to make my life easier and more productive. This page is my curated collection of the tools I use on a daily basis, sorted by category for easy browsing.
 
-## 💻 Hardware
+## 💻 Workstation
 
 - **Personal Laptop**: MacBook Air 13" Midnight Apple M2, 8GB RAM, 256 GB SSD.
 - **Professional Laptop**: MacBook Pro 14" M1 Pro, 16GB RAM, 1TB SSD.
@@ -23,16 +23,6 @@ Welcome to my `/uses` page that list all my tools, hardware, and software! As a 
 - **Editor**: Visual Studio Code with [Jetbrains Mono](https://www.jetbrains.com/lp/mono/) font, [Shades of Purple](https://marketplace.visualstudio.com/items?itemName=ahmadawais.shades-of-purple) theme and several helpful extensions, including [Auto Close Tag](https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-close-tag), [Auto Rename Tag](https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-rename-tag), [Color Highlight](https://marketplace.visualstudio.com/items?itemName=naumovs.color-highlight), [Dart](https://marketplace.visualstudio.com/items?itemName=Dart-Code.dart-code), [DotENV](https://marketplace.visualstudio.com/items?itemName=mikestead.dotenv), [EditorConfig for VS Code](https://marketplace.visualstudio.com/items?itemName=EditorConfig.EditorConfig), [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint), [file-icons](https://marketplace.visualstudio.com/items?itemName=file-icons.file-icons), [Flutter](https://marketplace.visualstudio.com/items?itemName=Dart-Code.flutter), [GraphQL: Language Feature Support](https://marketplace.visualstudio.com/items?itemName=GraphQL.vscode-graphql), [GraphQL: Syntax Highlighting](https://marketplace.visualstudio.com/items?itemName=GraphQL.vscode-graphql-syntax), [PlantUML](https://marketplace.visualstudio.com/items?itemName=jebbs.plantuml), [Polacode](https://marketplace.visualstudio.com/items?itemName=pnp.polacode), [Rainbow CSV](https://marketplace.visualstudio.com/items?itemName=mechatroner.rainbow-csv), and [YAML](https://marketplace.visualstudio.com/items?itemName=redhat.vscode-yaml).
 - **Terminal**: Native macOS Terminal with Oh My Zsh.
 - **Stack**: JavaScript, TypeScript, React, React Native, Gatsby, NodeJS, MySQL, and MongoDB.
-
-## ⚙️ Software and Services
-
-- **Coverify.**: My own [web app](https://coverify.diegocosta.me) to create Spotify-inspired covers for my personal playlists completely free and has no annoying ads to interrupt my creative flow.
-- **iCloud**: I use a 200GB storage plan to backup my files and work mail with custom domain.
-- **Namecheap**: Currently I use it to register my domains.
-- **Vercel**: I work with Vercel as my primary hosting service for my personal projects, including this blog.
-- **Github**: Github is my primary version control system. I use it to host my code, mainly as private repositories. I also use it to host GitHub Pages and create pipelines using GitHub Actions to deploy anything.
-- **ChatGPT**: I use ChatGPT to help me with anything. My main use is as an English grammar checker as it is not my primary language. Previously, I used Grammarly.
-- **Stremio**: I'm using Stremio to watch movies that I cannot find on any streaming service. I really try not to use pirated content; I subscribe to every streaming service I know. However, sometimes only the good old torrent can help me with older or harder-to-find movies.
 
 ## 📱 Mobile
 
