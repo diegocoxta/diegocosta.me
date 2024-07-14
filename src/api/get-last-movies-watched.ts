@@ -14,7 +14,7 @@ export default async function (_: GatsbyFunctionRequest, response: GatsbyFunctio
   const parser = new Parser();
   const feed = await parser.parseURL(profile.feeds.letterboxd);
 
-  const message = `I watched ${feed.items.length} movies recently, and the last one was ${feed.items[0].title}. Would you like to recommend one?`;
+  const message = `I watched ${feed.items.length} movies recently, and the last one was "${feed.items[0].title}". Would you like to recommend one?`;
 
   response.status(200).json({ message });
 }
