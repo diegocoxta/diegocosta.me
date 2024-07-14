@@ -14,10 +14,18 @@ export default async function (_: GatsbyFunctionRequest, response: GatsbyFunctio
   const parser = new Parser();
   const feed = await parser.parseURL(profile.feeds.goodreads_currently_reading_shelf);
 
-  const message =
-    feed.items.length <= 0
-      ? `I'm not reading any books at the moment, would you like to recommend one?`
-      : `I'm currently reading ${feed.items.length} books.`;
+  let message;
+
+  switch (feed.items.length) {
+    case 0:
+      message = `I'm not reading any books at the moment, would you like to recommend one?`;
+      break;
+    case 1:
+      message = `I'm currently reading ${feed.items[0].title}, would you like to recommend one?`;
+      break;
+    default:
+      message = `I'm currently reading ${feed.items[0].title} and other ${feed.items.length} books, would you like to recommend one?`;
+  }
 
   response.status(200).json({ message });
 }
