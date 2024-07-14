@@ -21,10 +21,10 @@ export default async function (_: GatsbyFunctionRequest, response: GatsbyFunctio
       message = `I'm not reading any books at the moment, would you like to recommend one?`;
       break;
     case 1:
-      message = `I'm currently reading ${feed.items[0].title}, would you like to recommend one?`;
+      message = `I'm currently reading "${feed.items[0].title}", would you like to recommend one?`;
       break;
     default:
-      message = `I'm currently reading ${feed.items[0].title} and other ${feed.items.length} books, would you like to recommend one?`;
+      message = `I'm currently reading "${feed.items[0].title}" and other ${feed.items.length} books, would you like to recommend one?`;
   }
 
   response.status(200).json({ message });
