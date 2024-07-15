@@ -22,7 +22,7 @@ const colors = {
   LIME: '#AAC13D',
   INDIGO: '#602AF5',
   GREEN: '#72A537',
-  EMERALD: '#3C8725',
+  EMERALD: '#345A4A',
   MAUVE: '#726287',
   OLIVE: '#728567',
   ORANGE: '#E9702D',
@@ -88,7 +88,7 @@ export const themeDark: ThemeScheme = {
   subtitleColor: colors.SILVER,
   textColor: colors.CLOUDS,
   backgroundColor: colors.BLACK,
-  accentColor: colors.REVOLUTION,
+  accentColor: colors.EMERALD,
 };
 
 export const themeLight: ThemeScheme = {
