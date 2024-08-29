@@ -2756,26 +2756,34 @@ type SiteSiteMetadataSortInput = {
 };
 
 type SiteSiteMetadataWebsite = {
+  readonly background_color: Maybe<Scalars['String']>;
   readonly description: Maybe<Scalars['String']>;
-  readonly header: Maybe<Scalars['String']>;
+  readonly icon: Maybe<Scalars['String']>;
+  readonly theme_color: Maybe<Scalars['String']>;
   readonly title: Maybe<Scalars['String']>;
 };
 
 type SiteSiteMetadataWebsiteFieldSelector = {
+  readonly background_color: InputMaybe<FieldSelectorEnum>;
   readonly description: InputMaybe<FieldSelectorEnum>;
-  readonly header: InputMaybe<FieldSelectorEnum>;
+  readonly icon: InputMaybe<FieldSelectorEnum>;
+  readonly theme_color: InputMaybe<FieldSelectorEnum>;
   readonly title: InputMaybe<FieldSelectorEnum>;
 };
 
 type SiteSiteMetadataWebsiteFilterInput = {
+  readonly background_color: InputMaybe<StringQueryOperatorInput>;
   readonly description: InputMaybe<StringQueryOperatorInput>;
-  readonly header: InputMaybe<StringQueryOperatorInput>;
+  readonly icon: InputMaybe<StringQueryOperatorInput>;
+  readonly theme_color: InputMaybe<StringQueryOperatorInput>;
   readonly title: InputMaybe<StringQueryOperatorInput>;
 };
 
 type SiteSiteMetadataWebsiteSortInput = {
+  readonly background_color: InputMaybe<SortOrderEnum>;
   readonly description: InputMaybe<SortOrderEnum>;
-  readonly header: InputMaybe<SortOrderEnum>;
+  readonly icon: InputMaybe<SortOrderEnum>;
+  readonly theme_color: InputMaybe<SortOrderEnum>;
   readonly title: InputMaybe<SortOrderEnum>;
 };
 
@@ -2826,7 +2834,7 @@ type ArticleInformationFragment = { readonly html: string | null, readonly excer
 type BlogTemplateQueryQueryVariables = Exact<{ [key: string]: never; }>;
 
 
-type BlogTemplateQueryQuery = { readonly site: { readonly siteMetadata: { readonly repository: string | null, readonly name: string | null, readonly bio: string | null, readonly getInTouch: ReadonlyArray<{ readonly label: string | null, readonly url: string | null } | null> | null, readonly website: { readonly title: string | null, readonly description: string | null, readonly header: string | null } | null } | null } | null, readonly pages: { readonly nodes: ReadonlyArray<{ readonly frontmatter: { readonly title: string | null } | null, readonly fields: { readonly slug: string | null, readonly collection: string | null } | null }> } };
+type BlogTemplateQueryQuery = { readonly site: { readonly siteMetadata: { readonly repository: string | null, readonly name: string | null, readonly bio: string | null, readonly getInTouch: ReadonlyArray<{ readonly label: string | null, readonly url: string | null } | null> | null, readonly website: { readonly title: string | null, readonly description: string | null } | null } | null } | null, readonly pages: { readonly nodes: ReadonlyArray<{ readonly frontmatter: { readonly title: string | null } | null, readonly fields: { readonly slug: string | null, readonly collection: string | null } | null }> } };
 
 type GatsbyImageSharpFixedFragment = { readonly base64: string | null, readonly width: number, readonly height: number, readonly src: string, readonly srcSet: string };
 

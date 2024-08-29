@@ -23,7 +23,7 @@ export function Blog(props: PageProps<BlogProps>): React.ReactElement {
       siteMetadata: {
         repository,
         name,
-        website: { title, description, header },
+        website: { title, description },
         bio,
         getInTouch,
       },
@@ -43,7 +43,6 @@ export function Blog(props: PageProps<BlogProps>): React.ReactElement {
           website {
             title
             description
-            header
           }
         }
       }
@@ -133,7 +132,6 @@ export function Blog(props: PageProps<BlogProps>): React.ReactElement {
       <GlobalStyle />
       <Metatags
         author={name}
-        banner={header}
         title={title || articles?.[0]?.node.frontmatter?.title}
         description={description || articles?.[0]?.node.frontmatter?.description}
       />

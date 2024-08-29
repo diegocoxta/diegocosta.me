@@ -17,6 +17,19 @@ module.exports = {
     'gatsby-plugin-sharp',
     'gatsby-plugin-tsconfig-paths',
     {
+      resolve: 'gatsby-plugin-manifest',
+      options: {
+        name: profile.website.title,
+        short_name: profile.name,
+        description: profile.website.description,
+        start_url: '/',
+        background_color: profile.website.background_color,
+        theme_color: profile.website.theme_color,
+        display: 'standalone',
+        icon: profile.website.icon,
+      },
+    },
+    {
       resolve: 'gatsby-plugin-google-fonts',
       options: {
         fonts: ['Source+Sans+Pro:400,700'],

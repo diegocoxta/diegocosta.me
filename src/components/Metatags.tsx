@@ -5,7 +5,6 @@ export interface MetatagsProps {
   title: string;
   description: string;
   author?: string;
-  banner: string;
 }
 
 export default function Metatags(props: MetatagsProps): React.ReactElement {
@@ -24,10 +23,6 @@ export default function Metatags(props: MetatagsProps): React.ReactElement {
         {
           property: 'og:description',
           content: props.description,
-        },
-        {
-          property: 'og:image',
-          content: props.banner,
         },
         {
           property: 'og:type',
