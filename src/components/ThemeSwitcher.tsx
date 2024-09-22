@@ -42,6 +42,7 @@ const colors = {
   REVOLUTION: '#CC433C',
   BEIGE: '#D3BF9C',
   WHITE: '#FFFFFF',
+  ULTRAMARINE: '#3A3D7D',
 };
 
 const Container = styled.button<{ $enabled?: boolean }>`
@@ -88,7 +89,7 @@ export const themeDark: ThemeScheme = {
   subtitleColor: colors.SILVER,
   textColor: colors.CLOUDS,
   backgroundColor: colors.BLACK,
-  accentColor: colors.EMERALD,
+  accentColor: colors.ULTRAMARINE,
 };
 
 export const themeLight: ThemeScheme = {
