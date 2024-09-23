@@ -4,9 +4,13 @@ import styled from 'styled-components';
 import Container from './Container';
 
 const Paragraph = styled.p`
-  font-size: 24px;
+  font-size: 20px;
   line-height: 1.4;
   color: ${({ theme }) => theme.textColor};
+
+  @media (min-width: 760px) {
+    font-size: 24px;
+  }
 `;
 
 const Links = styled.ul`
@@ -20,12 +24,11 @@ const Links = styled.ul`
 
 const LinksItem = styled.li`
   list-style: none;
-  font-size: 24px;
+  font-size: 22px;
   font-weight: 700;
   margin: 0 24px 5px 0;
 
   @media (min-width: 760px) {
-    font-size: 22px;
     margin: 0 24px 0 0;
   }
 `;
