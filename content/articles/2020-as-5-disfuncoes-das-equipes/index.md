@@ -26,23 +26,23 @@ Apresentação sobre disfunções em times com base no livro 'Os 5 desafios das 
 
 ### Anotações
 
-> Slide 4: Tudo começa com a falta de confiança entre os membros do time. isso vem da falta de vontade de cada um de se mostrar vulnerável dentro do grupo. Os membros da equipe que não se abrem com os outro sobre seus erros e fraquezas impossibilitam a criação de uma base de confiança.
+> Slide 4: Tudo começa com a ausência de confiança entre os membros da equipe, causada pela falta de disposição de cada um em demonstrar vulnerabilidade dentro do grupo. Quando os integrantes não compartilham seus erros e fragilidades, isso impede o estabelecimento de uma base sólida de confiança.
 
-> Slide 5: A incapacidade de criar confiança é prejudicial, pois cria um ambiente propício para segunda disfunção: medo de conflitos. Os membros da equipe que não confiam uns nos outros são incapazes de promover debates acalorados em que não se meçam palavras. Em vez disso, apelam para discussões veladas e comentários reservados.
+> Slide 5: A falta de confiança prejudica o ambiente, dando origem a uma segunda disfunção: o medo de conflitos. Quando os membros da equipe não confiam uns nos outros, são incapazes de engajar em debates intensos e francos. Em vez disso, recorrem a discussões sutis e comentários reservados, evitando confrontos diretos.
 
-> Slide 6: A falta de conflitos saudáveis é um problema porque forma a base para a terceira disfunção: falta de comprometimento. Como não expressam suas opiniões em debates abertos e acalorados, os membros da equipe raramente ou nunca aceitam as decisões tomadas nem se comprometem com elas, embora finjam concordar com elas nas reuniões.
+> Slide 6: A ausência de conflitos saudáveis é problemática, pois leva à terceira disfunção: a falta de comprometimento. Sem expressar suas opiniões em debates abertos e intensos, os membros da equipe raramente aceitam ou se comprometem com as decisões tomadas, mesmo que finjam concordar durante as reuniões.
 
-> Slide 7: Por causa da falta de comprometimento e de concordância, os membros da equipe tendem a evitar responsabilizar os outros, a quarta disfunção. Como não se comprometem com um plano de ação claro, até as pessoas mais focadas e motivadas costumam hesitar em chamar a atenção de seus colegas em relação a atitudes e comportamentos que sejam contraproducentes para o sucesso da equipe.
+> Slide 7: Devido à falta de comprometimento e concordância, os membros da equipe tendem a evitar responsabilizar uns aos outros, caracterizando a quarta disfunção. Sem um plano de ação claro, até os indivíduos mais focados e motivados hesitam em chamar a atenção de seus colegas por atitudes e comportamentos contraproducentes ao sucesso do grupo.
 
-> Slide 8: Uma vez que não apontam as responsabilidades uns dos outros, os membros da equipe criam um ambiente propício para a quinta disfunção. A falta de atenção aos resultados ocorre quando os funcionários colocam suas necessidades individuais (como ego, sucesso na carreira ou reconhecimento), ou mesmo as necessidades da empresa acima dos objetivos coletivos da equipe.
+> Slide 8: Ao não responsabilizarem uns aos outros, os membros da equipe acabam criando um ambiente que favorece a quinta disfunção. A falta de foco nos resultados ocorre quando os colaboradores priorizam suas necessidades individuais (como ego, progresso na carreira ou reconhecimento) ou até mesmo as necessidades da empresa, em detrimento dos objetivos coletivos da equipe.
 
-> Slide X: No contexto de construção de uma equipe, confiança é a certeza que entre seus membros, de que todos tem boas intenções e que não há motivos para ficar na defensiva ou ter reservas em relação ao grupo. Essencialmente, os colegas de equipe devem se sentir a vontade para se permitirem ser vulneráveis na frente dos outros.
+> Slide 9: No contexto da construção de uma equipe, confiança é a convicção de que todos os membros possuem boas intenções e que não há razões para defensividade ou desconfiança dentro do grupo. Em essência, os colegas de equipe devem sentir-se à vontade para se permitirem ser vulneráveis diante dos outros. Quando essa confiança é estabelecida, a colaboração e o sucesso se tornam muito mais alcançáveis. Isso faz toda a diferença para a força do time!
 
-> Slide X: O conflito é visto como um tabu em várias situações/organizações, gastamos muito tempo tentando evitar conflitos. O conflito aqui não é um ataque pessoal ou uma briga destrutiva. Equipes que evitam conflitos para não ferir os sentimentos de seus integrantes acabam estimulando uma tensão perigosa,quando os membros não debatem nem contestam abertamente ideias importantes acabam gerando ataques pessoas que são muitas vezes mais desagradáveis e prejudiciais do que um debate acalorado sobre os problemas.
+> Slide 9: O conflito é frequentemente tratado como um tabu em diversas organizações, levando a um esforço excessivo para evitá-lo. No entanto, o conflito, neste contexto, não se refere a ataques pessoais ou brigas destrutivas. Equipes que evitam conflitos para poupar os sentimentos de seus membros acabam criando uma tensão perigosa. Ao não debaterem ou contestarem abertamente ideias importantes, fomentam a possibilidade de surgirem ataques pessoais, que muitas vezes são mais prejudiciais e desagradáveis do que um debate construtivo e acalorado sobre questões relevantes.
 
-> Slide X: As melhores equipes tomam decisões claras e oportunas para seguir em frente e cada um dos seus integrantes concordam com ela, mesmo os que voltaram contra. As duas maiores causas de falta de comprometimento são o desejo de consejo (todos votarem na mesma ideia, não aceitar o discordo mas to dentro) e a necessidade de certeza, ter medo da decisão tomada seja a correta, incapacidade de assumir riscos.
+> Slide 9: As melhores equipes tomam decisões claras e oportunas para avançar, e todos os seus integrantes se comprometem com elas, mesmo aqueles que inicialmente discordaram. As duas principais causas da falta de comprometimento são o desejo de consenso — quando todos votam na mesma ideia sem realmente aceitar discordâncias — e a necessidade de certeza, onde o medo de tomar a decisão errada e a incapacidade de assumir riscos paralisam o progresso.
 
-> Slide X: Não é culpar e penalizar as pessoas.
+> Slide 9: Não se trata de culpar ou penalizar as pessoas.
 
 ### Referências
 
