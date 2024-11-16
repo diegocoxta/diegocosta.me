@@ -89,7 +89,7 @@ export const themeDark: ThemeScheme = {
   subtitleColor: colors.SILVER,
   textColor: colors.CLOUDS,
   backgroundColor: colors.BLACK,
-  accentColor: colors.ULTRAMARINE,
+  accentColor: colors.TAUPE,
 };
 
 export const themeLight: ThemeScheme = {

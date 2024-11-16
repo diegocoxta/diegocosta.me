@@ -26,7 +26,7 @@ Welcome to my `/uses` page that list all my tools, hardware, and software! As a 
 
 ## 📱 Mobile
 
-- **Phone**: Apple iPhone 15 Pro 256GB Natural Titanium and, Samsung Galaxy Z Flip 4 128GB Graphite.
+- **Phone**: Apple iPhone 15 Pro 256GB Natural Titanium
 - **Watch**: Apple Watch Series 8 GPS 45mm Starlight Aluminum
 - **Tablet**: Apple iPad Air M2 11" 256GB Starlight with Apple Pencil Pro
 
