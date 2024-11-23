@@ -1,7 +1,7 @@
 import { GatsbyFunctionRequest, GatsbyFunctionResponse } from 'gatsby';
 import Parser from 'rss-parser';
 
-import profile from '../../content/profile.json';
+import profile from '~/../content/profile';
 
 export default async function (_: GatsbyFunctionRequest, response: GatsbyFunctionResponse) {
   if (!profile.feeds.letterboxd) {

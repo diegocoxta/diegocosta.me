@@ -1,4 +1,4 @@
-const profile = require('./content/profile.json');
+const profile = require('./content/profile');
 const { repository } = require('./package.json');
 
 module.exports = {
