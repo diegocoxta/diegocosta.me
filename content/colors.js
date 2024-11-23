@@ -1,4 +1,4 @@
-export const colors = {
+const colors = {
   AMBER: '#E5A53B',
   BROWN: '#7C5B34',
   COBALT: '#1B56E6',
@@ -32,7 +32,7 @@ export const colors = {
   GRASA: '#0513D8',
 };
 
-export const themeDark = {
+const themeDark = {
   titleColor: colors.CLOUDS,
   subtitleColor: colors.SILVER,
   textColor: colors.CLOUDS,
@@ -40,10 +40,12 @@ export const themeDark = {
   accentColor: colors.GRASA,
 };
 
-export const themeLight = {
+const themeLight = {
   ...themeDark,
   titleColor: colors.MIDNIGHTBLUE,
   subtitleColor: colors.WETASPHALT,
   textColor: colors.MIDNIGHTBLUE,
   backgroundColor: colors.WHITE,
 };
+
+module.exports = { themeDark, themeLight, colors };
