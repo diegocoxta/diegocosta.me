@@ -43,6 +43,7 @@ const colors = {
   BEIGE: '#D3BF9C',
   WHITE: '#FFFFFF',
   ULTRAMARINE: '#3A3D7D',
+  GRASA: '#0513D8',
 };
 
 const Container = styled.button<{ $enabled?: boolean }>`
@@ -89,7 +90,7 @@ export const themeDark: ThemeScheme = {
   subtitleColor: colors.SILVER,
   textColor: colors.CLOUDS,
   backgroundColor: colors.BLACK,
-  accentColor: colors.TAUPE,
+  accentColor: colors.GRASA,
 };
 
 export const themeLight: ThemeScheme = {
