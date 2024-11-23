@@ -1,7 +1,7 @@
 import { GatsbyFunctionRequest, GatsbyFunctionResponse } from 'gatsby';
 import Parser from 'rss-parser';
 
-import profile from '~/../content/profile';
+import profile from '../../content/profile.js';
 
 export default async function (_: GatsbyFunctionRequest, response: GatsbyFunctionResponse) {
   if (!profile.feeds.goodreads_currently_reading_shelf) {
