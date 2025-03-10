@@ -2,7 +2,7 @@ const { themeLight } = require('./colors');
 
 module.exports = {
   name: 'Diego Costa',
-  bio: 'I’m a Engineering Manager passionate about the intersection between technology and people. My goal is to help technology teams achieve their full potential.\nI have a great interest in engineering leadership, people management, software engineering, as well as inclusion and diversity. Currently, I am an Engineering Manager at Nubank and I am always open to sharing my ideas and experiences on these topics.\nIf you’d like to learn more about me, check out the links below!',
+  bio: 'I’m a Engineering Manager passionate about the intersection between technology and people. My goal is to help technology teams achieve their full potential.\nI have a great interest in engineering leadership, people management, software engineering, as well as inclusion and diversity.\nIf you’d like to learn more about me, check out the links below!',
   avatar: 'https://avatars.githubusercontent.com/u/3134422?v=4',
   getInTouch: [
     {
