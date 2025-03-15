@@ -25,7 +25,7 @@ const colors = {
   WETASPHALT: '#38485D',
   SILVER: '#BEC3C7',
   BLACK: '#0E1116',
-  REVOLUTION: '#CC433C',
+  REVOLUTION: '#9F2125',
   BEIGE: '#D3BF9C',
   WHITE: '#FFFFFF',
   ULTRAMARINE: '#3A3D7D',
@@ -37,7 +37,7 @@ const themeDark = {
   subtitleColor: colors.SILVER,
   textColor: colors.CLOUDS,
   backgroundColor: colors.BLACK,
-  accentColor: colors.GRASA,
+  accentColor: colors.REVOLUTION,
 };
 
 const themeLight = {
