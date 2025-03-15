@@ -55,10 +55,7 @@ const Animator = styled(KBarAnimator)`
   border-radius: 8px;
   overflow: hidden;
   padding: 16px;
-
-  @supports ((-webkit-backdrop-filter: none) or (backdrop-filter: none)):  {
-    backdrop-filter: saturate(300%) blur(25px);
-  }
+  backdrop-filter: saturate(300%) blur(25px);
 
   /* Hide scrollbar for Chrome, Safari and Opera */
   & > div > div::-webkit-scrollbar: {

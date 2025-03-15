@@ -47,7 +47,7 @@ exports[`<Footer /> do not render the sourceCode url and author if not defined 1
         class="c2"
       >
         CC-BY 
-        2024
+        2025
          
         <span />
         , built with 
@@ -114,7 +114,7 @@ exports[`<Footer /> renders properly 1`] = `
         class="c2"
       >
         CC-BY 
-        2024
+        2025
          
         <span>
           diegocoxta
@@ -183,7 +183,7 @@ exports[`<Footer /> renders the sourceCode url if defined 1`] = `
         class="c2"
       >
         CC-BY 
-        2024
+        2025
          
         <span>
           @diegocoxta
