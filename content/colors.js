@@ -30,6 +30,7 @@ const colors = {
   WHITE: '#FFFFFF',
   ULTRAMARINE: '#3A3D7D',
   GRASA: '#0513D8',
+  CHICOMIO: '#C4D14D',
 };
 
 const themeDark = {
@@ -37,7 +38,7 @@ const themeDark = {
   subtitleColor: colors.SILVER,
   textColor: colors.CLOUDS,
   backgroundColor: colors.BLACK,
-  accentColor: colors.REVOLUTION,
+  accentColor: colors.CHICOMIO,
 };
 
 const themeLight = {
