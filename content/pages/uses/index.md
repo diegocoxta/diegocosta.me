@@ -11,11 +11,10 @@ Welcome to my `/uses` page that list all my tools, hardware, and software! As a 
 ## 💻 Workstation
 
 - **Personal Laptop**: MacBook Air 13" Midnight Apple M2, 8GB RAM, 256 GB SSD.
-- **Professional Laptop**: MacBook Pro 14" M1 Pro, 16GB RAM, 1TB SSD.
 - **External Display**: Dell 27" 4k USB-C Monitor p2721q.
 - **Webcam**: Logitech C920S Pro HD Webcam.
 - **Laptop Stand**: Rain Design mStand Laptop Stand and Twelve South BookArc.
-- **Audio**: Apple AirPods 3rd Generation with MagSafe case, Edifier W820NB Plus, and Razer Kraken X.
+- **Audio**: Apple AirPods 3rd Generation with MagSafe case and Edifier W820NB Plus.
 - **Desk**: Husky Standing Desk with custom top.
 
 ## 🧑🏾‍💻 Programming
@@ -29,12 +28,6 @@ Welcome to my `/uses` page that list all my tools, hardware, and software! As a 
 - **Phone**: Apple iPhone 15 Pro 256GB Natural Titanium
 - **Watch**: Apple Watch Series 8 GPS 45mm Starlight Aluminum
 - **Tablet**: Apple iPad Air M2 11" 256GB Starlight with Apple Pencil Pro
-
-## 📷 Photography
-
-- **DLSR Camera**: Canon EOS Rebel T7.
-- **Lens**: EF-S 18-55mm f/3.5-5.6 IS STM and, EF 75-300mm f/4-5.6 III.
-- **Instant Camera**: Fujifilm Instax Mini 11 white.
 
 ## 🎸 Jam
 
