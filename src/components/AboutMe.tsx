@@ -63,7 +63,7 @@ export interface AboutMeProps {
     {
       label: string;
       url: string;
-      rel?: string;
+      tags: string[];
     },
   ];
 }
@@ -76,13 +76,15 @@ export default function AboutMe(props: AboutMeProps) {
         .map((p: string) => <Paragraph data-testid="about-me-bio" key={p} dangerouslySetInnerHTML={{ __html: p }} />)}
       {props.socialLinks && (
         <Links data-testid="about-me-sociallinks">
-          {props.socialLinks.map((nav, index) => (
-            <LinksItem key={`nav-${index}`} data-testid="about-me-sociallinks-item">
-              <LinksLink href={nav.url} rel={nav.rel} target="_blank">
-                {nav.label}
-              </LinksLink>
-            </LinksItem>
-          ))}
+          {props.socialLinks
+            .filter((s) => s.tags?.includes('professional'))
+            .map((nav, index) => (
+              <LinksItem key={`nav-${index}`} data-testid="about-me-sociallinks-item">
+                <LinksLink href={nav.url} rel="me" target="_blank">
+                  {nav.label}
+                </LinksLink>
+              </LinksItem>
+            ))}
         </Links>
       )}
     </Container>

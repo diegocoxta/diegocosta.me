@@ -25,7 +25,7 @@ export function Blog(props: PageProps<BlogProps>): React.ReactElement {
         name,
         website: { title, description },
         bio,
-        getInTouch,
+        social,
       },
     },
     pages,
@@ -36,9 +36,10 @@ export function Blog(props: PageProps<BlogProps>): React.ReactElement {
           repository
           name
           bio
-          getInTouch {
+          social {
             label
             url
+            tags
           }
           website {
             title
@@ -136,7 +137,7 @@ export function Blog(props: PageProps<BlogProps>): React.ReactElement {
         description={description || articles?.[0]?.node.frontmatter?.description}
       />
       <Header name={name} actions={actions} />
-      {!isNotFound && !isSinglePage && <AboutMe bio={bio} socialLinks={getInTouch} />}
+      {!isNotFound && !isSinglePage && <AboutMe bio={bio} socialLinks={social} />}
       <DottedDivisor />
       {isNotFound && (
         <Article

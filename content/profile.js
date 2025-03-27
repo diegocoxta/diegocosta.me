@@ -4,14 +4,16 @@ module.exports = {
   name: 'Diego Costa',
   bio: 'I’m a Engineering Manager passionate about the intersection between technology and people. My goal is to help technology teams achieve their full potential.\nI have a great interest in engineering leadership, people management, software engineering, as well as inclusion and diversity.\nIf you’d like to learn more about me, check out the links below!',
   avatar: 'https://avatars.githubusercontent.com/u/3134422?v=4',
-  getInTouch: [
+  social: [
     {
       label: 'Linkedin',
       url: 'https://linkedin.com/in/diegocoxta',
+      tags: ['professional'],
     },
     {
       label: 'Github',
       url: 'https://github.com/diegocoxta',
+      tags: ['professional'],
     },
     {
       label: 'Instagram',
@@ -20,6 +22,7 @@ module.exports = {
     {
       label: 'E-mail',
       url: 'mailto:diego@diegocosta.me',
+      tags: ['professional'],
     },
   ],
   website: {
@@ -32,6 +35,6 @@ module.exports = {
   feeds: {
     letterboxd: 'https://letterboxd.com/diegocoxta/rss/',
     goodreads_currently_reading_shelf:
-      'https://www.goodreads.com/review/list_rss/38757922?key=GREoInDkWGpnD1xKT_4HCeieuQ65yghCmQYJNOGv6Ody2J5J&shelf=currently-reading',
+      'https://www.goodreads.com/review/list_rss/188981365?key=Fr4zpgvsvOCHxCfWENJbI3bTa230ZemKCwN0YKwLP4tVWzAW&shelf=currently-reading',
   },
 };

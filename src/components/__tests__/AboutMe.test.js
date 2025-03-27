@@ -4,8 +4,9 @@ import { render } from '@testing-library/react';
 import AboutMe from '../AboutMe';
 
 const socialLinks = [
-  { label: 'Github', url: 'https://github.com/diegocoxta', rel: 'me' },
-  { label: 'Linkedin', url: 'https://linkedin.com/in/diegocoxta', rel: 'me' },
+  { label: 'Github', url: 'https://github.com/diegocoxta', rel: 'me', tags: ['professional'] },
+  { label: 'Linkedin', url: 'https://linkedin.com/in/diegocoxta', rel: 'me', tags: ['professional'] },
+  { label: 'Mastodon', url: 'https://mastodon.social/@diegocoxta', rel: 'me' },
 ];
 
 describe('<AboutMe />', () => {
