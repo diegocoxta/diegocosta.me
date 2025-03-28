@@ -15,6 +15,11 @@ module.exports = {
       tags: ['professional'],
     },
     {
+      label: 'Github',
+      url: 'https://github.com/diegocoxta',
+      tags: ['professional'],
+    },
+    {
       label: 'Letterboxd',
       url: 'https://letterboxd.com/diegocoxta',
       extra: '/api/get-last-movies-watched',
@@ -28,11 +33,6 @@ module.exports = {
       label: 'Goodreads',
       url: 'https://www.goodreads.com/diegocoxta',
       extra: '/api/get-currently-reading',
-    },
-    {
-      label: 'Github',
-      url: 'https://github.com/diegocoxta',
-      tags: ['professional'],
     },
     {
       label: 'Mastodon',

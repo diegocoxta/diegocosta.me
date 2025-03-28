@@ -72,7 +72,7 @@ export default function Linktree(): React.ReactElement {
         <ThemeSwitcher />
         <Avatar src={siteMetadata?.avatar ?? ''} alt="" />
         <Logo name={siteMetadata?.name ?? ''} size="small" to="/" />
-        <Description>{website?.description}</Description>
+        <Description>follow me anywhere 👨🏽‍💻</Description>
       </Header>
 
       <Content>
