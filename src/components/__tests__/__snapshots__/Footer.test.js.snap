@@ -19,6 +19,7 @@ exports[`<Footer /> do not render the sourceCode url and author if not defined 1
   line-height: 1.5;
   margin: 0;
   padding: 0;
+  text-align: center;
 }
 
 .c3 {
@@ -86,6 +87,7 @@ exports[`<Footer /> renders properly 1`] = `
   line-height: 1.5;
   margin: 0;
   padding: 0;
+  text-align: center;
 }
 
 .c3 {
@@ -155,6 +157,7 @@ exports[`<Footer /> renders the sourceCode url if defined 1`] = `
   line-height: 1.5;
   margin: 0;
   padding: 0;
+  text-align: center;
 }
 
 .c3 {

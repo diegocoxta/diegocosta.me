@@ -22,6 +22,7 @@ const Label = styled.p`
   line-height: 1.5;
   margin: 0;
   padding: 0;
+  text-align: center;
 `;
 
 const Link = styled.a.attrs({

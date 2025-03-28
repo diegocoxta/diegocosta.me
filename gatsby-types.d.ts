@@ -2668,9 +2668,9 @@ type SiteSiteMetadata = {
   readonly bio: Maybe<Scalars['String']>;
   readonly description: Maybe<Scalars['String']>;
   readonly feeds: Maybe<SiteSiteMetadataFeeds>;
-  readonly getInTouch: Maybe<ReadonlyArray<Maybe<SiteSiteMetadataGetInTouch>>>;
   readonly name: Maybe<Scalars['String']>;
   readonly repository: Maybe<Scalars['String']>;
+  readonly social: Maybe<ReadonlyArray<Maybe<SiteSiteMetadataSocial>>>;
   readonly title: Maybe<Scalars['String']>;
   readonly website: Maybe<SiteSiteMetadataWebsite>;
 };
@@ -2700,9 +2700,9 @@ type SiteSiteMetadataFieldSelector = {
   readonly bio: InputMaybe<FieldSelectorEnum>;
   readonly description: InputMaybe<FieldSelectorEnum>;
   readonly feeds: InputMaybe<SiteSiteMetadataFeedsFieldSelector>;
-  readonly getInTouch: InputMaybe<SiteSiteMetadataGetInTouchFieldSelector>;
   readonly name: InputMaybe<FieldSelectorEnum>;
   readonly repository: InputMaybe<FieldSelectorEnum>;
+  readonly social: InputMaybe<SiteSiteMetadataSocialFieldSelector>;
   readonly title: InputMaybe<FieldSelectorEnum>;
   readonly website: InputMaybe<SiteSiteMetadataWebsiteFieldSelector>;
 };
@@ -2712,34 +2712,42 @@ type SiteSiteMetadataFilterInput = {
   readonly bio: InputMaybe<StringQueryOperatorInput>;
   readonly description: InputMaybe<StringQueryOperatorInput>;
   readonly feeds: InputMaybe<SiteSiteMetadataFeedsFilterInput>;
-  readonly getInTouch: InputMaybe<SiteSiteMetadataGetInTouchFilterListInput>;
   readonly name: InputMaybe<StringQueryOperatorInput>;
   readonly repository: InputMaybe<StringQueryOperatorInput>;
+  readonly social: InputMaybe<SiteSiteMetadataSocialFilterListInput>;
   readonly title: InputMaybe<StringQueryOperatorInput>;
   readonly website: InputMaybe<SiteSiteMetadataWebsiteFilterInput>;
 };
 
-type SiteSiteMetadataGetInTouch = {
+type SiteSiteMetadataSocial = {
+  readonly extra: Maybe<Scalars['String']>;
   readonly label: Maybe<Scalars['String']>;
+  readonly tags: Maybe<ReadonlyArray<Maybe<Scalars['String']>>>;
   readonly url: Maybe<Scalars['String']>;
 };
 
-type SiteSiteMetadataGetInTouchFieldSelector = {
+type SiteSiteMetadataSocialFieldSelector = {
+  readonly extra: InputMaybe<FieldSelectorEnum>;
   readonly label: InputMaybe<FieldSelectorEnum>;
+  readonly tags: InputMaybe<FieldSelectorEnum>;
   readonly url: InputMaybe<FieldSelectorEnum>;
 };
 
-type SiteSiteMetadataGetInTouchFilterInput = {
+type SiteSiteMetadataSocialFilterInput = {
+  readonly extra: InputMaybe<StringQueryOperatorInput>;
   readonly label: InputMaybe<StringQueryOperatorInput>;
+  readonly tags: InputMaybe<StringQueryOperatorInput>;
   readonly url: InputMaybe<StringQueryOperatorInput>;
 };
 
-type SiteSiteMetadataGetInTouchFilterListInput = {
-  readonly elemMatch: InputMaybe<SiteSiteMetadataGetInTouchFilterInput>;
+type SiteSiteMetadataSocialFilterListInput = {
+  readonly elemMatch: InputMaybe<SiteSiteMetadataSocialFilterInput>;
 };
 
-type SiteSiteMetadataGetInTouchSortInput = {
+type SiteSiteMetadataSocialSortInput = {
+  readonly extra: InputMaybe<SortOrderEnum>;
   readonly label: InputMaybe<SortOrderEnum>;
+  readonly tags: InputMaybe<SortOrderEnum>;
   readonly url: InputMaybe<SortOrderEnum>;
 };
 
@@ -2748,9 +2756,9 @@ type SiteSiteMetadataSortInput = {
   readonly bio: InputMaybe<SortOrderEnum>;
   readonly description: InputMaybe<SortOrderEnum>;
   readonly feeds: InputMaybe<SiteSiteMetadataFeedsSortInput>;
-  readonly getInTouch: InputMaybe<SiteSiteMetadataGetInTouchSortInput>;
   readonly name: InputMaybe<SortOrderEnum>;
   readonly repository: InputMaybe<SortOrderEnum>;
+  readonly social: InputMaybe<SiteSiteMetadataSocialSortInput>;
   readonly title: InputMaybe<SortOrderEnum>;
   readonly website: InputMaybe<SiteSiteMetadataWebsiteSortInput>;
 };
@@ -2834,7 +2842,7 @@ type ArticleInformationFragment = { readonly html: string | null, readonly excer
 type BlogTemplateQueryQueryVariables = Exact<{ [key: string]: never; }>;
 
 
-type BlogTemplateQueryQuery = { readonly site: { readonly siteMetadata: { readonly repository: string | null, readonly name: string | null, readonly bio: string | null, readonly getInTouch: ReadonlyArray<{ readonly label: string | null, readonly url: string | null } | null> | null, readonly website: { readonly title: string | null, readonly description: string | null } | null } | null } | null, readonly pages: { readonly nodes: ReadonlyArray<{ readonly frontmatter: { readonly title: string | null } | null, readonly fields: { readonly slug: string | null, readonly collection: string | null } | null }> } };
+type BlogTemplateQueryQuery = { readonly site: { readonly siteMetadata: { readonly repository: string | null, readonly name: string | null, readonly bio: string | null, readonly social: ReadonlyArray<{ readonly label: string | null, readonly url: string | null, readonly tags: ReadonlyArray<string | null> | null } | null> | null, readonly website: { readonly title: string | null, readonly description: string | null } | null } | null } | null, readonly pages: { readonly nodes: ReadonlyArray<{ readonly frontmatter: { readonly title: string | null } | null, readonly fields: { readonly slug: string | null, readonly collection: string | null } | null }> } };
 
 type GatsbyImageSharpFixedFragment = { readonly base64: string | null, readonly width: number, readonly height: number, readonly src: string, readonly srcSet: string };
 
@@ -2866,6 +2874,11 @@ type IndexPageQueryVariables = Exact<{ [key: string]: never; }>;
 
 
 type IndexPageQuery = { readonly list: { readonly edges: ReadonlyArray<{ readonly node: { readonly html: string | null, readonly excerpt: string | null, readonly fields: { readonly collection: string | null, readonly slug: string | null, readonly readingTime: { readonly minutes: number | null } | null } | null, readonly frontmatter: { readonly date: string | null, readonly title: string | null, readonly description: string | null, readonly tags: ReadonlyArray<string | null> | null, readonly status: string | null, readonly expanded: boolean | null, readonly language: string | null } | null } }> } };
+
+type LinktreeTemplateQueryVariables = Exact<{ [key: string]: never; }>;
+
+
+type LinktreeTemplateQuery = { readonly site: { readonly siteMetadata: { readonly repository: string | null, readonly name: string | null, readonly avatar: string | null, readonly social: ReadonlyArray<{ readonly label: string | null, readonly url: string | null, readonly tags: ReadonlyArray<string | null> | null, readonly extra: string | null } | null> | null, readonly website: { readonly title: string | null, readonly description: string | null } | null } | null } | null };
 
 type SingleTemplatePageQueryVariables = Exact<{
   slug: Scalars['String'];
