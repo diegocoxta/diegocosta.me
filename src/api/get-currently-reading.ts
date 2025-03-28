@@ -5,7 +5,7 @@ import profile from '../../content/profile.js';
 
 export default async function (_: GatsbyFunctionRequest, response: GatsbyFunctionResponse) {
   if (!profile.feeds.goodreads_currently_reading_shelf) {
-    const message = 'You need to set GOODREADS_CURRENTLY_READING_SHELF_RSS env variable to use this resource.';
+    const message = 'You need to set `goodreads_currently_reading_shelf` variable to use this resource.';
     console.error(message);
 
     return response.status(500).json({ message });

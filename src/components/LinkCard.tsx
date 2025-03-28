@@ -14,7 +14,7 @@ const Container = styled.a.attrs({
   transition: all 0.5s;
 
   &:hover {
-    transform: scale(1.1);
+    transform: scale(1.05);
   }
 `;
 
@@ -26,7 +26,10 @@ const Button = styled.div`
   justify-content: space-between;
 `;
 
-const ButtonContent = styled.div``;
+const ButtonContent = styled.div`
+  display: flex;
+  align-items: center;
+`;
 
 const ButtonDescription = styled.span`
   font-size: 11px;
@@ -40,7 +43,15 @@ const CardContent = styled.div`
   font-size: 20px;
   line-height: 1.4;
   color: ${({ theme }) => theme.backgroundColor};
-  border-radius: 30px 30px 0 0;
+  border-radius: 0 0 30px 30px;
+
+  p {
+    margin: 0 0 10px 0;
+  }
+
+  span {
+    font-size: 14px;
+  }
 `;
 
 interface LinkCardProps {
@@ -63,7 +74,6 @@ export default function LinkCard(props: LinkCardProps) {
 
   return (
     <Container href={props.url}>
-      {props.extra && content && <CardContent data-testid="linkcard-card-content">{content}</CardContent>}
       <Button>
         <ButtonContent>
           {props.title}
@@ -73,6 +83,9 @@ export default function LinkCard(props: LinkCardProps) {
         </ButtonContent>
         <IoMdOpen />
       </Button>
+      {props.extra && content && (
+        <CardContent data-testid="linkcard-card-content" dangerouslySetInnerHTML={{ __html: content }}></CardContent>
+      )}
     </Container>
   );
 }

@@ -2676,23 +2676,31 @@ type SiteSiteMetadata = {
 };
 
 type SiteSiteMetadataFeeds = {
+  readonly discogs_collection_folder_api: Maybe<Scalars['String']>;
   readonly goodreads_currently_reading_shelf: Maybe<Scalars['String']>;
-  readonly letterboxd: Maybe<Scalars['String']>;
+  readonly letterboxd_feed: Maybe<Scalars['String']>;
+  readonly mastodon_statuses: Maybe<Scalars['String']>;
 };
 
 type SiteSiteMetadataFeedsFieldSelector = {
+  readonly discogs_collection_folder_api: InputMaybe<FieldSelectorEnum>;
   readonly goodreads_currently_reading_shelf: InputMaybe<FieldSelectorEnum>;
-  readonly letterboxd: InputMaybe<FieldSelectorEnum>;
+  readonly letterboxd_feed: InputMaybe<FieldSelectorEnum>;
+  readonly mastodon_statuses: InputMaybe<FieldSelectorEnum>;
 };
 
 type SiteSiteMetadataFeedsFilterInput = {
+  readonly discogs_collection_folder_api: InputMaybe<StringQueryOperatorInput>;
   readonly goodreads_currently_reading_shelf: InputMaybe<StringQueryOperatorInput>;
-  readonly letterboxd: InputMaybe<StringQueryOperatorInput>;
+  readonly letterboxd_feed: InputMaybe<StringQueryOperatorInput>;
+  readonly mastodon_statuses: InputMaybe<StringQueryOperatorInput>;
 };
 
 type SiteSiteMetadataFeedsSortInput = {
+  readonly discogs_collection_folder_api: InputMaybe<SortOrderEnum>;
   readonly goodreads_currently_reading_shelf: InputMaybe<SortOrderEnum>;
-  readonly letterboxd: InputMaybe<SortOrderEnum>;
+  readonly letterboxd_feed: InputMaybe<SortOrderEnum>;
+  readonly mastodon_statuses: InputMaybe<SortOrderEnum>;
 };
 
 type SiteSiteMetadataFieldSelector = {

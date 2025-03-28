@@ -10,16 +10,9 @@ module.exports = {
       url: 'https://instagram.com/diegocoxta',
     },
     {
-      label: 'Mastodon',
-      url: 'https://mastodon.social/@diegocoxta',
-    },
-    {
-      label: 'Bluesky',
-      url: 'https://bsky.app/profile/diegocosta.me',
-    },
-    {
-      label: 'Threads.net',
-      url: 'https://www.threads.net/@diegocoxta',
+      label: 'Linkedin',
+      url: 'https://linkedin.com/in/diegocoxta',
+      tags: ['professional'],
     },
     {
       label: 'Letterboxd',
@@ -29,6 +22,7 @@ module.exports = {
     {
       label: 'Discogs',
       url: 'https://www.discogs.com/user/diegocoxta',
+      extra: '/api/get-discogs-collection-data',
     },
     {
       label: 'Goodreads',
@@ -36,14 +30,22 @@ module.exports = {
       extra: '/api/get-currently-reading',
     },
     {
-      label: 'Linkedin',
-      url: 'https://linkedin.com/in/diegocoxta',
-      tags: ['professional'],
-    },
-    {
       label: 'Github',
       url: 'https://github.com/diegocoxta',
       tags: ['professional'],
+    },
+    {
+      label: 'Mastodon',
+      url: 'https://mastodon.social/@diegocoxta',
+      extra: '/api/get-latest-mastodon-statuses',
+    },
+    {
+      label: 'Bluesky',
+      url: 'https://bsky.app/profile/diegocosta.me',
+    },
+    {
+      label: 'Threads.net',
+      url: 'https://www.threads.net/@diegocoxta',
     },
     {
       label: 'E-mail',
@@ -59,8 +61,11 @@ module.exports = {
     icon: 'static/icon.png',
   },
   feeds: {
-    letterboxd: 'https://letterboxd.com/diegocoxta/rss/',
+    letterboxd_feed: 'https://letterboxd.com/diegocoxta/rss/',
     goodreads_currently_reading_shelf:
       'https://www.goodreads.com/review/list_rss/188981365?key=Fr4zpgvsvOCHxCfWENJbI3bTa230ZemKCwN0YKwLP4tVWzAW&shelf=currently-reading',
+    discogs_collection_folder_api:
+      'https://api.discogs.com/users/diegocoxta/collection/folders/0/releases?sort=added&sort_order=desc',
+    mastodon_statuses: 'https://mastodon.social/api/v1/accounts/109497736796304852/statuses',
   },
 };

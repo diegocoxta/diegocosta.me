@@ -75,8 +75,6 @@ export default function Linktree(): React.ReactElement {
         <Description>{website?.description}</Description>
       </Header>
 
-      <DottedDivisor />
-
       <Content>
         {social?.map((e) => (
           <LinkCard url={e?.url ?? ''} extra={e?.extra ?? ''} key={`links-social-${e?.label}`} title={e?.label ?? ''} />
