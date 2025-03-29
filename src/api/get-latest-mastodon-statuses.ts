@@ -22,7 +22,7 @@ export default async function (_: GatsbyFunctionRequest, response: GatsbyFunctio
     minute: '2-digit',
   });
 
-  const message = `${latest_status_content} <span>${latest_status_date}</span>`;
+  const message = `🗣️ ${latest_status_content} <span>${latest_status_date}</span>`;
 
   response.status(200).json({ message });
 }

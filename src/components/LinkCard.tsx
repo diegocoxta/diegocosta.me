@@ -39,14 +39,15 @@ const ButtonDescription = styled.span`
 
 const CardContent = styled.div`
   background: ${({ theme }) => theme.titleColor};
-  padding: 16px;
-  font-size: 20px;
+  padding: 10px 16px 16px;
+  font-size: 16px;
   line-height: 1.4;
   color: ${({ theme }) => theme.backgroundColor};
   border-radius: 0 0 30px 30px;
 
   p {
     margin: 0;
+    display: inline;
   }
 
   span {

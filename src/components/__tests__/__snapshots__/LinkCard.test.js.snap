@@ -34,14 +34,15 @@ exports[`<LinkCard /> renders properly 1`] = `
 }
 
 .c4 {
-  padding: 16px;
-  font-size: 20px;
+  padding: 10px 16px 16px;
+  font-size: 16px;
   line-height: 1.4;
   border-radius: 0 0 30px 30px;
 }
 
 .c4 p {
   margin: 0;
+  display: inline;
 }
 
 .c4 span {

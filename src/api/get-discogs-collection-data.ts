@@ -16,7 +16,7 @@ export default async function (_: GatsbyFunctionRequest, response: GatsbyFunctio
   const title = discogs_data.releases[0].basic_information.title;
   const artist = discogs_data.releases[0].basic_information.artists[0].name;
 
-  const message = `Now I'm collecting vinyl records, and the latest addition to my collection was: "${title}" by ${artist}`;
+  const message = `The latest addition to my vinyl records collection was: "${title}" by ${artist}`;
 
   response.status(200).json({ message });
 }
