@@ -44,7 +44,8 @@ export default function Linktree(): React.ReactElement {
             label
             url
             tags
-            extra
+            api
+            icon
           }
           website {
             title
@@ -77,7 +78,13 @@ export default function Linktree(): React.ReactElement {
 
       <Content>
         {social?.map((e) => (
-          <LinkCard url={e?.url ?? ''} extra={e?.extra ?? ''} key={`links-social-${e?.label}`} title={e?.label ?? ''} />
+          <LinkCard
+            icon={e?.icon}
+            url={e?.url ?? ''}
+            api={e?.api ?? ''}
+            key={`links-social-${e?.label}`}
+            title={e?.label ?? ''}
+          />
         ))}
       </Content>
 

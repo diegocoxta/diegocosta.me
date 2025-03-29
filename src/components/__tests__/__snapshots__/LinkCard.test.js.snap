@@ -16,10 +16,12 @@ exports[`<LinkCard /> renders properly 1`] = `
 
 .c1 {
   display: flex;
-  padding: 16px;
+  padding: 10px 16px;
   color: #fff;
   font-weight: bold;
   justify-content: space-between;
+  align-items: center;
+  line-height: 1;
 }
 
 .c2 {
@@ -64,6 +66,7 @@ exports[`<LinkCard /> renders properly 1`] = `
         <div
           class="c2"
         >
+           
           Google Inc.
           <span
             class="c3"

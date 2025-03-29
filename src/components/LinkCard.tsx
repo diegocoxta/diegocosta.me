@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
+import Icon from '~/components/Icon';
 import { IoMdOpen } from 'react-icons/io';
 
 const Container = styled.a.attrs({
@@ -20,10 +21,16 @@ const Container = styled.a.attrs({
 
 const Button = styled.div`
   display: flex;
-  padding: 16px;
+  padding: 10px 16px;
   color: #fff;
   font-weight: bold;
   justify-content: space-between;
+  align-items: center;
+  line-height: 1;
+`;
+
+const ButtonIcon = styled.div`
+  margin: 2px 5px 0 0;
 `;
 
 const ButtonContent = styled.div`
@@ -60,15 +67,16 @@ const CardContent = styled.div`
 interface LinkCardProps {
   url: string;
   title: string;
-  extra?: string;
+  api?: string | null;
+  icon?: string | null;
 }
 
 export default function LinkCard(props: LinkCardProps) {
   const [content, setContent] = useState('');
 
   useEffect(() => {
-    if (props.extra) {
-      fetch(props.extra).then(async (response) => {
+    if (props.api) {
+      fetch(props.api).then(async (response) => {
         const json = await response.json();
         setContent(json.message);
       });
@@ -79,6 +87,11 @@ export default function LinkCard(props: LinkCardProps) {
     <Container href={props.url}>
       <Button>
         <ButtonContent>
+          {props.icon && (
+            <ButtonIcon>
+              <Icon name={props.icon} />
+            </ButtonIcon>
+          )}{' '}
           {props.title}
           <ButtonDescription>
             {props.url.replace('https://', '').replace('www.', '').replace('mailto:', '')}
@@ -86,7 +99,7 @@ export default function LinkCard(props: LinkCardProps) {
         </ButtonContent>
         <IoMdOpen />
       </Button>
-      {props.extra && content && (
+      {props.api && content && (
         <CardContent data-testid="linkcard-card-content" dangerouslySetInnerHTML={{ __html: content }}></CardContent>
       )}
     </Container>

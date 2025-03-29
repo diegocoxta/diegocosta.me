@@ -2736,21 +2736,24 @@ type SiteSiteMetadataFilterInput = {
 };
 
 type SiteSiteMetadataSocial = {
-  readonly extra: Maybe<Scalars['String']>;
+  readonly api: Maybe<Scalars['String']>;
+  readonly icon: Maybe<Scalars['String']>;
   readonly label: Maybe<Scalars['String']>;
   readonly tags: Maybe<ReadonlyArray<Maybe<Scalars['String']>>>;
   readonly url: Maybe<Scalars['String']>;
 };
 
 type SiteSiteMetadataSocialFieldSelector = {
-  readonly extra: InputMaybe<FieldSelectorEnum>;
+  readonly api: InputMaybe<FieldSelectorEnum>;
+  readonly icon: InputMaybe<FieldSelectorEnum>;
   readonly label: InputMaybe<FieldSelectorEnum>;
   readonly tags: InputMaybe<FieldSelectorEnum>;
   readonly url: InputMaybe<FieldSelectorEnum>;
 };
 
 type SiteSiteMetadataSocialFilterInput = {
-  readonly extra: InputMaybe<StringQueryOperatorInput>;
+  readonly api: InputMaybe<StringQueryOperatorInput>;
+  readonly icon: InputMaybe<StringQueryOperatorInput>;
   readonly label: InputMaybe<StringQueryOperatorInput>;
   readonly tags: InputMaybe<StringQueryOperatorInput>;
   readonly url: InputMaybe<StringQueryOperatorInput>;
@@ -2761,7 +2764,8 @@ type SiteSiteMetadataSocialFilterListInput = {
 };
 
 type SiteSiteMetadataSocialSortInput = {
-  readonly extra: InputMaybe<SortOrderEnum>;
+  readonly api: InputMaybe<SortOrderEnum>;
+  readonly icon: InputMaybe<SortOrderEnum>;
   readonly label: InputMaybe<SortOrderEnum>;
   readonly tags: InputMaybe<SortOrderEnum>;
   readonly url: InputMaybe<SortOrderEnum>;
@@ -2894,7 +2898,7 @@ type IndexPageQuery = { readonly list: { readonly edges: ReadonlyArray<{ readonl
 type LinktreeTemplateQueryVariables = Exact<{ [key: string]: never; }>;
 
 
-type LinktreeTemplateQuery = { readonly site: { readonly siteMetadata: { readonly repository: string | null, readonly name: string | null, readonly avatar: string | null, readonly social: ReadonlyArray<{ readonly label: string | null, readonly url: string | null, readonly tags: ReadonlyArray<string | null> | null, readonly extra: string | null } | null> | null, readonly website: { readonly title: string | null, readonly description: string | null } | null } | null } | null };
+type LinktreeTemplateQuery = { readonly site: { readonly siteMetadata: { readonly repository: string | null, readonly name: string | null, readonly avatar: string | null, readonly social: ReadonlyArray<{ readonly label: string | null, readonly url: string | null, readonly tags: ReadonlyArray<string | null> | null, readonly api: string | null, readonly icon: string | null } | null> | null, readonly website: { readonly title: string | null, readonly description: string | null } | null } | null } | null };
 
 type SingleTemplatePageQueryVariables = Exact<{
   slug: Scalars['String'];

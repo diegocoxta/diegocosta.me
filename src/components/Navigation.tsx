@@ -1,8 +1,7 @@
 import React from 'react';
-import * as BsIcon from 'react-icons/bs';
-import { IconBaseProps } from 'react-icons/lib';
 import styled from 'styled-components';
 import { KBarAnimator, KBarPortal, useMatches, KBarPositioner, KBarSearch, KBarResults, useKBar } from 'kbar';
+import Icon from '~/components/Icon';
 
 const Button = styled.button`
   background: transparent;
@@ -26,14 +25,6 @@ const Button = styled.button`
     background: ${({ theme }) => `${theme.textColor}1A`};
   }
 `;
-
-export function Icon({ name, props }: { name: string; props?: IconBaseProps }): JSX.Element {
-  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-  // @ts-ignore
-  const ElementIcon = BsIcon[name];
-
-  return <ElementIcon {...props} />;
-}
 
 const Positioner = styled(KBarPositioner)`
   position: fixed;

@@ -17,7 +17,7 @@ describe('<LinkCard />', () => {
 
   it('renders properly', async () => {
     const { baseElement, findByText } = render(
-      <LinkCard url="https://google.com" title="Google Inc." extra="/api/my-api" />
+      <LinkCard url="https://google.com" title="Google Inc." api="/api/my-api" />
     );
 
     expect(await findByText('Google Inc.')).toBeTruthy();
