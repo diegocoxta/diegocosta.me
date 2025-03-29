@@ -18,6 +18,7 @@ module.exports = {
       label: 'Github',
       url: 'https://github.com/diegocoxta',
       tags: ['professional'],
+      extra: '/api/get-latest-github-event',
     },
     {
       label: 'Letterboxd',
@@ -42,6 +43,7 @@ module.exports = {
     {
       label: 'Bluesky',
       url: 'https://bsky.app/profile/diegocosta.me',
+      extra: '/api/get-latest-bsky-statuses',
     },
     {
       label: 'Threads.net',
@@ -67,5 +69,7 @@ module.exports = {
     discogs_collection_folder_api:
       'https://api.discogs.com/users/diegocoxta/collection/folders/0/releases?sort=added&sort_order=desc',
     mastodon_statuses: 'https://mastodon.social/api/v1/accounts/109497736796304852/statuses',
+    bsky_statuses: 'https://public.api.bsky.app/xrpc/app.bsky.feed.getAuthorFeed?actor=diegocosta.me',
+    github_events: 'https://api.github.com/users/diegocoxta/events',
   },
 };

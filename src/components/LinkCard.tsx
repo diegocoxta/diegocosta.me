@@ -46,11 +46,13 @@ const CardContent = styled.div`
   border-radius: 0 0 30px 30px;
 
   p {
-    margin: 0 0 10px 0;
+    margin: 0;
   }
 
   span {
     font-size: 14px;
+    display: block;
+    margin-top: 10px;
   }
 `;
 

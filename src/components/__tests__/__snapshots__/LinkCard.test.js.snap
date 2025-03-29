@@ -41,11 +41,13 @@ exports[`<LinkCard /> renders properly 1`] = `
 }
 
 .c4 p {
-  margin: 0 0 10px 0;
+  margin: 0;
 }
 
 .c4 span {
   font-size: 14px;
+  display: block;
+  margin-top: 10px;
 }
 
 <body>
