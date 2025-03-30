@@ -59,6 +59,11 @@ module.exports = {
       icon: 'SiThreads',
     },
     {
+      label: 'Tiktok',
+      url: 'https://www.tiktok.com/@diegocoxta',
+      icon: 'SiTiktok',
+    },
+    {
       label: 'E-mail',
       url: 'mailto:diego@diegocosta.me',
       tags: ['professional'],

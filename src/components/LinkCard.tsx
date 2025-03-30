@@ -8,11 +8,12 @@ const Container = styled.a.attrs({
 })`
   background: ${({ theme }) => theme.accentColor};
   border-radius: 30px;
-  margin: 16px 0;
+  margin: 6px 0;
   display: block;
   text-decoration: none;
   cursor: pointer;
   transition: all 0.5s;
+  width: 100%;
 
   &:hover {
     transform: scale(1.05);

@@ -2,7 +2,6 @@ import React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 import styled from 'styled-components';
 
-import Container from '~/components/Container';
 import Footer from '~/components/Footer';
 import Logo from '~/components/Logo';
 import DottedDivisor from '~/components/Divisor';
@@ -10,26 +9,36 @@ import Metatags from '~/components/Metatags';
 import ThemeSwitcher, { ThemeProvider, GlobalStyle } from '~/components/ThemeSwitcher';
 import LinkCard from '~/components/LinkCard';
 
-const Header = styled(Container)`
-  margin-top: 40px;
+const NavBar = styled.div`
+  max-width: 500px;
+  margin: 20px auto;
   display: flex;
   flex-direction: column;
   align-items: center;
+`;
+
+const Header = styled(DottedDivisor)`
+  display: flex;
+  padding: 26px 0;
+  align-items: center;
   justify-content: center;
+  height: auto;
+  margin: 0;
 `;
 
 const Avatar = styled.img`
   width: 110px;
   height: auto;
-  margin: 40px 0 0 0;
-`;
-
-const Content = styled(Container)`
-  max-width: 500px;
 `;
 
 const Description = styled.p`
   text-align: center;
+  margin-top: 0;
+`;
+
+const Content = styled(NavBar)`
+  margin: 0 auto;
+  padding: 0 20px;
 `;
 
 export default function Linktree(): React.ReactElement {
@@ -69,19 +78,22 @@ export default function Linktree(): React.ReactElement {
         description={website?.description ?? ''}
       />
 
-      <Header>
+      <NavBar>
         <ThemeSwitcher />
+      </NavBar>
+
+      <Header>
         <Avatar src={siteMetadata?.avatar ?? ''} alt="" />
-        <Logo name={siteMetadata?.name ?? ''} size="small" to="/" />
-        <Description>follow me anywhere 👨🏽‍💻</Description>
       </Header>
 
       <Content>
+        <Logo name={siteMetadata?.name ?? ''} size="small" to="/" />
+        <Description>follow me anywhere 👨🏽‍💻</Description>
         {social?.map((e) => (
           <LinkCard
             icon={e?.icon}
             url={e?.url ?? ''}
-            api={e?.api ?? ''}
+            api={e?.api}
             key={`links-social-${e?.label}`}
             title={e?.label ?? ''}
           />
@@ -89,7 +101,6 @@ export default function Linktree(): React.ReactElement {
       </Content>
 
       <DottedDivisor />
-
       <Footer sourceCode={siteMetadata?.repository ?? ''} author={siteMetadata?.name ?? ''} />
     </ThemeProvider>
   );
